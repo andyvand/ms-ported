@@ -1,0 +1,42 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Contents for Solitaire Help">
+		<param name="Local" value="html/sol5doa.htm">
+		</OBJECT>
+		<A HREF="html/sol5doa.htm">Contents for Solitaire Help</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Understanding the Rules of the Game">
+		<param name="Local" value="html/sol5h42.htm">
+		</OBJECT>
+		<A HREF="html/sol5h42.htm">Understanding the Rules of the Game</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Playing Solitaire by Using the Keyboard">
+		<param name="Local" value="html/sol8kx9.htm">
+		</OBJECT>
+		<A HREF="html/sol8kx9.htm">Playing Solitaire by Using the Keyboard</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Playing the Game">
+		<param name="Local" value="html/sol9k6x.htm">
+		</OBJECT>
+		<A HREF="html/sol9k6x.htm">Playing the Game</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Changing the Card Design">
+		<param name="Local" value="html/sol39gm.htm">
+		</OBJECT>
+		<A HREF="html/sol39gm.htm">Changing the Card Design</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Keeping Score">
+		<param name="Local" value="html/sol28bz.htm">
+		</OBJECT>
+		<A HREF="html/sol28bz.htm">Keeping Score</A><BR>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Setting Game Options">
+		<param name="Local" value="html/sol788g.htm">
+		</OBJECT>
+		<A HREF="html/sol788g.htm">Setting Game Options</A><BR>
+</UL>
+</HTML>

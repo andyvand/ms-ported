@@ -1,0 +1,92 @@
+#include <windows.h>
+
+#include "reversi.h"
+
+4 BITMAP REVPAT1.bmp
+5 BITMAP REVPAT8.bmp
+
+3 ICON REVERSI.ICO
+1 CURSOR PRELOAD blank.cur
+1 MENU
+BEGIN
+    POPUP TEXT("&Game")
+        begin
+            MENUITEM TEXT("&Hint"), 50
+            MENUITEM TEXT("&Pass"), 20
+            MENUITEM TEXT("&New"),  25
+            MENUITEM TEXT("Change &Color Mode"), 26
+            MENUITEM SEPARATOR
+            MENUITEM TEXT("E&xit"), 52
+        end
+    popup TEXT("&Skill")
+        BEGIN
+            MENUITEM TEXT("&Beginner"), 41
+            MENUITEM TEXT("&Novice"),   42
+            MENUITEM TEXT("&Expert"),   44
+            MENUITEM TEXT("&Master"),   46
+        END
+#ifndef NOHELP
+    POPUP TEXT("&Help")
+        BEGIN
+            MENUITEM TEXT("&Index"),            MN_HELP_INDEX
+            MENUITEM TEXT("&Search"),           MN_HELP_SEARCH
+#if 0
+            MENUITEM TEXT("&Keyboard"),         MN_HELP_KEYBOARD
+            MENUITEM TEXT("&Commands"),         MN_HELP_COMMANDS
+            MENUITEM TEXT("&Playing the Game"), MN_HELP_PLAYING
+            MENUITEM TEXT("&Rules"),            MN_HELP_RULES
+            MENUITEM TEXT("&Using Help"),       MN_HELP_USINGHELP
+#endif
+            MENUITEM SEPARATOR
+            MENUITEM TEXT("&About Reversi..."), MN_HELP_ABOUT
+        END
+#else
+    POPUP TEXT("&Info")
+        BEGIN
+            MENUITEM TEXT("&About Reversi..."), MN_HELP_ABOUT
+        END
+#endif /*NOHELP*/
+END
+
+MAINACC ACCELERATORS
+BEGIN
+    "^h",    50,                NOINVERT
+    VK_F1,   MN_HELP_INDEX,     VIRTKEY
+    VK_F10,  27,                VIRTKEY
+END
+
+stringtable
+begin
+    3, TEXT("Reversi")
+    4, TEXT("Reversi Practice Game")
+    5, TEXT("Pass")
+    6, TEXT("You must Pass")
+    7, TEXT("Tie Game")
+    8, TEXT("You Lost by ")        /* space at the end is required */
+    9, TEXT("You Won by ")         /* space at the end is required */
+    10, TEXT("About Reversi...")
+    11, TEXT("")                   /* the post string for the loss message */
+    12, TEXT("")                   /* the post string for the won message */
+    13, TEXT("You may only move to a space where the cursor is a cross.")
+    14, TEXT("You may not pass.  Move where the cursor is a cross.")
+    15, TEXT("reversi.chm")
+    30, TEXT("Could not retrieve help index")
+#if 0
+    31, TEXT("Could not retrieve keyboard help")
+    32, TEXT("Could not retrieve commands help")
+    33, TEXT("Could not retrieve playing help")
+    34, TEXT("Could not retrieve rules help")
+#endif
+    37, TEXT("Could not retrieve search for help")
+end
+
+rcinclude reversi.dlg
+
+#include <ntverp.h>
+
+#define	VER_FILETYPE	VFT_APP
+#define	VER_FILESUBTYPE	VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     TEXT("Reversi Game Applet")
+#define VER_INTERNALNAME_STR        TEXT("reversi\0")
+
+#include "common.ver"

@@ -1,0 +1,23 @@
+[OPTIONS]
+TITLE=Solitaire Help
+CONTENTS=XY58RZ
+CNT=SOL.CNT
+COMPRESS=HIGH
+
+[WINDOWS]
+main="Solitaire Help",,,,(192,192,192)
+
+[CONFIG]
+RegisterRoutine("ftui","InitRoutines","SU")
+InitRoutines(qchPath,1)
+RegisterRoutine("ftui","SwitchToTopicsFound","U")
+AddAccelerator(0x46, 2, "SwitchToTopicsFound(hwndApp)")
+RegisterRoutine("ftui","ExecFullTextSearch","USSS")
+CreateButton("ftSearch","F&ind","ExecFullTextSearch(hwndApp,qchPath,`',`')")
+
+[BAGGAGE]
+bag.ini
+
+[FILES]
+SOL.RTF
+

@@ -1,0 +1,46 @@
+[OPTIONS]
+Auto Index=Yes
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=Reversi.chm
+Contents file=reversi.hhc
+Default Window=HelpWindow
+Default topic=html\reve6lpy.htm
+Display compile progress=No
+Enhanced decompilation=Yes
+Full text search stop list file=REVERSI.stp
+Full-text search=Yes
+Index file=REVERSI.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Reversi Help
+
+[WINDOWS]
+HelpWindow="Reversi Help","reversi.hhc","REVERSI.hhk","html\reve6lpy.htm","html\reve6lpy.htm",,,,,0x63520,30,0x387e,[271,372,593,566],0x11130000,0x420,,1,,,0
+
+
+[FILES]
+html\reve6lpy.htm
+html\reve6lpz.htm
+html\reve6lq0.htm
+html\reve6lq1.htm
+html\reve6lrk.htm
+html\reve6lrl.htm
+html\reve6lrm.htm
+html\reve6lrn.htm
+
+[ALIAS]
+#include reversi.h
+31=html\reve6lpz.htm ; Keyboard
+32=html\reve6lq0.htm ; Commands
+33=html\reve6lrl.htm ; Playing
+34=html\reve6lrm.htm ; Rules
+
+[MAP]
+#include reversi.h
+HH_HELP_COMMANDS=html\reve6lq0.htm ; Commands
+HH_HELP_KEYBOARD=html\reve6lpz.htm ; Keyboard
+HH_HELP_PLAYING=html\reve6lrl.htm ; Playing
+HH_HELP_RULES=html\reve6lrm.htm ; Rules
+
+[INFOTYPES]
+

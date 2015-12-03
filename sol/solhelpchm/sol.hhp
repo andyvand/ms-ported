@@ -1,0 +1,25 @@
+[OPTIONS]
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=sol.chm
+Contents file=sol.hhc
+Default topic=html\sol5doa.htm
+Display compile progress=No
+Enhanced decompilation=Yes
+Full-text search=Yes
+Index file=SOL.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Solitaire Help
+
+
+[FILES]
+html\sol5doa.htm
+html\sol5h42.htm
+html\sol8kx9.htm
+html\sol9k6x.htm
+html\sol39gm.htm
+html\sol28bz.htm
+html\sol788g.htm
+
+[INFOTYPES]
+
