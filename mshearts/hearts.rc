@@ -9,6 +9,8 @@
 #include "hearts.rcv"
 #include "hearts.dlg"
 
+24 1 hearts.manifest
+
 AFX_IDI_STD_FRAME   ICON    HEARTS.ICO
 
 #if 1

@@ -111,3 +111,5 @@ rcinclude assert.h
 rcinclude assert.dlg
 
 ID_ICON_MAIN    ICON  Solitaire.ico
+
+24 1 sol.manifest
