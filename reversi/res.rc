@@ -2,6 +2,8 @@
 
 #include "reversi.h"
 
+1 24 reversi.manifest
+
 4 BITMAP REVPAT1.bmp
 5 BITMAP REVPAT8.bmp
 
