@@ -88,7 +88,7 @@ void remote_human::SelectCardToPlay(handinfotype &h, BOOL bCheating)
 
     // fill sLast array, and look for two of clubs while were are at it
 
-    for (i = 0; i < MAXSLOT; i++)
+    for (int i = 0; i < MAXSLOT; i++)
     {
         if (cd[i].IsValid())
         {
@@ -296,7 +296,7 @@ void local_human::PopCard(CBrush &brush, int x, int y)
     memDC.SelectObject(&brush);
     memDC.PatBlt(0, 0, card::dxCrd, card::dyCrd + POPSPACING, PATCOPY);
 
-    for (i = 0; i < MAXSLOT; i++)
+    for (int i = 0; i < MAXSLOT; i++)
     {
         if (abs(i - s) <= (card::dxCrd / HORZSPACING))
         {

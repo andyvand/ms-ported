@@ -1,22 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Solitaire", "Solitaire.vcxproj", "{5E2FCE5C-7792-47E7-903F-395AB2642DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM64 = Debug|ARM64
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
+		Release|ARM64 = Release|ARM64
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|ARM64.Build.0 = Debug|ARM64
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|Win32.Build.0 = Debug|Win32
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|x64.ActiveCfg = Debug|x64
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Debug|x64.Build.0 = Debug|x64
+		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Release|ARM64.ActiveCfg = Release|ARM64
+		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Release|ARM64.Build.0 = Release|ARM64
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Release|Win32.ActiveCfg = Release|Win32
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Release|Win32.Build.0 = Release|Win32
 		{5E2FCE5C-7792-47E7-903F-395AB2642DF4}.Release|x64.ActiveCfg = Release|x64

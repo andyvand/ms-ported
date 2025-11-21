@@ -32,14 +32,14 @@ CLocateDlg      locate dealer
 #include "helpnum.h"
 #include "stdlib.h"
 
-#include <nddeapi.h>
+#include "nddeapi.h"
 
 typedef int (CALLBACK* FPROC)();            // a FARPROC that returns int
 
 // NDDE typedefs for ShareGetInfo and ShareSetInfo (SGI and SSI)
 
-typedef UINT (WINAPI *SGIPROC)(LPSTR, LPCSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
-typedef UINT (WINAPI *SSIPROC)(LPSTR, LPCSTR, UINT, LPBYTE, DWORD, WORD);
+typedef UINT (WINAPI *SGIPROC)(LPTSTR, LPCTSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
+typedef UINT (WINAPI *SSIPROC)(LPTSTR, LPCTSTR, UINT, LPBYTE, DWORD, WORD);
 
 
 // declare statics
@@ -115,7 +115,7 @@ BOOL CScoreDlg::OnInitDialog()
     int dyMain = rcMain.bottom - rcMain.top;
     int y = rcMain.top + ((dyMain - dyDlg) / 2);
 
-    SetWindowPos(NULL, x, y, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+    SetWindowPos(NULL, x, y, 0, 0, SWP_NOZORDER);
     SetText();          // set title bar text
     return TRUE;
 }
@@ -632,17 +632,20 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
 #ifdef USENETDDE
     DWORD           dwAvail;
     WORD            wItems;
+#if 0
     BOOL            bStatus;
+#else
+    BOOL            bStatus = FALSE;
+#endif
     CButton *check = (CButton *)GetDlgItem(IDC_AUTO);
 
     SetErrorMode(SEM_NOOPENFILEERRORBOX);
-    HINSTANCE hinstNDDEAPI = LoadLibrary("NDDEAPI.DLL");
+    HINSTANCE hinstNDDEAPI = LoadLibrary(TEXT("NDDEAPI.DLL"));
 
     if (hinstNDDEAPI <= (HINSTANCE)HINSTANCE_ERROR)
     {
         check->EnableWindow(FALSE);
-        (CWnd *)GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
-        return FALSE;
+        return GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
     }
 
     SGIPROC lpfnNDdeShareGetInfo =
@@ -651,9 +654,9 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
     if (lpfnNDdeShareGetInfo == NULL)
     {
         check->EnableWindow(FALSE);
-        (CWnd *)GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
+        BOOL ret = GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
         FreeLibrary(hinstNDDEAPI);
-        return FALSE;
+        return ret;
     }
 
     (*lpfnNDdeShareGetInfo)(NULL, szShareName, 2, m_buffer,
@@ -661,11 +664,15 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
 
     NDDESHAREINFO *pnddeInfo = (NDDESHAREINFO *)m_buffer;
 
+#if 0
     bStatus = (pnddeInfo->dwPermissions1 == 31);
+#endif
 
     if (bToggle)
     {
+#if 0
         pnddeInfo->dwPermissions1 = (bStatus ? 15 : 31);
+#endif
 
         SSIPROC lpfnNDdeShareSetInfo =
             (SSIPROC) GetProcAddress(hinstNDDEAPI, "NDdeShareSetInfo");

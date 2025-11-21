@@ -3,6 +3,8 @@
 /**            Copyright(c) Microsoft Corp., 1991-1994                    **/
 /***************************************************************************/
 
+#define USENETDDE 1
+
 DLG_SCORE DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 0, 238, 112
 STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_3DLOOK
 CAPTION ""

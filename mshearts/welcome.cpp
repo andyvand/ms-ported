@@ -20,7 +20,7 @@ handler (OnWelcome) and some support routines.
 ****************************************************************************/
 
 #include "hearts.h"
-#include <nddeapi.h>
+#include "nddeapi.h"
 
 #include "main.h"
 #include "resource.h"

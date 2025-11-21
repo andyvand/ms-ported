@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML DIR="LTR">
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800624">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Hearts">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Hearts overview">
+			<param name="Local" value="hearts_object.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Play Hearts">
+			<param name="Local" value="hearts_novice.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Score Hearts">
+			<param name="Local" value="hearts_score.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Strategies and tips">
+			<param name="Local" value="hearts_strategy.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using the Help Viewer">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Help viewer overview">
+			<param name="Local" value="MS-ITS:nthelp.chm::/nthelp_overview.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Getting Help">
+			<param name="Local" value="MS-ITS:nthelp.chm::/nthelp_use_help.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Modifying the Help viewer">
+			<param name="Local" value="MS-ITS:nthelp.chm::/nthelp_modify_viewer.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using Help viewer keyboard shortcuts">
+			<param name="Local" value="MS-ITS:nthelp.chm::/nthelp_keyboard_shortcuts.htm">
+			<param name="ImageNumber" value="21">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

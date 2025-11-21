@@ -1,13 +1,12 @@
-
-
-
+typedef struct _gm GM;
+typedef LRESULT (FAR* GmProc_t)(GM *, INT, WPARAM, LPARAM);
 
 /* game stuff */
 
 /* GaMe struct  */
-typedef struct _gm
+struct _gm
 {
-	LRESULT (FAR *lpfnGmProc)(GM, INT, WPARAM, LPARAM); /* our illustrious gameproc  */
+	GmProc_t lpfnGmProc; /* our illustrious gameproc  */
 	UDR  udr;          /* undo record  */
 	BOOL fDealt;       /* TRUE if cards have been dealt  */
 	BOOL fInput;       /* TRUE if input has been recieved after dealing */
@@ -27,7 +26,7 @@ typedef struct _gm
 	INT  icolMac;
 	INT  icolMax;
 	COL  *rgpcol[1];
-} GM;
+};
 
 
 // Constants - earlier they were generated in the game.msg file.

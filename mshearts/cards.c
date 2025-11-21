@@ -1,9 +1,19 @@
 #include <windows.h>
 
+#include "port1632.h"
+#include "cdt.h"
+#include "std.h"
+
 #ifdef DEBUG
 #undef Assert
 #define Assert(f) { if (!(f)) { ExitWindows(0L); } }
 #endif
+
+BOOL fKlondWinner = FALSE;
+
+#define SuFromCd(cd) ((cd)&0x03)
+#define RaFromCd(cd) ((cd)>>2)
+#define Cd(ra, su) (((ra)<<2)|(su))
 
 #define COOLCARD
 
@@ -12,6 +22,7 @@ void SaveCorners(HDC hdc, LONG FAR *rgRGB, INT x, INT y, INT dx, INT dy);
 void RestoreCorners(HDC hdc, LONG FAR *rgRGB, INT x, INT y, INT dx, INT dy);
 #endif
 
+HANDLE GetAppHandle();
 VOID APIENTRY cdtTerm(VOID);
 VOID MyDeleteHbm(HBITMAP hbm);
 static HBITMAP HbmFromCd(INT, HDC);
@@ -82,12 +93,12 @@ static INT idback = 0;
 static INT dxCard, dyCard;
 static INT cInits = 0;
 
+HANDLE hinstApp = NULL;
 
-#ifdef DLL
-HANDLE hinstApp;
-#else
-extern HANDLE  hinstApp;
-#endif
+HANDLE GetAppHandle()
+{
+    return (HANDLE)GetWindowLongPtr(GetActiveWindow(), GWLP_HINSTANCE);
+}
 
 BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
 /*
@@ -117,6 +128,8 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
                 return fTrue;
                 }
 #endif
+        
+        hinstApp = GetAppHandle();
 
         hbmGhost = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDGHOST));
         hbmDeckX = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDX));
@@ -461,6 +474,8 @@ BOOL APIENTRY cdtAnimate(HDC hdc, INT cd, INT x, INT y, INT ispr)
                                 else
                                         xSrc = ySrc = 0;
 
+                                hinstApp = GetAppHandle();
+
                                 hbm = LoadBitmap(hinstApp, MAKEINTRESOURCE(pspr->id));
                                 if(hbm == NULL)
                                         return fFalse;
@@ -497,6 +512,9 @@ BOOL FLoadBack(INT idbackNew)
         if(idback != idbackNew)
                 {
                 MyDeleteHbm(hbmBack);
+
+                hinstApp = GetAppHandle();
+                
                 if((hbmBack = LoadBitmap(hinstApp, MAKEINTRESOURCE(idbackNew))) != NULL)
                         idback = idbackNew;
                 else

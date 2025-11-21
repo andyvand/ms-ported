@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML DIR="LTR">
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="current">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="strategies and tips">
+		<param name="Name" value="Strategies and tips">
+		<param name="Local" value="hearts_strategy.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="scoring">
+		<param name="Name" value="To score Hearts">
+		<param name="Local" value="hearts_score.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="playing the game">
+		<param name="Name" value="To play Hearts">
+		<param name="Local" value="hearts_novice.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="object of the game">
+		<param name="Name" value="The object of Hearts">
+		<param name="Local" value="hearts_object.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

@@ -40,7 +40,7 @@ void CMainWindow::Shuffle()
     //  Sort cards
 
     int nLeft = 52;
-    for (i = 0; i < 52; i++)
+    for (int i = 0; i < 52; i++)
     {
         int j = ::rand() % nLeft;
         int id = i/13;
@@ -63,7 +63,7 @@ void CMainWindow::Shuffle()
 
     // set card locs and ask players to select cards to pass
 
-    for (i = 0; i < MAXPLAYER; i++)
+    for (int i = 0; i < MAXPLAYER; i++)
     {
         p[i]->ResetLoc();
 
@@ -95,10 +95,10 @@ void CMainWindow::Shuffle()
     dc.FillRect(&rect, &m_BgndBrush);
 
     for (SLOT s = 0; s < MAXSLOT; s++)
-        for (i = 0; i < MAXPLAYER; i++)
+        for (int i = 0; i < MAXPLAYER; i++)
             p[i]->Draw(dc, bCheating, s);
 
-    for (i = 0; i < MAXPLAYER; i++)
+    for (int i = 0; i < MAXPLAYER; i++)
     {
         if (passdir == NOPASS)
             p[i]->NotifyNewRound();
@@ -147,16 +147,16 @@ BOOL CMainWindow::HandlePassing()
         if (p[pos]->GetMode() != DONE_SELECTING)
             return FALSE;
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
     {
         passto[pos] = ((pos + offset[passdir]) % 4);
         p[pos]->ReturnSelectedCards(temp[pos]);
     }
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
         p[passto[pos]]->ReceiveSelectedCards(temp[pos]);
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
         if (bCheating || (pos == 0))
             p[pos]->Sort();
 
@@ -166,7 +166,7 @@ BOOL CMainWindow::HandlePassing()
     if (passdir > NOPASS)
         passdir = LEFT;
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
         p[pos]->NotifyNewRound();           // notify players cards are passed
 
     CString s;
@@ -174,7 +174,7 @@ BOOL CMainWindow::HandlePassing()
     m_Button.SetWindowText(s);
     OnShowButton();
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
     {
         CRect   rect;
 
@@ -207,7 +207,7 @@ void CMainWindow::FirstMove()
         p[pos]->ResetCardsWon();
     }
 
-    for (pos = 0; pos < MAXPLAYER; pos++)
+    for (int pos = 0; pos < MAXPLAYER; pos++)
     {
         for (SLOT s = 0; s < MAXSLOT; s++)
         {
@@ -268,7 +268,7 @@ void CMainWindow::EndHand()
 
     // check if anyone else played a higher card of the same suit
 
-    for (i = playerled; i < (playerled+4); i++)
+    for (int i = playerled; i < (playerled+4); i++)
     {
         int j = i % 4;
         card *c = handinfo.cardplayed[j];
@@ -292,7 +292,7 @@ void CMainWindow::EndHand()
     {
         BOOL bPoints = FALSE;               // point cards this hand?
 
-        for (i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             card *c = handinfo.cardplayed[i];
             if ((c->Suit() == HEARTS) || (c->ID() == BLACKLADY))
@@ -455,7 +455,7 @@ void CMainWindow::DispatchCards()
     // Display hearts (and queen of spades) next to whoever "won" them.
 
     int nMoonShot = EMPTY;                  // assume nobody shot moon
-    for (i = 0; i < MAXPLAYER; i++)
+    for (int i = 0; i < MAXPLAYER; i++)
     {
         BOOL bMoonShot;
         score[i] = p[i]->EvaluateScore(bMoonShot);
@@ -475,7 +475,7 @@ void CMainWindow::DispatchCards()
 
     if (nMoonShot != EMPTY)
     {
-        for (i = 0; i < MAXPLAYER; i++)
+        for (int i = 0; i < MAXPLAYER; i++)
         {
             if (i == nMoonShot)
                 score[i] -= 26;
@@ -515,7 +515,7 @@ void CMainWindow::DispatchCards()
 
     // replace quit remote humans with computer players
 
-    for (i = 1; i < MAXPLAYER; i++)
+    for (int i = 1; i < MAXPLAYER; i++)
     {
         if (p[i]->HasQuit())
         {
@@ -544,7 +544,7 @@ void CMainWindow::DispatchCards()
 
     if (passdir == NOPASS)
     {
-        for (i = 0; i < MAXPLAYER; i++)         // everyone's DONE_SELECTING
+        for (int i = 0; i < MAXPLAYER; i++)         // everyone's DONE_SELECTING
             p[i]->SetMode(DONE_SELECTING);
 
         passdir = LEFT;                         // NEXT hand passes left
@@ -552,12 +552,12 @@ void CMainWindow::DispatchCards()
         FirstMove();                            // start next trick
     }
 
-    for (i = 0; i < ::cQdMoves; i++)
+    for (int i = 0; i < ::cQdMoves; i++)
         HandleMove(::moveq[i]);
 
     ::cQdMoves = 0;
 
-    for (i = 0; i < ::cQdPasses; i++)
+    for (int i = 0; i < ::cQdPasses; i++)
         HandlePass(::passq[i]);
 
     ::cQdPasses = 0;

@@ -10,7 +10,7 @@ VSZASSERT
 
 BGND bgnd;
 
-BOOL FReadDibBitmapInfo (INT fh, BITMAPINFO *pbi);
+BOOL FReadDibBitmapInfo (HFILE fh, BITMAPINFO *pbi);
 
 BOOL _FValidBm(BMP *pbm)
 {
@@ -20,19 +20,19 @@ BOOL _FValidBm(BMP *pbm)
 
 BOOL FInitBgnd(CHAR *szFile)
 {
-    INT fh;
+    HFILE fh;
     BOOL fResult;
     LONG lcbBm;
     //LONG dwBmSize;
 
     fResult = fFalse;
     bgnd.fUseBitmap = fFalse;
-    if((fh = OpenFile(szFile, &bgnd.of, OF_CANCEL|OF_READ)) == -1)
+    if((fh = OpenFile(szFile, &bgnd.of, OF_CANCEL|OF_READ)) == (HFILE)(-1))
         return fFalse;
 
     if(!FReadDibBitmapInfo(fh, (BITMAPINFO *)&bgnd.bm))    
         goto ReturnClose;
-    bgnd.dwOfsBits = M_llseek( fh, 0L, SEEK_CUR);
+    bgnd.dwOfsBits = M_llseek(fh, 0L, SEEK_CUR);
 
     if(!_FValidBm(&bgnd.bm))
         goto ReturnClose;
@@ -99,7 +99,7 @@ BOOL _FLoadBand(INT ibnd, Y y)
     HANDLE hbnd;
     LPVOID lpb;
     INT ipln;
-    INT fh;
+    HFILE fh;
     LONG lcbpln;
     HANDLE *phbnd;
     DY dy;
@@ -118,7 +118,7 @@ BOOL _FLoadBand(INT ibnd, Y y)
     dy = WMin(bgnd.dyBand, DyBmp(bgnd.bm)-y);
     for(ipln = 0; ipln < CplnBmp(bgnd.bm); ipln++)
     {
-        M_llseek( fh, (LONG)OfsBits(bgnd)+ipln*lcbpln+(y)*CbLine(bgnd), 0);
+        M_llseek(fh, (LONG)OfsBits(bgnd)+ipln*lcbpln+(y)*CbLine(bgnd), 0);
         M_lread( fh, (LPSTR) lpb+ipln*CbLine(bgnd)*bgnd.dyBand, dy * CbLine(bgnd));
     }
 
@@ -223,7 +223,7 @@ VOID SetBgndOrg()
  *  bitmap formats, but will allways return a "new" BITMAPINFO
  *
  */
-BOOL FReadDibBitmapInfo(INT fh, BITMAPINFO *pbi)
+BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
 {
     DWORD     off;
     HANDLE    hbi = NULL;
@@ -240,7 +240,7 @@ BOOL FReadDibBitmapInfo(INT fh, BITMAPINFO *pbi)
     if (fh == -1)
         return FALSE;
 
-    off = M_llseek( fh, 0L, SEEK_CUR);
+    off = M_llseek(fh, 0L, SEEK_CUR);
 
     if (sizeof(bf) != M_lread( fh, (LPSTR)&bf, sizeof(bf)) )
         return fFalse;
@@ -251,7 +251,8 @@ BOOL FReadDibBitmapInfo(INT fh, BITMAPINFO *pbi)
     if (!ISDIB(bf.bfType))
     {
         bf.bfOffBits = 0L;
-        M_llseek( fh, off, SEEK_SET );
+        
+        M_llseek(fh, off, SEEK_SET );
     }
 
     if (sizeof(bi) != M_lread( fh, (LPSTR)&bi, sizeof(bi)) )

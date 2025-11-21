@@ -44,7 +44,7 @@ extern  const TCHAR szHelpFileName[];
 extern  const TCHAR szShareName[];
 
 const   int     WINWIDTH    = 540;
-const   int     WINHEIGHT   = 480;
+const   int     WINHEIGHT   = 600;
 
 const   int     LEFT        = 0;        // passdir
 const   int     RIGHT       = 1;
