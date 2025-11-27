@@ -212,8 +212,10 @@ VOID SwapCards(CRD *pcrd1, CRD *pcrd2)
 
 TCHAR *PszCopy(TCHAR *pszFrom, TCHAR *rgchTo)
 {
-    while (*rgchTo++ = *pszFrom++)
-        ;
+    while ((*rgchTo++ = *pszFrom++))
+    {
+    }
+
     return(rgchTo-1);
 }
 
@@ -225,8 +227,10 @@ INT CchDecodeInt(TCHAR *rgch, INT_PTR w)
     TCHAR *pch, *pchT;
     TCHAR rgchT[20];
 
-    if (fNeg = w<0)
+    if ((fNeg = w<0))
+    {
         w = -w;
+    }
 
     pchT = rgchT;
     do

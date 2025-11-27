@@ -4,6 +4,9 @@
 * This file provides types for 16/32 bit portable code.
 \*****************************************************************************/
 
+#ifndef __PTYPES32_H__
+#define __PTYPES32_H__
+
 #include <setjmp.h>
 
 /* TYPES: */
@@ -59,4 +62,6 @@ typedef    MCATCHBUF    *LPMCATCHBUF   ;
 #define TF_FORCEDRIVE       (BYTE)0x80
 #define DLLMEM_MOVEABLE     0
 #define DLLMEM_ZEROINIT     GMEM_ZEROINIT
+
+#endif /* __PTYPES32_H__ */
 

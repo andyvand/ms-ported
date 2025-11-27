@@ -3,6 +3,8 @@
 /**            Copyright(c) Microsoft Corp., 1991, 1992                   **/
 /***************************************************************************/
 
+#ifndef __RESOURCE_H__
+#define __RESOURCE_H__
 
 #define IDM_ABOUT       101
 #define IDM_NEWGAME     102
@@ -117,3 +119,5 @@
 #define DLG_WELCOME     503
 #define DLG_OPTIONS     505
 #define DLG_LOCATE      506
+
+#endif /* __RESOURCE_H__ */

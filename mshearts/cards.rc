@@ -2,4 +2,5 @@
 #include "cdt.h"
 
 #define DLL
-rcinclude cards.rch
+#include "cards.rch"
+

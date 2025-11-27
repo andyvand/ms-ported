@@ -3,6 +3,9 @@
 /**            Copyright(c) Microsoft Corp., 1991, 1992                   **/
 /***************************************************************************/
 
+#ifndef __DEBUG_H__
+#define __DEBUG_H__
+
 //  Aug 92, JimH
 
 #if defined(_DEBUG)
@@ -27,3 +30,5 @@ extern TCHAR cardid[];
 #define CDNAME(c)
 #define DUMP()
 #endif
+
+#endif /* __DEBUG_H__ */

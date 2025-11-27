@@ -73,11 +73,13 @@ BYTE enemy)
     }
 
     if (count > 0)
-        return (win +  count);
-    else if (count < 0)
-        return (loss + count);
+    {
+        return (win + count);
+    } else if (count == 0) {
+        return (0);
+    }
 
-	return (0);
+    return (loss + count);
 }
 
 INT NEAR PASCAL legalcheck(
@@ -267,7 +269,7 @@ INT ply,
 INT vmin,
 INT vmax)
 {
-    BYTE *pCurrent, *pPrevious, *pSource, *pDest;
+    BYTE *pCurrent, /**pPrevious,*/ *pSource, *pDest;
     INT *pMoves;
     INT *pBestMove;
     INT i;
@@ -276,7 +278,7 @@ INT vmax)
 	HRGN hrgn = { 0 };
 #endif
 
-    pPrevious = &b[ply][0];
+    //pPrevious = &b[ply][0];
     pCurrent =  &b[ply + 1][0];
 
     pSource = &b[ply][11];

@@ -81,13 +81,18 @@ BOOL FDestroyBgnd()
 BOOL FGetBgndFile(CHAR *sz)
 {
     if(bgnd.fUseBitmap)
+    {
 #if __STDC_WANT_SECURE_LIB__ && defined(_MSC_VER)
-		strncpy_s (bgnd.of.szPathName, sizeof (bgnd.of.szPathName), sz, strlen(sz));
+        strncpy_s (bgnd.of.szPathName, sizeof (bgnd.of.szPathName), sz, strlen(sz));
+        bgnd.of.szPathName[sizeof(bgnd.of.szPathName)-1] = 0;
 #else
-		strncpy (bgnd.of.szPathName, sz, strlen (sz));
+        strncpy (bgnd.of.szPathName, sz, sizeof(bgnd.of.szPathName));
+        bgnd.of.szPathName[sizeof(bgnd.of.szPathName)-1] = 0;
 #endif
-    else
+    } else {
         sz[0] = TEXT('\000');
+    }
+
     return fTrue;
 }
 
@@ -178,9 +183,9 @@ VOID DrawBgnd(X xLeft, Y yTop, X xRight, Y yBot)
 {
     //INT dy;
     Y y;
-    HDC hdcMem;
-    HBITMAP hbm;
-    HBRUSH hbr;
+    HDC hdcMem = NULL;
+    HBITMAP hbm = NULL;
+    HBRUSH hbr = NULL;
 
     if(bgnd.fUseBitmap)
     {
@@ -226,7 +231,6 @@ VOID SetBgndOrg()
 BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
 {
     DWORD     off;
-    HANDLE    hbi = NULL;
     INT       size;
     INT       i;
     WORD      nNumColors;
@@ -269,7 +273,8 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
             break;
 
         case sizeof(BITMAPCOREHEADER):
-            bc = *(BITMAPCOREHEADER*)&bi;
+            memcpy(&bc, &bi, sizeof(BITMAPCOREHEADER));
+
             bi.biSize               = sizeof(BITMAPINFOHEADER);
             bi.biWidth              = (DWORD)bc.bcWidth;
             bi.biHeight             = (DWORD)bc.bcHeight;

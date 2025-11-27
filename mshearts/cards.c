@@ -3,30 +3,34 @@
 #include "port1632.h"
 #include "cdt.h"
 #include "std.h"
+#include "crd.h"
+#include "cards.h"
 
+#ifndef DLL
+VSZASSERT
+#else
 #ifdef DEBUG
 #undef Assert
 #define Assert(f) { if (!(f)) { ExitWindows(0L); } }
 #endif
+#endif
 
-BOOL fKlondWinner = FALSE;
-
-#define SuFromCd(cd) ((cd)&0x03)
-#define RaFromCd(cd) ((cd)>>2)
-#define Cd(ra, su) (((ra)<<2)|(su))
 
 #define COOLCARD
 
+
 #ifdef COOLCARD
+BOOL fKlondWinner = fFalse;
+
 void SaveCorners(HDC hdc, LONG FAR *rgRGB, INT x, INT y, INT dx, INT dy);
 void RestoreCorners(HDC hdc, LONG FAR *rgRGB, INT x, INT y, INT dx, INT dy);
 #endif
 
-HANDLE GetAppHandle();
 VOID APIENTRY cdtTerm(VOID);
 VOID MyDeleteHbm(HBITMAP hbm);
 static HBITMAP HbmFromCd(INT, HDC);
 static BOOL FLoadBack(INT);
+
 
 typedef struct
         {
@@ -48,34 +52,37 @@ typedef struct
 
 #define ianiMax 4
 static ANI rgani[ianiMax] =
-        { IDFACEDOWN12, 32, 22, 4,
-                {IDASLIME1, 32, 32,
-                 IDASLIME2, 32, 32,
-                 IDASLIME1, 32, 32,
-                 IDFACEDOWN12, 32, 32
-                },
-          IDFACEDOWN10, 36, 12, 2,
-                {IDAKASTL1, 42, 12,
-                 IDFACEDOWN10, 42, 12,
-                 0, 0, 0,
-                 0, 0, 0
-                },
-          IDFACEDOWN11, 14, 12, 4,
-                {
-                IDAFLIPE1, 47, 1,
-                IDAFLIPE2, 47, 1,
-                IDAFLIPE1, 47, 1,
-                IDFACEDOWN11, 47, 1
-                },
-          IDFACEDOWN3, 24, 7, 4,
-                {
-                IDABROBOT1, 24, 40,
-                IDABROBOT2, 24, 40,
-                IDABROBOT1, 24, 40,
-                IDFACEDOWN3, 24, 40
-                }
-        /* remember to inc ianiMax */
-        };
+{
+    {IDFACEDOWN12, 32, 22, 4,
+        {
+            {IDASLIME1, 32, 32},
+            {IDASLIME2, 32, 32},
+            {IDASLIME1, 32, 32},
+            {IDFACEDOWN12, 32, 32}
+        }},
+    {IDFACEDOWN10, 36, 12, 2,
+        {
+            {IDAKASTL1, 42, 12},
+            {IDFACEDOWN10, 42, 12},
+            {0, 0, 0},
+            {0, 0, 0}
+        }},
+    {IDFACEDOWN11, 14, 12, 4,
+        {
+            {IDAFLIPE1, 47, 1},
+            {IDAFLIPE2, 47, 1},
+            {IDAFLIPE1, 47, 1},
+            {IDFACEDOWN11, 47, 1}
+        }},
+    {IDFACEDOWN3, 24, 7, 4,
+        {
+            {IDABROBOT1, 24, 40},
+            {IDABROBOT2, 24, 40},
+            {IDABROBOT1, 24, 40},
+            {IDFACEDOWN3, 24, 40}
+        }}
+    /* remember to inc ianiMax */
+    };
 
 
 
@@ -91,14 +98,14 @@ static HBITMAP hbmDeckX = NULL;
 static HBITMAP hbmDeckO = NULL;
 static INT idback = 0;
 static INT dxCard, dyCard;
+
+#ifdef DLL
 static INT cInits = 0;
 
-HANDLE hinstApp = NULL;
-
-HANDLE GetAppHandle()
-{
-    return (HANDLE)GetWindowLongPtr(GetActiveWindow(), GWLP_HINSTANCE);
-}
+HANDLE hinstApp;
+#else
+extern HANDLE  hinstApp;
+#endif
 
 BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
 /*
@@ -128,8 +135,6 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
                 return fTrue;
                 }
 #endif
-        
-        hinstApp = GetAppHandle();
 
         hbmGhost = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDGHOST));
         hbmDeckX = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDX));
@@ -474,8 +479,6 @@ BOOL APIENTRY cdtAnimate(HDC hdc, INT cd, INT x, INT y, INT ispr)
                                 else
                                         xSrc = ySrc = 0;
 
-                                hinstApp = GetAppHandle();
-
                                 hbm = LoadBitmap(hinstApp, MAKEINTRESOURCE(pspr->id));
                                 if(hbm == NULL)
                                         return fFalse;
@@ -512,9 +515,6 @@ BOOL FLoadBack(INT idbackNew)
         if(idback != idbackNew)
                 {
                 MyDeleteHbm(hbmBack);
-
-                hinstApp = GetAppHandle();
-                
                 if((hbmBack = LoadBitmap(hinstApp, MAKEINTRESOURCE(idbackNew))) != NULL)
                         idback = idbackNew;
                 else

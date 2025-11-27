@@ -24,7 +24,7 @@ LRESULT APIENTRY ReversiWndProc(HWND, UINT, WPARAM, LPARAM);
 VOID APIENTRY InverseMessage(HWND, UINT, UINT_PTR, DWORD);
 INT_PTR APIENTRY AboutDlgProc(HWND, UINT, WPARAM, LPARAM);
 
-#if defined(_UNICODE) || defined(UNICODE)
+#if defined(c) || defined(UNICODE)
 LPWSTR  pDisplayMessage;
 #else
 PSTR    pDisplayMessage;
@@ -883,7 +883,11 @@ INT CchString(WCHAR *sz, INT ids)
 INT CchString(CHAR *sz, INT ids)
 #endif
 {
-	return LoadString(hInst, (WORD)ids, sz, 255);
+#if defined(_UNICODE) || defined(UNICODE)
+    return LoadStringW(hInst, (WORD)ids, sz, 255);
+#else
+	return LoadStringA(hInst, (WORD)ids, sz, 255);
+#endif
 }
 
 #if defined(_UNICODE) || defined(UNICODE)
@@ -892,7 +896,11 @@ VOID Error(WCHAR *sz)
 VOID Error(CHAR *sz)
 #endif
 {
-	MessageBoxEx(hWin, sz, TEXT("Reversi"), (MB_OK | MB_ICONEXCLAMATION), GetSystemDefaultLangID());
+#if defined(_UNICODE) || defined(UNICODE)
+    MessageBoxExW(hWin, sz, L"Reversi", (MB_OK | MB_ICONEXCLAMATION), GetSystemDefaultLangID());
+#else
+    MessageBoxExA(hWin, sz, "Reversi", (MB_OK | MB_ICONEXCLAMATION), GetSystemDefaultLangID());
+#endif
 }
 
 VOID ErrorIds(INT ids)
@@ -903,7 +911,8 @@ VOID ErrorIds(INT ids)
 	CHAR sz[128];
 #endif
 
-	CchString(sz, ids);
+    CchString(sz, ids);
+
 	Error(sz);
 }
 
@@ -917,37 +926,69 @@ VOID DoHelp(INT idContext)
 
 	HWND hwndResult = (HWND)0;
 
-	LoadString(hInst, 15, sz, 100);
+#if defined(_UNICODE) || defined(UNICODE)
+	LoadStringW(hInst, 15, sz, 100);
+#else
+    LoadStringA(hInst, 15, sz, 100);
+#endif
 
 #ifndef _GAMBIT_
 	switch (idContext)
 	{
 		case MN_HELP_INDEX:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#endif
 			break;
 
 		case MN_HELP_SEARCH:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_DISPLAY_INDEX, 0);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_DISPLAY_INDEX, 0);
+#else
+            hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_DISPLAY_INDEX, 0);
+#endif
 			break;
 
 		case MN_HELP_KEYBOARD:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, MN_HELP_KEYBOARD, 0);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, MN_HELP_KEYBOARD, 0);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, MN_HELP_KEYBOARD, 0);
+#endif
 			break;
 
 		case MN_HELP_COMMANDS:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_COMMANDS);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_COMMANDS);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_COMMANDS);
+#endif
 			break;
 
 		case MN_HELP_PLAYING:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_PLAYING);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_PLAYING);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_PLAYING);
+#endif
 			break;
 
 		case MN_HELP_RULES:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_RULES);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_RULES);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_HELP_CONTEXT, MN_HELP_RULES);
+#endif
 			break;
 
 		default:
-			hwndResult = HtmlHelp(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#if defined(_UNICODE) || defined(UNICODE)
+            hwndResult = HtmlHelpW(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#else
+			hwndResult = HtmlHelpA(GetDesktopWindow(), sz, HH_DISPLAY_TOPIC, 0);
+#endif
 	}
 
 	if (!hwndResult)
@@ -1595,9 +1636,9 @@ DWORD           lParam)
 #if WINVER >= 0x0400
   HRGN  hrgn = { 0 };
 #endif
-  message;
-  wParam;
-  lParam;
+  (void)message;
+  (void)wParam;
+  (void)lParam;
 
   if (flashtimes <= count)
   {
@@ -1837,18 +1878,9 @@ INT WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPWSTR lpszCmdLine, IN
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT cmdShow)
 #endif
 {
-  int _argc;
-#if defined(_UNICODE) || defined(UNICODE)
-  wchar_t **_argv;
-#else
-  char **_argv;
-#endif
   INT  retVal = 0;
   HWND hWnd;
   MSG  msg;
-
-  _argc;
-  _argv;
 
   hInst = hInstance;
 
@@ -1900,8 +1932,9 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
   fThinking = FALSE;
 
 #if WINVER >= 0x0400
+#if defined(_UNICODE) || defined(UNICODE)
   hWnd = CreateWindowExW((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
-				TEXT("Reversi"),
+				L"Reversi",
 				fCheated ? szReversiPractice : szReversi,
 				WS_TILEDWINDOW,
 				CW_USEDEFAULT,
@@ -1913,7 +1946,34 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 				hInstance,
 				NULL);
 #else
-  hWnd = CreateWindow(TEXT("Reversi"),
+    hWnd = CreateWindowExA((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
+                  "Reversi",
+                  fCheated ? szReversiPractice : szReversi,
+                  WS_TILEDWINDOW,
+                  CW_USEDEFAULT,
+                  CW_USEDEFAULT,
+                  (GetSystemMetrics(SM_CXSCREEN) >> 1),
+                  (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
+                  NULL,
+                  NULL,
+                  hInstance,
+                  NULL);
+#endif
+#else
+#if defined(_UNICODE) || defined(UNICODE)
+  hWnd = CreateWindowW(L"Reversi",
+                fCheated ? szReversiPractice : szReversi,
+                WS_TILEDWINDOW,
+                CW_USEDEFAULT,
+                CW_USEDEFAULT,
+                (GetSystemMetrics(SM_CXSCREEN) >> 1),
+                (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
+                (HWND)NULL,
+                (HMENU)NULL,
+                hInstance,
+                NULL);
+#else
+  hWnd = CreateWindowA("Reversi",
                 fCheated ? szReversiPractice : szReversi,
                 WS_TILEDWINDOW,
                 CW_USEDEFAULT,
@@ -1924,6 +1984,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                 (HMENU)NULL,
                 hInstance,
                 NULL);
+#endif
 #endif
 
   if (!hWnd)
@@ -1951,4 +2012,3 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 
   return (0);
 }
-

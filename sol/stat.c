@@ -116,10 +116,14 @@ VOID StatUpdate()
     HDC hdcSav;
 	HRGN hrgn = { 0 };
 
-    if(hwndStat == NULL)
+    if (hwndStat == NULL)
+    {
         return;
+    }
+
 	GetWindowRgn(hwndStat, hrgn);
-    if (hdc = GetDC(hwndStat))
+
+    if ((hdc = GetDC(hwndStat)))
     {
         hdcSav = HdcSet(hdc, 0, 0);
         StatRender();

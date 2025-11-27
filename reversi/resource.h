@@ -1,3 +1,6 @@
+#ifndef __RESOURCE_H__
+#define __RESOURCE_H__
+
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
 // Used by res.rc
@@ -1602,6 +1605,10 @@
 #endif
 #endif
 
+
 #if defined(_UNICODE) || defined(UNICODE)
 #define TEXT(str) L##str
 #endif
+
+#endif /* __PWIN32_H__ */
+

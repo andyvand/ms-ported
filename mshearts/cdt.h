@@ -1,3 +1,5 @@
+#ifndef __CDT_H__
+#define __CDT_H__
 
 #define CLOADMAX	5
 
@@ -80,10 +82,7 @@
 #define IDO 68
 #define IDMAX IDDECK
 
-
-
 /* internal ID's for animation */
-
 #define IDASLIME1 678
 #define IDASLIME2 679
 
@@ -92,14 +91,11 @@
 #define IDAFLIPE1 681
 #define IDAFLIPE2 682
 
-
 #define IDABROBOT1 683
 #define IDABROBOT2 684
 
-
 /* Red non-face card frame */
 #define IDFRAME 999
-
 
 #define FACEUP		0
 #define FACEDOWN	1   /* for compatibility with old apps, use IDFACEDOWNFIRST..IDFACEDOWNLAST */
@@ -109,3 +105,5 @@
 #define INVISIBLEGHOST 5
 #define DECKX		6
 #define DECKO		7
+
+#endif /* __CDT_H__ */

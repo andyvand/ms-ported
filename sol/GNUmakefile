@@ -1,0 +1,45 @@
+TARGETNAME=Solitaire
+TARGETPATH=../../bin
+TARGETTYPE=APPLICATION
+CC = i686-pc-mingw32-gcc
+AR = i686-pc-mingw32-ar
+WINDRES = i686-pc-mingw32-windres
+RANLIB = i686-pc-mingw32-ranlib
+CFLAGS = -O2 -I. -Wall -Wpedantic
+LDFLAGS = -static-libgcc
+LIBS = -lgdi32 -lhtmlhelp
+RM = rm -f
+INSTALL = install -m 755
+INSTALL_DIR = /usr
+
+OBJS = \
+    sol.o \
+    util.o \
+    game.o \
+    col.o \
+    klond.o \
+    undo.o \
+    marq.o \
+    stat.o \
+    debug.o \
+    cards_rc.o \
+    cards.o \
+    sol_new_rc.o
+
+%_rc.o: %.rc
+	$(WINDRES) -o $@ $<
+
+%.o: %.c
+	$(CC) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+all: $(TARGETNAME).exe
+
+$(TARGETNAME).exe: $(OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+clean:
+	$(RM) $(OBJS) $(DLL_OBJS) $(TARGETNAME).exe
+
+install:
+	$(INSTALL) $(TARGETNAME).exe $(INSTALL_DIR)/bin/$(TARGETNAME).exe
+

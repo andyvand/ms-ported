@@ -12,15 +12,15 @@
 1 MENU
 BEGIN
     POPUP TEXT("&Game")
-        begin
+        BEGIN
             MENUITEM TEXT("&Hint"), 50
             MENUITEM TEXT("&Pass"), 20
             MENUITEM TEXT("&New"),  25
             MENUITEM TEXT("Change &Color Mode"), 26
             MENUITEM SEPARATOR
             MENUITEM TEXT("E&xit"), 52
-        end
-    popup TEXT("&Skill")
+        END
+    POPUP TEXT("&Skill")
         BEGIN
             MENUITEM TEXT("&Beginner"), 41
             MENUITEM TEXT("&Novice"),   42
@@ -57,8 +57,8 @@ BEGIN
     VK_F10,  27,                VIRTKEY
 END
 
-stringtable
-begin
+STRINGTABLE
+BEGIN
     3, TEXT("Reversi")
     4, TEXT("Reversi Practice Game")
     5, TEXT("Pass")
@@ -80,15 +80,40 @@ begin
     34, TEXT("Could not retrieve rules help")
 #endif
     37, TEXT("Could not retrieve search for help")
-end
+END
 
-rcinclude reversi.dlg
+VS_VERSION_INFO		VERSIONINFO
+FILEVERSION		5,0,0,0
+PRODUCTVERSION    	5,0,0,0
+FILEFLAGSMASK		VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+FILEFLAGS		1
+#else /* NDEBUG */
+FILEFLAGS		0
+#endif /* _DEBUG */
+FILEOS			VOS_NT_WINDOWS32
+FILETYPE		VFT_APP //
+FILESUBTYPE		0	// not used
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "FileDescription",	"Reversi\0"
+      VALUE "CompanyName", "Microsoft"
+      VALUE "FileVersion",	"5.0\0"
+      VALUE "InternalName",	"decompkernelcache.exe\0"
+      VALUE "LegalCopyright",	"(C) Microsoft, all rights reserved\0"
+      VALUE "OriginalFilename",	"reversi.exe\0"
+      VALUE "ProductName",	"reversi\0"
+      VALUE "ProductVersion",	"5.0\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 0x04E4
+  END
+END
 
-#include <ntverp.h>
+#include "reversi.dlg"
 
-#define	VER_FILETYPE	VFT_APP
-#define	VER_FILESUBTYPE	VFT2_UNKNOWN
-#define VER_FILEDESCRIPTION_STR     TEXT("Reversi Game Applet")
-#define VER_INTERNALNAME_STR        TEXT("reversi\0")
-
-#include "common.ver"

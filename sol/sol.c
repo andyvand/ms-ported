@@ -2,6 +2,9 @@
 #include <shellapi.h>  // To pick up ShellAbout()
 #include <htmlhelp.h>
 
+HICON hIconMain = NULL;              // the main freecell icon.
+HICON hImageMain = NULL;             // the main freecell image.
+
 VSZASSERT
 
 #if 0
@@ -217,8 +220,12 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
 /* BUG:  Need to check VERTRES and divide dxCrd by 2 (esp w/ lores ega) */
     dxScreen = GetDeviceCaps(hdc, HORZRES);
     dyScreen = GetDeviceCaps(hdc, VERTRES);
-    if(fHalfCards = dyScreen < 300)
+
+    if ((fHalfCards = dyScreen < 300))
+    {
         dyCrd /= 2;
+    }
+
     ReleaseDC(NULL, hdc);
     rgbTable = fBW ? rgbWhite : rgbGreen;
     hbrTable = CreateSolidBrush(rgbTable);
@@ -312,7 +319,7 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     GetIniFlags(&fOutline);
 
 
-    if(SetTimer(hwndApp, 666, 250, TimerProc) == 0)
+    if(SetTimer(hwndApp, 666, 250, (TIMERPROC)TimerProc) == 0)
     {
         goto OOMError;
     }
@@ -673,8 +680,10 @@ VOID NewGame(BOOL fNewSeed, BOOL fZeroScore)
 #endif
     if(fNewSeed)
     {
+#ifdef DEBUG
         static INT lastrnd= -1;     // previous rand() value
-        //INT rnd1;                   // trial rand() value
+        INT rnd1;                   // trial rand() value
+#endif
         INT Param;
 
         // It was reported that games never changed.

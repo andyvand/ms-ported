@@ -1,0 +1,54 @@
+TARGETNAME=Reversi
+TARGETPATH=../../bin
+TARGETTYPE=APPLICATION
+CC = i686-pc-mingw32-gcc
+CXX = i686-pc-mingw32-g++
+AR = i686-pc-mingw32-ar
+WINDRES = i686-pc-mingw32-windres
+RANLIB = i686-pc-mingw32-ranlib
+CFLAGS = -O2 -I. -Wall -Wpedantic
+LDFLAGS = -static-libgcc
+LIBS = -lgdi32 -lhtmlhelp -lstdc++ -lsupc++
+RM = rm -f
+INSTALL = install -m 755
+INSTALL_DIR = /usr
+
+OBJS = \
+    cards.o \
+    card.o \
+	comp2.o \
+	computer.o \
+	dde.o \
+	ddecb.o \
+	dlg.o \
+	hearts.o \
+	human.o \
+	lead.o \
+	main.o \
+	main2.o \
+	player.o \
+	sound.o \
+	welcome.o \
+	cards_rc.o \
+	hearts_rc.o
+
+%_rc.o: %.rc
+	$(WINDRES) -o $@ $<
+
+%.o: %.cpp
+	$(CXX) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+%.o: %.c
+	$(CC) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+all: $(TARGETNAME).exe
+
+$(TARGETNAME).exe: $(OBJS)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
+
+clean:
+	$(RM) $(OBJS) $(DLL_OBJS) $(TARGETNAME).exe
+
+install:
+	$(INSTALL) $(TARGETNAME).exe $(INSTALL_DIR)/bin/$(TARGETNAME).exe
+

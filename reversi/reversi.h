@@ -1,3 +1,5 @@
+#ifndef __REVERSI_H__
+#define __REVERSI_H__
 
                         
 #define BoardSize           100
@@ -35,4 +37,10 @@
 #if defined(_UNICODE) || defined(UNICODE)
 #undef  TEXT
 #define TEXT(str) L##str
+#else
+#undef  TEXT
+#define TEXT(str) str
 #endif
+
+#endif /* __REVERSI_H__ */
+

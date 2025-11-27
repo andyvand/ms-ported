@@ -1,7 +1,7 @@
 ASSERTFAILED DIALOG LOADONCALL MOVEABLE DISCARDABLE 12, 15, 198, 113
 CAPTION "Assertion Failure"
 STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_SYSMENU | WS_POPUP
-Font 8, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg"
 BEGIN
 	   CONTROL "Please send bug report to winbug.  Include file, line number, game number, version number and steps to reproduce.", 100, "static", SS_LEFT | WS_CHILD, 4, 40, 191, 25
 	   CONTROL "File:", 101, "static", SS_RIGHT | WS_CHILD, 8, 4, 28, 9

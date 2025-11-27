@@ -329,7 +329,6 @@ BOOL DefRender(COL *pcol, INT icrdFirst, INT icrdLast)
 	INT icrd;
 	INT icrdMac;
 	CRD *pcrd = NULL, *pcrdPrev = NULL;
-	COLCLS *pcolcls;
 
 	icrdFirst = WMax(icrdFirst, 0);
 	Assert(icrdLast >= 0);
@@ -361,7 +360,6 @@ EraseExtra:
 		/* hack to make dealing quicker  */
 		if(pgmCur->fDealt || pcol->pcolcls->tcls == tclsDeck)
 			{
-			pcolcls = pcol->pcolcls;
 			pcrd = &pcol->rgcrd[icrdLast == 0 ? 0 : icrdMac-1];
 			DrawBackExcl(pcol, &pcrd->pt);
 			}
@@ -408,7 +406,6 @@ BOOL DefDrawOutline(COL *pcol, PT *ppt, PT *pptPrev)
 	MOVE *pmove;
 	PT pt, ptPrev;
 	DEL del;
-	COLCLS *pcolcls;
 
 	Assert(pcol->pmove != NULL);
 	pmove = pcol->pmove;
@@ -418,11 +415,10 @@ BOOL DefDrawOutline(COL *pcol, PT *ppt, PT *pptPrev)
 
 	if(fOutlineDrag)
 		{
-		pcolcls = pcol->pcolcls;
-		DrawOutline(&pt, pmove->ccrdSel, 0, pcolcls->dyUp);
+		DrawOutline(&pt, pmove->ccrdSel, 0, pcol->pcolcls->dyUp);
 		if(pptPrev->x != ptNil.x)
 			{
-			DrawOutline(&ptPrev, pmove->ccrdSel, 0, pcolcls->dyUp);
+			DrawOutline(&ptPrev, pmove->ccrdSel, 0, pcol->pcolcls->dyUp);
 			}
 		return fTrue;
 		}
@@ -476,7 +472,6 @@ BOOL DefComputeCrdPos(COL *pcol, INT icrdFirst, BOOL fAssumeDown)
 {
 	INT icrd;
 	CRD *pcrd;
-	COLCLS *pcolcls;
 	PT pt;
 
 	Assert(icrdFirst >= 0);
@@ -494,23 +489,22 @@ BOOL DefComputeCrdPos(COL *pcol, INT icrdFirst, BOOL fAssumeDown)
 			icrdFirst++;
 		}
 
-	pcolcls = pcol->pcolcls;
 	for(icrd = icrdFirst; icrd < pcol->icrdMac; icrd++)
 		{
 		pcrd = &pcol->rgcrd[icrd];
 		pcrd->pt = pt;
 		if(pcrd->fUp && !fAssumeDown)
 			{
-		  	if(icrd % pcolcls->dcrdUp == pcolcls->dcrdUp-1)
+		  	if(icrd % pcol->pcolcls->dcrdUp == pcol->pcolcls->dcrdUp-1)
 				{
-				pt.x += pcolcls->dxUp;
-				pt.y += pcolcls->dyUp;
+				pt.x += pcol->pcolcls->dxUp;
+				pt.y += pcol->pcolcls->dyUp;
 				}
 			}
-		else if(icrd % pcolcls->dcrdDn == pcolcls->dcrdDn-1)
+		else if(icrd % pcol->pcolcls->dcrdDn == pcol->pcolcls->dcrdDn-1)
 			{
-			pt.x += pcolcls->dxDn;
-			pt.y += pcolcls->dyDn;
+			pt.x += pcol->pcolcls->dxDn;
+			pt.y += pcol->pcolcls->dyDn;
 			}
 		}
 	return fTrue;

@@ -4,6 +4,9 @@
 * This file provides typedefs for portable 16/32 bit code.
 \*****************************************************************************/
 
+#ifndef __PTYPES16_H__
+#define __PTYPES16_H__
+
 /* TEMPORARY FIXES: */
 
 #ifndef CCHDEVICENAME
@@ -62,9 +65,5 @@ typedef  POINT          MPOINT         ;
 #define _LOADDS _loadds
 #define _EXPORT _export
 
-
-
-
-
-
+#endif /* __PTYPES16_H__ */
 

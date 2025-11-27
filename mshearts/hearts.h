@@ -29,9 +29,7 @@ declaration of theApp class
 
 #include <shellapi.h>
 //#include <shell.h>
-
 #include <afxwin.h>
-
 #include <htmlhelp.h>
 
 class CTheApp : public CWinApp

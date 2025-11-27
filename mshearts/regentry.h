@@ -137,4 +137,4 @@ inline long RegEntry::DeleteValue(const TCHAR *pszValue)
     return _error;
 }
 
-#endif
+#endif /* REGENTRY_INC */

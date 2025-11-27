@@ -1,5 +1,7 @@
-#include <memory.h>
+#ifndef __STD_H__
+#define __STD_H__
 
+#include <memory.h>
 
 typedef INT X;
 typedef INT Y;
@@ -36,7 +38,6 @@ typedef struct _rc
     Y yBot;
 } RC;
 
-
 #ifdef DEBUG
 #define VSZASSERT static TCHAR *vszAssert = TEXT(__FILE__);
 #define Assert(f) { if (!(f)) { AssertFailed(vszAssert, __LINE__); } }
@@ -46,8 +47,6 @@ typedef struct _rc
 #define SideAssert(f) (f)
 #define VSZASSERT
 #endif
-
-
 
 VOID *PAlloc(INT cb);
 VOID FreeP( VOID * );
@@ -71,25 +70,19 @@ BOOL FRectAllVisible(HDC hdc, RC *prc);
 // Removed so it will build on NT...<chriswil>
 //
 // INT APIENTRY MulDiv( INT, INT, INT );
-
-
 #ifdef DEBUG
 VOID AssertFailed(TCHAR *szFile, INT li);
 #endif
 
 #define bltb(pb1, pb2, cb) memcpy(pb2, pb1, cb)
 
-
 extern HWND hwndApp;
 extern HANDLE hinstApp;
-
-
 
 BOOL FWriteIniString(INT idsTopic, INT idsItem, TCHAR *szValue);
 BOOL FWriteIniInt(INT idsTopic, INT idsItem, WORD2DWORD w);
 BOOL FGetIniString(INT idsTopic, INT idsItem, TCHAR *sz, TCHAR *szDefault, INT cchMax);
 WORD2DWORD GetIniInt(INT idsTopic, INT idsItem, INT wDefault);
 
-
-
 VOID CrdRcFromPt(PT *ppt, RC *prc);
+#endif /* __STD_H__ */

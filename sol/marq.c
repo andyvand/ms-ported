@@ -7,7 +7,7 @@ VSZASSERT
 
 INT_PTR APIENTRY OptionsDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lParam)
 {
-    BOOL fNewGame;
+    BOOL fNewGame = fFalse;
     static INT ccrdDealNew;
     static SMD smdNew;
 
@@ -120,14 +120,15 @@ INT_PTR APIENTRY OptionsDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lPar
 
 VOID DoOptions()
 {
-    BOOL fNewGame;
+    BOOL fNewGame = fFalse;
 
-    if(fNewGame = (BOOL)DialogBox(hinstApp,
+    if ((fNewGame = (BOOL)DialogBox(hinstApp,
                                   MAKEINTRESOURCE(iddOptions),
                                   hwndApp,
-                                  OptionsDlgProc))
-
-            NewGame(fTrue, fTrue);
+                                  (DLGPROC)OptionsDlgProc)))
+    {
+        NewGame(fTrue, fTrue);
+    }
 }
 
 
@@ -264,10 +265,8 @@ LRESULT APIENTRY BackPushProc(HWND hwnd, INT wm, WPARAM wParam, LPARAM lParam)
 
 VOID DoBacks()
 {
-
     DialogBox(hinstApp,
               MAKEINTRESOURCE(iddBacks),
               hwndApp,
-              BackDlgProc);
-
+              (DLGPROC)BackDlgProc);
 }

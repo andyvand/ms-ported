@@ -4,6 +4,9 @@
 * This file provides macros to map portable windows code to its 32 bit form.
 \*****************************************************************************/
 
+#ifndef __PWIN32_H__
+#define __PWIN32_H__
+
 /*-----------------------------------USER------------------------------------*/
 
 /* HELPER MACROS */
@@ -254,7 +257,7 @@ HMETAFILE WINAPI    MSetMetaFileBits(HANDLE h);
 
 /* Removed APIs */
 
-#define MUnrealizeObject(h)          ((h), TRUE)
+#define MUnrealizeObject(h)              ((void)h)
 
 /*-------------------------------------DEV-----------------------------------*/
 
@@ -302,7 +305,7 @@ INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
 #define MDllSharedSize                      GlobalSize
 #define MDllSharedUnlock                    GlobalUnlock
 #define MGetCurrentTask                     GetCurrentThreadId
-#define MGetModuleUsage(h)                  ((h), 1)
+#define MGetModuleUsage(h)                  ((int)h)
 #define MGetWinFlags()                      WF_PMODE
 #define MLoadLibrary(lpsz)                  LoadLibrary(lpsz)
 #define MLocalInit(w, p1, p2)               ((w),(p1),(p2),TRUE)
@@ -311,7 +314,7 @@ INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
 #define M_lclose(fh)                        _lclose((HFILE)fh)
 #define M_lcreat                            (HFILE)_lcreat
 #define MOpenFile                           (HFILE)OpenFile
-#define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)((UINT64)fh), lOff, NULL, (DWORD)iOrg)
+#define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)fh, lOff, NULL, (DWORD)iOrg)
 #define MDeleteFile                         DeleteFile
 #define M_lopen                             (HFILE)_lopen
 #define M_lread(fh, lpBuf, cb)              _lread((HFILE)fh, lpBuf, cb)
@@ -319,4 +322,6 @@ INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
 
 #define MCatch                              setjmp
 #define MThrow                              longjmp
+
+#endif /* __PWIN32_H__ */
 

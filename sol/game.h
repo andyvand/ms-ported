@@ -56,8 +56,8 @@ struct _gm
 
 #define ID_ICON_MAIN        500
 
-HICON   hIconMain;              // the main freecell icon.
-HICON   hImageMain;             // the main freecell image.
+extern HICON hIconMain;              // the main freecell icon.
+extern HICON hImageMain;             // the main freecell image.
 
 /* Score MoDe  */
 typedef INT SMD;

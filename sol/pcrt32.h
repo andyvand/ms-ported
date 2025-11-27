@@ -3,6 +3,8 @@
  * properly on 32 bit code.
  */
 
+#ifndef __PCRT32_H__
+#define __PCRT32_H__
 
 #define _ffree free
 #define _fmalloc malloc
@@ -36,4 +38,6 @@
 #define _fstrstr strstr
 #define _fstrtok strtok
 #define _fstrupr _strupr
+
+#endif /* __PCRT32_H__ */
 

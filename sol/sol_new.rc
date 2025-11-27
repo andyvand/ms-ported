@@ -103,12 +103,12 @@ BEGIN
 
 END
 
-rcinclude solid.h
-rcinclude sol.dlg
+#include "solid.h"
+#include "sol.dlg"
 
-rcinclude gameno.dlg
-rcinclude assert.h
-rcinclude assert.dlg
+#include "gameno.dlg"
+#include "assert.h"
+#include "assert.dlg"
 
 ID_ICON_MAIN    ICON  Solitaire.ico
 

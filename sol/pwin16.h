@@ -5,7 +5,9 @@
 \*****************************************************************************/
 
 /*-----------------------------------USER------------------------------------*/
- 
+#ifndef __PWIN16_H__
+#define __PWIN16_H__
+
 DWORD FAR PASCAL     MGetLastError(VOID);
 DWORD FAR PASCAL     MSendMsgEM_GETSEL(HWND hDlg, INT FAR *piStart, INT FAR *piEnd);
 
@@ -287,3 +289,6 @@ BOOL FAR PASCAL MDeleteFile(LPSTR lpPathName);
 #define M_lwrite                 _lwrite
 #define MGetMetaFileBits         GetMetaFileBits
 #define MSetMetaFileBits         SetMetaFileBits
+
+#endif /* __PWIN16_H__ */
+

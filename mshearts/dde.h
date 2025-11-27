@@ -47,10 +47,15 @@ Class DDEClient : DDE
 
 #include <ddeml.h>
 
-typedef HDDEDATA (EXPENTRY *DDECALLBACK) (WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
-HDDEDATA EXPENTRY EXPORT DdeServerCallBack(WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
-HDDEDATA EXPENTRY EXPORT DdeClientCallBack(WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
+#ifndef EXPENTRY
+#define EXPENTRY WINAPI
+#endif
 
+typedef HDDEDATA (EXPENTRY *DDECALLBACK) (WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
+HDDEDATA EXPENTRY DdeServerCallBack(WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
+HDDEDATA EXPENTRY DdeClientCallBack(WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
+
+#ifdef __cplusplus
 class DDE
 {
     public:
@@ -124,5 +129,6 @@ class DDEClient : public DDE
 
 extern  DDEClient   *ddeClient;
 extern  DDEServer   *ddeServer;
+#endif
 
 #endif

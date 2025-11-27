@@ -396,7 +396,7 @@ BOOL DeckInit(COL *pcol)
         {
         pcrd = &pcol->rgcrd[icrd];
         pcrd->cd = (unsigned short)icrd;
-        pcrd->pt = *(PT *)&pcol->rc;
+        memcpy(&pcrd->pt, &pcol->rc, sizeof(PT));
         pcrd->fUp = fFalse;
         }
     pcol->icrdMac = icrdDeckMax;
@@ -1086,7 +1086,7 @@ BOOL KlondDrawStatus(GM *pgm, RC *prc)
         GetTextExtentPoint32(hdcCur, sz, (INT)(pch-sz), &iSize);
         rc.xRight -= iSize.cx;
         pch = sz;
-        if(fNegSco = pgm->sco < 0)
+        if ((fNegSco = pgm->sco < 0))
             *pch++ = TEXT('-');
         if(smd == smdVegas)
         {
