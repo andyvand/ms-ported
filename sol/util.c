@@ -94,7 +94,7 @@ VOID DrawCardPt(CRD *pcrd, PT *ppt)
 
 VOID DrawCardExt(PT *ppt, INT cd, INT mode)
 {
-    VOID DrawBackground();
+    VOID DrawBackground(X,Y,X,Y);
 
     AssertHdcCur();
 
@@ -135,7 +135,7 @@ VOID DrawBackground(X xLeft, Y yTop, X xRight, Y yBot)
 VOID EraseScreen(VOID)
 {
     RC rc;
-    HDC HdcSet();
+    HDC HdcSet(HDC,X,Y);
 
     if(!FGetHdc())
         return;

@@ -305,7 +305,13 @@ INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
 #define MDllSharedSize                      GlobalSize
 #define MDllSharedUnlock                    GlobalUnlock
 #define MGetCurrentTask                     GetCurrentThreadId
+
+#if defined(__x86_64__) || defined(__arm64__) || defined(_M_AMD64) || defined(_M_ARM64)
+#define MGetModuleUsage(h)                  ((long long)h)
+#else
 #define MGetModuleUsage(h)                  ((int)h)
+#endif
+
 #define MGetWinFlags()                      WF_PMODE
 #define MLoadLibrary(lpsz)                  LoadLibrary(lpsz)
 #define MLocalInit(w, p1, p2)               ((w),(p1),(p2),TRUE)

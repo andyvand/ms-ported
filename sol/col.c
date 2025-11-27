@@ -8,7 +8,7 @@ MOVE move = {0};	   /* move data, pointed to by current pcol->pmove  */
 
 
 
-COLCLS *PcolclsCreate(INT tcls, INT (FAR *lpfnColProc)(),
+COLCLS *PcolclsCreate(INT tcls, INT (FAR *lpfnColProc)(COL *, INT, WPARAM, LPARAM),
 							DX dxUp, DY dyUp, DX dxDn, DY dyDn,
 							INT dcrdUp, INT dcrdDn)
 {
@@ -187,7 +187,7 @@ Return:
 BOOL DefMouseUp(COL *pcol, PT *pptPrev, BOOL fRender)
 {
 	MOVE *pmove;
-	VOID DrawOutline();
+	VOID DrawOutline(PT *, INT, DX, DY);
 
 	if(fRender)
 		SendColMsg(pcol, msgcZip, 0, 0);

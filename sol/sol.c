@@ -374,8 +374,8 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
     HMENU hmenu;
     PT pt;
     INT msgg;
-    VOID NewGame();
-    VOID StatString();
+    VOID NewGame(BOOL,BOOL);
+    VOID StatString(INT);
 
     switch (wm)
     {

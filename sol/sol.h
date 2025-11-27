@@ -60,7 +60,7 @@ BOOL FCreateStat( VOID );
 BOOL FSetDrag( BOOL );
 BOOL FInitGm( VOID );
 BOOL APIENTRY cdtInit( INT FAR *, INT FAR * );
-typedef INT (*COLCLSCREATEFUNC)();
+typedef INT (*COLCLSCREATEFUNC)(COL *, INT, WPARAM, LPARAM);
 COLCLS *PcolclsCreate(INT tcls, COLCLSCREATEFUNC lpfnColProc,
 							DX dxUp, DY dyUp, DX dxDn, DY dyDn,
 							INT dcrdUp, INT dcrdDn);

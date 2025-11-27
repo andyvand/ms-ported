@@ -650,7 +650,7 @@ BOOL KlondDeal(GM *pgm, BOOL fZeroScore)
     INT icol;
     INT irw;
     COL *pcolDeck;
-    VOID StatString();
+    VOID StatString(INT);
 
     if(!FGetHdc())
         {
@@ -813,7 +813,7 @@ BOOL KlondWinner(GM *pgm)
     INT dsco;
     TCHAR *pch;
     TCHAR szBonus[84];
-    VOID StatString();
+    VOID StatString(INT);
 
     fKlondWinner = TRUE;
 

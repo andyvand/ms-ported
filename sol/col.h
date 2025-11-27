@@ -1,9 +1,10 @@
+typedef struct _col COL;
 
 /* COLumn CLaSs struct */
 typedef struct _colcls
 {
     INT tcls;                   /* class type  */
-    INT (FAR *lpfnColProc)();
+    INT (FAR *lpfnColProc)(COL *, INT, WPARAM, LPARAM);
     INT ccolDep;                /* # of dependent columns */
     DX  dxUp;                   /* up card offsets */
     DY  dyUp;
@@ -39,16 +40,16 @@ typedef struct _move
 
 
 /* COL struct, this is what a column o' cards is */
-typedef struct _col
+struct _col
 {
     COLCLS *pcolcls;          /* class of this instance */
-    INT (FAR *lpfnColProc)(); /* duplicate of fn in colcls struct (for efficiency) */
+    INT (FAR *lpfnColProc)(COL *, INT, WPARAM, LPARAM); /* duplicate of fn in colcls struct (for efficiency) */
     RC rc;                    /* bounding rectangle of this col */
     MOVE *pmove;              /* move info, only valid while draggin */
     INT icrdMac;                
     INT icrdMax;
     CRD rgcrd[1];
-} COL;
+};
 
 /* SCOre */
 typedef INT SCO;
