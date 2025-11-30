@@ -104,7 +104,9 @@ static INT cInits = 0;
 
 HANDLE hinstApp;
 #else
-extern HANDLE  hinstApp;
+extern HINSTANCE __stdcall AfxGetInstanceHandle();
+
+HANDLE hinstApp;
 #endif
 
 BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
@@ -126,6 +128,11 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
         HANDLE hSrcOld;
         HDC hdcDstMemory;
         HDC hdcSrcMemory;
+
+        if (hinstApp == NULL)
+        {
+            hinstApp = AfxGetInstanceHandle();
+        }
 
 #ifdef DLL
         if (cInits++ != 0)

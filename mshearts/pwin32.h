@@ -7,6 +7,10 @@
 #ifndef __PWIN32_H__
 #define __PWIN32_H__
 
+#include <windows.h>
+#include <string.h>
+#include <memory.h>
+
 /*-----------------------------------USER------------------------------------*/
 
 /* HELPER MACROS */
@@ -55,25 +59,26 @@
 #define MGetLastError                    GetLastError
 
 #if defined(_UNICODE) || defined(UNICODE)
+#if defined(__MINGW32__) || defined(_USE_MBCS_WINMAIN) 
+#define MMain(hInst, hPrevInst, lpCmdLineW, nCmdShow) \
+   INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, \
+   INT nCmdShow) { \
+   INT _argc; \
+   WCHAR** _argv;
+#else
 #define MMain(hInst, hPrevInst, lpCmdLine, nCmdShow) \
    INT WINAPI wWinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPWSTR lpCmdLine, \
    INT nCmdShow) { \
    INT _argc; \
    WCHAR **_argv;
-
-LPWSTR MGetCmdLine(VOID);
+#endif
 #else
 #define MMain(hInst, hPrevInst, lpCmdLine, nCmdShow) \
    INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, \
    INT nCmdShow) { \
    INT _argc; \
    CHAR **_argv;
-
-LPSTR MGetCmdLine(VOID);
 #endif
-
-DWORD WINAPI  MSendMsgEM_GETSEL(HWND hDlg, WORD2DWORD * piStart, WORD2DWORD * piEnd);
-
 
 /* USER MESSAGES: */
 
@@ -168,21 +173,6 @@ DWORD WINAPI  MSendMsgEM_GETSEL(HWND hDlg, WORD2DWORD * piStart, WORD2DWORD * pi
 #define GET_WM_VSCROLL_MPS(code, pos, hwnd)    \
         (WPARAM)MAKELONG(code, pos), (LONG)(hwnd)
 
-/* DDE macros */
-#if defined(_WIN64) || defined(WIN64)
-LPARAM APIENTRY PackDDElParam ( UINT msg, UINT_PTR uiLo, UINT_PTR uiHi );
-BOOL   APIENTRY UnpackDDElParam ( UINT msg, LPARAM lParam, PUINT_PTR puiLo, PUINT_PTR puiHi );
-BOOL   APIENTRY FreeDDElParam ( UINT msg, LPARAM lParam );
-LPARAM APIENTRY ReuseDDElParam ( LPARAM lParam, UINT msgIn, UINT msgOut, UINT_PTR uiLo, UINT_PTR uiHi );
-#else
-LONG WINAPI PackDDElParam(UINT msg, UINT uiLo, UINT uiHi);
-BOOL WINAPI UnpackDDElParam(UINT msg, LONG lParam, PUINT puiLo, PUINT puiHi);
-BOOL WINAPI FreeDDElParam(UINT msg, LONG lParam);
-#endif
-UINT WINAPI MGetDDElParamLo(UINT msg, LONG lParam);
-UINT WINAPI MGetDDElParamHi(UINT msg, LONG lParam);
-BOOL WINAPI MPostDDEMsg(HWND hTo, UINT msg, HWND hFrom, UINT uiLo, UINT uiHi);
-
 #define DDEFREE(msg, lp)                            FreeDDElParam(msg, lp)
 
 #define GET_WM_DDE_ACK_STATUS(wp, lp)               ((WORD)MGetDDElParamLo(WM_DDE_ACK, lp))
@@ -230,18 +220,6 @@ BOOL WINAPI MPostDDEMsg(HWND hTo, UINT msg, HWND hFrom, UINT uiLo, UINT uiHi);
 
 /*-----------------------------------GDI-------------------------------------*/
 
-BOOL WINAPI   MGetAspectRatioFilter(HDC hdc, INT * pcx, INT * pcy);
-BOOL WINAPI   MGetBitmapDimension(HANDLE hBitmap, INT * pcx, INT *pcy);
-BOOL WINAPI   MGetBrushOrg(HDC hdc, INT * px, INT * py);
-BOOL WINAPI   MGetCurrentPosition(HDC hdc, INT * px, INT * py);
-BOOL WINAPI   MGetTextExtent(HDC hdc, LPSTR lpstr, INT cnt, INT *pcx, INT *pcy);
-BOOL WINAPI   MGetViewportExt(HDC hdc, INT * pcx, INT * pcy);
-BOOL WINAPI   MGetViewportOrg(HDC hdc, INT * px, INT * py);
-BOOL WINAPI   MGetWindowExt(HDC hdc, INT * pcx, INT * pcy);
-BOOL WINAPI   MGetWindowOrg(HDC hdc, INT * px, INT * py);
-HANDLE WINAPI MGetMetaFileBits(HMETAFILE hmf);
-HMETAFILE WINAPI    MSetMetaFileBits(HANDLE h);
-
 #define MCreateDiscardableBitmap(h, x, y) CreateCompatibleBitmap(h, (DWORD)(x), (DWORD)(y))
 #define MMoveTo(hdc, x, y)               MoveToEx(hdc, x, y, NULL)
 #define MOffsetViewportOrg(hdc, x, y)    OffsetViewportOrgEx(hdc, x, y, NULL)
@@ -259,27 +237,7 @@ HMETAFILE WINAPI    MSetMetaFileBits(HANDLE h);
 
 #define MUnrealizeObject(h)              ((void)h)
 
-/*-------------------------------------DEV-----------------------------------*/
-
-DWORD WINAPI  MDeviceCapabilities(LPSTR lpDriverName, LPSTR lpDeviceName,
-    LPSTR lpPort, WORD2DWORD nIndex, LPSTR lpOutput, LPDEVMODE lpDevMode);
-BOOL WINAPI   MDeviceMode(HWND hWnd, LPSTR lpDriverName, LPSTR lpDeviceName, LPSTR lpOutput);
-WORD2DWORD WINAPI MExtDeviceMode(HWND hWnd,LPSTR lpDriverName,
-    LPDEVMODE lpDevModeOutput, LPSTR lpDeviceName, LPSTR lpPort,
-    LPDEVMODE lpDevModeInput, LPSTR lpProfile, WORD2DWORD flMode);
-
 /*-----------------------------------KERNEL----------------------------------*/
-
-HFILE WINAPI  MDupHandle(HFILE h);
-BOOL WINAPI   MFreeDOSEnvironment(LPSTR lpEnv);
-HANDLE WINAPI MGetInstHandle(VOID);
-LPSTR WINAPI  MGetDOSEnvironment(VOID);
-WORD WINAPI   MGetDriveType(INT nDrive);
-BYTE WINAPI   MGetTempDrive(BYTE cDriveLtr);
-INT WINAPI    MGetTempFileName(BYTE cDriveLtr, LPSTR lpstrPrefix, WORD wUnique, LPSTR lpTempFileName);
-INT WINAPI    MReadComm(HFILE nCid, LPSTR lpBuf, INT nSize);
-INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
-
 
 #define GETMAJORVERSION(x)                  ((x)&0xff)
 #define GETMINORVERSION(x)                  (((x)>>8)&0xff)
@@ -320,7 +278,13 @@ INT WINAPI    MWriteComm(HFILE nCid, LPSTR lpBuf, INT nSize);
 #define M_lclose(fh)                        _lclose((HFILE)fh)
 #define M_lcreat                            (HFILE)_lcreat
 #define MOpenFile                           (HFILE)OpenFile
+
+#ifdef _WIN64
+#define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)((ULONG_PTR)fh), lOff, NULL, (DWORD)iOrg)
+#else
 #define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)fh, lOff, NULL, (DWORD)iOrg)
+#endif
+
 #define MDeleteFile                         DeleteFile
 #define M_lopen                             (HFILE)_lopen
 #define M_lread(fh, lpBuf, cb)              _lread((HFILE)fh, lpBuf, cb)

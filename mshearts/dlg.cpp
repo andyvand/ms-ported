@@ -41,13 +41,6 @@ typedef int (CALLBACK* FPROC)();            // a FARPROC that returns int
 typedef UINT (WINAPI *SGIPROC)(LPTSTR, LPCTSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
 typedef UINT (WINAPI *SSIPROC)(LPTSTR, LPCTSTR, UINT, LPBYTE, DWORD, WORD);
 
-
-// declare statics
-
-int  CScoreDlg::nHandsPlayed = 0;
-int  CScoreDlg::score[MAXPLAYER][MAXHANDS+1];
-BOOL CScoreDlg::bGameOver = FALSE;
-
 BEGIN_MESSAGE_MAP( CScoreDlg, CModalDialog )
     ON_WM_PAINT()
 END_MESSAGE_MAP()
@@ -100,6 +93,7 @@ CScoreDlg::OnInitDialog
 
 BOOL CScoreDlg::OnInitDialog()
 {
+#ifdef CALC_POS // BUGGY
     RECT rcDlg, rcMain;
 
     GetParent()->GetClientRect(&rcMain);
@@ -116,7 +110,10 @@ BOOL CScoreDlg::OnInitDialog()
     int y = rcMain.top + ((dyMain - dyDlg) / 2);
 
     SetWindowPos(NULL, x, y, 0, 0, SWP_NOZORDER);
+#endif
+
     SetText();          // set title bar text
+
     return TRUE;
 }
 

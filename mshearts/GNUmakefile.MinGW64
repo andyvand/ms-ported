@@ -1,4 +1,4 @@
-TARGETNAME=Reversi
+TARGETNAME=mshearts
 TARGETPATH=../../bin
 TARGETTYPE=APPLICATION
 CC = x86_64-pc-mingw32-gcc

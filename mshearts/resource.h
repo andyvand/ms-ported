@@ -52,7 +52,7 @@
 #define IDC_LOCATEHELP  224
 
 #define IDS_MEMORY      301
-#define IDS_APPNAME     AFX_IDS_APP_TITLE
+#define IDS_APPNAME     302
 #define IDS_P1NAME      303             // P1, P2, & P3NAME must be consecutive
 #define IDS_P2NAME      304
 #define IDS_P3NAME      305

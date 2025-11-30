@@ -40,15 +40,15 @@ class CScoreDlg : public CModalDialog
         void    SetText();
 
     private:
-        CStatic *text[MAXPLAYER];
-        int     m_myid;
-
-        static  int  score[MAXPLAYER][MAXHANDS+1];
-        static  int  nHandsPlayed;
-        static  BOOL bGameOver;
-
         virtual BOOL OnInitDialog();
         afx_msg void OnPaint();
+
+    protected:
+        CStatic *text[MAXPLAYER];
+        int      m_myid;
+        int      nHandsPlayed = 0;
+        int      score[MAXPLAYER][MAXHANDS + 1];
+        BOOL     bGameOver = FALSE;
 
         DECLARE_MESSAGE_MAP()
 };
@@ -59,6 +59,7 @@ class CQuoteDlg : public CModalDialog
         CQuoteDlg(CWnd *pParent);
         afx_msg void OnPaint();
 
+    protected:
         DECLARE_MESSAGE_MAP()
 };
 
@@ -74,7 +75,7 @@ class CWelcomeDlg : public CModalDialog
 
         afx_msg void OnHelp();
 
-    private:
+    protected:
         CString m_myname;
         BOOL    m_bGameMeister;
         BOOL    m_bNetDdeActive;
@@ -92,6 +93,7 @@ class COptionsDlg : public CModalDialog
     private:
         BOOL    IsAutoStart(BOOL bToggle = FALSE);
 
+    protected:
         BOOL    m_bInitialState;
         BYTE    m_buffer[200];
 };
@@ -106,7 +108,7 @@ class CLocateDlg : public CModalDialog
         afx_msg void OnBrowse();
         afx_msg void OnHelp();
 
-    private:
+    protected:
         CString     m_server;
         HINSTANCE   m_hmodNetDriver;
 
