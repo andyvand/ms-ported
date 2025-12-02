@@ -255,7 +255,7 @@ displays quote box and plays quote.
 void CMainWindow::OnQuote()
 {
     CQuoteDlg quote(this);
-    // HeartsPlaySound(SND_QUOTE);
+    HeartsPlaySound(SND_QUOTE);
     quote.DoModal();
     HeartsPlaySound(OFF);
 }

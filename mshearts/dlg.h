@@ -24,6 +24,7 @@ COptionsDlg     set options
 #ifndef	DLG_INC
 #define	DLG_INC
 
+
 typedef WORD (FAR PASCAL *BROWSEPROC)(HWND, LPCSTR, LPSTR, UINT, LONG);
 
 const int   MAXHANDS = 12;      // can display this many in score sheet

@@ -13,14 +13,9 @@
 
 AFX_IDI_STD_FRAME   ICON    HEARTS.ICO
 
-#if 1
 SND_BREAK   WAVE    glass.wav
 SND_QUEEN   WAVE    timpani.wav
-#endif
-
-#if 0
 SND_QUOTE   WAVE    quote2.wav
-#endif
 
 HeartsMenu  MENU
 BEGIN

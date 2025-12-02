@@ -17,8 +17,10 @@ May 93, JimH    chico port
 #include "hearts.h"
 #include "debug.h"
 
+#ifdef _NO_SETENV
 extern "C" void _setargv() { }      // reduces size of C runtimes
 extern "C" void _setenvp() { }
+#endif /* NO_SETENV */
 
 TCHAR   suitid[] = TEXT("CDHS");
 TCHAR   cardid[] = TEXT("JQKA");

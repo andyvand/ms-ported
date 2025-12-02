@@ -93,7 +93,6 @@ CScoreDlg::OnInitDialog
 
 BOOL CScoreDlg::OnInitDialog()
 {
-#ifdef CALC_POS // BUGGY
     RECT rcDlg, rcMain;
 
     GetParent()->GetClientRect(&rcMain);
@@ -109,9 +108,7 @@ BOOL CScoreDlg::OnInitDialog()
     int dyMain = rcMain.bottom - rcMain.top;
     int y = rcMain.top + ((dyMain - dyDlg) / 2);
 
-    SetWindowPos(NULL, x, y, 0, 0, SWP_NOZORDER);
-#endif
-
+    SetWindowPos(this, x, y, 0, 0, SWP_NONE);
     SetText();          // set title bar text
 
     return TRUE;
@@ -793,12 +790,12 @@ Call the winnet driver computer browse dialog.
 void CLocateDlg::OnBrowse()
 {
 //  BUGBUG -- uncomment if we ever get a Chicago browse dialog
-
-/*  char        buf[MAXCOMPUTERNAME+10];        // handle slashes, etc.
+#ifdef USENETDDE
+    char        buf[MAXCOMPUTERNAME+10];        // handle slashes, etc.
     BROWSEPROC  m_pWNetServerBrowseDialog;
 
     m_pWNetServerBrowseDialog =
-        (BROWSEPROC)GetProcAddress(m_hmodNetDriver, MAKEINTRESOURCE(146));
+        (BROWSEPROC)GetProcAddress(m_hmodNetDriver, MAKEINTRESOURCEA(146));
 
     (*m_pWNetServerBrowseDialog)( m_hWnd,
                                   "MRU_MSHearts",
@@ -812,7 +809,7 @@ void CLocateDlg::OnBrowse()
         while (*p == '\\')          // skip past leading backslashes
             p++;
 
-        SetDlgItemText(IDC_SERVERNAME, p);
+        SetDlgItemTextA(m_hWnd, IDC_SERVERNAME, p);
         OnOK();
     }
     else
@@ -823,5 +820,5 @@ void CLocateDlg::OnBrowse()
         ((CButton *)GetDlgItem(IDC_BROWSE))->SetButtonStyle(BS_PUSHBUTTON);
         ((CEdit *)GetDlgItem(IDC_SERVERNAME))->SetFocus();
     }
-*/
+#endif
 }
