@@ -6,14 +6,15 @@ CXX = i686-pc-mingw32-g++
 AR = i686-pc-mingw32-ar
 WINDRES = i686-pc-mingw32-windres
 RANLIB = i686-pc-mingw32-ranlib
-CFLAGS = -O2 -I. -Wall -Wpedantic -I../atlmfc/include
-LDFLAGS = -static-libgcc -mwindows
-LIBS = -L../atlmfc/mfc/x86 -lmfc_static -lgdi32 -lhtmlhelp -lstdc++ -lsupc++ -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32
+CFLAGS = -O2 -I. -Wall -Wpedantic -I../atlmfc/include -Wno-unused-result -Wno-delete-incomplete -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-invalid-offsetof -Wno-delete-non-virtual-dtor -Wno-unknown-pragmas -Wno-unused-value -Wno-class-memaccess -g3
+LDFLAGS = -static-libgcc -mwindows -g3
+LIBS = -L../atlmfc/mfc/x86 -lmfc_static -lgdi32 -lhtmlhelp -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32 -Wl,-Bstatic,-lstdc++ -Wl,-Bstatic,-lsupc++
 RM = rm -f
 INSTALL = install -m 755
 INSTALL_DIR = /usr
 
 OBJS = \
+    ../atlmfc/src/mfc/mfcintl_res.o \
     cards.o \
     card.o \
 	comp2.o \
@@ -29,10 +30,10 @@ OBJS = \
 	player.o \
 	sound.o \
 	welcome.o \
-	cards_rc.o \
-	hearts_rc.o
+	cards_res.o \
+	hearts_res.o
 
-%_rc.o: %.rc
+%_res.o: %.rc
 	$(WINDRES) -o $@ $<
 
 %.o: %.cpp

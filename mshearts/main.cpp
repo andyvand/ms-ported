@@ -898,3 +898,16 @@ LRESULT CMainWindow::OnPrintClient(WPARAM wParam, LPARAM lParam)
    
     return 1;
 }
+
+#ifdef __MINGW32__
+extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+    _In_ LPSTR lpCmdLine, int nCmdShow);
+
+extern "C" int WINAPI
+WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
+    _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
+{
+    // call shared/exported WinMain
+    return AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+}
+#endif

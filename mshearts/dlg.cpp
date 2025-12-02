@@ -34,6 +34,10 @@ CLocateDlg      locate dealer
 
 #include "nddeapi.h"
 
+#ifndef SWP_NONE
+#define SWP_NONE 0
+#endif /* SWP_NONE */
+
 typedef int (CALLBACK* FPROC)();            // a FARPROC that returns int
 
 // NDDE typedefs for ShareGetInfo and ShareSetInfo (SGI and SSI)

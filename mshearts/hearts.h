@@ -22,6 +22,10 @@ declaration of theApp class
 #define STRICT
 #endif
 
+#ifdef __MINGW32__
+#include <afx.h>
+#endif
+
 //#include <windows.h>
 #include <afxwin.h>         // MFC core and standard components
 #include <afxext.h>         // MFC extensions
