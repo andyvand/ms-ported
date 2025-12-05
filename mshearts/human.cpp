@@ -450,7 +450,7 @@ void local_human::StartTimer(card &c)
     c.Draw(dc, HILITE);           // flash
     c.GetRect(rectCard);
 
-    if (::pMainWnd->SetTimer(1, 250, TimerBadMove))
+    if (::pMainWnd->SetTimer(1, 250, ::TimerBadMove))
     {
         bTimerOn = TRUE;
     }

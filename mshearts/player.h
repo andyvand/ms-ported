@@ -76,7 +76,7 @@ struct handinfotype {
 #if defined (MFC1)
 UINT FAR PASCAL EXPORT TimerBadMove(HWND hWnd, UINT nMsg, int nIDEvent, DWORD dwTime);
 #else
-void FAR PASCAL EXPORT TimerBadMove(HWND hWnd, UINT nMsg, UINT nIDEvent, DWORD dwTime);
+void FAR PASCAL EXPORT TimerBadMove(HWND hWnd, UINT nMsg, UINT_PTR nIDEvent, DWORD dwTime);
 #endif
 
 class CMainWindow;

@@ -47,7 +47,6 @@ typedef struct _rc
 VOID *PAlloc(INT cb);
 VOID FreeP( VOID * );
 
-INT CchString();
 TCHAR *PszCopy(TCHAR *pszFrom, TCHAR *rgchTo);
 INT CchDecodeInt(TCHAR *rgch, INT_PTR w);
 VOID Error(TCHAR *sz);

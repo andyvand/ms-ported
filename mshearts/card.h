@@ -86,7 +86,7 @@ class card {
         BOOL IsSelected() { ASSERT(this != NULL); return (state == SELECTED); }
         BOOL IsPlayed() { ASSERT(this != NULL); return (state == PLAYED); }
         BOOL IsHeart() { return (Suit() == HEARTS); }
-        BOOL IsValid() { return ((this != NULL) && (id != EMPTY)); }
+        BOOL IsValid() { if (this == NULL) return FALSE; else if (id == EMPTY) return FALSE; return TRUE; }
 
         VOID SetID(int n) { id = n; }
         VOID SetLoc(int x, int y) { loc.x = x; loc.y = y; }

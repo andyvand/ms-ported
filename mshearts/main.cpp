@@ -87,7 +87,6 @@ BOOL CTheApp::InitInstance()
     return TRUE;
 }
 
-
 BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
     ON_COMMAND(IDM_ABOUT,       OnAbout)
     ON_COMMAND(IDM_BOSSKEY,     OnBossKey)
@@ -105,9 +104,7 @@ BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
     ON_COMMAND(IDM_SCORE,       OnScore)
     ON_COMMAND(IDM_SOUND,       OnSound)
     ON_COMMAND(IDM_WELCOME,     OnWelcome)
-
     ON_BN_CLICKED(IDM_BUTTON,   OnPass)
-
     ON_WM_CHAR()
     ON_MESSAGE(WM_PRINTCLIENT, OnPrintClient)
     ON_WM_CLOSE()
@@ -116,7 +113,6 @@ BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
     ON_WM_LBUTTONDOWN()
     ON_WM_PAINT()
 END_MESSAGE_MAP()
-
 
 /****************************************************************************
 
@@ -206,7 +202,7 @@ CMainWindow::CMainWindow(LPTSTR lpCmdLine) :
     Create( NULL,                                              // default class
             sAppname,                                          // window title
             WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU |
-            WS_MINIMIZEBOX | WS_CLIPCHILDREN,                  // window style
+            WS_MINIMIZEBOX | WS_CLIPCHILDREN, // window style
             rect,                                              // size
             NULL,                                              // parent
             TEXT("HeartsMenu"),                                      // menu
@@ -215,7 +211,7 @@ CMainWindow::CMainWindow(LPTSTR lpCmdLine) :
     Create( NULL,                                       // default class
             sAppname,                                   // window title
             WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU |
-            WS_MINIMIZEBOX | WS_CLIPCHILDREN,           // window style
+            WS_MINIMIZEBOX | WS_CLIPCHILDREN, // window style
             rect,                                       // size
             NULL,                                       // parent
             TEXT("HeartsMenu"));                              // menu
@@ -237,9 +233,10 @@ void CMainWindow::OnAbout()
 {
     HICON hIcon = ::LoadIcon(AfxGetInstanceHandle(),
                           MAKEINTRESOURCE(AFX_IDI_STD_FRAME));
-
+    
     CString s;
     s.LoadString(IDS_NETWORK);
+
     ShellAbout(m_hWnd, s, NULL, hIcon);
 }
 

@@ -88,7 +88,7 @@ typedef struct {                        // sent out after each move
 #if defined (MFC1)
 UINT FAR PASCAL EXPORT TimerDispatch(HWND, UINT, int, DWORD);
 #else
-void FAR PASCAL EXPORT TimerDispatch(HWND, UINT, UINT, DWORD);
+void FAR PASCAL EXPORT TimerDispatch(HWND, UINT, UINT_PTR, DWORD);
 #endif
 
 
@@ -153,6 +153,8 @@ class CMainWindow : public CFrameWnd
         afx_msg void OnWelcome();
         afx_msg LRESULT OnPrintClient(WPARAM wParam, LPARAM lParam);
 
+        void     DispatchCards();
+
     private:
         int      AddNewPlayer(HCONV hConv, HDDEDATA hData);
         void     CheckNddeShare();
@@ -163,7 +165,6 @@ class CMainWindow : public CFrameWnd
         HDDEDATA DdeCliCallBack(WORD, WORD, HCONV, HSZ, HSZ, HDDEDATA, DWORD, DWORD);
         void     DestroyStrHandles();
         void     DoSort();
-        void     DispatchCards();
         void     EndHand();
         void     FirstMove();
         void     GameOver();

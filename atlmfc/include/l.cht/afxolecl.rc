@@ -1,0 +1,64 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXOLECL_RC__
+#define __AFXOLECL_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifndef _INC_DLGS
+	#include <dlgs.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< 無法變更標準 MFC 資源! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE Client Resources
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE strings
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_STATIC_OBJECT           "無法啟動靜態 ActiveX 物件。"
+	AFX_IDP_FAILED_TO_CONNECT       "無法連線。\n連結可能中斷。"
+	AFX_IDP_SERVER_BUSY             "無法處理命令，伺服器忙線中。"
+	AFX_IDP_BAD_VERB                "無法執行伺服器作業。"
+	AFX_IDP_FAILED_TO_LAUNCH        "無法啟動伺服器應用程式。"
+	AFX_IDS_UPDATING_ITEMS          "正在更新 ActiveX 物件"
+	AFX_IDP_FAILED_TO_CONVERT       "無法轉換 ActiveX 物件。"
+	AFX_IDP_ASK_TO_DISCARD          "Windows 結束時無法儲存 ActiveX 物件!\n您要放棄 %1 的所有變更嗎?"
+	AFX_IDP_FAILED_TO_CREATE        "無法建立物件。請確定應用程式已輸入系統登錄中。"
+
+	AFX_IDS_METAFILE_FORMAT         "圖片 (中繼檔)\n圖片"
+	AFX_IDS_DIB_FORMAT              "與裝置無關點陣圖\n與裝置無關點陣圖"
+	AFX_IDS_BITMAP_FORMAT           "點陣圖\n點陣圖"
+	AFX_IDS_LINKSOURCE_FORMAT       "%Ts\n%Ts"
+	AFX_IDS_EMBED_FORMAT            "%Ts\n%Ts"
+	AFX_IDS_RTF_FORMAT              "Rich Text (RTF)\n具有字型與段落格式的文字"
+	AFX_IDS_TEXT_FORMAT             "未格式化文字\n無任何格式化的文字"
+
+	AFX_IDS_INVALID_CURRENCY        "Currency 不正確。"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!_AFXDLL
+#endif //__AFXOLECL_RC__

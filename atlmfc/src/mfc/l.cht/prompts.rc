@@ -1,0 +1,141 @@
+// prompts.rc : RC file for all standard AFX menu prompts
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< 無法變更標準 MFC 資源! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Standard Menu commands
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW,            "建立新文件\n開新檔案"
+	ID_FILE_OPEN,           "開啟現有文件\n開啟舊檔"
+	ID_FILE_CLOSE,          "關閉使用中文件\n關閉檔案"
+	ID_FILE_SAVE,           "儲存使用中文件\n儲存檔案"
+	ID_FILE_SAVE_AS,        "將使用中文件以新名稱儲存\n另存新檔"
+	ID_FILE_PAGE_SETUP,     "變更列印選項\n版面設定"
+	ID_FILE_PRINT_SETUP,    "變更印表機及列印選項\n列印設定"
+	ID_FILE_PRINT,          "列印使用中文件\n列印"
+	ID_FILE_PRINT_PREVIEW,  "顯示整頁\n預覽列印"
+	ID_APP_ABOUT,           "顯示程式資訊、版本號碼及著作權\n關於"
+	ID_APP_EXIT,            "結束應用程式; 提示使用者儲存文件\n結束"
+	ID_FILE_SEND_MAIL,      "透過電子郵件傳送使用中文件\n傳送郵件"
+	ID_FILE_MRU_FILE1+0,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+1,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+2,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+3,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+4,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+5,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+6,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+7,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+8,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+9,    "開啟這份文件"
+	ID_FILE_MRU_FILE1+10,   "開啟這份文件"
+	ID_FILE_MRU_FILE1+11,   "開啟這份文件"
+	ID_FILE_MRU_FILE1+12,   "開啟這份文件"
+	ID_FILE_MRU_FILE1+13,   "開啟這份文件"
+	ID_FILE_MRU_FILE1+14,   "開啟這份文件"
+	ID_FILE_MRU_FILE1+15,   "開啟這份文件"
+	ID_CONTEXT_HELP,        "顯示所按按鈕、功能表與視窗的說明\n說明"
+	ID_HELP,                "顯示目前工作或命令的說明\n說明"
+	ID_HELP_INDEX,          "列出說明主題\n說明索引"
+	ID_HELP_FINDER,         "列出說明主題\n說明主題"
+	ID_HELP_USING,          "顯示如何使用說明的指示\n說明"
+	ID_NEXT_PANE,           "切換至下一個窗格\n下一個窗格"
+	ID_PREV_PANE,           "切換至上一個窗格\n上一個窗格"
+	ID_WINDOW_NEW,          "為使用中的文件開啟另一個視窗\n開新視窗"
+	ID_WINDOW_ARRANGE,      "將圖示排列在視窗底部\n排列圖示"
+	ID_WINDOW_CASCADE,      "重疊排列視窗\n重疊顯示"
+	ID_WINDOW_TILE_HORZ,    "視窗以不重疊的方式顯示\n並排顯示"
+	ID_WINDOW_TILE_VERT,    "視窗以不重疊的方式顯示\n並排顯示"
+	ID_WINDOW_SPLIT,        "將使用中視窗切割成窗格\n分割視窗"
+	ID_EDIT_CLEAR,          "清除選取範圍\n清除"
+	ID_EDIT_CLEAR_ALL,      "清除所有的項目\n全部清除"
+	ID_EDIT_COPY,           "複製選取項目並放到剪貼簿\n複製"
+	ID_EDIT_CUT,            "剪下選取項目並放到剪貼簿\n剪下"
+	ID_EDIT_FIND,           "尋找指定的文字\n尋找"
+	ID_EDIT_PASTE,          "插入剪貼簿的內容\n貼上"
+	ID_EDIT_PASTE_LINK,     "插入剪貼簿內容及一個連結到它的來源\n貼上連結"
+	ID_EDIT_PASTE_SPECIAL,  "插入剪貼簿內容與選項\n選擇性貼上"
+	ID_EDIT_REPEAT,         "重複上次的動作\n重複"
+	ID_EDIT_REPLACE,        "用不同的文字取代指定文字\n取代"
+	ID_EDIT_SELECT_ALL,     "選取整份文件\n全選"
+	ID_EDIT_UNDO,           "復原上次的動作\n復原"
+	ID_EDIT_REDO,           "取消復原上次的動作\n取消復原"
+	ID_VIEW_TOOLBAR,        "顯示或隱藏工具列\n切換工具列"
+	ID_VIEW_STATUS_BAR,     "顯示或隱藏狀態列\n切換狀態列"
+	ID_FORMAT_FONT,         "為目前所選內容設定字型\n字型"
+END
+
+
+// OLE specific
+STRINGTABLE
+BEGIN
+	ID_OLE_EDIT_LINKS,      "編輯連結的物件\n編輯連結"
+	ID_OLE_INSERT_NEW,      "插入新的內嵌物件\n新增新物件"
+	ID_OLE_EDIT_CONVERT,    "轉換選取物件到不同的型態\n轉換物件"
+	ID_OLE_EDIT_CHANGE_ICON,"為選取物件改變圖示\n變更圖示"
+	ID_OLE_VERB_FIRST+0,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+1,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+2,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+3,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+4,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+5,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+6,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+7,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+8,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+9,    "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+10,   "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+11,   "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+12,   "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+13,   "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+14,   "啟動內嵌或連結的物件"
+	ID_OLE_VERB_FIRST+15,   "啟動內嵌或連結的物件"
+END
+
+// Database specific
+STRINGTABLE
+BEGIN
+	ID_RECORD_NEXT          "移動至下一筆資料錄\n下一筆資料錄"
+	ID_RECORD_PREV          "移動至上一筆資料錄\n上一筆資料錄"
+	ID_RECORD_LAST          "移動至最後一筆資料錄\n最後一筆資料錄"
+	ID_RECORD_FIRST         "移動至第一筆資料錄\n第一筆資料錄"
+END
+
+// System commands
+STRINGTABLE
+BEGIN
+	AFX_IDS_SCSIZE,         "變更視窗大小"
+	AFX_IDS_SCMOVE,         "變更視窗位置"
+	AFX_IDS_SCMINIMIZE,     "將視窗縮成一個圖示"
+	AFX_IDS_SCMAXIMIZE,     "將視窗放到最大"
+	AFX_IDS_SCNEXTWINDOW,   "切換至下一個文件視窗"
+	AFX_IDS_SCPREVWINDOW,   "切換至上一個文件視窗"
+	AFX_IDS_SCCLOSE,        "關閉使用中視窗並提示使用者儲存文件"
+	AFX_IDS_SCRESTORE,      "將視窗還原成標準大小"
+	AFX_IDS_SCTASKLIST,     "啟動工作清單"
+	AFX_IDS_MDICHILD,       "啟動這個視窗"
+	AFX_IDS_PREVIEW_CLOSE,  "關閉預覽列印模式\n取消預覽"
+	AFX_IDS_DESKACCESSORY,  "開啟選取項目"
+END
+
+/////////////////////////////////////////////////////////////////////////////

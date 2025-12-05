@@ -1,0 +1,105 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXDB_RC__
+#define __AFXDB_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< No se pueden cambiar recursos MFC estándar >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// Database Resources
+
+// Database strings
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_SQL_CONNECT_FAIL
+		"No se pudo conectar con el origen de datos."
+	AFX_IDP_SQL_RECORDSET_FORWARD_ONLY
+		"El conjunto de registros sólo admite movimiento hacia adelante."
+	AFX_IDP_SQL_EMPTY_COLUMN_LIST
+		"No se pudo abrir una tabla: no había columnas especificadas para recuperar."
+	AFX_IDP_SQL_FIELD_SCHEMA_MISMATCH
+		"La consulta devolvió tipos de datos de columna inesperados."
+	AFX_IDP_SQL_ILLEGAL_MODE "No se pudo actualizar o eliminar."
+	AFX_IDP_SQL_MULTIPLE_ROWS_AFFECTED "Varias filas actualizadas."
+	AFX_IDP_SQL_NO_CURRENT_RECORD "Error en la operación, no hay registro actual."
+	AFX_IDP_SQL_NO_ROWS_AFFECTED
+		"La operación de actualización o eliminación no afectó a ninguna fila."
+	AFX_IDP_SQL_RECORDSET_READONLY "El conjunto de registros es de solo lectura"
+	AFX_IDP_SQL_SQL_NO_TOTAL
+		"El controlador ODBC no admite el modelo de datos MFC LongBinary."
+	AFX_IDP_SQL_ODBC_LOAD_FAILED
+		"No se pudo cargar el componente necesario ODBC32.DLL."
+	AFX_IDP_SQL_DYNASET_NOT_SUPPORTED
+		"El controlador ODBC no admite conjuntos de registros dinámicos."
+	AFX_IDP_SQL_SNAPSHOT_NOT_SUPPORTED
+		"Se requieren cursores estáticos ODBC para admitir instantáneas."
+	AFX_IDP_SQL_API_CONFORMANCE
+		"Controlador ODBC incompatible con clases de bases de datos MFC (se requiere API_CONFORMANCE >= SQL_OAC_LEVEL1)."
+	AFX_IDP_SQL_SQL_CONFORMANCE
+		"Controlador ODBC incompatible con clases de bases de datos MFC (se requiere SQL_CONFORMANCE >= SQL_OSC_MINIMUM)."
+	AFX_IDP_SQL_NO_DATA_FOUND
+		"Se intentó desplazarse más allá del final o antes del principio de los datos."
+	AFX_IDP_SQL_ROW_UPDATE_NOT_SUPPORTED
+		"El controlador ODBC no admite conjuntos de registros dinámicos."
+	AFX_IDP_SQL_ODBC_V2_REQUIRED
+		"Se requiere un controlador ODBC conforme al nivel 2."
+	AFX_IDP_SQL_NO_POSITIONED_UPDATES
+		"El controlador ODBC no admite actualizaciones posicionadas."
+	AFX_IDP_SQL_LOCK_MODE_NOT_SUPPORTED
+		"No se admite el modo de bloqueo solicitado."
+	AFX_IDP_SQL_DATA_TRUNCATED
+		"Datos truncados."
+	AFX_IDP_SQL_ROW_FETCH
+		"Error al recuperar un registro."
+	AFX_IDP_SQL_INCORRECT_ODBC
+		"No se encontró un punto de entrada ODBC necesario. Compruebe que ODBC esté instalado correctamente."
+	AFX_IDP_SQL_UPDATE_DELETE_FAILED
+		"Error al actualizar o eliminar."
+	AFX_IDP_SQL_DYNAMIC_CURSOR_NOT_SUPPORTED
+		"El controlador ODBC no admite cursores dinámicos."
+	AFX_IDP_SQL_FIELD_NOT_FOUND
+		"Nombre o índice de campo incorrecto."
+	AFX_IDP_SQL_BOOKMARKS_NOT_SUPPORTED
+		"No se admiten marcadores para el controlador ODBC."
+	AFX_IDP_SQL_BOOKMARKS_NOT_ENABLED
+		"Marcadores no habilitados en el conjunto de registros."
+	AFX_IDP_DAO_ENGINE_INITIALIZATION
+		"No se puede inicializar el motor de base de datos DAO/Jet."
+	AFX_IDP_DAO_DFX_BIND
+		"Parámetro de valor DFX incorrecto."
+	AFX_IDP_DAO_OBJECT_NOT_OPEN
+		"La clase DAO TableDef o QueryDef no está abierta."
+	AFX_IDP_DAO_ROWTOOSHORT
+		"Error de GetRows. No se asignó memoria suficiente a la fila."
+	AFX_IDP_DAO_BADBINDINFO
+		"Error de enlace de GetRows. Puede que algún tipo de datos no coincida."
+	AFX_IDP_DAO_COLUMNUNAVAILABLE
+		"Error de GetRows. La columna solicitada no es miembro de este conjunto de registros."
+
+	AFX_IDS_DELETED "<Eliminado>"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!_AFXDLL
+#endif //__AFXDB_RC__

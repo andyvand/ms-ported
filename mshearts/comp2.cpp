@@ -360,24 +360,28 @@ void computer::Setup(handinfotype &h)
     for (int i = 0; i < MAXPLAYER; i++)
     {
         card *c = h.cardplayed[i];
-        if (c->IsValid())
+
+        if (c != NULL)
         {
-            // First, determine if there are any point cards in play.
-
-            if (c->Suit() == HEARTS)
-                nPoints++;
-
-            if (c->ID() == BLACKLADY)
-                nPoints += 13;
-
-            // Then, find the highest card (on table) of the led suit.
-
-            if (c->Suit() == nSuitLed)
+            if (c->IsValid())
             {
-                int v = c->Value2();
+                // First, determine if there are any point cards in play.
 
-                if (v > currentval)
-                    currentval = v;
+                if (c->Suit() == HEARTS)
+                    nPoints++;
+
+                if (c->ID() == BLACKLADY)
+                    nPoints += 13;
+
+                // Then, find the highest card (on table) of the led suit.
+
+                if (c->Suit() == nSuitLed)
+                {
+                    int v = c->Value2();
+                    
+                    if (v > currentval)
+                        currentval = v;
+                }
             }
         }
     }

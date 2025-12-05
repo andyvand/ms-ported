@@ -695,7 +695,6 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
 CLocateDlg
 
 ****************************************************************************/
-
 BEGIN_MESSAGE_MAP( CLocateDlg, CModalDialog )
     ON_BN_CLICKED(IDC_BROWSE,     OnBrowse)
     ON_BN_CLICKED(IDC_LOCATEHELP, OnHelp)

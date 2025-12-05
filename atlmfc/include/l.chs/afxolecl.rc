@@ -1,0 +1,64 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXOLECL_RC__
+#define __AFXOLECL_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifndef _INC_DLGS
+	#include <dlgs.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< 不能更改标准 MFC 资源! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE Client Resources
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE strings
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_STATIC_OBJECT           "无法激活静态 ActiveX 对象。"
+	AFX_IDP_FAILED_TO_CONNECT       "连接失败。\n链接可能已断开。"
+	AFX_IDP_SERVER_BUSY             "无法处理命令，服务器正忙。"
+	AFX_IDP_BAD_VERB                "执行服务器操作失败。"
+	AFX_IDP_FAILED_TO_LAUNCH        "启动服务器应用程序失败。"
+	AFX_IDS_UPDATING_ITEMS          "正在更新 ActiveX 对象"
+	AFX_IDP_FAILED_TO_CONVERT       "转换 ActiveX 对象失败。"
+	AFX_IDP_ASK_TO_DISCARD          "退出 Windows 时，无法保存 ActiveX 对象!\n是否放弃对 %1 所做的所有更改?"
+	AFX_IDP_FAILED_TO_CREATE        "创建对象失败。请确认已在系统注册表中注册应用程序。"
+
+	AFX_IDS_METAFILE_FORMAT         "图片(图元文件)\n一张图片"
+	AFX_IDS_DIB_FORMAT              "设备独立位图\n一张设备独立位图"
+	AFX_IDS_BITMAP_FORMAT           "位图\n一张位图"
+	AFX_IDS_LINKSOURCE_FORMAT       "%Ts\n%Ts"
+	AFX_IDS_EMBED_FORMAT            "%Ts\n%Ts"
+	AFX_IDS_RTF_FORMAT              "RTF\n设置有字体和段落格式的文本"
+	AFX_IDS_TEXT_FORMAT             "未格式化文本\n未设置任何格式的文本"
+
+	AFX_IDS_INVALID_CURRENCY        "货币无效。"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!_AFXDLL
+#endif //__AFXOLECL_RC__

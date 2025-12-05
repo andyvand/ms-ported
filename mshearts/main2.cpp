@@ -324,7 +324,7 @@ void CMainWindow::EndHand()
     // constant so there's no conflict if you run multiple instances on
     // a single machine using local DDE, which is useful for testing.
 
-    if (SetTimer(m_myid, 1000, TimerDispatch))
+    if (SetTimer(m_myid, 1000, ::TimerDispatch))
         bTimerOn = TRUE;
     else
     {
@@ -339,7 +339,7 @@ void CMainWindow::EndHand()
 
 #if defined (MFC1)
 
-inline UINT FAR PASCAL EXPORT
+UINT FAR PASCAL EXPORT
     TimerDispatch(HWND hWnd, UINT nMsg, int nIDEvent, DWORD dwTime)
 {
     ::pMainWnd->DispatchCards();  // sneak back into a CMainWindow member func.
@@ -348,8 +348,8 @@ inline UINT FAR PASCAL EXPORT
 
 #else
 
-inline VOID FAR PASCAL EXPORT
-    TimerDispatch(HWND hWnd, UINT nMsg, UINT_PTR nIDEvent, DWORD dwTime)
+VOID FAR PASCAL EXPORT
+TimerDispatch(HWND hWnd, UINT nMsg, UINT_PTR nIDEvent, DWORD dwTime)
 {
     ::pMainWnd->DispatchCards();  // sneak back into a CMainWindow member func.
 }

@@ -1,0 +1,105 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXDB_RC__
+#define __AFXDB_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< 無法變更標準 MFC 資源! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// Database Resources
+
+// Database strings
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_SQL_CONNECT_FAIL
+		"無法連接到資料來源。"
+	AFX_IDP_SQL_RECORDSET_FORWARD_ONLY
+		"資料錄集只支援轉寄動作 。"
+	AFX_IDP_SQL_EMPTY_COLUMN_LIST
+		"無法開啟資料表 - 沒有指定要擷取的資料行。"
+	AFX_IDP_SQL_FIELD_SCHEMA_MISMATCH
+		"從查詢傳回非預期的資料行資料型別。"
+	AFX_IDP_SQL_ILLEGAL_MODE "無法更新或刪除。"
+	AFX_IDP_SQL_MULTIPLE_ROWS_AFFECTED "已更新多個資料列。"
+	AFX_IDP_SQL_NO_CURRENT_RECORD "作業失敗，沒有目前的資料錄。"
+	AFX_IDP_SQL_NO_ROWS_AFFECTED
+		"更新或刪除作業影響不會影響任何資料列。"
+	AFX_IDP_SQL_RECORDSET_READONLY "資料錄集是唯讀的"
+	AFX_IDP_SQL_SQL_NO_TOTAL
+		"ODBC 驅動程式不支援 MFC LongBinary 資料模型。"
+	AFX_IDP_SQL_ODBC_LOAD_FAILED
+		"嘗試載入需要的元件 ODBC32.DLL 時失敗。"
+	AFX_IDP_SQL_DYNASET_NOT_SUPPORTED
+		"ODBC 驅動程式不支援 dynaset。"
+	AFX_IDP_SQL_SNAPSHOT_NOT_SUPPORTED
+		"快照集支援時需要 ODBC 靜態游標。"
+	AFX_IDP_SQL_API_CONFORMANCE
+		"ODBC 驅動程式與 MFC 資料庫類別不相容 (需要 API_CONFORMANCE >= SQL_OAC_LEVEL1)。"
+	AFX_IDP_SQL_SQL_CONFORMANCE
+		"ODBC 驅動程式與 MFC 資料庫類別不相容 (需要 SQL_CONFORMANCE >= SQL_OSC_MINIMUM)。"
+	AFX_IDP_SQL_NO_DATA_FOUND
+		"嘗試捲動超過結尾或資料開頭之前。"
+	AFX_IDP_SQL_ROW_UPDATE_NOT_SUPPORTED
+		"Dynaset 不受 ODBC 驅動程式支援。"
+	AFX_IDP_SQL_ODBC_V2_REQUIRED
+		"需要符合 ODBC Level 2 的驅動程式。"
+	AFX_IDP_SQL_NO_POSITIONED_UPDATES
+		"定位的更新不受 ODBC 驅動程式支援。"
+	AFX_IDP_SQL_LOCK_MODE_NOT_SUPPORTED
+		"要求的鎖定模式不受支援。"
+	AFX_IDP_SQL_DATA_TRUNCATED
+		"資料被截斷。"
+	AFX_IDP_SQL_ROW_FETCH
+		"擷取資料錄時發生錯誤。"
+	AFX_IDP_SQL_INCORRECT_ODBC
+		"找不到必要的 ODBC 進入點。請確定 ODBC 已正確地安裝。"
+	AFX_IDP_SQL_UPDATE_DELETE_FAILED
+		"更新或刪除失敗。"
+	AFX_IDP_SQL_DYNAMIC_CURSOR_NOT_SUPPORTED
+		"動態游標不受 ODBC 驅動程式支援。"
+	AFX_IDP_SQL_FIELD_NOT_FOUND
+		"欄位名稱或欄位索引不正確。"
+	AFX_IDP_SQL_BOOKMARKS_NOT_SUPPORTED
+		"書籤不受 ODBC 驅動程式支援。"
+	AFX_IDP_SQL_BOOKMARKS_NOT_ENABLED
+		"資料錄集的書籤尚未啟用。"
+	AFX_IDP_DAO_ENGINE_INITIALIZATION
+		"無法初始化 DAO/Jet db 引擎。"
+	AFX_IDP_DAO_DFX_BIND
+		"錯誤的 DFX 值參數。"
+	AFX_IDP_DAO_OBJECT_NOT_OPEN
+		"DAO TableDef 或 QueryDef 並未開啟。"
+	AFX_IDP_DAO_ROWTOOSHORT
+		"GetRows 失敗。無法配置足夠的記憶體給資料列。"
+	AFX_IDP_DAO_BADBINDINFO
+		"GetRows 連結錯誤。可能因為資料型別不符合。"
+	AFX_IDP_DAO_COLUMNUNAVAILABLE
+		"GetRows 失敗。要求的資料行不是這個資料錄集的成員。"
+
+	AFX_IDS_DELETED "<已刪除>"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!_AFXDLL
+#endif //__AFXDB_RC__

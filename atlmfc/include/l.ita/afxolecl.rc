@@ -1,0 +1,64 @@
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (C) Microsoft Corporation
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXOLECL_RC__
+#define __AFXOLECL_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifndef _INC_DLGS
+	#include <dlgs.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Impossibile modificare le risorse standard MFC >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE Client Resources
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE strings
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_STATIC_OBJECT           "Impossibile attivare un oggetto statico ActiveX."
+	AFX_IDP_FAILED_TO_CONNECT       "Connessione non riuscita.\nIl collegamento potrebbe essere interrotto."
+	AFX_IDP_SERVER_BUSY             "Impossibile elaborare il comando, il server è impegnato."
+	AFX_IDP_BAD_VERB                "Impossibile eseguire l'operazione sul server."
+	AFX_IDP_FAILED_TO_LAUNCH        "Impossibile eseguire l'applicazione server."
+	AFX_IDS_UPDATING_ITEMS          "Aggiornamento degli oggetti ActiveX in corso"
+	AFX_IDP_FAILED_TO_CONVERT       "Impossibile convertire l'oggetto ActiveX."
+	AFX_IDP_ASK_TO_DISCARD          "Impossibile salvare oggetti ActiveX durante l'uscita da Windows.\nIgnorare tutte le modifiche a %1?"
+	AFX_IDP_FAILED_TO_CREATE        "Impossibile creare l'oggetto. Accertarsi che l'applicazione sia presente nel Registro di sistema."
+
+	AFX_IDS_METAFILE_FORMAT         "Immagine (Metafile)\nimmagine"
+	AFX_IDS_DIB_FORMAT              "Bitmap indipendente dal dispositivo\nbitmap indipendente dal dispositivo"
+	AFX_IDS_BITMAP_FORMAT           "Bitmap\nuna bitmap"
+	AFX_IDS_LINKSOURCE_FORMAT       "%Ts\n%Ts"
+	AFX_IDS_EMBED_FORMAT            "%Ts\n%Ts"
+	AFX_IDS_RTF_FORMAT              "Testo RTF\ntesto con formattazione del tipo di carattere e del paragrafo"
+	AFX_IDS_TEXT_FORMAT             "Testo non formattato\ntesto senza alcuna formattazione"
+
+	AFX_IDS_INVALID_CURRENCY        "Valuta non valida."
+END
+
+/////////////////////////////////////////////////////////////////////////////
+
+#endif //!_AFXDLL
+#endif //__AFXOLECL_RC__
