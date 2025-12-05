@@ -793,7 +793,7 @@ public:
 class CWindow
 {
 public:
-	static RECT rcDefault;
+    static RECT rcDefault;
 	HWND m_hWnd;
 
 	CWindow(_In_opt_ HWND hWnd = NULL) throw() :
@@ -2202,7 +2202,7 @@ ATLPREFAST_UNSUPPRESS()
 
 #ifdef _OLEAUTO_H_
 ATLPREFAST_SUPPRESS(6001 6054)
-	BOOL GetWindowText(_Inout_ _Deref_post_opt_z_ BSTR* pbstrText) throw()
+	BOOL GetWindowText(_Inout_ BSTR* pbstrText) throw()
 	{
 		return GetWindowText(*pbstrText);
 	}
@@ -2265,8 +2265,6 @@ ATLPREFAST_UNSUPPRESS()
 		return CWindow(hWndParent);
 	}
 };
-
-_declspec(selectany) RECT CWindow::rcDefault = { CW_USEDEFAULT, CW_USEDEFAULT, 0, 0 };
 
 /////////////////////////////////////////////////////////////////////////////
 // CAxWindow - client side for an ActiveX host window
@@ -5469,6 +5467,8 @@ ATLINLINE ATLAPI_(void) AtlPixelToHiMetric(
 	lpSizeInHiMetric->cx = MAP_PIX_TO_LOGHIM(lpSizeInPix->cx, nPixelsPerInchX);
 	lpSizeInHiMetric->cy = MAP_PIX_TO_LOGHIM(lpSizeInPix->cy, nPixelsPerInchY);
 }
+
+__declspec(selectany) RECT CWindow::rcDefault = { CW_USEDEFAULT, CW_USEDEFAULT, 0, 0 };
 
 } //namespace ATL
 

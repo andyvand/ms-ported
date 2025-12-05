@@ -86,9 +86,6 @@ AFX_INLINE short APIENTRY GetFileTitle(LPCTSTR lpszFile, LPTSTR lpszTitle, WORD 
 #include <vssym32.h>
 
 #ifndef _WINSOCK2API_
-#ifdef _WINSOCKAPI_
-	#error MFC requires use of Winsock2.h
-#endif
 	#include <WinSock2.h>
 #endif
 

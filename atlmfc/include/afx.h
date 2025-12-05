@@ -19,12 +19,6 @@
 
 /////////////////////////////////////////////////////////////////////////////
 
-#ifdef _DLL
-#ifndef _AFXDLL
-#error Building MFC application with /MD[d] (CRT dll version) requires MFC shared dll version. Please #define _AFXDLL or do not use /MD[d]
-#endif
-#endif
-
 #if !defined(_M_IX86) && !defined(_M_X64) && !defined(_M_ARM) && !defined(_M_ARM64) && !defined(__i386__) && !defined(__x86_64__) && !defined(__arm__) && !defined(__aarch64__)
 	#error Compiling for unsupported platform.  Only x86, x64, ARM, and ARM64 platforms are supported by MFC.
 #endif

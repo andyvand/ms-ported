@@ -1722,6 +1722,7 @@ public:
 		MESSAGE_HANDLER(WM_SETFOCUS, CComControlBase::OnSetFocus)
 		MESSAGE_HANDLER(WM_KILLFOCUS, CComControlBase::OnKillFocus)
 		MESSAGE_HANDLER(WM_MOUSEACTIVATE, CComControlBase::OnMouseActivate)
+#if 0
 #ifdef _ATL_MODULES
 		if constexpr (_Has_m_wndReflector<WinBase>::value)
 #else // ^^^ _ATL_MODULES / !_ATL_MODULES vvv
@@ -1730,6 +1731,8 @@ public:
 		{
 			CHAIN_MSG_MAP(baseWinClass)
 		}
+#endif
+
 	END_MSG_MAP()
 };
 
@@ -2813,7 +2816,7 @@ public:
 
 	STDMETHOD(SetObjects)(
 		_In_ ULONG nObjects,
-		_Inout_ _Deref_pre_opt_valid_ IUnknown **ppUnk)
+		_Inout_ IUnknown **ppUnk)
 	{
 		T* pT = static_cast<T*>(this);
 		ATLTRACE(atlTraceControls,2,_T("IPropertyPageImpl::SetObjects\n"));

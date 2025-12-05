@@ -21,10 +21,6 @@
 #error This file is not compatible with the current WINAPI_FAMILY
 #endif
 
-#if !defined(USE_ATL_THUNK2) && !defined(USE_ATL_THUNK1) && (defined(_M_IX86) || defined(_M_X64) || defined(_M_ARM) || defined(_M_ARM64) || defined(_M_ARM64EC))
-#define USE_ATL_THUNK2
-#endif
-
 #include <atlthunk.h>
 
 #include <__atlmfc_core.h>
@@ -36,9 +32,6 @@ namespace ATL
 // Thunks for __stdcall member functions
 
 #if defined(_M_IX86) || defined(__i386__)
-PVOID __stdcall __AllocStdCallThunk(VOID);
-VOID  __stdcall __FreeStdCallThunk(_In_opt_ PVOID);
-
 #pragma pack(push,1)
 struct _stdcallthunk
 {
@@ -64,20 +57,18 @@ struct _stdcallthunk
 	{
 		return this;
 	}
-	_Ret_maybenull_ _Post_writable_byte_size_(sizeof(_stdcallthunk)) void* operator new(_In_ size_t)
+	_Ret_maybenull_ _Post_writable_byte_size_(sizeof(_stdcallthunk)) void* operator new(_In_ size_t size)
 	{
-        return __AllocStdCallThunk();
+        return malloc(sizeof(_stdcallthunk) * size);
     }
     void operator delete(_In_opt_ void* pThunk)
     {
-        __FreeStdCallThunk(pThunk);
+        free(pThunk);
     }
 };
 #pragma pack(pop)
 
 #elif (defined(_M_X64) && !defined(_M_ARM64EC)) || defined(__x86_64__)
-PVOID __stdcall __AllocStdCallThunk(VOID);
-VOID  __stdcall __FreeStdCallThunk(PVOID);
 #pragma pack(push,2)
 struct _stdcallthunk
 {
@@ -103,20 +94,18 @@ struct _stdcallthunk
 	{
 		return this;
 	}
-	_Ret_maybenull_ _Post_writable_byte_size_(sizeof(_stdcallthunk)) void* operator new(_In_ size_t)
+	_Ret_maybenull_ _Post_writable_byte_size_(sizeof(_stdcallthunk)) void* operator new(_In_ size_t size)
 	{
-        return __AllocStdCallThunk();
+        return malloc(sizeof(_stdcallthunk) * size);
     }
     void operator delete(_In_opt_ void* pThunk)
     {
-        __FreeStdCallThunk(pThunk);
+        free(pThunk);
     }
 };
 #pragma pack(pop)
 #elif defined (_M_THUMB) || defined(__thumb__)
 // note this case must be before _M_ARM because _M_ARM is also defined
-PVOID __stdcall __AllocStdCallThunk(VOID);
-VOID  __stdcall __FreeStdCallThunk(PVOID);
 #pragma pack(push,2)
 struct _stdcallthunk
 {
@@ -141,19 +130,17 @@ struct _stdcallthunk
 	{
 		return (void *)((ULONG_PTR)this | 1);
 	}
-	void* operator new(size_t)
+	void* operator new(size_t size)
 	{
-		return __AllocStdCallThunk();
+		return malloc(sizeof(_stdcallthunk) * size);
     }
 	void operator delete(void* pThunk)
 	{
-		__FreeStdCallThunk(pThunk);
+		free(pThunk);
 	}
 };
 #pragma pack(pop)
 #elif defined(_M_ARM64) || defined(_M_ARM64EC) || defined(__aarch64__)
-PVOID __stdcall __AllocStdCallThunk(VOID);
-VOID  __stdcall __FreeStdCallThunk(PVOID);
 #pragma pack(push,4)
 struct _stdcallthunk {
     ULONG   m_ldr_r16;      // ldr  x16, [pc, #24]
@@ -176,12 +163,12 @@ struct _stdcallthunk {
     void* GetCodeAddress() {
         return (void *)((ULONG_PTR)this);
     }
-    void* operator new(size_t)
+    void* operator new(size_t size)
     {
-        return __AllocStdCallThunk();
+        return malloc(sizeof(_stdcallthunk) * size);
     }
     void operator delete(void* pThunk) {
-        __FreeStdCallThunk(pThunk);
+        free(pThunk);
     }
 };
 #pragma pack(pop)
@@ -220,41 +207,21 @@ struct _stdcallthunk // this should come out to 16 bytes
 #pragma pack(push,8)
 
 // avoid ODR violations
-#ifdef USE_ATL_THUNK2
-typedef class CDynamicStdCallThunk2 CDynamicStdCallThunk; class CDynamicStdCallThunk2
-#else
 class CDynamicStdCallThunk
-#endif
 {
 public:
-#ifdef USE_ATL_THUNK2
-	AtlThunkData_t* pThunk;
-#else
 	_stdcallthunk *pThunk;
-#endif
 
-#ifdef USE_ATL_THUNK2
-	CDynamicStdCallThunk2()
-#else
 	CDynamicStdCallThunk()
-#endif
 	{
 		pThunk = NULL;
 	}
 
-#ifdef USE_ATL_THUNK2
-	~CDynamicStdCallThunk2()
-#else
 	~CDynamicStdCallThunk()
-#endif
 	{
 		if (pThunk)
 		{
-#ifdef USE_ATL_THUNK2
-			AtlThunk_FreeData(pThunk);
-#else
 			delete pThunk;
-#endif
 		}
 	}
 
@@ -264,33 +231,20 @@ public:
 	{
 		if (pThunk == NULL)
 		{
-#ifdef USE_ATL_THUNK2
-			pThunk = AtlThunk_AllocateData();
-#else
 			pThunk = new _stdcallthunk;
-#endif
 			if (pThunk == NULL)
 			{
 				return FALSE;
 			}
 		}
 
-#ifdef USE_ATL_THUNK2
-		AtlThunk_InitData(pThunk, (void*)proc, (size_t)pThis);
-		return TRUE;
-#else
 		return pThunk->Init(proc, pThis);
-#endif
 	}
 
 
 	void* GetCodeAddress()
 	{
-#ifdef USE_ATL_THUNK2
-		return (void *)AtlThunk_DataToCode((AtlThunkData_t *)pThunk);
-#else
 		return pThunk->GetCodeAddress();
-#endif
 	}
 };
 
