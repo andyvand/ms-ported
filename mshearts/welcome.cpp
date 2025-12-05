@@ -598,17 +598,17 @@ void CMainWindow::CheckNddeShare()
         return;
     }
 
-    lstrcpy(pnddeInfo->lpszShareName, szShareName);
+    pnddeInfo->lpszShareName = (LPTSTR)szShareName;
     pnddeInfo->lRevision     = 1;
     pnddeInfo->lShareType       = 0;
-    pnddeInfo->lpszAppTopicList = TEXT("Hearts");         // non-const szTopicName
+    pnddeInfo->lpszAppTopicList = (LPTSTR)TEXT("Hearts");         // non-const szTopicName
     pnddeInfo->fSharedFlag      = 0;
     pnddeInfo->fService         = 0;
     pnddeInfo->fStartAppFlag    = 0;
     pnddeInfo->nCmdShow         = 0;
     memset(pnddeInfo->qModifyId, 0, sizeof(pnddeInfo->qModifyId));
     pnddeInfo->cNumItems        = 0;
-    pnddeInfo->lpszItemList     = TEXT("");
+    pnddeInfo->lpszItemList     = (LPTSTR)TEXT("");
 
     res = (*lpfnNDdeShareAdd)(NULL, 2, buffer, sizeof(buffer));
 

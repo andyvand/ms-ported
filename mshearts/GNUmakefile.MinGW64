@@ -31,10 +31,10 @@ OBJS = \
 	player.o \
 	sound.o \
 	welcome.o \
-	cards_rc.o \
-	hearts_rc.o
+	cards_res.o \
+	hearts_res.o
 
-%_rc.o: %.rc
+%_res.o: %.rc
 	$(WINDRES) -o $@ $<
 
 %.o: %.cpp
@@ -50,7 +50,7 @@ $(TARGETNAME).exe: $(OBJS)
 	$(STRIP) $@
 
 clean:
-	$(RM) $(OBJS) $(DLL_OBJS) $(TARGETNAME).exe
+	$(RM) $(OBJS) $(TARGETNAME).exe
 
 install:
 	$(INSTALL) $(TARGETNAME).exe $(INSTALL_DIR)/bin/$(TARGETNAME).exe

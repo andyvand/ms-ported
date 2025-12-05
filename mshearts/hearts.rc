@@ -62,14 +62,15 @@ BEGIN
     IDS_P3NAME,      "Ben"
 
     IDS_INTRO,       "Welcome to the Microsoft Hearts Network."
-    IDS_SELECT,      "Select three cards to pass to %s."
+    IDS_SELECT,      "Select three cards to pass to"
     IDS_PASSWAIT,    "Waiting for other players to pass..."
-    IDS_WAIT,        "Waiting for %s to move..."
+    IDS_WAIT1,       "Waiting for "
+    IDS_WAIT2,       " to move..."
     IDS_GO,          "Select a card to play."
     IDS_ACCEPT,      "Press OK to accept cards."
     IDS_OK,          "OK"
 
-    IDS_BADMOVE,     "You must follow suit.  Play a %s."
+    IDS_BADMOVE,     "You must follow suit.  Play a"
     IDS_LEADHEARTS,  "Hearts has not been broken.  Choose another suit."
     IDS_LEAD2C,      "You must lead the two of clubs."
     IDS_SCORE,       "Score"

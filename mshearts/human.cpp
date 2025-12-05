@@ -380,11 +380,12 @@ BOOL local_human::PlayCard(int x, int y, handinfotype &h, BOOL bCheating,
         {
             if ((!cd[i].IsEmpty()) && (cd[i].Suit()==cardled->Suit()))
             {
-                CString s1, s2;
+                CString s1, s2, sSpace, sDot, string;
                 s1.LoadString(IDS_BADMOVE);
                 s2.LoadString(IDS_SUIT0+cardled->Suit());
-                TCHAR string[80];
-                wsprintf(string, s1, s2);
+                sSpace = TEXT(" ");
+                sDot = TEXT(".");
+                string = s1 + sSpace + s2 + sDot;
 
                 if (bFlash)
                 {
@@ -682,10 +683,16 @@ Makes and shows the "Waiting for %s to move..." message
 
 void local_human::WaitMessage(const TCHAR *name)
 {
-    TCHAR buf[100];
-    CString s;
+    CString s1;
+    CString s2;
+    CString s3;
+    CString buf;
 
-    s.LoadString(IDS_WAIT);
-    wsprintf(buf, s, name);
+    s1.LoadString(IDS_WAIT1);
+    s3.LoadString(IDS_WAIT2);
+    s2 = name;
+
+    buf = s1 + s2 + s3;
+
     UpdateStatus(buf);
 }

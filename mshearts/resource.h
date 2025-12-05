@@ -60,7 +60,7 @@
 #define IDS_SELECT      307
 #define IDS_CONNECTING  308
 #define IDS_PASSWAIT    309
-#define IDS_WAIT        310
+#define IDS_WAIT1       310
 #define IDS_GO          311
 #define IDS_BADMOVE     312
 #define IDS_LEADHEARTS  313
@@ -73,6 +73,7 @@
 #define IDS_PLACE2      320
 #define IDS_PLACE3      321
 #define IDS_PLACE4      322
+#define IDS_WAIT2       341
 
 #define IDS_DISCONNECT  323
 #define IDS_NOSERVER    324

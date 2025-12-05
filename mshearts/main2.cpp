@@ -108,11 +108,13 @@ void CMainWindow::Shuffle()
             CString sSelect;
             sSelect.LoadString(IDS_SELECT);
             CString sName;
+            CString sSpace = TEXT(" ");
+            CString sDot = TEXT(".");
+            CString sString;
             int passto = (i + offset[passdir]) % 4;
             sName = p[passto]->GetName();
-            TCHAR string[100];
-            wsprintf(string, sSelect, sName);
-            p[i]->UpdateStatus(string);
+            sString = sSelect + sSpace + sName + sDot;
+            p[i]->UpdateStatus(sString);
         }
     }
 
@@ -356,14 +358,13 @@ TimerDispatch(HWND hWnd, UINT nMsg, UINT_PTR nIDEvent, DWORD dwTime)
 
 #endif
 
-
+int score[MAXPLAYER];
 
 void CMainWindow::DispatchCards()
 {
     KillTimer(m_myid);
 
     bTimerOn = FALSE;
-    int score[MAXPLAYER];
 
     int poswinner = Id2Pos(trickwinner);
 

@@ -446,7 +446,20 @@ HDDEDATA CMainWindow::GetGameStatus(HCONV hConv)
     {
         if (p[i])
         {
-            lstrcpy(gs.name[i], p[i]->GetName());
+#if defined(_UNICODE) || defined(UNICODE)
+#if __STDC_WANT_SECURE_LIB__
+            wcscpy_s(gs.name[i], sizeof(gs.name[i]), p[i]->GetName());
+#else
+            wcsncpy(gs.name[i], p[i]->GetName(), sizeof(gs.name[i]));
+#endif
+#else
+#if __STDC_WANT_SECURE_LIB__
+            strcpy_s(gs.name[i], sizeof(gs.name[i]), p[i]->GetName());
+#else
+            strncpy(gs.name[i], p[i]->GetName(), sizeof(gs.name[i]));
+#endif
+#endif
+
             if (p[i]->GetConv() == hConv)
             {
                 gs.id = i;

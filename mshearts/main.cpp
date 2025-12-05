@@ -88,25 +88,25 @@ BOOL CTheApp::InitInstance()
 }
 
 BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
-    ON_COMMAND(IDM_ABOUT,       OnAbout)
-    ON_COMMAND(IDM_BOSSKEY,     OnBossKey)
-    ON_COMMAND(IDM_CHEAT,       OnCheat)
-    ON_COMMAND(IDM_EXIT,        OnExit)
-    ON_COMMAND(IDM_HELP,        OnHelp)
-//    ON_COMMAND(IDM_HELPONHELP,  OnHelpOnHelp)
-    ON_COMMAND(IDM_HIDEBUTTON,  OnHideButton)
-//    ON_COMMAND(IDM_SEARCH,      OnSearch)
-    ON_COMMAND(IDM_NEWGAME,     OnNewGame)
-    ON_COMMAND(IDM_OPTIONS,     OnOptions)
-    ON_COMMAND(IDM_QUOTE,       OnQuote)
-    ON_COMMAND(IDM_REF,         OnRef)
-    ON_COMMAND(IDM_SHOWBUTTON,  OnShowButton)
-    ON_COMMAND(IDM_SCORE,       OnScore)
-    ON_COMMAND(IDM_SOUND,       OnSound)
-    ON_COMMAND(IDM_WELCOME,     OnWelcome)
-    ON_BN_CLICKED(IDM_BUTTON,   OnPass)
+    ON_COMMAND(IDM_ABOUT,       &CMainWindow::OnAbout)
+    ON_COMMAND(IDM_BOSSKEY,     &CMainWindow::OnBossKey)
+    ON_COMMAND(IDM_CHEAT,       &CMainWindow::OnCheat)
+    ON_COMMAND(IDM_EXIT,        &CMainWindow::OnExit)
+    ON_COMMAND(IDM_HELP,        &CMainWindow::OnHelp)
+//    ON_COMMAND(IDM_HELPONHELP, &CMainWindow::OnHelpOnHelp)
+    ON_COMMAND(IDM_HIDEBUTTON,  &CMainWindow::OnHideButton)
+//    ON_COMMAND(IDM_SEARCH,    &CMainWindow::OnSearch)
+    ON_COMMAND(IDM_NEWGAME,     &CMainWindow::OnNewGame)
+    ON_COMMAND(IDM_OPTIONS,     &CMainWindow::OnOptions)
+    ON_COMMAND(IDM_QUOTE,       &CMainWindow::OnQuote)
+    ON_COMMAND(IDM_REF,         &CMainWindow::OnRef)
+    ON_COMMAND(IDM_SHOWBUTTON,  &CMainWindow::OnShowButton)
+    ON_COMMAND(IDM_SCORE,       &CMainWindow::OnScore)
+    ON_COMMAND(IDM_SOUND,       &CMainWindow::OnSound)
+    ON_COMMAND(IDM_WELCOME,     &CMainWindow::OnWelcome)
+    ON_BN_CLICKED(IDM_BUTTON,   &CMainWindow::OnPass)
     ON_WM_CHAR()
-    ON_MESSAGE(WM_PRINTCLIENT, OnPrintClient)
+    ON_MESSAGE(WM_PRINTCLIENT,  &CMainWindow::OnPrintClient)
     ON_WM_CLOSE()
     ON_WM_CREATE()
     ON_WM_ERASEBKGND()
@@ -805,9 +805,11 @@ CMainWindow::OnScore -- user requests score dialog from menu
 
 ****************************************************************************/
 
+extern int score[MAXPLAYER];
+
 void CMainWindow::OnScore()
 {
-    CScoreDlg scoredlg(this);       // this constructor does not add new info
+    CScoreDlg scoredlg(this, score, m_myid);       // this constructor does not add new info
     scoredlg.DoModal();
 }
 

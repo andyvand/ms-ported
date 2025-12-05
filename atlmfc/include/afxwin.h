@@ -1922,6 +1922,7 @@ public:
 #ifndef AFX_MSG_CALL
 #define AFX_MSG_CALL
 #endif
+
 typedef void (AFX_MSG_CALL CCmdTarget::*AFX_PMSG)(void);
 
 enum AFX_DISPMAP_FLAGS

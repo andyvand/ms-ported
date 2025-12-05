@@ -261,7 +261,7 @@ void CScoreDlg::OnPaint()
         text.Empty();
         for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
-            wsprintf(s.GetBuffer(20), TEXT("%d\r\n"), score[pos][hand]);
+            wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
             s.ReleaseBuffer();
             text += s;
         }
@@ -337,7 +337,7 @@ CWelcomeDlg
 ****************************************************************************/
 
 BEGIN_MESSAGE_MAP( CWelcomeDlg, CModalDialog )
-    ON_BN_CLICKED(IDC_WELCOMEHELP,  OnHelp)
+    ON_BN_CLICKED(IDC_WELCOMEHELP,  &CWelcomeDlg::OnHelp)
 END_MESSAGE_MAP()
 
 /****************************************************************************
@@ -696,8 +696,8 @@ CLocateDlg
 
 ****************************************************************************/
 BEGIN_MESSAGE_MAP( CLocateDlg, CModalDialog )
-    ON_BN_CLICKED(IDC_BROWSE,     OnBrowse)
-    ON_BN_CLICKED(IDC_LOCATEHELP, OnHelp)
+    ON_BN_CLICKED(IDC_BROWSE,     &CLocateDlg::OnBrowse)
+    ON_BN_CLICKED(IDC_LOCATEHELP, &CLocateDlg::OnHelp)
 END_MESSAGE_MAP()
 
 /****************************************************************************
