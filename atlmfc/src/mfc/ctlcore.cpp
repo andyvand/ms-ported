@@ -10,7 +10,7 @@
 
 #include "stdafx.h"
 
-
+WINOLECTLAPI OleCreatePropertyFrame(HWND hwndOwner,UINT x,UINT y,LPCOLESTR lpszCaption,ULONG cObjects,LPUNKNOWN *ppUnk,ULONG cPages,LPCLSID pPageClsID,LCID lcid,DWORD dwReserved,LPVOID pvReserved);
 
 #define new DEBUG_NEW
 

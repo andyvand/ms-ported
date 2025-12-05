@@ -10,7 +10,7 @@
 
 #include "stdafx.h"
 
-
+WINOLECTLAPI OleCreateFontIndirect(LPFONTDESC lpFontDesc,REFIID riid,LPVOID *lplpvObj);
 
 #define new DEBUG_NEW
 
