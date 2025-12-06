@@ -1,5 +1,5 @@
-Various Microsoft games ported to a new Visual Studio.
-Various Microsoft games ported to MinGW (i386, x86_64 and aarch64).
+# Various Microsoft games ported to Visual Studio 2026.
+# Various Microsoft games ported to MinGW (i386, x86_64 and aarch64).
 
 - Solitaire
 - Reversi
