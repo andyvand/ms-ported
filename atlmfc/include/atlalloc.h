@@ -620,28 +620,19 @@ __declspec(noinline) inline bool _AtlVerifyStackAvailable(_In_ SIZE_T Size)
 {
     bool bStackAvailable = true;
 
-    __try
+    SIZE_T size=0;
+    HRESULT hrAdd=::ATL::AtlAdd(&size, Size, static_cast<SIZE_T>(_ATL_STACK_MARGIN));
+    if(FAILED(hrAdd))
     {
-		SIZE_T size=0;
-		HRESULT hrAdd=::ATL::AtlAdd(&size, Size, static_cast<SIZE_T>(_ATL_STACK_MARGIN));
-		if(FAILED(hrAdd))
-		{
-			ATLASSERT(FALSE);
-			bStackAvailable = false;
-		}
-		else
-		{
-			PVOID p = _alloca(size);
-			(p);
-		}
-    }
-    __except ((EXCEPTION_STACK_OVERFLOW == GetExceptionCode()) ?
-                   EXCEPTION_EXECUTE_HANDLER :
-                   EXCEPTION_CONTINUE_SEARCH)
-    {
+        ATLASSERT(FALSE);
         bStackAvailable = false;
-        _resetstkoflw();
     }
+    else
+    {
+        PVOID p = _alloca(size);
+        (p);
+    }
+
     return bStackAvailable;
 }
 

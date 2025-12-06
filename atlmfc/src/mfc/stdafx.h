@@ -16,9 +16,14 @@
 #include <winsdkver.h>
 
 #undef  _WIN32_WINNT
-#define _WIN32_WINNT _WIN32_WINNT_WIN7
 
-#undef NTDDI_VERSION
+#if defined(_M_ARM64) || defined(__aarch64__)
+#define _WIN32_WINNT _WIN32_WINNT_WIN8
+#else
+#define _WIN32_WINNT _WIN32_WINNT_WIN7
+#endif
+
+#undef  NTDDI_VERSION
 
 #include <sdkddkver.h>
 

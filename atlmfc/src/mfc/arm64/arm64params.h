@@ -51,7 +51,7 @@ typedef struct _ARM64_PARAMS
 FORCEINLINE
 VOID
 Arm64ParamsReset(
-    __inout PUNSUPPORTEDPLAT_PARAMS Params)
+    PUNSUPPORTEDPLAT_PARAMS Params)
 {
     Params->IntsUsed = 0;
     Params->DoublesUsed = 0;
@@ -67,8 +67,8 @@ Arm64ParamsReset(
 FORCEINLINE
 BOOL
 Arm64ParamsAddInt(
-    __inout PUNSUPPORTEDPLAT_PARAMS Params,
-    __in UINT64 Data)
+    PUNSUPPORTEDPLAT_PARAMS Params,
+    UINT64 Data)
 {
     if (Params->IntsUsed < 8) {
         Params->IntValues[Params->IntsUsed++] = Data;
@@ -87,8 +87,8 @@ Arm64ParamsAddInt(
 FORCEINLINE
 BOOL
 Arm64ParamsAddFloat(
-    __inout PUNSUPPORTEDPLAT_PARAMS Params,
-    __in float Data)
+    PUNSUPPORTEDPLAT_PARAMS Params,
+    float Data)
 {
     if (Params->DoublesUsed < 8) {
         reinterpret_cast<float&>(Params->DoubleValues[Params->DoublesUsed++]) = Data;
@@ -107,8 +107,8 @@ Arm64ParamsAddFloat(
 FORCEINLINE
 BOOL
 Arm64ParamsAddDouble(
-    __inout PUNSUPPORTEDPLAT_PARAMS Params,
-    __in double Data)
+    PUNSUPPORTEDPLAT_PARAMS Params,
+    double Data)
 {
     if (Params->DoublesUsed < 8) {
         Params->DoubleValues[Params->DoublesUsed++] = Data;

@@ -21,11 +21,12 @@ HeartsMenu  MENU
 BEGIN
     POPUP        "&Game"
     BEGIN
-//        MENUITEM "&New Game\tF2",       IDM_NEWGAME
-//        MENUITEM SEPARATOR
-        MENUITEM "&Options...\tF7",      IDM_OPTIONS
+        MENUITEM "&New Game\tF2",       IDM_NEWGAME
+        MENUITEM SEPARATOR
+        MENUITEM "&Options...\tF7",     IDM_OPTIONS
         MENUITEM "&Sound\tF8",          IDM_SOUND
         MENUITEM "S&core...\tF9",       IDM_SCORE
+        MENUITEM "Ch&eat\tF10",         IDM_CHEAT
         MENUITEM SEPARATOR
         MENUITEM "E&xit",               IDM_EXIT
     END
@@ -45,11 +46,11 @@ BEGIN
     VK_F1,      IDM_HELP,       VIRTKEY
     VK_F1,      IDM_HELP,       VIRTKEY, SHIFT
     VK_ESCAPE,  IDM_BOSSKEY,    VIRTKEY
-//    VK_F2,      IDM_NEWGAME,    VIRTKEY
+//  VK_F2,      IDM_NEWGAME,    VIRTKEY
     VK_F7,      IDM_OPTIONS,    VIRTKEY
     VK_F8,      IDM_SOUND,      VIRTKEY
     VK_F9,      IDM_SCORE,      VIRTKEY
-    VK_F12,     IDM_CHEAT,      VIRTKEY, CONTROL, SHIFT, ALT
+    VK_F10,     IDM_CHEAT,      VIRTKEY
 END
 
 STRINGTABLE

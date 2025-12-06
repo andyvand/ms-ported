@@ -311,8 +311,8 @@
 
 // The following macros are used on data declarations/definitions
 //  (they are redefined for extension DLLs and the shared MFC DLL)
-#define AFX_DATA
-#define AFX_DATADEF
+#define AFX_DATA AFX_EXPORT
+#define AFX_DATADEF AFX_EXPORT
 #define AFX_API __stdcall
 
 // used when building the "core" MFCXX.DLL

@@ -812,7 +812,7 @@ void CLocateDlg::OnBrowse()
         while (*p == '\\')          // skip past leading backslashes
             p++;
 
-        SetDlgItemTextA(m_hWnd, IDC_SERVERNAME, p);
+        ::SetDlgItemTextA(m_hWnd, IDC_SERVERNAME, p);
         OnOK();
     }
     else

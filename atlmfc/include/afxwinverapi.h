@@ -35,7 +35,7 @@
 // Windows XP SP2 for x86 and x64, Windows 8 for ARM
 
 #if defined(_M_IX86) || defined(_M_X64) || defined(__i386__) || defined(__x86_64__)
-#define _MFC_NTDDI_MIN NTDDI_WIN7
+#define _MFC_NTDDI_MIN NTDDI_WINXPSP2
 #else
 #define _MFC_NTDDI_MIN NTDDI_WIN8
 #endif
@@ -46,7 +46,7 @@
 	auto functionpointer = reinterpret_cast<decltype(::functionname)*>(functionpointer##_cache); \
 	if (functionpointer == reinterpret_cast<decltype(::functionname)*>(NULL)) \
 	{ \
-		HINSTANCE hLibrary = GetModuleHandleW(libraryname); \
+		HMODULE hLibrary = ::LoadLibraryW(libraryname); \
 		if (hLibrary != NULL) \
 		{ \
 			functionpointer = reinterpret_cast<decltype(::functionname)*>(::GetProcAddress(hLibrary, #functionname)); \
@@ -88,19 +88,19 @@ BOOL _AfxGetThreadPreferredUILanguages(
 	_When_(pwszLanguagesBuffer == NULL, _Out_)
 	_When_(pwszLanguagesBuffer != NULL, _Inout_) PULONG pcchLanguagesBuffer);
 
-HRESULT _AfxRegisterApplicationRestart(__in_opt PCWSTR pwzCommandline, __in DWORD dwFlags);
-HRESULT _AfxRegisterApplicationRecoveryCallback(__in APPLICATION_RECOVERY_CALLBACK pRecoveryCallback, __in_opt PVOID pvParameter, __in DWORD dwPingInterval, __in DWORD dwFlags);
-HRESULT _AfxApplicationRecoveryInProgress(__out PBOOL pbCanceled);
-VOID    _AfxApplicationRecoveryFinished(__in BOOL bSuccess);
+HRESULT _AfxRegisterApplicationRestart(PCWSTR pwzCommandline, DWORD dwFlags);
+HRESULT _AfxRegisterApplicationRecoveryCallback(APPLICATION_RECOVERY_CALLBACK pRecoveryCallback, PVOID pvParameter, DWORD dwPingInterval, DWORD dwFlags);
+HRESULT _AfxApplicationRecoveryInProgress(PBOOL pbCanceled);
+VOID    _AfxApplicationRecoveryFinished(BOOL bSuccess);
 
-BOOL _AfxChangeWindowMessageFilter(__in UINT message, __in DWORD dwFlag);
+BOOL _AfxChangeWindowMessageFilter(UINT message, DWORD dwFlag);
 
 HRESULT _AfxSHCreateItemFromParsingName(_In_ PCWSTR pszPath, _In_opt_ IBindCtx *pbc, _In_ REFIID riid, _Out_ void **ppv);
-HRESULT _AfxSHGetKnownFolderPath(__in REFKNOWNFOLDERID rfid, __in DWORD dwFlags, __in_opt HANDLE hToken, __out PWSTR *ppszPath);
+HRESULT _AfxSHGetKnownFolderPath(REFKNOWNFOLDERID rfid, DWORD dwFlags, HANDLE hToken, PWSTR *ppszPath);
 
 BOOL _AfxInitNetworkAddressControl();
 
-HRESULT _AfxDrawThemeTextEx(__in HTHEME hTheme, __in HDC hdc, __in int iPartId, __in int iStateId, __in LPCWSTR pszText, __in int iCharCount, __in DWORD dwFlags, __inout LPRECT pRect, __in const DTTOPTS *pOptions);
+HRESULT _AfxDrawThemeTextEx(HTHEME hTheme, HDC hdc, int iPartId, int iStateId, LPCWSTR pszText, int iCharCount, DWORD dwFlags, LPRECT pRect, const DTTOPTS *pOptions);
 
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 HRESULT      _AfxBufferedPaintInit(void);
@@ -110,15 +110,15 @@ HPAINTBUFFER _AfxBeginBufferedPaint(HDC hdcTarget, const RECT *prcTarget, BP_BUF
 HRESULT      _AfxEndBufferedPaint(HPAINTBUFFER hBufferedPaint, BOOL fUpdateTarget);
 #endif // (NTDDI_VERSION >= NTDDI_VISTA)
 
-BOOL    _AfxDwmDefWindowProc(__in HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, __out LRESULT *plResult);
-HRESULT _AfxDwmExtendFrameIntoClientArea(HWND hWnd, __in const MARGINS *pMarInset);
-HRESULT _AfxDwmIsCompositionEnabled(__out BOOL *pfEnabled);
-HRESULT _AfxDwmSetWindowAttribute(HWND hwnd, DWORD dwAttribute, __in LPCVOID pvAttribute, DWORD cbAttribute);
-HRESULT _AfxDwmSetIconicThumbnail(__in HWND hwnd, __in HBITMAP hbmp, __in DWORD dwSITFlags);
-HRESULT _AfxDwmInvalidateIconicBitmaps(__in  HWND hwnd);
-HRESULT _AfxDwmSetIconicLivePreviewBitmap(HWND hwnd, HBITMAP hbmp, __in_opt POINT *pptClient, DWORD dwSITFlags);
+BOOL    _AfxDwmDefWindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam, LRESULT *plResult);
+HRESULT _AfxDwmExtendFrameIntoClientArea(HWND hWnd, const MARGINS *pMarInset);
+HRESULT _AfxDwmIsCompositionEnabled(BOOL *pfEnabled);
+HRESULT _AfxDwmSetWindowAttribute(HWND hwnd, DWORD dwAttribute, LPCVOID pvAttribute, DWORD cbAttribute);
+HRESULT _AfxDwmSetIconicThumbnail(HWND hwnd, HBITMAP hbmp, DWORD dwSITFlags);
+HRESULT _AfxDwmInvalidateIconicBitmaps( HWND hwnd);
+HRESULT _AfxDwmSetIconicLivePreviewBitmap(HWND hwnd, HBITMAP hbmp, POINT *pptClient, DWORD dwSITFlags);
 
-HRESULT _AfxPSGetPropertyDescriptionListFromString(__in LPCWSTR pszPropList, __in REFIID riid, __out void **ppv);
+HRESULT _AfxPSGetPropertyDescriptionListFromString(LPCWSTR pszPropList, REFIID riid, void **ppv);
 
 BOOL    _AfxIsTaskDialogSupported();
 #if (NTDDI_VERSION >= NTDDI_VISTA)

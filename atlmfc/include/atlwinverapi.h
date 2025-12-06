@@ -86,7 +86,6 @@
 namespace ATL
 {
 
-#if (NTDDI_VERSION < NTDDI_VISTA) || defined(_USING_V110_SDK71_) || defined(_ATL_XP_TARGETING)
 struct _ATL_LCID_TO_LOCALENAME
 {
 	LCID            lcid;
@@ -706,13 +705,9 @@ _Success_(return != 0) inline int __cdecl _AtlDownlevelLCIDToLocaleName(_In_ LCI
 
 	return (int)count + 1;
 }
-#endif
 
 inline int __cdecl _AtlLCMapStringEx(_In_z_ LPCWSTR lpLocaleName, _In_ DWORD dwMapFlags, _In_reads_(cchSrc) LPCWSTR lpSrcStr, _In_ int cchSrc, _Out_writes_opt_(cchDest) LPWSTR lpDestStr, _In_ int cchDest, _In_opt_ LPNLSVERSIONINFO lpVersionInformation, _In_opt_ LPVOID lpReserved, _In_ LPARAM sortHandle)
 {
-#if (NTDDI_VERSION >= NTDDI_VISTA) && !defined(_USING_V110_SDK71_) && !defined(_ATL_XP_TARGETING)
-	return LCMapStringEx(lpLocaleName, dwMapFlags, lpSrcStr, cchSrc, lpDestStr, cchDest, lpVersionInformation, lpReserved, sortHandle);
-#else
 	// use LCMapStringEx if it is available (only on Vista+)...
 	typedef int (__stdcall *PFNLCMAPSTRINGEX)(LPCWSTR, DWORD, LPCWSTR, int, LPWSTR, int, LPNLSVERSIONINFO, LPVOID, LPARAM);
 	IFDYNAMICGETCACHEDFUNCTIONTYPEDEF(L"kernel32.dll", PFNLCMAPSTRINGEX, "LCMapStringEx", pfLCMapStringEx)
@@ -722,22 +717,16 @@ inline int __cdecl _AtlLCMapStringEx(_In_z_ LPCWSTR lpLocaleName, _In_ DWORD dwM
 
 	// ...otherwise fall back to using LCMapString.
 	return LCMapStringW(_AtlDownlevelLocaleNameToLCID(lpLocaleName), dwMapFlags, lpSrcStr, cchSrc, lpDestStr, cchDest);
-#endif
 }
 
 #pragma managed(push, off)
 #ifndef _ATL_STATIC_LIB_IMPL
 extern inline BOOL __cdecl _AtlInitializeCriticalSectionEx(_Out_ LPCRITICAL_SECTION lpCriticalSection, _In_ DWORD dwSpinCount, _In_ DWORD Flags)
 {
-#if (NTDDI_VERSION >= NTDDI_VISTA) && !defined(_USING_V110_SDK71_) && !defined(_ATL_XP_TARGETING)
-	// InitializeCriticalSectionEx is available in Vista or later, desktop or store apps
-	return ::InitializeCriticalSectionEx(lpCriticalSection, dwSpinCount, Flags);
-#else
 	UNREFERENCED_PARAMETER(Flags);
 
 	// ...otherwise fall back to using InitializeCriticalSectionAndSpinCount.
 	return ::InitializeCriticalSectionAndSpinCount(lpCriticalSection, dwSpinCount);
-#endif
 }
 #else // _ATL_STATIC_LIB_IMPL
 BOOL __cdecl _AtlInitializeCriticalSectionEx(_Out_ LPCRITICAL_SECTION lpCriticalSection, _In_ DWORD dwSpinCount, _In_ DWORD Flags);

@@ -776,18 +776,6 @@ static inline int max(int X, int Y)
 #define _Inout_
 #endif
 
-#ifndef __in
-#define __in
-#endif
-
-#ifndef __out
-#define __out
-#endif
-
-#ifndef __inout
-#define __inout
-#endif
-
 #ifndef _In_opt_
 #define _In_opt_
 #endif

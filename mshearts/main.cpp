@@ -56,6 +56,7 @@ int     nStatusHeight;      // height of status window
 
 const TCHAR szRegPath[]     = REGSTR_PATH_WINDOWSAPPLETS TEXT("\\Hearts");
 const TCHAR regvalSound[]   = TEXT("sound");
+const TCHAR regvalCheat[]   = TEXT("cheat");
 const TCHAR regvalName[]    = TEXT("name");
 const TCHAR regvalRole[]    = TEXT("gamemeister");
 const TCHAR regvalServer[]  = TEXT("server");
@@ -307,18 +308,17 @@ CMainWindow::OnCheat -- toggles bCheating used to show all cards face up.
 void CMainWindow::OnCheat()
 {
     RegEntry    Reg(szRegPath);
-    const TCHAR val[] = TEXT("ZB");
-    TCHAR        buf[20];
-
-    Reg.GetString(val, buf, sizeof(buf));
-    if (buf[0] != TEXT('4') || buf[1] != TEXT('2'))
-        return;
-
+    
     bCheating = !bCheating;
     InvalidateRect(NULL, TRUE);     // redraw main hearts window
-
+    
     CMenu *pMenu = GetMenu();
     pMenu->CheckMenuItem(IDM_CHEAT, bCheating ? MF_CHECKED : MF_UNCHECKED);
+
+    if (bCheating)
+        Reg.SetValue(regvalCheat, 1);
+    else
+        Reg.DeleteValue(regvalCheat);
 }
 
 
@@ -449,6 +449,13 @@ int CMainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
         pMenu->EnableMenuItem(IDM_SOUND, MF_GRAYED);
     }
 
+    if (Reg.GetNumber(regvalCheat, FALSE))
+    {
+        CMenu *pMenu = GetMenu();
+        pMenu->CheckMenuItem(IDM_CHEAT, MF_CHECKED);
+        bCheating = TRUE;
+    }
+
     card c;
     int  nStepSize;
     DWORD dwSpeed = Reg.GetNumber(regvalSpeed, IDC_NORMAL);
@@ -546,9 +553,6 @@ void CMainWindow::OnNewGame()
     passdir = LEFT;                 // each new game must start with LEFT
 
     bAutostarted = FALSE;           // means dealer has agreed to play at least
-
-    CMenu *pMenu = GetMenu();
-    pMenu->EnableMenuItem(IDM_NEWGAME, MF_GRAYED);
 
     if (role == GAMEMEISTER)
     {

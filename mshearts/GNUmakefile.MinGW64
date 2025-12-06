@@ -7,7 +7,7 @@ STRIP = x86_64-pc-mingw32-strip
 AR = x86_64-pc-mingw32-ar
 WINDRES = x86_64-pc-mingw32-windres -I../atlmfc/include -DVER_LANGID=0x0409
 RANLIB = x86_64-pc-mingw32-ranlib
-CFLAGS = -O2 -I. -I../atlmfc/include -Wno-unused-result -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-unused-value -Wno-sign-compare -Wno-nonnull-compare -Wno-stringop-overflow -fpermissive
+CFLAGS = -O2 -I. -I../atlmfc/include -Wno-unused-result -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-unused-value -Wno-sign-compare -Wno-nonnull-compare -Wno-stringop-overflow
 LDFLAGS = -static-libgcc -mwindows
 LIBS = -L../atlmfc/mfc/x86_64 -lmfc_static -lgdi32 -lhtmlhelp -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32 -Wl,-Bstatic,-lstdc++ -Wl,-Bstatic,-lsupc++
 RM = rm -f

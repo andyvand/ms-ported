@@ -581,7 +581,7 @@ VOID MyDeleteHbm(HBITMAP hbm)
                 DeleteObject(hbm);
         }
 
-VOID APIENTRY cdtTerm()
+VOID APIENTRY cdtTerm(VOID)
 /*
  * Free up space if it's time to do so.
  *
