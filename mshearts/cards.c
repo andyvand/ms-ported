@@ -127,10 +127,25 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
         HDC hdcDstMemory;
         HDC hdcSrcMemory;
 
+#ifdef DLL
         if (hinstApp == NULL)
         {
-            hinstApp = (HINSTANCE)GetModuleHandle(NULL);
+#if _WIN32_WINNT < 0x0501
+            hinstApp = GetModuleHandle(TEXT("CARDS.DLL"));
+#else
+            GetModuleHandleEx(0, TEXT("CARDS.DLL"), (HMODULE *)&hinstApp);
+#endif
         }
+#else /* !DLL */
+        if (hinstApp == NULL)
+        {
+#if _WIN32_WINNT < 0x0501
+            hinstApp = GetModuleHandle(NULL);
+#else
+            GetModuleHandleEx(0, NULL, (HMODULE *)&hinstApp);
+#endif
+        }
+#endif /* DLL */
 
 #ifdef DLL
         if (cInits++ != 0)

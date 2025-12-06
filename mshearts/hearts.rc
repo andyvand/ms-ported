@@ -46,7 +46,7 @@ BEGIN
     VK_F1,      IDM_HELP,       VIRTKEY
     VK_F1,      IDM_HELP,       VIRTKEY, SHIFT
     VK_ESCAPE,  IDM_BOSSKEY,    VIRTKEY
-//  VK_F2,      IDM_NEWGAME,    VIRTKEY
+    VK_F2,      IDM_NEWGAME,    VIRTKEY
     VK_F7,      IDM_OPTIONS,    VIRTKEY
     VK_F8,      IDM_SOUND,      VIRTKEY
     VK_F9,      IDM_SCORE,      VIRTKEY
