@@ -93,7 +93,12 @@ BOOL COleDropSource::OnBeginDrag(CWnd* pWnd)
 		m_dwButtonCancel |= MK_LBUTTON;
 	}
 
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
 	ULONGLONG lastTick = GetTickCount64();
+#else
+    ULONGLONG lastTick = GetTickCount();
+#endif
+
 	pWnd->SetCapture();
 
 	while (!m_bDragStarted)
@@ -121,7 +126,11 @@ BOOL COleDropSource::OnBeginDrag(CWnd* pWnd)
 		}
 
 		// if the user sits here long enough, we eventually start the drag
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
 		if (GetTickCount64() - lastTick > nDragDelay)
+#else
+        if (GetTickCount() - lastTick > nDragDelay)
+#endif
 			m_bDragStarted = TRUE;
 	}
 	ReleaseCapture();

@@ -183,7 +183,12 @@ DROPEFFECT COleDropTarget::OnDragScroll(CWnd* pWnd, DWORD dwKeyState,
 
 	// save tick count when timer ID changes
 	// Cast to DWORD here for m_dwLastTick usage
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
 	auto dwTick = static_cast<DWORD>(GetTickCount64());
+#else
+    auto dwTick = static_cast<DWORD>(GetTickCount());
+#endif
+
 	if (nTimerID != m_nTimerID)
 	{
 		m_dwLastTick = dwTick;

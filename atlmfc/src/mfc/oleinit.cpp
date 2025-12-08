@@ -138,15 +138,29 @@ void AFXAPI AfxOleTermOrFreeLib(BOOL bTerm, BOOL bJustRevoke)
 		// initialize _afxTickCount if necessary
 		if (!_afxTickInit)
 		{
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
 			_afxTickCount = ::GetTickCount64();
+#else
+            _afxTickCount = ::GetTickCount();
+#endif
+
 			++_afxTickInit;
 		}
 
 		// only call CoFreeUnusedLibraries if one minute has gone by
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
 		if (GetTickCount64() - _afxTickCount > 60000)
+#else
+        if (GetTickCount() - _afxTickCount > 60000)
+#endif
 		{
 			CoFreeUnusedLibraries();
-			_afxTickCount = ::GetTickCount64();
+
+#if _MFC_NTDDI_MIN >= NTDDI_WINVISTA
+            _afxTickCount = ::GetTickCount64();
+#else
+            _afxTickCount = ::GetTickCount();
+#endif
 		}
 	}
 }
