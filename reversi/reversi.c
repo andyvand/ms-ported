@@ -1872,7 +1872,7 @@ LPARAM        lParam)
 /*  WinMain() -                                                             */
 /*                                                                          */
 /*--------------------------------------------------------------------------*/
-#if defined(_UNICODE) || defined(UNICODE)
+#if (defined(_UNICODE) || defined(UNICODE)) && !defined(__MINGW32__)
 INT WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPWSTR lpszCmdLine, INT cmdShow)
 #else
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT cmdShow)

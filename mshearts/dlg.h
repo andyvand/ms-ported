@@ -24,6 +24,7 @@ COptionsDlg     set options
 #ifndef	DLG_INC
 #define	DLG_INC
 
+#include "nddeapi.h"
 
 typedef WORD (FAR PASCAL *BROWSEPROC)(HWND, LPCSTR, LPSTR, UINT, LONG);
 
@@ -96,7 +97,7 @@ class COptionsDlg : public CModalDialog
 
     protected:
         BOOL    m_bInitialState;
-        BYTE    m_buffer[200];
+        BYTE    m_buffer[sizeof(NDDESHAREINFO) + 200];
 };
 
 class CLocateDlg : public CModalDialog

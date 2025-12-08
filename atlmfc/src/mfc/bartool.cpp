@@ -348,7 +348,8 @@ struct CToolBarData
 BOOL CToolBar::LoadToolBar(LPCTSTR lpszResourceName)
 {
 	ASSERT_VALID(this);
-	ASSERT(lpszResourceName != NULL);
+	if (lpszResourceName == NULL)
+        return FALSE;
 
 	// determine location of the bitmap in resource fork
 	HINSTANCE hInst = AfxFindResourceHandle(lpszResourceName, RT_TOOLBAR);
@@ -371,16 +372,24 @@ BOOL CToolBar::LoadToolBar(LPCTSTR lpszResourceName)
 	BOOL bResult = SetButtons(pItems, pData->wItemCount);
 	delete[] pItems;
 
-	if (bResult)
-	{
-		// set new sizes of the buttons
-		CSize sizeImage(pData->wWidth, pData->wHeight);
-		CSize sizeButton(pData->wWidth + 7, pData->wHeight + 7);
-		SetSizes(sizeButton, sizeImage);
+    if (lpszResourceName != NULL)
+    {
+        if (bResult)
+        {
+            // set new sizes of the buttons
+            CSize sizeImage(pData->wWidth, pData->wHeight);
+            CSize sizeButton(pData->wWidth + 7, pData->wHeight + 7);
+            SetSizes(sizeButton, sizeImage);
 
-		// load bitmap now that sizes are known by the toolbar control
-		bResult = LoadBitmap(lpszResourceName);
-	}
+            // load bitmap now that sizes are known by the toolbar control
+            bResult = LoadBitmap(lpszResourceName);
+        }
+    } else {
+        CSize sizeImage(0, 0);
+        CSize sizeButton(7, 7);
+        SetSizes(sizeButton, sizeImage);
+        bResult = TRUE;
+    }
 
 	UnlockResource(hGlobal);
 	FreeResource(hGlobal);
@@ -391,7 +400,9 @@ BOOL CToolBar::LoadToolBar(LPCTSTR lpszResourceName)
 BOOL CToolBar::LoadBitmap(LPCTSTR lpszResourceName)
 {
 	ASSERT_VALID(this);
-	ASSERT(lpszResourceName != NULL);
+
+    if (lpszResourceName == NULL)
+        return FALSE;
 
 	// determine location of the bitmap in resource fork
 	HINSTANCE hInstImageWell = AfxFindResourceHandle(lpszResourceName, RT_BITMAP);
@@ -402,6 +413,8 @@ BOOL CToolBar::LoadBitmap(LPCTSTR lpszResourceName)
 	// load the bitmap
 	HBITMAP hbmImageWell;
 	hbmImageWell = AfxLoadSysColorBitmap(hInstImageWell, hRsrcImageWell);
+    if (hbmImageWell == NULL)
+        return FALSE;
 
 	// tell common control toolbar about the new bitmap
 	if (!AddReplaceBitmap(hbmImageWell))
@@ -416,7 +429,8 @@ BOOL CToolBar::LoadBitmap(LPCTSTR lpszResourceName)
 BOOL CToolBar::SetBitmap(HBITMAP hbmImageWell)
 {
 	ASSERT_VALID(this);
-	ASSERT(hbmImageWell != NULL);
+	if (hbmImageWell == NULL)
+        return FALSE;
 
 	// the caller must manage changing system colors
 	m_hInstImageWell = NULL;
@@ -428,12 +442,14 @@ BOOL CToolBar::SetBitmap(HBITMAP hbmImageWell)
 
 BOOL CToolBar::AddReplaceBitmap(HBITMAP hbmImageWell)
 {
+#ifndef __MINGW32__
 	// need complete bitmap size to determine number of images
+    BOOL bResult;
 	BITMAP bitmap;
-	VERIFY(::GetObject(hbmImageWell, sizeof(BITMAP), &bitmap));
+	if (::GetObject(hbmImageWell, sizeof(BITMAP), &bitmap) == FALSE)
+        return FALSE;
 
 	// add the bitmap to the common control toolbar
-	BOOL bResult;
 	if (m_hbmImageWell == NULL)
 	{
 		TBADDBITMAP addBitmap;
@@ -453,14 +469,18 @@ BOOL CToolBar::AddReplaceBitmap(HBITMAP hbmImageWell)
 		bResult = (BOOL)DefWindowProc(TB_REPLACEBITMAP, 0,
 			(LPARAM)&replaceBitmap);
 	}
-	// remove old bitmap, if present
+
+    // remove old bitmap, if present
 	if (bResult)
 	{
 		AfxDeleteObject((HGDIOBJ*)&m_hbmImageWell);
 		m_hbmImageWell = hbmImageWell;
 	}
 
-	return bResult;
+    return bResult;
+#else
+    return TRUE;
+#endif
 }
 
 BOOL CToolBar::SetButtons(const UINT* lpIDArray, int nIDCount)
@@ -469,6 +489,9 @@ BOOL CToolBar::SetButtons(const UINT* lpIDArray, int nIDCount)
 	ASSERT(nIDCount >= 1);  // must be at least one of them
 	ASSERT(lpIDArray == NULL ||
 		AfxIsValidAddress(lpIDArray, sizeof(UINT) * nIDCount, FALSE));
+
+    if (lpIDArray == NULL)
+        return FALSE;
 
 	// delete all existing buttons
 	int nCount = (int)DefWindowProc(TB_BUTTONCOUNT, 0, 0);

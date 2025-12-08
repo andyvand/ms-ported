@@ -1850,7 +1850,7 @@ BOOL CMFCVisualManagerOffice2007::OnNcActivate(CWnd* pWnd, BOOL bActive)
 	BOOL bWasActive = FALSE;
 
 	// If the active state of an owner-draw MDI frame window changes, we need to
-	// invalidate the MDI client area so the MDI child window captions are redrawn.
+	// invalidate the MDI client area so the MDI child window captions are gn.
 	if (IsOwnerDrawCaption())
 	{
 		bIsMDIFrame = pWnd->IsKindOf(RUNTIME_CLASS(CMDIFrameWnd));

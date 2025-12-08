@@ -13,41 +13,48 @@
 
 /////////////////////////////////////////////////////////////////////////////
 // export WinMain to force linkage to this module
-#if defined(_UNICODE)
 extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
-    _In_ LPWSTR lpCmdLine, int nCmdShow);
-
-extern "C" int WINAPI
-WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
-	_In_ LPSTR lpCmdLine, _In_ int nCmdShow)
-{
-    int ret = 0;
-
-    LPWSTR lpWCmdLine = (LPWSTR)malloc(sizeof(WCHAR) * strlen(lpCmdLine));
-#if __STDC_WANT_SECURE_LIB__
-    size_t outSize = 0;
-    mbstowcs_s(&outSize, strlen(lpCmdLine), lpWCmdLine, lpCmdLine, strlen(lpCmdLine));
-#else
-    mbstowcs(lpWCmdLine, lpCmdLine, strlen(lpCmdLine));
-#endif
-
-    ret = AfxWinMain(hInstance, hPrevInstance, lpWCmdLine, nCmdShow);
-
-    free(lpWCmdLine);
-
-    return ret;
-}
-#else
-extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
-    _In_ LPSTR lpCmdLine, int nCmdShow);
+    _In_ LPTSTR lpCmdLine, int nCmdShow);
 
 extern "C" int WINAPI
 WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
     _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
-#endif
 {
-	// call shared/exported WinMain
-	return AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    int ret = 0;
+
+#if defined(_UNICODE) || defined(UNICODE)
+    LPWSTR lpWCmdLine = NULL;
+#if __STDC_WANT_SECURE_LIB__
+    size_t CmdLineSize = 0;
+#endif
+
+    if (lpCmdLine != NULL)
+    {
+        lpWCmdLine = (LPWSTR)malloc((strlen(lpCmdLine) + 1) * sizeof(WCHAR));
+
+        if (lpWCmdLine != NULL)
+        {
+#if __STDC_WANT_SECURE_LIB__
+            mbstowcs_s(&CmdLineSize, lpWCmdLine, strlen(lpCmdLine), lpCmdLine, strlen(lpCmdLine));
+#else
+            mbstowcs(lpWCmdLine, lpCmdLine, strlen(lpCmdLine));
+#endif
+            lpWCmdLine[strlen(lpCmdLine)] = 0;
+        }
+    }
+
+    ret = AfxWinMain(hInstance, hPrevInstance, lpWCmdLine, nCmdShow);
+
+    if (lpWCmdLine != NULL)
+    {
+        free(lpWCmdLine);
+    }
+#else
+    // call shared/exported WinMain
+    ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+#endif
+
+    return ret;
 }
 
 /////////////////////////////////////////////////////////////////////////////

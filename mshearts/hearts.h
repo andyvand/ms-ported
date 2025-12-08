@@ -35,6 +35,8 @@ declaration of theApp class
 //#include <shell.h>
 #include <afxwin.h>
 #include <htmlhelp.h>
+#include <strsafe.h>
+#include <stringapiset.h>
 
 class CTheApp : public CWinApp
 {

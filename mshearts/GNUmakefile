@@ -4,12 +4,12 @@ TARGETTYPE=APPLICATION
 CC = i686-pc-mingw32-gcc
 CXX = i686-pc-mingw32-g++
 AR = i686-pc-mingw32-ar
-WINDRES = i686-pc-mingw32-windres -I../atlmfc/include -DVER_LANGID=0x0409
+WINDRES = i686-pc-mingw32-windres -I../atlmfc/include -D_UNICODE=1 -DUNICODE=1 -DVER_LANGID=0x0409
 STRIP = i686-pc-mingw32-strip
 RANLIB = i686-pc-mingw32-ranlib
-CFLAGS = -O2 -I. -I../atlmfc/include -Wno-unused-result -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-unused-value -Wno-sign-compare -Wno-nonnull-compare -Wno-stringop-overflow
+CFLAGS = -O2 -I. -I../atlmfc/include -Wno-unused-result -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-unused-value -Wno-sign-compare -Wno-nonnull-compare -Wno-stringop-overflow -D_UNICODE=1 -DUNICODE=1 -D__STDC_WANT_SECURE_LIB__=1
 LDFLAGS = -static-libgcc -mwindows
-LIBS = -L../atlmfc/mfc/x86 -lmfc_static -lgdi32 -lhtmlhelp -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32 -Wl,-Bstatic,-lstdc++ -Wl,-Bstatic,-lsupc++
+LIBS = -L../atlmfc/mfc/x86 -lmfcu_static -lgdi32 -lhtmlhelp -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32 -Wl,-Bstatic,-lstdc++ -Wl,-Bstatic,-lsupc++
 RM = rm -f
 INSTALL = install -m 755
 INSTALL_DIR = /usr

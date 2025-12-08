@@ -28,8 +28,11 @@
 #include <__atlmfc_core.h>
 
 #if (NTDDI_VERSION < NTDDI_WINXPSP2) || (_WIN32_WINNT < 0x0501)
+#undef  ADDRINFOT
 #define ADDRINFOT addrinfo
+#undef  GetAddrInfo
 #define GetAddrInfo getaddrinfo
+#undef  FreeAddrInfo
 #define FreeAddrInfo freeaddrinfo
 #endif
 

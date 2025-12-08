@@ -8,9 +8,6 @@
 #ifndef __PWIN16_H__
 #define __PWIN16_H__
 
-DWORD FAR PASCAL     MGetLastError(VOID);
-DWORD FAR PASCAL     MSendMsgEM_GETSEL(HWND hDlg, INT FAR *piStart, INT FAR *piEnd);
-
 /* HELPER MACROS */
 
 #define MAPVALUE(v16, v32)              (v16)
@@ -203,16 +200,6 @@ DWORD FAR PASCAL     MSendMsgEM_GETSEL(HWND hDlg, INT FAR *piStart, INT FAR *piE
 
 /*-----------------------------------GDI-------------------------------------*/
 
-BOOL  FAR PASCAL     MGetAspectRatioFilter(HDC hdc, INT FAR * pcx, INT FAR * pcy);
-BOOL  FAR PASCAL     MGetBitmapDimension(HANDLE hBitmap, INT FAR * pcx, INT FAR * pcy);
-BOOL  FAR PASCAL     MGetBrushOrg(HDC hdc, INT FAR * px, INT FAR * py);
-BOOL  FAR PASCAL     MGetCurrentPosition(HDC hdc, INT FAR * px, INT FAR * py);
-BOOL  FAR PASCAL     MGetTextExtent(HDC hdc, LPSTR lpstr, INT cnt, INT FAR * pcx, INT FAR * pcy);
-BOOL  FAR PASCAL     MGetViewportExt(HDC hdc, INT FAR * pcx, INT FAR * pcy);
-BOOL  FAR PASCAL     MGetViewportOrg(HDC hdc, INT FAR * px, INT FAR * py);
-BOOL  FAR PASCAL     MGetWindowExt(HDC hdc, INT FAR * pcx, INT FAR * pcy);
-BOOL  FAR PASCAL     MGetWindowOrg(HDC hdc, INT FAR * px, INT FAR * py);
-
 #define MCreateDiscardableBitmap CreateDiscardableBitmap
 #define MMoveTo                  (VOID)MoveTo
 #define MOffsetViewportOrg       (VOID)OffsetViewportOrg
@@ -226,23 +213,8 @@ BOOL  FAR PASCAL     MGetWindowOrg(HDC hdc, INT FAR * px, INT FAR * py);
 #define MSetWindowExt            (VOID)SetWindowExt        
 #define MSetWindowOrg            (VOID)SetWindowOrg
 #define MUnrealizeObject         UnrealizeObject
-
-
-/*-------------------------------------DEV-----------------------------------*/
-
-DWORD FAR PASCAL     MDeviceCapabilities(LPSTR lpDriverName,
-    LPSTR lpDeviceName, LPSTR lpPort, WORD2DWORD nIndex, LPSTR lpOutput,
-    LPDEVMODE lpDevMode);
-BOOL  FAR PASCAL     MDeviceMode(HWND hWnd, LPSTR lpDriverName,
-    LPSTR lpDeviceName, LPSTR lpOutput);
-WORD2DWORD FAR PASCAL    MExtDeviceMode(HWND hWnd,LPSTR lpDriverName,
-    LPDEVMODE lpDevModeOutput, LPSTR lpDeviceName, LPSTR lpPort,
-    LPDEVMODE lpDevModeInput, LPSTR lpProfile, WORD2DWORD flMode);
     
 /*-----------------------------------KERNEL----------------------------------*/
-
-HANDLE FAR PASCAL   MLoadLibrary(LPSTR lpszFilename);
-BOOL FAR PASCAL MDeleteFile(LPSTR lpPathName);
 
 #define DLLMEM_MOVEABLE         LMEM_MOVEABLE
 #define DLLMEM_ZEROINIT         LMEM_ZEROINIT 

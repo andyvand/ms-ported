@@ -261,7 +261,7 @@ void CScoreDlg::OnPaint()
         text.Empty();
         for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
-            wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+            wnsprintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
             s.ReleaseBuffer();
             text += s;
         }
@@ -271,7 +271,7 @@ void CScoreDlg::OnPaint()
         dc.SelectObject(&font);
         if (nHandsPlayed > 0)
         {
-            wsprintf(text.GetBuffer(20), TEXT("%d"), score[pos][nHandsPlayed-1]);
+            wnsprintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
             text.ReleaseBuffer();
         }
         dc.DrawText(text, -1, &rect, DT_CENTER);
@@ -412,9 +412,11 @@ void CWelcomeDlg::OnOK()
         return;
     }
 
+#ifdef USENETDDE
     if (IsNetDdeActive())
         m_bGameMeister = ((CButton *)GetDlgItem(IDC_MEISTER))->GetCheck();
     else
+#endif
         m_bGameMeister = TRUE;
 
     RegEntry    Reg(szRegPath);
@@ -442,21 +444,22 @@ because no compatible NETBIOS was found.
 
 BOOL CWelcomeDlg::IsNetDdeActive()
 {
+#ifdef USENETDDE
     if (m_bNetDdeActive != UNKNOWN)
         return m_bNetDdeActive;
 
     m_bNetDdeActive = TRUE;             // assume true, then check
 
     SetErrorMode(SEM_NOOPENFILEERRORBOX);
-    HINSTANCE hinstNDDEAPI = LoadLibrary(TEXT("NDDEAPI.DLL"));
+    HMODULE hinstNDDEAPI = LoadLibraryEx(TEXT("NDDEAPI.DLL"), NULL, 0);
 
-    if (hinstNDDEAPI <= (HINSTANCE)HINSTANCE_ERROR)
+    if (hinstNDDEAPI <= (HMODULE)HINSTANCE_ERROR)
     {
         m_bNetDdeActive = FALSE;
         return m_bNetDdeActive;
     }
 
-    FPROC lpfnNDDEGetWindow = (FPROC) GetProcAddress(hinstNDDEAPI, "NDdeGetWindow");
+    FPROC lpfnNDDEGetWindow = (FPROC)GetProcAddress(hinstNDDEAPI, "NDdeGetWindow");
     if (lpfnNDDEGetWindow == NULL)
     {
         FreeLibrary(hinstNDDEAPI);
@@ -475,6 +478,9 @@ BOOL CWelcomeDlg::IsNetDdeActive()
 
     FreeLibrary(hinstNDDEAPI);
     return m_bNetDdeActive;
+#else
+    return FALSE;
+#endif
 }
 
 
@@ -630,35 +636,47 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
 #ifdef USENETDDE
     DWORD           dwAvail;
     WORD            wItems;
-#if 0
-    BOOL            bStatus;
-#else
     BOOL            bStatus = FALSE;
-#endif
+#if 0
     CButton *check = (CButton *)GetDlgItem(IDC_AUTO);
+#endif
 
     SetErrorMode(SEM_NOOPENFILEERRORBOX);
-    HINSTANCE hinstNDDEAPI = LoadLibrary(TEXT("NDDEAPI.DLL"));
+    HMODULE hinstNDDEAPI = LoadLibraryEx(TEXT("NDDEAPI.DLL"), NULL, 0);
 
-    if (hinstNDDEAPI <= (HINSTANCE)HINSTANCE_ERROR)
+    if (hinstNDDEAPI <= (HMODULE)HINSTANCE_ERROR)
     {
+#if 0
         check->EnableWindow(FALSE);
         return GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
+#else
+        return FALSE;
+#endif
     }
 
-    SGIPROC lpfnNDdeShareGetInfo =
-        (SGIPROC) GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfo");
+#if defined(_UNICODE) || defined(UNICODE)
+    SGIPROC lpfnNDdeShareGetInfo = (SGIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoW");
+#else
+    SGIPROC lpfnNDdeShareGetInfo = (SGIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoA");
+#endif
 
     if (lpfnNDdeShareGetInfo == NULL)
     {
+#if 0
         check->EnableWindow(FALSE);
         BOOL ret = GetDlgItem(IDC_AUTOGROUP)->EnableWindow(FALSE);
+#endif
         FreeLibrary(hinstNDDEAPI);
+#if 0
         return ret;
+#else
+        return FALSE;
+#endif
     }
 
-    (*lpfnNDdeShareGetInfo)(NULL, szShareName, 2, m_buffer,
-                    sizeof(m_buffer), &dwAvail, &wItems);
+    UINT res = (*lpfnNDdeShareGetInfo)(NULL, szShareName, 2, m_buffer, sizeof(m_buffer), &dwAvail, &wItems);
+    if (res == NDDE_NO_ERROR)
+        bStatus = TRUE;
 
     NDDESHAREINFO *pnddeInfo = (NDDESHAREINFO *)m_buffer;
 
@@ -672,14 +690,16 @@ BOOL COptionsDlg::IsAutoStart(BOOL bToggle)
         pnddeInfo->dwPermissions1 = (bStatus ? 15 : 31);
 #endif
 
-        SSIPROC lpfnNDdeShareSetInfo =
-            (SSIPROC) GetProcAddress(hinstNDDEAPI, "NDdeShareSetInfo");
+#if defined(_UNICODE) || defined(UNICODE)
+        SSIPROC lpfnNDdeShareSetInfo = (SSIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareSetInfoW");
+#else
+        SSIPROC lpfnNDdeShareSetInfo = (SSIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareSetInfoA");
+#endif
 
-        UINT res = (*lpfnNDdeShareSetInfo)(NULL, szShareName, 2, m_buffer,
-            sizeof(m_buffer), 0);
+        UINT res = (*lpfnNDdeShareSetInfo)(NULL, szShareName, 2, m_buffer, sizeof(m_buffer), 0);
 
         if (res == NDDE_NO_ERROR)
-            bStatus = !bStatus;
+            bStatus = TRUE;
     }
 
     FreeLibrary(hinstNDDEAPI);
@@ -726,14 +746,15 @@ BOOL CLocateDlg::OnInitDialog()
 //
 //  BROWSEPROC  m_pWNetServerBrowseDialog = NULL;
 //
-//  m_hmodNetDriver = WNetGetCaps(0xFFFF);
-//
-//  if (m_hmodNetDriver >= HINSTANCE_ERROR)
-//      m_pWNetServerBrowseDialog =
-//          (BROWSEPROC)GetProcAddress(m_hmodNetDriver, MAKEINTRESOURCE(146));
-//
-//  if (m_hmodNetDriver < HINSTANCE_ERROR || m_pWNetServerBrowseDialog == NULL)
-//      ((CButton *)GetDlgItem(IDC_BROWSE))->EnableWindow(FALSE);
+#ifdef USENETBROWSER
+    m_hmodNetDriver = WNetGetCaps(0xFFFF);
+
+    if (m_hmodNetDriver >= HINSTANCE_ERROR)
+        m_pWNetServerBrowseDialog = (BROWSEPROC)GetProcAddress(m_hmodNetDriver, MAKEINTRESOURCEA(146));
+
+    if (m_hmodNetDriver < HINSTANCE_ERROR || m_pWNetServerBrowseDialog == NULL)
+        ((CButton *)GetDlgItem(IDC_BROWSE))->EnableWindow(FALSE);
+#endif
 
     CEdit *locname = (CEdit *)GetDlgItem(IDC_SERVERNAME);
     locname->LimitText(MAXCOMPUTERNAME);
@@ -793,7 +814,7 @@ Call the winnet driver computer browse dialog.
 void CLocateDlg::OnBrowse()
 {
 //  BUGBUG -- uncomment if we ever get a Chicago browse dialog
-#ifdef USENETDDE
+#ifdef USENETBROWSER
     char        buf[MAXCOMPUTERNAME+10];        // handle slashes, etc.
     BROWSEPROC  m_pWNetServerBrowseDialog;
 
@@ -807,18 +828,26 @@ void CLocateDlg::OnBrowse()
                                   0L );
 
     char *p = buf;
-    if (*p != '\0')                 // if server name is not empty
-    {
-        while (*p == '\\')          // skip past leading backslashes
-            p++;
 
-        ::SetDlgItemTextA(m_hWnd, IDC_SERVERNAME, p);
-        OnOK();
-    }
-    else
+    if (p != NULL)
     {
+        if (*p != '\0')                 // if server name is not empty
+        {
+            while (*p == '\\')          // skip past leading backslashes
+                p++;
+
+            ::SetDlgItemTextA(m_hWnd, IDC_SERVERNAME, p);
+            OnOK();
+        }
+        else
+        {
+            // server name was empty, set focus back to edit field.
+            ((CButton *)GetDlgItem(IDOK))->SetButtonStyle(BS_DEFPUSHBUTTON);
+            ((CButton *)GetDlgItem(IDC_BROWSE))->SetButtonStyle(BS_PUSHBUTTON);
+            ((CEdit *)GetDlgItem(IDC_SERVERNAME))->SetFocus();
+        }
+    } else {
         // server name was empty, set focus back to edit field.
-
         ((CButton *)GetDlgItem(IDOK))->SetButtonStyle(BS_DEFPUSHBUTTON);
         ((CButton *)GetDlgItem(IDC_BROWSE))->SetButtonStyle(BS_PUSHBUTTON);
         ((CEdit *)GetDlgItem(IDC_SERVERNAME))->SetFocus();

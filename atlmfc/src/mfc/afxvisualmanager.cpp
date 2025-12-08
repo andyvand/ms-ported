@@ -201,10 +201,13 @@ void __stdcall CMFCVisualManager::RedrawAll()
 		}
 	}
 
-	if (!bIsMainWndRedrawn && pMainWnd->m_hWnd != NULL && CWnd::FromHandlePermanent(pMainWnd->m_hWnd) != NULL)
-	{
-		pMainWnd->RedrawWindow(NULL, NULL, RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE | RDW_ALLCHILDREN | RDW_FRAME);
-	}
+    if (pMainWnd != NULL)
+    {
+        if (!bIsMainWndRedrawn && pMainWnd->m_hWnd != NULL && CWnd::FromHandlePermanent(pMainWnd->m_hWnd) != NULL)
+        {
+            pMainWnd->RedrawWindow(NULL, NULL, RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE | RDW_ALLCHILDREN | RDW_FRAME);
+        }
+    }
 
 	for (POSITION posTlb = afxAllToolBars.GetHeadPosition(); posTlb != NULL;)
 	{

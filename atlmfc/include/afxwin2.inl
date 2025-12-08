@@ -40,7 +40,7 @@ _AFXWIN_INLINE BOOL CWnd::PostMessage(UINT message, WPARAM wParam, LPARAM lParam
 _AFXWIN_INLINE BOOL CWnd::DragDetect(POINT pt) const
 	{ ASSERT(::IsWindow(m_hWnd)); return ::DragDetect(m_hWnd, pt); }
 _AFXWIN_INLINE void CWnd::SetFont(CFont* pFont, BOOL bRedraw)
-	{ ASSERT(::IsWindow(m_hWnd)); ::SendMessage(m_hWnd, WM_SETFONT, (WPARAM)pFont->GetSafeHandle(), bRedraw); }
+	{ ASSERT(::IsWindow(m_hWnd)); ::SendMessage(m_hWnd, WM_SETFONT, pFont == NULL ? (WPARAM)0 : (WPARAM)pFont->GetSafeHandle(), bRedraw); }
 _AFXWIN_INLINE CFont* CWnd::GetFont() const
 	{ ASSERT(::IsWindow(m_hWnd)); return CFont::FromHandle(
 		(HFONT)::SendMessage(m_hWnd, WM_GETFONT, 0, 0)); }
@@ -109,17 +109,17 @@ _AFXWIN_INLINE void CWnd::SetRedraw(BOOL bRedraw)
 _AFXWIN_INLINE BOOL CWnd::GetUpdateRect(LPRECT lpRect, BOOL bErase)
 	{ ASSERT(::IsWindow(m_hWnd)); return ::GetUpdateRect(m_hWnd, lpRect, bErase); }
 _AFXWIN_INLINE int CWnd::GetUpdateRgn(CRgn* pRgn, BOOL bErase)
-	{ ASSERT(::IsWindow(m_hWnd)); return ::GetUpdateRgn(m_hWnd, (HRGN)pRgn->GetSafeHandle(), bErase); }
+	{ ASSERT(::IsWindow(m_hWnd)); return ::GetUpdateRgn(m_hWnd, pRgn == NULL ? (HRGN)NULL :  (HRGN)pRgn->GetSafeHandle(), bErase); }
 _AFXWIN_INLINE void CWnd::Invalidate(BOOL bErase)
 	{ ASSERT(::IsWindow(m_hWnd)); ::InvalidateRect(m_hWnd, NULL, bErase); }
 _AFXWIN_INLINE void CWnd::InvalidateRect(LPCRECT lpRect, BOOL bErase)
 	{ ASSERT(::IsWindow(m_hWnd)); ::InvalidateRect(m_hWnd, lpRect, bErase); }
 _AFXWIN_INLINE void CWnd::InvalidateRgn(CRgn* pRgn, BOOL bErase)
-	{ ASSERT(::IsWindow(m_hWnd)); ::InvalidateRgn(m_hWnd, (HRGN)pRgn->GetSafeHandle(), bErase); }
+	{ ASSERT(::IsWindow(m_hWnd)); ::InvalidateRgn(m_hWnd, pRgn == NULL ? (HRGN)NULL :  (HRGN)pRgn->GetSafeHandle(), bErase); }
 _AFXWIN_INLINE void CWnd::ValidateRect(LPCRECT lpRect)
 	{ ASSERT(::IsWindow(m_hWnd)); ::ValidateRect(m_hWnd, lpRect); }
 _AFXWIN_INLINE void CWnd::ValidateRgn(CRgn* pRgn)
-	{ ASSERT(::IsWindow(m_hWnd)); ::ValidateRgn(m_hWnd, (HRGN)pRgn->GetSafeHandle()); }
+	{ ASSERT(::IsWindow(m_hWnd)); ::ValidateRgn(m_hWnd, pRgn == NULL ? (HRGN)NULL :  (HRGN)pRgn->GetSafeHandle()); }
 _AFXWIN_INLINE BOOL CWnd::IsWindowVisible() const
 	{ ASSERT(::IsWindow(m_hWnd)); return ::IsWindowVisible(m_hWnd); }
 _AFXWIN_INLINE void CWnd::ShowOwnedPopups(BOOL bShow)
@@ -132,14 +132,14 @@ _AFXWIN_INLINE CWnd* CWnd::GetDescendantWindow(int nID, BOOL bOnlyPerm) const
 	{ ASSERT(::IsWindow(m_hWnd)); return CWnd::GetDescendantWindow(m_hWnd, nID, bOnlyPerm); }
 
 _AFXWIN_INLINE CDC* CWnd::GetDCEx(CRgn* prgnClip, DWORD flags)
-	{ ASSERT(::IsWindow(m_hWnd)); return CDC::FromHandle(::GetDCEx(m_hWnd, (HRGN)prgnClip->GetSafeHandle(), flags)); }
+	{ ASSERT(::IsWindow(m_hWnd)); return CDC::FromHandle(::GetDCEx(m_hWnd, prgnClip == NULL ? (HRGN)NULL : (HRGN)prgnClip->GetSafeHandle(), flags)); }
 _AFXWIN_INLINE BOOL CWnd::LockWindowUpdate()
 	{ ASSERT(::IsWindow(m_hWnd)); return ::LockWindowUpdate(m_hWnd); }
 _AFXWIN_INLINE void CWnd::UnlockWindowUpdate()
 	{ ASSERT(::IsWindow(m_hWnd)); ::LockWindowUpdate(NULL); }
 _AFXWIN_INLINE BOOL CWnd::RedrawWindow(LPCRECT lpRectUpdate, CRgn* prgnUpdate,
 	UINT flags)
-	{ ASSERT(::IsWindow(m_hWnd)); return ::RedrawWindow(m_hWnd, lpRectUpdate, (HRGN)prgnUpdate->GetSafeHandle(), flags); }
+	{ ASSERT(::IsWindow(m_hWnd)); return ::RedrawWindow(m_hWnd, lpRectUpdate, prgnUpdate == NULL ? (HRGN)NULL : (HRGN)prgnUpdate->GetSafeHandle(), flags); }
 _AFXWIN_INLINE BOOL CWnd::EnableScrollBar(int nSBFlags, UINT nArrowFlags)
 	{ ASSERT(::IsWindow(m_hWnd)); return (BOOL)::EnableScrollBar(m_hWnd, nSBFlags, nArrowFlags); }
 _AFXWIN_INLINE BOOL CWnd::DrawAnimatedRects(int idAni, CONST RECT *lprcFrom, CONST RECT *lprcTo)
@@ -236,7 +236,7 @@ _AFXWIN_INLINE CWnd* PASCAL CWnd::GetClipboardOwner()
 _AFXWIN_INLINE CWnd* PASCAL CWnd::GetClipboardViewer()
 	{ return CWnd::FromHandle(::GetClipboardViewer()); }
 _AFXWIN_INLINE void CWnd::CreateCaret(CBitmap* pBitmap)
-	{ ASSERT(::IsWindow(m_hWnd)); ::CreateCaret(m_hWnd, (HBITMAP)pBitmap->GetSafeHandle(), 0, 0); }
+	{ ASSERT(::IsWindow(m_hWnd)); ::CreateCaret(m_hWnd, pBitmap == NULL ? (HBITMAP)NULL :  (HBITMAP)pBitmap->GetSafeHandle(), 0, 0); }
 _AFXWIN_INLINE void CWnd::CreateSolidCaret(int nWidth, int nHeight)
 	{ ASSERT(::IsWindow(m_hWnd)); ::CreateCaret(m_hWnd, (HBITMAP)0, nWidth, nHeight); }
 _AFXWIN_INLINE void CWnd::CreateGrayCaret(int nWidth, int nHeight)

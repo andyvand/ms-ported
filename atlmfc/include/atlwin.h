@@ -3496,6 +3496,9 @@ public:
 
 	LRESULT DefWindowProc()
 	{
+        if (this == NULL)
+            return 0;
+
 		const _ATL_MSG* pMsg = this->m_pCurrentMsg;
 		LRESULT lRes = 0;
 		if (pMsg != NULL)

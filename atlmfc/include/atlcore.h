@@ -687,7 +687,7 @@ inline HMODULE AtlLoadSystemLibraryUsingFullPath(_In_z_ const WCHAR *pszLibrary)
 		return NULL;
 	}
 
-	return(::LoadLibraryW(wszLoadPath));
+	return(::LoadLibraryExW(wszLoadPath, NULL, 0));
 #endif
 }
 

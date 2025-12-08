@@ -35,13 +35,8 @@ static const TCHAR *szTopicName  = TEXT("Hearts");
 
 //  Typedefs for NDdeShareGetInfo (SGIPROC) and NDdeShareAdd (SAPROC)
 
-#if defined(_UNICODE) || defined(UNICODE) 
-typedef UINT(WINAPI* SGIPROC)(LPWSTR, LPCWSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
-typedef UINT(WINAPI* SAPROC)(LPWSTR, UINT, LPBYTE, DWORD);
-#else
-typedef UINT (WINAPI *SGIPROC)(LPSTR, LPCSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
-typedef UINT (WINAPI *SAPROC)(LPSTR, UINT, LPBYTE, DWORD );
-#endif
+typedef UINT(WINAPI* SGIPROC)(LPTSTR, LPCTSTR, UINT, LPBYTE, DWORD, LPDWORD, LPWORD);
+typedef UINT(WINAPI* SAPROC)(LPTSTR, UINT, PSECURITY_DESCRIPTOR, LPBYTE, DWORD);
 
 /****************************************************************************
 
@@ -554,20 +549,18 @@ void CMainWindow::CheckNddeShare()
 #ifdef USENETDDE
     DWORD           dwAvail;
     WORD            wItems;
-    BYTE            buffer[200];
+    BYTE            buffer[sizeof(NDDESHAREINFO) + 200];
 
     SetErrorMode(SEM_NOOPENFILEERRORBOX);
-    HINSTANCE hinstNDDEAPI = LoadLibrary(TEXT("NDDEAPI.DLL"));
+    HMODULE hinstNDDEAPI = LoadLibraryEx(TEXT("NDDEAPI.DLL"), NULL, 0);
 
-    if (hinstNDDEAPI <= (HINSTANCE)HINSTANCE_ERROR)
+    if (hinstNDDEAPI <= (HMODULE)HINSTANCE_ERROR)
         return;
 
 #if defined(_UNICODE) || defined(UNICODE) 
-    SGIPROC lpfnNDdeShareGetInfo =
-        (SGIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoW");
+    SGIPROC lpfnNDdeShareGetInfo = (SGIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoW");
 #else
-    SGIPROC lpfnNDdeShareGetInfo =
-        (SGIPROC) GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoA");
+    SGIPROC lpfnNDdeShareGetInfo = (SGIPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareGetInfoA");
 #endif
 
     if (lpfnNDdeShareGetInfo == NULL)
@@ -576,20 +569,17 @@ void CMainWindow::CheckNddeShare()
         return;
     }
 
-    UINT res = (*lpfnNDdeShareGetInfo)(NULL, szShareName, 2,
-                    buffer, sizeof(buffer), &dwAvail, &wItems);
+    UINT res = (*lpfnNDdeShareGetInfo)(NULL, szShareName, 2, buffer, sizeof(buffer), &dwAvail, &wItems);
 
-    if (res != NDDE_SHARE_NOT_EXIST)
+    if (((res != NDDE_SHARE_NOT_EXIST) && (res != NDDE_NOT_IMPLEMENTED)) || (res == NDDE_NO_ERROR))
         return;
 
     NDDESHAREINFO *pnddeInfo = (NDDESHAREINFO *)buffer;
 
 #if defined(_UNICODE) || defined(UNICODE) 
-    SAPROC lpfnNDdeShareAdd =
-        (SAPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareAddW");
+    SAPROC lpfnNDdeShareAdd = (SAPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareAddW");
 #else
-    SAPROC lpfnNDdeShareAdd =
-        (SAPROC) GetProcAddress(hinstNDDEAPI, "NDdeShareAddA");
+    SAPROC lpfnNDdeShareAdd = (SAPROC)GetProcAddress(hinstNDDEAPI, "NDdeShareAddA");
 #endif
 
     if (lpfnNDdeShareAdd == NULL)
@@ -598,21 +588,20 @@ void CMainWindow::CheckNddeShare()
         return;
     }
 
-    pnddeInfo->lpszShareName = (LPTSTR)szShareName;
-    pnddeInfo->lRevision     = 1;
-    pnddeInfo->lShareType       = 0;
+    pnddeInfo->lRevision        = 1;
+    pnddeInfo->lpszShareName    = (LPTSTR)szShareName;
+    pnddeInfo->lShareType       = SHARE_TYPE_OLD;
     pnddeInfo->lpszAppTopicList = (LPTSTR)TEXT("Hearts");         // non-const szTopicName
-    pnddeInfo->fSharedFlag      = 0;
-    pnddeInfo->fService         = 0;
-    pnddeInfo->fStartAppFlag    = 0;
+    pnddeInfo->fSharedFlag      = TRUE;
+    pnddeInfo->fService         = TRUE;
+    pnddeInfo->fStartAppFlag    = FALSE;
     pnddeInfo->nCmdShow         = 0;
-    memset(pnddeInfo->qModifyId, 0, sizeof(pnddeInfo->qModifyId));
     pnddeInfo->cNumItems        = 0;
     pnddeInfo->lpszItemList     = (LPTSTR)TEXT("");
 
-    res = (*lpfnNDdeShareAdd)(NULL, 2, buffer, sizeof(buffer));
+    res = (*lpfnNDdeShareAdd)(NULL, 2, NULL, buffer, sizeof(buffer));
 
-    TRACE("NDdeShareAdd returns %u\n", res);
+    fprintf(stderr, "NDdeShareAdd returns %u\n", res);
 
     FreeLibrary(hinstNDDEAPI);
 #endif

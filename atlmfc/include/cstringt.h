@@ -3076,25 +3076,25 @@ public:
 
 	CFixedStringT(_In_ const CFixedStringT< StringType, t_nChars >& str) :
 		CFixedStringMgr( &m_data, t_nChars, (CAfxStringMgr*)MyStrTraits::GetDefaultManager() ),
-		StringType( str.GetString(), str.GetLength(), static_cast< CAfxStringMgr* >( this ) )
+		StringType( str.GetString(), str.GetLength() )
 	{
 	}
 
 	CFixedStringT(_In_ const StringType& str) :
 		CFixedStringMgr( &m_data, t_nChars, (CAfxStringMgr*)MyStrTraits::GetDefaultManager() ),
-		StringType( str.GetString(), str.GetLength(), static_cast< CAfxStringMgr* >( this ) )
+		StringType( str.GetString(), str.GetLength() )
 	{
 	}
 
 	CFixedStringT(_In_z_ const typename StringType::XCHAR* psz) :
 		CFixedStringMgr( &m_data, t_nChars, (CAfxStringMgr*)MyStrTraits::GetDefaultManager() ),
-		StringType( psz, static_cast< CAfxStringMgr* >( this ) )
+		StringType( psz )
 	{
 	}
 
 	CFixedStringT(_In_reads_(nLength) const typename StringType::XCHAR* psz, _In_ int nLength) :
 		CFixedStringMgr( &m_data, t_nChars, (CAfxStringMgr*)MyStrTraits::GetDefaultManager() ),
-		StringType( psz, nLength, static_cast< CAfxStringMgr* >( this ) )
+		StringType( psz, nLength )
 	{
 	}
 
@@ -3106,7 +3106,7 @@ public:
 
 	explicit CFixedStringT(_In_z_ const unsigned char* psz) :
 		CFixedStringMgr( &m_data, t_nChars, (CAfxStringMgr*)MyStrTraits::GetDefaultManager() ),
-		StringType( psz, strlen((const char *)psz), static_cast< CAfxStringMgr* >( this ) )
+		StringType( psz, strlen((const char *)psz) )
 	{
 	}
 

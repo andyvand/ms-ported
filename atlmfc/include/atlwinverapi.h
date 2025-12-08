@@ -37,10 +37,10 @@
 // implementations of these methods just call the real Windows APIs.
 
 // Minimum supported versions of Windows:
-// Windows XP SP2 for x86 and x64, Windows 8 for ARM
+// Windows XP for x86 and x64, Windows 8 for ARM
 
 #if defined(_M_IX86) || defined(_M_X64) || defined(__i386__) || defined(__x86_64__)
-#define _ATL_NTDDI_MIN NTDDI_WIN7
+#define _ATL_NTDDI_MIN NTDDI_WINXP
 #else
 #define _ATL_NTDDI_MIN NTDDI_WIN8
 #endif
@@ -51,7 +51,8 @@
 	auto functionpointer = reinterpret_cast<decltype(::functionname)*>(functionpointer##_cache); \
 	if (functionpointer == reinterpret_cast<decltype(::functionname)*>(NULL)) \
 	{ \
-		HINSTANCE hLibrary = GetModuleHandleW(libraryname); \
+        HMODULE hLibrary = NULL; \
+        GetModuleHandleExW(0, libraryname, &hLibrary); \
 		if (hLibrary != NULL) \
 		{ \
 			functionpointer = reinterpret_cast<decltype(::functionname)*>(::GetProcAddress(hLibrary, #functionname)); \
@@ -69,7 +70,8 @@
 	auto functionpointer = reinterpret_cast<functiontypedef>(functionpointer##_cache); \
 	if (functionpointer == reinterpret_cast<functiontypedef>(NULL)) \
 	{ \
-		HINSTANCE hLibrary = GetModuleHandleW(libraryname); \
+        HMODULE hLibrary = NULL; \
+        GetModuleHandleExW(0, libraryname, &hLibrary); \
 		if (hLibrary != NULL) \
 		{ \
 			functionpointer = reinterpret_cast<functiontypedef>(::GetProcAddress(hLibrary, functionname)); \

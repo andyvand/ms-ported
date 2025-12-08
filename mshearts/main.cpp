@@ -241,7 +241,6 @@ void CMainWindow::OnAbout()
     ShellAbout(m_hWnd, s, NULL, hIcon);
 }
 
-
 /****************************************************************************
 
 CMainWindow::OnQuote
@@ -619,6 +618,7 @@ CMainWindow::OnPaint
 void CMainWindow::OnPaint()
 {
     CPaintDC dc( this );
+
 #ifdef USE_MIRRORING
 	SetLayout(dc.m_hDC, 0);
 	SetLayout(dc.m_hAttribDC, 0);
@@ -903,14 +903,38 @@ LRESULT CMainWindow::OnPrintClient(WPARAM wParam, LPARAM lParam)
 }
 
 #ifdef __MINGW32__
-extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
-    _In_ LPSTR lpCmdLine, int nCmdShow);
+extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow);
 
 extern "C" int WINAPI
-WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
-    _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
+WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+    int ret = 0;
+
+#if defined(_UNICODE) || defined(UNICODE)
+    LPWSTR lpWCmdLine = NULL;
+
+    if (lpCmdLine != NULL)
+    {
+        lpWCmdLine = (LPWSTR)malloc((strlen(lpCmdLine) + 1) * sizeof(WCHAR));
+
+        if (lpWCmdLine != NULL)
+        {
+            MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, lpCmdLine, strlen(lpCmdLine), lpWCmdLine, strlen(lpCmdLine));
+            lpWCmdLine[strlen(lpCmdLine)] = 0;
+        }
+    }
+
+    ret = AfxWinMain(hInstance, hPrevInstance, lpWCmdLine, nCmdShow);
+
+    if (lpWCmdLine != NULL)
+    {
+        free(lpWCmdLine);
+    }
+#else
     // call shared/exported WinMain
-    return AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+#endif
+
+    return ret;
 }
 #endif

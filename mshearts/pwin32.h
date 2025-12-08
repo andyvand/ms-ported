@@ -271,7 +271,7 @@
 #endif
 
 #define MGetWinFlags()                      WF_PMODE
-#define MLoadLibrary(lpsz)                  LoadLibrary(lpsz)
+#define MLoadLibrary(lpsz)                  LoadLibraryEx(lpsz, NULL, 0)
 #define MLocalInit(w, p1, p2)               ((w),(p1),(p2),TRUE)
 #define MLockData(dummy)
 #define MUnlockData(dummy)

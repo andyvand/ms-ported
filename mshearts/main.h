@@ -29,6 +29,7 @@ Aug 92, JimH
 #ifndef	MAIN_INC
 #define	MAIN_INC
 
+#include <afxdlgs.h>
 
 // non-translateable strings
 
@@ -151,6 +152,7 @@ class CMainWindow : public CFrameWnd
         afx_msg void OnScore();
         afx_msg void OnSound();
         afx_msg void OnWelcome();
+
         afx_msg LRESULT OnPrintClient(WPARAM wParam, LPARAM lParam);
 
         void     DispatchCards();
@@ -182,6 +184,12 @@ class CMainWindow : public CFrameWnd
         void     ReceiveMove(MOVE& move);
         void     UpdatePassStatus(PASS12& pass12);
         void     UpdateStatusNames(GAMESTATUS& gs);
+
+protected:
+        LPDEVMODE deviceMode;
+        CString   deviceDriverName;
+        CString   deviceName;
+        CString   devicePortName;
 
         CButton  m_Button;
         int      m_StatusHeight;

@@ -574,7 +574,14 @@ HWND CDialog::PreModal()
 		pApp->EnableModeless(FALSE);
 
 	// find parent HWND
-	HWND hWnd = CWnd::GetSafeOwner_(m_pParentWnd->m_hWnd, &m_hWndTop);
+    HWND hWnd = NULL;
+
+    if (m_pParentWnd != NULL)
+    {
+        hWnd = CWnd::GetSafeOwner_(m_pParentWnd->m_hWnd, &m_hWndTop);
+    } else {
+        hWnd = CWnd::GetSafeOwner_(m_hWnd, &m_hWndTop);
+    }
 
 	// hook for creation of dialog
 	AfxHookWindowCreate(this);
