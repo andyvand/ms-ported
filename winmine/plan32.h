@@ -1,0 +1,3 @@
+#ifndef __PLAN32_H__
+#define __PLAN32_H__
+#endif /* __PLAN32_H__ */

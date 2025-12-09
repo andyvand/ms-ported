@@ -1,0 +1,22 @@
+[OPTIONS]
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=freecell.chm
+Contents file=freecell.hhc
+Default topic=freecell_play.htm
+Display compile progress=No
+Enhanced decompilation=Yes
+Full-text search=Yes
+Index file=freecell.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Freecell Help
+
+
+[FILES]
+freecell_play.htm
+freecell_object.htm
+freecell_hints.htm
+freecell_change_game_options.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,9 @@
+#ifndef __CONTEXT_H__
+#define __CONTEXT_H__
+
+#define HLP_INDEX     0x0000
+#define HLP_HOWTOPLAY 0x0001
+#define HLP_COMMANDS  0x0002
+#define HLP_KEYBOARD  0x0003
+
+#endif /* __CONTEXT_H__ */

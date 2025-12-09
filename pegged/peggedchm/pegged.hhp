@@ -1,0 +1,19 @@
+[OPTIONS]
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=pegged.chm
+Contents file=pegged.hhc
+Default topic=pegged.htm
+Display compile progress=No
+Enhanced decompilation=Yes
+Full-text search=Yes
+Index file=pegged.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Pegged Help
+
+
+[FILES]
+pegged.htm
+
+[INFOTYPES]
+

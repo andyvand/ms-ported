@@ -1,0 +1,54 @@
+#include "pegged.h"
+#include "windows.h"
+
+1 RT_MANIFEST pegged.xml
+
+Pegged ICON pegged.ico
+ID_ICON_MAIN ICON pegged.ico
+
+Pegged MENU
+	BEGIN
+		POPUP "&Game"
+			BEGIN
+				MENUITEM TEXT("&New\tF2"),	IDM_NEW
+				MENUITEM TEXT("&Backup\tBksp"),	IDM_UNDO
+				MENUITEM	SEPARATOR
+				MENUITEM TEXT("&Exit"),	IDM_EXIT
+			END
+		POPUP "&Options"
+			BEGIN
+				MENUITEM TEXT("&Cross"),	IDM_CROSS
+				MENUITEM TEXT("&Plus"),	IDM_PLUS
+				MENUITEM TEXT("&Fireplace"),	IDM_FIREPLACE
+				MENUITEM TEXT("Up &Arrow"),	IDM_UPARROW
+				MENUITEM TEXT("P&yramid"),	IDM_PYRAMID
+				MENUITEM TEXT("&Diamond"),	IDM_DIAMOND
+				MENUITEM TEXT("&Solitaire"),	IDM_SOLITAIRE
+			END
+		POPUP "&Help"
+			BEGIN
+				MENUITEM TEXT("&Index\tF1"),	IDM_INDEX
+				MENUITEM TEXT("&How to Play"),	IDM_HOWTO
+				MENUITEM TEXT("&Commands"),	IDM_COMMANDS
+				MENUITEM TEXT("&Using Help"),	IDM_USING
+				MENUITEM	SEPARATOR
+				MENUITEM TEXT("&About Pegged..."),	IDM_ABOUT
+			END
+	END
+
+MainAcc ACCELERATORS
+BEGIN
+	VK_F1, IDM_INDEX,VIRTKEY,NOINVERT
+	VK_F2, 1 , VIRTKEY, NOINVERT
+	VK_BACK,2 , VIRTKEY, NOINVERT
+	VK_ESCAPE,12 , VIRTKEY, NOINVERT
+END
+
+#include <ntverp.h>
+
+#define	VER_FILETYPE	VFT_APP
+#define	VER_FILESUBTYPE	VFT2_UNKNOWN
+#define VER_FILEDESCRIPTION_STR     TEXT("Entertainment Pack Pegged Game")
+#define VER_INTERNALNAME_STR        TEXT("pegged\0")
+
+#include "common.ver"

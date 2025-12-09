@@ -1,0 +1,6 @@
+#include "windows.h"
+#include "cdt.h"
+
+#define DLL
+#include "cards.rch"
+
