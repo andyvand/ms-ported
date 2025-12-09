@@ -90,7 +90,7 @@ MyExtractVersionResource16W (
 {
     DWORD dwTemp = 0;
     DWORD (__stdcall *pExtractVersionResource16W)(LPCWSTR, LPHANDLE);
-    HINSTANCE hShell32 = LoadLibraryW(L"shell32.dll");
+    HINSTANCE hShell32 = LoadLibraryEx(TEXT("shell32.dll"), NULL, 0);
 
     if (hShell32) {
         pExtractVersionResource16W = (DWORD(__stdcall *)(LPCWSTR, LPHANDLE))
@@ -132,7 +132,7 @@ GetFileVersionInfoSizeW(
         *lpdwHandle = 0;
 
     dwTemp = SetErrorMode(SEM_FAILCRITICALERRORS);
-    hMod = LoadLibraryEx(lpwstrFilename, NULL, LOAD_LIBRARY_AS_DATAFILE);
+    hMod = LoadLibraryExW(lpwstrFilename, NULL, LOAD_LIBRARY_AS_DATAFILE);
     SetErrorMode(dwTemp);
 
     if (!hMod && GetLastError() == ERROR_FILE_NOT_FOUND)

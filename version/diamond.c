@@ -703,7 +703,7 @@ InitDiamond(
     }
 
     if (!cCabinetLoad) {
-        hCabinet = LoadLibraryW(L"CABINET.DLL");
+        hCabinet = LoadLibraryEx(TEXT("CABINET.DLL"), NULL, 0);
         if (!hCabinet) {
             return (VIF_CANNOTLOADCABINET);
         }

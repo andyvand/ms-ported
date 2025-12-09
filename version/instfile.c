@@ -197,7 +197,7 @@ VerInstallFileW(
     BOOL DiamondFile;
 
     if (!cLz32Load) {
-        hLz32 = LoadLibraryW(L"LZ32.DLL");
+        hLz32 = LoadLibraryEx(TEXT("LZ32.DLL"), NULL, 0);
         if (!hLz32) {
             return (VIF_CANNOTLOADLZ32);
         }
