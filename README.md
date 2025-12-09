@@ -1,5 +1,5 @@
-# Various Microsoft games ported to Visual Studio 2026.
-# Various Microsoft games ported to MinGW (i386, x86_64 and aarch64).
+# Various Microsoft applications and games ported to Visual Studio 2026.
+# Various Microsoft applications and games ported to MinGW (i386, x86_64 and aarch64).
 
 - Solitaire
 - Reversi
@@ -7,6 +7,7 @@
 - Winmine
 - Freecell
 - Pegged
+- Winver
 
 It requires for a MinGW build of mshearts the MFC library ported to MinGW.
 - To build it go to atlmfc/src/mfc in the Terminal

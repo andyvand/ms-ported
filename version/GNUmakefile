@@ -1,0 +1,41 @@
+TARGETNAME=version
+TARGETPATH=../../bin
+TARGETTYPE=APPLICATION
+CC = i686-pc-mingw32-gcc
+AR = i686-pc-mingw32-ar
+WINDRES = i686-pc-mingw32-windres -D_UNICODE=1 -DUNICODE=1
+RANLIB = i686-pc-mingw32-ranlib
+CFLAGS = -O2 -I. -Wall -Wpedantic -D_UNICODE=1 -DUNICODE=1 -Wno-array-bounds
+LDFLAGS = -static-libgcc -mdll
+LIBS = -lshell32 -luser32 -lntdll
+RM = rm -f
+INSTALL = install -m 755
+INSTALL_DIR = /usr
+
+OBJS = \
+	ansi.o \
+	diamond.o \
+	filever.o \
+	ifhelp.o \
+	instfile.o \
+	version.o \
+	version_res.o
+
+%_res.o: %.rc
+	$(WINDRES) -o $@ $<
+
+%.o: %.c
+	$(CC) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+all: $(TARGETNAME).dll
+
+$(TARGETNAME).dll: $(OBJS)
+	$(CC) $(LDFLAGS) -Wl,--enable-stdcall-fixup -Wl,--out-implib,lib$(TARGETNAME).a -o $@ $^ version.def $(LIBS)
+
+clean:
+	$(RM) $(OBJS) $(DLL_OBJS) $(TARGETNAME).dll lib$(TARGETNAME).a
+
+install:
+	$(INSTALL) $(TARGETNAME).dll $(INSTALL_DIR)/lib/$(TARGETNAME).dll
+	$(INSTALL) lib$(TARGETNAME).a $(INSTALL_DIR)/lib/lib$(TARGETNAME).a
+
