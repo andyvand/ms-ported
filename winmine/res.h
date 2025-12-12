@@ -72,9 +72,9 @@
 
 #define idsNoHelp	301
 #define idsHelpFile     105
-#define idsHelpIndex    -30
-#define idsHelpSearch   -29
-#define idsHelpUsing    -28
+#define idsHelpIndex    106
+#define idsHelpSearch   107
+#define idsHelpUsing    108
 
 #define IDM_HELP        590
 #define IDM_HOW2PLAY    591

@@ -149,9 +149,9 @@ static CINTERFACE_PROXY_VTABLE(5) _IRegistrarBaseProxyVtbl =
         &IID_IRegistrarBase,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
         (void *)-1,  /* IRegistrarBase::AddReplacement */
         (void *)-1,  /* IRegistrarBase::ClearReplacements */
     }
@@ -213,9 +213,9 @@ static CINTERFACE_PROXY_VTABLE(13) _IRegistrarProxyVtbl =
         &IID_IRegistrar,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
         (void *)-1,  /* IRegistrarBase::AddReplacement */
         (void *)-1,  /* IRegistrarBase::ClearReplacements */
         (void *)-1,  /* IRegistrar::ResourceRegisterSz */
@@ -281,9 +281,9 @@ static CINTERFACE_PROXY_VTABLE(9) _IAxWinHostWindowProxyVtbl =
         &IID_IAxWinHostWindow,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
         (void *)-1,  /* IAxWinHostWindow::CreateControl */
         (void *)-1,  /* IAxWinHostWindow::CreateControlEx */
         (void *)-1,  /* IAxWinHostWindow::AttachControl */
@@ -347,9 +347,9 @@ static CINTERFACE_PROXY_VTABLE(11) _IAxWinHostWindowLicProxyVtbl =
         &IID_IAxWinHostWindowLic,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
         (void *)-1,  /* IAxWinHostWindow::CreateControl */
         (void *)-1,  /* IAxWinHostWindow::CreateControlEx */
         (void *)-1,  /* IAxWinHostWindow::AttachControl */
@@ -439,13 +439,13 @@ static CINTERFACE_PROXY_VTABLE(35) _IAxWinAmbientDispatchProxyVtbl =
         &IID_IAxWinAmbientDispatch,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
-        0,  /* IDispatch::GetTypeInfoCount */
-        0,  /* IDispatch::GetTypeInfo */
-        0,  /* IDispatch::GetIDsOfNames */
-        0,  /* IDispatch::Invoke */
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
+        (void *)0,  /* IDispatch::GetTypeInfoCount */
+        (void *)0,  /* IDispatch::GetTypeInfo */
+        (void *)0,  /* IDispatch::GetIDsOfNames */
+        (void *)0,  /* IDispatch::Invoke */
         (void *)-1,  /* IAxWinAmbientDispatch::put_AllowWindowlessActivation */
         (void *)-1,  /* IAxWinAmbientDispatch::get_AllowWindowlessActivation */
         (void *)-1,  /* IAxWinAmbientDispatch::put_BackColor */
@@ -595,13 +595,13 @@ static CINTERFACE_PROXY_VTABLE(36) _IAxWinAmbientDispatchExProxyVtbl =
         &IID_IAxWinAmbientDispatchEx,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
-        0,  /* IDispatch::GetTypeInfoCount */
-        0,  /* IDispatch::GetTypeInfo */
-        0,  /* IDispatch::GetIDsOfNames */
-        0,  /* IDispatch::Invoke */
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
+        (void *)0,  /* IDispatch::GetTypeInfoCount */
+        (void *)0,  /* IDispatch::GetTypeInfo */
+        (void *)0,  /* IDispatch::GetIDsOfNames */
+        (void *)0,  /* IDispatch::Invoke */
         (void *)-1,  /* IAxWinAmbientDispatch::put_AllowWindowlessActivation */
         (void *)-1,  /* IAxWinAmbientDispatch::get_AllowWindowlessActivation */
         (void *)-1,  /* IAxWinAmbientDispatch::put_BackColor */
@@ -685,9 +685,9 @@ static CINTERFACE_PROXY_VTABLE(5) _IInternalConnectionProxyVtbl =
         &IID_IInternalConnection,
     },
     {
-        IUnknown_QueryInterface_Proxy,
-        IUnknown_AddRef_Proxy,
-        IUnknown_Release_Proxy,
+        (void *)IUnknown_QueryInterface_Proxy,
+        (void *)IUnknown_AddRef_Proxy,
+        (void *)IUnknown_Release_Proxy,
         (void *)-1,  /* IInternalConnection::AddConnection */
         (void *)-1,  /* IInternalConnection::ReleaseConnection */
     }

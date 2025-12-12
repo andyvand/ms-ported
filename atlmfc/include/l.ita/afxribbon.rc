@@ -10,11 +10,11 @@
 #include "afxres.h"
 
 #ifndef _AFX_INTL_RESOURCES
-#include "res\RibbonStyle2007Aqua.rc2"
-#include "res\RibbonStyle2007Black.rc2"
-#include "res\RibbonStyle2007Blue.rc2"
-#include "res\RibbonStyle2007Silver.rc2"
-#include "res\RibbonStyleWindows7.rc2"
+#include "res/RibbonStyle2007Aqua.rc2"
+#include "res/RibbonStyle2007Black.rc2"
+#include "res/RibbonStyle2007Blue.rc2"
+#include "res/RibbonStyle2007Silver.rc2"
+#include "res/RibbonStyleWindows7.rc2"
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -488,14 +488,14 @@ IDC_AFXBARRES_MOVE      CURSOR                  "res/move-pro.cur"
 IDC_AFXBARRES_COPY      CURSOR                  "res/copy-pro.cur"
 IDC_AFXBARRES_HAND      CURSOR                  "res/hand-pro.cur"
 IDC_AFXBARRES_MOVE_TAB  CURSOR                  "res/movetab.cur"
-IDC_AFXBARRES_NO_MOVE_TAB CURSOR                  "res/nomovetab.cur"
+IDC_AFXBARRES_NO_MOVE_TAB CURSOR                "res/nomovetab.cur"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Toolbar
 //
 
-IDR_AFXRES_PALETTE TOOLBAR  16, 15
+IDR_AFXRES_PALETTE TOOLBAR 16, 15
 BEGIN
     BUTTON      ID_AFX_TOOL_PEN
     BUTTON      ID_AFX_TOOL_FILL
@@ -509,7 +509,7 @@ BEGIN
     BUTTON      ID_AFX_TOOL_CLEAR
 END
 
-IDR_AFXRES_PRINT_PREVIEW TOOLBAR  16, 16
+IDR_AFXRES_PRINT_PREVIEW TOOLBAR 16, 16
 BEGIN
     BUTTON      AFX_ID_PREVIEW_PRINT
     BUTTON      AFX_ID_PREVIEW_NEXT

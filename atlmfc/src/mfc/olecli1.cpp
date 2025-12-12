@@ -1417,7 +1417,7 @@ BOOL COleClientItem::GetExtent(LPSIZE lpSize, DVASPECT nDrawAspect)
 	ASSERT(AfxIsValidAddress(lpSize, sizeof(CSize)));
 
 	// use current default aspect if specific one not specified
-	if (nDrawAspect == -1)
+	if (nDrawAspect == ((DVASPECT)-1))
 		nDrawAspect = m_nDrawAspect;
 
 	// get the extent
@@ -1432,7 +1432,7 @@ BOOL COleClientItem::GetCachedExtent(LPSIZE lpSize, DVASPECT nDrawAspect)
 	ASSERT(AfxIsValidAddress(lpSize, sizeof(CSize)));
 
 	// use current default aspect if specific one not specified
-	if (nDrawAspect == -1)
+	if (nDrawAspect == ((DVASPECT)-1))
 		nDrawAspect = m_nDrawAspect;
 
 	COleDocument* pDoc = (COleDocument*)GetDocument();
@@ -1675,7 +1675,7 @@ BOOL COleClientItem::Draw(CDC* pDC, LPCRECT lpBounds, DVASPECT nDrawAspect)
 		return FALSE;   // partially created COleClientItem object
 
 	// use current draw aspect if aspect is -1 (default)
-	if (nDrawAspect == -1)
+	if (nDrawAspect == ((DVASPECT)-1))
 		nDrawAspect = m_nDrawAspect;
 
 	// convert RECT lpBounds to RECTL rclBounds

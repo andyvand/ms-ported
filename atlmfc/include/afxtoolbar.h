@@ -640,6 +640,7 @@ protected:
 
 	CMap<UINT, UINT&, CMFCToolBarButton*, CMFCToolBarButton*&> m_AccelKeys; // Keyboard acceleration keys
 
+public:
 	AFX_IMPORT_DATA static BOOL m_bCustomizeMode;
 	AFX_IMPORT_DATA static BOOL m_bAltCustomizeMode;
 	AFX_IMPORT_DATA static BOOL m_bShowTooltips;
@@ -652,6 +653,7 @@ protected:
 
 	AFX_IMPORT_DATA static CMFCCmdUsageCount m_UsageCount;
 
+protected:
 	virtual BOOL OnDrop(COleDataObject* pDataObject, DROPEFFECT dropEffect, CPoint point);
 	virtual DROPEFFECT OnDragEnter(COleDataObject* pDataObject, DWORD dwKeyState, CPoint point);
 	virtual void OnDragLeave();

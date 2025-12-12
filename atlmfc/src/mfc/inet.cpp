@@ -2190,10 +2190,12 @@ BOOL CHttpFile::AddRequestHeaders(LPCTSTR pstrHeaders,
 	ASSERT(m_hFile != NULL);
 
 	if (dwHeadersLen == -1)
-		if (pstrHeaders == NULL)
-			dwHeadersLen = 0;
-		else
-			dwHeadersLen = static_cast<DWORD>(_tcslen(pstrHeaders));
+    {
+        if (pstrHeaders == NULL)
+            dwHeadersLen = 0;
+        else
+            dwHeadersLen = static_cast<DWORD>(_tcslen(pstrHeaders));
+    }
 
 	return HttpAddRequestHeaders(m_hFile, pstrHeaders, dwHeadersLen,
 		dwModifiers);

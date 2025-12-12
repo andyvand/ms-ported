@@ -16,8 +16,8 @@
 #define ICON_NAME TEXT("Pegged")
 #define HELP_FILE TEXT("pegged.chm")
 
-VOID checkfvmove();
-VOID checkfanymoves();
+VOID checkfvmove(VOID);
+VOID checkfanymoves(VOID);
 
 RECT r;
 INT prevxorg, prevyorg;
@@ -1951,7 +1951,7 @@ LPARAM       lParam)
 }
 
 
-VOID checkfvmove()
+VOID checkfvmove(VOID)
 
 
 {
@@ -1998,7 +1998,7 @@ VOID checkfvmove()
 }
 
 
-VOID checkfanymoves()
+VOID checkfanymoves(VOID)
 {
     /*corners*/
     if (bState[2][0]) {

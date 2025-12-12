@@ -29,9 +29,9 @@ BEGIN_MESSAGE_MAP(CDHtmlDialog, CDialog)
 END_MESSAGE_MAP()
 
 BEGIN_EVENTSINK_MAP(CDHtmlDialog, CDialog)
-	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 252 /* NavigateComplete2 */, _OnNavigateComplete2, VTS_DISPATCH VTS_PVARIANT)
-	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 250 /* BeforeNavigate2 */, _OnBeforeNavigate2, VTS_DISPATCH VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PBOOL)
-	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 259 /* DocumentComplete */, _OnDocumentComplete, VTS_DISPATCH VTS_PVARIANT)
+	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 252 /* NavigateComplete2 */, CDHtmlDialog::_OnNavigateComplete2, VTS_DISPATCH VTS_PVARIANT)
+	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 250 /* BeforeNavigate2 */, CDHtmlDialog::_OnBeforeNavigate2, VTS_DISPATCH VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PVARIANT VTS_PBOOL)
+	ON_EVENT(CDHtmlDialog, AFX_IDC_BROWSER, 259 /* DocumentComplete */, CDHtmlDialog::_OnDocumentComplete, VTS_DISPATCH VTS_PVARIANT)
 END_EVENTSINK_MAP()
 
 /////////////////////////////////////////////////////////////////////////////

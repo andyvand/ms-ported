@@ -32,10 +32,10 @@ PROCESS_LOCAL(_AFX_HTMLHELP_STATE, _afxHtmlHelpState)
 const UINT CWnd::m_nMsgDragList = ::RegisterWindowMessage(DRAGLISTMSGSTRING);
 
 // CWnds for setting z-order with SetWindowPos's pWndInsertAfter parameter
-const AFX_DATADEF CWnd CWnd::wndTop(HWND_TOP);
-const AFX_DATADEF CWnd CWnd::wndBottom(HWND_BOTTOM);
-const AFX_DATADEF CWnd CWnd::wndTopMost(HWND_TOPMOST);
-const AFX_DATADEF CWnd CWnd::wndNoTopMost(HWND_NOTOPMOST);
+const CWnd CWnd::wndTop(HWND_TOP);
+const CWnd CWnd::wndBottom(HWND_BOTTOM);
+const CWnd CWnd::wndTopMost(HWND_TOPMOST);
+const CWnd CWnd::wndNoTopMost(HWND_NOTOPMOST);
 
 const TCHAR _afxWnd[] = AFX_WND;
 const TCHAR _afxWndControlBar[] = AFX_WNDCONTROLBAR;

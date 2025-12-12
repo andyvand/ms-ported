@@ -26,10 +26,9 @@
  */
 #define VER_FILETYPE                VFT_DLL
 #define VER_FILESUBTYPE             VFT2_UNKNOWN
-#define VER_FILEDESCRIPTION_STR     "Version Checking and File Installation Libraries\0"
-#define VER_INTERNALNAME_STR        "version\0"
-#define VER_ORIGINALFILENAME_STR    "VERSION.DLL"
+#define VER_FILEDESCRIPTION_STR     TEXT("Version Checking and File Installation Libraries\0")
+#define VER_INTERNALNAME_STR        TEXT("version\0")
+#define VER_ORIGINALFILENAME_STR    TEXT("VERSION.DLL")
 
 #include "common.ver"
 
-

@@ -2,7 +2,7 @@
 #include "verpriv.h"
 #include "wchar.h"
 
-#if defined(_M_ARM64) || defined(__aarch64__)
+#if defined(_M_ARM64) || defined(__aarch64__) || defined(_M_ARM) || defined(__arm__)
 #undef WX86
 #endif
 

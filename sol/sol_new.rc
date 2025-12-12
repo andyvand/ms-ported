@@ -9,9 +9,9 @@
 
 #define VER_FILETYPE                VFT_APP
 #define VER_FILESUBTYPE             VFT2_UNKNOWN
-#define VER_FILEDESCRIPTION_STR     "Solitaire Game Applet"
-#define VER_INTERNALNAME_STR        "sol.exe"
-#define VER_ORIGINALFILENAME_STR    "sol.exe"
+#define VER_FILEDESCRIPTION_STR     TEXT("Solitaire Game Applet")
+#define VER_INTERNALNAME_STR        TEXT("sol.exe")
+#define VER_ORIGINALFILENAME_STR    TEXT("sol.exe")
 
 #include "common.ver"
 

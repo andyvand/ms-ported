@@ -48,9 +48,9 @@
 
 /* Help menu */
 /* BabakJ: Win3.1 help merge */
-#define idsHelpIndex		-30
-#define idsHelpSearch		-29
-#define idsHelpUsing		-28
+#define idsHelpIndex		2001
+#define idsHelpSearch		2002
+#define idsHelpUsing		2003
 #define idsAbout		2000
 
 /* INTERNATIONAL: Ignore the stuff below */

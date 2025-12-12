@@ -50,29 +50,29 @@
 
 #ifdef _DEBUG
 
-#define VER_FILEDESCRIPTION_STR "MFCDLL Shared Library - Debug Version"
+#define VER_FILEDESCRIPTION_STR TEXT("MFCDLL Shared Library - Debug Version")
 #ifdef _UNICODE
-#define VER_ORIGINALFILENAME_STR "MFC" _MFC_FILENAME_VER "UD.DLL"
+#define VER_ORIGINALFILENAME_STR TEXT("MFCUD.DLL")
 #define VER_INTERNALNAME_STR     VER_ORIGINALFILENAME_STR
 #else
-#define VER_ORIGINALFILENAME_STR "MFC" _MFC_FILENAME_VER "D.DLL"
+#define VER_ORIGINALFILENAME_STR TEXT("MFCD.DLL")
 #define VER_INTERNALNAME_STR     VER_ORIGINALFILENAME_STR
 #endif
 
 #else
 
-#define VER_FILEDESCRIPTION_STR "MFCDLL Shared Library - Retail Version"
+#define VER_FILEDESCRIPTION_STR TEXT("MFCDLL Shared Library - Retail Version")
 #ifdef _UNICODE
-#define VER_ORIGINALFILENAME_STR "MFC" _MFC_FILENAME_VER "U.DLL"
+#define VER_ORIGINALFILENAME_STR TEXT("MFCU.DLL")
 #define VER_INTERNALNAME_STR     VER_ORIGINALFILENAME_STR
 #else
-#define VER_ORIGINALFILENAME_STR "MFC" _MFC_FILENAME_VER ".DLL"
+#define VER_ORIGINALFILENAME_STR TEXT("MFC.DLL")
 #define VER_INTERNALNAME_STR     VER_ORIGINALFILENAME_STR
 #endif
 
 #endif
 
-#define VER_COPYRIGHTSTARTYEAR_STR	"1993"
+#define VER_COPYRIGHTSTARTYEAR_STR	TEXT("1993")
 
 VS_VERSION_INFO		VERSIONINFO
 FILEVERSION		15,0,0,0
@@ -92,13 +92,13 @@ BEGIN
     BLOCK "040904E4"
     BEGIN
       VALUE "FileDescription",	VER_FILEDESCRIPTION_STR
-      VALUE "CompanyName",      "Microsoft"
-      VALUE "FileVersion",	"15.0\0"
-      VALUE "InternalName",	"mfc.dll\0"
-      VALUE "LegalCopyright",	"(C) Microsoft, all rights reserved\0"
+      VALUE "CompanyName",      TEXT("Microsoft")
+      VALUE "FileVersion",	TEXT("15.0\0")
+      VALUE "InternalName",	TEXT("mfc.dll\0")
+      VALUE "LegalCopyright",	TEXT("(C) Microsoft, all rights reserved\0")
       VALUE "OriginalFilename",	VER_ORIGINALFILENAME_STR
-      VALUE "ProductName",	"MFC\0"
-      VALUE "ProductVersion",	"15.0\0"
+      VALUE "ProductName",	TEXT("MFC\0")
+      VALUE "ProductVersion",	TEXT("15.0\0")
     END
   END
   BLOCK "VarFileInfo"

@@ -465,7 +465,7 @@ void CScrollView::SetScaleToFitSize(SIZE sizeTotal)
 	}
 }
 
-const AFX_DATADEF SIZE CScrollView::sizeDefault = {0,0};
+const SIZE CScrollView::sizeDefault = {0,0};
 
 void CScrollView::SetScrollSizes(int nMapMode, SIZE sizeTotal,
 	const SIZE& sizePage, const SIZE& sizeLine)

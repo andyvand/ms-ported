@@ -1,0 +1,58 @@
+TARGETNAME=mshearts
+TARGETPATH=../../bin
+TARGETTYPE=APPLICATION
+CC = /usr/local/armv7-pc-mingw32/bin/clang
+CXX = /usr/local/armv7-pc-mingw32/bin/clang++
+AR = /usr/local/armv7-pc-mingw32/bin/llvm-ar
+STRIP = /usr/local/armv7-pc-mingw32/bin/llvm-strip
+AR = /usr/local/armv7-pc-mingw32/bin/llvm-ar
+WINDRES = /usr/local/armv7-pc-mingw32/bin/llvm-windres -I../atlmfc/include -DVER_LANGID=0x0409 -D_UNICODE=1 -DUNICODE=1
+RANLIB = /usr/local/armv7-pc-mingw32/bin/llvm-ranlib
+CFLAGS = -O2 -I. -I/usr/local/armv7-pc-mingw32/include -I/usr/local/armv7-pc-mingw32/include/c++/v1 -I../atlmfc/include -Wno-unused-result -Wno-return-type -Wno-int-to-pointer-cast -Wno-attributes -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-pragma-pack -Wno-inconsistent-missing-override -Wno-non-pod-varargs -Wno-unused-value -Wno-sign-compare -Wno-tautological-undefined-compare -D__STDC_WANT_SECURE_LIB__=1 -D_UNICODE=1 -DUNICODE=1
+LDFLAGS = -mwindows
+LIBS = -L../atlmfc/mfc/arm -lmfcu_static -lgdi32 -lhtmlhelp -lgdi32 -ladvapi32 -lcomctl32 -lgdiplus -loleaut32 -loleacc -loledlg -lole32 -luuid -luxtheme -lhtmlhelp -lwinspool -lws2_32 -lurlmon -lwininet -limagehlp -lshlwapi -lodbc32 -limm32 -lcrypt32 -lpropsys -lmsimg32 -ldwmapi -lrpcrt4 -lwinmm -lcomdlg32 -Wl,-Bstatic,-lc++ -Wl,-Bstatic,-lc++abi -Wl,-Bstatic,-lunwind
+RM = rm -f
+INSTALL = install -m 755
+INSTALL_DIR = /usr
+
+OBJS = \
+	../atlmfc/src/mfc/mfcintl_res.o \
+	cards.o \
+	card.o \
+	comp2.o \
+	computer.o \
+	dde.o \
+	ddecb.o \
+	dlg.o \
+	hearts.o \
+	human.o \
+	lead.o \
+	main.o \
+	main2.o \
+	player.o \
+	sound.o \
+	welcome.o \
+	cards_res.o \
+	hearts_res.o
+
+%_res.o: %.rc
+	$(WINDRES) -o $@ $<
+
+%.o: %.cpp
+	$(CXX) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+%.o: %.c
+	$(CC) $(CFLAGS) -DLIB_EXPORTS=1 -o $@ -c $<
+
+all: $(TARGETNAME).exe
+
+$(TARGETNAME).exe: $(OBJS)
+	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
+	$(STRIP) $@
+
+clean:
+	$(RM) $(OBJS) $(TARGETNAME).exe
+
+install:
+	$(INSTALL) $(TARGETNAME).exe $(INSTALL_DIR)/bin/$(TARGETNAME).exe
+

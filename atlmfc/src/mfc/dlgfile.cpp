@@ -988,10 +988,12 @@ CString CFileDialog::GetFileExt() const
 	}
 
 	if (m_pofnTemp != NULL)
-		if (m_pofnTemp->nFileExtension == 0)
-			return _T("");
-		else
-			return m_pofnTemp->lpstrFile + m_pofnTemp->nFileExtension;
+    {
+        if (m_pofnTemp->nFileExtension == 0)
+            return _T("");
+        else
+            return m_pofnTemp->lpstrFile + m_pofnTemp->nFileExtension;
+    }
 
 	if (m_ofn.nFileExtension == 0)
 		return _T("");

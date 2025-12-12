@@ -488,7 +488,7 @@ IDC_AFXBARRES_MOVE      CURSOR                  "res/move-pro.cur"
 IDC_AFXBARRES_COPY      CURSOR                  "res/copy-pro.cur"
 IDC_AFXBARRES_HAND      CURSOR                  "res/hand-pro.cur"
 IDC_AFXBARRES_MOVE_TAB  CURSOR                  "res/movetab.cur"
-IDC_AFXBARRES_NO_MOVE_TAB CURSOR                  "res/nomovetab.cur"
+IDC_AFXBARRES_NO_MOVE_TAB CURSOR                "res/nomovetab.cur"
 
 /////////////////////////////////////////////////////////////////////////////
 //

@@ -5637,8 +5637,8 @@ public:
 		HROW*       phRow = &m_hRow;
 		DBLENGTH    cbBookmark;
 		BYTE*       pBookmarkBuffer;
-		IAccessor *spAccessor = m_spRowset;
-		IRowsetFind *spRowsetFind = m_spRowset;
+		IAccessor *spAccessor = (IAccessor *)m_spRowset;
+		IRowsetFind *spRowsetFind = (IRowsetFind *)m_spRowset;
 
 		if (spAccessor == NULL || spRowsetFind == NULL)
 			return E_NOINTERFACE;
