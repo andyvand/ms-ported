@@ -33,10 +33,6 @@
 #define WM_EXITMENULOOP  0x0212
 #endif
 
-#ifndef EXTRA_ADJUST
-#define EXTRA_ADJUST 10
-#endif
-
 BOOL bInitMinimized;  /* Bug #13328: HACK!  Don't permit MoveWindow or  */
                       /* InvalidateRect when initially minimized.       */
                       /* 19 September 1991   Clark R. Cyr               */
@@ -1067,7 +1063,7 @@ VOID AdjustWindow(INT fAdjust)
     	if (fAdjust & fResize)
     		{
     		MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			dxWindow+dxpBorder+EXTRA_ADJUST, dyWindow + dypAdjust+EXTRA_ADJUST, fTrue);
+    			dxWindow+(dxpBorder*2), dyWindow + (dypAdjust*2), fTrue);
     		}
 
         // after the window is adjusted, the "Game" and "Help" may move to the
@@ -1080,7 +1076,7 @@ VOID AdjustWindow(INT fAdjust)
                 {
                 dypAdjust -= dypMenu;
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			    dxWindow+dxpBorder + EXTRA_ADJUST, dyWindow + dypAdjust + EXTRA_ADJUST, fTrue);
+    			    dxWindow+(dxpBorder*2), dyWindow + (dypAdjust*2), fTrue);
                 }
             }
        
