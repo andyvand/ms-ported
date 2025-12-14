@@ -10,7 +10,9 @@
 
 #include "stdafx.h"
 
-
+#ifndef MIN
+#define MIN(X,Y) (((X) < (Y)) ? (X) : (Y))
+#endif
 
 #define new DEBUG_NEW
 

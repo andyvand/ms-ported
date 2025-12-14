@@ -26,6 +26,10 @@
 #define new DEBUG_NEW
 #endif
 
+#ifndef MIN
+#define MIN(X,Y) (((X) < (Y)) ? (X) : (Y))
+#endif
+
 static const int nSplitterHeight = 8;
 static const int nToolbarMarginHeight = 4;
 static const UINT idShowMoreButtons = 0xf200;

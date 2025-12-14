@@ -3864,8 +3864,17 @@ BOOL CPngImage::LoadFromBuffer(LPBYTE lpBuffer, UINT uiSize)
 	ASSERT(lpBuffer != NULL);
 
 	IStream* pStream = NULL;
+#ifdef _MSC_VER
+	if (HGLOBAL hRes = ::GlobalAlloc(GMEM_MOVEABLE, uiSize))
+#else
 	if (HGLOBAL hRes = ::GlobalAlloc(GMEM_MOVEABLE, uiSize); hRes != NULL)
+#endif
 	{
+#ifdef _MSC_VER
+		if (hRes == NULL)
+			return FALSE;
+#endif
+
 		LPVOID lpResBuffer = ::GlobalLock(hRes);
 		if (lpResBuffer == NULL)
 		{

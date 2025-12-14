@@ -18,6 +18,12 @@
 
 #include <msxml2.h>
 
+#ifdef _MSC_VER
+#ifndef CLSID_DOMDocument60
+DEFINE_GUID(CLSID_DOMDocument60, 0x88d96a05, 0xf192, 0x11d4, 0xa6, 0x5f, 0x00, 0x40, 0x96, 0x32, 0x51, 0xe5);
+#endif
+#endif
+
 #include "atlxml.h"
 
 #pragma comment(lib, "msxml6.lib")

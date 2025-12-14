@@ -49,47 +49,56 @@
     <ClInclude Include="..\..\ptypes32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\grafix.h">
+    <ClInclude Include="..\..\cards.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\main.h">
+    <ClInclude Include="..\..\cdt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\pref.h">
+    <ClInclude Include="..\..\crd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\rtns.h">
+    <ClInclude Include="..\..\freecell.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\sound.h">
+    <ClInclude Include="..\..\freecons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\util.h">
+    <ClInclude Include="..\..\std.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\..\res.rc">
+    <ResourceCompile Include="..\..\cards.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="..\..\freecell.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\grafix.c">
+    <ClCompile Include="..\..\cards.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\pref.c">
+    <ClCompile Include="..\..\dialog.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\rtns.c">
+    <ClCompile Include="..\..\display.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\sound.c">
+    <ClCompile Include="..\..\freecell.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\util.c">
+    <ClCompile Include="..\..\game.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\winmine.c">
+    <ClCompile Include="..\..\game2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\glide.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\transfer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

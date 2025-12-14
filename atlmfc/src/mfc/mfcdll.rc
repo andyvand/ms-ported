@@ -44,7 +44,7 @@
 
 #include "winver.h"
 
-#ifndef __MINGW32__
+#if 0
 #include "verstamp.h"
 #endif
 

@@ -1537,9 +1537,15 @@ CMDIChildWndEx* CMDIFrameWndEx::ControlBarToTabbedDocument(CDockablePane* pBar)
 	CString strName;
 	pBar->GetWindowText(strName);
 
+#ifdef _MSC_VER
+	if (!pFrame->Create(
+		AfxRegisterWndClass(CS_DBLCLKS, 0, (HBRUSH)(COLOR_BTNFACE + 1), pBar->GetIcon(FALSE)),
+		strName, WS_CHILD | WS_VISIBLE | WS_OVERLAPPEDWINDOW | FWS_ADDTOTITLE, rectDefault, this))
+#else
 	if (!pFrame->Create(
 		AfxRegisterWndClass(CS_DBLCLKS, 0, (HBRUSH)(COLOR_BTNFACE + 1), pBar->GetIcon(FALSE)),
 		strName, WS_CHILD | WS_VISIBLE | WS_OVERLAPPEDWINDOW | FWS_ADDTOTITLE, rectDefault2, this))
+#endif
 	{
 		return NULL;
 	}

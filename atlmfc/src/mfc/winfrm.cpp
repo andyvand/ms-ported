@@ -20,8 +20,13 @@
 // CRect for creating windows with the default position/size
 
 extern "C" {
+#ifdef _MSC_VER
+const CRect CFrameWnd::rectDefault(CW_USEDEFAULT, CW_USEDEFAULT,
+					     0 /* 2*CW_USEDEFAULT */, 0 /* 2*CW_USEDEFAULT */);
+#else
 const CRect rectDefault1(CW_USEDEFAULT, CW_USEDEFAULT,
                          0 /* 2*CW_USEDEFAULT */, 0 /* 2*CW_USEDEFAULT */);
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -764,8 +769,13 @@ BOOL CFrameWnd::LoadFrame(UINT nIDResource, DWORD dwDefaultStyle,
 	// attempt to create the window
 	LPCTSTR lpszClass = GetIconWndClass(dwDefaultStyle, nIDResource);
 	CString strTitle = m_strTitle;
+#ifdef _MSC_VER
+	if (!Create(lpszClass, strTitle, dwDefaultStyle, rectDefault,
+		pParentWnd, ATL_MAKEINTRESOURCE(nIDResource), 0L, pContext))
+#else
 	if (!Create(lpszClass, strTitle, dwDefaultStyle, rectDefault1,
 	  pParentWnd, ATL_MAKEINTRESOURCE(nIDResource), 0L, pContext))
+#endif
 	{
 		return FALSE;   // will self destruct on failure normally
 	}

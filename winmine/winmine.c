@@ -33,6 +33,14 @@
 #define WM_EXITMENULOOP  0x0212
 #endif
 
+#ifndef EXTRA_SPACE
+#ifdef _MSC_VER
+#define EXTRA_SPACE 10
+#else
+#define EXTRA_SPACE 0
+#endif
+#endif
+
 BOOL bInitMinimized;  /* Bug #13328: HACK!  Don't permit MoveWindow or  */
                       /* InvalidateRect when initially minimized.       */
                       /* 19 September 1991   Clark R. Cyr               */
@@ -223,7 +231,7 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 	hwndMain = CreateWindow( szClass, szWindowTitle,
                 WS_OVERLAPPED | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU, 
                 Preferences.xWindow-dxpBorder, Preferences.yWindow-dypAdjust,
-		dxWindow+(dxpBorder*2), dyWindow +(dypAdjust*2),
+		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow +(dypAdjust*2)+EXTRA_SPACE,
 		NULL, NULL, hInst, NULL);
 
 	if (!hwndMain)
@@ -1063,7 +1071,7 @@ VOID AdjustWindow(INT fAdjust)
     	if (fAdjust & fResize)
     		{
     		MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			dxWindow+(dxpBorder*2), dyWindow + dypAdjust, fTrue);
+    			dxWindow+(dxpBorder*2) + EXTRA_SPACE, dyWindow + dypAdjust + EXTRA_SPACE, fTrue);
     		}
 
         // after the window is adjusted, the "Game" and "Help" may move to the
@@ -1076,7 +1084,7 @@ VOID AdjustWindow(INT fAdjust)
                 {
                 dypAdjust -= dypMenu;
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			    dxWindow+(dxpBorder*2), dyWindow + dypAdjust, fTrue);
+    			    dxWindow+(dxpBorder*2) + EXTRA_SPACE, dyWindow + dypAdjust + EXTRA_SPACE, fTrue);
                 }
             }
        

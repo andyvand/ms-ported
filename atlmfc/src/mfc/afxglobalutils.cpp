@@ -30,6 +30,10 @@
 #define new DEBUG_NEW
 #endif
 
+#ifndef VERIFY_STACK_FOR_T2OLE_RETURN
+#define VERIFY_STACK_FOR_T2OLE_RETURN(X,Y)
+#endif
+
 CGlobalUtils afxGlobalUtils;
 
 //////////////////////////////////////////////////////////////////////

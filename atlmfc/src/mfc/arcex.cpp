@@ -86,8 +86,8 @@ void CArchiveException::Dump(CDumpContext& dc) const
 }
 #endif //_DEBUG
 
-#if 0
-extern "C" void AFXAPI AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName /* = NULL */)
+#ifdef _MSC_VER
+void AFXAPI AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName /* = NULL */)
 {
 #ifdef _DEBUG
 	LPCSTR lpsz;

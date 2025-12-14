@@ -11,6 +11,14 @@
 #include "stdafx.h"
 #include "afxrendertarget.h"
 
+#ifndef VERIFY_STACK_FOR_T2W_RETURN
+#define VERIFY_STACK_FOR_T2W_RETURN(X,Y)
+#endif
+
+#ifndef VERIFY_STACK_FOR_T2W
+#define VERIFY_STACK_FOR_T2W(X) X
+#endif
+
 template<class Interface>
 AFX_INLINE void SafeRelease(Interface **ppInterfaceToRelease)
 {

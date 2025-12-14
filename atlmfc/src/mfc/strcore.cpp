@@ -33,7 +33,7 @@ LPSTR AFXAPI AfxW2AHelper(_Out_writes_z_(nChars) LPSTR lpa, _In_z_ LPCWSTR lpw, 
 template<> UINT AFXAPI HashKey<CComBSTR> (CComBSTR key)
 {
 	// hash key to UINT value by pseudorandomizing transform
-	// (algorithm copied from STL string hash in xfunctional)
+	// (algoriarm copied from STL string hash in xfunctional)
 	UINT uHashVal = 2166136261U;
 	UINT uFirst = 0;
 	UINT uLast = AtlStrLen(key);
@@ -109,7 +109,7 @@ void AFXAPI SerializeElements< CStringW >(CArchive& ar, CStringW* pElements, INT
 #pragma warning(disable: 4074)
 #pragma init_seg(compiler)
 
-#if 0
+#ifdef _MSC_VER
 class CAfxStringMgr :
 	public IAtlStringMgr
 {
@@ -131,7 +131,11 @@ protected:
 
 CAfxStringMgr afxStringManager;
 
+#ifdef _MSC_VER
+ATL::IAtlStringMgr* AFXAPI AfxGetStringManager()
+#else
 CAfxStringMgr* AFXAPI AfxGetStringManager()
+#endif
 {
 	return &afxStringManager;
 }

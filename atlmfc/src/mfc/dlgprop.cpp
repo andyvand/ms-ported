@@ -805,13 +805,28 @@ BOOL CPropertySheet::PreTranslateMessage(MSG* pMsg)
 		return TRUE;
 
 
+#ifdef _MSC_VER
+	if (HGLOBAL hMemProp = (HGLOBAL)GetProp(this->m_hWnd, PROP_CLOSEPENDING_NAME))
+#else
     if (HGLOBAL hMemProp = (HGLOBAL) GetProp(this->m_hWnd, PROP_CLOSEPENDING_NAME);
             hMemProp != NULL)
+#endif
     {
+#ifdef _MSC_VER
+		if (hMemProp == NULL)
+			return TRUE;
 
+		if (BOOL* pBool = static_cast<BOOL*>(GlobalLock(hMemProp)))
+#else
         if (BOOL* pBool = static_cast<BOOL*>(GlobalLock(hMemProp));
                 pBool != NULL)
-        {
+#endif
+		{
+#ifdef _MSC_VER
+			if (pBool == NULL)
+				return TRUE;
+#endif
+
             if( *pBool == TRUE && NULL == PropSheet_GetCurrentPageHwnd(m_hWnd))
             {
                 GlobalUnlock(hMemProp);

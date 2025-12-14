@@ -28,6 +28,7 @@ BEGIN_MESSAGE_MAP(CMDIFrameWnd, CFrameWnd)
 	ON_COMMAND(ID_WINDOW_NEW, &CMDIFrameWnd::OnWindowNew)
 	ON_WM_DESTROY()
 	ON_MESSAGE(WM_COMMANDHELP, &CMDIFrameWnd::OnCommandHelp)
+	ON_MESSAGE(WM_COMMANDHELP, &CMDIFrameWnd::OnCommandHelp)
 	ON_WM_MENUCHAR()
 END_MESSAGE_MAP()
 
@@ -37,8 +38,13 @@ CMDIFrameWnd::CMDIFrameWnd()
 }
 
 extern "C" {
+#ifdef _MSC_VER
+const CRect rectDefault(CW_USEDEFAULT, CW_USEDEFAULT,
+	0 /* 2*CW_USEDEFAULT */, 0 /* 2*CW_USEDEFAULT */);
+#else
 const CRect rectDefault2(CW_USEDEFAULT, CW_USEDEFAULT,
                          0 /* 2*CW_USEDEFAULT */, 0 /* 2*CW_USEDEFAULT */);
+#endif
 }
 
 BOOL CMDIFrameWnd::OnCommand(WPARAM wParam, LPARAM lParam)
@@ -607,9 +613,15 @@ BOOL CMDIChildWnd::LoadFrame(UINT nIDResource, DWORD dwDefaultStyle,
 		AfxExtractSubString(strTitle, strFullString, 0);    // first sub-string
 
 	ASSERT(m_hWnd == NULL);
+#ifdef _MSC_VER
+	if (!Create(GetIconWndClass(dwDefaultStyle, nIDResource),
+		strTitle, dwDefaultStyle, rectDefault,
+		(CMDIFrameWnd*)pParentWnd, pContext))
+#else
 	if (!Create(GetIconWndClass(dwDefaultStyle, nIDResource),
 	  strTitle, dwDefaultStyle, rectDefault2,
 	  (CMDIFrameWnd*)pParentWnd, pContext))
+#endif
 	{
 		return FALSE;   // will self destruct on failure normally
 	}

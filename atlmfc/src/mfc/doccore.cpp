@@ -887,7 +887,11 @@ void CDocument::OnCloseDocument()
 		delete this;
 }
 
+#ifdef _MSC_VER
+void CDocument::OnDocumentEvent(DocumentEvent deEvent)
+#else
 void CDocument::OnDocumentEvent(int deEvent)
+#endif
 {
 	// check if recovery handling is enabled...
 	CWinApp *pApp = AfxGetApp();

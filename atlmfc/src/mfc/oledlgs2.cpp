@@ -99,7 +99,7 @@ INT_PTR COleBusyDialog::DoModal()
 	//  call cannot be made.
 
 	// find parent HWND
-	HWND hWndTop;
+	HWND hWndTop = NULL;
 	HWND hParent = m_pParentWnd == NULL ? NULL : CWnd::GetSafeOwner_(m_pParentWnd->m_hWnd, &hWndTop);
 	m_bz.hWndOwner = hParent;
 

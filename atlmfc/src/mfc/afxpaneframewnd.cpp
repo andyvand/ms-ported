@@ -42,6 +42,10 @@
 #include "afxtooltipmanager.h"
 #include "afxwinappex.h"
 
+#ifndef MIN
+#define MIN(X,Y) (((X) < (Y)) ? (X) : (Y))
+#endif
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif

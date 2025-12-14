@@ -11,6 +11,10 @@
 #include "stdafx.h"
 #include <afxdhtml.h>
 
+#ifndef VERIFY_STACK_FOR_T2OLE
+#define VERIFY_STACK_FOR_T2OLE(X) X
+#endif
+
 #ifdef __i386__
 void CComStdCallThunkHelper()
 {

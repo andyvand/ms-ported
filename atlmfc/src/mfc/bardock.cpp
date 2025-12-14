@@ -814,8 +814,13 @@ BOOL CMiniDockFrameWnd::Create(CWnd* pParent, DWORD dwBarStyle)
 		dwStyle &= ~MFS_MOVEFRAME;
 
 	DWORD dwExStyle = 0;
+#ifdef _MSC_VER
+	if (!CMiniFrameWnd::CreateEx(dwExStyle,
+		NULL, _T(""), dwStyle, rectDefault, pParent))
+#else
 	if (!CMiniFrameWnd::CreateEx(dwExStyle,
 		NULL, _T(""), dwStyle, rectDefault1, pParent))
+#endif
 	{
 		m_bInRecalcLayout = FALSE;
 		return FALSE;
