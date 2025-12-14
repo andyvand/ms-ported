@@ -1063,7 +1063,7 @@ VOID AdjustWindow(INT fAdjust)
     	if (fAdjust & fResize)
     		{
     		MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			dxWindow+(dxpBorder*2), dyWindow + (dypAdjust*2), fTrue);
+    			dxWindow+(dxpBorder*2), dyWindow + dypAdjust, fTrue);
     		}
 
         // after the window is adjusted, the "Game" and "Help" may move to the
@@ -1076,7 +1076,7 @@ VOID AdjustWindow(INT fAdjust)
                 {
                 dypAdjust -= dypMenu;
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
-    			    dxWindow+(dxpBorder*2), dyWindow + (dypAdjust*2), fTrue);
+    			    dxWindow+(dxpBorder*2), dyWindow + dypAdjust, fTrue);
                 }
             }
        
