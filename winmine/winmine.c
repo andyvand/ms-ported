@@ -34,7 +34,7 @@
 #endif
 
 #ifndef EXTRA_SPACE
-#ifdef _MSC_VER
+#if defined(_MSC_VER) || defined(__clang__)
 #define EXTRA_SPACE 10
 #else
 #define EXTRA_SPACE 0
