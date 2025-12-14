@@ -34,11 +34,7 @@
 #endif
 
 #ifndef EXTRA_ADJUST
-#ifdef _MSC_VER
 #define EXTRA_ADJUST 10
-#else /* OTHER */
-#define EXTRA_ADJUST 0
-#endif
 #endif
 
 BOOL bInitMinimized;  /* Bug #13328: HACK!  Don't permit MoveWindow or  */
