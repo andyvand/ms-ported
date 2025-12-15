@@ -48,9 +48,9 @@ class CScoreDlg : public CModalDialog
     protected:
         CStatic *text[MAXPLAYER];
         int      m_myid;
-        int      nHandsPlayed = 0;
+        int      nHandsPlayed;
         int      score[MAXPLAYER][MAXHANDS + 1];
-        BOOL     bGameOver = FALSE;
+        BOOL     bGameOver;
 
         DECLARE_MESSAGE_MAP()
 };

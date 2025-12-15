@@ -19,9 +19,7 @@
 #endif
 
 #include <stdlib.h>
-
 #include <winternl.h>
-
 #include <windows.h>
 
 #define SEEK_START      0
@@ -48,7 +46,54 @@ VerpQueryValue(
 
 #endif /* VERPRIV_H */
 
+#if !defined(_MSC_VER) || (_MSC_VER >= 1900)
 extern NTSYSAPI ULONG NTAPI RtlxUnicodeStringToAnsiSize(IN PCUNICODE_STRING UnicodeString);
+#else
+#ifndef LPWSTR
+#define LPWSTR PWSTR
+#endif
+
+#ifndef UNICODE_STRING
+typedef struct _UNICODE_STRING {
+    USHORT Length;
+    USHORT MaximumLength;
+    PWCH Buffer;
+} UNICODE_STRING;
+typedef UNICODE_STRING *PUNICODE_STRING;
+typedef const UNICODE_STRING *PCUNICODE_STRING;
+#endif
+
+#ifndef NT_SUCCESS
+#define NT_SUCCESS(X) ((X) == 0)
+#endif
+
+#ifndef ANSI_STRING
+typedef struct _STRING {
+    USHORT Length;
+    USHORT MaximumLength;
+    PCHAR Buffer;
+} STRING;
+typedef STRING *PSTRING;
+typedef STRING ANSI_STRING;
+typedef PSTRING PANSI_STRING;
+typedef const PSTRING PCANSI_STRING;
+#endif
+
+#ifndef NTSTATUS
+#define NTSTATUS int
+#endif
+
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+extern NTSYSAPI ULONG NTAPI RtlInitUnicodeString(PUNICODE_STRING UnicodeString, LPVOID Out);
+extern NTSYSAPI ULONG NTAPI RtlInitAnsiString(PANSI_STRING UnicodeString, LPVOID Out);
+extern NTSYSAPI ULONG NTAPI RtlFreeUnicodeString(PUNICODE_STRING);
+extern NTSYSAPI ULONG NTAPI RtlFreeAnsiString(PANSI_STRING);
+extern NTSYSAPI ULONG NTAPI RtlAnsiStringToUnicodeString(PUNICODE_STRING UnicodeString, PCANSI_STRING AnsiString, BOOL param);
+extern NTSYSAPI ULONG NTAPI RtlUnicodeStringToAnsiString(PANSI_STRING AnsiString, PCUNICODE_STRING UnicodeString, BOOL param);
+#endif
+
+extern NTSYSAPI ULONG NTAPI RtlxUnicodeStringToAnsiSize(PCUNICODE_STRING UnicodeString);
+#endif
 
 #if 0
 #define LOG_DATA 1

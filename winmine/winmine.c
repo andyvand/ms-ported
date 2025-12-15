@@ -34,7 +34,7 @@
 #endif
 
 #ifndef EXTRA_SPACE
-#if defined(_MSC_VER) || defined(__clang__)
+#if (defined(_MSC_VER) && (_MSC_VER >= 1900)) || defined(__clang__)
 #define EXTRA_SPACE 10
 #else
 #define EXTRA_SPACE 0
@@ -890,9 +890,9 @@ LReset:
 		case ID_BTN_RESET:
 			Preferences.rgTime[wGameBegin] = Preferences.rgTime[wGameInter]
 				= Preferences.rgTime[wGameExpert] = 999;
-			lstrcpy(Preferences.szBegin,  szDefaultName);
-			lstrcpy(Preferences.szInter,  szDefaultName);
-			lstrcpy(Preferences.szExpert, szDefaultName);
+			lstrcpyn(Preferences.szBegin,  szDefaultName, sizeof(Preferences.szBegin));
+			lstrcpyn(Preferences.szInter,  szDefaultName, sizeof(Preferences.szInter));
+			lstrcpyn(Preferences.szExpert, szDefaultName, sizeof(Preferences.szExpert));
 			fUpdateIni = fTrue;
 			goto LReset;
 			

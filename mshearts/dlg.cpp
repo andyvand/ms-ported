@@ -261,7 +261,12 @@ void CScoreDlg::OnPaint()
         text.Empty();
         for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+			wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#else
             wnsprintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#endif
+
             s.ReleaseBuffer();
             text += s;
         }
@@ -271,7 +276,12 @@ void CScoreDlg::OnPaint()
         dc.SelectObject(&font);
         if (nHandsPlayed > 0)
         {
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+            wsprintf(text.GetBuffer(20), TEXT("%d"), score[pos][nHandsPlayed-1]);
+#else
             wnsprintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
+#endif
+
             text.ReleaseBuffer();
         }
         dc.DrawText(text, -1, &rect, DT_CENTER);

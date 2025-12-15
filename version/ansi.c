@@ -1,4 +1,5 @@
 #include <windows.h>
+#include <wchar.h>
 #include "verpriv.h"
 
 #ifndef RtlProcessHeap
@@ -11,7 +12,20 @@ extern PVOID WINAPI RtlAllocateHeap(PVOID, INT, size_t);
 
 #define DWORDUP(x) (((x)+3) & ~3)
 
-#ifdef __MINGW32__
+#if defined(__MINGW32__)
+DWORD
+APIENTRY
+VerFindFileA(
+        DWORD wFlags,
+        LPSTR lpszFileName,
+        LPSTR lpszWinDir,
+        LPSTR lpszAppDir,
+        LPSTR lpszCurDir,
+        PUINT puCurDirLen,
+        LPSTR lpszDestDir,
+        PUINT puDestDirLen
+        )
+#elif defined(_MSC_VER) && (_MSC_VER < 1900)
 DWORD
 APIENTRY
 VerFindFileA(
@@ -142,16 +156,29 @@ VerInstallFileA(
         LPSTR lpszTmpFile,
         PUINT puTmpFileLen
         )
-#else
+#elif defined(_MSC_VER) && (_MSC_VER < 1900)
 DWORD
 APIENTRY
 VerInstallFileA(
         DWORD wFlags,
-        LPCSTR lpszSrcFileName,
-        LPCSTR lpszDstFileName,
-        LPCSTR lpszSrcDir,
-        LPCSTR lpszDstDir,
-        LPCSTR lpszCurDir,
+        LPSTR lpszSrcFileName,
+        LPSTR lpszDstFileName,
+        LPSTR lpszSrcDir,
+        LPSTR lpszDstDir,
+        LPSTR lpszCurDir,
+        LPSTR lpszTmpFile,
+        PUINT puTmpFileLen
+        )
+#else
+DWORD
+APIENTRY
+VerInstallFileA(
+        DWORD uFlags,
+        LPSTR szSrcFileName,
+        LPSTR lpszDestFileName,
+        LPSTR lpszSrcDir,
+        LPSTR lpszDestDir,
+        LPSTR lpszCurDir,
         LPSTR lpszTmpFile,
         PUINT puTmpFileLen
         )
@@ -284,7 +311,7 @@ GetFileVersionInfoSizeA(
     NTSTATUS Status;
     DWORD dwStatus;
 
-    RtlInitAnsiString(&AnsiString, lpstrFilename);
+    RtlInitAnsiString(&AnsiString, (PVOID)lpstrFilename);
     Status = RtlAnsiStringToUnicodeString(&FileName, &AnsiString, TRUE);
     if (!NT_SUCCESS(Status)) {
         SetLastError(Status);
@@ -310,7 +337,7 @@ GetFileVersionInfoA(
     NTSTATUS Status;
     BOOL bStatus;
 
-    RtlInitAnsiString(&AnsiString, lpstrFilename);
+    RtlInitAnsiString(&AnsiString, (PVOID)lpstrFilename);
     Status = RtlAnsiStringToUnicodeString(&FileName, &AnsiString, TRUE);
     if (!NT_SUCCESS(Status)) {
         SetLastError(Status);
@@ -356,6 +383,16 @@ VerQueryValueIndexA(
                          FALSE);
 }
 
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+BOOL
+APIENTRY
+VerQueryValueA(
+        const LPVOID pb,
+        LPSTR lpSubBlock,
+        LPVOID * lplpBuffer,
+        PUINT puLen
+        )
+#else
 BOOL
 APIENTRY
 VerQueryValueA(
@@ -364,6 +401,7 @@ VerQueryValueA(
         LPVOID *lplpBuffer,
         PUINT puLen
         )
+#endif
 {
     return VerpQueryValue(pb,
                           (LPSTR)lpSubBlock,
@@ -374,7 +412,16 @@ VerQueryValueA(
                           FALSE);
 }
 
-
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+BOOL
+APIENTRY
+VerQueryValueW(
+        const LPVOID pb,
+        LPWSTR lpSubBlock,
+        LPVOID * lplpBuffer,
+        PUINT puLen
+        )
+#else
 BOOL
 APIENTRY
 VerQueryValueW(
@@ -383,6 +430,7 @@ VerQueryValueW(
         LPVOID *lplpBuffer,
         PUINT puLen
         )
+#endif
 {
     return VerpQueryValue(pb,
                           (LPSTR)lpSubBlock,

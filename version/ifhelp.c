@@ -2,7 +2,7 @@
 #include "verpriv.h"
 #include "wchar.h"
 
-#if defined(_M_ARM64) || defined(__aarch64__) || defined(_M_ARM) || defined(__arm__)
+#if defined(_M_ARM64) || defined(__aarch64__) || defined(_M_ARM) || defined(__arm__) || defined(_IA64_) || defined(__ia64__)
 #undef WX86
 #endif
 
@@ -164,7 +164,20 @@ TryOpen:
 #define GetWindowsDir(x,y,z) GetWindowsDirectory(y,z)
 #define GetSystemDir(x,y,z) GetSystemDirectory(y,z)
 
-#ifdef __MINGW32__
+#if defined(__MINGW32__)
+DWORD
+APIENTRY
+VerFindFileW(
+        DWORD wFlags,
+        LPWSTR lpszFileName,
+        LPWSTR lpszWinDir,
+        LPWSTR lpszAppDir,
+        LPWSTR lpszCurDir,
+        PUINT puCurDirLen,
+        LPWSTR lpszDestDir,
+        PUINT puDestDirLen
+        )
+#elif defined(_MSC_VER) || (_MSC_VER < 1900)
 DWORD
 APIENTRY
 VerFindFileW(

@@ -167,6 +167,19 @@ VerInstallFileW(
                LPWSTR lpszTmpFile,
                PUINT puTmpFileLen
                )
+#elif defined(_MSC_VER) && (_MSC_VER < 1900)
+DWORD
+APIENTRY
+VerInstallFileW(
+        DWORD wFlags,
+        LPWSTR lpszSrcFileName,
+        LPWSTR lpszDstFileName,
+        LPWSTR lpszSrcDir,
+        LPWSTR lpszDstDir,
+        LPWSTR lpszCurDir,
+        LPWSTR lpszTmpFile,
+        PUINT puTmpFileLen
+        )
 #else
 DWORD
 APIENTRY

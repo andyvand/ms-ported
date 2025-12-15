@@ -18,7 +18,7 @@
 // diamond headers
 //
 #include "verpriv.h"
-#include <diamondd.h>
+#include "diamondd.h"
 #include "mydiam.h"
 HINSTANCE hCabinet;
 DWORD cCabinetLoad;

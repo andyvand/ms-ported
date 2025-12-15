@@ -36,7 +36,10 @@ declaration of theApp class
 #include <afxwin.h>
 #include <htmlhelp.h>
 #include <strsafe.h>
+
+#if defined(_MSC_VER) && (_MSC_VER >= 1900)
 #include <stringapiset.h>
+#endif
 
 class CTheApp : public CWinApp
 {

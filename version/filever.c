@@ -18,12 +18,24 @@
 //  23-May-1996 JonPa
 //
 #include <windows.h>
+
+#ifdef _MSC_VER
+#if _MSC_VER >= 1900
 #include "verpriv.h"
+#else
+#include <wchar.h>
+#endif
+#endif
+
 #include <memory.h>
 
 #ifdef _MSC_VER
+#if _MSC_VER >= 1900
 #include <intsafe.h>
 #endif
+#endif
+
+#include "verpriv.h"
 
 #ifndef USHORT_MAX
 #define USHORT_MAX USHRT_MAX
@@ -114,12 +126,21 @@ MyExtractVersionResource16W (
  * lpwstrFilename is the name of the file to get version information from
  * lpdwHandle is outdated for the Win32 api and is set to zero.
  */
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+DWORD
+APIENTRY
+GetFileVersionInfoSizeW(
+    __in LPCWSTR lpwstrFilename, /* Filename of version stamped file */
+    __out_opt LPDWORD lpdwHandle
+    )                      /* Information for use by GetFileVersionInfo */
+#else
 DWORD
 APIENTRY
 GetFileVersionInfoSizeW(
                        LPCWSTR lpwstrFilename,
                        LPDWORD lpdwHandle
                        )
+#endif
 {
     DWORD dwTemp;
     HANDLE hMod;
@@ -242,6 +263,16 @@ out:
  * dwLen is the length of the buffer to fill.
  * lpData is the buffer to fill.
  */
+#if defined(_MSC_VER) && (_MSC_VER < 1900)
+BOOL
+APIENTRY
+GetFileVersionInfoW(
+    __in LPCWSTR lpwstrFilename, /* Filename of version stamped file */
+    __in DWORD dwHandle,         /* Information from GetFileVersionSize */
+    __in DWORD dwLen,            /* Length of buffer for info */
+    __out_bcount(dwLen) LPVOID lpData
+    )                      /* Buffer to place the data structure */
+#else
 BOOL
 APIENTRY
 GetFileVersionInfoW(
@@ -250,6 +281,7 @@ GetFileVersionInfoW(
                    DWORD dwLen,
                    LPVOID lpData
                    )
+#endif
 {
     VERHEAD *pVerHead;
     VERHEAD16 *pVerHead16;

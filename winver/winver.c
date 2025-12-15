@@ -150,7 +150,7 @@ typedef struct _SHARED_DATA {
         _ANONYMOUS_STRUCT struct {
             ULONG ReservedTickCountOverlay[3];
             ULONG TickCountPad[1];
-        } DUMMYSTRUCTNAME;
+        } DUMMYSTRUCTNAME3;
     } DUMMYUNIONNAME3;
     ULONG Cookie;
     ULONG CookiePad[1];
@@ -175,7 +175,7 @@ typedef struct _SHARED_DATA {
     ULONGLONG Reserved5;
     volatile ULONG64 InterruptTimeBias;
 #endif
-#if (NTDDI_VERSION >= NTDDI_WIN7)
+#if (NTDDI_VERSION >= NTDDI_WIN7) && (_MSC_VER >= 1900)
     volatile ULONG64 TscQpcBias;
     volatile ULONG ActiveProcessorCount;
     volatile USHORT ActiveGroupCount;
