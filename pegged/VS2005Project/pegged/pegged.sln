@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pegged", "pegged\pegged.vcproj", "{4FF374E1-0A17-4970-8508-EFD9B4DF9574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Debug|Itanium.Build.0 = Debug|Itanium
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Debug|Win32.Build.0 = Debug|Win32
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Release|Itanium.ActiveCfg = Release|Itanium
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Release|Itanium.Build.0 = Release|Itanium
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Release|Win32.ActiveCfg = Release|Win32
+		{4FF374E1-0A17-4970-8508-EFD9B4DF9574}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

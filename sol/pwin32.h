@@ -278,12 +278,7 @@
 #define M_lclose(fh)                        _lclose((HFILE)fh)
 #define M_lcreat                            (HFILE)_lcreat
 #define MOpenFile                           (HFILE)OpenFile
-
-#ifdef _WIN64
 #define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)((ULONG_PTR)fh), lOff, NULL, (DWORD)iOrg)
-#else
-#define M_llseek(fh, lOff, iOrg)            SetFilePointer((HANDLE)fh, lOff, NULL, (DWORD)iOrg)
-#endif
 
 #define MDeleteFile                         DeleteFile
 #define M_lopen                             (HFILE)_lopen
