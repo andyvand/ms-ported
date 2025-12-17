@@ -1,7 +1,9 @@
 #include "windows.h"
 #include "freecons.h"
 
+#ifdef _WIN32_WCE
 #include "cards.rc"
+#endif
 
 #ifndef _WIN32_WCE
 1 RT_MANIFEST freecell.xml
@@ -83,7 +85,7 @@ FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Select a game number", -1, "static", SS_CENTER | WS_CHILD, 0, 7, 121, 8
     CONTROL "from 1 to 1000000", -1, "static", SS_CENTER | WS_CHILD, 0, 17, 121, 8
-    CONTROL ""), IDC_GAMENUM, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 45, 32, 40, 12
+    CONTROL "", IDC_GAMENUM, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 45, 32, 40, 12
     CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 40, 54, 40, 14
 END
 

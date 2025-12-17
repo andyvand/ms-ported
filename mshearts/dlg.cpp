@@ -264,9 +264,14 @@ void CScoreDlg::OnPaint()
 
         dc.SelectObject(&strikefont);
         text.Empty();
-        for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
+	for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
-			StringCchPrintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#if (_WIN32_WINNT >= 0x0600)
+	    wnsprintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#else
+	    wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#endif
+
             s.ReleaseBuffer();
             text += s;
         }
@@ -276,9 +281,15 @@ void CScoreDlg::OnPaint()
         dc.SelectObject(&font);
         if (nHandsPlayed > 0)
         {
-            StringCchPrintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
+#if (_WIN32_WINNT >= 0x0600)
+            wnsprintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
+#else
+            wsprintf(text.GetBuffer(20), TEXT("%d"), score[pos][nHandsPlayed-1]);
+#endif
+
             text.ReleaseBuffer();
         }
+
         dc.DrawText(text, -1, &rect, DT_CENTER);
         dc.SetTextColor(0);
     }

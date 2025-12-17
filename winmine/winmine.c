@@ -19,6 +19,7 @@
 
 #include <commctrl.h>   // for fusion classes.
 #include <strsafe.h>
+#include <shlwapi.h>
 
 #include "main.h"
 #include "rtns.h"
@@ -876,7 +877,8 @@ VOID SetDText(HWND hDlg, INT id, INT time, TCHAR FAR * szName)
 {
 	TCHAR sz[cchNameMax];
 
-	StringCchPrintf(sz, sizeof(sz), TEXT("%d seconds"), time);
+	wsprintf(sz, TEXT("%d seconds"), time);
+
 	SetDlgItemText(hDlg, id, sz);
 	SetDlgItemText(hDlg, id+1, szName);
 }
