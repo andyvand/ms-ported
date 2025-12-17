@@ -305,6 +305,7 @@ VOID MoveCards(HWND hWnd)
         Transfer(hWnd, movelist[i].fcol, movelist[i].fpos,
                     movelist[i].tcol, movelist[i].tpos);
 
+#ifndef _WIN32_WCE
     if ((moveindex > 1) || (movelist[0].fcol != movelist[0].tcol))
     {
         cUndo = moveindex;
@@ -315,6 +316,7 @@ VOID MoveCards(HWND hWnd)
         cUndo = 0;
         EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
     }
+#endif
 
     moveindex = 0;                      // no cards left to move
 
@@ -332,7 +334,10 @@ VOID MoveCards(HWND hWnd)
         LONG    lRegResult;
 
         cUndo = 0;
+
+#ifndef _WIN32_WCE
         EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+#endif
 
         lRegResult = REGOPEN
 

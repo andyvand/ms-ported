@@ -12,14 +12,20 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 
 #include <windows.h>
 #include <port1632.h>
+#include <strsafe.h>
 
 #ifdef __aarch64__
 #undef  __stdcall
 #define __stdcall
 #endif
 
+#ifdef _WIN32_WCE
+#define     WINHEIGHT     320
+#define     WINWIDTH      240
+#else
 #define     WINHEIGHT     480
 #define     WINWIDTH      640
+#endif
 
 #define     FACEUP          0               // card mode
 #define     FACEDOWN        1
@@ -31,11 +37,13 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     DECKO           7
 
 #define     EMPTY  0xFFFFFFFF
-#define     IDGHOST        52               // eg, empty free cell
+
+#ifndef     IDGHOST
+#define     IDGHOST        53               // eg, empty free cell
+#endif
 
 #define     MAXPOS         21
 #define     MAXCOL          9               // includes top row as column 0
-
 #define     MAXMOVELIST   150               // size of movelist array
 
 #define     TOPROW          0               // column 0 is really the top row
@@ -54,8 +62,13 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     FROM            0               // wMouseMode
 #define     TO              1
 
+#ifdef _WIN32_WCE
+#define     ICONWIDTH      16               // in pixels
+#define     ICONHEIGHT     16
+#else
 #define     ICONWIDTH      32               // in pixels
 #define     ICONHEIGHT     32
+#endif
 
 #define     BIG           128               // str buf sizes
 #define     SMALL          32
@@ -90,7 +103,12 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     VALUE(card)     ((card) / 4)
 #define     COLOUR(card)    (SUIT(card) == 1 || SUIT(card) == 2)
 
+#ifdef _WIN32_WCE
+#define     REGOPEN         RegCreateKeyEx(HKEY_CURRENT_USER, pszRegPath, 0, NULL, 0, 0, NULL, &hkey, NULL);
+#else
 #define     REGOPEN         RegCreateKey(HKEY_CURRENT_USER, pszRegPath, &hkey);
+#endif
+
 #define     REGCLOSE        RegCloseKey(hkey);
 #define     DeleteValue(v)  RegDeleteValue(hkey, v)
 
@@ -122,11 +140,13 @@ INT_PTR  APIENTRY OptionsDlg(HWND hDlg,UINT message,WPARAM wParam,LPARAM lParam)
 
 
 /* Functions imported from cards.dll */
+#ifndef CARDS_H
 BOOL  APIENTRY cdtInit(UINT FAR *pdxCard, UINT FAR *pdyCard);
 BOOL  APIENTRY cdtDraw(HDC hdc, INT x, INT y, INT cd, INT mode, DWORD rgbBgnd);
 BOOL  APIENTRY cdtDrawExt(HDC hdc, INT x, INT y, INT dx, INT dy, INT cd,
                            INT mode, DWORD rgbBgnd);
 BOOL  APIENTRY cdtTerm(VOID);
+#endif	
 
 /* Other function prototypes */
 
@@ -215,7 +235,11 @@ extern HKEY    hkey;                   // registry key
 extern HPEN    hBrightPen;             // 3D highlight colour
 extern HANDLE  hInst;                  // current instance
 extern HWND    hMainWnd;               // hWnd for main window
+
+#ifndef _WIN32_WCE
 extern HFONT   hMenuFont;              // for Cards Left display
+#endif
+
 extern CARD    home[4];                // card on top of home pile for this suit
 extern CARD    homesuit[4];            // suit for each home pile
 extern HBRUSH  hBgndBrush;             // green background brush
@@ -250,16 +274,21 @@ extern CONST TCHAR pszAlreadyPlayed[];
 
 /* TRACE mechanism */
 
-#if    0
-TCHAR    szDebugBuffer[256];
+
+#ifdef _DEBUG
+extern TCHAR szDebugBuffer[256];
+
+#undef  DEBUGMSG
 #define DEBUGMSG(parm1,parm2)\
-    { wsprintf(szDebugBuffer,parm1,parm2);\
+    { StringCchPrintf(szDebugBuffer,(sizeof(szDebugBuffer) / sizeof(TCHAR)),parm1,parm2);\
      OutputDebugString(szDebugBuffer); }
 
-#define  assert(p)   { if (!(p)) {wsprintf(szDebugBuffer, TEXT("assert: %s %d\r\n"),\
+#undef   assert
+#define  assert(p)   { if (!(p)) {StringCchPrintf(szDebugBuffer, (sizeof(szDebugBuffer) / sizeof(TCHAR)), TEXT("assert: %s %d\r\n"),\
                       __FILE__, __LINE__); OutputDebugString(szDebugBuffer);}}
 
 #else
+#undef  DEBUGMSG
 #define DEBUGMSG(parm1,parm2)
 #endif
 

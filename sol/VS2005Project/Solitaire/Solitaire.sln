@@ -6,21 +6,29 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Itanium = Debug|Itanium
+		Debug|Pocket PC 2003 (ARMV4) = Debug|Pocket PC 2003 (ARMV4)
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Release|Itanium = Release|Itanium
+		Release|Pocket PC 2003 (ARMV4) = Release|Pocket PC 2003 (ARMV4)
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Itanium.ActiveCfg = Debug|Itanium
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Itanium.Build.0 = Debug|Itanium
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).Build.0 = Debug|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).Deploy.0 = Debug|Pocket PC 2003 (ARMV4)
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Win32.Build.0 = Debug|Win32
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|x64.ActiveCfg = Debug|x64
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|x64.Build.0 = Debug|x64
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Itanium.ActiveCfg = Release|Itanium
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Itanium.Build.0 = Release|Itanium
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).Build.0 = Release|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).Deploy.0 = Release|Pocket PC 2003 (ARMV4)
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Win32.ActiveCfg = Release|Win32
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Win32.Build.0 = Release|Win32
 		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|x64.ActiveCfg = Release|x64

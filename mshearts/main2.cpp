@@ -359,6 +359,7 @@ TimerDispatch(HWND hWnd, UINT nMsg, UINT_PTR nIDEvent, DWORD dwTime)
 #endif
 
 int score[MAXPLAYER];
+int nHandsPlayed;
 
 void CMainWindow::DispatchCards()
 {
@@ -491,11 +492,41 @@ void CMainWindow::DispatchCards()
 
     p[0]->UpdateStatus(IDS_SCORE);
     p[0]->SetMode(SCORING);
-    CScoreDlg scoredlg(this, score, m_myid);    // update scores in scoredlg
+
+#ifdef _WIN32_WCE
+	CString names[4] = { p[0]->GetName(), p[1]->GetName(), p[2]->GetName(), p[3]->GetName() };
+	CString scores[4];
+    CString message;
+	CString place;
+	INT curplace = 0;
+
+    StringCchPrintf(scores[0].GetBuffer(20), 20, TEXT("%d"), score[0]);
+    scores[0].ReleaseBuffer();
+    StringCchPrintf(scores[1].GetBuffer(20), 20, TEXT("%d"), score[1]);
+    scores[1].ReleaseBuffer();
+    StringCchPrintf(scores[2].GetBuffer(20), 20, TEXT("%d"), score[2]);
+    scores[2].ReleaseBuffer();
+    StringCchPrintf(scores[3].GetBuffer(20), 20, TEXT("%d"), score[3]);
+    scores[3].ReleaseBuffer();
+	message = names[0] + TEXT("\t") + names[1] + TEXT("\t") + names[2] + TEXT("\t") + names[3] + TEXT("\n") +
+			  scores[0] + TEXT("\t") + scores[1] + TEXT("\t") + scores[2] + TEXT("\t") + scores[3];
+
+	for (int i = 1; i < MAXPLAYER; i++)
+        if (score[i] < score[0])
+            curplace++;
+
+    place.LoadString(IDS_PLACE1 + curplace);
+
+	MessageBox(message, place, 0);
+#else
+	CScoreDlg scoredlg(this, score, m_myid);    // update scores in scoredlg
+#endif
 
     player *pold = p[0];
 
+#ifndef _WIN32_WCE
     scoredlg.DoModal();                         // display scores
+#endif
 
     // If there has been a request to shut down while the score dialog
     // is displayed, m_FatalErrno will be non-zero.
@@ -532,11 +563,45 @@ void CMainWindow::DispatchCards()
 
     p[0]->SetMode(passdir == NOPASS ? DONE_SELECTING : SELECTING);
 
+#ifdef _WIN32_WCE
+	int nBestScore = (nHandsPlayed == 0 ? 0 : 30000);
+    int nWorstScore = 0;
+
+    if (nHandsPlayed > 0)
+    {
+        for (int pos = 0; pos < MAXPLAYER; pos++)
+        {
+            if (score[pos] < nBestScore)
+            {
+                nBestScore = score[pos];
+            }
+            if (score[pos] > nWorstScore)
+            {
+                nWorstScore = score[pos];
+            }
+        }
+    }
+
+    if (nWorstScore >= 100)
+    {
+        CString title;
+
+        if (score[0] == nBestScore)
+            title.LoadString(IDS_GAMEOVERWIN);
+        else
+            title.LoadString(IDS_GAMEOVER);
+
+        SetWindowText(title);
+        GameOver();
+        return;
+    }
+#else
     if (scoredlg.IsGameOver())
     {
         GameOver();
         return;
     }
+#endif
 
     Shuffle();
 

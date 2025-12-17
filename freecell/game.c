@@ -34,7 +34,10 @@ VOID SetFromLoc(HWND hWnd, UINT x, UINT y)
     wFromPos = EMPTY;
 
     cUndo = 0;
-    EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+
+#ifndef _WIN32_WCE
+	EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+#endif
 
     if (Point2Card(x, y, &col, &pos))
     {
@@ -140,7 +143,7 @@ VOID ProcessMoveRequest(HWND hWnd, UINT x, UINT y)
             {
                 LoadString(hInst, IDS_APPNAME, smallbuf, SMALL);
                 LoadString(hInst, IDS_TOOFEWFREE, buffer, sizeof(buffer)/sizeof(TCHAR));
-                wsprintf(bigbuf, buffer, trans, maxtrans);
+                StringCchPrintf(bigbuf, (sizeof(bigbuf) / sizeof(TCHAR)), buffer, trans, maxtrans);
                 MessageBeep(MB_ICONINFORMATION);
                 MessageBox(hWnd, bigbuf, smallbuf, MB_ICONINFORMATION);
 

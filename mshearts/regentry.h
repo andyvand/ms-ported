@@ -72,7 +72,8 @@ class RegEntry
 
 inline RegEntry::RegEntry(const TCHAR *pszSubKey, HKEY hkey)
 {
-    _error = RegCreateKey(hkey, pszSubKey, &_hkey);
+	DWORD disp = 0;
+	_error = RegCreateKeyEx(hkey, pszSubKey, 0, NULL, 0, 0, NULL, &_hkey, &disp);
     _bConstructed = (_error == ERROR_SUCCESS);
 }
 

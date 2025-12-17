@@ -5,13 +5,21 @@
 #include "sol.h"
 #include "solid.h"
 
+#ifdef _WIN32_WCE
+#include <winver.h>
+#else
 #include <ntverp.h>
+#endif
 
 #define VER_FILETYPE                VFT_APP
 #define VER_FILESUBTYPE             VFT2_UNKNOWN
 #define VER_FILEDESCRIPTION_STR     TEXT("Solitaire Game Applet")
 #define VER_INTERNALNAME_STR        TEXT("sol.exe")
 #define VER_ORIGINALFILENAME_STR    TEXT("sol.exe")
+#define VER_FILEFLAGSMASK           0x3F
+#define VER_FILEFLAGS               VS_FFI_FILEFLAGSMASK
+#define VER_FILEOS                  VOS__WINDOWS32
+#define VER_COMPANYNAME_STR         TEXT("Microsoft")
 
 #include "common.ver"
 
@@ -40,7 +48,7 @@ BEGIN
     END
 #endif
 
-
+#ifndef _WIN32_WCE
     POPUP "&Help"
     BEGIN
         MENUITEM "&Contents\t F1",              idsHelpIndex
@@ -51,6 +59,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&About Solitaire",            idsAbout
     END
+#endif
 END
 
 HiddenAccel ACCELERATORS {
@@ -61,45 +70,45 @@ HiddenAccel ACCELERATORS {
 STRINGTABLE
 BEGIN
     
-    idsAppName,     "Solitaire"
-    idsScore,       "Score: "
-    idsTime,        "Time: "
-    idsCardDraw,    "CardDraw"
-    idsDealAgain,   "Deal Again?"
-    idsHelpFile	,   "sol.chm"
-    idsEndWinner,   "Press Esc or a mouse button to stop..."
-    idsBonus,       "Bonus: "
-    idsExtraInfo,   "Developed for Microsoft by Wes Cherry"
+    idsAppName,     TEXT("Solitaire")
+    idsScore,       TEXT("Score: ")
+    idsTime,        TEXT("Time: ")
+    idsCardDraw,    TEXT("CardDraw")
+    idsDealAgain,   TEXT("Deal Again?")
+    idsHelpFile	,   TEXT("sol.chm")
+    idsEndWinner,   TEXT("Press Esc or a mouse button to stop...")
+    idsBonus,       TEXT("Bonus: ")
+    idsExtraInfo,   TEXT("Developed for Microsoft by Wes Cherry")
 
-    idsBack,        "Back"
-    idsOpts,        "Options"
-    idsBitmap,      "Bitmap"
-    idsiCurrency,   "iCurrency"
-    idssCurrency,   "sCurrency"
-    idsIntl,        "intl"
+    idsBack,        TEXT("Back")
+    idsOpts,        TEXT("Options")
+    idsBitmap,      TEXT("Bitmap")
+    idsiCurrency,   TEXT("iCurrency")
+    idssCurrency,   TEXT("sCurrency")
+    idsIntl,        TEXT("intl")
 
-    idsOOM,         "Out of memory"
-    idsNoHelp,      "Unable load Windows Help application"
-    idsNoBitmap,    "Unable to load bitmap; do you want to use a green background?"
-    idsNoFullDrag,  "Insufficient memory to display card faces when cards move;\n\nselect the Outline dragging box from the Options menu."
+    idsOOM,         TEXT("Out of memory")
+    idsNoHelp,      TEXT("Unable load Windows Help application")
+    idsNoBitmap,    TEXT("Unable to load bitmap; do you want to use a green background?")
+    idsNoFullDrag,  TEXT("Insufficient memory to display card faces when cards move;\n\nselect the Outline dragging box from the Options menu.")
 
-    idsInitiate	,   "Deal a new game"
-    idsUndo,        "Undo last action"
-    idsBacks,       "Choose new deck back"
-    idsOptions,     "Change Solitaire options"
-    idsExit,        "Exit Solitaire"
-    idsGameNo,      "Set game number"
-    idsCardMacs,    "Print # of cards in each col"
-    idsAssertFail,  "Assertion failure"
-    idsMarquee,     "Heck, I don't know"
-    idsScreenShots, "Configure Solitaire for screen shots"
-    idsForceWin,    "Force a win"
+    idsInitiate	,   TEXT("Deal a new game")
+    idsUndo,        TEXT("Undo last action")
+    idsBacks,       TEXT("Choose new deck back")
+    idsOptions,     TEXT("Change Solitaire options")
+    idsExit,        TEXT("Exit Solitaire")
+    idsGameNo,      TEXT("Set game number")
+    idsCardMacs,    TEXT("Print # of cards in each col")
+    idsAssertFail,  TEXT("Assertion failure")
+    idsMarquee,     TEXT("Heck, I don't know")
+    idsScreenShots, TEXT("Configure Solitaire for screen shots")
+    idsForceWin,    TEXT("Force a win")
 
 
-    idsHelpIndex,   "Index of Solitaire help topics"
-    idsHelpSearch,  "Search the Help Engine for a specific topic"
-    idsHelpUsing,   "Help using help"
-    idsAbout,       "About Solitaire"
+    idsHelpIndex,   TEXT("Index of Solitaire help topics")
+    idsHelpSearch,  TEXT("Search the Help Engine for a specific topic")
+    idsHelpUsing,   TEXT("Help using help")
+    idsAbout,       TEXT("About Solitaire")
 
 END
 
@@ -112,4 +121,6 @@ END
 
 ID_ICON_MAIN    ICON  Solitaire.ico
 
+#ifndef NO_MANIFEST
 1 24 sol.manifest
+#endif

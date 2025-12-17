@@ -63,10 +63,14 @@ void CMainWindow::OnWelcome()
     else
         CheckNddeShare();
 
+#ifndef _WIN32_WCE
     CWelcomeDlg welcome(this);
+#else
+	bAutostarted = TRUE;
+#endif
 
+#ifndef _WIN32_WCE
   again:                            // cancel from Browse returns here
-
     if (!bAutostarted && !bCmdLine)
     {
         if (IDCANCEL == welcome.DoModal())  // display Welcome dialog
@@ -79,6 +83,10 @@ void CMainWindow::OnWelcome()
     bNetDdeActive = welcome.IsNetDdeActive();
 
     if (bAutostarted || welcome.IsGameMeister())    // if Gamemeister
+#else
+	bNetDdeActive = FALSE;
+	if (bAutostarted)
+#endif
     {
         CClientDC   dc(this);
 #ifdef USE_MIRRORING
@@ -87,6 +95,7 @@ void CMainWindow::OnWelcome()
 #endif
         role = GAMEMEISTER;
         m_myid = 0;
+#ifndef _WIN32_WCE
         ddeServer = new DDEServer(szServerName, szTopicName,
                                     (DDECALLBACK)DdeServerCallBack);
         if (!ddeServer || !ddeServer->GetResult())
@@ -102,9 +111,13 @@ void CMainWindow::OnWelcome()
         if (bNetDdeActive)
             p[0]->UpdateStatus(IDS_GMWAIT); // wait for others to connect
         else
+#endif
             p[0]->SetStatus(IDS_GMWAIT);
-
+#ifdef _WIN32_WCE
+		CString name;
+#else
         CString name = welcome.GetMyName();
+#endif
 
         if (name.IsEmpty())
             name.LoadString(IDS_DEALER);
@@ -145,17 +158,19 @@ void CMainWindow::OnWelcome()
 //          goto again;
 
 //      server = buf;
-
+#ifndef _WIN32_WCE
         CLocateDlg  locate(this);
 
         if (IDCANCEL == locate.DoModal())       // display locate dialog
             goto again;
 
         server = locate.GetServer();
+#endif
     }
     else
         server = m_lpCmdLine;
 
+#ifndef _WIN32_WCE
     if (server[0] != '\\')
     {
         CString  sSlashes("\\\\");
@@ -163,11 +178,14 @@ void CMainWindow::OnWelcome()
     }
 
     name = welcome.GetMyName();
+#endif
 
     if (name.IsEmpty())
         name.LoadString(IDS_UNKNOWN);
 
+#ifndef _WIN32_WCE
     ClientConnect(server, name);
+#endif
 }
 
 void CMainWindow::ClientConnect(CString& server, CString& myname)
@@ -393,6 +411,7 @@ void CMainWindow::FatalError(int errorno)
 
     bClosing = TRUE;
 
+#ifndef _WIN32_WCE
     if (errno != -1)                        // if not default
     {
         CString s1, s2;
@@ -410,6 +429,7 @@ void CMainWindow::FatalError(int errorno)
 #endif
         MessageBox(s1, s2, MB_ICONSTOP);    // potential reentrancy problem
     }
+#endif
 
     PostMessage(WM_CLOSE);
 }

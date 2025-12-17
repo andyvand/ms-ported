@@ -102,6 +102,7 @@ INT_PTR APIENTRY OptionsDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lPar
             }
             break;
 
+#ifndef _WIN32_WCE
         // context sensitive help.
         case WM_HELP:
             HtmlHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("sol.chm:://sol.txt"),
@@ -112,6 +113,7 @@ INT_PTR APIENTRY OptionsDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lPar
             HtmlHelp((HWND) wParam, TEXT("sol.chm:://sol.txt"), HH_TP_HELP_CONTEXTMENU,
             (ULONG_PTR) aIds);
             break;
+#endif
     }
     return fTrue;
 }
@@ -131,7 +133,29 @@ VOID DoOptions()
     }
 }
 
+#ifdef _WIN32_WCE
+#ifndef SelectBrush
+#define SelectBrush(hdc, hbr) ((HBRUSH)SelectObject((hdc), (HGDIOBJ)(HBRUSH)(hbr)))
+#endif
 
+INT WINAPI
+FrameRect(HDC hDC, CONST RECT *lprc, HBRUSH hbr)
+{
+    HBRUSH oldbrush;
+    RECT r = *lprc;
+ 
+    if ((r.right <= r.left) || (r.bottom <= r.top)) return 0;
+    if (!(oldbrush = SelectBrush(hDC, hbr))) return 0;
+ 
+    PatBlt(hDC, r.left, r.top, 1, r.bottom - r.top, PATCOPY);
+    PatBlt(hDC, r.right - 1, r.top, 1, r.bottom - r.top, PATCOPY);
+    PatBlt(hDC, r.left, r.top, r.right - r.left, 1, PATCOPY);
+    PatBlt(hDC, r.left, r.bottom - 1, r.right - r.left, 1, PATCOPY);
+ 
+    SelectBrush(hDC, oldbrush);
+    return TRUE;
+}
+#endif
 
 BOOL FDrawFocus(HDC hdc, RC *prc, BOOL fFocus)
 {
@@ -188,10 +212,12 @@ INT_PTR APIENTRY BackDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lParam)
                 modeNew = (INT) wParam;
             break;
             }
+#ifndef _WIN32_WCE
             if( GET_WM_COMMAND_CMD( wParam, lParam )==BN_DOUBLECLICKED )
                 if( GET_WM_COMMAND_ID( wParam, lParam ) >= IDFACEDOWNFIRST && GET_WM_COMMAND_ID( wParam, lParam ) <= IDFACEDOWN12 )
 // BabakJ: On Win32, we are destroying wNotifyCode, but is not used later!
                 wParam=IDOK;
+#endif
             // slimy fall through hack of doom (no dupe code or goto)
             switch( GET_WM_COMMAND_ID( wParam, lParam )) {
                 case IDOK:
@@ -239,6 +265,7 @@ INT_PTR APIENTRY BackDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lParam)
 
             break;
 
+#ifndef _WIN32_WCE
            // context sensitive help.
         case WM_HELP:
             HtmlHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("sol.chm:://sol.txt"),
@@ -249,7 +276,7 @@ INT_PTR APIENTRY BackDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lParam)
             HtmlHelp((HWND) wParam, TEXT("sol.chm:://sol.txt"), HH_TP_HELP_CONTEXTMENU,
             (ULONG_PTR) aIds);
             break;
- 
+#endif
 
     default:
             return fFalse;

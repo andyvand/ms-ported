@@ -19,7 +19,10 @@ Other CMainWindow member functions are in main2.cpp, welcome.cpp and ddecb.cpp
 #include "main.h"
 #include "resource.h"
 #include "debug.h"
+
+#ifndef _WIN32_WCE
 #include <regstr.h>
+#endif
 
 #if defined (WINDOWS_ME) && ! defined (USE_MIRRORING)
 DWORD  meMsgBox=0;
@@ -54,6 +57,10 @@ int     nStatusHeight;      // height of status window
 
 // Do not translate these registry strings
 
+#ifndef REGSTR_PATH_WINDOWSAPPLETS
+#define REGSTR_PATH_WINDOWSAPPLETS TEXT("Software\\Microsoft\\Windows\\CurrentVersion\\Applets")
+#endif
+
 const TCHAR szRegPath[]     = REGSTR_PATH_WINDOWSAPPLETS TEXT("\\Hearts");
 const TCHAR regvalSound[]   = TEXT("sound");
 const TCHAR regvalCheat[]   = TEXT("cheat");
@@ -67,6 +74,25 @@ const TCHAR szHelpFileName[]  = TEXT("mshearts.chm");
 const TCHAR szShareName[]     = TEXT("HEARTS$");
 
 CTheApp theApp;                     // start Hearts and run it!
+
+#ifdef _WIN32_WCE
+DWORD GetCurrentTime32()
+{
+  SYSTEMTIME systemTime = { 0 };
+  FILETIME fileTime = { 0 };
+  DWORD result = 0;
+  GetSystemTime(&systemTime);
+  if (SystemTimeToFileTime(&systemTime, &fileTime))
+  {
+    ULONGLONG temp = 0;
+    memcpy(&temp, &fileTime, sizeof(FILETIME));
+    temp -= 116444736000000000; // subtract 1970-01-01 00:00 (UTC)
+    temp /= 10000000; // convert to seconds
+    result = (DWORD)temp;
+  }
+  return result;
+}
+#endif
 
 /****************************************************************************
 
@@ -89,12 +115,16 @@ BOOL CTheApp::InitInstance()
 }
 
 BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
+#ifndef _WIN32_WCE
     ON_COMMAND(IDM_ABOUT,       &CMainWindow::OnAbout)
+#endif
     ON_COMMAND(IDM_BOSSKEY,     &CMainWindow::OnBossKey)
     ON_COMMAND(IDM_CHEAT,       &CMainWindow::OnCheat)
     ON_COMMAND(IDM_EXIT,        &CMainWindow::OnExit)
+#ifndef _WIN32_WCE
     ON_COMMAND(IDM_HELP,        &CMainWindow::OnHelp)
 //    ON_COMMAND(IDM_HELPONHELP, &CMainWindow::OnHelpOnHelp)
+#endif
     ON_COMMAND(IDM_HIDEBUTTON,  &CMainWindow::OnHideButton)
 //    ON_COMMAND(IDM_SEARCH,    &CMainWindow::OnSearch)
     ON_COMMAND(IDM_NEWGAME,     &CMainWindow::OnNewGame)
@@ -107,7 +137,9 @@ BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
     ON_COMMAND(IDM_WELCOME,     &CMainWindow::OnWelcome)
     ON_BN_CLICKED(IDM_BUTTON,   &CMainWindow::OnPass)
     ON_WM_CHAR()
+#ifndef _WIN32_WCE
     ON_MESSAGE(WM_PRINTCLIENT,  &CMainWindow::OnPrintClient)
+#endif
     ON_WM_CLOSE()
     ON_WM_CREATE()
     ON_WM_ERASEBKGND()
@@ -143,7 +175,11 @@ CMainWindow::CMainWindow(LPTSTR lpCmdLine) :
     // Check for monochrome
 
     CDC ic;
+#ifndef _WIN32_WCE
     ic.CreateIC(TEXT("DISPLAY"), NULL, NULL, NULL);
+#else
+	ic.CreateDC(TEXT("DISPLAY"), NULL, NULL, NULL);
+#endif
 
     if (ic.GetDeviceCaps(NUMCOLORS) == 2)       // if monochrome
         m_bkgndcolor = RGB(255, 255, 255);      // white background for mono
@@ -230,6 +266,7 @@ displays about box
 
 //extern "C" int WINAPI ShellAbout(HWND, LPCSTR, LPCSTR, HICON);
 
+#ifndef _WIN32_WCE
 void CMainWindow::OnAbout()
 {
     HICON hIcon = ::LoadIcon(AfxGetInstanceHandle(),
@@ -240,6 +277,7 @@ void CMainWindow::OnAbout()
 
     ShellAbout(m_hWnd, s, NULL, hIcon);
 }
+#endif
 
 /****************************************************************************
 
@@ -351,12 +389,14 @@ void CMainWindow::OnClose()
     ddeClient = NULL;
     ddeServer = NULL;
 
+#ifndef _WIN32_WCE
     ::HtmlHelp(::GetDesktopWindow(), szHelpFileName, HH_CLOSE_ALL, 0);
 
     {
         RegEntry Reg(szRegPath);
         Reg.FlushKey();
     }
+#endif
 
     DestroyWindow();
 }
@@ -381,11 +421,19 @@ int CMainWindow::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
     // Check for existence of cards.dll
 
+#ifndef _WIN32_WCE
     SetErrorMode(SEM_NOOPENFILEERRORBOX);
+#endif
+
     CClientDC dc(this);
     TEXTMETRIC  tm;
 
-    ::srand((unsigned) ::time(NULL));       // set rand() seed
+#ifdef _WIN32_WCE
+	::srand((unsigned) ::GetCurrentTime32());
+#else
+    ::srand((unsigned) ::GetCurrentTime());       // set rand() seed
+#endif
+
     ddeClient = NULL;
     ddeServer = NULL;
 
@@ -483,7 +531,10 @@ BOOL CMainWindow::OnEraseBkgnd(CDC *pDC)
     if (!m_BgndBrush.m_hObject)         // if background brush is not valid
         return FALSE;
 
+#ifndef _WIN32_WCE
     m_BgndBrush.UnrealizeObject();
+#endif
+
     CBrush *pOldBrush = pDC->SelectObject(&m_BgndBrush);
     pDC->PatBlt(0, 0, WINWIDTH, WINHEIGHT, PATCOPY);
     pDC->SelectObject(pOldBrush);
@@ -810,11 +861,39 @@ CMainWindow::OnScore -- user requests score dialog from menu
 ****************************************************************************/
 
 extern int score[MAXPLAYER];
+extern int nHandsPlayed;
 
 void CMainWindow::OnScore()
 {
+#ifdef _WIN32_WCE
+		CString names[4] = { p[0]->GetName(), p[1]->GetName(), p[2]->GetName(), p[3]->GetName() };
+	CString scores[4];
+    CString message;
+	CString place;
+	INT curplace = 0;
+
+    StringCchPrintf(scores[0].GetBuffer(20), 20, TEXT("%d"), score[0]);
+    scores[0].ReleaseBuffer();
+    StringCchPrintf(scores[1].GetBuffer(20), 20, TEXT("%d"), score[1]);
+    scores[1].ReleaseBuffer();
+    StringCchPrintf(scores[2].GetBuffer(20), 20, TEXT("%d"), score[2]);
+    scores[2].ReleaseBuffer();
+    StringCchPrintf(scores[3].GetBuffer(20), 20, TEXT("%d"), score[3]);
+    scores[3].ReleaseBuffer();
+	message = names[0] + TEXT("\t") + names[1] + TEXT("\t") + names[2] + TEXT("\t") + names[3] + TEXT("\n") +
+			  scores[0] + TEXT("\t") + scores[1] + TEXT("\t") + scores[2] + TEXT("\t") + scores[3];
+
+	for (int i = 1; i < MAXPLAYER; i++)
+        if (score[i] < score[0])
+            curplace++;
+
+    place.LoadString(IDS_PLACE1 + curplace);
+
+	MessageBox(message, place, 0);
+#else
     CScoreDlg scoredlg(this, score, m_myid);       // this constructor does not add new info
     scoredlg.DoModal();
+#endif
 }
 
 

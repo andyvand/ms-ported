@@ -20,12 +20,20 @@ ID_TUNE_LOST  WAVE   bmp/explode.wav
 #include "strings.inc"
 #include "menu.inc"
 
+#ifdef _WIN32_WCE
+#include <winver.h>
+#else
 #include <ntverp.h>
+#endif
 
 #define	VER_FILETYPE	VFT_APP
 #define	VER_FILESUBTYPE	VFT2_UNKNOWN
 #define VER_FILEDESCRIPTION_STR     "Entertainment Pack Minesweeper Game"
 #define VER_INTERNALNAME_STR        "winmine\0"
 #define VER_ORIGINALFILENAME_STR    "WINMINE.EXE"
+#define VER_FILEFLAGSMASK 0x3F
+#define VER_FILEFLAGS VS_FFI_FILEFLAGSMASK
+#define VER_FILEOS VOS__WINDOWS32
+#define VER_COMPANYNAME_STR "Microsoft"
 
 #include "common.ver"

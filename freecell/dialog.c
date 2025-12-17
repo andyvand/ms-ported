@@ -103,6 +103,7 @@ INT_PTR  APIENTRY GameNumDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPar
             }
             break;
 
+#ifndef _WIN32_WCE
          // context sensitive help.
         case WM_HELP: 
             WinHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("freecell.hlp"), 
@@ -113,7 +114,7 @@ INT_PTR  APIENTRY GameNumDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPar
             WinHelp((HWND) wParam, TEXT("freecell.hlp"), HELP_CONTEXTMENU, 
             (ULONG_PTR) aIds);         
             break;   
-
+#endif
     }
     return FALSE;
 }
@@ -276,25 +277,25 @@ INT_PTR  APIENTRY StatsDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
                     {
                         LoadString(hInst, (wSType == WON ? IDS_WINS : IDS_LOSSES),
                                     smallbuf, SMALL);
-                        wsprintf(sbuffer, smallbuf, wStreak);
+                        StringCchPrintf(sbuffer, (sizeof(sbuffer) / sizeof(TCHAR)), smallbuf, wStreak);
                     }
                 }
                 else
-                    wsprintf(sbuffer, TEXT("%u"), 0);
+                    StringCchPrintf(sbuffer, (sizeof(sbuffer) / sizeof(TCHAR)), TEXT("%u"), 0);
 
                 // set the dialog text.
                 LoadString(hInst, IDS_STATS1, buffer, ARRAYSIZE(buffer));
-                wsprintf(bigbuf, buffer, wPct, cWins, cLosses);
+                StringCchPrintf(bigbuf, (sizeof(bigbuf) / sizeof(TCHAR)), buffer, wPct, cWins, cLosses);
                 hText = GetDlgItem(hDlg, IDC_STEXT1);
                 SetWindowText(hText, bigbuf);
 
                 LoadString(hInst, IDS_STATS2, buffer, ARRAYSIZE(buffer));
-                wsprintf(bigbuf, buffer, wTPct, cTWon, cTLost);
+                StringCchPrintf(bigbuf, (sizeof(bigbuf) / sizeof(TCHAR)), buffer, wTPct, cTWon, cTLost);
                 hText = GetDlgItem(hDlg, IDC_STEXT2);
                 SetWindowText(hText, bigbuf);
 
                 LoadString(hInst, IDS_STATS3, buffer, ARRAYSIZE(buffer));
-                wsprintf(bigbuf, buffer, cTWins, cTLosses, (LPTSTR) sbuffer);
+                StringCchPrintf(bigbuf, (sizeof(bigbuf) / sizeof(TCHAR)), buffer, cTWins, cTLosses, (LPTSTR) sbuffer);
                 hText = GetDlgItem(hDlg, IDC_STEXT3);
                 SetWindowText(hText, bigbuf);
 
@@ -338,7 +339,8 @@ INT_PTR  APIENTRY StatsDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
                     return TRUE;
             }
             break;
-        
+
+#ifndef _WIN32_WCE
         // context sensitive help.
         case WM_HELP: 
             WinHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("freecell.hlp"), 
@@ -349,7 +351,7 @@ INT_PTR  APIENTRY StatsDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam
             WinHelp((HWND) wParam, TEXT("freecell.hlp"), HELP_CONTEXTMENU, 
             (ULONG_PTR) aIds);         
             break;   
-
+#endif
     }
     return FALSE;
 }
@@ -401,20 +403,8 @@ TCHAR *GetHelpFileName()
             --psz;
     }
 
-#if defined(_UNICODE) || defined(UNICODE)
-#if __STDC_WANT_SECURE_LIB__
-    wcscpy_s(psz, 5, TEXT(".chm"));
-#else
-    wcsncpy(psz, TEXT(".chm"), 5);
-#endif
-#else
-#if __STDC_WANT_SECURE_LIB__
-    strcpy_s(psz, 5, TEXT(".chm"));
-#else
-    strncpy(psz, ".chm", 5);
-#endif
-#endif
-       
+    StringCchCopy(psz, 5, TEXT(".chm"));
+
     return bighelpbuf;
 }
 
@@ -477,6 +467,7 @@ INT_PTR APIENTRY OptionsDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
             }
             break;
 
+#ifndef _WIN32_WCE
         // context sensitive help.
         case WM_HELP: 
             WinHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("freecell.hlp"), 
@@ -487,7 +478,7 @@ INT_PTR APIENTRY OptionsDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPara
             WinHelp((HWND) wParam, TEXT("freecell.hlp"), HELP_CONTEXTMENU, 
             (ULONG_PTR) aIds);         
             break;   
-
+#endif
     }
     return FALSE;
 }

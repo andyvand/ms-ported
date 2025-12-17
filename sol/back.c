@@ -1,4 +1,5 @@
 #include "sol.h"
+#include <stdio.h>
 VSZASSERT
 
 /* flags for _lseek */
@@ -10,7 +11,11 @@ VSZASSERT
 
 BGND bgnd;
 
+#ifdef _WIN32_WCE
+BOOL FReadDibBitmapInfo (FILE *fh, BITMAPINFO *pbi);
+#else
 BOOL FReadDibBitmapInfo (HFILE fh, BITMAPINFO *pbi);
+#endif
 
 BOOL _FValidBm(BMP *pbm)
 {
@@ -20,15 +25,33 @@ BOOL _FValidBm(BMP *pbm)
 
 BOOL FInitBgnd(CHAR *szFile)
 {
+#ifdef _WIN32_WCE
+	FILE *fh = NULL;
+#else
     HFILE fh;
+#endif
+
     BOOL fResult;
     LONG lcbBm;
     //LONG dwBmSize;
 
     fResult = fFalse;
     bgnd.fUseBitmap = fFalse;
+
+#ifdef _WIN32_WCE
+	if((fh = fopen(szFile, "rb")) == NULL)
+#else
     if((fh = OpenFile(szFile, &bgnd.of, OF_CANCEL|OF_READ)) == (HFILE)(-1))
+#endif
         return fFalse;
+
+#ifdef _WIN32_WCE
+#if __STDC_WANT_SECURE_LIB__
+	strcpy_s(bgnd.of.szPathName, sizeof(bgnd.of.szPathName), szFile);
+#else
+	strncpy(bgnd.of.szPathName, szFile, sizeof(bgnd.of.szPathName));
+#endif
+#endif
 
     if(!FReadDibBitmapInfo(fh, (BITMAPINFO *)&bgnd.bm))    
         goto ReturnClose;
@@ -48,8 +71,12 @@ BOOL FInitBgnd(CHAR *szFile)
     bgnd.fUseBitmap = fTrue;
     SetBgndOrg();
     fResult = fTrue;
+
 ReturnClose:
+#ifndef _WIN32_WCE
     M_lclose(fh);
+#endif
+
     return fResult;
 }
 
@@ -104,7 +131,13 @@ BOOL _FLoadBand(INT ibnd, Y y)
     HANDLE hbnd;
     LPVOID lpb;
     INT ipln;
+
+#ifndef _WIN32_WCE
     HFILE fh;
+#else
+	FILE *fh;
+#endif
+
     LONG lcbpln;
     HANDLE *phbnd;
     DY dy;
@@ -113,23 +146,39 @@ BOOL _FLoadBand(INT ibnd, Y y)
 
     if(*phbnd != NULL)
         GlobalFree(*phbnd);
+
     hbnd = GlobalAlloc(GMEM_MOVEABLE|GMEM_DISCARDABLE, (LONG) cbBand);
     lpb = GlobalLock(hbnd);
-    if(lpb == NULL)
+
+	if(lpb == NULL)
         return fFalse;
+
+#ifndef _WIN32_WCE
     fh = OpenFile("", &bgnd.of, OF_REOPEN|OF_READ );
+#else
+	fh = fopen(bgnd.of.szPathName, "rb");
+#endif
 
     lcbpln = 0L;
     dy = WMin(bgnd.dyBand, DyBmp(bgnd.bm)-y);
     for(ipln = 0; ipln < CplnBmp(bgnd.bm); ipln++)
     {
+#ifdef _WIN32_WCE
+		fseek(fh, (size_t)(OfsBits(bgnd)+ipln*lcbpln+(y)*CbLine(bgnd)), SEEK_SET);
+		fread((LPSTR)lpb+ipln*CbLine(bgnd)*bgnd.dyBand, 1, dy * CbLine(bgnd), fh);
+#else
         M_llseek(fh, (LONG)OfsBits(bgnd)+ipln*lcbpln+(y)*CbLine(bgnd), 0);
         M_lread( fh, (LPSTR) lpb+ipln*CbLine(bgnd)*bgnd.dyBand, dy * CbLine(bgnd));
+#endif
     }
 
     GlobalUnlock(hbnd);
     *phbnd = hbnd;
+
+#ifndef _WIN32_WCE
     M_lclose(fh);
+#endif
+
     return fTrue;
 }
 
@@ -228,7 +277,11 @@ VOID SetBgndOrg()
  *  bitmap formats, but will allways return a "new" BITMAPINFO
  *
  */
+#ifdef _WIN32_WCE
+BOOL FReadDibBitmapInfo(FILE *fh, BITMAPINFO *pbi)
+#else
 BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
+#endif
 {
     DWORD     off;
     INT       size;
@@ -241,13 +294,24 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
     LPBITMAPINFOHEADER lpbi;
     BITMAPFILEHEADER   bf;
 
+#ifdef _WIN32_WCE
+    if (fh == NULL)
+#else
     if (fh == -1)
+#endif
         return FALSE;
 
+#ifdef _WIN32_WCE
+    off = fseek(fh, 0L, SEEK_CUR);
+
+    if (sizeof(bf) != fread((LPSTR)&bf, 1, sizeof(bf), fh) )
+        return fFalse;
+#else
     off = M_llseek(fh, 0L, SEEK_CUR);
 
     if (sizeof(bf) != M_lread( fh, (LPSTR)&bf, sizeof(bf)) )
         return fFalse;
+#endif
 
     /*
      *  do we have a RC HEADER?
@@ -255,12 +319,20 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
     if (!ISDIB(bf.bfType))
     {
         bf.bfOffBits = 0L;
-        
+ 
+#ifdef _WIN32_WCE
+		fseek(fh, off, SEEK_SET);
+#else
         M_llseek(fh, off, SEEK_SET );
+#endif
     }
 
+#ifdef _WIN32_WCE
+    if (sizeof(bi) != fread((LPSTR)&bi, 1, sizeof(bi), fh) )
+#else
     if (sizeof(bi) != M_lread( fh, (LPSTR)&bi, sizeof(bi)) )
-        return fFalse;
+#endif 
+		return fFalse;
 
     nNumColors = DibNumColors(&bi);
 
@@ -287,7 +359,11 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
             bi.biClrUsed            = nNumColors;
             bi.biClrImportant       = nNumColors;
 
+#ifdef _WIN32_WCE
+			fseek(fh, (LONG)sizeof(BITMAPCOREHEADER)-sizeof(BITMAPINFOHEADER), SEEK_CUR);
+#else
             M_llseek(fh, (LONG)sizeof(BITMAPCOREHEADER)-sizeof(BITMAPINFOHEADER), SEEK_CUR);
+#endif
 
             break;
 
@@ -332,8 +408,12 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
             /*
              * convert a old color table (3 byte entries) to a new
              * color table (4 byte entries)
-             */
+			 */
+#ifdef _WIN32_WCE
+			fread((LPSTR)pRgb, 1, nNumColors * sizeof(RGBTRIPLE), fh);
+#else
             M_lread( fh, (LPSTR)pRgb, nNumColors * sizeof(RGBTRIPLE) );
+#endif
 
             for (i=nNumColors-1; i>=0; i--)
             {
@@ -349,12 +429,20 @@ BOOL FReadDibBitmapInfo(HFILE fh, BITMAPINFO *pbi)
         }
         else
         {
+#ifdef _WIN32_WCE
+            fread((LPSTR)pRgb, 1, nNumColors * sizeof(RGBQUAD), fh);
+#else
             M_lread(fh, (LPSTR)pRgb, nNumColors * sizeof(RGBQUAD));
+#endif
         }
         }
 
     if (bf.bfOffBits != 0L)
+#ifdef _WIN32_WCE
+		fseek(fh, off + bf.bfOffBits, SEEK_SET );
+#else
         M_llseek( fh, off + bf.bfOffBits, SEEK_SET );
+#endif
 
     return fTrue;
 }

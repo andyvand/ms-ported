@@ -6,21 +6,29 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Itanium = Debug|Itanium
+		Debug|Pocket PC 2003 (ARMV4) = Debug|Pocket PC 2003 (ARMV4)
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Release|Itanium = Release|Itanium
+		Release|Pocket PC 2003 (ARMV4) = Release|Pocket PC 2003 (ARMV4)
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Itanium.ActiveCfg = Debug|Itanium
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Itanium.Build.0 = Debug|Itanium
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Pocket PC 2003 (ARMV4)
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Pocket PC 2003 (ARMV4).Build.0 = Debug|Pocket PC 2003 (ARMV4)
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Pocket PC 2003 (ARMV4).Deploy.0 = Debug|Pocket PC 2003 (ARMV4)
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|Win32.Build.0 = Debug|Win32
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|x64.ActiveCfg = Debug|x64
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Debug|x64.Build.0 = Debug|x64
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Itanium.ActiveCfg = Release|Itanium
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Itanium.Build.0 = Release|Itanium
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Pocket PC 2003 (ARMV4)
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Pocket PC 2003 (ARMV4).Build.0 = Release|Pocket PC 2003 (ARMV4)
+		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Pocket PC 2003 (ARMV4).Deploy.0 = Release|Pocket PC 2003 (ARMV4)
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Win32.ActiveCfg = Release|Win32
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|Win32.Build.0 = Release|Win32
 		{5C17769F-7378-4596-8627-1FA3D10DD929}.Release|x64.ActiveCfg = Release|x64

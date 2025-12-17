@@ -186,7 +186,11 @@ BOOL FCrdRectIsect(CRD *pcrd, RC *prc)
 /* this is ok for my purposes now, but beware... */
 BOOL FRectAllVisible(HDC hdc, RC *prc)
 {
+#ifdef _WIN32_WCE
+	return TRUE;
+#else
     return PtVisible(hdc, prc->xLeft, prc->yTop) && PtVisible(hdc, prc->xRight, prc->yBot);
+#endif
 }
 
 
@@ -325,27 +329,36 @@ INT CchString(TCHAR *sz, INT ids)
 
 BOOL FWriteIniString(INT idsTopic, INT idsItem, TCHAR *szValue)
 {
+#ifndef _WIN32_WCE
     TCHAR szItem[32];
     TCHAR szTopic[32];
 
     CchString(szTopic, idsTopic);
     CchString(szItem, idsItem);
     return WriteProfileString(szTopic, szItem, szValue);
+#else
+	return fTrue;
+#endif
 }
 
 // BabakJ: w was retyped from int to WORD2DWORD, casted to INT when calling
 // CchDecodeInt()
 BOOL FWriteIniInt(INT idsTopic, INT idsItem, WORD2DWORD w)
 {
+#ifndef _WIN32_WCE
     TCHAR sz[32];
 
     CchDecodeInt(sz, (INT)w);
     return FWriteIniString(idsTopic, idsItem, sz);
+#else
+	return fTrue;
+#endif
 }
 
 
 BOOL FGetIniString(INT idsTopic, INT idsItem, TCHAR *sz, TCHAR *szDefault, INT cchMax)
 {
+#ifndef _WIN32_WCE
     TCHAR szItem[32];
     TCHAR szTopic[32];
 
@@ -353,6 +366,8 @@ BOOL FGetIniString(INT idsTopic, INT idsItem, TCHAR *sz, TCHAR *szDefault, INT c
     CchString(szItem, idsItem);
 
     GetProfileString(szTopic, szItem, szDefault, sz, cchMax);
+#endif
+
     return fTrue;
 }
 
@@ -360,6 +375,9 @@ BOOL FGetIniString(INT idsTopic, INT idsItem, TCHAR *sz, TCHAR *szDefault, INT c
 // BabakJ: replaced int ret type with WORD2DWORD
 WORD2DWORD GetIniInt(INT idsTopic, INT idsItem, INT wDefault)
 {
+#ifdef _WIN32_WCE
+	return 0;
+#else
     TCHAR szItem[32];
     TCHAR szTopic[32];
 
@@ -367,4 +385,5 @@ WORD2DWORD GetIniInt(INT idsTopic, INT idsItem, INT wDefault)
     CchString(szItem, idsItem);
 
     return GetProfileInt(szTopic, szItem, wDefault);
+#endif
 }

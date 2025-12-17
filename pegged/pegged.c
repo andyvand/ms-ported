@@ -74,7 +74,8 @@ INT ixdownblock, iydownblock, ixupblock, iyupblock, ixkilledblock,
  iykilledblock, ixjumpedblock, iyjumpedblock, ixprevsource, iyprevsource,
  ixprevdest, iyprevdest, ixprevkilled, iyprevkilled;
 
-static inline BOOL APIENTRY MGetViewportOrg(HDC hdc, INT * px, INT * py)
+#ifndef _WIN32_WCE
+static BOOL APIENTRY MGetViewportOrg(HDC hdc, INT * px, INT * py)
 {
     POINT   Point;
     BOOL    fSuccess;
@@ -87,11 +88,13 @@ static inline BOOL APIENTRY MGetViewportOrg(HDC hdc, INT * px, INT * py)
 
     return(fSuccess);
 }
+#endif
 
 MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
 /* { */
     /*     HWND        hWnd ;*/
     MSG         msg ;
+	HMENU		menu ;
     WNDCLASS    wndclass ;
     static INT xScreen, yScreen, xSize, ySize;
 
@@ -101,9 +104,13 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
     {
 
 	hWnd = FindWindow(szAppName, NULL);
+
+#ifndef _WIN32_WCE
 	SendMessage(hWnd, WM_SYSCOMMAND, SC_RESTORE, (LONG) 0);
 	hWnd = GetLastActivePopup(hWnd);
 	BringWindowToTop(hWnd);
+#endif
+
 	return FALSE;
     }
 
@@ -119,7 +126,7 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
 	hPeggedIcon = wndclass.hIcon;
 	wndclass.hCursor       = LoadCursor (NULL, IDC_ARROW) ;
 	wndclass.hbrBackground = GetStockObject (WHITE_BRUSH) ;
-	wndclass.lpszMenuName  = szAppName ;
+	wndclass.lpszMenuName  = NULL ;
 	wndclass.lpszClassName = szAppName ;
 
 	if (!RegisterClass (&wndclass))
@@ -129,6 +136,18 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
 
     xScreen = GetSystemMetrics(SM_CXSCREEN);
     yScreen = GetSystemMetrics(SM_CYSCREEN);
+
+#ifdef _WIN32_WCE
+    if (xScreen > yScreen)
+    {
+	xSize = yScreen;
+	ySize = xSize;
+    } else
+    {
+	ySize = xScreen;
+	xSize = ySize;
+    }
+#else
     if (xScreen > yScreen)
     {
 	xSize = (xScreen / 8) * 3;
@@ -138,15 +157,23 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
 	ySize = (yScreen / 8) * 3;
 	xSize = ySize;
     }
+#endif
 
+	menu = LoadMenu(hInstance, szAppName);
 
+#ifdef _WIN32_WCE
     hWnd = CreateWindow (szAppName, TEXT("Pegged"),
     WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX,
-			     (xScreen-xSize)
-     / 2, (yScreen-ySize)
-     / 2,
+	(xScreen-xSize) / 2, (yScreen-ySize) / 2,
     xSize, ySize,
-    NULL, NULL, hInstance, NULL) ;
+    NULL, menu, hInstance, NULL) ;
+#else
+    hWnd = CreateWindow (szAppName, TEXT("Pegged"),
+    WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX,
+	(xScreen-xSize) / 2, (yScreen-ySize) / 2,
+    xSize, ySize,
+    NULL, menu, hInstance, NULL) ;
+#endif
 
     ShowWindow (hWnd, nCmdShow) ;
     UpdateWindow (hWnd) ;
@@ -187,7 +214,9 @@ LPARAM       lParam)
     static INT  xClient, xsizedClient, yClient, ysizedClient;
     INT xPoint, yPoint, xUp, yUp;
     BOOL bShow;
-    HMENU hMenu;
+#ifndef _WIN32_WCE
+	HMENU hMenu;
+#endif
 
     switch (iMessage) {
     case WM_INITMENUPOPUP:
@@ -486,6 +515,7 @@ LPARAM       lParam)
 			    xBlock - xEdge + winxEdge,  (y + 1) * yBlock -
 			    yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 			SelectObject(hDC, hWpen);
 			Arc(hDC, x * xBlock + xEdge + xShadow +
 			    winxEdge, y * yBlock + yEdge + yShadow +
@@ -495,9 +525,14 @@ LPARAM       lParam)
 			     y * yBlock + yShadow + winyEdge, x * xBlock
 			    + xShadow + winxEdge, y * yBlock + yHalf +
 			    winyEdge);
-
-
-
+#else
+			SelectObject(hDC, hWpen);
+			Ellipse(hDC, x * xBlock + xEdge + xShadow +
+			    winxEdge, y * yBlock + yEdge + yShadow +
+			    winyEdge, (x + 1) * xBlock - xEdge - xShadow +
+			    winxEdge,  (y + 1) * yBlock - yEdge - yShadow +
+			    winyEdge);
+#endif
 		    }
 		}
 	    /***************************************************************/
@@ -545,6 +580,7 @@ LPARAM       lParam)
 		    yBlock + yEdge + winyEdge, (x + 1) * xBlock - xEdge +
 		    winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 		SelectObject(hDC, hWpen);
 		Arc(hDC, x * xBlock + xEdge + xShadow + winxEdge,
 		     y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -553,9 +589,13 @@ LPARAM       lParam)
 		    xBlock + xHalf + winxEdge , y * yBlock + yShadow +
 		    winyEdge, x * xBlock + xShadow + winxEdge, y *
 		    yBlock + yHalf + winyEdge);
-
-
-
+#else
+		SelectObject(hDC, hWpen);
+		Ellipse(hDC, x * xBlock + xEdge + xShadow + winxEdge,
+		     y * yBlock + yEdge + yShadow + winyEdge, (x +
+		    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+		    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		/* Put back the jumped chip in the memdc */
 		SelectObject(hMemwinDC, hWBitmap);
@@ -584,6 +624,7 @@ LPARAM       lParam)
 		    yBlock + yEdge + winyEdge, (x + 1) * xBlock - xEdge +
 		    winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 		SelectObject(hDC, hWpen);
 		Arc(hDC, x * xBlock + xEdge + xShadow + winxEdge,
 		     y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -592,8 +633,13 @@ LPARAM       lParam)
 		    xBlock + xHalf + winxEdge , y * yBlock + yShadow +
 		    winyEdge, x * xBlock + xShadow + winxEdge, y *
 		    yBlock + yHalf + winyEdge);
-
-
+#else
+		SelectObject(hDC, hWpen);
+		Ellipse(hDC, x * xBlock + xEdge + xShadow + winxEdge,
+		     y * yBlock + yEdge + yShadow + winyEdge, (x +
+		    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+		    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		/* Put back the source chip in the memdc */
 		SelectObject(hMemwinDC, hWBitmap);
@@ -629,10 +675,11 @@ LPARAM       lParam)
 	    iuparrow = 0;
 	    isolitaire = 0;
 
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, IDM_CROSS, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
@@ -650,13 +697,14 @@ LPARAM       lParam)
 	    iuparrow = 0;
 	    isolitaire = 0;
 
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
-
 
 	    break;
 
@@ -671,10 +719,11 @@ LPARAM       lParam)
 	    iuparrow = 0;
 	    isolitaire = 0;
 
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
@@ -692,10 +741,11 @@ LPARAM       lParam)
 	    iuparrow = 1;
 	    isolitaire = 0;
 
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
@@ -713,10 +763,12 @@ LPARAM       lParam)
 	    idiamond = 1;
 	    iuparrow = 0;
 	    isolitaire = 0;
+
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
@@ -732,10 +784,12 @@ LPARAM       lParam)
 	    idiamond = 0;
 	    iuparrow = 0;
 	    isolitaire = 0;
+
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
@@ -751,19 +805,22 @@ LPARAM       lParam)
 	    idiamond = 0;
 	    iuparrow = 0;
 	    isolitaire = 1;
+
+#ifndef _WIN32_WCE
 	    hMenu = GetMenu(hWnd);
 	    CheckMenuItem(hMenu, (WORD)wprevmenuitem, MF_UNCHECKED);
 	    CheckMenuItem(hMenu, (WORD)wParam, MF_CHECKED);
-
+#endif
 
 	    wprevmenuitem = wParam;
 	    PostMessage(hWnd, WM_COMMAND, IDM_NEW, 0L);
 
 
 	    break;
+
+#ifndef _WIN32_WCE
 	case IDM_ABOUT:
         ShellAbout(hWnd, TEXT("Pegged! Version 1.0"), TEXT("by Mike Blaylock"), hPeggedIcon);
-
 	    /*
 	     MessageBox(hWnd,"Pegged\n\nA Windows Solitaire Game\n\nCopyright 1989-90\n\nby Mike Blaylock\n\nAlpha v1.011",szAppName, MB_ICONASTERISK | MB_OK);
 */
@@ -784,7 +841,7 @@ LPARAM       lParam)
 	case IDM_USING:
         HtmlHelp(hWnd, HELP_FILE, HH_DISPLAY_TOPIC, 0);
 	    break;
-
+#endif
 
 	case IDM_ICONIZE:
 	    ShowWindow(hWnd, SW_MINIMIZE);
@@ -826,11 +883,14 @@ LPARAM       lParam)
 	hLtgrypen = CreatePen(0, 1, RGB (192, 192, 192));
 	hYbrush = CreateSolidBrush (RGB (255, 255, 0));
 	nDefault = 3;
+
+#ifndef _WIN32_WCE
 	hMenu = GetMenu(hWnd);
 	wprevmenuitem = GetPrivateProfileInt(TEXT("Pegged"), TEXT("Option"),
 	     nDefault, TEXT("entpack.ini"));
 	CheckMenuItem(hMenu, (WORD)wprevmenuitem
 	    , MF_CHECKED);
+#endif
 
 	icross = 0;
 	iplus = 0;
@@ -893,7 +953,9 @@ LPARAM       lParam)
 	foom = 0;
 	hDC = GetDC (hWnd) ;
 
+#ifndef _WIN32_WCE
         MGetViewportOrg(hDC, &xLeft, &yTop);
+#endif
 
         newarea = (LONG)LOWORD(lParam) * (LONG)HIWORD(lParam);
 
@@ -1230,11 +1292,11 @@ LPARAM       lParam)
 	prevyorg = r.top;
 	break;
 
-
-
+#ifndef _WIN32_WCE
     case WM_MOUSEACTIVATE:
 	fmousefocusd = 1;
 	break;
+#endif
 
     case WM_ERASEBKGND:
 	if (fmousefocusd)
@@ -1314,7 +1376,7 @@ LPARAM       lParam)
 		        xBlock / 2 - xEdge, 2 * yBlock + yBlock / 2
 		        -yEdge);
 
-
+#ifndef _WIN32_WCE
 		    SelectObject(hIntDC, hWpen);
 		    Arc(hIntDC, xBlock + xBlock / 2 + xEdge + xShadow,
 		         yBlock + yBlock / 2 + yEdge + yShadow, 2 *
@@ -1323,6 +1385,14 @@ LPARAM       lParam)
 		        + xBlock / 2 + xHalf, yBlock + yBlock / 2 +
 		        yShadow, xBlock + xBlock / 2 + xShadow, yBlock
 		        + yBlock / 2 + yHalf);
+#else
+			SelectObject(hIntDC, hWpen);
+		    Ellipse(hIntDC, xBlock + xBlock / 2 + xEdge + xShadow,
+		         yBlock + yBlock / 2 + yEdge + yShadow, 2 *
+		        xBlock + xBlock / 2 - xEdge - xShadow, 2 *
+		        yBlock + yBlock / 2 - yEdge - yShadow);
+
+#endif
 
 		    xPrevpoint = xPoint;
 		    yPrevpoint = yPoint;
@@ -1364,6 +1434,7 @@ LPARAM       lParam)
 		     y * yBlock + yEdge + winyEdge, (x + 1) * xBlock -
 		    xEdge + winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 		SelectObject(hMemwinDC, hWpen);
 		Arc(hMemwinDC, x * xBlock + xEdge + xShadow + winxEdge,
 		     y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -1372,8 +1443,13 @@ LPARAM       lParam)
 		    xBlock + xHalf + winxEdge , y * yBlock + yShadow +
 		    winyEdge, x * xBlock + xShadow + winxEdge, y *
 		    yBlock + yHalf + winyEdge);
-
-
+#else
+		SelectObject(hMemwinDC, hWpen);
+		Ellipse(hMemwinDC, x * xBlock + xEdge + xShadow + winxEdge,
+		     y * yBlock + yEdge + yShadow + winyEdge, (x +
+		    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+		    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		hDC = GetDC(hWnd);
 
@@ -1421,6 +1497,7 @@ LPARAM       lParam)
 	        + yBlock / 2 + yEdge, 2 * xBlock + xBlock / 2 - xEdge,
 	         2 * yBlock + yBlock / 2 - yEdge);
 
+#ifndef _WIN32_WCE
 	    SelectObject(hIntDC, hWpen);
 	    Arc(hIntDC, xBlock + xBlock / 2 + xEdge + xShadow,
 	        yBlock + yBlock / 2 + yEdge + yShadow, 2 * xBlock +
@@ -1428,7 +1505,13 @@ LPARAM       lParam)
 	        2 - yEdge - yShadow, xBlock + xBlock / 2 + xHalf, yBlock
 	        + yBlock / 2 + yShadow, xBlock + xBlock / 2 + xShadow,
 	         yBlock + yBlock / 2 + yHalf);
-
+#else
+	    SelectObject(hIntDC, hWpen);
+	    Ellipse(hIntDC, xBlock + xBlock / 2 + xEdge + xShadow,
+	        yBlock + yBlock / 2 + yEdge + yShadow, 2 * xBlock +
+	        xBlock / 2 - xEdge - xShadow, 2 * yBlock + yBlock /
+	        2 - yEdge - yShadow);
+#endif
 
             BitBlt(hDC, xPoint - 2 * xBlock, yPoint - 2 * yBlock,
 	         xBlock * 4, yBlock * 4, hIntDC, 0, 0, SRCCOPY);
@@ -1504,6 +1587,7 @@ LPARAM       lParam)
 		    yBlock + yEdge + winyEdge, (x + 1) * xBlock - xEdge +
 		    winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 		SelectObject(hDC, hWpen);
 		Arc(hDC, x * xBlock + xEdge + xShadow + winxEdge,
 		     y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -1512,9 +1596,13 @@ LPARAM       lParam)
 		    xBlock + xHalf + winxEdge , y * yBlock + yShadow +
 		    winyEdge, x * xBlock + xShadow + winxEdge, y *
 		    yBlock + yHalf + winyEdge);
-
-
-
+#else
+		SelectObject(hDC, hWpen);
+		Ellipse(hDC, x * xBlock + xEdge + xShadow + winxEdge,
+		     y * yBlock + yEdge + yShadow + winyEdge, (x +
+		    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+		    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		/*erase the jumped chip */
 		BitBlt(hDC, xBlock * ixkilledblock + winxEdge,
@@ -1549,6 +1637,7 @@ LPARAM       lParam)
                     yBlock + yEdge + winyEdge, (x + 1) * xBlock - xEdge +
                     winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
                 SelectObject(hMemwinDC, hWpen);
                 Arc(hMemwinDC, x * xBlock + xEdge + xShadow + winxEdge,
                      y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -1557,9 +1646,13 @@ LPARAM       lParam)
                     xBlock + xHalf + winxEdge , y * yBlock + yShadow +
                     winyEdge, x * xBlock + xShadow + winxEdge, y *
                     yBlock + yHalf + winyEdge);
-
-
-
+#else
+                SelectObject(hMemwinDC, hWpen);
+                Ellipse(hMemwinDC, x * xBlock + xEdge + xShadow + winxEdge,
+                     y * yBlock + yEdge + yShadow + winyEdge, (x +
+                    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+                    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		/*erase the jumped chip in memory DC*/
 		BitBlt(hMemwinDC, xBlock * ixkilledblock + winxEdge,
@@ -1646,6 +1739,7 @@ LPARAM       lParam)
 		    yBlock + yEdge + winyEdge, (x + 1) * xBlock - xEdge +
 		    winxEdge,  (y + 1) * yBlock - yEdge + winyEdge);
 
+#ifndef _WIN32_WCE
 		SelectObject(hDC, hWpen);
 		Arc(hDC, x * xBlock + xEdge + xShadow + winxEdge,
 		     y * yBlock + yEdge + yShadow + winyEdge, (x +
@@ -1654,6 +1748,13 @@ LPARAM       lParam)
 		    xBlock + xHalf + winxEdge , y * yBlock + yShadow +
 		    winyEdge, x * xBlock + xShadow + winxEdge, y *
 		    yBlock + yHalf + winyEdge);
+#else
+		SelectObject(hDC, hWpen);
+		Ellipse(hDC, x * xBlock + xEdge + xShadow + winxEdge,
+		     y * yBlock + yEdge + yShadow + winyEdge, (x +
+		    1) * xBlock - xEdge - xShadow + winxEdge,  (y +
+		    1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 
 		SelectObject(hMemwinDC, hWBitmap);
 		BitBlt(hMemwinDC, ixdownblock * xBlock + winxEdge,
@@ -1767,6 +1868,7 @@ LPARAM       lParam)
 
 	/* Draw the holes*/
 
+#ifndef _WIN32_WCE
 	SelectObject(hMemwinDC, hBlkpen);
 	for (x = 0; x < DIVISIONS; x++)
 	    for (y = 0; y < DIVISIONS; y++) {
@@ -1782,10 +1884,24 @@ LPARAM       lParam)
 
 		}
 	    }
+#else
+	SelectObject(hMemwinDC, hBlkpen);
+	for (x = 0; x < DIVISIONS; x++)
+	    for (y = 0; y < DIVISIONS; y++) {
+		if ((x > 1 && x < 5) || (y > 1 && y < 5)) {
 
+		    Ellipse(hMemwinDC, x * xBlock + xEdge + winxEdge,
+		         y * yBlock + yEdge + winyEdge, (x + 1) * xBlock
+		        -xEdge + winxEdge, (y + 1) * yBlock - yEdge +
+		        winyEdge);
+
+		}
+	    }
+#endif
 
 	SelectObject(hMemwinDC, hLtwpen);
 
+#ifndef _WIN32_WCE
 	for (x = 0; x < DIVISIONS; x++)
 	    for (y = 0; y < DIVISIONS; y++) {
 		if ((x > 1 && x < 5) || (y > 1 && y < 5)) {
@@ -1799,7 +1915,18 @@ LPARAM       lParam)
 
 		}
 	    }
+#else
+	for (x = 0; x < DIVISIONS; x++)
+	    for (y = 0; y < DIVISIONS; y++) {
+		if ((x > 1 && x < 5) || (y > 1 && y < 5)) {
+		    Ellipse(hMemwinDC, x * xBlock + xEdge + winxEdge,
+		         y * yBlock + yEdge + winyEdge, (x + 1) * xBlock
+		        -xEdge + winxEdge, (y + 1) * yBlock - yEdge +
+		        winyEdge);
 
+		}
+	    }
+#endif
 
 	BitBlt(hDC, 0, 0, xClient, yClient, hMemwinDC , 0, 0, SRCCOPY);
 
@@ -1830,6 +1957,7 @@ LPARAM       lParam)
 		        xEdge + winxEdge,  (y + 1) * yBlock - yEdge +
 		        winyEdge);
 
+#ifndef _WIN32_WCE
 		    SelectObject(hDC, hWpen);
 		    Arc(hDC, x * xBlock + xEdge + xShadow + winxEdge,
 		         y * yBlock + yEdge + yShadow + winyEdge, (x
@@ -1838,7 +1966,13 @@ LPARAM       lParam)
 		         x * xBlock + xHalf + winxEdge , y * yBlock +
 		        yShadow + winyEdge, x * xBlock + xShadow +
 		        winxEdge, y * yBlock + yHalf + winyEdge);
-
+#else
+		    SelectObject(hDC, hWpen);
+		    Ellipse(hDC, x * xBlock + xEdge + xShadow + winxEdge,
+		         y * yBlock + yEdge + yShadow + winyEdge, (x
+		        + 1) * xBlock - xEdge - xShadow + winxEdge,
+		          (y + 1) * yBlock - yEdge - yShadow + winyEdge);
+#endif
 		}
 	    }
 
@@ -1898,6 +2032,7 @@ LPARAM       lParam)
 	DeleteObject(hWpen);
 	DeleteObject(hYbrush);
 
+#ifndef _WIN32_WCE
 	WinHelp(hWnd, HELP_FILE, HELP_QUIT, (ULONG_PTR) NULL);
 
 	switch (wprevmenuitem) {
@@ -1941,6 +2076,8 @@ LPARAM       lParam)
 	         TEXT("3"), TEXT("entpack.ini")  );
 	    break;
 	}
+#endif
+
 	PostQuitMessage (0) ;
 	break ;
 

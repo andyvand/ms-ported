@@ -32,6 +32,11 @@ const int   MAXHANDS = 12;      // can display this many in score sheet
 const int   MAXPLAYER = 4;
 const int   UNKNOWN = -1;       // third BOOL value
 
+extern "C"
+{
+    extern int nHandsPlayed;
+}
+
 class CScoreDlg : public CModalDialog
 {
     public:
@@ -48,7 +53,6 @@ class CScoreDlg : public CModalDialog
     protected:
         CStatic *text[MAXPLAYER];
         int      m_myid;
-        int      nHandsPlayed;
         int      score[MAXPLAYER][MAXHANDS + 1];
         BOOL     bGameOver;
 

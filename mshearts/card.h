@@ -21,6 +21,7 @@ Header file for class card
 // cdtTerm() can use standard FARPROC
 
 typedef BOOL (FAR PASCAL *DRAWPROC)(HDC, int, int, int, int, DWORD);
+typedef BOOL (FAR PASCAL *DRAWPROCEXT)(HDC hdc, INT x, INT y, INT dx, INT dy, INT cd, INT mode, DWORD rgbBgnd);
 typedef BOOL (FAR PASCAL *INITPROC)(int FAR *, int FAR *);
 
 const   int     EMPTY       = -1;
@@ -39,7 +40,11 @@ const   int     DIAMONDS    = 1;
 const   int     HEARTS      = 2;
 const   int     SPADES      = 3;
 
+#ifndef _WIN32_WCE
+const   int     POPSPACING  = 5;       // selected cards pop up this high
+#else
 const   int     POPSPACING  = 20;       // selected cards pop up this high
+#endif
 
 const   int     MAXSUIT     = 4;
 
@@ -56,6 +61,7 @@ class card {
         static  int         stepsize;       // size of glide() steps
         static  INITPROC    lpcdtInit;      // ptr to cards.cdtInit()
         static  DRAWPROC    lpcdtDraw;      // ptr to cards.cdtDraw()
+		static  DRAWPROCEXT lpcdtDrawExt;   // ptr to cards.cdtDrawExt()
         static  FARPROC     lpcdtTerm;      // ptr to cards.cdtTerm()
         static  CBitmap     m_bmFgnd;       // animation card
         static  CBitmap     m_bmBgnd2;      // background dest bitmap

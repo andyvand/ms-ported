@@ -12,10 +12,19 @@
 #include "cards.h"
 
 #ifndef DLL
-VSZASSERT
+#define CARDS_H 1
+
+#include "freecell.h"
+
+#ifdef _DEBUG
+#undef  Assert
+#define Assert assert
+#else
+#define Assert(f)
+#endif
 #else
 #ifdef DEBUG
-#undef Assert
+#undef  Assert
 #define Assert(f) { if (!(f)) { ExitWindows(0L); } }
 #endif
 #endif
@@ -130,6 +139,7 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
         HDC hdcDstMemory;
         HDC hdcSrcMemory;
 
+#if 0
 #ifdef DLL
         if (hinstApp == NULL)
         {
@@ -149,6 +159,7 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
 #endif
         }
 #endif /* DLL */
+#endif
 
 #ifdef DLL
         if (cInits++ != 0)
@@ -162,6 +173,13 @@ BOOL APIENTRY cdtInit(INT FAR *pdxCard, INT FAR *pdyCard)
         hbmGhost = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDGHOST));
         hbmDeckX = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDX));
         hbmDeckO = LoadBitmap( hinstApp, MAKEINTRESOURCE(IDO));
+
+		DEBUGMSG(TEXT("Last Error: %d\r\n"), GetLastError());
+		DEBUGMSG(TEXT("hinstApp: %p\r\n"), hinstApp);
+		DEBUGMSG(TEXT("Ghost: %p\r\n"), hbmGhost);
+		DEBUGMSG(TEXT("Deck X: %p\r\n"), hbmDeckX);
+		DEBUGMSG(TEXT("Deck O: %p\r\n"), hbmDeckO);
+
         if(hbmGhost == NULL || hbmDeckX == NULL || hbmDeckO == NULL) {
                 goto Fail;
         }
@@ -528,6 +546,13 @@ BOOL APIENTRY cdtAnimate(HDC hdc, INT cd, INT x, INT y, INT ispr)
         }
 
 
+BOOL FInRange(INT w, INT wFirst, INT wLast)
+{
+	if ((w >= wFirst) && (w <= wLast))
+		return TRUE;
+
+	return FALSE;
+}
 
 /* loads global bitmap hbmBack */
 BOOL FLoadBack(INT idbackNew)

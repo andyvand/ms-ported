@@ -215,7 +215,11 @@ VOID IsGameLost(HWND hWnd)
 
   cheatloselabel:
     cUndo = 0;
+
+#ifndef _WIN32_WCE
     EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+#endif
+
     DialogBox(hInst, TEXT("YouLose"), hWnd, YouLoseDlg);
     gamenumber = 0;                         // cancel mouse activity
     bCheating = FALSE;
@@ -425,13 +429,17 @@ This function is called by the FLASH_TIMER to flash main window.
 
 VOID Flash(HWND hWnd)
 {
+#ifndef _WIN32_WCE
     FlashWindow(hWnd, TRUE);
+#endif
     cFlashes--;
 
     if (cFlashes <= 0)
     {
+#ifndef _WIN32_WCE
         FlashWindow(hWnd, FALSE);
-        KillTimer(hWnd, FLASH_TIMER);
+#endif
+		KillTimer(hWnd, FLASH_TIMER);
         idTimer = 0;
     }
 }
@@ -539,7 +547,10 @@ VOID Undo(HWND hWnd)
     }
 
     cUndo = 0;
+
+#ifndef _WIN32_WCE
     EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+#endif
 
     ShowCursor(FALSE);
     SetCursor(LoadCursor(NULL, IDC_ARROW));

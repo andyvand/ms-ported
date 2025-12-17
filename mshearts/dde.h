@@ -68,7 +68,11 @@ class DDE
         PBYTE   GetData(HDDEDATA hData, PBYTE pdata, DWORD len = 0);
         CString GetDataString(HDDEDATA hData = NULL);
         WORD    GetInitError()      { return m_initerr; }
+#ifdef _WIN32_WCE
+        UINT    GetLastError()      { return 0; }
+#else
         UINT    GetLastError()      { return ::DdeGetLastError(m_idInst); }
+#endif
         BOOL    GetResult()         { return m_bResult; }
         CString GetServer()         { return m_server; }
         CString GetTopic()          { return m_topic; }

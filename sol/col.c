@@ -736,7 +736,11 @@ INT DefZip(COL *pcol)
 	ptDest.y -= pmove->delHit.dy;
 
 	pmove->izip = 0;
+
+#ifndef _WIN32_WCE
 	LineDDA(pgmCur->ptMousePrev.x, pgmCur->ptMousePrev.y, ptDest.x, ptDest.y, DdaProc, (LPARAM) pcol );
+#endif
+
 	return fTrue;
 }
 

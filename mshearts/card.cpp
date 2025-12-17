@@ -25,6 +25,7 @@ Methods for card objects
 
 INITPROC card::lpcdtInit;
 DRAWPROC card::lpcdtDraw;
+DRAWPROCEXT card::lpcdtDrawExt;
 FARPROC  card::lpcdtTerm;
 CBitmap  card::m_bmFgnd;
 CBitmap  card::m_bmBgnd2;
@@ -62,12 +63,24 @@ card::card(int n) : id(n), state(NORMAL)
 
         lpcdtInit = (INITPROC)cdtInit;
         lpcdtDraw = (DRAWPROC)cdtDraw;
-        lpcdtTerm =  (FARPROC)cdtTerm;
+        lpcdtDrawExt = (DRAWPROCEXT)cdtDrawExt;
+		lpcdtTerm =  (FARPROC)cdtTerm;
 
         BOOL bResult = FALSE;
         if(lpcdtInit)
         {
             bResult = (*lpcdtInit)(&dxCrd, &dyCrd);
+
+#ifdef _WIN32_WCE
+			dxCrd /= 2;
+			dyCrd /= 2;
+
+			dxCrd *= 3;
+			dxCrd /= 4;
+
+			dyCrd *= 3;
+			dyCrd /= 4;
+#endif
         }
         if (!bResult)
             return;
@@ -75,7 +88,11 @@ card::card(int n) : id(n), state(NORMAL)
         bConstructed = TRUE;
 
         CDC ic;
-        ic.CreateIC(TEXT("DISPLAY"), NULL, NULL, NULL);
+#ifdef _WIN32_WCE
+		ic.CreateDC(TEXT("DISPLAY"), NULL, NULL, NULL);
+#else
+		ic.CreateIC(TEXT("DISPLAY"), NULL, NULL, NULL);
+#endif
 
         if (!m_bmBgnd.CreateCompatibleBitmap(&ic, dxCrd, dyCrd) ||
             !m_bmFgnd.CreateCompatibleBitmap(&ic, dxCrd, dyCrd) ||
@@ -137,7 +154,7 @@ BOOL card::Draw(CDC &dc, int x, int y, int mode, BOOL bUpdateLoc)
     if (id == EMPTY)
         return FALSE;
 
-    return (*lpcdtDraw)(dc.m_hDC, x, y,
+    return (*lpcdtDrawExt)(dc.m_hDC, x, y, dxCrd, dyCrd,
         mode == FACEDOWN ? CARDBACK : id, mode, 255);
 }
 
@@ -165,12 +182,12 @@ BOOL card::CleanDraw(CDC &dc)
         return FALSE;
 
     CBitmap *oldbitmap = memDC.SelectObject(&bitmap);
-    BOOL bResult = (*lpcdtDraw)(memDC.m_hDC, 0, 0, id, FACEUP, 0);
+    BOOL bResult = (*lpcdtDrawExt)(memDC.m_hDC, 0, 0, dxCrd, dyCrd, id, FACEUP, 0);
     if (!bResult)
         return FALSE;
 
     RestoreCorners(memDC, 0, 0);
-    dc.BitBlt(loc.x, loc.y, dxCrd, dyCrd, &memDC, 0, 0, SRCCOPY);
+	dc.BitBlt(loc.x, loc.y, dxCrd, dyCrd, &memDC, 0, 0, SRCCOPY);
 
     memDC.SelectObject(oldbitmap);
     bitmap.DeleteObject();
@@ -196,7 +213,7 @@ BOOL card::PopDraw(CDC &dc)
     if (state == SELECTED)
         y -= POPSPACING;
 
-    return (*lpcdtDraw)(dc.m_hDC, loc.x, y, id, FACEUP, 0);
+    return (*lpcdtDrawExt)(dc.m_hDC, loc.x, y, dxCrd, dyCrd, id, FACEUP, 0);
 }
 
 
@@ -290,12 +307,13 @@ VOID card::GlideStep(CDC &dc, int x1, int y1, int x2, int y2)
     m_Rgn1.SetRectRgn(x1, y1, x1+dxCrd, y1+dyCrd);
     m_Rgn2.SetRectRgn(x2, y2, x2+dxCrd, y2+dyCrd);
 
-    /* create background of new location by combing screen background
+	/* create background of new location by combing screen background
        plus overlap from old background */
 
     m_MemB2.BitBlt(0, 0, dxCrd, dyCrd, &dc, x2, y2, SRCCOPY);
     m_MemB2.BitBlt(x1-x2, y1-y2, dxCrd, dyCrd, &m_MemB, 0, 0, SRCCOPY);
-    SaveCorners(m_MemB2, 0, 0);
+
+	SaveCorners(m_MemB2, 0, 0);
 
     /* Draw old background and then draw card  */
 
@@ -417,5 +435,6 @@ sets and returns a rect that covers the card
 CRect &card::GetRect(CRect &rect)
 {
     rect.SetRect(loc.x, loc.y, loc.x+dxCrd, loc.y+dyCrd);
+
     return(rect);
 }

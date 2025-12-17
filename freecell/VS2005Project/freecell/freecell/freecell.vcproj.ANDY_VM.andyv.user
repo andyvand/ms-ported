@@ -62,6 +62,34 @@
 			/>
 		</Configuration>
 		<Configuration
+			Name="Debug|x64"
+			>
+			<DebugSettings
+				Command="$(TargetPath)"
+				WorkingDirectory=""
+				CommandArguments=""
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="ANDY_VM"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor=""
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+		</Configuration>
+		<Configuration
 			Name="Release|Win32"
 			>
 			<DebugSettings
@@ -118,7 +146,7 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="Debug|x64"
+			Name="Release|x64"
 			>
 			<DebugSettings
 				Command="$(TargetPath)"
@@ -146,7 +174,7 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="Release|x64"
+			Name="Debug|Pocket PC 2003 (ARMV4)"
 			>
 			<DebugSettings
 				Command="$(TargetPath)"
@@ -171,6 +199,48 @@
 				ShimCommand=""
 				MPIAcceptMode=""
 				MPIAcceptFilter=""
+			/>
+			<DeploymentTool
+				DeploymentDevice="E282E6BE-C7C3-4ece-916A-88FB1CF8AF3C"
+			/>
+			<DebuggerTool
+				RemoteExecutable=""
+				Arguments=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Pocket PC 2003 (ARMV4)"
+			>
+			<DebugSettings
+				Command="$(TargetPath)"
+				WorkingDirectory=""
+				CommandArguments=""
+				Attach="false"
+				DebuggerType="3"
+				Remote="1"
+				RemoteMachine="ANDY_VM"
+				RemoteCommand=""
+				HttpUrl=""
+				PDBPath=""
+				SQLDebugging=""
+				Environment=""
+				EnvironmentMerge="true"
+				DebuggerFlavor=""
+				MPIRunCommand=""
+				MPIRunArguments=""
+				MPIRunWorkingDirectory=""
+				ApplicationCommand=""
+				ApplicationArguments=""
+				ShimCommand=""
+				MPIAcceptMode=""
+				MPIAcceptFilter=""
+			/>
+			<DeploymentTool
+				DeploymentDevice="E282E6BE-C7C3-4ece-916A-88FB1CF8AF3C"
+			/>
+			<DebuggerTool
+				RemoteExecutable=""
+				Arguments=""
 			/>
 		</Configuration>
 	</Configurations>

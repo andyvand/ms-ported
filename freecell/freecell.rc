@@ -1,7 +1,11 @@
 #include "windows.h"
 #include "freecons.h"
 
+#include "cards.rc"
+
+#ifndef _WIN32_WCE
 1 RT_MANIFEST freecell.xml
+#endif
 
 ID_ICON_MAIN    ICON  freecell.ico
 
@@ -15,33 +19,37 @@ KingSmile        BITMAP  KINGS.BMP
 
 FreeMenu MENU
 BEGIN
-    POPUP        "&Game"
+    POPUP        TEXT("&Game")
     BEGIN
-        MENUITEM "&New Game\tF2",       IDM_NEWGAME
-        MENUITEM "&Select Game\tF3",    IDM_SELECT
-        MENUITEM "&Restart Game",       IDM_RESTART,    GRAYED
+        MENUITEM TEXT("&New Game\tF2"),       IDM_NEWGAME
+        MENUITEM TEXT("&Select Game\tF3"),    IDM_SELECT
+        MENUITEM TEXT("&Restart Game"),       IDM_RESTART,    GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "S&tatistics...\tF4",  IDM_STATS
-        MENUITEM "&Options...\tF5",     IDM_OPTIONS
+        MENUITEM TEXT("S&tatistics...\tF4"),  IDM_STATS
+        MENUITEM TEXT("&Options...\tF5"),     IDM_OPTIONS
         MENUITEM SEPARATOR
-        MENUITEM "&Undo\tF10",          IDM_UNDO,       GRAYED
+        MENUITEM TEXT("&Undo\tF10"),          IDM_UNDO,       GRAYED
         MENUITEM SEPARATOR
-        MENUITEM "E&xit",               IDM_EXIT
+        MENUITEM TEXT("E&xit"),               IDM_EXIT
     END
-    POPUP        "&Help"
+#ifndef _WIN32_WCE
+    POPUP        TEXT("&Help")
     BEGIN
-        MENUITEM "&Contents\t F1",           IDM_HELP
-        MENUITEM "&Search for Help on...",   IDM_HOWTOPLAY
-        MENUITEM "&How to Use Help",         IDM_HELPONHELP
+        MENUITEM TEXT("&Contents\t F1"),           IDM_HELP
+        MENUITEM TEXT("&Search for Help on..."),   IDM_HOWTOPLAY
+        MENUITEM TEXT("&How to Use Help"),         IDM_HELPONHELP
         MENUITEM SEPARATOR
-        MENUITEM "&About FreeCell...",          IDM_ABOUT
+        MENUITEM TEXT("&About FreeCell..."),          IDM_ABOUT
     END
+#endif
 END
 
 FreeMenu ACCELERATORS
 BEGIN
+#ifndef _WIN32_WCE
     VK_F1,      IDM_HELP,       VIRTKEY
     VK_F1,      IDM_HELP,       VIRTKEY, SHIFT
+#endif
     VK_F2,      IDM_NEWGAME,    VIRTKEY
     VK_F3,      IDM_SELECT,     VIRTKEY
     VK_F4,      IDM_STATS,      VIRTKEY
@@ -52,7 +60,11 @@ END
 
 MoveCol DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 150, 80
 CAPTION "Move to Empty Column..."
+#ifdef _WIN32_WCE
+STYLE WS_CAPTION
+#else
 STYLE DS_MODALFRAME | WS_CAPTION
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Move &column", IDC_MOVECOL, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 30, 15, 90, 14
@@ -62,23 +74,29 @@ END
 
 GameNum DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 120, 75
 CAPTION "Game Number"
+#ifdef _WIN32_WCE
+STYLE WS_CAPTION | WS_SYSMENU
+#else
 STYLE DS_MODALFRAME | WS_CAPTION | DS_CONTEXTHELP | WS_SYSMENU
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Select a game number", -1, "static", SS_CENTER | WS_CHILD, 0, 7, 121, 8
     CONTROL "from 1 to 1000000", -1, "static", SS_CENTER | WS_CHILD, 0, 17, 121, 8
-    CONTROL "", IDC_GAMENUM, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 45, 32, 40, 12
+    CONTROL ""), IDC_GAMENUM, "edit", ES_LEFT | WS_BORDER | WS_TABSTOP | WS_CHILD, 45, 32, 40, 12
     CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 40, 54, 40, 14
 END
 
 YouLose DIALOG LOADONCALL MOVEABLE DISCARDABLE 60, 60, 135, 90
 CAPTION "Game Over"
+#ifdef _WIN32_WCE
+STYLE WS_CAPTION
+#else
 STYLE DS_MODALFRAME | WS_CAPTION
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
-    CONTROL "Sorry, you lose.\
-            There are no more legal moves.\n\
-            Do you want to play again?",
+    CONTROL "Sorry, you lose. There are no more legal moves.\n Do you want to play again?",
             -1, "static", SS_LEFT | WS_CHILD, 15, 6, 120, 40
     CONTROL "&Yes", IDYES, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 15, 70, 40, 14
     CONTROL "&No", IDNO, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 80, 70, 40, 14
@@ -87,7 +105,11 @@ END
 
 YouWin DIALOG LOADONCALL MOVEABLE DISCARDABLE 172, 85, 135, 80
 CAPTION "Game Over"
+#ifdef _WIN32_WCE
+STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
+#else
 STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | DS_MODALFRAME | WS_POPUP
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Congratulations, you win!\nDo you want to play again?",
@@ -99,7 +121,11 @@ END
 
 Stats DIALOG LOADONCALL MOVEABLE DISCARDABLE 84, 47, 150, 135
 CAPTION "FreeCell Statistics"
+#ifdef _WIN32_WCE
+STYLE WS_CAPTION | WS_SYSMENU
+#else
 STYLE DS_MODALFRAME | WS_CAPTION | DS_CONTEXTHELP | WS_SYSMENU
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_STEXT1, "static", SS_LEFT | WS_CHILD, 11, 10, 130, 30
@@ -111,7 +137,11 @@ END
 
 DLG_OPTIONS DIALOG DISCARDABLE  58, 68, 203, 63
 CAPTION "FreeCell Options"
+#ifdef _WIN32_WCE
+STYLE WS_CAPTION | DS_3DLOOK | WS_SYSMENU
+#else
 STYLE DS_MODALFRAME | WS_CAPTION | DS_3DLOOK | DS_CONTEXTHELP | WS_SYSMENU
+#endif
 FONT 8, "MS Shell Dlg"
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,148,9,50,14
@@ -127,39 +157,46 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APPNAME,    "FreeCell"
-    IDS_APPNAME2,   "FreeCell Game #%d"
-    IDS_MEMORY,     "Out of memory.  Close other applications and try again."
-    IDS_RESIGN,     "Do you want to resign this game?"
-    IDS_1WIN,       "1 win"
-    IDS_1LOSS,      "1 loss"
-    IDS_WINS,       "%u wins"
-    IDS_LOSSES,     "%u losses"
-    IDS_STREAK,     "streak"
-    IDS_STYPE,      "stype"
-    IDS_ILLEGAL,    "That move is not allowed."
-    IDS_TOOFEWFREE, "That move requires moving %u cards.\
-                     You only have enough free space to move %u."
-    IDS_CARDSLEFT,  "Cards Left: %u"
-    IDS_FULLNAME,   "FreeCell"
-    IDS_CREDITS,    "by Jim Horne"
+    IDS_APPNAME,    TEXT("FreeCell")
+    IDS_APPNAME2,   TEXT("FreeCell Game #%d")
+    IDS_MEMORY,     TEXT("Out of memory.  Close other applications and try again.")
+    IDS_RESIGN,     TEXT("Do you want to resign this game?")
+    IDS_1WIN,       TEXT("1 win")
+    IDS_1LOSS,      TEXT("1 loss")
+    IDS_WINS,       TEXT("%u wins")
+    IDS_LOSSES,     TEXT("%u losses")
+    IDS_STREAK,     TEXT("streak")
+    IDS_STYPE,      TEXT("stype")
+    IDS_ILLEGAL,    TEXT("That move is not allowed.")
+    IDS_TOOFEWFREE, TEXT("That move requires moving %u cards. You only have enough free space to move %u.")
+    IDS_CARDSLEFT,  TEXT("Cards Left: %u")
+    IDS_FULLNAME,   TEXT("FreeCell")
+    IDS_CREDITS,    TEXT("by Jim Horne")
 /* keywords for help */
-    IDS_HELP1       "How to Play"
-    IDS_HELP2       "Commands"
+    IDS_HELP1       TEXT("How to Play")
+    IDS_HELP2       TEXT("Commands")
 /* new strings for NT */
-    IDS_RU_SURE,    "Are you sure you want to delete all statistics?"
+    IDS_RU_SURE,    TEXT("Are you sure you want to delete all statistics?")
 /* stat string */
-    IDS_STATS1      "This session\t\t\t%u%%\n\twon:\t\t%u \n\tlost:\t\t%u%\n\n"
-    IDS_STATS2      "Total\t\t\t\t%u%%\n\twon:\t\t%u \n\tlost:\t\t%u%\n\n"
-    IDS_STATS3      "Streaks\n\twins:\t\t%u \n\tlosses:\t\t%u% \n\tcurrent:\t\t%s"
+    IDS_STATS1      TEXT("This session\t\t\t%u%%\n\twon:\t\t%u \n\tlost:\t\t%u%\n\n")
+    IDS_STATS2      TEXT("Total\t\t\t\t%u%%\n\twon:\t\t%u \n\tlost:\t\t%u%\n\n")
+    IDS_STATS3      TEXT("Streaks\n\twins:\t\t%u \n\tlosses:\t\t%u% \n\tcurrent:\t\t%s")
 
 END
 
+#ifdef _WIN32_WCE
+#include <winver.h>
+#else
 #include <ntverp.h>
+#endif
 
 #define	VER_FILETYPE	VFT_APP
 #define	VER_FILESUBTYPE	VFT2_UNKNOWN
-#define VER_FILEDESCRIPTION_STR     "Entertainment Pack FreeCell Game"
-#define VER_INTERNALNAME_STR        "freecell\0"
+#define VER_FILEDESCRIPTION_STR     TEXT("Entertainment Pack FreeCell Game")
+#define VER_INTERNALNAME_STR        TEXT("freecell\0")
+#define VER_FILEFLAGSMASK 0x3F
+#define VER_FILEFLAGS VS_FFI_FILEFLAGSMASK
+#define VER_FILEOS VOS__WINDOWS32
+#define VER_COMPANYNAME_STR TEXT("Microsoft")
 
 #include "common.ver"

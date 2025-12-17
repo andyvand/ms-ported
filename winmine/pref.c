@@ -5,6 +5,7 @@
 #define _WINDOWS
 #include <windows.h>
 #include <port1632.h>
+#include <strsafe.h>
 
 #include "main.h"
 #include "res.h"
@@ -71,7 +72,7 @@ DWORD dwSizeOfData = cchNameMax * sizeof(TCHAR);
     // If string not present, return default string.
     if (RegQueryValueEx(g_hReg, rgszPref[iszPref], NULL, NULL, (LPBYTE) szRet, 
                         &dwSizeOfData) != ERROR_SUCCESS)
-        lstrcpy(szRet, szDefaultName) ;
+		StringCchCopy(szRet, (size_t)dwSizeOfData, szDefaultName);
 
     return;
 }

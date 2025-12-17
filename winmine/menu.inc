@@ -21,6 +21,7 @@ BEGIN
  MENUITEM  "E&xit",           IDM_EXIT
  END	
  	
+#ifndef _WIN32_WCE
  POPUP     "&Help"
  BEGIN	
  MENUITEM  "&Contents\tF1",             IDM_HELP
@@ -29,6 +30,7 @@ BEGIN
  MENUITEM  SEPARATOR
  MENUITEM  "&About Minesweeper...",     IDM_HELP_ABOUT
  END
+#endif
 
 END
 

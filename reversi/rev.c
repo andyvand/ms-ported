@@ -1,6 +1,9 @@
 #include <windows.h>
-#include <process.h>
 #include <stdlib.h>
+
+#ifndef _WIN32_WCE
+#include <process.h>
+#endif
 
 #include "port1632.h"
 #include "reversi.h"

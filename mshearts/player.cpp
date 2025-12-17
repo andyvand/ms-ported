@@ -358,7 +358,13 @@ void player::DisplayName(CDC &dc)
 {
     CFont *oldfont = dc.SelectObject(&font);
     dc.SetBkColor(::pMainWnd->GetBkColor());
+
+#ifdef _WIN32_WCE
+	dc.ExtTextOut(nameloc.x, nameloc.y, 0, NULL, name, name.GetLength(), NULL);
+#else
     dc.TextOut(nameloc.x, nameloc.y, name, name.GetLength());
+#endif
+
     dc.SelectObject(oldfont);
 }
 

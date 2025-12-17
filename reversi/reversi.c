@@ -7,9 +7,13 @@
 /****************************************************************************/
 
 #include <windows.h>
-#include <process.h>
 #include <stdlib.h>
+
+#ifndef _WIN32_WCE
+#include <process.h>
 #include <HtmlHelp.h>
+#endif
+
 #include <stdio.h>
 
 #if defined(_UNICODE) || defined(UNICODE)
@@ -165,12 +169,14 @@ VOID NEAR PASCAL checkdepth(
 HWND hWindow,
 WORD  d)
 {
+#ifndef _WIN32_WCE
   HMENU hMenu;
 
   hMenu = GetMenu(hWindow);
   CheckMenuItem(hMenu, prevCheck, MF_UNCHECKED);
   CheckMenuItem(hMenu, d, MF_CHECKED);
   prevCheck = d;
+#endif
 }
 
 
@@ -350,10 +356,10 @@ PSTR    string)
   MessageOn = TRUE;
   SetBkMode(hDC, OPAQUE);
 #else
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
   MessageBoxEx(hWin, string, TEXT("Reversi"), (MB_OK | MB_USERICON), GetSystemDefaultLangID());
 #else
-  MessageBox(hWin, string, TEXT("Reversi"), (MB_OK | MB_USERICON));
+  MessageBox(hWin, string, TEXT("Reversi"), MB_OK);
 #endif
 #endif
 }
@@ -896,10 +902,18 @@ VOID Error(WCHAR *sz)
 VOID Error(CHAR *sz)
 #endif
 {
+#if (WINVER < 0x400) || defined(_WIN32_WCE)
+#if defined(_UNICODE) || defined(UNICODE)
+    MessageBoxW(hWin, sz, L"Reversi", (MB_OK | MB_ICONEXCLAMATION));
+#else
+    MessageBoxA(hWin, sz, "Reversi", (MB_OK | MB_ICONEXCLAMATION));
+#endif
+#else
 #if defined(_UNICODE) || defined(UNICODE)
     MessageBoxExW(hWin, sz, L"Reversi", (MB_OK | MB_ICONEXCLAMATION), GetSystemDefaultLangID());
 #else
     MessageBoxExA(hWin, sz, "Reversi", (MB_OK | MB_ICONEXCLAMATION), GetSystemDefaultLangID());
+#endif
 #endif
 }
 
@@ -916,6 +930,7 @@ VOID ErrorIds(INT ids)
 	Error(sz);
 }
 
+#ifndef _WIN32_WCE
 VOID DoHelp(INT idContext)
 {
 #if defined(_UNICODE) || defined(UNICODE)
@@ -995,6 +1010,7 @@ VOID DoHelp(INT idContext)
 		ErrorIds(idContext);
 #endif
 }
+#endif
 
 /*--------------------------------------------------------------------------*/
 /*                                                                          */
@@ -1056,7 +1072,7 @@ INT NEAR PASCAL ChangeRev(HINSTANCE hInstance, HWND hWindow)
 
 INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 {
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	WNDCLASSEX   pRevClass = { 0 };
 	HRGN         hrgn = { 0 };
 #else
@@ -1066,7 +1082,7 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 	HDC          hdc;
 	TEXTMETRIC   tm;
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	GetWindowRgn(GetDesktopWindow(), hrgn);
 	hdc = GetDCEx(NULL, hrgn, (DCX_WINDOW | DCX_CACHE));
 #else
@@ -1153,11 +1169,13 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 
 	pRevClass.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(3));
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	pRevClass.cbSize = sizeof(WNDCLASSEX);
 	pRevClass.hIconSm = LoadImage(hInstance, MAKEINTRESOURCE(3), IMAGE_ICON, 16, 16, LR_DEFAULTCOLOR);
 #else
+#ifndef _WIN32_WCE
 	pRevClass.cbSize = sizeof(WNDCLASS);
+#endif
 #endif
 	pRevClass.cbClsExtra = 0;
 	pRevClass.cbWndExtra = sizeof(struct HWND__);
@@ -1166,14 +1184,18 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 	pRevClass.hCursor = LoadCursor(NULL, IDC_ARROW);
 	pRevClass.hbrBackground = hbrBG;
 	pRevClass.lpszClassName = TEXT("Reversi");
-	pRevClass.lpszMenuName = MAKEINTRESOURCE(1);
+	pRevClass.lpszMenuName = NULL;
+#ifdef _WIN32_WCE
+	pRevClass.style = CS_VREDRAW | CS_HREDRAW | CS_SAVEBITS
+#else
 	pRevClass.style = CS_VREDRAW | CS_HREDRAW | CS_BYTEALIGNCLIENT | CS_BYTEALIGNWINDOW | CS_SAVEBITS
-#if _WIN32_WINNT >= 0x0501
+#endif
+#if (_WIN32_WINNT >= 0x0501) && !defined(_WIN32_WCE)
 		| CS_DROPSHADOW
 #endif
 		;
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	if (!RegisterClassEx (&pRevClass))
 #else
 	if (!RegisterClass(&pRevClass))
@@ -1201,7 +1223,7 @@ INT             idval)
 #if WINVER >= 0x0400
   HRGN          hrgn = { 0 };
 #endif
-#if 1
+#ifndef _WIN32_WCE
   HICON         appIcon;
 #endif
 
@@ -1216,6 +1238,7 @@ INT             idval)
           PostMessage(hWindow, WM_CLOSE, 0, 0L);
           break;
 
+#ifndef _WIN32_WCE
       case MN_HELP_ABOUT:
 #if 1
 		  appIcon = LoadIcon(hInst, MAKEINTRESOURCE(3));
@@ -1248,6 +1271,7 @@ INT             idval)
       case MN_HELP_RULES:
           DoHelp(MN_HELP_RULES);
 		  break;
+#endif
 
 	  case HINT:
           ShowBestMove(hWindow);
@@ -1334,7 +1358,11 @@ INT             idval)
               ReleaseDC(hWindow, hDC);
               hDisp = 0;
           } else
+#if (WINVER < 0x0400) || defined(_WIN32_WCE)
+			  MessageBox(hWindow, szNoPass, szReversi, (MB_OK | MB_ICONASTERISK));
+#else
               MessageBoxEx(hWindow, szNoPass, szReversi, (MB_OK | MB_ICONASTERISK), GetSystemDefaultLangID());
+#endif
   }
 }
 
@@ -1404,7 +1432,7 @@ POINT point)
           fThinking = TRUE;
           SetCursor(curThink);
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 		  GetWindowRgn(hWnd, hrgn);
 		  hDisp = hDC = GetDCEx(hWnd, hrgn, (DCX_WINDOW | DCX_CACHE));
 #else
@@ -1427,7 +1455,11 @@ POINT point)
           SetCursor(curIllegal);
           fThinking = FALSE;
       } else
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
           MessageBoxEx(hWnd, szIllegal, szReversi, (MB_OK | MB_ICONASTERISK), GetSystemDefaultLangID());
+#else
+          MessageBox(hWnd, szIllegal, szReversi, (MB_OK | MB_ICONASTERISK));
+#endif
    }
 }
 
@@ -1694,14 +1726,21 @@ LPARAM          lParam)
 		  bky = (bkrect.bottom - bkrect.top);
 
 		  SelectObject(bkdc, hbrBG);
+
+#ifndef _WIN32_WCE
 		  GetWindowOrgEx(bkdc, &bkystart);
+#endif
 
 		  bkystart.y -= 50;
 
+#ifndef _WIN32_WCE
 		  SetWindowOrgEx(bkdc, bkystart.x, bkystart.y, &bkystart);
+#endif
+
 		  PatBlt(bkdc, 1, 1, bkxcnt, bky, PATCOPY);
 		  break;
 
+#ifndef _WIN32_WCE
       case WM_INITMENU:                 /* disable the menu if thinking */
           hm = GetMenu(hWnd);
 		  if (fThinking)
@@ -1713,6 +1752,7 @@ LPARAM          lParam)
               EnableMenuItem(hm, 1, MF_ENABLED | MF_BYPOSITION);
           }
           break;
+#endif
 
       case WM_CREATE:
           RevCreate(hWnd);
@@ -1743,8 +1783,11 @@ LPARAM          lParam)
           break;
 
       case WM_KEYDOWN:
+#ifndef _WIN32_WCE
           if (IsIconic(hWnd))
               return 0L;
+#endif
+
           RevChar(hWnd, (WORD)wParam);
           break;
 
@@ -1867,6 +1910,14 @@ LPARAM        lParam)
   UNREFERENCED_PARAMETER(lParam);	
 }
 
+#ifndef WS_EX_TRANSPARENT
+#define WS_EX_TRANSPARENT 0
+#endif
+
+#ifndef WS_TILEDWINDOW
+#define WS_TILEDWINDOW WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX
+#endif
+
 /*--------------------------------------------------------------------------*/
 /*                                                                          */
 /*  WinMain() -                                                             */
@@ -1881,6 +1932,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
   INT  retVal = 0;
   HWND hWnd;
   MSG  msg;
+  HMENU hMenu;
 
   hInst = hInstance;
 
@@ -1931,8 +1983,24 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
   TYMIN = 45;
   fThinking = FALSE;
 
+  hMenu = LoadMenu(hInstance, MAKEINTRESOURCE(1));
+
 #if WINVER >= 0x0400
 #if defined(_UNICODE) || defined(UNICODE)
+#ifdef _WIN32_WCE
+  hWnd = CreateWindowExW((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
+				L"Reversi",
+				fCheated ? szReversiPractice : szReversi,
+				WS_TILEDWINDOW,
+				CW_USEDEFAULT,
+				CW_USEDEFAULT,
+				GetSystemMetrics(SM_CXSCREEN),
+				GetSystemMetrics(SM_CYSCREEN),
+				NULL,
+				hMenu,
+				hInstance,
+				NULL);
+#else
   hWnd = CreateWindowExW((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
 				L"Reversi",
 				fCheated ? szReversiPractice : szReversi,
@@ -1942,9 +2010,24 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 				(GetSystemMetrics(SM_CXSCREEN) >> 1),
 				(GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
 				NULL,
-				NULL,
+				hMenu,
 				hInstance,
 				NULL);
+#endif
+#else
+#ifdef _WIN32_WCE
+    hWnd = CreateWindowExA((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
+                  "Reversi",
+                  fCheated ? szReversiPractice : szReversi,
+                  WS_TILEDWINDOW,
+                  CW_USEDEFAULT,
+                  CW_USEDEFAULT,
+                  GetSystemMetrics(SM_CXSCREEN),
+                  GetSystemMetrics(SM_CYSCREEN),
+                  NULL,
+                  hMenu,
+                  hInstance,
+                  NULL);
 #else
     hWnd = CreateWindowExA((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
                   "Reversi",
@@ -1955,12 +2038,26 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                   (GetSystemMetrics(SM_CXSCREEN) >> 1),
                   (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
                   NULL,
-                  NULL,
+                  hMenu,
                   hInstance,
                   NULL);
 #endif
+#endif
 #else
 #if defined(_UNICODE) || defined(UNICODE)
+#ifdef _WIN32_WCE
+  hWnd = CreateWindowW(L"Reversi",
+                fCheated ? szReversiPractice : szReversi,
+                WS_TILEDWINDOW,
+                CW_USEDEFAULT,
+                CW_USEDEFAULT,
+                GetSystemMetrics(SM_CXSCREEN),
+                GetSystemMetrics(SM_CYSCREEN),
+                (HWND)NULL,
+                hMenu,
+                hInstance,
+                NULL);
+#else
   hWnd = CreateWindowW(L"Reversi",
                 fCheated ? szReversiPractice : szReversi,
                 WS_TILEDWINDOW,
@@ -1969,7 +2066,21 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                 (GetSystemMetrics(SM_CXSCREEN) >> 1),
                 (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
                 (HWND)NULL,
-                (HMENU)NULL,
+                hMenu,
+                hInstance,
+                NULL);
+#endif
+#else
+#ifdef _WIN32_WCE
+  hWnd = CreateWindowA("Reversi",
+                fCheated ? szReversiPractice : szReversi,
+                WS_TILEDWINDOW,
+                CW_USEDEFAULT,
+                CW_USEDEFAULT,
+                GetSystemMetrics(SM_CXSCREEN),
+				GetSystemMetrics(SM_CYSCREEN),
+				(HWND)NULL,
+                hMenu,
                 hInstance,
                 NULL);
 #else
@@ -1981,9 +2092,10 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                 (GetSystemMetrics(SM_CXSCREEN) >> 1),
 				(GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
 				(HWND)NULL,
-                (HMENU)NULL,
+                hMenu,
                 hInstance,
                 NULL);
+#endif
 #endif
 #endif
 
@@ -1992,7 +2104,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 	  return -1;
   }
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
   ShowWindowAsync(hWnd, cmdShow);
 #else
   ShowWindow(hWnd, cmdShow);

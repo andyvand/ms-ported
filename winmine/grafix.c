@@ -122,9 +122,15 @@ BOOL FLoadBitmaps(VOID)
         if (hResBlks == NULL || hResLed == NULL || hResButton == NULL)
                 return fFalse;
 
+#ifndef _WIN32_WCE
         lpDibBlks  = LockResource(hResBlks);
         lpDibLed   = LockResource(hResLed);
         lpDibButton= LockResource(hResButton);
+#else
+        lpDibBlks  = hResBlks;
+        lpDibLed   = hResLed;
+        lpDibButton= hResButton;
+#endif
 
         if (!Preferences.fColor)
                 hGrayPen = GetStockObject(BLACK_PEN);
@@ -160,9 +166,11 @@ BOOL FLoadBitmaps(VOID)
            //
 
            MemBlkDc[i] = CreateCompatibleDC(hDC);
+#ifndef _WIN32_WCE
            if (MemBlkDc[i] == (HDC)NULL) {
               OutputDebugStringA("FLoad failed to create compatible dc\n");
            }
+#endif
 
            //
            // create the bitmap for the above memory DC and selct this bitmap.
@@ -171,9 +179,11 @@ BOOL FLoadBitmaps(VOID)
            //
 
            MemBlkBitmap[i] = CreateCompatibleBitmap(hDC,dxBlk,dxBlk);
+#ifndef _WIN32_WCE
            if (MemBlkBitmap[i] == (HBITMAP)NULL) {
               OutputDebugStringA("Failed to create Bitmap\n");
            }
+#endif
 
            SelectObject(MemBlkDc[i],MemBlkBitmap[i]);
 
@@ -207,9 +217,15 @@ VOID FreeBitmaps(VOID)
         if (hGrayPen != NULL)
                 DeleteObject(hGrayPen);
 
+#ifndef _WIN32_WCE
         UnlockResource(hResBlks);
         UnlockResource(hResLed);
         UnlockResource(hResButton);
+#else
+		hResBlks = NULL;
+		hResLed = NULL;
+		hResButton = NULL;
+#endif
 
         for (i = 0 ; i < iBlkMax; i++) {
            DeleteDC(MemBlkDc[i]);
@@ -316,11 +332,13 @@ VOID DrawBombCount(HDC hDC)
         INT iLed;
         INT cBombs;
 
+#ifndef _WIN32_WCE
         DWORD dwDCLayout = GetLayout(hDC);
 
         if (dwDCLayout & LAYOUT_RTL) {
            SetLayout(hDC , 0); // Turn off mirroring before painting.
         }
+#endif
 
         if (cBombLeft < 0)
                 {
@@ -337,9 +355,11 @@ VOID DrawBombCount(HDC hDC)
         DrawLed(hDC, dxLeftBomb+dxLed, cBombs/10);
         DrawLed(hDC, dxLeftBomb+dxLed+dxLed, cBombs % 10);
 
+#ifndef _WIN32_WCE
         if (dwDCLayout & LAYOUT_RTL) {
            SetLayout(hDC , dwDCLayout); // Turn on the mirroring again.
         }
+#endif
 }
 
 VOID DisplayBombCount(VOID)
@@ -355,19 +375,24 @@ VOID DisplayBombCount(VOID)
 VOID DrawTime(HDC hDC)
 {
         INT iLed = cSec;
-        DWORD dwDCLayout = GetLayout(hDC);
+
+#ifndef _WIN32_WCE
+		DWORD dwDCLayout = GetLayout(hDC);
 
         if (dwDCLayout & LAYOUT_RTL) {
            SetLayout(hDC , 0); // Turn off mirroring before painting.
         }
+#endif
 
         DrawLed(hDC, dxWindow-(dxRightTime+3*dxLed+dxpBorder), iLed/100);       /* OverFlow ? */
         DrawLed(hDC, dxWindow-(dxRightTime+2*dxLed+dxpBorder),(iLed %= 100)/10 );
         DrawLed(hDC, dxWindow-(dxRightTime+  dxLed+dxpBorder), iLed % 10);
 
+#ifndef _WIN32_WCE
         if (dwDCLayout & LAYOUT_RTL) {
            SetLayout(hDC , dwDCLayout); // Turn on the mirroring again.
         }
+#endif
 }
 
 VOID DisplayTime(VOID)

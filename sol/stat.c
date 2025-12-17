@@ -12,7 +12,7 @@ static INT dyStat;         // height of status window
 
 BOOL FRegisterStat(BOOL fFirstInst)
 {
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	WNDCLASSEX cls;
 #else
 	WNDCLASS cls;
@@ -27,7 +27,7 @@ BOOL FRegisterStat(BOOL fFirstInst)
         cls.cbClsExtra = cls.cbWndExtra = 0;
         cls.hInstance = hinstApp;
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 		cls.hIconSm = NULL;
 #endif
 
@@ -36,7 +36,7 @@ BOOL FRegisterStat(BOOL fFirstInst)
         cls.hbrBackground = GetStockObject(WHITE_BRUSH);
         cls.lpszMenuName = NULL;
         cls.lpszClassName = (LPTSTR)szStatClass;
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 		if (!RegisterClassEx(&cls))
 #else
         if (!RegisterClass((LPWNDCLASS)&cls))
@@ -45,6 +45,10 @@ BOOL FRegisterStat(BOOL fFirstInst)
     }
     return fTrue;
 }
+
+#ifndef WS_EX_TRANSPARENT
+#define WS_EX_TRANSPARENT 0
+#endif
 
 BOOL FCreateStat()
 {
@@ -161,7 +165,11 @@ VOID StatStringSz(TCHAR *sz)
     hdcSav =        HdcSet(hdc, 0, 0);
     GetClientRect(hwndStat, (LPRECT) &rc);
     PatBlt(hdcCur, rc.xLeft, rc.yTop, rc.xRight-rc.xLeft, rc.yBot-rc.yTop, PATCOPY);
+#ifdef _WIN32_WCE
+	ExtTextOut(hdcCur, dxStatMarg, 0, 0, NULL, sz, lstrlen(sz), NULL);
+#else
     TextOut(hdcCur, dxStatMarg, 0, sz, lstrlen(sz));
+#endif
     StatRender();
     HdcSet(hdcSav, 0, 0);
    ReleaseDC(hwndStat, hdc);

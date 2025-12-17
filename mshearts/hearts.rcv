@@ -2,11 +2,21 @@
 /*        HEARTS.RCV                                                */
 /********************************************************************/
 
+#ifdef _WIN32_WCE
+#include <winver.h>
+#else
 #include <ntverp.h>
+#endif
+
 #define VER_INTERNALNAME_STR            "MSHEARTS"
 #define VER_ORIGINALFILENAME_STR        "MSHEARTS.EXE"
 #define VER_FILEDESCRIPTION_STR         "The Microsoft Hearts Network"
 #define VER_FILETYPE                    VFT_APP
 #define VER_FILESUBTYPE                 VFT2_UNKNOWN
 #define VER_LEGALCOPYRIGHT_YEARS        "1991-1998"
+#define VER_FILEFLAGSMASK 0x3F
+#define VER_FILEFLAGS VS_FFI_FILEFLAGSMASK
+#define VER_FILEOS VOS__WINDOWS32
+#define VER_COMPANYNAME_STR "Microsoft"
+
 #include "common.ver"

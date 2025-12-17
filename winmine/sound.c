@@ -25,7 +25,11 @@ INT FInitTunes( VOID )
 	// Even if the user has chosen the sound option
 	// but does not have sound playing capabilities,
 	// put the sound off.
+#ifdef _WIN32_WCE
+	if ( PlaySound(NULL, NULL, SND_SYNC)  == FALSE)
+#else
 	if ( PlaySound(NULL, NULL, SND_PURGE)  == FALSE)
+#endif
 		return fsoundOff;
 	
 	return fsoundOn;
@@ -40,7 +44,11 @@ VOID EndTunes(VOID)
 	// Just stop the tune ..
 	if (FSoundOn())
 	{
+#ifdef _WIN32_WCE
+		PlaySound(NULL, NULL, SND_SYNC);
+#else
 		PlaySound(NULL, NULL, SND_PURGE);
+#endif
 	}
 }
 

@@ -44,8 +44,13 @@ extern  const TCHAR *regvalPName[3];
 extern  const TCHAR szHelpFileName[];
 extern  const TCHAR szShareName[];
 
+#ifdef _WIN32_WCE
+const   int     WINWIDTH    = 240;
+const   int     WINHEIGHT   = 320;
+#else
 const   int     WINWIDTH    = 540;
 const   int     WINHEIGHT   = 600;
+#endif
 
 const   int     LEFT        = 0;        // passdir
 const   int     RIGHT       = 1;
@@ -120,16 +125,23 @@ class CMainWindow : public CFrameWnd
         int      Pos2Id(int pos)            { return ((pos + m_myid) % 4); }
         void     SetGameNumber(int num)     { m_gamenumber = num; }
 
+#ifndef _WIN32_WCE
         afx_msg void OnAbout();
-        afx_msg void OnBossKey()            { ShowWindow(SW_MINIMIZE); }
+#endif
+
+		afx_msg void OnBossKey()            { ShowWindow(SW_MINIMIZE); }
         afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
         afx_msg void OnCheat();
         afx_msg void OnClose();
         afx_msg int  OnCreate(LPCREATESTRUCT lpCreateStruct);
         afx_msg BOOL OnEraseBkgnd(CDC *);
         afx_msg void OnExit()               { bConstructed = FALSE; OnClose(); }
+
+#ifndef _WIN32_WCE
         afx_msg void OnHelp()
                         { ::HtmlHelp(::GetDesktopWindow(), szHelpFileName, HH_DISPLAY_TOPIC, 0); }
+#endif
+
 /*
         afx_msg void OnHelpOnHelp()
                         { ::WinHelp(m_hWnd, NULL, HELP_HELPONHELP, 0); }

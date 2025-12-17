@@ -150,14 +150,34 @@ MMain( hinst, hinstPrev, lpstrCmdLine, sw )
     }
 
     return ((int)(msg.wParam ? 1 : 0));
-
-    // Eliminate unreferenced-variable warnings from
-    // porting macro.
-    //
-    (void)_argv;
-    (void)_argc;
 }
 
+#ifndef WS_EX_TRANSPARENT
+#define WS_EX_TRANSPARENT 0
+#endif
+
+#ifndef WS_OVERLAPPEDWINDOW
+#define WS_OVERLAPPEDWINDOW WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX
+#endif
+
+#ifdef _WIN32_WCE
+DWORD GetCurrentTime32()
+{
+  SYSTEMTIME systemTime = { 0 };
+  FILETIME fileTime = { 0 };
+  DWORD result = 0;
+  GetSystemTime(&systemTime);
+  if (SystemTimeToFileTime(&systemTime, &fileTime))
+  {
+    ULONGLONG temp = 0;
+    memcpy(&temp, &fileTime, sizeof(FILETIME));
+    temp -= 116444736000000000; // subtract 1970-01-01 00:00 (UTC)
+    temp /= 10000000; // convert to seconds
+    result = (DWORD)temp;
+  }
+  return result;
+}
+#endif
 
 /******************************************************************************
  *      FSolInit
@@ -177,7 +197,7 @@ MMain( hinst, hinstPrev, lpstrCmdLine, sw )
  *****************************************************************************/
 BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
 {
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
     WNDCLASSEX cls;
 #else
 	WNDCLASS   cls;
@@ -185,12 +205,15 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     HDC        hdc;
     TEXTMETRIC tm;
     HANDLE     hcrsArrow;
+#ifndef _WIN32_WCE
     BOOL       fStartIconic;
     TCHAR FAR  *lpch;
+#endif
     BOOL       fOutline;
     TCHAR      szT[20];
     RECT       rect;
-    WORD APIENTRY TimerProc(HWND, UINT, UINT_PTR, DWORD);
+    WORD APIENTRY TimerProc32(HWND, UINT, UINT_PTR, DWORD);
+	HMENU      hMenu;
 
     hinstApp = hinst;
 
@@ -201,6 +224,18 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     {
         goto OOMError;
     }
+
+#ifdef _WIN32_WCE
+	dxCrd /= 2;
+	dyCrd /= 2;
+
+	dxCrd *= 3;
+	dxCrd /= 4;
+
+	dyCrd *= 3;
+	dyCrd /= 4;
+#endif
+
     hcrsArrow = LoadCursor(NULL, IDC_ARROW);
     hdc = GetDC(NULL);
     if(hdc == NULL)
@@ -221,16 +256,22 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     dxScreen = GetDeviceCaps(hdc, HORZRES);
     dyScreen = GetDeviceCaps(hdc, VERTRES);
 
+#ifndef _WIN32_WCE
     if ((fHalfCards = dyScreen < 300))
     {
         dyCrd /= 2;
     }
+#endif
 
     ReleaseDC(NULL, hdc);
     rgbTable = fBW ? rgbWhite : rgbGreen;
     hbrTable = CreateSolidBrush(rgbTable);
 
-    srand((WORD) time(NULL));
+#ifdef _WIN32_WCE
+	srand((unsigned) GetCurrentTime32());
+#else
+    srand((unsigned) GetCurrentTime());
+#endif
 
     /* load strings */
     CchString(szAppName, idsAppName);
@@ -242,7 +283,7 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     /* scan cmd line to see if should come up iconic */
     /* this may be unnecessary with win3.0 (function may be provided to */
     /* do it automatically */
-
+#ifndef _WIN32_WCE
     fStartIconic = fFalse;
     for(lpch = lpszCmdLine; *lpch != TEXT('\000'); lpch++)
     {
@@ -252,13 +293,13 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
             break;
         }
     }
-
+#endif
 
     /* Load the solitaire icon */
 
     hIconMain = LoadIcon(hinstApp, MAKEINTRESOURCE(ID_ICON_MAIN));
 
-#if WINVER >= 0x0400
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
     /* Load the solitaire icon image */
     hImageMain = LoadImage(hinstApp, MAKEINTRESOURCE(ID_ICON_MAIN),
                          IMAGE_ICON, 16, 16, LR_DEFAULTCOLOR);
@@ -269,18 +310,30 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     if (hinstPrev == NULL)
     {
         ZeroMemory( &cls, sizeof(cls) );
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
         cls.cbSize= sizeof(cls);
-        cls.style = CS_BYTEALIGNWINDOW | CS_DBLCLKS,
+		cls.style = CS_BYTEALIGNWINDOW | CS_DBLCLKS,
+#endif
+
         cls.lpfnWndProc = SolWndProc;
         cls.hInstance = hinstApp;
         cls.hIcon =  hIconMain;
-        cls.hIconSm= hImageMain;
+
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
+		cls.hIconSm= hImageMain;
+#endif
+
         cls.hCursor = hcrsArrow;
         cls.hbrBackground = hbrTable;
-        cls.lpszMenuName = MAKEINTRESOURCE(idmSol);
+        cls.lpszMenuName = NULL;
         cls.lpszClassName = (LPTSTR)szClass;
+
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
         if (!RegisterClassEx(&cls))
-        {
+#else
+        if (!RegisterClass(&cls))
+#endif
+	    {
             goto OOMError;
         }
      }
@@ -296,7 +349,11 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
 	/* Compute the window size we need for a client area this big */
 	rect.bottom = dyCrd * 4;
 	rect.left = rect.top = 0;
+
+#ifndef _WIN32_WCE
 	AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, TRUE);
+#endif
+
 	rect.right -= rect.left;
 	rect.bottom -= rect.top;
 
@@ -304,14 +361,22 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
 	if (rect.bottom > dyScreen)
 	    rect.bottom = dyScreen;
 
+	hMenu = LoadMenu(hinst, MAKEINTRESOURCE(idmSol));
+
     /* create our windows */
     if (!
     (hwndApp = CreateWindowEx(WS_EX_TRANSPARENT, (LPTSTR)szClass, (LPTSTR)szAppName,
+#ifndef _WIN32_WCE
                     fStartIconic ? WS_OVERLAPPEDWINDOW | WS_MINIMIZE | WS_CLIPCHILDREN:
+#endif
                     WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,
                     CW_USEDEFAULT, 0,
-			rect.right, rect.bottom,
-                        (HWND)NULL, (HMENU)NULL, hinstApp, (LPTSTR)NULL)))
+#ifdef _WIN32_WCE
+					240, 320,
+#else
+					rect.right, rect.bottom,
+#endif
+                    (HWND)NULL, hMenu, hinstApp, (LPTSTR)NULL)))
         {
         goto OOMError;
         }
@@ -319,7 +384,7 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     GetIniFlags(&fOutline);
 
 
-    if(SetTimer(hwndApp, 666, 250, (TIMERPROC)TimerProc) == 0)
+    if(SetTimer(hwndApp, 666, 250, (TIMERPROC)TimerProc32) == 0)
     {
         goto OOMError;
     }
@@ -337,7 +402,12 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
         FCreateStat();
 
     Assert(pgmCur != NULL);
+
+#ifdef _WIN32_WCE
+	if(sw != SW_MINIMIZE)
+#else
     if(sw != SW_SHOWMINNOACTIVE && sw != SW_MINIMIZE)
+#endif
         PostMessage(hwndApp, WM_COMMAND, idsInitiate, 0L);
 
     return(fTrue);
@@ -371,7 +441,9 @@ VOID DoPaint(HWND hwnd)
  */
 LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
 {
+#ifndef _WIN32_WCE
     HMENU hmenu;
+#endif
     PT pt;
     INT msgg;
     VOID NewGame(BOOL,BOOL);
@@ -389,7 +461,7 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
 
                     case drwDrawCard:
                         #define lpcddr ((CDDR FAR *)lParam)
-                        return cdtDraw(lpcddr->hdc, lpcddr->x, lpcddr->y, lpcddr->cd, lpcddr->mode, lpcddr->rgbBgnd);
+                        return cdtDrawExt(lpcddr->hdc, lpcddr->x, lpcddr->y, dxCrd, dyCrd, lpcddr->cd, lpcddr->mode, lpcddr->rgbBgnd);
                         #undef lpcddr
 
                     case drwClose:
@@ -399,9 +471,11 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
             }
             break;
 
+#ifndef _WIN32_WCE
     case WM_HELP:
         DoHelp( idsHelpIndex );
         break;
+#endif
 
     case WM_DESTROY:
         KillTimer(hwndApp, 666);
@@ -432,7 +506,12 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
 	    int nNewMargin;
 	    int nMinMargin;
 
+#ifdef _WIN32_WCE
+		fIconic = FALSE;
+#else
 	    fIconic = IsIconic(hwnd);
+#endif
+
 	    GetClientRect(hwnd, (LPRECT) &rcClient);
 
 	    /* Compute the new margin size if any and if necessary, redraw */
@@ -455,7 +534,7 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
         StatMove();
         break;
 
-
+#ifndef _WIN32_WCE
     case WM_MENUSELECT:
 	    // Don't send in garbage if not a menu item
 	    if( GET_WM_MENUSELECT_FLAGS( wParam, lParam ) & MF_POPUP     ||
@@ -468,6 +547,7 @@ LRESULT APIENTRY SolWndProc(HWND hwnd, UINT wm, WPARAM wParam, LPARAM lParam)
 		    StatString( GET_WM_MENUSELECT_CMD( wParam, lParam ));
 		}
         break;
+#endif
 
     case WM_KEYDOWN:
         Assert(pgmCur);
@@ -535,6 +615,7 @@ DoMouse:
             case idsExit:
                 PostMessage(hwnd, WM_SYSCOMMAND, SC_CLOSE, 0L);
                 break;
+#ifndef _WIN32_WCE
             /* Help Menu */
             case (WORD)idsHelpIndex:
             case (WORD)idsHelpSearch:
@@ -550,6 +631,8 @@ DoMouse:
 #endif
                 break;
             }
+#endif
+
             case idsForceWin:
                 SendGmMsg(pgmCur, msggForceWin, 0, 0);
                 break;
@@ -581,6 +664,7 @@ DoMouse:
             }
             break;
 
+#ifndef _WIN32_WCE
     case WM_INITMENU:
             hmenu = GetMenu(hwnd);
             Assert(pgmCur);
@@ -590,6 +674,7 @@ DoMouse:
             EnableMenuItem(hmenu, idsBacks,    FSelOfGm(pgmCur) ? MF_DISABLED|MF_GRAYED : MF_ENABLED);
             EnableMenuItem(hmenu, idsAbout,    FSelOfGm(pgmCur) ? MF_DISABLED|MF_GRAYED : MF_ENABLED);
             break;
+#endif
 
     case WM_PAINT:
         if(!fIconic)
@@ -650,7 +735,7 @@ VOID ReleaseHdc()
 }
 
 
-WORD APIENTRY TimerProc(HWND hwnd, UINT wm, UINT_PTR id, DWORD dwTime)
+WORD APIENTRY TimerProc32(HWND hwnd, UINT wm, UINT_PTR id, DWORD dwTime)
 {
 
     if(pgmCur != NULL)
@@ -691,7 +776,12 @@ VOID NewGame(BOOL fNewSeed, BOOL fZeroScore)
         // and output a message to the debugger.
         //
 
-        Param= (INT) time(NULL);
+#ifdef _WIN32_WCE
+		Param= (INT)GetCurrentTime32();
+#else
+        Param= (INT)GetCurrentTime();
+#endif
+
         srand( igmCur = ((WORD) Param) & 0x7fff);
 
 #ifdef DEBUG
@@ -700,7 +790,7 @@ VOID NewGame(BOOL fNewSeed, BOOL fZeroScore)
         if( lastrnd == rnd1 )
         {
             TCHAR szText[100];
-            wsprintf(szText,TEXT("Games repeat: time= %d  GetLastError= %d\n"),
+            StringCchPrintf(szText, (sizeof(szText) / sizeof(TCHAR)),TEXT("Games repeat: time= %d  GetLastError= %d\n"),
                      Param, GetLastError());
             OutputDebugString(szText);
         }
@@ -731,7 +821,7 @@ INT_PTR APIENTRY About(HWND hdlg, UINT iMessage, WPARAM wParam, LPARAM lParam)
         return fFalse;
 }
 
-
+#ifndef _WIN32_WCE
 VOID DoHelp(INT idContext)
 {
     CHAR sz[100];
@@ -756,7 +846,7 @@ VOID DoHelp(INT idContext)
         ErrorIds(idsNoHelp);
 #endif
 }
-
+#endif
 
 VOID GetIniFlags(BOOL *pfOutline)
 {

@@ -446,11 +446,7 @@ HDDEDATA CMainWindow::GetGameStatus(HCONV hConv)
     {
         if (p[i])
         {
-#if defined(_UNICODE) || defined(UNICODE)
-            StringCbPrintfW(gs.name[i], sizeof(gs.name[i]), L"%s", p[i]->GetName());
-#else
-            StringCbPrintfA(gs.name[i], sizeof(gs.name[i]), "%s", p[i]->GetName());
-#endif
+            StringCchPrintf(gs.name[i], sizeof(gs.name[i]), L"%s", p[i]->GetName());
 
             if (p[i]->GetConv() == hConv)
             {

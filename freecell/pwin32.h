@@ -59,7 +59,11 @@
 #define MGetLastError                    GetLastError
 
 #if defined(_UNICODE) || defined(UNICODE)
-#if defined(__MINGW32__) || defined(_USE_MBCS_WINMAIN) 
+#if defined(_WIN32_WCE)
+#define MMain(hInst, hPrevInst, lpCmdLine, nCmdShow) \
+   INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPWSTR lpCmdLine, \
+   INT nCmdShow) {
+#elif defined(__MINGW32__) || defined(_USE_MBCS_WINMAIN) 
 #define MMain(hInst, hPrevInst, lpCmdLineW, nCmdShow) \
    INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, \
    INT nCmdShow) {

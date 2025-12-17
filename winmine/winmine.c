@@ -12,7 +12,11 @@
 #define _WINDOWS
 #include <windows.h>
 #include <port1632.h>
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>   // for HtmlHelp()
+#endif
+
 #include <commctrl.h>   // for fusion classes.
 #include <strsafe.h>
 
@@ -26,7 +30,10 @@
 #include "context.h"
 #include "string.h"
 #include "stdio.h"
+
+#ifndef _WIN32_WCE
 #include "dos.h"
+#endif
 
 #ifndef WM_ENTERMENULOOP
 #define WM_ENTERMENULOOP 0x0211
@@ -112,7 +119,6 @@ TCHAR   szXYZZY[cchXYZZY+1] = TEXT("XYZZY");
 extern  CHAR rgBlk[cBlkMax];
 #endif
 
-
 LRESULT  APIENTRY MainWndProc(HWND,  UINT, WPARAM, LPARAM);
 INT_PTR  APIENTRY PrefDlgProc(HWND,  UINT, WPARAM, LPARAM);
 INT_PTR  APIENTRY BestDlgProc(HWND,  UINT, WPARAM, LPARAM);
@@ -134,13 +140,16 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 /* { */
 	MSG msg;
 	HANDLE hAccel;
-
 	hInst = hInstance;
 
 	InitConst();
 
+#ifdef _WIN32_WCE
+    bInitMinimized = FALSE;
+#else
     bInitMinimized = (nCmdShow == SW_SHOWMINNOACTIVE) ||
                      (nCmdShow == SW_SHOWMINIMIZED) ;
+#endif
 
 #ifdef WIN16
 	if (hPrevInstance)
@@ -200,8 +209,14 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 
 	// Register the common controls.
 	icc.dwSize = sizeof(INITCOMMONCONTROLSEX);
+#ifdef _WIN32_WCE
+	icc.dwICC  = ICC_BAR_CLASSES | ICC_COOL_CLASSES | ICC_LISTVIEW_CLASSES | 
+			ICC_PROGRESS_CLASS | ICC_TAB_CLASSES | ICC_UPDOWN_CLASS;
+#else
 	icc.dwICC  = ICC_ANIMATE_CLASS | ICC_BAR_CLASSES | ICC_COOL_CLASSES | ICC_HOTKEY_CLASS | ICC_LISTVIEW_CLASSES | 
 			ICC_PAGESCROLLER_CLASS | ICC_PROGRESS_CLASS | ICC_TAB_CLASSES | ICC_UPDOWN_CLASS | ICC_USEREX_CLASSES;
+#endif
+
 	InitCommonControlsEx(&icc);
 
 
@@ -222,17 +237,24 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 		return fFalse;
 	}
 
+	ReadPreferences();
+
 	hMenu = LoadMenu(hInst, MAKEINTRESOURCE(ID_MENU));
 	hAccel = LoadAccelerators(hInst, MAKEINTRESOURCE(ID_MENU_ACCEL));
 
-
-	ReadPreferences();
-
+#ifdef _WIN32_WCE
+	hwndMain = CreateWindow(szClass, szWindowTitle,
+                WS_OVERLAPPED | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU, 
+                Preferences.xWindow-dxpBorder, Preferences.yWindow-dypAdjust,
+		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow +(dypAdjust*2)+EXTRA_SPACE,
+		NULL, hMenu, hInst, NULL);
+#else
 	hwndMain = CreateWindow( szClass, szWindowTitle,
                 WS_OVERLAPPED | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU, 
                 Preferences.xWindow-dxpBorder, Preferences.yWindow-dypAdjust,
 		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow +(dypAdjust*2)+EXTRA_SPACE,
 		NULL, NULL, hInst, NULL);
+#endif
 
 	if (!hwndMain)
 		{
@@ -400,6 +422,7 @@ VOID ErrorIds(INT ids)
     Error(sz);
 }
 
+#ifndef _WIN32_WCE
 VOID DoHelp(INT idContext)
 {
     TCHAR sz[100];
@@ -424,7 +447,7 @@ VOID DoHelp(INT idContext)
         ErrorIds(idsNoHelp);
 #endif
 }
-
+#endif
 
 /****** M A I N  W N D  P R O C ******/
 
@@ -441,6 +464,7 @@ LRESULT  APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 			}	
 		break;
 
+#ifndef _WIN32_WCE
 	case WM_SYSCOMMAND:
 		switch (wParam & 0xFFF0)
 			{
@@ -455,7 +479,6 @@ LRESULT  APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 			ClrStatusPause;
 			ClrStatusIcon;
 			ResumeGame();
-
 //Japan Bug fix: 1/19/93 Enable the first click after restoring from icon.
 			fIgnoreClick = fFalse;
 			break;
@@ -465,7 +488,7 @@ LRESULT  APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 			}
 			
 		break;
-
+#endif
 
 	case WM_COMMAND:
 	    {
@@ -541,7 +564,7 @@ LRESULT  APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 		    DoDisplayBest();
 		    break;
 
-
+#ifndef _WIN32_WCE
 	    /** IDM_HELP **/
 	    case IDM_HELP:
 		    DoHelp(idsHelpIndex);
@@ -558,6 +581,7 @@ LRESULT  APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 	    case IDM_HELP_ABOUT:
             ShellAbout(hWnd, TEXT("Minesweeper"), TEXT("About Minesweeper..."), hIconMain);
 		    return 0;
+#endif
 
 	    default:
 		    break;
@@ -829,6 +853,7 @@ INT_PTR  APIENTRY PrefDlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
 			}
         break;
 
+#ifndef _WIN32_WCE
     // context sensitive help.
     case WM_HELP: 
         WinHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("winmine.hlp"), 
@@ -839,6 +864,7 @@ INT_PTR  APIENTRY PrefDlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
         WinHelp((HWND) wParam, TEXT("winmine.hlp"), HELP_CONTEXTMENU, 
                 (ULONG_PTR) aIds);         
         break;   
+#endif
 		}
 
     return (fFalse);			/* Didn't process a message    */
@@ -846,12 +872,11 @@ INT_PTR  APIENTRY PrefDlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lPa
 
 
 /*** S E T  D T E X T ***/
-
 VOID SetDText(HWND hDlg, INT id, INT time, TCHAR FAR * szName)
 {
 	TCHAR sz[cchNameMax];
 
-	wsprintf(sz, szTime, time);
+	StringCchPrintf(sz, sizeof(sz), TEXT("%d seconds"), time);
 	SetDlgItemText(hDlg, id, sz);
 	SetDlgItemText(hDlg, id+1, szName);
 }
@@ -890,9 +915,11 @@ LReset:
 		case ID_BTN_RESET:
 			Preferences.rgTime[wGameBegin] = Preferences.rgTime[wGameInter]
 				= Preferences.rgTime[wGameExpert] = 999;
-			lstrcpyn(Preferences.szBegin,  szDefaultName, sizeof(Preferences.szBegin));
-			lstrcpyn(Preferences.szInter,  szDefaultName, sizeof(Preferences.szInter));
-			lstrcpyn(Preferences.szExpert, szDefaultName, sizeof(Preferences.szExpert));
+
+			StringCchCopy(Preferences.szBegin, sizeof(Preferences.szBegin),  szDefaultName);
+			StringCchCopy(Preferences.szInter, sizeof(Preferences.szInter),  szDefaultName);
+			StringCchCopy(Preferences.szExpert, sizeof(Preferences.szExpert),  szDefaultName);
+
 			fUpdateIni = fTrue;
 			goto LReset;
 			
@@ -908,6 +935,7 @@ LReset:
 			}
         break;
 
+#ifndef _WIN32_WCE
     // context sensitive help.
     case WM_HELP: 
         WinHelp(((LPHELPINFO) lParam)->hItemHandle, TEXT("winmine.hlp"), 
@@ -918,6 +946,7 @@ LReset:
         WinHelp((HWND) wParam, TEXT("winmine.hlp"), HELP_CONTEXTMENU, 
                 (ULONG_PTR) aIds);         
         break;   
+#endif
 		}
 
 	return (fFalse);			/* Didn't process a message    */
@@ -926,7 +955,6 @@ LReset:
 
 
 /****** E N T E R  D L G  P R O C ******/
-
 INT_PTR  APIENTRY EnterDlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     ((void)lParam);
@@ -1015,7 +1043,9 @@ VOID AdjustWindow(INT fAdjust)
 	int t = 0;
 	RECT rect;
     BOOL bDiffLevel = FALSE;
-    RECT rectGame, rectHelp;
+#ifndef _WIN32_WCE
+	RECT rectGame, rectHelp;
+#endif
 
 	// an extra check
 	if (!hwndMain)
@@ -1039,15 +1069,21 @@ VOID AdjustWindow(INT fAdjust)
         // If the tops do not match, that means they are on two lines.
         // In that case, extend the size of the window by size of
         // one menu line.
-       
+#ifndef _WIN32_WCE
         if (hMenu && GetMenuItemRect(hwndMain, hMenu, 0, &rectGame) &&
                 GetMenuItemRect(hwndMain, hMenu, 1, &rectHelp))
             {
             if (rectGame.top != rectHelp.top)
                 {
+#else
+		if (hMenu)
+            {
+#endif
                 dypAdjust += dypMenu;
                 bDiffLevel = TRUE;
+#ifndef _WIN32_WCE
                 }
+#endif
             }
         }
 
@@ -1076,17 +1112,20 @@ VOID AdjustWindow(INT fAdjust)
 
         // after the window is adjusted, the "Game" and "Help" may move to the
         // same line creating extra space at the bottom. so check again!
-
+#ifndef _WIN32_WCE
         if (bDiffLevel && hMenu && GetMenuItemRect(hwndMain, hMenu, 0, &rectGame) &&
                 GetMenuItemRect(hwndMain, hMenu, 1, &rectHelp))
             {
             if (rectGame.top == rectHelp.top)
                 {
+#endif
                 dypAdjust -= dypMenu;
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
     			    dxWindow+(dxpBorder*2) + EXTRA_SPACE, dyWindow + dypAdjust + EXTRA_SPACE, fTrue);
-                }
+#ifndef _WIN32_WCE
+				}
             }
+#endif
        
     	if (fAdjust & fDisplay)
     		{

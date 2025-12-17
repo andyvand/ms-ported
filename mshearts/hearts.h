@@ -31,10 +31,18 @@ declaration of theApp class
 #include <afxext.h>         // MFC extensions
 #include <afxcmn.h>			// MFC support for Windows Common Controls
 
+#ifdef _WIN32_WCE
+#include <afxdisp.h>
+#endif
+
 #include <shellapi.h>
 //#include <shell.h>
 #include <afxwin.h>
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>
+#endif
+
 #include <strsafe.h>
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1900)

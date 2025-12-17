@@ -6,6 +6,7 @@
 /* #define _NTDEF_  to get NT defs, i.e. WORD unsigned short, not int */
 
 #include <windows.h>
+#include <winbase.h>
 
 #include "port1632.h"
 

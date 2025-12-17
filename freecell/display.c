@@ -29,7 +29,6 @@ static BOOL bCardRevealed;          // right mouse button show a card?
 #define BGND    (255)               // used for cdtDrawExt
 #define ICONY   ((dyCrd - ICONHEIGHT) / 3)
 
-
 /****************************************************************************
 
 CalcOffsets
@@ -45,23 +44,23 @@ VOID CalcOffsets(HWND hWnd)
     UINT leftedge;
     BOOL bEGAmode = FALSE;
 
-    if (GetSystemMetrics(SM_CYSCREEN) <= 350)   // EGA
-        bEGAmode = TRUE;
+	if (GetSystemMetrics(SM_CYSCREEN) <= 350)   // EGA
+		bEGAmode = TRUE;
 
     GetClientRect(hWnd, &rect);
 
     wOffset[TOPROW] = rect.right - (4 * dxCrd);         // home cells
-
     leftedge = (rect.right - ((MAXCOL-1) * dxCrd)) / MAXCOL;
-    for (i = 1; i < MAXCOL; i++)
+
+	for (i = 1; i < MAXCOL; i++)
         wOffset[i] = leftedge + (((i-1) * (rect.right-leftedge)) / (MAXCOL-1));
 
     /* place icon half way between free cells and home cells */
 
     wIconOffset = (rect.right-ICONWIDTH) / 2;
 
-    if (bEGAmode)
-        wVSpace = 4;
+	if (bEGAmode)
+		wVSpace = 4;
     else
         wVSpace = 10;
 
@@ -116,7 +115,7 @@ VOID ShuffleDeck(HWND hWnd, UINT_PTR seed)
     }
 
     LoadString(hInst, IDS_APPNAME2, bigbuf, BIG);
-    wsprintf(smallbuf, bigbuf, gamenumber);
+    StringCchPrintf(smallbuf, (sizeof(smallbuf) / sizeof(TCHAR)), bigbuf, gamenumber);
     SetWindowText(hWnd, smallbuf);
 
     for (col = 0; col < MAXCOL; col++)          // clear the deck
@@ -317,6 +316,7 @@ VOID DrawCard(HDC hDC, UINT col, UINT pos, CARD card, INT mode)
         {
             hOldBitmap = SelectObject(hMemDC, hBM_Ghost);
             BitBlt(hDC, x, y, dxCrd, dyCrd, hMemDC, 0, 0, SRCCOPY);
+
             SelectObject(hMemDC, hOldBitmap);
             DeleteDC(hMemDC);
         }
@@ -425,6 +425,7 @@ BOOL Point2Card(UINT x, UINT y, UINT *col, UINT *pos)
         {
             *col = TOPROW;
             *pos = x / dxCrd;
+
             return TRUE;
         }
         else if (x < wOffset[TOPROW])       // between free cells & home cells
@@ -494,7 +495,8 @@ VOID Card2Point(UINT col, UINT pos, UINT *x, UINT *y)
     {
         *y = 0;
         *x = pos * dxCrd;
-        if (pos > 3)
+
+		if (pos > 3)
             *x += wOffset[TOPROW] - (4 * dxCrd);
     }
     else
@@ -524,12 +526,15 @@ VOID DisplayCardCount(HWND hWnd)
     UINT wCount;                        // temp wCardCount holder
     static UINT yLoc = 0;               // y pixel location for count
     static UINT wOldCount = 0;          // previous count value
-    HFONT hOldFont = NULL;
+#ifndef _WIN32_WCE
+	HFONT hOldFont = NULL;
+#endif
     SIZE  size;
 
-
+#ifndef _WIN32_WCE
     if (IsIconic(hWnd))                 // don't draw on icon!
         return;
+#endif
 
     hDC = GetWindowDC(hWnd);                // get DC for entire window
     if (!hDC)
@@ -537,15 +542,17 @@ VOID DisplayCardCount(HWND hWnd)
 
     SetBkColor(hDC, GetSysColor(COLOR_MENU));
 
+#ifndef _WIN32_WCE
      if (hMenuFont)
         hOldFont = SelectObject(hDC, hMenuFont);
+#endif
 
     wCount = wCardCount;
     if (wCount == 0xFFFF)                   // decremented past 0?
         wCount = 0;
 
     LoadString(hInst, IDS_CARDSLEFT, smallbuf, SMALL);
-    wsprintf(buffer, smallbuf, wCount);
+    StringCchPrintf(buffer, (sizeof(buffer) / sizeof(TCHAR)), smallbuf, wCount);
 
     if (yLoc == 0)                          // needs to be set only once
     {
@@ -555,7 +562,11 @@ VOID DisplayCardCount(HWND hWnd)
         GetTextMetrics(hDC, &tm);
         offset = (GetSystemMetrics(SM_CYMENU) - tm.tmHeight) / 2;
 
+#ifdef _WIN32_WCE
+		yLoc = GetSystemMetrics(SM_CYDLGFRAME)      // sizing frame
+#else
         yLoc = GetSystemMetrics(SM_CYFRAME)         // sizing frame
+#endif
          + GetSystemMetrics(SM_CYCAPTION)           // height of caption
          + offset;
     }
@@ -567,17 +578,27 @@ VOID DisplayCardCount(HWND hWnd)
     if (xLoc > xOldLoc)                     // need to erase old score?
     {
         SetTextColor(hDC, GetSysColor(COLOR_MENU));     // background colour
-        wsprintf(oldbuffer, smallbuf, wOldCount);
+        StringCchPrintf(oldbuffer, (sizeof(oldbuffer) / sizeof(TCHAR)), smallbuf, wOldCount);
+#ifdef _WIN32_WCE
+		ExtTextOut(hDC, xOldLoc, yLoc, 0, NULL, oldbuffer, lstrlen(buffer), NULL);
+#else
         TextOut(hDC, xOldLoc, yLoc, oldbuffer, lstrlen(buffer));
+#endif
     }
     SetTextColor(hDC, GetSysColor(COLOR_MENUTEXT));
-    TextOut(hDC, xLoc, yLoc, buffer, lstrlen(buffer));
+#ifdef _WIN32_WCE
+	ExtTextOut(hDC, xLoc, yLoc, 0, NULL, buffer, lstrlen(buffer), NULL);
+#else
+	TextOut(hDC, xLoc, yLoc, buffer, lstrlen(buffer));
+#endif
 
     xOldLoc = xLoc;
     wOldCount = wCount;
 
+#ifndef _WIN32_WCE
     if (hMenuFont)
         SelectObject(hDC, hOldFont);
+#endif
 
     ReleaseDC(hWnd, hDC);
 }
@@ -596,6 +617,10 @@ VOID Payoff(HDC hDC)
     HDC     hMemDC;             // bitmap memory DC
     HBITMAP hBitmap;
     HBITMAP hOldBitmap;
+#ifdef _WIN32_WCE
+	INT     xStretch = 160;
+	INT     yStretch = 160;
+#else
     INT     xStretch = 320;     // stretched size of bitmap
     INT     yStretch = 320;
 
@@ -604,6 +629,7 @@ VOID Payoff(HDC hDC)
         xStretch = 32 * 8;
         yStretch = 32 * 6;
     }
+#endif
 
     DrawKing(hDC, NONE, TRUE);
 
@@ -674,10 +700,16 @@ VOID DrawKing(HDC hDC, UINT state, BOOL bDraw)
         if (state == NONE)
         {
             hOldBrush = SelectObject(hMemDC, hBgndBrush);
-            PatBlt(hMemDC, 0, 0, BMWIDTH, BMHEIGHT, PATCOPY);
+			PatBlt(hMemDC, 0, 0, BMWIDTH, BMHEIGHT, PATCOPY);
             SelectObject(hMemDC, hOldBrush);
         }
-        BitBlt(hDC,wIconOffset,ICONY,BMWIDTH,BMHEIGHT,hMemDC,0,0,SRCCOPY);
+
+#ifdef _WIN32_WCE
+		StretchBlt(hDC,wIconOffset,ICONY,BMWIDTH/2,BMHEIGHT/2,hMemDC,0,0,BMWIDTH,BMHEIGHT,SRCCOPY);
+#else
+		BitBlt(hDC,wIconOffset,ICONY,BMWIDTH,BMHEIGHT,hMemDC,0,0,SRCCOPY);
+#endif
+
         SelectObject(hMemDC, hOldBitmap);
         DeleteObject(hBitmap);
     }
@@ -694,12 +726,35 @@ returns a UINT from 1 to MAXGAMENUBMER
 
 ****************************************************************************/
 
+#if defined(_WIN32_WCE)
+DWORD GetCurrentTime32()
+{
+  SYSTEMTIME systemTime = { 0 };
+  FILETIME fileTime = { 0 };
+  DWORD result = 0;
+  GetSystemTime(&systemTime);
+  if (SystemTimeToFileTime(&systemTime, &fileTime))
+  {
+    ULONGLONG temp = 0;
+    memcpy(&temp, &fileTime, sizeof(FILETIME));
+    temp -= 116444736000000000; // subtract 1970-01-01 00:00 (UTC)
+    temp /= 10000000; // convert to seconds
+    result = (DWORD)temp;
+  }
+  return result;
+}
+#endif
 
 UINT GenerateRandomGameNum()
 {
     UINT wGameNum;
 
-    srand((unsigned int)time(NULL));
+#ifdef _WIN32_WCE
+    srand((unsigned int)GetCurrentTime32());
+#else
+    srand((unsigned int)GetCurrentTime());
+#endif
+
     rand();
     rand();
     wGameNum = rand();

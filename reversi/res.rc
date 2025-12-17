@@ -27,6 +27,7 @@ BEGIN
             MENUITEM TEXT("&Expert"),   44
             MENUITEM TEXT("&Master"),   46
         END
+#ifndef _WIN32_WCE
 #ifndef NOHELP
     POPUP TEXT("&Help")
         BEGIN
@@ -48,12 +49,15 @@ BEGIN
             MENUITEM TEXT("&About Reversi..."), MN_HELP_ABOUT
         END
 #endif /*NOHELP*/
+#endif
 END
 
 MAINACC ACCELERATORS
 BEGIN
     "^h",    50,                NOINVERT
+#ifndef _WIN32_WCE
     VK_F1,   MN_HELP_INDEX,     VIRTKEY
+#endif
     VK_F10,  27,                VIRTKEY
 END
 
@@ -102,7 +106,7 @@ BEGIN
       VALUE "FileDescription",	"Reversi\0"
       VALUE "CompanyName", "Microsoft"
       VALUE "FileVersion",	"5.0\0"
-      VALUE "InternalName",	"decompkernelcache.exe\0"
+      VALUE "InternalName",	"reversi.exe\0"
       VALUE "LegalCopyright",	"(C) Microsoft, all rights reserved\0"
       VALUE "OriginalFilename",	"reversi.exe\0"
       VALUE "ProductName",	"reversi\0"

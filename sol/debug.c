@@ -1,5 +1,9 @@
 #include "sol.h"
+
+#ifndef _WIN32_WCE
 #include <io.h>
+#endif
+
 #include <string.h>
 #include "assert.h"
 

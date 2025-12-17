@@ -1,4 +1,3 @@
-
 typedef BITMAPINFOHEADER BMP;
 
 #define DyBmp(bmp) ((int) bmp.biHeight)
@@ -8,6 +7,18 @@ typedef BITMAPINFOHEADER BMP;
 #define CbLine(bgnd) (bgnd.cbLine)
 
 typedef BITMAPFILEHEADER BMPHDR;
+
+#ifdef _WIN32_WCE
+#define OFS_MAXPATHNAME 128
+typedef struct _OFSTRUCT {
+    BYTE cBytes;
+    BYTE fFixedDisk;
+    WORD nErrCode;
+    WORD Reserved1;
+    WORD Reserved2;
+    CHAR szPathName[OFS_MAXPATHNAME];
+} OFSTRUCT, *LPOFSTRUCT, *POFSTRUCT;
+#endif
 
 typedef struct _bgnd
 {

@@ -7,6 +7,7 @@
 #include <htmlhelp.h>   // for HtmlHelp()
 #include "shellapi.h"   // for ShellAbout
 #include <port1632.h>
+#include <strsafe.h>
 
 #include "main.h"
 #include "res.h"
@@ -17,7 +18,12 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
+
+#ifndef _WIN32_WCE
 #include "dos.h"
+#else
+#include <time.h>
+#endif
 
 extern INT dypBorder;
 extern INT dxpBorder;
@@ -64,7 +70,7 @@ VOID ReportErr(WORD idErr)
         else
                 {
                 LoadString(hInst, ID_ERR_UNKNOWN, szMsgTitle, cchMsgMax);
-                wsprintf(szMsg, szMsgTitle, idErr);
+				StringCchPrintf(szMsg, sizeof(szMsg), TEXT("Error: %d"), idErr); 
                 }
 
         LoadString(hInst, ID_ERR_TITLE, szMsgTitle, cchMsgMax);
@@ -84,6 +90,7 @@ VOID LoadSz(WORD id, TCHAR * sz, DWORD cch)
 
 // Routines to read the ini file.
 
+#ifndef _WIN32_WCE
 INT ReadIniInt(INT iszPref, INT valDefault, INT valMin, INT valMax)
 {
 	return max(valMin, min(valMax,
@@ -95,21 +102,42 @@ INT ReadIniInt(INT iszPref, INT valDefault, INT valMin, INT valMax)
 
 VOID ReadIniSz(INT iszPref, TCHAR FAR * szRet)
 {
+
 	GetPrivateProfileString(szClass, rgszPref[iszPref], szDefaultName, szRet, cchNameMax, szIniFile);
 }
-
-
-
+#endif
 
 /****** I N I T  C O N S T ******/
+
+#ifdef _WIN32_WCE
+DWORD GetCurrentTime()
+{
+  SYSTEMTIME systemTime = { 0 };
+  FILETIME fileTime = { 0 };
+  DWORD result = 0;
+  GetSystemTime(&systemTime);
+  if (SystemTimeToFileTime(&systemTime, &fileTime))
+  {
+    ULONGLONG temp = 0;
+    memcpy(&temp, &fileTime, sizeof(FILETIME));
+    temp -= 116444736000000000; // subtract 1970-01-01 00:00 (UTC)
+    temp /= 10000000; // convert to seconds
+    result = (DWORD)temp;
+  }
+  return result;
+}
+#endif
 
 VOID InitConst(VOID)
 {
 INT     iAlreadyPlayed = 0;     // have we already updated the registry ?
 DWORD   dwDisposition;
        
-
+#ifdef _WIN32_WCE
+        srand(GetCurrentTime());
+#else
         srand(LOWORD(GetCurrentTime()));
+#endif
 
         LoadSz(ID_GAMENAME, szClass, ARRAYSIZE(szClass));
         LoadSz(ID_MSG_SEC,  szTime, ARRAYSIZE(szTime));
@@ -130,6 +158,7 @@ DWORD   dwDisposition;
 
 
         // Read it from the .ini file and write it to registry.
+#ifndef _WIN32_WCE
         if (!iAlreadyPlayed)
         {
             Preferences.Height= ReadIniInt(iszPrefHeight,MINHEIGHT,DEFHEIGHT,25);
@@ -167,7 +196,41 @@ DWORD   dwDisposition;
             // Write it to registry.
             WritePreferences();
         }
+#else
+        if (!iAlreadyPlayed)
+        {
+            Preferences.Height= DEFHEIGHT;
+            Preferences.Width= DEFWIDTH;
 
+            Preferences.wGameType = (WORD)wGameBegin;
+            Preferences.Mines    = 10;
+            Preferences.xWindow  = 80;
+            Preferences.yWindow  = 80;
+
+            Preferences.fSound = 0;
+            Preferences.fMark  = fTrue;
+            Preferences.fTick  = fFalse;
+            Preferences.fMenu  = fmenuAlwaysOn;
+	
+            Preferences.rgTime[wGameBegin]  = 999;
+            Preferences.rgTime[wGameInter]  = 999;
+            Preferences.rgTime[wGameExpert] = 999;
+
+            // set the color preference so we will use the right bitmaps
+            // numcolors may return -1 on true color devices
+            {
+            HDC hDC = GetDC(GetDesktopWindow());
+            Preferences.fColor  = (BOOL)(GetDeviceCaps(hDC, NUMCOLORS) != 2);
+            ReleaseDC(GetDesktopWindow(),hDC);
+            }
+
+            if (FSoundOn())
+                Preferences.fSound = FInitTunes();
+            
+            // Write it to registry.
+            WritePreferences();
+        }
+#endif
 }
 
 
@@ -187,13 +250,15 @@ VOID SetMenuBar(INT fActive)
 {
         Preferences.fMenu = fActive;
         FixMenus();
-        SetMenu(hwndMain, FMenuOn() ? hMenu : NULL);
+#ifndef _WIN32_WCE 
+		SetMenu(hwndMain, FMenuOn() ? hMenu : NULL);
+#endif
         AdjustWindow(fResize);
 }
 
 
 /****** D O  A B O U T ******/
-
+#ifndef _WIN32_WCE
 VOID DoAbout(VOID)
 {
         TCHAR szVersion[cchMsgMax];
@@ -205,7 +270,7 @@ VOID DoAbout(VOID)
         ShellAbout(hwndMain,
           szVersion, szCredit, LoadIcon(hInst, MAKEINTRESOURCE(ID_ICON_MAIN)));
 }
-
+#endif
 
 /****** G E T  D L G  I N T ******/
 
