@@ -16,10 +16,22 @@
 #define VER_FILEDESCRIPTION_STR     TEXT("Solitaire Game Applet")
 #define VER_INTERNALNAME_STR        TEXT("sol.exe")
 #define VER_ORIGINALFILENAME_STR    TEXT("sol.exe")
+
+#ifndef VER_FILEFLAGSMASK
 #define VER_FILEFLAGSMASK           0x3F
+#endif
+
+#ifndef VER_FILEFLAGS
 #define VER_FILEFLAGS               VS_FFI_FILEFLAGSMASK
+#endif
+
+#ifndef VER_FILEOS
 #define VER_FILEOS                  VOS__WINDOWS32
+#endif
+
+#ifndef VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR         TEXT("Microsoft")
+#endif
 
 #include "common.ver"
 

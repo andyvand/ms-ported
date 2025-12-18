@@ -196,9 +196,21 @@ END
 #define	VER_FILESUBTYPE	VFT2_UNKNOWN
 #define VER_FILEDESCRIPTION_STR     TEXT("Entertainment Pack FreeCell Game")
 #define VER_INTERNALNAME_STR        TEXT("freecell\0")
+
+#ifndef VER_FILEFLAGSMASK
 #define VER_FILEFLAGSMASK 0x3F
+#endif
+
+#ifndef VER_FILEFLAGSMASK
 #define VER_FILEFLAGS VS_FFI_FILEFLAGSMASK
+#endif
+
+#ifndef VER_FILEOS
 #define VER_FILEOS VOS__WINDOWS32
+#endif
+
+#ifndef VER_COMPANYNAME_STR
 #define VER_COMPANYNAME_STR TEXT("Microsoft")
+#endif
 
 #include "common.ver"

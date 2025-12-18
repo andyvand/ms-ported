@@ -8,6 +8,11 @@
 #include "port1632.h"
 #include "reversi.h"
 
+#ifdef __aarch64__
+#undef  __stdcall
+#define __stdcall
+#endif
+
 VOID NEAR PASCAL paintmove(BYTE b[BoardSize], INT move, INT friendly,
         INT enemy);
 BOOL NEAR PASCAL msgcheck(VOID);

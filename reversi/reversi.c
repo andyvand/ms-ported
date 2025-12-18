@@ -23,6 +23,11 @@
 #include "port1632.h"
 #include "reversi.h"
 
+#ifdef __aarch64__
+#undef  __stdcall
+#define __stdcall
+#endif
+
 /* Exported procedures called from other modules */
 LRESULT APIENTRY ReversiWndProc(HWND, UINT, WPARAM, LPARAM);
 VOID APIENTRY InverseMessage(HWND, UINT, UINT_PTR, DWORD);

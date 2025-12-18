@@ -10,6 +10,11 @@
 
 #include "port1632.h"
 
+#ifdef __aarch64__
+#undef  __stdcall
+#define __stdcall
+#endif
+
 // Babakj: Set DEBUG based on DBG (1 or 0) to do FREE or CHECKED builds of Solitaire
 #if DBG
 #define DEBUG
