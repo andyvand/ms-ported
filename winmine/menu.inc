@@ -20,8 +20,8 @@ BEGIN
  MENUITEM  SEPARATOR
  MENUITEM  "E&xit",           IDM_EXIT
  END	
- 	
-#ifndef _WIN32_WCE
+ 
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
  POPUP     "&Help"
  BEGIN	
  MENUITEM  "&Contents\tF1",             IDM_HELP
@@ -37,7 +37,9 @@ END
 
 ID_MENU_ACCEL ACCELERATORS
 BEGIN
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
 VK_F1, IDM_HELP,  VIRTKEY
+#endif
 VK_F2, IDM_NEW,   VIRTKEY
 END
 

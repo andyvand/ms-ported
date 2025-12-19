@@ -1,4 +1,5 @@
-#include "windows.h"
+#include <windows.h>
+
 #include "res.h"
 
 1 RT_MANIFEST winmine.xml
@@ -20,7 +21,7 @@ ID_TUNE_LOST  WAVE   bmp/explode.wav
 #include "strings.inc"
 #include "menu.inc"
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
 #include <winver.h>
 #else
 #include <ntverp.h>
