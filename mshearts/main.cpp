@@ -118,13 +118,32 @@ BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
 #ifndef _WIN32_WCE
     ON_COMMAND(IDM_ABOUT,       &CMainWindow::OnAbout)
 #endif
+#ifdef _WIN32_WCE
+    ON_COMMAND(IDM_BOSSKEY,     CMainWindow::OnBossKey)
+    ON_COMMAND(IDM_CHEAT,       CMainWindow::OnCheat)
+    ON_COMMAND(IDM_EXIT,        CMainWindow::OnExit)
+#else
     ON_COMMAND(IDM_BOSSKEY,     &CMainWindow::OnBossKey)
     ON_COMMAND(IDM_CHEAT,       &CMainWindow::OnCheat)
     ON_COMMAND(IDM_EXIT,        &CMainWindow::OnExit)
+#endif
 #ifndef _WIN32_WCE
     ON_COMMAND(IDM_HELP,        &CMainWindow::OnHelp)
 //    ON_COMMAND(IDM_HELPONHELP, &CMainWindow::OnHelpOnHelp)
 #endif
+#ifdef _WIN32_WCE
+    ON_COMMAND(IDM_HIDEBUTTON,  CMainWindow::OnHideButton)
+//    ON_COMMAND(IDM_SEARCH,    CMainWindow::OnSearch)
+    ON_COMMAND(IDM_NEWGAME,     CMainWindow::OnNewGame)
+    ON_COMMAND(IDM_OPTIONS,     CMainWindow::OnOptions)
+    ON_COMMAND(IDM_QUOTE,       CMainWindow::OnQuote)
+    ON_COMMAND(IDM_REF,         CMainWindow::OnRef)
+    ON_COMMAND(IDM_SHOWBUTTON,  CMainWindow::OnShowButton)
+    ON_COMMAND(IDM_SCORE,       CMainWindow::OnScore)
+    ON_COMMAND(IDM_SOUND,       CMainWindow::OnSound)
+    ON_COMMAND(IDM_WELCOME,     CMainWindow::OnWelcome)
+    ON_BN_CLICKED(IDM_BUTTON,   CMainWindow::OnPass)
+#else
     ON_COMMAND(IDM_HIDEBUTTON,  &CMainWindow::OnHideButton)
 //    ON_COMMAND(IDM_SEARCH,    &CMainWindow::OnSearch)
     ON_COMMAND(IDM_NEWGAME,     &CMainWindow::OnNewGame)
@@ -136,6 +155,7 @@ BEGIN_MESSAGE_MAP( CMainWindow, CFrameWnd )
     ON_COMMAND(IDM_SOUND,       &CMainWindow::OnSound)
     ON_COMMAND(IDM_WELCOME,     &CMainWindow::OnWelcome)
     ON_BN_CLICKED(IDM_BUTTON,   &CMainWindow::OnPass)
+#endif
     ON_WM_CHAR()
 #ifndef _WIN32_WCE
     ON_MESSAGE(WM_PRINTCLIENT,  &CMainWindow::OnPrintClient)
@@ -1013,6 +1033,19 @@ WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdS
     // call shared/exported WinMain
     ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 #endif
+
+    return ret;
+}
+#elif defined(_WIN32_WCE)
+extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
+
+extern "C" int WINAPI
+WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
+{
+    int ret = 0;
+
+    // call shared/exported WinMain
+    ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
     return ret;
 }
