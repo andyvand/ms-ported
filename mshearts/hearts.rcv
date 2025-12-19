@@ -2,7 +2,7 @@
 /*        HEARTS.RCV                                                */
 /********************************************************************/
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
 #include <winver.h>
 #else
 #include <ntverp.h>
