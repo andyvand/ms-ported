@@ -37,7 +37,7 @@ DDE:DDE
 DDE::DDE(const TCHAR *server, const TCHAR *topic, DDECALLBACK CallBack,
          DWORD filters) : m_idInst(0), m_CallBack(NULL)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     // Check for basic compatibility, ie protect mode
 
 //    m_bResult = ( (LOBYTE(GetVersion()) > 2) && (GetWinFlags() & WF_PMODE) )
@@ -79,7 +79,7 @@ DDE::~DDE
 
 DDE::~DDE()
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (!m_idInst)
         return;
 
@@ -101,7 +101,7 @@ DDE:CreateDataHandle
 
 HDDEDATA DDE::CreateDataHandle(void FAR *pdata, DWORD size, HSZ hItem)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     return ::DdeCreateDataHandle(m_idInst,       // instance ID
                                  (LPBYTE)pdata,  // data to convert
                                  size,           // size of data
@@ -124,7 +124,7 @@ DDE:CreateStrHandle
 
 HSZ DDE::CreateStrHandle(LPCTSTR str, int codepage)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     HSZ hsz = NULL;
 
     if (m_idInst)
@@ -149,7 +149,7 @@ DDE::DestroyStrHandle
 
 void DDE::DestroyStrHandle(HSZ hsz)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (m_idInst && hsz)
         ::DdeFreeStringHandle(m_idInst, hsz);
 #endif
@@ -168,7 +168,7 @@ DDE:GetData
 
 PBYTE DDE::GetData(HDDEDATA hData, PBYTE pdata, DWORD len)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     DWORD datalen = ::DdeGetData(hData, NULL, 0, 0);
     if (len == 0)
         len = datalen;
@@ -191,7 +191,7 @@ DDE:GetDataString
 
 CString DDE::GetDataString(HDDEDATA hData)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (hData == NULL)          // default paramenter
         return m_data;
 
@@ -215,7 +215,7 @@ DDE::Initialize
 
 BOOL DDE::Initialize()
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     m_initerr = (WORD)::DdeInitialize(&m_idInst, (PFNCALLBACK)m_CallBack,
                  m_filters, 0);
     m_bResult = (m_initerr == DMLERR_NO_ERROR);
@@ -234,7 +234,7 @@ DDE::SetCallBack
 
 BOOL DDE::SetCallBack(DDECALLBACK CallBack)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (m_CallBack)
         FreeProcInstance((FARPROC)m_CallBack);
 
@@ -263,7 +263,7 @@ DDEServer::DDEServer(const TCHAR *server, const TCHAR *topic,
                      DDECALLBACK ServerCallBack, DWORD filters) :
                      DDE(server, topic, ServerCallBack, filters)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (!m_bResult)
         return;
 
@@ -282,7 +282,7 @@ DDEServer::~DDEServer
 
 DDEServer::~DDEServer()
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     ::DdeNameService(m_idInst, NULL, NULL, DNS_UNREGISTER);
 #endif
 }
@@ -297,7 +297,7 @@ DDEServer::PostAdvise
 
 BOOL DDEServer::PostAdvise(HSZ hItem)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     return ::DdePostAdvise(m_idInst, m_hTopic, hItem);
 #else
 	return FALSE;
@@ -320,7 +320,7 @@ DDEClient::DDEClient(const TCHAR *server, const TCHAR *topic,
                      DDECALLBACK ClientCallBack, DWORD filters) :
                      DDE(server, topic, ClientCallBack, filters)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (!m_bResult)             // if DDE construction failed
         return;
 
@@ -342,7 +342,7 @@ DDEClient::~DDEClient
 
 DDEClient::~DDEClient()
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     ::DdeDisconnect(m_hConv);
 #endif
 }
@@ -358,7 +358,7 @@ DDEClient:Poke
 
 BOOL DDEClient::Poke(HSZ hItem, void FAR *pdata, DWORD len, DWORD uTimeout)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (uTimeout == NULL)   // default
         m_timeout = m_deftimeout;
     else
@@ -373,7 +373,7 @@ BOOL DDEClient::Poke(HSZ hItem, void FAR *pdata, DWORD len, DWORD uTimeout)
 
 BOOL DDEClient::Poke(HSZ hItem, const TCHAR *string, DWORD uTimeout)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (uTimeout == NULL)   // default
         m_timeout = m_deftimeout;
     else
@@ -403,7 +403,7 @@ DDEClient::RequestData
 
 BOOL DDEClient::RequestString(HSZ hItem, DWORD uTimeout)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (uTimeout == NULL)   // default
         m_timeout = m_deftimeout;
     else
@@ -424,7 +424,7 @@ BOOL DDEClient::RequestString(HSZ hItem, DWORD uTimeout)
 
 HDDEDATA DDEClient::RequestData(HSZ hItem, DWORD uTimeout)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (uTimeout == NULL)   // default
         m_timeout = m_deftimeout;
     else
@@ -451,7 +451,7 @@ DDEClient::StartAdviseLoop
 
 BOOL DDEClient::StartAdviseLoop(HSZ hItem)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     ClientTransaction(NULL, 0, hItem, XTYP_ADVSTART);
     return m_bResult;
 #else
@@ -470,7 +470,7 @@ DDEClient::ClientTransaction
 HDDEDATA DDEClient::ClientTransaction(void FAR *lpvData, DWORD cbData,
                                       HSZ hItem, UINT uType, UINT uFmt)
 {
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     HDDEDATA hData = ::DdeClientTransaction(
             (LPBYTE)lpvData,    // data to send to server
             cbData,             // size of data in bytes

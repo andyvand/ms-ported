@@ -1,0 +1,21 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [01:0000000047:WARNN ] Warning(s) in directory "C:\WINCE700\OSDesigns\qemu\qemu\mshearts\".
+BUILD: [01:0000000048:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(88) : warning RC4005: 'WS_OVERLAPPED' : redefinition
+BUILD: [01:0000000049:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(328) : warning RC4005: 'ES_LEFT' : redefinition
+BUILD: [01:0000000050:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(329) : warning RC4005: 'ES_CENTER' : redefinition
+BUILD: [01:0000000051:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(330) : warning RC4005: 'ES_RIGHT' : redefinition
+BUILD: [01:0000000052:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(331) : warning RC4005: 'ES_MULTILINE' : redefinition
+BUILD: [01:0000000053:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(332) : warning RC4005: 'ES_UPPERCASE' : redefinition
+BUILD: [01:0000000054:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(333) : warning RC4005: 'ES_LOWERCASE' : redefinition
+BUILD: [01:0000000055:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(334) : warning RC4005: 'ES_PASSWORD' : redefinition
+BUILD: [01:0000000056:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(335) : warning RC4005: 'ES_AUTOVSCROLL' : redefinition
+BUILD: [01:0000000057:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(336) : warning RC4005: 'ES_AUTOHSCROLL' : redefinition
+BUILD: [01:0000000058:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(337) : warning RC4005: 'ES_NOHIDESEL' : redefinition
+BUILD: [01:0000000059:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(338) : warning RC4005: 'ES_OEMCONVERT' : redefinition
+BUILD: [01:0000000060:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(339) : warning RC4005: 'ES_READONLY' : redefinition
+BUILD: [01:0000000061:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(340) : warning RC4005: 'ES_WANTRETURN' : redefinition
+BUILD: [01:0000000062:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(42) : warning RC4005: 'LB_ADDSTRING' : redefinition
+BUILD: [01:0000000063:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(43) : warning RC4005: 'CB_ADDSTRING' : redefinition
+BUILD: [01:0000000064:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(570) : warning RC4005: 'HDS_HORZ' : redefinition
+BUILD: [01:0000000065:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(571) : warning RC4005: 'HDS_BUTTONS' : redefinition
+BUILD: [01:0000000066:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(572) : warning RC4005: 'HDS_HIDDEN' : redefinition

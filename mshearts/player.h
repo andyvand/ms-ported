@@ -40,7 +40,7 @@ If the human is the gamemeister, these are also the id's.
 #ifndef	PLAYER_INC
 #define	PLAYER_INC
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 const int   HORZSPACING = 5;
 const int   VERTSPACING = 5;
 #else

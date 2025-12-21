@@ -45,7 +45,7 @@ Class DDEClient : DDE
 #ifndef	DDE_INC
 #define	DDE_INC
 
-#include <ddeml.h>
+#include "ddeml.h"
 
 #ifndef EXPENTRY
 #define EXPENTRY WINAPI

@@ -63,13 +63,8 @@ void CMainWindow::OnWelcome()
     else
         CheckNddeShare();
 
-#ifndef _WIN32_WCE
     CWelcomeDlg welcome(this);
-#else
-	bAutostarted = TRUE;
-#endif
 
-#ifndef _WIN32_WCE
   again:                            // cancel from Browse returns here
     if (!bAutostarted && !bCmdLine)
     {
@@ -83,10 +78,6 @@ void CMainWindow::OnWelcome()
     bNetDdeActive = welcome.IsNetDdeActive();
 
     if (bAutostarted || welcome.IsGameMeister())    // if Gamemeister
-#else
-	bNetDdeActive = FALSE;
-	if (bAutostarted)
-#endif
     {
         CClientDC   dc(this);
 #ifdef USE_MIRRORING
@@ -95,7 +86,7 @@ void CMainWindow::OnWelcome()
 #endif
         role = GAMEMEISTER;
         m_myid = 0;
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
         ddeServer = new DDEServer(szServerName, szTopicName,
                                     (DDECALLBACK)DdeServerCallBack);
         if (!ddeServer || !ddeServer->GetResult())
@@ -113,11 +104,7 @@ void CMainWindow::OnWelcome()
         else
 #endif
             p[0]->SetStatus(IDS_GMWAIT);
-#ifdef _WIN32_WCE
-		CString name;
-#else
         CString name = welcome.GetMyName();
-#endif
 
         if (name.IsEmpty())
             name.LoadString(IDS_DEALER);
@@ -176,14 +163,14 @@ void CMainWindow::OnWelcome()
         CString  sSlashes("\\\\");
         server = sSlashes + server;
     }
+#endif
 
     name = welcome.GetMyName();
-#endif
 
     if (name.IsEmpty())
         name.LoadString(IDS_UNKNOWN);
 
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     ClientConnect(server, name);
 #endif
 }

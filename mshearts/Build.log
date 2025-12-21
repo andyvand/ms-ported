@@ -1,0 +1,197 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Build started with parameters:
+BUILD: [00:0000000001:PROGC ] Build started in directory: C:\WINCE700\OSDesigns\qemu\qemu\mshearts
+BUILD: [00:0000000002:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, PRECOMPHEADER, COMPILE, LOCALIZE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
+BUILD: [00:0000000003:PROGC ] Loading database "C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat".
+BUILD: [00:0000000004:PROGC ] Done.
+BUILD: [00:0000000005:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000006:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000007:PROGC ] Scan C:\WINCE700\OSDesigns\qemu\qemu\mshearts\
+BUILD: [01:0000000008:PROGC ] ReadSourcesFiles for project C:\WINCE700\OSDesigns\qemu\qemu\mshearts\.
+BUILD: [00:0000000009:PROGC ] Directory scanning complete.
+BUILD: [00:0000000010:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat.
+BUILD: [00:0000000011:INFO  ] Done.
+BUILD: [00:0000000012:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000013:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000014:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000015:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000016:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000017:PROGC ] Starting MC Pass.
+BUILD: [00:0000000018:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000019:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000020:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000021:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000022:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000023:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000024:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000025:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000026:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000027:INFO  ] Target: obj\ARMV7\retail\hearts.res from Source: C:\WINCE700\OSDesigns\qemu\qemu\mshearts\hearts.rc is out of date. Older file is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\hearts.rc
+BUILD: [00:0000000028:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\mshearts\hearts.rc because target: obj\ARMV7\retail\hearts.res is out of date.
+BUILD: [00:0000000029:INFO  ] Target: obj\ARMV7\retail\main.obj from Source: C:\WINCE700\OSDesigns\qemu\qemu\mshearts\main.cpp is out of date. Older file is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\main.cpp
+BUILD: [00:0000000030:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\mshearts\main.cpp because target: obj\ARMV7\retail\main.obj is out of date.
+BUILD: [00:0000000031:PROGC ] Building COMPILE Pass in C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ directory.
+BUILD: [00:0000000032:PROG  ] 'NMAKE.EXE TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000033:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000034:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.default
+BUILD: [01:0000000035:INFO  ] makefile.def: BUILDROOT is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\
+BUILD: [01:0000000036:INFO  ] makefile.def: Including C:\WINCE700\OSDesigns\qemu\qemu\mshearts\sources
+BUILD: [01:0000000037:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.framework.default
+BUILD: [01:0000000038:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000039:INFO  ] Directory: C:\WINCE700\OSDesigns\qemu\qemu\mshearts
+BUILD: [01:0000000040:INFO  ] TARGETNAME: mshearts
+BUILD: [01:0000000041:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000042:PROGC ] Resource Compiling .\hearts.rc
+BUILD: [01:0000000043:INFO  ] 	rc -r -I. -I. -I.. -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\wceshellfe\oak\inc -IC:\WINCE700\public\shell\oak\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\oak\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\oak\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\oak\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\common\ddk\inc -IC:\WINCE700\private\winceos\inc -IC:\WINCE700\public\common\sdk\inc\test -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -I.\Resource\0409  -DUNDER_CE=700  -DINTERNATIONAL -l 409 -c 1252  -foobj\ARMV7\retail\hearts.res C:\WINCE700\OSDesigns\qemu\qemu\mshearts\.\hearts.rc
+BUILD: [01:0000000044:INFO  ] Microsoft (R) Windows (R) Resource Compiler Version 6.0.5478.0
+BUILD: [01:0000000045:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000046:INFO  ] 
+BUILD: [01:0000000047:WARNN ] Warning(s) in directory "C:\WINCE700\OSDesigns\qemu\qemu\mshearts\".
+BUILD: [01:0000000048:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(88) : warning RC4005: 'WS_OVERLAPPED' : redefinition
+BUILD: [01:0000000049:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(328) : warning RC4005: 'ES_LEFT' : redefinition
+BUILD: [01:0000000050:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(329) : warning RC4005: 'ES_CENTER' : redefinition
+BUILD: [01:0000000051:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(330) : warning RC4005: 'ES_RIGHT' : redefinition
+BUILD: [01:0000000052:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(331) : warning RC4005: 'ES_MULTILINE' : redefinition
+BUILD: [01:0000000053:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(332) : warning RC4005: 'ES_UPPERCASE' : redefinition
+BUILD: [01:0000000054:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(333) : warning RC4005: 'ES_LOWERCASE' : redefinition
+BUILD: [01:0000000055:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(334) : warning RC4005: 'ES_PASSWORD' : redefinition
+BUILD: [01:0000000056:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(335) : warning RC4005: 'ES_AUTOVSCROLL' : redefinition
+BUILD: [01:0000000057:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(336) : warning RC4005: 'ES_AUTOHSCROLL' : redefinition
+BUILD: [01:0000000058:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(337) : warning RC4005: 'ES_NOHIDESEL' : redefinition
+BUILD: [01:0000000059:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(338) : warning RC4005: 'ES_OEMCONVERT' : redefinition
+BUILD: [01:0000000060:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(339) : warning RC4005: 'ES_READONLY' : redefinition
+BUILD: [01:0000000061:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(340) : warning RC4005: 'ES_WANTRETURN' : redefinition
+BUILD: [01:0000000062:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(42) : warning RC4005: 'LB_ADDSTRING' : redefinition
+BUILD: [01:0000000063:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(43) : warning RC4005: 'CB_ADDSTRING' : redefinition
+BUILD: [01:0000000064:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(570) : warning RC4005: 'HDS_HORZ' : redefinition
+BUILD: [01:0000000065:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(571) : warning RC4005: 'HDS_BUTTONS' : redefinition
+BUILD: [01:0000000066:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(572) : warning RC4005: 'HDS_HIDDEN' : redefinition
+BUILD: [01:0000000067:PROGC ] Compiling .\main.cpp
+BUILD: [01:0000000068:INFO  ] cl -nologo   -Foobj\ARMV7\retail\  /Gy -c -I. -I. -I.. -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\wceshellfe\oak\inc -IC:\WINCE700\public\shell\oak\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\oak\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\oak\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\oak\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\common\ddk\inc -IC:\WINCE700\private\winceos\inc -IC:\WINCE700\public\common\sdk\inc\test -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -I.\Resource\0409 -Ox -Os -GF -Zi -Fdobj\ARMV7\retail\mshearts.pdb -DTHUMBSUPPORT -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DUNICODE -D_UNICODE -DUNDER_CE=700 -D_WIN32_WCE=0x700 -DWIN32 -DSTRICT -DARM -DARMV7 -D_ARM_ -D_MIDL_USE_GUIDDEF_ -DNDEBUG=1  -IC:\WINCE700\public\common\sdk\inc -D_WIN32_WCE=700 -DUNDER_CE=0x700 -DLARGE_SCREEN=1 -DINTERNATIONAL -DINTLMSG_CODEPAGE=1252 -QRarch7 -QRfpe- -QRinterwork-return -Zi  -Zc:wchar_t- -Zc:forScope- -wd4867 -wd4430 -wd4603 -wd4627 -wd4100 -wd4201 -wd4115 -wd4214 -wd4049 -wd4505 -MT -U_MT /FC -W3     /GR- .\main.cpp 
+BUILD: [01:0000000069:INFO  ] main.cpp
+BUILD: [00:0000000070:PROGC ] Starting LOCALIZE Pass.
+BUILD: [00:0000000071:PROGC ] Analyzing project dependency information for pass LOCALIZE.
+BUILD: [00:0000000072:PROGC ] Starting RENUMBERICONIDS Pass.
+BUILD: [00:0000000073:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
+BUILD: [00:0000000074:PROGC ] Starting RES2RES Pass.
+BUILD: [00:0000000075:PROGC ] Analyzing project dependency information for pass RES2RES.
+BUILD: [00:0000000076:PROGC ] Starting LIB Pass.
+BUILD: [00:0000000077:PROGC ] Analyzing project dependency information for pass LIB.
+BUILD: [00:0000000078:PROG  ] ' prelink.bat' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000079:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000000080:PROGC ] Starting EXPLIB Pass.
+BUILD: [00:0000000081:PROGC ] Analyzing project dependency information for pass EXPLIB.
+BUILD: [00:0000000082:PROGC ] Starting LINK Pass.
+BUILD: [00:0000000083:PROGC ] Analyzing project dependency information for pass LINK.
+BUILD: [00:0000000084:INFO  ] Target: C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe from Source: C:\WINCE700\public\common\oak\lib\ARMV7\retail\uafxwce.lib is out of date. Older file is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\obj\ARMV7\retail\hearts.res
+BUILD: [00:0000000085:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\mshearts\obj\ARMV7\retail\hearts.res because target: C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe is out of date.
+BUILD: [00:0000000086:INFO  ] Target: C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe from Source: C:\WINCE700\public\common\oak\lib\ARMV7\retail\uafxwce.lib is out of date. Older file is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\obj\ARMV7\retail\main.obj
+BUILD: [00:0000000087:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\mshearts\obj\ARMV7\retail\main.obj because target: C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe is out of date.
+BUILD: [00:0000000088:PROGC ] Building LINK Pass in C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ directory.
+BUILD: [00:0000000089:PROG  ] 'NMAKE.EXE TargetExeFiles  -nologo BUILDMSG=Stop.  BUILDROOT=C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ LINKONLY=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000090:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000091:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.default
+BUILD: [01:0000000092:INFO  ] makefile.def: BUILDROOT is C:\WINCE700\OSDesigns\qemu\qemu\mshearts\
+BUILD: [01:0000000093:INFO  ] makefile.def: Including C:\WINCE700\OSDesigns\qemu\qemu\mshearts\sources
+BUILD: [01:0000000094:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.framework.default
+BUILD: [01:0000000095:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000096:INFO  ] Directory: C:\WINCE700\OSDesigns\qemu\qemu\mshearts
+BUILD: [01:0000000097:INFO  ] TARGETNAME: mshearts
+BUILD: [01:0000000098:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000099:INFO  ] .
+BUILD: [01:0000000100:INFO  ] 	set LIB=
+BUILD: [01:0000000101:PROGC ] Linking C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe
+BUILD: [01:0000000102:INFO  ] 	link /LARGEADDRESSAWARE /filealign:0x1000 -out:C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe -machine:thumb @C:\Users\andyv\AppData\Local\Temp\bld_18842\thr_15\nmC569.tmp
+BUILD: [01:0000000103:INFO  ] Microsoft (R) Incremental Linker Version 9.00.30729.4998
+BUILD: [01:0000000104:INFO  ] Copyright (C) Microsoft Corporation.  All rights reserved.
+BUILD: [01:0000000105:INFO  ] 
+BUILD: [01:0000000106:INFO  ] -nodefaultlib 
+BUILD: [01:0000000107:INFO  ] -entry:WinMainCRTStartup 
+BUILD: [01:0000000108:INFO  ] -pdb:C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.pdb 
+BUILD: [01:0000000109:INFO  ] -pdbaltpath:mshearts.pdb 
+BUILD: [01:0000000110:INFO  ] /opt:ref 
+BUILD: [01:0000000111:INFO  ] -debug -incremental:no 
+BUILD: [01:0000000112:INFO  ] -map:C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.map 
+BUILD: [01:0000000113:INFO  ] -savebaserelocations:C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.rel 
+BUILD: [01:0000000114:INFO  ] -MERGE:.rdata=.text -merge:.astart=.text -ignore:4001,4070,4078,4086,4089,4096,4099,4108,4229 /STACK:65536,4096 -profile -incremental:no 
+BUILD: [01:0000000115:INFO  ] "/subsystem:windowsce,7.00" 
+BUILD: [01:0000000116:INFO  ] -base:0x00010000 
+BUILD: [01:0000000117:INFO  ] obj\ARMV7\retail\hearts.res 
+BUILD: [01:0000000118:INFO  ] obj\ARMV7\retail\cards.res 
+BUILD: [01:0000000119:INFO  ] obj\ARMV7\retail\cards.obj 
+BUILD: [01:0000000120:INFO  ] obj\ARMV7\retail\card.obj 
+BUILD: [01:0000000121:INFO  ] obj\ARMV7\retail\comp2.obj 
+BUILD: [01:0000000122:INFO  ] obj\ARMV7\retail\computer.obj 
+BUILD: [01:0000000123:INFO  ] obj\ARMV7\retail\dde.obj 
+BUILD: [01:0000000124:INFO  ] obj\ARMV7\retail\ddecb.obj 
+BUILD: [01:0000000125:INFO  ] obj\ARMV7\retail\dlg.obj 
+BUILD: [01:0000000126:INFO  ] obj\ARMV7\retail\hearts.obj 
+BUILD: [01:0000000127:INFO  ] obj\ARMV7\retail\human.obj 
+BUILD: [01:0000000128:INFO  ] obj\ARMV7\retail\lead.obj 
+BUILD: [01:0000000129:INFO  ] obj\ARMV7\retail\main.obj 
+BUILD: [01:0000000130:INFO  ] obj\ARMV7\retail\main2.obj 
+BUILD: [01:0000000131:INFO  ] obj\ARMV7\retail\player.obj 
+BUILD: [01:0000000132:INFO  ] obj\ARMV7\retail\sound.obj 
+BUILD: [01:0000000133:INFO  ] obj\ARMV7\retail\welcome.obj 
+BUILD: [01:0000000134:INFO  ] C:\WINCE700\public\common\oak\lib\ARMV7\retail\uafxwce.lib 
+BUILD: [01:0000000135:INFO  ] C:\WINCE700\public\ie7\sdk\lib\ARMV7\retail\wininet.lib 
+BUILD: [01:0000000136:INFO  ] C:\WINCE700\public\common\sdk\lib\ARMV7\retail\commdlg.lib 
+BUILD: [01:0000000137:INFO  ] C:\WINCE700\public\common\exp\lib\ARMV7\retail\commctrl.lib 
+BUILD: [01:0000000138:INFO  ] C:\WINCE700\public\wceshellfe\oak\lib\ARMV7\retail\shellcb.lib 
+BUILD: [01:0000000139:INFO  ] C:\WINCE700\public\apps\oak\lib\ARMV7\retail\ceaygshell.lib 
+BUILD: [01:0000000140:INFO  ] C:\WINCE700\public\common\exp\lib\ARMV7\retail\coredll.lib 
+BUILD: [01:0000000141:INFO  ] C:\WINCE700\public\common\oak\lib\ARMV7\retail\corelib0.lib 
+BUILD: [01:0000000142:INFO  ] C:\WINCE700\OSDesigns\qemu\qemu\Wince700\qemu_ARMV7_Retail\cesysgen\oak\lib\ARMV7\retail\corelib1.lib 
+BUILD: [01:0000000143:INFO  ]    Creating library C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.lib and object C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exp
+BUILD: [01:0000000144:INFO  ] 	copy C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe C:\WINCE700\OSDesigns\qemu\qemu\RelDir\qemu_ARMV7_Release\mshearts.exe
+BUILD: [01:0000000145:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000146:INFO  ] 	copy C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.map C:\WINCE700\OSDesigns\qemu\qemu\RelDir\qemu_ARMV7_Release\mshearts.map
+BUILD: [01:0000000147:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000148:INFO  ] 	if exist C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.pdb copy C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.pdb C:\WINCE700\OSDesigns\qemu\qemu\RelDir\qemu_ARMV7_Release
+BUILD: [01:0000000149:INFO  ]         1 file(s) copied.
+BUILD: [01:0000000150:INFO  ] 	if exist C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.rel copy C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.rel C:\WINCE700\OSDesigns\qemu\qemu\RelDir\qemu_ARMV7_Release\mshearts.rel
+BUILD: [01:0000000151:INFO  ]         1 file(s) copied.
+BUILD: [00:0000000152:PROGC ] Starting MANAGEDRESX Pass.
+BUILD: [00:0000000153:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
+BUILD: [00:0000000154:PROGC ] Starting MANAGEDMOD Pass.
+BUILD: [00:0000000155:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
+BUILD: [00:0000000156:PROGC ] Starting MANAGEDDLL Pass.
+BUILD: [00:0000000157:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
+BUILD: [00:0000000158:PROGC ] Starting MANAGEDEXE Pass.
+BUILD: [00:0000000159:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
+BUILD: [00:0000000160:PROGC ] Starting MANAGEDWIN Pass.
+BUILD: [00:0000000161:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
+BUILD: [00:0000000162:PROGC ] Starting POSTBUILD Pass.
+BUILD: [00:0000000163:PROGC ] Analyzing project dependency information for pass POSTBUILD.
+BUILD: [00:0000000164:PROG  ] ' postlink.bat' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000165:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000000166:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat.
+BUILD: [00:0000000167:INFO  ] Done.
+BUILD: [00:0000000168:PROGC ] Done.
+BUILD: [00:0000000169:PROGC ]                        Files  Warnings  Errors
+BUILD: [00:0000000170:PROGC ] Midl                       0         0       0
+BUILD: [00:0000000171:PROGC ] Message                    0         0       0
+BUILD: [00:0000000172:PROGC ] Precomp Header             0         0       0
+BUILD: [00:0000000173:PROGC ] Resource                   1        19       0
+BUILD: [00:0000000174:PROGC ] XRPack                     0         0       0
+BUILD: [00:0000000175:PROGC ] MASM                       0         0       0
+BUILD: [00:0000000176:PROGC ] SHASM                      0         0       0
+BUILD: [00:0000000177:PROGC ] ARMASM                     0         0       0
+BUILD: [00:0000000178:PROGC ] MIPSASM                    0         0       0
+BUILD: [00:0000000179:PROGC ] C++                        1         0       0
+BUILD: [00:0000000180:PROGC ] C                          0         0       0
+BUILD: [00:0000000181:PROGC ] CheckLibs                  0         0       0
+BUILD: [00:0000000182:PROGC ] Static Libraries           0         0       0
+BUILD: [00:0000000183:PROGC ] Exe's                      1         0       0
+BUILD: [00:0000000184:PROGC ] Dll's                      0         0       0
+BUILD: [00:0000000185:PROGC ] Preprocess deffile         0         0       0
+BUILD: [00:0000000186:PROGC ] Resx                       0         0       0
+BUILD: [00:0000000187:PROGC ] CSharp Compile             0         0       0
+BUILD: [00:0000000188:PROGC ] VCProj Compile             0         0       0
+BUILD: [00:0000000189:PROGC ] Other                      0         0       0
+BUILD: [00:0000000190:PROGC ] 
+BUILD: [00:0000000191:PROGC ] Total                      3        19       0
+BUILD: [00:0000000192:PROGC ] 
+BUILD: [00:0000000193:PROGC ] 19 Warnings,  0 Errors
+BUILD: [00:0000000194:PROGC ] GetSystemTimes (seconds): Idle: 2     Kernel: 3     User: 2    
+BUILD: [00:0000000195:PROGC ] Elapsed  time  (seconds): 2    

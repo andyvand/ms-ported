@@ -6,6 +6,22 @@
 #ifndef __RESOURCE_H__
 #define __RESOURCE_H__
 
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+#if !defined(WCEOLE_ENABLE_DIALOGEX)
+#define DIALOGEX DIALOG DISCARDABLE
+#endif
+
+#include <commctrl.h>
+
+#define  SHMENUBAR RCDATA
+#define I_IMAGENONE		(-2)
+#define NOMENU			0xFFFF
+#define IDS_SHNEW		1
+#define IDM_SHAREDNEW        10
+#define IDM_SHAREDNEWDEFAULT 11
+#define AFXCE_IDD_SAVEMODIFIEDDLG 28701
+#endif // _WIN32_WCE || UNDER_CE
+
 #define IDM_ABOUT       101
 #define IDM_NEWGAME     102
 #define IDM_EXIT        103
@@ -27,6 +43,7 @@
 #define IDM_WELCOME     126
 #define IDM_QUOTE       127
 #define IDM_OPTIONS     128
+#define IDM_HEARTS_MENU 129
 
 #define IDC_YOURNAME    201
 #define IDC_JOIN        202

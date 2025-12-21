@@ -19,7 +19,7 @@ SND_BREAK   WAVE    glass.wav
 SND_QUEEN   WAVE    timpani.wav
 SND_QUOTE   WAVE    quote2.wav
 
-HeartsMenu  MENU
+IDM_HEARTS_MENU  MENU
 BEGIN
     POPUP        "&Game"
     BEGIN

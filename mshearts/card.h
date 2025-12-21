@@ -40,7 +40,7 @@ const   int     DIAMONDS    = 1;
 const   int     HEARTS      = 2;
 const   int     SPADES      = 3;
 
-#ifndef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 const   int     POPSPACING  = 5;       // selected cards pop up this high
 #else
 const   int     POPSPACING  = 20;       // selected cards pop up this high

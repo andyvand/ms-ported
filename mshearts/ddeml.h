@@ -167,7 +167,11 @@ extern "C" {
 #define SZDDESYS_ITEM_HELP __MINGW_STRING_AW("Help")
 #define SZDDE_ITEM_ITEMLIST __MINGW_STRING_AW("TopicItemList")
 
-#define DdeInitialize __MINGW_NAME_AW(DdeInitialize)
+#ifdef _UNICODE
+#define DdeInitialize DdeInitializeW
+#else
+#define DdeInitialize DdeInitializeA
+#endif
 
   typedef HDDEDATA CALLBACK FNCALLBACK(UINT wType,UINT wFmt,HCONV hConv,HSZ hsz1,HSZ hsz2,HDDEDATA hData,ULONG_PTR dwData1,ULONG_PTR dwData2);
   typedef HDDEDATA (CALLBACK *PFNCALLBACK)(UINT wType,UINT wFmt,HCONV hConv,HSZ hsz1,HSZ hsz2,HDDEDATA hData,ULONG_PTR dwData1,ULONG_PTR dwData2);
@@ -267,8 +271,13 @@ extern "C" {
   WINBOOL WINAPI DdeKeepStringHandle(DWORD idInst,HSZ hsz);
   int WINAPI DdeCmpStringHandles(HSZ hsz1,HSZ hsz2);
 
-#define DdeCreateStringHandle __MINGW_NAME_AW(DdeCreateStringHandle)
-#define DdeQueryString __MINGW_NAME_AW(DdeQueryString)
+#ifdef _UNICODE
+#define DdeCreateStringHandle DdeCreateStringHandleW
+#define DdeQueryString DdeQueryStringW
+#else
+#define DdeCreateStringHandle DdeCreateStringHandleA
+#define DdeQueryString DdeQueryStringA
+#endif
 
 #ifndef NODDEMLSPY
   typedef struct tagDDEML_MSG_HOOK_DATA {

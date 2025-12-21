@@ -22,6 +22,17 @@ Other CMainWindow member functions are in main2.cpp, welcome.cpp and ddecb.cpp
 
 #ifndef _WIN32_WCE
 #include <regstr.h>
+#else
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, IDM_HEARTS_MENU, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
 #endif
 
 #if defined (WINDOWS_ME) && ! defined (USE_MIRRORING)
@@ -106,6 +117,10 @@ BOOL CTheApp::InitInstance()
     m_pMainWnd = new CMainWindow(m_lpCmdLine);
     m_pMainWnd->ShowWindow(SW_SHOW);        // instead of m_nCmdShow
     m_pMainWnd->UpdateWindow();
+
+#ifdef _WIN32_WCE
+	HandleToolbarCreate(m_pMainWnd->GetSafeHwnd(), GetModuleHandle(NULL));
+#endif
 
     // Start the app off by posting Welcome dialog.
 
@@ -262,7 +277,7 @@ CMainWindow::CMainWindow(LPTSTR lpCmdLine) :
             WS_MINIMIZEBOX | WS_CLIPCHILDREN, // window style
             rect,                                              // size
             NULL,                                              // parent
-            TEXT("HeartsMenu"),                                      // menu
+            MAKEINTRESOURCE(IDM_HEARTS_MENU),                                   // menu
             (meSystem ? WS_EX_RTLREADING | WS_EX_RIGHT : 0));  // dwStyle
 #else
     Create( NULL,                                       // default class
@@ -271,7 +286,7 @@ CMainWindow::CMainWindow(LPTSTR lpCmdLine) :
             WS_MINIMIZEBOX | WS_CLIPCHILDREN, // window style
             rect,                                       // size
             NULL,                                       // parent
-            TEXT("HeartsMenu"));                              // menu
+            MAKEINTRESOURCE(IDM_HEARTS_MENU));                           // menu
 #endif
 }
 
@@ -660,7 +675,9 @@ void CMainWindow::OnNewGame()
     }                           // destruct score
 
     TRACE1("\n\ngame number is %d\n\n", m_gamenumber);
-    DUMP();
+#ifndef _WIN32_WCE
+	DUMP();
+#endif
     TRACE0("\n\n");
 
     Shuffle();
@@ -885,35 +902,8 @@ extern int nHandsPlayed;
 
 void CMainWindow::OnScore()
 {
-#ifdef _WIN32_WCE
-		CString names[4] = { p[0]->GetName(), p[1]->GetName(), p[2]->GetName(), p[3]->GetName() };
-	CString scores[4];
-    CString message;
-	CString place;
-	INT curplace = 0;
-
-    StringCchPrintf(scores[0].GetBuffer(20), 20, TEXT("%d"), score[0]);
-    scores[0].ReleaseBuffer();
-    StringCchPrintf(scores[1].GetBuffer(20), 20, TEXT("%d"), score[1]);
-    scores[1].ReleaseBuffer();
-    StringCchPrintf(scores[2].GetBuffer(20), 20, TEXT("%d"), score[2]);
-    scores[2].ReleaseBuffer();
-    StringCchPrintf(scores[3].GetBuffer(20), 20, TEXT("%d"), score[3]);
-    scores[3].ReleaseBuffer();
-	message = names[0] + TEXT("\t") + names[1] + TEXT("\t") + names[2] + TEXT("\t") + names[3] + TEXT("\n") +
-			  scores[0] + TEXT("\t") + scores[1] + TEXT("\t") + scores[2] + TEXT("\t") + scores[3];
-
-	for (int i = 1; i < MAXPLAYER; i++)
-        if (score[i] < score[0])
-            curplace++;
-
-    place.LoadString(IDS_PLACE1 + curplace);
-
-	MessageBox(message, place, 0);
-#else
     CScoreDlg scoredlg(this, score, m_myid);       // this constructor does not add new info
     scoredlg.DoModal();
-#endif
 }
 
 

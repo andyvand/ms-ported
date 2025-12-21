@@ -71,7 +71,7 @@ card::card(int n) : id(n), state(NORMAL)
         {
             bResult = (*lpcdtInit)(&dxCrd, &dyCrd);
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 			dxCrd /= 2;
 			dyCrd /= 2;
 

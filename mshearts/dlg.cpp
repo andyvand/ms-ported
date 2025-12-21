@@ -266,7 +266,7 @@ void CScoreDlg::OnPaint()
         text.Empty();
 	for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
-#if (_WIN32_WINNT >= 0x0600)
+#if (_WIN32_WINNT >= 0x0603)
 	    wnsprintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
 #else
 	    wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
@@ -281,7 +281,7 @@ void CScoreDlg::OnPaint()
         dc.SelectObject(&font);
         if (nHandsPlayed > 0)
         {
-#if (_WIN32_WINNT >= 0x0600)
+#if (_WIN32_WINNT >= 0x0603)
             wnsprintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
 #else
             wsprintf(text.GetBuffer(20), TEXT("%d"), score[pos][nHandsPlayed-1]);
@@ -351,9 +351,12 @@ void CQuoteDlg::OnPaint()
 CWelcomeDlg
 
 ****************************************************************************/
-
 BEGIN_MESSAGE_MAP( CWelcomeDlg, CModalDialog )
+#ifdef UNDER_CE
+    ON_BN_CLICKED(IDC_WELCOMEHELP,  CWelcomeDlg::OnHelp)
+#else
     ON_BN_CLICKED(IDC_WELCOMEHELP,  &CWelcomeDlg::OnHelp)
+#endif
 END_MESSAGE_MAP()
 
 /****************************************************************************
@@ -534,26 +537,34 @@ Set dialog controls to current values
 
 BOOL COptionsDlg::OnInitDialog()
 {
-    RegEntry    Reg(szRegPath);
+    CEdit   *pName[3];
+    CString sName[3];
+	RegEntry Reg(szRegPath);
 
     // Set animation speed radio button
 
     DWORD dwSpeed = Reg.GetNumber(regvalSpeed, IDC_NORMAL);
 
-    ((CButton *)GetDlgItem((int)dwSpeed))->SetCheck(TRUE);
+	if (dwSpeed != 0)
+    {
+		((CButton *)GetDlgItem((int)dwSpeed))->SetCheck(TRUE);
+    } else {
+		((CButton *)GetDlgItem(IDC_NORMAL))->SetCheck(TRUE);
+    }
 
     // Set current computer player names.  If they are not specified in
     // the .ini file, get defaults from the resource file.
 
-    CEdit   *pName[3];
-    CString sName[3];
-
     for (int i = 0; i < 3; i++)
     {
         pName[i] = (CEdit *)GetDlgItem(IDC_NAME1 + i);
+
+		if (pName[i] == NULL)
+			continue;
+
         pName[i]->LimitText(MAXNAMELENGTH);
-        TCHAR *p = sName[i].GetBuffer(MAXNAMELENGTH + 1);
-        Reg.GetString(regvalPName[i], p, MAXNAMELENGTH+1);
+		TCHAR *p = sName[i].GetBuffer(MAXNAMELENGTH + 1);
+        Reg.GetString(regvalPName[i], p, MAXNAMELENGTH);
         sName[i].ReleaseBuffer();
 
         if (sName[i].IsEmpty())
@@ -732,8 +743,13 @@ CLocateDlg
 
 ****************************************************************************/
 BEGIN_MESSAGE_MAP( CLocateDlg, CModalDialog )
+#ifdef UNDER_CE
+    ON_BN_CLICKED(IDC_BROWSE,     CLocateDlg::OnBrowse)
+    ON_BN_CLICKED(IDC_LOCATEHELP, CLocateDlg::OnHelp)
+#else
     ON_BN_CLICKED(IDC_BROWSE,     &CLocateDlg::OnBrowse)
     ON_BN_CLICKED(IDC_LOCATEHELP, &CLocateDlg::OnHelp)
+#endif
 END_MESSAGE_MAP()
 
 /****************************************************************************

@@ -1,0 +1,106 @@
+BUILD: [Thrd:Sequence:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Build started with parameters:
+BUILD: [00:0000000001:PROGC ] Build started in directory: C:\WINCE700\OSDesigns\qemu\qemu\mshearts
+BUILD: [00:0000000002:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, PRECOMPHEADER, COMPILE, LOCALIZE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
+BUILD: [00:0000000003:PROGC ] Loading database "C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat".
+BUILD: [00:0000000004:PROGC ] Done.
+BUILD: [00:0000000005:PROGC ] Computing include file dependencies:
+BUILD: [01:0000000007:PROGC ] Scan C:\WINCE700\OSDesigns\qemu\qemu\mshearts\
+BUILD: [01:0000000008:PROGC ] ReadSourcesFiles for project C:\WINCE700\OSDesigns\qemu\qemu\mshearts\.
+BUILD: [00:0000000009:PROGC ] Directory scanning complete.
+BUILD: [00:0000000010:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat.
+BUILD: [00:0000000012:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000013:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000014:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000015:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000016:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000017:PROGC ] Starting MC Pass.
+BUILD: [00:0000000018:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000019:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000020:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000021:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000022:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000023:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000024:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000025:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000026:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000031:PROGC ] Building COMPILE Pass in C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ directory.
+BUILD: [01:0000000042:PROGC ] Resource Compiling .\hearts.rc
+BUILD: [01:0000000047:WARNN ] Warning(s) in directory "C:\WINCE700\OSDesigns\qemu\qemu\mshearts\".
+BUILD: [01:0000000048:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(88) : warning RC4005: 'WS_OVERLAPPED' : redefinition
+BUILD: [01:0000000049:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(328) : warning RC4005: 'ES_LEFT' : redefinition
+BUILD: [01:0000000050:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(329) : warning RC4005: 'ES_CENTER' : redefinition
+BUILD: [01:0000000051:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(330) : warning RC4005: 'ES_RIGHT' : redefinition
+BUILD: [01:0000000052:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(331) : warning RC4005: 'ES_MULTILINE' : redefinition
+BUILD: [01:0000000053:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(332) : warning RC4005: 'ES_UPPERCASE' : redefinition
+BUILD: [01:0000000054:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(333) : warning RC4005: 'ES_LOWERCASE' : redefinition
+BUILD: [01:0000000055:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(334) : warning RC4005: 'ES_PASSWORD' : redefinition
+BUILD: [01:0000000056:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(335) : warning RC4005: 'ES_AUTOVSCROLL' : redefinition
+BUILD: [01:0000000057:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(336) : warning RC4005: 'ES_AUTOHSCROLL' : redefinition
+BUILD: [01:0000000058:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(337) : warning RC4005: 'ES_NOHIDESEL' : redefinition
+BUILD: [01:0000000059:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(338) : warning RC4005: 'ES_OEMCONVERT' : redefinition
+BUILD: [01:0000000060:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(339) : warning RC4005: 'ES_READONLY' : redefinition
+BUILD: [01:0000000061:WARNN ] C:\WINCE700\public\common\oak\inc\wceres.h(340) : warning RC4005: 'ES_WANTRETURN' : redefinition
+BUILD: [01:0000000062:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(42) : warning RC4005: 'LB_ADDSTRING' : redefinition
+BUILD: [01:0000000063:WARNN ] C:\WINCE700\public\common\oak\inc\winres.h(43) : warning RC4005: 'CB_ADDSTRING' : redefinition
+BUILD: [01:0000000064:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(570) : warning RC4005: 'HDS_HORZ' : redefinition
+BUILD: [01:0000000065:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(571) : warning RC4005: 'HDS_BUTTONS' : redefinition
+BUILD: [01:0000000066:WARNN ] C:\WINCE700\public\common\sdk\inc\commctrl.h(572) : warning RC4005: 'HDS_HIDDEN' : redefinition
+BUILD: [01:0000000067:PROGC ] Compiling .\main.cpp
+BUILD: [00:0000000070:PROGC ] Starting LOCALIZE Pass.
+BUILD: [00:0000000071:PROGC ] Analyzing project dependency information for pass LOCALIZE.
+BUILD: [00:0000000072:PROGC ] Starting RENUMBERICONIDS Pass.
+BUILD: [00:0000000073:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
+BUILD: [00:0000000074:PROGC ] Starting RES2RES Pass.
+BUILD: [00:0000000075:PROGC ] Analyzing project dependency information for pass RES2RES.
+BUILD: [00:0000000076:PROGC ] Starting LIB Pass.
+BUILD: [00:0000000077:PROGC ] Analyzing project dependency information for pass LIB.
+BUILD: [00:0000000080:PROGC ] Starting EXPLIB Pass.
+BUILD: [00:0000000081:PROGC ] Analyzing project dependency information for pass EXPLIB.
+BUILD: [00:0000000082:PROGC ] Starting LINK Pass.
+BUILD: [00:0000000083:PROGC ] Analyzing project dependency information for pass LINK.
+BUILD: [00:0000000088:PROGC ] Building LINK Pass in C:\WINCE700\OSDesigns\qemu\qemu\mshearts\ directory.
+BUILD: [01:0000000101:PROGC ] Linking C:\WINCE700\public\\oak\target\ARMV7\retail\mshearts.exe
+BUILD: [00:0000000152:PROGC ] Starting MANAGEDRESX Pass.
+BUILD: [00:0000000153:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
+BUILD: [00:0000000154:PROGC ] Starting MANAGEDMOD Pass.
+BUILD: [00:0000000155:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
+BUILD: [00:0000000156:PROGC ] Starting MANAGEDDLL Pass.
+BUILD: [00:0000000157:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
+BUILD: [00:0000000158:PROGC ] Starting MANAGEDEXE Pass.
+BUILD: [00:0000000159:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
+BUILD: [00:0000000160:PROGC ] Starting MANAGEDWIN Pass.
+BUILD: [00:0000000161:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
+BUILD: [00:0000000162:PROGC ] Starting POSTBUILD Pass.
+BUILD: [00:0000000163:PROGC ] Analyzing project dependency information for pass POSTBUILD.
+BUILD: [00:0000000166:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\mshearts\BuildARMV7retail.dat.
+BUILD: [00:0000000168:PROGC ] Done.
+BUILD: [00:0000000169:PROGC ]                        Files  Warnings  Errors
+BUILD: [00:0000000170:PROGC ] Midl                       0         0       0
+BUILD: [00:0000000171:PROGC ] Message                    0         0       0
+BUILD: [00:0000000172:PROGC ] Precomp Header             0         0       0
+BUILD: [00:0000000173:PROGC ] Resource                   1        19       0
+BUILD: [00:0000000174:PROGC ] XRPack                     0         0       0
+BUILD: [00:0000000175:PROGC ] MASM                       0         0       0
+BUILD: [00:0000000176:PROGC ] SHASM                      0         0       0
+BUILD: [00:0000000177:PROGC ] ARMASM                     0         0       0
+BUILD: [00:0000000178:PROGC ] MIPSASM                    0         0       0
+BUILD: [00:0000000179:PROGC ] C++                        1         0       0
+BUILD: [00:0000000180:PROGC ] C                          0         0       0
+BUILD: [00:0000000181:PROGC ] CheckLibs                  0         0       0
+BUILD: [00:0000000182:PROGC ] Static Libraries           0         0       0
+BUILD: [00:0000000183:PROGC ] Exe's                      1         0       0
+BUILD: [00:0000000184:PROGC ] Dll's                      0         0       0
+BUILD: [00:0000000185:PROGC ] Preprocess deffile         0         0       0
+BUILD: [00:0000000186:PROGC ] Resx                       0         0       0
+BUILD: [00:0000000187:PROGC ] CSharp Compile             0         0       0
+BUILD: [00:0000000188:PROGC ] VCProj Compile             0         0       0
+BUILD: [00:0000000189:PROGC ] Other                      0         0       0
+BUILD: [00:0000000190:PROGC ] 
+BUILD: [00:0000000191:PROGC ] Total                      3        19       0
+BUILD: [00:0000000192:PROGC ] 
+BUILD: [00:0000000193:PROGC ] 19 Warnings,  0 Errors
+BUILD: [00:0000000194:PROGC ] GetSystemTimes (seconds): Idle: 2     Kernel: 3     User: 2    
+BUILD: [00:0000000195:PROGC ] Elapsed  time  (seconds): 2    
+Build for Windows CE (Release 601) (Built on May 28 2009 15:53:25)
+File names: Build.log Build.wrn Build.err BuildARMV7retail.dat

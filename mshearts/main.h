@@ -44,7 +44,7 @@ extern  const TCHAR *regvalPName[3];
 extern  const TCHAR szHelpFileName[];
 extern  const TCHAR szShareName[];
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 const   int     WINWIDTH    = 240;
 const   int     WINHEIGHT   = 320;
 #else
