@@ -1,0 +1,5 @@
+!if "$(BUILDTARGET)" != "NT"
+!include $(_MAKEENVROOT)\makefile.def
+!else
+!include makefile.nt
+!endif

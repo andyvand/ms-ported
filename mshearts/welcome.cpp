@@ -65,8 +65,10 @@ void CMainWindow::OnWelcome()
 
     CWelcomeDlg welcome(this);
 
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
   again:                            // cancel from Browse returns here
-    if (!bAutostarted && !bCmdLine)
+#endif
+	if (!bAutostarted && !bCmdLine)
     {
         if (IDCANCEL == welcome.DoModal())  // display Welcome dialog
         {

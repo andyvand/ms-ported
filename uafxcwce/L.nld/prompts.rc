@@ -1,0 +1,150 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+// prompts.rc : RC file for all standard AFX menu prompts
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Cannot change standard MFC resources! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Standard Menu commands
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW,  "Een nieuw document maken\nNieuw"
+	ID_FILE_OPEN,  "Een bestaand document openen\nOpen"
+	ID_FILE_CLOSE,  "Het actieve document sluiten\nAfsluiten"
+	ID_FILE_SAVE,  "Het actieve document opslaan\nOpslaan"
+	ID_FILE_SAVE_AS,  "Het actieve document opslaan onder een nieuwe naam\nOpslaan Als"
+	ID_FILE_PAGE_SETUP,  "Afdrukopties wijzigen\nPagina-instelling"
+	ID_FILE_PRINT_SETUP,  "Printer- en afdrukopties wijzigen\nPrinterinstellingen"
+	ID_FILE_PRINT,  "Het actieve document afdrukken\nAfdrukken"
+	ID_FILE_PRINT_PREVIEW,  "Hele pagina's weergeven\nAfdrukvoorbeeld"
+	ID_APP_ABOUT,  "Programma-informatie, versienummer en copyright weergeven\nInfo"
+	ID_APP_EXIT,  "De toepassing afsluiten; u krijgt de mogelijkheid documenten op te slaan\nAfsluiten"
+	ID_FILE_SEND_MAIL,  "Het actieve document via e-mail versturen\nMail versturen"
+	ID_FILE_MRU_FILE1+0,  "Dit document openen"
+	ID_FILE_MRU_FILE1+1,  "Dit document openen"
+	ID_FILE_MRU_FILE1+2,  "Dit document openen"
+	ID_FILE_MRU_FILE1+3,  "Dit document openen"
+	ID_FILE_MRU_FILE1+4,  "Dit document openen"
+	ID_FILE_MRU_FILE1+5,  "Dit document openen"
+	ID_FILE_MRU_FILE1+6,  "Dit document openen"
+	ID_FILE_MRU_FILE1+7,  "Dit document openen"
+	ID_FILE_MRU_FILE1+8,  "Dit document openen"
+	ID_FILE_MRU_FILE1+9,  "Dit document openen"
+	ID_FILE_MRU_FILE1+10,  "Dit document openen"
+	ID_FILE_MRU_FILE1+11,  "Dit document openen"
+	ID_FILE_MRU_FILE1+12,  "Dit document openen"
+	ID_FILE_MRU_FILE1+13,  "Dit document openen"
+	ID_FILE_MRU_FILE1+14,  "Dit document openen"
+	ID_FILE_MRU_FILE1+15,  "Dit document openen"
+	ID_CONTEXT_HELP,  "Help weergeven voor knoppen, menu's en vensters\nHelp"
+	ID_HELP,  "Help weergeven voor actieve taak of opdracht\nHelp"
+	ID_HELP_INDEX,  "Help-onderwerpen afbeelden\nHelp-index"
+	ID_HELP_FINDER,  "Help-onderwerpen weergeven\nHelp-onderwerpen"
+	ID_HELP_USING,  "Instructies voor gebruik van Help weergeven\nHelp"
+	ID_NEXT_PANE,  "Naar volgende deelvenster overschakelen\nVolgend deelvenster"
+	ID_PREV_PANE,  "Naar vorige deelvenster overschakelen\nVorig deelvenster"
+	ID_WINDOW_NEW,  "Ander venster openen voor het actieve document\nNieuw venster"
+	ID_WINDOW_ARRANGE,  "Pictogrammen schikken onderaan het venster\nPictogrammen schikken"
+	ID_WINDOW_CASCADE,  "Vensters trapsgewijs schikken\nTrapsgewijs"
+	ID_WINDOW_TILE_HORZ,  "Vensters naast elkaar schikken\nNaast elkaar"
+	ID_WINDOW_TILE_VERT,  "Vensters naast elkaar schikken\nNaast elkaar"
+	ID_WINDOW_SPLIT,  "Het actieve venster in deelvensters splitsen\nSplitsen"
+	ID_EDIT_CLEAR,  "Selectie wissen\nWissen"
+	ID_EDIT_CLEAR_ALL,  "Alles wissen\nAlles wissen"
+	ID_EDIT_COPY,  "Selectie kopiëren naar Klembord\nKopiëren"
+	ID_EDIT_CUT,  "Selectie knippen, naar Klembord\nKnippen"
+	ID_EDIT_FIND,  "Opgegeven tekst opzoeken\nZoek"
+	ID_EDIT_PASTE,  "Klembordinhoud plakken\nPlakken"
+	ID_EDIT_PASTE_LINK,  "Klembordinhoud en koppeling naar de bron plakken\nKoppeling plakken"
+	ID_EDIT_PASTE_SPECIAL,  "Klembordinhoud met opties plakken\nPlakken speciaal"
+	ID_EDIT_REPEAT,  "Laatste handeling herhalen\nHerhalen"
+	ID_EDIT_REPLACE,  "Opgegeven tekst vervangen door andere tekst\nVervangen"
+	ID_EDIT_SELECT_ALL,  "Hele document selecteren\nAlles selecteren"
+	ID_EDIT_UNDO,  "Laatste actie ongedaan maken\nOngedaan maken"
+	ID_EDIT_REDO,  "Laatste ongedaan gemaakte actie opnieuw doen\nOpnieuw"
+	ID_VIEW_TOOLBAR,  "Werkbalk wel of niet zichtbaar maken\nWerkbalk omschakelen"
+	ID_VIEW_STATUS_BAR,  "Statusbalk wel of niet zichtbaar maken\nStatusbalk omschakelen"
+	ID_FORMAT_FONT,  "Lettertype selecteren voor actieve selectie\nLettertype"
+END
+
+
+// OLE specific
+STRINGTABLE
+BEGIN
+	ID_OLE_EDIT_LINKS,  "Gekoppelde objecten bewerken\nKoppelingen bewerken"
+	ID_OLE_INSERT_NEW,  "Nieuw ingesloten object invoegen\nNieuw object"
+	ID_OLE_EDIT_CONVERT,  "Gekozen object naar andere type converteren\nObject converteren"
+	ID_OLE_EDIT_CHANGE_ICON,  "Pictogram wijzigen van gekozen object\nPictogram wijzigen"
+	ID_OLE_VERB_FIRST+0,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+1,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+2,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+3,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+4,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+5,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+6,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+7,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+8,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+9,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+10,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+11,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+12,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+13,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+14,  "Ingesloten of gekoppeld object activeren"
+	ID_OLE_VERB_FIRST+15,  "Ingesloten of gekoppeld object activeren"
+END
+
+// Database specific
+STRINGTABLE
+BEGIN
+	ID_RECORD_NEXT  "Naar volgende record gaan\nVolgende record"
+	ID_RECORD_PREV  "Naar vorige record gaan\nVorige record"
+	ID_RECORD_LAST  "Naar laatste record gaan\nLaatste record"
+	ID_RECORD_FIRST  "Naar eerste record gaan\nEerste record"
+END
+
+// System commands
+STRINGTABLE
+BEGIN
+	AFX_IDS_SCSIZE,  "Venstergrootte aanpassen"
+	AFX_IDS_SCMOVE,  "Vensterpositie aanpassen"
+	AFX_IDS_SCMINIMIZE,  "Venster minimaliseren"
+	AFX_IDS_SCMAXIMIZE,  "Venster maximaliseren"
+	AFX_IDS_SCNEXTWINDOW,  "Overschakelen naar het volgende documentvenster"
+	AFX_IDS_SCPREVWINDOW,  "Overschakelen naar het vorige documentvenster"
+	AFX_IDS_SCCLOSE,  "Het actieve venster sluiten met de vraag of de documenten opgeslagen moeten worden"
+	AFX_IDS_SCRESTORE,  "Het venster in het normale formaat terugzetten"
+	AFX_IDS_SCTASKLIST,  "Taaklijst activeren"
+	AFX_IDS_MDICHILD,  "Dit venster activeren"
+	AFX_IDS_PREVIEW_CLOSE,  "Afdrukvoorbeeld sluiten\nAfdrukvoorbeeld annuleren"
+	AFX_IDS_DESKACCESSORY,  "Het gekozen onderdeel openen"
+END
+
+/////////////////////////////////////////////////////////////////////////////

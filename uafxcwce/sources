@@ -1,0 +1,267 @@
+RELEASETYPE=OAK
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
+TARGETNAME=uafxwce
+FILE_VIEW_ROOT_FOLDER= \
+    Readme.txt \
+    prelink.bat \
+    postlink.bat \
+
+_COMMONPUBROOT=$(_PUBLICROOT)\common
+__PROJROOT = $(_PUBLICROOT)\$(WINCEPROJ)
+COMMON_OAK_LIB_PATH=$(_PUBLICROOT)\common\oak\lib\$(_CPUINDPATH)
+COMMON_SDK_LIB_PATH=$(_PUBLICROOT)\common\sdk\lib\$(_CPUINDPATH)
+_COREDLL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\coredll.lib
+_COMMCTRL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\commctrl.lib
+_COMMDLG=$(_COMMONPUBROOT)\sdk\lib\$(_CPUINDPATH)\commdlg.lib
+_SHELLCB=$(_PUBLICROOT)\wceshellfe\oak\lib\$(_CPUINDPATH)\shellcb.lib
+_MFC=$(_COMMONPUBROOT)\oak\lib\$(_CPUINDPATH)\uafxwce.lib
+_WININET=$(_PUBLICROOT)\ie7\sdk\lib\$(_CPUINDPATH)\wininet.lib
+OS_SDK_INC_PATH=$(_PUBLICROOT)\common\sdk\inc
+_ISVINCPATH=$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\wceshellfe\oak\inc;$(_WINCEROOT)\public\shell\oak\inc;$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\oak\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\oak\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;$(_WINCEROOT)\private\winceos\inc;$(_WINCEROOT)\public\common\sdk\inc\test
+
+CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -Ob0 -D_WIN32_WCE=700 -DUNDER_CE=0x700 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE
+INCLUDES=include;$(OS_SDK_INC_PATH);$(_ISVINCPATH);$(_OEMINCPATH);.
+
+FILE_VIEW_RESOURCE_FOLDER= \
+    mfcintl.rc
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    afximpl.h \
+    ctlimpl.h \
+    daoimpl.h \
+    dbimpl.h \
+    dispimpl.h \
+    elements.h \
+    fixalloc.h \
+    occimpl.h \
+    ocdb.h \
+    ocdbid.h \
+    olebind.h \
+    oleimpl2.h \
+    REGOBJ.H \
+    RESOURCE.H \
+    sockimpl.h \
+    stdafx.h \
+    wcefont.h \
+    wceimpl.h \
+    wceimpl.inl \
+    wceoleth.h \
+    wcethunk.h \
+    winhand_.h \
+    include\afx.h \
+    include\afx.inl \
+    include\afxadv.h \
+    include\afxcmn.h \
+    include\afxcmn.inl \
+    include\afxcmn2.inl \
+    include\afxcoll.h \
+    include\afxcoll.inl \
+    include\afxcom_.h \
+    include\afxconv.h \
+    include\afxctl.h \
+    include\afxctl.inl \
+    include\afxcview.h \
+    include\afxcview.inl \
+    include\afxdao.h \
+    include\afxdao.inl \
+    include\afxdb.h \
+    include\afxdb.inl \
+    include\afxdb_.h \
+    include\afxdd_.h \
+    include\afxdisp.h \
+    include\afxdlgs.h \
+    include\afxdlgs.inl \
+    include\afxdll_.h \
+    include\afxdllx.h \
+    include\afxdocob.h \
+    include\afxdtctl.h \
+    include\afxdtctl.inl \
+    include\afxext.h \
+    include\afxext.inl \
+    include\afxhtml.h \
+    include\afxhtml.inl \
+    include\afxinet.h \
+    include\afxinet.inl \
+    include\afxisapi.h \
+    include\afxisapi.inl \
+    include\afxmsg_.h \
+    include\afxmt.h \
+    include\afxmt.inl \
+    include\afxodlgs.h \
+    include\afxole.h \
+    include\afxole.inl \
+    include\afxoledb.h \
+    include\afxplex_.h \
+    include\afxpriv.h \
+    include\afxpriv2.h \
+    include\afxres.h \
+    include\afxrich.h \
+    include\afxrich.inl \
+    include\afxsock.h \
+    include\afxsock.inl \
+    include\afxstat_.h \
+    include\afxtempl.h \
+    include\afxtls_.h \
+    include\afxv_cfg.h \
+    include\afxv_cpu.h \
+    include\afxv_dll.h \
+    include\afxv_w32.h \
+    include\afxver_.h \
+    include\afxwin.h \
+    include\afxwin1.inl \
+    include\afxwin2.inl \
+    include\MIPS2ThunkBldr.h \
+    include\MIPS4ThunkBldr.h \
+    include\SH4ThunkBldr.h \
+    include\stdver.h \
+    include\version.h \
+    include\wce.h \
+    include\wcealt.h \
+    include\wcealt.inl \
+    include\wcebar.h \
+    include\wcedb.h \
+    include\wceres.h \
+    include\wcesock.h \
+    include\winres.h \
+
+SOURCES= \
+    afxabort.cpp \
+    afxasert.cpp \
+    afxcrit.cpp  \
+    afxdbcs.cpp  \
+    afxinl1.cpp  \
+    afxinl2.cpp  \
+    afxinl3.cpp  \
+    afxmem.cpp   \
+    afxstate.cpp \
+    afxtls.cpp   \
+    afxtrace.cpp \
+    appcore.cpp  \
+    appdlg.cpp   \
+    appgray.cpp  \
+    apphelp.cpp  \
+    apphelpx.cpp \
+    appinit.cpp  \
+    appmodul.cpp \
+    appprnt.cpp  \
+    appterm.cpp  \
+    appui.cpp    \
+    appui1.cpp   \
+    appui2.cpp   \
+    appui3.cpp   \
+    arccore.cpp  \
+    arcex.cpp    \
+    arcobj.cpp   \
+    arcstrm.cpp  \
+    array_b.cpp  \
+    array_d.cpp  \
+    array_o.cpp  \
+    array_p.cpp  \
+    array_s.cpp  \
+    array_u.cpp  \
+    array_w.cpp  \
+    auxdata.cpp  \
+    barcool.cpp  \
+    barcore.cpp  \
+    bardlg.cpp   \
+    bardock.cpp  \
+    barstat.cpp  \
+    bartool.cpp  \
+    ccdata.cpp   \
+    cmdtarg.cpp  \
+    dlgclr.cpp   \
+    dlgcomm.cpp  \
+    dlgcore.cpp  \
+    dlgdata.cpp  \
+    dlgfile.cpp  \
+    dlgfloat.cpp \
+    dlgfr.cpp    \
+    dlgprop.cpp  \
+    dlgtempl.cpp \
+    dllmodul.cpp \
+    doccore.cpp  \
+    dockcont.cpp \
+    dockstat.cpp \
+    docmgr.cpp   \
+    docsingl.cpp \
+    doctempl.cpp \
+    dumpcont.cpp \
+    dumpflt.cpp  \
+    dumpinit.cpp \
+    dumpout.cpp  \
+    except.cpp   \
+    filecore.cpp \
+    filelist.cpp \
+    filemem.cpp  \
+    filest.cpp   \
+    filetxt.cpp  \
+    filex.cpp    \
+    inet.cpp     \
+    list_o.cpp   \
+    list_p.cpp   \
+    list_s.cpp   \
+    map_pp.cpp   \
+    map_pw.cpp   \
+    map_so.cpp   \
+    map_sp.cpp   \
+    map_ss.cpp   \
+    map_wo.cpp   \
+    map_wp.cpp   \
+    mtcore.cpp   \
+    mtex.cpp     \
+    objcore.cpp  \
+    olelock.cpp  \
+    plex.cpp     \
+    sockcore.cpp \
+    strcore.cpp  \
+    strex.cpp    \
+    thrdcore.cpp \
+    timecore.cpp \
+    tooltip.cpp  \
+    trckrect.cpp \
+    validadd.cpp \
+    viewcmn.cpp  \
+    viewcore.cpp \
+    viewedit.cpp \
+    viewform.cpp \
+    viewprnt.cpp \
+    viewscrl.cpp \
+    winbtn.cpp   \
+    wincore.cpp  \
+    winctrl1.cpp \
+    winctrl2.cpp \
+    winctrl6.cpp \
+    winfrm.cpp   \
+    winfrmx.cpp  \
+    wingdi.cpp   \
+    wingdix.cpp  \
+    winhand.cpp  \
+    winmain.cpp  \
+    winmenu.cpp  \
+    winocc.cpp   \
+    winsplit.cpp \
+    winstr.cpp   \
+    winutil.cpp  \
+    wcealt.cpp   \
+    wcebar.cpp   \
+    wcedoclt.cpp   \
+    wcedoctm.cpp   \
+    wcedb.cpp    \
+    wcedlgfr.cpp \
+    wcedlgpr.cpp \
+    wcedlgsm.cpp \
+    wcedll.cpp   \
+    wceimpl.cpp   \
+    wcesock.cpp  \
+    wcethunk.cpp \
+    wcetime.cpp
+
+MFC=1
+TARGETTYPE=LIBRARY
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+    ProjSysgen.bat \
+

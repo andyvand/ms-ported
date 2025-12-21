@@ -1,0 +1,150 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+// prompts.rc : RC file for all standard AFX menu prompts
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Cannot change standard MFC resources! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Standard Menu commands
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW,  "Skapar ett nytt dokument.\nNytt"
+	ID_FILE_OPEN,  "Öppnar ett befintligt dokument.\nÖppna"
+	ID_FILE_CLOSE,  "Stänger aktivt dokument.\nStäng"
+	ID_FILE_SAVE,  "Sparar aktivt dokument.\nSpara"
+	ID_FILE_SAVE_AS,  "Sparar aktivt dokument i annat namn.\nSpara som"
+	ID_FILE_PAGE_SETUP,  "Ändrar utskriftsformat.\nUtskriftsformat"
+	ID_FILE_PRINT_SETUP,  "Ändrar skrivar- och utskriftsalternativ.\nSkrivarinställning"
+	ID_FILE_PRINT,  "Skriver ut aktivt dokument.\nSkriv ut"
+	ID_FILE_PRINT_PREVIEW,  "Visar hela sidor.\nFörhandsgranskning"
+	ID_APP_ABOUT,  "Visar information, versionsnummer och copyright för programmet.\nOm"
+	ID_APP_EXIT,  "Avslutar programmet, du uppmanas spara dokumentet.\nAvsluta"
+	ID_FILE_SEND_MAIL,  "Sänder det aktiva dokumentet genom e-post.\nSänd e-post"
+	ID_FILE_MRU_FILE1+0,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+1,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+2,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+3,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+4,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+5,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+6,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+7,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+8,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+9,  "Öppnar det här dokumentet"	
+	ID_FILE_MRU_FILE1+10,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+11,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+12,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+13,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+14,  "Öppnar det här dokumentet"
+	ID_FILE_MRU_FILE1+15,  "Öppnar det här dokumentet"
+	ID_CONTEXT_HELP,  "Visar hjälp om knappar, menyer och fönster.\nHjälp"
+	ID_HELP,  "Visar hjälp om aktuell aktivitet eller kommando.\nHjälp"
+	ID_HELP_INDEX,  "Visar hjälpavsnitt.\nHjälpindex"
+	ID_HELP_FINDER,  "Visar hjälpavsnitt.\nHjälpavsnitt"
+	ID_HELP_USING,  "Visar hur du använder Hjälp.\nHjälp"
+	ID_NEXT_PANE,  "Växlar till nästa fönsterruta.\nNästa ruta"
+	ID_PREV_PANE,  "Växlar tillbaka till föregående fönsterruta.\nFöregående ruta"
+	ID_WINDOW_NEW,  "Öppnar ett annat fönster för det aktiva dokumentet.\nNytt fönster"
+	ID_WINDOW_ARRANGE,  "Ordnar ikonerna längst ned i fönstret.\nOrdna ikoner"
+	ID_WINDOW_CASCADE,  "Ordnar fönstren så de överlappar varandra.\nÖverlappande"
+	ID_WINDOW_TILE_HORZ,  "Ordnar fönstren sida vid sida.\nSida vid sida"
+	ID_WINDOW_TILE_VERT,  "Ordnar fönstren sida vid sida.\nSida vid sida"
+	ID_WINDOW_SPLIT,  "Delar aktivt fönster till fönsterrutor.\nDela"
+	ID_EDIT_CLEAR,  "Tar bort markering.\nTa bort"
+	ID_EDIT_CLEAR_ALL,  "Tar bort allt.\nTa bort allt"
+	ID_EDIT_COPY,  "Kopierar markering och placerar det i Urklipp.\nKopiera"
+	ID_EDIT_CUT,  "Klipper ut markeringen och placerar den i Urklipp.\nKlipp ut"
+	ID_EDIT_FIND,  "Söker efter angiven text.\nSök..."
+	ID_EDIT_PASTE,  "Infogar innehållet i Urklipp.\nKlistra in"
+	ID_EDIT_PASTE_LINK,  "Infogar innehållet i Urklipp och länkar det till dess källa.\nKlistra in länk"
+	ID_EDIT_PASTE_SPECIAL,  "Infogar innehållet i Urklipp med alternativ.\nKlistra in special"
+	ID_EDIT_REPEAT,  "Upprepar senast gjorda åtgärd.\nUpprepa"
+	ID_EDIT_REPLACE,  "Ersätter angiven text med annan text.\nErsätt"
+	ID_EDIT_SELECT_ALL,  "Markerar hela dokumentet.\nMarkera allt"
+	ID_EDIT_UNDO,  "Ångrar senaste åtgärd.\nÅngra"
+	ID_EDIT_REDO,  "Gör om ångrad åtgärd.\nGör om"
+	ID_VIEW_TOOLBAR,  "Visar/döljer verktygsfältet.\nVäxla verktygsfält"
+	ID_VIEW_STATUS_BAR,  "Visar/döljer statusfältet.\nVäxla statusfält"
+	ID_FORMAT_FONT,  "Välj teckensnitt för markerad text\nTeckensnitt"
+END
+
+
+// OLE specific
+STRINGTABLE
+BEGIN
+	ID_OLE_EDIT_LINKS,  "Redigerar länkade objekt.\nRedigera länkar"
+	ID_OLE_INSERT_NEW,  "Infogar nytt inbäddat objekt.\nNytt objekt"
+	ID_OLE_EDIT_CONVERT,  "Konverterar markerade objekt mellan typer.\nKonvertera objekt"
+	ID_OLE_EDIT_CHANGE_ICON,  "Byter ikonen för markerade objekt.\nByt ikon"
+	ID_OLE_VERB_FIRST+0,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+1,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+2,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+3,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+4,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+5,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+6,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+7,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+8,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+9,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+10,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+11,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+12,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+13,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+14,  "Aktiverar inbäddat eller länkat objekt."
+	ID_OLE_VERB_FIRST+15,  "Aktiverar inbäddat eller länkat objekt."
+END
+
+// Database specific
+STRINGTABLE
+BEGIN
+	ID_RECORD_NEXT  "Flytta till nästa post.\nNästa post"
+	ID_RECORD_PREV  "Flytta till föregående post.\nFöregående post"
+	ID_RECORD_LAST  "Flytta till sista post.\nSista post"
+	ID_RECORD_FIRST  "Flytta till första post.\nFörsta post"
+END
+
+// System commands
+STRINGTABLE
+BEGIN
+	AFX_IDS_SCSIZE,  "Ändrar fönsterstorleken."
+	AFX_IDS_SCMOVE,  "Ändrar fönstrets läge på skärmen."
+	AFX_IDS_SCMINIMIZE,  "Minimerar fönstret till en ikon."
+	AFX_IDS_SCMAXIMIZE,  "Maximerar fönster till full storlek."
+	AFX_IDS_SCNEXTWINDOW,  "Växlar till nästa dokumentfönster."
+	AFX_IDS_SCPREVWINDOW,  "Växlar till föregående dokumentfönster."
+	AFX_IDS_SCCLOSE,  "Stänger aktivt fönster och låter dig bekräfta att dokumenten ska sparas."
+	AFX_IDS_SCRESTORE,  "Återställer fönstret till normal storlek."
+	AFX_IDS_SCTASKLIST,  "Aktiverar Aktiva program."
+	AFX_IDS_MDICHILD,  "Aktiverar det här fönstret."
+	AFX_IDS_PREVIEW_CLOSE,  "Stänger förhandsgransking\nAvbryt förhandsgranskning"
+	AFX_IDS_DESKACCESSORY,  "Öppnar markerade objekt."
+END
+
+/////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,230 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXRES_RC__
+#define __AFXRES_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Cannot change standard MFC resources! >\0"
+END
+#endif //APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// Default resource description for MFC applications
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// Strings
+
+STRINGTABLE DISCARDABLE
+BEGIN
+#ifndef _AFX_NO_APPMENU_RESOURCES
+	AFX_IDS_OPENFILE,               "Öppna"
+	AFX_IDS_SAVEFILE,               "Spara som"
+	AFX_IDS_ALLFILTER,              "Alla filer (*.*)"
+	AFX_IDS_UNTITLED,               "Namnlös"
+	AFX_IDS_HIDE,                   "&Dölj"
+#endif // !_AFX_NO_APPMENUSTRING_RESOURCES
+
+	AFX_IDS_MEMORY_EXCEPTION,       "Det finns inget ledigt minne."
+	AFX_IDS_NOT_SUPPORTED_EXCEPTION,"En åtgärd som inte stöds påbörjades."
+	AFX_IDS_RESOURCE_EXCEPTION,     "En nödvändig resurs var inte tillgänglig."
+	AFX_IDS_USER_EXCEPTION,         "Ett okänt fel har uppstått."
+
+	// General error prompts
+#ifndef _AFX_NO_FILECMD_RESOURCES
+	AFX_IDP_INVALID_FILENAME,         "Ogiltigt filnamn."
+	AFX_IDP_FAILED_TO_OPEN_DOC,       "Det gick inte att öppna dokumentet."
+	AFX_IDP_FAILED_TO_SAVE_DOC,       "Det gick inte att spara dokumentet."
+	AFX_IDP_ASK_TO_SAVE,              "Vill du spara ändringarna i %1?"
+	AFX_IDP_FAILED_TO_CREATE_DOC,     "Det gick inte att skapa ett tomt dokument."
+	AFX_IDP_FILE_TOO_LARGE,           "Filen är för stor för att kunna öppnas."
+	AFX_IDP_FAILED_TO_START_PRINT,    "Det gick inte att starta utskriften."
+#endif // !_AFX_NO_FILECMD_RESOURCES
+	AFX_IDP_FAILED_TO_LAUNCH_HELP,    "Det gick inte att starta hjälpen."
+	AFX_IDP_INTERNAL_FAILURE,         "Internt programfel."
+	AFX_IDP_COMMAND_FAILURE,          "Kommandot misslyckades."
+	AFX_IDP_FAILED_MEMORY_ALLOC       "Det finns inte tillräckligt med minne för att slutföra åtgärden."
+	AFX_IDP_GET_NOT_SUPPORTED,      "Det går inte att läsa skrivskyddat material."
+	AFX_IDP_SET_NOT_SUPPORTED,      "Det går inte att skriva till skrivskyddat material."
+	AFX_IDP_UNREG_DONE,               "Systemregisterposter har tagits bort och INI-filen (om en sådan fanns) har tagits bort."
+	AFX_IDP_UNREG_FAILURE,            "Alla systemregisterposter (eller INI-filen) togs inte bort."
+    AFX_IDP_DLL_LOAD_FAILED,        "Filen %s som krävs för att kunna köra programmet gick inte att hitta i systemet."
+
+	// CFile/CArchive error strings for user failure
+#ifndef _AFX_NO_CFILE_RESOURCES
+	AFX_IDP_FAILED_INVALID_FORMAT     "Oväntat filformat."
+	AFX_IDP_FAILED_INVALID_PATH       "%1\nDet går inte att hitta den här filen.\nKontrollera sökväg och filnamn."
+	AFX_IDP_FAILED_DISK_FULL          "Måldisken är full."
+	AFX_IDP_FAILED_ACCESS_READ        "Det går inte att läsa från %1, eftersom den är öppnad av någon annan användare."
+	AFX_IDP_FAILED_ACCESS_WRITE       "Det går inte att skriva till %1, eftersom den är skrivskyddad eller öppnad av någon annan användare."
+	AFX_IDP_FAILED_IO_ERROR_READ      "Ett oväntat fel inträffade vid läsning av %1."
+	AFX_IDP_FAILED_IO_ERROR_WRITE     "Ett oväntat fel inträffade vid skrivning till %1."
+#endif // !_AFX_NO_CFILE_RESOURCES
+
+	// Parsing error prompts
+	AFX_IDP_PARSE_INT,                "Ange ett heltal."
+	AFX_IDP_PARSE_REAL,               "Ange ett tal."
+	AFX_IDP_PARSE_INT_RANGE,          "Ange ett heltal mellan %1 och %2."
+	AFX_IDP_PARSE_REAL_RANGE,         "Ange ett tal mellan %1 och %2."
+	AFX_IDP_PARSE_STRING_SIZE,        "Ange inte fler än %1 tecken."
+	AFX_IDP_PARSE_RADIO_BUTTON,       "Välj en knapp."
+	AFX_IDP_PARSE_BYTE,               "Ange ett heltal mellan 0 och 255."
+	AFX_IDP_PARSE_UINT,               "Ange ett positivt heltal."
+	AFX_IDP_PARSE_DATETIME,           "Skriv in ett datum och/eller en tid."
+	AFX_IDP_PARSE_CURRENCY,           "Skriv in en valuta."
+
+#ifndef _AFX_NO_OLE_RESOURCES
+	// OLE strings required for both servers and containers
+	AFX_IDS_PASTELINKEDTYPE         "Länkat %s"
+	AFX_IDS_UNKNOWNTYPE             "Okänd typ"
+	AFX_IDP_FAILED_TO_NOTIFY        "%1\nDet gick inte att registrera dokumentet.\nDokumentet kanske redan är öppet."
+	AFX_IDS_NOT_DOCOBJECT			"Filen stöds inte av en dokumentobjektserver."
+#endif //!_AFX_NO_OLE_RESOURCES
+
+	AFX_IDP_NO_ERROR_AVAILABLE      "Det finns inget felmeddelande tillgängligt."
+
+#ifndef _AFX_NO_CFILE_RESOURCES
+	AFX_IDP_FILE_NONE                  "Inga fel uppstod."
+	AFX_IDP_FILE_GENERIC               "Ett okänt fel uppstod vid åtkomst till %1."
+	AFX_IDP_FILE_NOT_FOUND             "%1 hittades inte."
+	AFX_IDP_FILE_BAD_PATH              "%1 innehåller en ogiltig sökväg."
+	AFX_IDP_FILE_TOO_MANY_OPEN         "Det gick inte att öppna %1 eftersom det finns för många öppna filer."
+	AFX_IDP_FILE_ACCESS_DENIED         "Åtkomst till %1 nekades."
+	AFX_IDP_FILE_INVALID_FILE          "En ogiltig referens (handle) associerades med %1."
+	AFX_IDP_FILE_REMOVE_CURRENT        "Det gick inte ta bort %1 eftersom den finns i den aktuella katalogen."
+	AFX_IDP_FILE_DIR_FULL              "Det gick inte skapa %1 eftersom katalogen är full."
+	AFX_IDP_FILE_BAD_SEEK              "Sökningen misslyckades i %1"
+	AFX_IDP_FILE_HARD_IO               "Ett maskinvaru I/0-fel rapporterades vid åtkomst till %1."
+	AFX_IDP_FILE_SHARING               "Ett delningsfel uppstod vid åtkomst till %1."
+	AFX_IDP_FILE_LOCKING               "Ett låsningsfel uppstod vid åtkomst till %1."
+	AFX_IDP_FILE_DISKFULL              "Disken full vid åtkomst till %1."
+	AFX_IDP_FILE_EOF                   "Det gick inte att komma åt %1."
+	AFX_IDS_UNNAMED_FILE             "en namnlös fil"
+#endif // !_AFX_NO_CFILE_RESOURCES
+
+	AFX_IDP_ARCH_NONE                 "Inga fel uppstod."
+	AFX_IDP_ARCH_GENERIC                  "Ett okänt fel uppstod vid åtkomst till %1."
+	AFX_IDP_ARCH_READONLY             "Ett försök att skriva till %1 gjordes."
+	AFX_IDP_ARCH_ENDOFFILE            "Det gick inte att komma åt %1."
+	AFX_IDP_ARCH_WRITEONLY            "Ett försök att läsa från %1 gjordes."
+	AFX_IDP_ARCH_BADINDEX             "%1 har ett felaktigt format."
+	AFX_IDP_ARCH_BADCLASS             "%1 innehåller ett oväntat objekt."
+	AFX_IDP_ARCH_BADSCHEMA            "%1 ett felaktigt schema."
+
+#ifndef _AFX_NO_MAPI_RESOURCES
+	// MAPI strings / error messages
+	AFX_IDP_FAILED_MAPI_LOAD          "Det går inte att ladda stöd för e-postsystemet."
+	AFX_IDP_INVALID_MAPI_DLL          "DLL-filen för e-postsystemet är ogiltig."
+	AFX_IDP_FAILED_MAPI_SEND          "Det gick inte att sända meddelande."
+
+#endif //!_AFX_NO_MAPI_RESOURCES
+
+#ifndef _AFX_NO_OCC_RESOURCES
+	AFX_IDS_OCC_SCALEUNITS_PIXELS   "bildpunkt"
+#endif //!_AFX_NO_OCC_RESOURCES
+
+#if defined(_WIN32_WCE_PSPC) && (_WIN32_WCE >= 300)
+	AFXCE_IDS_END_SEARCH			"Sökningen i dokumentet har slutförts!"
+	AFXCE_IDS_NOT_FOUND				"Inga matchningar hittades!"
+	AFXCE_IDS_INTL_ALLFOLDERS			"All Folders"
+	AFXCE_IDS_INTL_DIRMYDOCUMENTS		"\\My Documents"
+#endif // _WIN32_WCE_PSPC
+END
+
+#if !defined(_WIN32_WCE_NO_CURSOR)
+/////////////////////////////////////////////////////////////////////////////
+// Cursors
+
+AFX_IDC_CONTEXTHELP     CURSOR  DISCARDABLE     "res\\help.cur"
+
+#ifndef _AFX_NO_SPLITTER_RESOURCES
+AFX_IDC_SMALLARROWS     CURSOR  DISCARDABLE     "res\\sarrows.cur"
+AFX_IDC_HSPLITBAR       CURSOR  DISCARDABLE     "res\\splith.cur"
+AFX_IDC_VSPLITBAR       CURSOR  DISCARDABLE     "res\\splitv.cur"
+AFX_IDC_NODROPCRSR      CURSOR  DISCARDABLE     "res\\nodrop.cur"
+#endif //!_AFX_NO_SPLITTER_RESOURCES
+
+#ifndef _AFX_NO_TRACKER_RESOURCES
+AFX_IDC_TRACKNWSE       CURSOR  DISCARDABLE     "res\\trcknwse.cur"
+AFX_IDC_TRACKNESW       CURSOR  DISCARDABLE     "res\\trcknesw.cur"
+AFX_IDC_TRACKNS         CURSOR  DISCARDABLE     "res\\trckns.cur"
+AFX_IDC_TRACKWE         CURSOR  DISCARDABLE     "res\\trckwe.cur"
+AFX_IDC_TRACK4WAY       CURSOR  DISCARDABLE     "res\\trck4way.cur"
+AFX_IDC_MOVE4WAY        CURSOR  DISCARDABLE     "res\\move4way.cur"
+#endif //!_AFX_NO_TRACKER_RESOURCES
+#endif // _WIN32_WCE_NO_CURSOR
+
+#ifndef _AFX_NO_CTL3D_RESOURCES
+26567 BITMAP "res\\3dcheck.bmp" // Note: 26567 comes from CTL3D.H
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+// Standard Dialogs
+
+#ifndef _AFX_NO_NEWTYPEDLG_RESOURCES
+AFX_IDD_NEWTYPEDLG DIALOG DISCARDABLE  9, 26, 183, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | 0x04
+CAPTION "Nytt"
+#if !defined(_WIN32_WCE)
+FONT 8, "MS Shell Dlg"
+#endif // _WIN32_WCE
+BEGIN
+	LTEXT           "&Nytt ",IDC_STATIC,6,5,123,8,NOT WS_GROUP
+	LISTBOX         AFX_IDC_LISTBOX,6,15,125,49,WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "OK",IDOK,137,6,40,14
+	PUSHBUTTON      "Avbryt",IDCANCEL,137,23,40,14
+	PUSHBUTTON      "&Hjälp",ID_HELP,137,43,40,14
+END
+#endif // !_AFX_NO_NEWTYPEDLG_RESOURCES
+
+#if !defined(_WIN32_WCE)
+/////////////////////////////////////////////////////////////////////////////
+// CMiniFrameWnd Bitmap
+
+AFX_IDB_MINIFRAME_MENU      BITMAP  DISCARDABLE     "res\\minifwnd.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+// CCheckListBox Bitmaps
+
+AFX_IDB_CHECKLISTBOX_NT     BITMAP  DISCARDABLE     "res\\ntcheck.bmp"
+AFX_IDB_CHECKLISTBOX_95     BITMAP  DISCARDABLE     "res\\95check.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif // _WIN32_WCE
+
+#if defined(_WIN32_WCE)
+// WinCE: for static builds, pull in the WinCE-only resources.  This is wasteful for most MFC apps, but
+// static builds are large anyway.
+#include "wceres.rc"
+#endif // _WIN32_WCE
+
+#endif //!_AFXDLL
+#endif //!__AFXRES_RC__
+
+/////////////////////////////////////////////////////////////////////////////

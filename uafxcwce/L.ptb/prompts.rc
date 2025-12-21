@@ -1,0 +1,150 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+// prompts.rc : RC file for all standard AFX menu prompts
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Cannot change standard MFC resources! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Standard Menu commands
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW,  "Criar um novo documento\nNovo"
+	ID_FILE_OPEN,  "Abrir um documento já existente\nAbrir"
+	ID_FILE_CLOSE,  "Fechar o documento ativo\nFechar"
+	ID_FILE_SAVE,  "Salvar o documento ativo\nSalvar"
+	ID_FILE_SAVE_AS,  "Salvar o documento ativo com um novo nome\nSalvar Como"
+	ID_FILE_PAGE_SETUP,  "Alterar as opções de impressão\nConfigurar Página"
+	ID_FILE_PRINT_SETUP,  "Alterar as opções de impressora e de impressão\nConfiguração de impressão"
+	ID_FILE_PRINT,  "Imprimir o documento ativo\nImprimir"
+	ID_FILE_PRINT_PREVIEW,  "Exibir páginas inteiras\nVisualizar Impressão"
+	ID_APP_ABOUT,  "Exibir informações de programa, número da versão e copyright\nSobre"
+	ID_APP_EXIT,  "Sair do aplicativo; avisa para salvar documentos\nSair"
+	ID_FILE_SEND_MAIL,  "Enviar o documento ativo através de correio eletrônico\nEnviar correspondência"
+	ID_FILE_MRU_FILE1+0,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+1,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+2,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+3,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+4,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+5,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+6,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+7,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+8,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+9,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+10,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+11,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+12,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+13,  "Abrir este documento"	
+	ID_FILE_MRU_FILE1+14,  "Abrir este documento"
+	ID_FILE_MRU_FILE1+15,  "Abrir este documento"
+	ID_CONTEXT_HELP,  "Exibir a ajuda para os botões, menus e janelas clicados\nAjuda"
+	ID_HELP,  "Exibir ajuda para a tarefa ou o comando atual\nAjuda"
+	ID_HELP_INDEX,  "Listar tópicos da Ajuda\nÍndice da Ajuda"
+	ID_HELP_FINDER,  "Listar tópicos de Ajuda\nTópicos da Ajuda"
+	ID_HELP_USING,  "Exibir instruções sobre como usar a Ajuda\nAjuda"
+	ID_NEXT_PANE,  "Alternar para o próximo painel da janela\nPróximo painel"
+	ID_PREV_PANE,  "Retornar ao painel anterior da janela\nPainel anterior"
+	ID_WINDOW_NEW,  "Abrir outra janela para o documento ativo\nNova janela"
+	ID_WINDOW_ARRANGE,  "Organizar ícones na parte inferior da janela\nOrganizar ícones"
+	ID_WINDOW_CASCADE,  "Organizar as janelas de forma que elas se sobreponham\nJanelas em cascata"
+	ID_WINDOW_TILE_HORZ,  "Organizar as janelas de forma que não se sobreponham\nJanelas lado a lado"
+	ID_WINDOW_TILE_VERT,  "Organizar as janelas de forma que não se sobreponham\nJanelas lado a lado"
+	ID_WINDOW_SPLIT,  "Dividir a janela ativa em painéis\nDividir"
+	ID_EDIT_CLEAR,  "Apagar a seleção\nApagar"
+	ID_EDIT_CLEAR_ALL,  "Apagar tudo\nApagar Tudo"
+	ID_EDIT_COPY,  "Copiar a seleção e colocá-la na Área de transferência\nCopiar"
+	ID_EDIT_CUT,  "Recortar a seleção e colocá-la na Área de transferência\nRecortar"
+	ID_EDIT_FIND,  "Localizar o texto especificado\nLocalizar"
+	ID_EDIT_PASTE,  "Inserir conteúdo da Área de transferência\nColar"
+	ID_EDIT_PASTE_LINK,  "Inserir o conteúdo da Área de transferência e um vínculo em sua origem\nColar vínculo"
+	ID_EDIT_PASTE_SPECIAL,  "Inserir o conteúdo da Área de transferência com opções\nColar especial"
+	ID_EDIT_REPEAT,  "Repetir a última ação\nRepetir"
+	ID_EDIT_REPLACE,  "Substituir texto específico por outro texto\nSubstituir"
+	ID_EDIT_SELECT_ALL,  "Selecionar todo o documento\nSelecionar tudo"
+	ID_EDIT_UNDO,  "Desfazer a última ação\nDesfazer"
+	ID_EDIT_REDO,  "Refazer a ação previamente desfeita\nRefazer"
+	ID_VIEW_TOOLBAR,  "Mostrar ou ocultar a barra de ferramentas\nAlternar barra de ferramentas"
+	ID_VIEW_STATUS_BAR,  "Exibir ou ocultar a barra de status\nAlternar barra de status"
+	ID_FORMAT_FONT,  "Selecionar fonte para a seleção atual\nFonte"
+END
+
+
+// OLE specific
+STRINGTABLE
+BEGIN
+	ID_OLE_EDIT_LINKS,  "Editar objetos vinculados\nEditar vínculos"
+	ID_OLE_INSERT_NEW,  "Inserir novo objeto incorporado\nNovo objeto"
+	ID_OLE_EDIT_CONVERT,  "Converter objetos selecionados entre tipos\n Converter objeto"
+	ID_OLE_EDIT_CHANGE_ICON,  "Alterar ícone de objeto selecionado\nAlterar ícone"
+	ID_OLE_VERB_FIRST+0,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+1,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+2,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+3,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+4,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+5,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+6,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+7,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+8,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+9,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+10,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+11,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+12,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+13,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+14,  "Ativar objeto incorporado ou vinculado"
+	ID_OLE_VERB_FIRST+15,  "Ativar objeto incorporado ou vinculado"
+END
+
+// Database specific
+STRINGTABLE
+BEGIN
+	ID_RECORD_NEXT  "Mover para o próximo registro\nPróximo registro"
+	ID_RECORD_PREV  "Mover para o registro anterior\nRegistro anterior"
+	ID_RECORD_LAST  "Mover para o último registro\nÚltimo registro"
+	ID_RECORD_FIRST  "Mover para o primeiro registro\nPrimeiro registro"
+END
+
+// System commands
+STRINGTABLE
+BEGIN
+	AFX_IDS_SCSIZE,  "Alterar o tamanho da janela"
+	AFX_IDS_SCMOVE,  "Alterar a posição da janela"
+	AFX_IDS_SCMINIMIZE,  "Reduzir a janela a um ícone"
+	AFX_IDS_SCMAXIMIZE,  "Ampliar a janela para o tamanho máximo"
+	AFX_IDS_SCNEXTWINDOW,  "Alternar para a próxima janela do documento"
+	AFX_IDS_SCPREVWINDOW,  "Alternar para a janela anterior do documento"
+	AFX_IDS_SCCLOSE,  "Fecha a janela ativa e avisa para salvar o documento"
+	AFX_IDS_SCRESTORE,  "Restaurar a janela ao tamanho normal"
+	AFX_IDS_SCTASKLIST,  "Ativar lista de tarefas"
+	AFX_IDS_MDICHILD,  "Ativar esta janela"
+	AFX_IDS_PREVIEW_CLOSE,  "Fechar modo de visualização de impressão\nCancelar visualização"
+	AFX_IDS_DESKACCESSORY,  "Abrir o item selecionado"
+END
+
+/////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,301 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#ifndef __AFXCTL_RC__
+#define __AFXCTL_RC__
+
+#ifndef __AFXRES_H__
+	#include <afxres.h>
+#endif
+
+#ifdef APSTUDIO_INVOKED
+// This will prevent the VC++ Resource Editor user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"< Cannot change standard MFC resources! >\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifndef _AFXDLL
+
+/////////////////////////////////////////////////////////////////////////////
+// OLE Control Resources
+
+#ifndef _AFX_NO_STOCKPPG_RESOURCES
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+AFX_IDB_TRUETYPE        BITMAP  DISCARDABLE     "RES\\TRUETYPE.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+AFX_IDD_PROPPAGE_FONT DIALOG DISCARDABLE  13, 54, 250, 110
+STYLE WS_CHILD | 0x4
+#if !defined(_WIN32_WCE)
+FONT 8, "MS Shell Dlg"
+#endif // _WIN32_WCE
+BEGIN
+	LTEXT           "&Egenskapsnamn:",IDC_STATIC,3,5,61,8
+	COMBOBOX        AFX_IDC_FONTPROP,65,3,100,71,CBS_DROPDOWNLIST | CBS_SORT |
+					WS_VSCROLL | WS_TABSTOP
+	LTEXT           "Tecke&nsnitt:",IDC_STATIC,3,19,91,8
+	COMBOBOX        AFX_IDC_FONTNAMES,3,29,91,77,CBS_SIMPLE |
+					CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT |
+					CBS_HASSTRINGS | CBS_DISABLENOSCROLL | WS_VSCROLL |
+					WS_TABSTOP
+	LTEXT           "St&il:",IDC_STATIC,102,19,53,8
+	COMBOBOX        AFX_IDC_FONTSTYLES,104,29,53,53,CBS_DROPDOWNLIST |
+					CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+	LTEXT           "St&orlek:",IDC_STATIC,167,19,40,8
+	COMBOBOX        AFX_IDC_FONTSIZES,167,29,36,53,CBS_DROPDOWN | CBS_SORT |
+					CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+	GROUPBOX        "Effekter",IDC_STATIC,104,44,142,24,WS_GROUP
+	CONTROL         "&Genomstruken",AFX_IDC_STRIKEOUT,"Button",BS_AUTOCHECKBOX |
+					WS_TABSTOP,109,55,65,10
+	CONTROL         "&Understruken",AFX_IDC_UNDERLINE,"Button",BS_AUTOCHECKBOX |
+					WS_TABSTOP,175,55,65,10
+	GROUPBOX        "Exempel",IDC_STATIC,104,71,142,36,WS_GROUP
+	CTEXT           "AaBbÄäÖö",AFX_IDC_SAMPLEBOX,110,80,130,22,SS_NOPREFIX |
+					NOT WS_VISIBLE
+END
+
+AFX_IDD_PROPPAGE_COLOR DIALOG DISCARDABLE  0, 0, 250, 62
+STYLE WS_CHILD | 0x4
+#if !defined(_WIN32_WCE)
+FONT 8, "MS Shell Dlg"
+#endif // _WIN32_WCE
+BEGIN
+	LTEXT           "&Egenskapsnamn:",IDC_STATIC,3,3,100,8
+	COMBOBOX        AFX_IDC_COLORPROP,3,13,100,54,CBS_DROPDOWNLIST |
+					CBS_SORT | WS_VSCROLL | WS_TABSTOP
+	LTEXT           "Systemf&ärger:",IDC_STATIC,3,29,100,8
+	COMBOBOX        AFX_IDC_SYSTEMCOLORS,3,39,100,54,CBS_DROPDOWNLIST |
+					CBS_SORT | WS_VSCROLL | WS_TABSTOP
+	CONTROL         "",AFX_IDC_COLOR_BLACK,"Button",BS_OWNERDRAW | WS_GROUP |
+					WS_TABSTOP,118,4,15,11
+	CONTROL         "",AFX_IDC_COLOR_BLUE,"Button",BS_OWNERDRAW,138,4,15,11
+	CONTROL         "",AFX_IDC_COLOR_CYAN,"Button",BS_OWNERDRAW,158,4,15,11
+	CONTROL         "",AFX_IDC_COLOR_DARKBLUE,"Button",BS_OWNERDRAW,178,4,15,
+					11
+	CONTROL         "",AFX_IDC_COLOR_DARKCYAN,"Button",BS_OWNERDRAW,118,18,
+					15,11
+	CONTROL         "",AFX_IDC_COLOR_DARKGREEN,"Button",BS_OWNERDRAW,138,18,
+					15,11
+	CONTROL         "",AFX_IDC_COLOR_DARKMAGENTA,"Button",BS_OWNERDRAW,158,
+					18,15,11
+	CONTROL         "",AFX_IDC_COLOR_GRAY,"Button",BS_OWNERDRAW,178,18,15,11
+	CONTROL         "",AFX_IDC_COLOR_DARKRED,"Button",BS_OWNERDRAW,118,32,15,
+					11
+	CONTROL         "",AFX_IDC_COLOR_GREEN,"Button",BS_OWNERDRAW,138,32,15,
+					11
+	CONTROL         "",AFX_IDC_COLOR_LIGHTBROWN,"Button",BS_OWNERDRAW,158,32,
+					15,11
+	CONTROL         "",AFX_IDC_COLOR_LIGHTGRAY,"Button",BS_OWNERDRAW,178,32,
+					15,11
+	CONTROL         "",AFX_IDC_COLOR_MAGENTA,"Button",BS_OWNERDRAW,118,46,15,
+					11
+	CONTROL         "",AFX_IDC_COLOR_RED,"Button",BS_OWNERDRAW,138,46,15,11
+	CONTROL         "",AFX_IDC_COLOR_WHITE,"Button",BS_OWNERDRAW,158,46,15,
+					11
+	CONTROL         "",AFX_IDC_COLOR_YELLOW,"Button",BS_OWNERDRAW,178,46,15,
+					11
+END
+
+AFX_IDD_PROPPAGE_PICTURE DIALOG DISCARDABLE  0, 0, 225, 77
+STYLE WS_CHILD | 0x4
+#if !defined(_WIN32_WCE)
+FONT 8, "MS Shell Dlg"
+#endif // _WIN32_WCE
+BEGIN
+	LTEXT           "&Egenskapsnamn:",IDC_STATIC,3,3,100,8
+	COMBOBOX        AFX_IDC_PROPNAME,3,13,100,30,CBS_DROPDOWNLIST | CBS_SORT |
+					WS_VSCROLL | WS_TABSTOP
+	PUSHBUTTON      "&Bläddra...",AFX_IDC_BROWSE,3,35,54,14
+	PUSHBUTTON      "&Rensa",AFX_IDC_CLEAR,61,35,54,14
+	RTEXT           "Förhandsgranska:",IDC_STATIC,124,3,59,10
+	CONTROL         "",AFX_IDC_PICTURE,"Static",SS_BLACKFRAME,124,13,93,54
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+AFX_IDD_PROPPAGE_FONT DLGINIT
+BEGIN
+	1002, 0x403, 12, 0
+0x6f42, 0x646c, 0x4920, 0x6174, 0x696c, 0x0063,
+	0
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_PROPPAGE_UNKNOWN   "(Okänd)"
+	AFX_IDS_COLOR_DESKTOP     "Skrivbord"
+	AFX_IDS_COLOR_APPWORKSPACE   "Arbetsyta för program"
+	AFX_IDS_COLOR_WNDBACKGND   "Fönsterbakgrund"
+	AFX_IDS_COLOR_WNDTEXT     "Fönstertext"
+	AFX_IDS_COLOR_MENUBAR     "Menyrad"
+	AFX_IDS_COLOR_MENUTEXT    "Menytext"
+	AFX_IDS_COLOR_ACTIVEBAR   "Aktiv namnlist"
+	AFX_IDS_COLOR_INACTIVEBAR   "Inaktiv namnlist"
+	AFX_IDS_COLOR_ACTIVETEXT   "Aktiv namnlist"
+	AFX_IDS_COLOR_INACTIVETEXT   "Inaktiv namnlist"
+	AFX_IDS_COLOR_ACTIVEBORDER   "Aktiv ram"
+	AFX_IDS_COLOR_INACTIVEBORDER   "Inaktiv ram"
+END
+#endif // !_AFX_NO_STOCKPPG_RESOURCES
+
+STRINGTABLE DISCARDABLE
+BEGIN
+#ifndef _AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_COLOR_WNDFRAME    "Fönsterram"
+	AFX_IDS_COLOR_SCROLLBARS   "Rullningslister"
+	AFX_IDS_COLOR_BTNFACE     "Knappens yta"
+	AFX_IDS_COLOR_BTNSHADOW   "Knappens skugga"
+	AFX_IDS_COLOR_BTNTEXT     "Knapptext"
+	AFX_IDS_COLOR_BTNHIGHLIGHT   "Markerad knapp"
+	AFX_IDS_COLOR_DISABLEDTEXT   "Avmarkerad text"
+	AFX_IDS_COLOR_HIGHLIGHT   "Markera"
+	AFX_IDS_COLOR_HIGHLIGHTTEXT   "Markerad text"
+	AFX_IDS_REGULAR           "Normal"
+	AFX_IDS_BOLD              "Fet"
+	AFX_IDS_ITALIC            "Kursiv"
+	AFX_IDS_BOLDITALIC        "Fet Kursiv"
+	AFX_IDS_SAMPLETEXT        "AaBbÄäÖö"
+#endif // !_AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_DISPLAYSTRING_FONT   "(Teckensnitt)"
+	AFX_IDS_DISPLAYSTRING_COLOR   "(Färg)"
+
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_DISPLAYSTRING_PICTURE   "(Bild - %s)"
+#ifndef _AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_PICTUREFILTER     "Alla bildtyper|*.bmp;*.cur;*.dib;*.emf;*.ico;*.wmf|Bitmappar (*.bmp;*.dib)|*.bmp;*.dib|Icons/Pekare (*.ico;*.cur)|*.ico|Metafiler (*.wmf;*.emf)|*.emf;*.wmf|Alla filer (*.*)|*.*||"
+#endif // !_AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_PICTYPE_UNKNOWN   "Okänd"
+	AFX_IDS_PICTYPE_NONE      "Ingen"
+	AFX_IDS_PICTYPE_BITMAP    "Bitmap"
+	AFX_IDS_PICTYPE_METAFILE   "Metafil"
+	AFX_IDS_PICTYPE_ICON      "Ikon"
+#ifndef _AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_COLOR_PPG         "Färgegenskaper"
+	AFX_IDS_COLOR_PPG_CAPTION   "Färger"
+	AFX_IDS_FONT_PPG          "Teckensnittsegenskaper"
+	AFX_IDS_FONT_PPG_CAPTION   "Teckensnitt"
+	AFX_IDS_PICTURE_PPG       "Bildegenskaper"
+	AFX_IDS_PICTURE_PPG_CAPTION   "Bilder"
+#endif // !_AFX_NO_STOCKPPG_RESOURCES
+	AFX_IDS_BORDERSTYLE_0     "0 - Ingen"
+	AFX_IDS_BORDERSTYLE_1     "1 - Enkel"
+
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_VERB_EDIT         "&Redigera"
+	AFX_IDS_VERB_PROPERTIES   "&Egenskaper..."
+END
+
+#ifndef _AFX_NO_STOCKPPG_RESOURCES
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_PICTURECANTOPEN   "Det gick inte att öppna bildfil %1. Filen kanske inte existerare eller så går den inte att läsa."
+	AFX_IDP_PICTURECANTLOAD   "Det gick inte att ladda bildfil %1. Filen kan ha ett ogiltigt format."
+	AFX_IDP_PICTURETOOLARGE   "Det gick inte att ladda bildfil %1. Bilden får inte plats i minnet."
+	AFX_IDP_PICTUREREADFAILED
+							"Det gick inte att ladda bildfil %1. Oförklarligt läsfel."
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_PICTUREBROWSETITLE   "Bläddra efter bilder"
+END
+#endif // !_AFX_NO_STOCKPPG_RESOURCES
+
+#ifndef _AFX_NO_CTLERROR_RESOURCES
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_E_ILLEGALFUNCTIONCALL   "Ogiltigt funktionsanrop"
+	AFX_IDP_E_OVERFLOW        "Spill"
+	AFX_IDP_E_OUTOFMEMORY     "Slut på ledigt minne"
+	AFX_IDP_E_DIVISIONBYZERO   "Noll-divisionsfel"
+	AFX_IDP_E_OUTOFSTRINGSPACE   "Sträng-utrymmet slut"
+	AFX_IDP_E_OUTOFSTACKSPACE   "Stack-utrymmet slut"
+	AFX_IDP_E_BADFILENAMEORNUMBER   "Felaktigt filnamn eller nummer"
+	AFX_IDP_E_FILENOTFOUND    "Det går inte att hitta filen"
+	AFX_IDP_E_BADFILEMODE     "Felaktigt filläge"
+	AFX_IDP_E_FILEALREADYOPEN   "Filen är redan öppen"
+	AFX_IDP_E_DEVICEIOERROR   "I/O-enhetsfel"
+	AFX_IDP_E_FILEALREADYEXISTS   "Filen finns redan"
+	AFX_IDP_E_BADRECORDLENGTH   "Felaktig postlängd"
+	AFX_IDP_E_DISKFULL        "Disken full"
+	AFX_IDP_E_BADRECORDNUMBER   "Felaktig postnummer"
+	AFX_IDP_E_BADFILENAME     "Felaktigt filnamn"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_E_TOOMANYFILES    "För många filer"
+	AFX_IDP_E_DEVICEUNAVAILABLE   "Enhet otilgänglig"
+	AFX_IDP_E_PERMISSIONDENIED   "Åtkomst nekad"
+	AFX_IDP_E_DISKNOTREADY    "Disken är inte klar"
+	AFX_IDP_E_PATHFILEACCESSERROR   "Åtkomstfel i sökväg/fil"
+	AFX_IDP_E_PATHNOTFOUND    "Det går inte att hitta sökvägen"
+	AFX_IDP_E_INVALIDPATTERNSTRING   "Ogiltig mönstersträng"
+	AFX_IDP_E_INVALIDUSEOFNULL   "Ogiltigt användande av noll"
+	AFX_IDP_E_INVALIDFILEFORMAT   "Ogiltigt filformat"
+	AFX_IDP_E_INVALIDPROPERTYVALUE   "Ogiltigt egenskapsvärde"
+	AFX_IDP_E_INVALIDPROPERTYARRAYINDEX   "Ogiltigt matrisindex"
+	AFX_IDP_E_SETNOTSUPPORTEDATRUNTIME   "Egenskapen kan inte anges under körning (run time)"
+	AFX_IDP_E_SETNOTSUPPORTED   "Objektet är skrivskyddat"
+	AFX_IDP_E_NEEDPROPERTYARRAYINDEX
+							"Om du använder en egenskapsmatris så måste du ange ett matrisindex"
+	AFX_IDP_E_SETNOTPERMITTED "Egenskapen kan inte anges på den här kontrollen"
+	AFX_IDP_E_GETNOTSUPPORTEDATRUNTIME "Egenskapen kan inte läsas under körning (run time)"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDP_E_GETNOTSUPPORTED   "Objektet är skrivskyddat"
+	AFX_IDP_E_PROPERTYNOTFOUND   "Det gick inte hitta objektet"
+	AFX_IDP_E_INVALIDCLIPBOARDFORMAT   "Ogiltigt Urklippsformat"
+	AFX_IDP_E_INVALIDPICTURE   "Ogiltig bild"
+	AFX_IDP_E_PRINTERERROR    "Skrivarfel"
+	AFX_IDP_E_CANTSAVEFILETOTEMP
+							"Det går inte skapa nödvändig temporär fil för att spara"
+	AFX_IDP_E_SEARCHTEXTNOTFOUND "Det gick inte hitta texten"
+	AFX_IDP_E_REPLACEMENTSTOOLONG "Texten är för lång"
+END
+#endif //!_AFX_NO_CTLERROR_RESOURCES
+
+#endif //!_AFXDLL
+#endif //__AFXOLECL_RC__

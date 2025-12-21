@@ -1,0 +1,34 @@
+@REM --- SETENV.CMD ---
+
+@REM This script sets the directory locations used in building 
+@REM MFCCE and ATLCE.  It is called automatically by MAKE.CMD.
+
+@REM You must be enlisted in MFCCE and ATLCE.
+@REM 	enlist -vcs \\wcet\slmv2\mfcce -p mfcdev
+@REM    enlist -vcs \\wcet\slmv2\atlce -p atldev
+
+@REM -- Build tools       (REQUIRED)
+SET VISUALSTUDIO=C:\Program Files\Microsoft Embedded Visual C++ 6.5\VCCE\bin;C:\Program Files\Microsoft Embedded Visual C++ 6.5\Common\VCCE\bin
+
+SET WINCE_COMPILERS=C:\Windows CE Tools\WCE300\Bin
+
+@REM -- Enlistments       (REQUIRED)
+SET ATLCE_ENLISTMENT=D:\atldev
+SET MFCCE_ENLISTMENT=D:\mfcdev
+SET SNAPSHOTS_SERVER=D:\snapshots
+
+@REM -- Drop directory    (REQUIRED)
+SET DROPDIR=D:\drop
+
+@REM -- Enable CEF builds (OPTIONAL)
+@REM    If you enable, you need to make sure you add the location of the compilers
+@REM    to the WINCE_COMPILERS path if needed, and you need to register MSCOROC.DLL.
+SET ENABLE_CEF=0
+
+@REM -- Alternative OS INCLUDE and LIB (OPTIONAL, example given)
+@REM SET ALT_OS_INCLUDE=C:\Windows CE Tools\WCE212\Birch_SP2_SDK\Include
+@REM SET ALT_OS_LIB=C:\Windows CE Tools\WCE212\Birch_SP2_SDK\Lib
+
+@REM -- PPSH directory   (OPTIONAL)
+@REM    This is used to download DLL's to the device using PPSH.
+SET PPSHDIR=F:\ppsh

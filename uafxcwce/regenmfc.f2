@@ -1,0 +1,53 @@
+; REGEN.F2 - This is a filter file containing fgrep patterns to nuke
+;  start of line will have 1 space!
+; C Runtime stuff
+ _
+$i8_
+rsrvptrs
+; All vtables (???), all destructors
+ ??_7
+ ??_GC
+ ??_C@
+ ??_EC
+ ??_E?
+; Weird globals
+ ??_9@$BFI@H
+ ??_9@$BFM@H
+ ??_9@$BGA@H
+ ??_I@ZCXPEXIHP7CX0@Z@Z
+; DLL internal stuff (some added explictly in regen.a1)
+ _DllMain@12
+ DllMain
+ atexit
+; Randomly named class destructors
+ ??_EFileRegEntry@@
+ ??_GFileRegEntry@@
+ GetResourceHandle
+;;;;;
+;Added for MFCWCE
+ ??_E_
+ ??_EAFX_
+ ??_E_AFX_
+ ??_G_AFX_
+ ??_GAFX_
+ ??0_AFX_
+ ??0AUX_
+ ??1_AFX_
+ ??_9@$BIM
+ ??_9@$BJA
+ ??_9@$BKI
+ ??1?$
+ ??B?$
+ ??0?$
+ ??1?$
+ ??B?$
+ ??C?$
+ ??_G?$CArray@VCCeDBProp@@AAV1@@@UAAPAXI@Z
+ ??0?$CArray@VCCeDBProp@@AAV1@@@QAA@XZ
+ ??1?$CArray@VCCeDBProp@@AAV1@@@UAA@XZ
+ ??A?$CArray@VCCeDBProp@@AAV1@@@QAAAAVCCeDBProp@@H@Z
+ ??A?$CArray@VCCeDBProp@@AAV1@@@QBA?AVCCeDBProp@@H@Z
+ ;x86em equivalents
+ ??_G?$CArray@VCCeDBProp@@AAV1@@@UAEPAXI@Z
+ ??0?$CArray@VCCeDBProp@@AAV1@@@QAE@XZ
+ ??1?$CArray@VCCeDBProp@@AAV1@@@UAE@XZ

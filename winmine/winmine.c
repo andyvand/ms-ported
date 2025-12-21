@@ -34,6 +34,17 @@
 
 #ifndef _WIN32_WCE
 #include "dos.h"
+#else
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, ID_MENU, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
 #endif
 
 #ifndef WM_ENTERMENULOOP
@@ -262,6 +273,10 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 		ReportErr(1000);
 		return fFalse;
 		}
+
+#ifdef _WIN32_WCE
+        HandleToolbarCreate(hwndMain, hInst);
+#endif
 
 	AdjustWindow(fCalc);
 

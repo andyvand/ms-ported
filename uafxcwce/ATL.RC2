@@ -1,0 +1,59 @@
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//
+// Use of this source code is subject to the terms of the Microsoft end-user
+// license agreement (EULA) under which you licensed this SOFTWARE PRODUCT.
+// If you did not accept the terms of the EULA, you are not authorized to use
+// this source code. For a copy of the EULA, please see the LICENSE.RTF on your
+// install media.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+//#include "build_.h"
+#include "version.h"
+#include "stdver.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION rmj,rmm,rup
+ PRODUCTVERSION rmj,rmm,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+		BEGIN
+			VALUE "CompanyName", "Microsoft Corporation\0"
+#if defined(_DUALOS)
+			VALUE "FileDescription", "ATL Module for Windows NT/95 (Unicode/ANSI)\0"
+#elif defined(_UNICODE)
+			VALUE "FileDescription", "ATL Module for Windows NT (Unicode)\0"
+#else
+			VALUE "FileDescription", "ATL Module for Windows (ANSI)\0"
+#endif                        
+			VALUE "FileVersion", FULLSZVER "\0"
+			VALUE "InternalName", "ATL\0"
+			VALUE "LegalCopyright", "Copyright © Microsoft Corp. 1996-2003\0"
+			VALUE "OriginalFilename", "ATL.DLL\0"
+			VALUE "ProductName", "Microsoft (R) Visual C++\0"
+			VALUE "ProductVersion", FULLSZVER "\0"
+			VALUE "OLESelfRegister", "\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END
