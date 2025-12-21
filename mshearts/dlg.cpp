@@ -102,22 +102,25 @@ CScoreDlg::OnInitDialog
 
 BOOL CScoreDlg::OnInitDialog()
 {
+#ifndef _WIN32_WCE
     RECT rcDlg, rcMain;
 
     GetParent()->GetClientRect(&rcMain);
-    GetParent()->ClientToScreen(&rcMain);
-    rcMain.bottom -= ::nStatusHeight;
-    GetWindowRect(&rcDlg);
+	GetParent()->ClientToScreen(&rcMain);
+	rcMain.bottom -= ::nStatusHeight;
+	GetWindowRect(&rcDlg);
 
-    int dxDlg = rcDlg.right - rcDlg.left;
-    int dxMain = rcMain.right - rcMain.left;
-    int x = rcMain.left + ((dxMain - dxDlg) / 2);
+	int dxDlg = rcDlg.right - rcDlg.left;
+	int dxMain = rcMain.right - rcMain.left;
+	int x = rcMain.left + ((dxMain - dxDlg) / 2);
 
-    int dyDlg = rcDlg.bottom - rcDlg.top;
-    int dyMain = rcMain.bottom - rcMain.top;
-    int y = rcMain.top + ((dyMain - dyDlg) / 2);
+	int dyDlg = rcDlg.bottom - rcDlg.top;
+	int dyMain = rcMain.bottom - rcMain.top;
+	int y = rcMain.top + ((dyMain - dyDlg) / 2);
 
-    SetWindowPos(this, x, y, 0, 0, SWP_NONE);
+	SetWindowPos(this, x, y, 0, 0, SWP_NONE);
+#endif
+
     SetText();          // set title bar text
 
     return TRUE;
