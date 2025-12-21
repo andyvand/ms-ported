@@ -7,6 +7,14 @@
 
 /*** Bitmaps ***/
 
+#ifndef MENU_HEIGHT
+#ifdef _WIN32_WCE
+#define MENU_HEIGHT 26
+#else
+#define MENU_HEIGHT 0
+#endif
+#endif
+
 #define dxBlk 16
 #define dyBlk 16
 
@@ -20,7 +28,7 @@
 
 #define dxLeftSpace 12
 #define dxRightSpace 12
-#define dyTopSpace 12
+#define dyTopSpace 12 + MENU_HEIGHT
 #define dyBottomSpace 12
 
 #define dxGridOff dxLeftSpace

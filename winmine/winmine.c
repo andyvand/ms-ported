@@ -274,10 +274,6 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 		return fFalse;
 		}
 
-#ifdef _WIN32_WCE
-        HandleToolbarCreate(hwndMain, hInst);
-#endif
-
 	AdjustWindow(fCalc);
 
 
@@ -293,6 +289,10 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 
 	ShowWindow(hwndMain, SW_SHOWNORMAL);
 	UpdateWindow(hwndMain);
+
+#ifdef _WIN32_WCE
+    HandleToolbarCreate(hwndMain, hInst);
+#endif
 
     bInitMinimized = FALSE;
 
@@ -1136,7 +1136,14 @@ VOID AdjustWindow(INT fAdjust)
             if (rectGame.top == rectHelp.top)
                 {
 #endif
+#ifdef _WIN32_WCE
+				//Menu Bar Height
+                dypAdjust -= (MENU_HEIGHT * 2);
+#else
+				//Menu Bar Height
                 dypAdjust -= dypMenu;
+#endif
+
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
     			    dxWindow+(dxpBorder*2) + EXTRA_SPACE, dyWindow + dypAdjust + EXTRA_SPACE, fTrue);
 #ifndef _WIN32_WCE
