@@ -1,16 +1,60 @@
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
 TARGETNAME=pegged
-TARGETPATH=obj
+FILE_VIEW_ROOT_FOLDER= \
+    ReadMe.txt \
+    prelink.bat \
+    postlink.bat \
+
+FILE_VIEW_RESOURCE_FOLDER= \
+    pegged.ico \
+
+FILE_VIEW_INCLUDES_FOLDER= \
+    pcrt32.h \
+    pegged.h \
+    plan16.h \
+    plan32.h \
+    port1632.h \
+    ptypes16.h \
+    ptypes32.h \
+    pwin16.h \
+    pwin32.h \
+
+SOURCES= \
+    pegged.c \
+    res.rc \
+
+_COMMONPUBROOT=$(_PUBLICROOT)\common
+__PROJROOT = $(_PUBLICROOT)\$(WINCEPROJ)
+COMMON_OAK_LIB_PATH=$(_PUBLICROOT)\common\oak\lib\$(_CPUINDPATH)
+COMMON_SDK_LIB_PATH=$(_PUBLICROOT)\common\sdk\lib\$(_CPUINDPATH)
+_COREDLL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\coredll.lib
+_COMMCTRL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\commctrl.lib
+_COMMDLG=$(_COMMONPUBROOT)\sdk\lib\$(_CPUINDPATH)\commdlg.lib
+_SHELLCB=$(_PUBLICROOT)\wceshellfe\oak\lib\$(_CPUINDPATH)\shellcb.lib
+_CEAYGSHELL=$(_PUBLICROOT)\apps\oak\lib\$(_CPUINDPATH)\ceaygshell.lib
+_MFC=$(_COMMONPUBROOT)\oak\lib\$(_CPUINDPATH)\uafxwce.lib
+_WININET=$(_PUBLICROOT)\ie7\sdk\lib\$(_CPUINDPATH)\wininet.lib
+OS_SDK_INC_PATH=$(_PUBLICROOT)\common\sdk\inc
+_ISVINCPATH=$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\wceshellfe\oak\inc;$(_WINCEROOT)\public\shell\oak\inc;$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\oak\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\oak\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;$(_WINCEROOT)\private\winceos\inc;$(_WINCEROOT)\public\common\sdk\inc\test
+
+CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -D_WIN32_WCE=700 -DUNDER_CE=0x700 -DLARGE_SCREEN=1
+INCLUDES=.;..\uafxcwce\include;$(OS_SDK_INC_PATH);$(_ISVINCPATH);$(_OEMINCPATH)
+
+TARGETLIBS= \
+    $(_COMMCTRL) \
+    $(_SHELLCB) \
+    $(_COREDLL)
+
 TARGETTYPE=PROGRAM
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+    pegged.bib \
+    pegged.reg \
+    pegged.dat \
+    pegged.db \
+    ProjSysgen.bat \
 
-INCLUDES=.;..
-
-C_DEFINES=-DWIN32
-
-SOURCES=pegged.c res.rc
-
-USE_MSVCRT=1
-
-UMTYPE=windows
-UMENTRY=winmain
-TARGETLIBS=$(SDK_LIB_PATH)\ntdll.lib \
-       ..\aboutwep\$(O)\aboutwep.lib	      \

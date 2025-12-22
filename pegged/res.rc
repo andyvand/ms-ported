@@ -1,12 +1,14 @@
 #include "pegged.h"
 #include "windows.h"
 
+#ifndef NO_MANIFEST
 1 RT_MANIFEST pegged.xml
+#endif
 
 Pegged ICON pegged.ico
 ID_ICON_MAIN ICON pegged.ico
 
-Pegged MENU
+IDM_MENU MENU
 	BEGIN
 		POPUP "&Game"
 			BEGIN
@@ -25,7 +27,7 @@ Pegged MENU
 				MENUITEM TEXT("&Diamond"),	IDM_DIAMOND
 				MENUITEM TEXT("&Solitaire"),	IDM_SOLITAIRE
 			END
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
 		POPUP "&Help"
 			BEGIN
 				MENUITEM TEXT("&Index\tF1"),	IDM_INDEX
@@ -40,7 +42,7 @@ Pegged MENU
 
 MainAcc ACCELERATORS
 BEGIN
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
 	VK_F1, IDM_INDEX,VIRTKEY,NOINVERT
 #endif
 	VK_F2, 1 , VIRTKEY, NOINVERT
@@ -48,7 +50,7 @@ BEGIN
 	VK_ESCAPE,12 , VIRTKEY, NOINVERT
 END
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
 #include <winver.h>
 #else
 #include <ntverp.h>

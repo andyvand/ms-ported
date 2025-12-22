@@ -16,6 +16,19 @@
 #define ICON_NAME TEXT("Pegged")
 #define HELP_FILE TEXT("pegged.chm")
 
+#ifdef _WIN32_WCE
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, IDM_MENU, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
+#endif
+
 VOID checkfvmove(VOID);
 VOID checkfanymoves(VOID);
 
@@ -159,7 +172,7 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
     }
 #endif
 
-	menu = LoadMenu(hInstance, szAppName);
+	menu = LoadMenu(hInstance, MAKEINTRESOURCE(IDM_MENU));
 
 #ifdef _WIN32_WCE
     hWnd = CreateWindow (szAppName, TEXT("Pegged"),
@@ -175,8 +188,13 @@ MMain(hInstance, hPrevInstance, lpszCmdLine, nCmdShow)
     NULL, menu, hInstance, NULL) ;
 #endif
 
-    ShowWindow (hWnd, nCmdShow) ;
-    UpdateWindow (hWnd) ;
+    ShowWindow (hWnd, nCmdShow);
+    UpdateWindow (hWnd);
+
+#ifdef _WIN32_WCE
+	HandleToolbarCreate(hWnd, hInstance);
+#endif
+
     hAccTable = LoadAccelerators(hInstance, TEXT("MainAcc"));
 
     while (GetMessage (&msg, NULL, 0, 0)
@@ -1277,6 +1295,11 @@ LPARAM       lParam)
 
 
 	GetWindowRect(hWnd, (LPRECT) & r);
+
+#ifdef _WIN32_WCE
+	r.top += MENU_HEIGHT;
+#endif
+
 	prevxorg = r.left;
 	prevyorg = r.top;
 	prevwidth = max(r.right, r.left) - min(r.right, r.left);

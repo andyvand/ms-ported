@@ -1,3 +1,6 @@
+#ifndef __PEGGED_H__
+#define __PEGGED_H__
+
 #define	IDM_NEW	1
 #define	IDM_UNDO	2
 #define	IDM_CROSS	3
@@ -15,3 +18,14 @@
 #define	IDM_HOWTO	15
 #define	IDM_COMMANDS	16
 #define	IDM_USING	17
+#define IDM_MENU    18
+
+#ifndef MENU_HEIGHT
+#ifdef _WIN32_WCE
+#define MENU_HEIGHT 26
+#else
+#define MENU_HEIGHT 0
+#endif
+#endif
+
+#endif /* __PEGGED_H__ */
