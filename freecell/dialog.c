@@ -585,7 +585,12 @@ void CentreDialog(HWND hDlg)
     GetClientRect(hDlg, &rcDlg);
     GetWindowRect(hMainWnd, &rcOffset);
     rcOffset.top += GetSystemMetrics(SM_CYCAPTION);
+
+#ifdef _WIN32_WCE
+	rcOffset.top += MENU_HEIGHT;
+#else
     rcOffset.top += GetSystemMetrics(SM_CYMENU);
+#endif
 
     SetWindowPos(hDlg, 0,
         ((rcMainWnd.right - rcDlg.right) / 2) + rcOffset.left,

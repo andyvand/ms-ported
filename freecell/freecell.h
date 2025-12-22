@@ -19,7 +19,15 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define __stdcall
 #endif
 
+#ifndef MENU_HEIGHT
 #ifdef _WIN32_WCE
+#define MENU_HEIGHT 26
+#else
+#define MENU_HEIGHT 0
+#endif
+#endif
+
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 #define     WINHEIGHT     320
 #define     WINWIDTH      240
 #else
@@ -62,7 +70,7 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     FROM            0               // wMouseMode
 #define     TO              1
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 #define     ICONWIDTH      16               // in pixels
 #define     ICONHEIGHT     16
 #else
@@ -96,7 +104,6 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     CHEAT_LOSE      1               // used with bCheating
 #define     CHEAT_WIN       2
 
-
 /* Macros */
 
 #define     SUIT(card)      ((card) % 4)
@@ -104,7 +111,7 @@ Main header file for Windows Free Cell.  Constants are in freecons.h
 #define     COLOUR(card)    (SUIT(card) == 1 || SUIT(card) == 2)
 
 #ifdef _WIN32_WCE
-#define     REGOPEN         RegCreateKeyEx(HKEY_CURRENT_USER, pszRegPath, 0, NULL, 0, 0, NULL, &hkey, NULL);
+#define     REGOPEN         RegCreateKeyEx(HKEY_CURRENT_USER, pszRegPath, 0, NULL, 0, KEY_ALL_ACCESS, NULL, &hkey, NULL);
 #else
 #define     REGOPEN         RegCreateKey(HKEY_CURRENT_USER, pszRegPath, &hkey);
 #endif

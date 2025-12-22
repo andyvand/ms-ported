@@ -105,13 +105,8 @@ VOID Glide(HWND hWnd, UINT fcol, UINT fpos, UINT tcol, UINT tpos)
             }
 
             /* Erase last background manually -- DrawCard will do last card. */
-#ifdef _WIN32_WCE
-			BitBlt(hMemB1, xEnd-x1, yEnd-y1, dxCrd, dyCrd, hMemF,0,0,SRCCOPY);
-			StretchBlt(hDC, x1, y1, (dxCrd / 2), (dyCrd / 2), hMemB1, 0, 0, dxCrd, dyCrd, SRCCOPY);
-#else
 			BitBlt(hMemB1, xEnd-x1, yEnd-y1, dxCrd, dyCrd, hMemF,0,0,SRCCOPY);
             BitBlt(hDC, x1, y1, dxCrd, dyCrd, hMemB1, 0, 0, SRCCOPY);
-#endif
 
             /* Select original bitmaps so mem DCs can be destroyed. */
 

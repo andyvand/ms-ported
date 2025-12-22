@@ -218,9 +218,11 @@ VOID IsGameLost(HWND hWnd)
 
 #ifndef _WIN32_WCE
     EnableMenuItem(GetMenu(hWnd), IDM_UNDO, MF_GRAYED);
+    DialogBox(hInst, TEXT("YouLose"), hWnd, YouLoseDlg);
+#else
+	DialogBox(hInst, TEXT("YouLose"), NULL, YouLoseDlg);
 #endif
 
-    DialogBox(hInst, TEXT("YouLose"), hWnd, YouLoseDlg);
     gamenumber = 0;                         // cancel mouse activity
     bCheating = FALSE;
 }

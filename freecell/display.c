@@ -27,7 +27,7 @@ static UINT wUpdateCol, wUpdatePos; // card user chose to transfer FROM
 static BOOL bCardRevealed;          // right mouse button show a card?
 
 #define BGND    (255)               // used for cdtDrawExt
-#define ICONY   ((dyCrd - ICONHEIGHT) / 3)
+#define ICONY   ((dyCrd - ICONHEIGHT) / 3) + MENU_HEIGHT
 
 /****************************************************************************
 
@@ -102,7 +102,11 @@ VOID ShuffleDeck(HWND hWnd, UINT_PTR seed)
 
          /* Keep calling GameNumDlg until valid number chosen. */
 
+#ifdef _WIN32_WCE
+        while (!DialogBox(hInst, TEXT("GameNum"), NULL, GameNumDlg))
+#else
         while (!DialogBox(hInst, TEXT("GameNum"), hWnd, GameNumDlg))
+#endif
         {
         }
 
@@ -493,7 +497,7 @@ VOID Card2Point(UINT col, UINT pos, UINT *x, UINT *y)
 
     if (col == TOPROW)      // column 0 is really the top row of 8 slots
     {
-        *y = 0;
+        *y = MENU_HEIGHT;
         *x = pos * dxCrd;
 
 		if (pos > 3)
@@ -502,7 +506,7 @@ VOID Card2Point(UINT col, UINT pos, UINT *x, UINT *y)
     else
     {
         *x = wOffset[col];
-        *y = dyCrd + wVSpace + (pos * dyTops);
+        *y = MENU_HEIGHT + dyCrd + wVSpace + (pos * dyTops);
     }
 }
 
@@ -560,7 +564,12 @@ VOID DisplayCardCount(HWND hWnd)
         int         offset;
 
         GetTextMetrics(hDC, &tm);
+
+#ifdef _WIN32_WCE
+        offset = MENU_HEIGHT;
+#else
         offset = (GetSystemMetrics(SM_CYMENU) - tm.tmHeight) / 2;
+#endif
 
 #ifdef _WIN32_WCE
 		yLoc = GetSystemMetrics(SM_CYDLGFRAME)      // sizing frame
@@ -579,14 +588,14 @@ VOID DisplayCardCount(HWND hWnd)
     {
         SetTextColor(hDC, GetSysColor(COLOR_MENU));     // background colour
         StringCchPrintf(oldbuffer, (sizeof(oldbuffer) / sizeof(TCHAR)), smallbuf, wOldCount);
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(_WIN32)
 		ExtTextOut(hDC, xOldLoc, yLoc, 0, NULL, oldbuffer, lstrlen(buffer), NULL);
 #else
         TextOut(hDC, xOldLoc, yLoc, oldbuffer, lstrlen(buffer));
 #endif
     }
     SetTextColor(hDC, GetSysColor(COLOR_MENUTEXT));
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(_WIN32)
 	ExtTextOut(hDC, xLoc, yLoc, 0, NULL, buffer, lstrlen(buffer), NULL);
 #else
 	TextOut(hDC, xLoc, yLoc, buffer, lstrlen(buffer));
@@ -617,7 +626,8 @@ VOID Payoff(HDC hDC)
     HDC     hMemDC;             // bitmap memory DC
     HBITMAP hBitmap;
     HBITMAP hOldBitmap;
-#ifdef _WIN32_WCE
+
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 	INT     xStretch = 160;
 	INT     yStretch = 160;
 #else
@@ -704,7 +714,7 @@ VOID DrawKing(HDC hDC, UINT state, BOOL bDraw)
             SelectObject(hMemDC, hOldBrush);
         }
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 		StretchBlt(hDC,wIconOffset,ICONY,BMWIDTH/2,BMHEIGHT/2,hMemDC,0,0,BMWIDTH,BMHEIGHT,SRCCOPY);
 #else
 		BitBlt(hDC,wIconOffset,ICONY,BMWIDTH,BMHEIGHT,hMemDC,0,0,SRCCOPY);

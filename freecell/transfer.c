@@ -383,7 +383,11 @@ VOID MoveCards(HWND hWnd)
         ReleaseDC(hWnd, hDC);
 
         bWonState = TRUE;
+#ifdef _WIN32_WCE
+        nResponse = DialogBox(hInst, TEXT("YouWin"), NULL, YouWinDlg);
+#else
         nResponse = DialogBox(hInst, TEXT("YouWin"), hWnd, YouWinDlg);
+#endif
 
         if (nResponse == IDYES)
             PostMessage(hWnd, WM_COMMAND,

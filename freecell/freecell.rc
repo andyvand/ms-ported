@@ -1,10 +1,6 @@
 #include "windows.h"
 #include "freecons.h"
 
-#ifdef _WIN32_WCE
-#include "cards.rc"
-#endif
-
 #ifndef _WIN32_WCE
 1 RT_MANIFEST freecell.xml
 #endif
@@ -19,7 +15,7 @@ KingLeft         BITMAP  KINGL.BMP
 
 KingSmile        BITMAP  KINGS.BMP
 
-FreeMenu MENU
+IDM_MENU MENU
 BEGIN
     POPUP        TEXT("&Game")
     BEGIN
@@ -34,7 +30,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM TEXT("E&xit"),               IDM_EXIT
     END
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
     POPUP        TEXT("&Help")
     BEGIN
         MENUITEM TEXT("&Contents\t F1"),           IDM_HELP
@@ -48,7 +44,7 @@ END
 
 FreeMenu ACCELERATORS
 BEGIN
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
     VK_F1,      IDM_HELP,       VIRTKEY
     VK_F1,      IDM_HELP,       VIRTKEY, SHIFT
 #endif
@@ -60,13 +56,14 @@ BEGIN
     VK_F10,     IDM_CHEAT,      VIRTKEY, CONTROL, SHIFT
 END
 
-MoveCol DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 150, 80
-CAPTION "Move to Empty Column..."
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+MoveCol DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 0, 150, 80
 STYLE WS_CAPTION
 #else
+MoveCol DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 150, 80
 STYLE DS_MODALFRAME | WS_CAPTION
 #endif
+CAPTION "Move to Empty Column..."
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Move &column", IDC_MOVECOL, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 30, 15, 90, 14
@@ -74,13 +71,14 @@ BEGIN
     CONTROL "Cancel", IDCANCEL, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 55, 57, 40, 14
 END
 
-GameNum DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 120, 75
-CAPTION "Game Number"
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+GameNum DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 0, 120, 75
 STYLE WS_CAPTION | WS_SYSMENU
 #else
+GameNum DIALOG LOADONCALL MOVEABLE DISCARDABLE 40, 40, 120, 75
 STYLE DS_MODALFRAME | WS_CAPTION | DS_CONTEXTHELP | WS_SYSMENU
 #endif
+CAPTION "Game Number"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Select a game number", -1, "static", SS_CENTER | WS_CHILD, 0, 7, 121, 8
@@ -89,13 +87,14 @@ BEGIN
     CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 40, 54, 40, 14
 END
 
-YouLose DIALOG LOADONCALL MOVEABLE DISCARDABLE 60, 60, 135, 90
-CAPTION "Game Over"
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+YouLose DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 9, 135, 90
 STYLE WS_CAPTION
 #else
+YouLose DIALOG LOADONCALL MOVEABLE DISCARDABLE 60, 60, 135, 90
 STYLE DS_MODALFRAME | WS_CAPTION
 #endif
+CAPTION "Game Over"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Sorry, you lose. There are no more legal moves.\n Do you want to play again?",
@@ -105,13 +104,14 @@ BEGIN
     CONTROL "&Same game", IDC_YLSAME, "button", BS_AUTOCHECKBOX | WS_TABSTOP | WS_CHILD, 15, 55, 62, 12
 END
 
-YouWin DIALOG LOADONCALL MOVEABLE DISCARDABLE 172, 85, 135, 80
-CAPTION "Game Over"
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+YouWin DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 0, 135, 80
 STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
 #else
+YouWin DIALOG LOADONCALL MOVEABLE DISCARDABLE 172, 85, 135, 80
 STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | DS_MODALFRAME | WS_POPUP
 #endif
+CAPTION "Game Over"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "Congratulations, you win!\nDo you want to play again?",
@@ -121,13 +121,14 @@ BEGIN
     CONTROL "&Select game", IDC_YWSELECT, "button", BS_AUTOCHECKBOX | WS_TABSTOP | WS_CHILD, 15, 43, 63, 12
 END
 
-Stats DIALOG LOADONCALL MOVEABLE DISCARDABLE 84, 47, 150, 135
-CAPTION "FreeCell Statistics"
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+Stats DIALOG LOADONCALL MOVEABLE DISCARDABLE 0, 0, 150, 135
 STYLE WS_CAPTION | WS_SYSMENU
 #else
+Stats DIALOG LOADONCALL MOVEABLE DISCARDABLE 84, 47, 150, 135
 STYLE DS_MODALFRAME | WS_CAPTION | DS_CONTEXTHELP | WS_SYSMENU
 #endif
+CAPTION "FreeCell Statistics"
 FONT 8, "MS Shell Dlg"
 BEGIN
     CONTROL "", IDC_STEXT1, "static", SS_LEFT | WS_CHILD, 11, 10, 130, 30
@@ -137,15 +138,26 @@ BEGIN
     CONTROL "&Clear", IDC_CLEAR, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD, 90, 115, 40, 14
 END
 
-DLG_OPTIONS DIALOG DISCARDABLE  58, 68, 203, 63
-CAPTION "FreeCell Options"
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+DLG_OPTIONS DIALOG DISCARDABLE  0, 0, 150, 80
 STYLE WS_CAPTION | DS_3DLOOK | WS_SYSMENU
 #else
+DLG_OPTIONS DIALOG DISCARDABLE  58, 68, 203, 63
 STYLE DS_MODALFRAME | WS_CAPTION | DS_3DLOOK | DS_CONTEXTHELP | WS_SYSMENU
 #endif
+CAPTION "FreeCell Options"
 FONT 8, "MS Shell Dlg"
 BEGIN
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
+    DEFPUSHBUTTON   "OK",IDOK,15,9,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,70,9,50,14
+    CONTROL         "Display &messages on illegal moves",IDC_MESSAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,26,136,10
+    CONTROL         "&Quick play (no animation)",IDC_QUICK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,38,136,10
+    CONTROL         "&Double click moves card to free cell",IDC_DBLCLICK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,50,136,10
+#else
     DEFPUSHBUTTON   "OK",IDOK,148,9,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,148,26,50,14
     CONTROL         "Display &messages on illegal moves",IDC_MESSAGES,"Button",
@@ -154,8 +166,8 @@ BEGIN
                     BS_AUTOCHECKBOX | WS_TABSTOP,6,26,136,10
     CONTROL         "&Double click moves card to free cell",IDC_DBLCLICK,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,6,43,136,10
+#endif
 END
-
 
 STRINGTABLE
 BEGIN
@@ -186,7 +198,7 @@ BEGIN
 
 END
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
 #include <winver.h>
 #else
 #include <ntverp.h>
@@ -201,7 +213,7 @@ END
 #define VER_FILEFLAGSMASK 0x3F
 #endif
 
-#ifndef VER_FILEFLAGSMASK
+#ifndef VER_FILEFLAGS
 #define VER_FILEFLAGS VS_FFI_FILEFLAGSMASK
 #endif
 

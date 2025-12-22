@@ -125,6 +125,19 @@ void _setargv() { }     // reduces size of C runtimes
 void _setenvp() { }
 #endif
 
+#ifdef _WIN32_WCE
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, IDM_MENU, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
+#endif
+
 /****************************************************************************
 
 WinMain(HANDLE, HANDLE, LPSTR, int)
@@ -205,6 +218,7 @@ BOOL InitApplication(HANDLE hInstance)
 
     // Register the common controls.
     icc.dwSize = sizeof(INITCOMMONCONTROLSEX);
+
 #ifdef _WIN32_WCE
 	icc.dwICC  = ICC_BAR_CLASSES | ICC_COOL_CLASSES | ICC_LISTVIEW_CLASSES | 
                  ICC_PROGRESS_CLASS | ICC_TAB_CLASSES | ICC_UPDOWN_CLASS;
@@ -212,8 +226,10 @@ BOOL InitApplication(HANDLE hInstance)
 	icc.dwICC  = ICC_ANIMATE_CLASS | ICC_BAR_CLASSES | ICC_COOL_CLASSES | ICC_HOTKEY_CLASS | ICC_LISTVIEW_CLASSES | 
                  ICC_PAGESCROLLER_CLASS | ICC_PROGRESS_CLASS | ICC_TAB_CLASSES | ICC_UPDOWN_CLASS | ICC_USEREX_CLASSES;
 #endif
+
     InitCommonControlsEx(&icc);
-    DEBUGMSG(TEXT("----  Common Controls Initiated  ----\n\r"),0);
+
+	DEBUGMSG(TEXT("----  Common Controls Initiated  ----\n\r"),0);
 
     wc.style = CS_DBLCLKS;              // allow double clicks
     wc.lpfnWndProc = MainWndProc;
@@ -223,13 +239,7 @@ BOOL InitApplication(HANDLE hInstance)
     wc.hIcon = hIconMain;
     wc.hCursor = NULL;
     wc.hbrBackground = hBgndBrush;
-
-#ifndef _WIN32_WCE
-    wc.lpszMenuName  = TEXT("FreeMenu");
-#else
     wc.lpszMenuName  = NULL;
-#endif
-
     wc.lpszClassName = TEXT("FreeWClass");
 
     return RegisterClass(&wc);
@@ -300,9 +310,7 @@ BOOL InitInstance(HANDLE hInstance, INT nCmdShow)
     nWindowHeight = min(WINHEIGHT, GetSystemMetrics(SM_CYSCREEN));
 
     /* Create a main window for this application instance.  */
-#ifdef _WIN32_WCE
 	hMenu = LoadMenu(hInst, TEXT("FreeMenu"));
-#endif
 
     LoadString(hInst, IDS_APPNAME, smallbuf, SMALL);
 
@@ -330,6 +338,10 @@ BOOL InitInstance(HANDLE hInstance, INT nCmdShow)
 
     ShowWindow(hWnd, nCmdShow);     // Show the window
     UpdateWindow(hWnd);             // Sends WM_PAINT message
+
+#ifdef _WIN32_WCE
+	HandleToolbarCreate(hWnd, hInstance);
+#endif
 
     // Do the transfer of stats from the .ini file to the
     // registry (for people migrating from NT 4.0 freecell to NT 5.0)
@@ -505,12 +517,20 @@ LRESULT APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
                     break;
 
                 case IDM_STATS:
+#ifndef _WIN32_WCE
                     DialogBox(hInst, TEXT("Stats"), hWnd, StatsDlg);
-                    break;
+#else
+                    DialogBox(hInst, TEXT("Stats"), NULL, StatsDlg);
+#endif
+					break;
 
                 case IDM_OPTIONS:
+#ifndef _WIN32_WCE
                     DialogBox(hInst, MAKEINTRESOURCE(DLG_OPTIONS), hWnd, OptionsDlg);
-                    break;
+#else
+					DialogBox(hInst, MAKEINTRESOURCE(DLG_OPTIONS), NULL, OptionsDlg);
+#endif
+					break;
 
 #ifndef _WIN32_WCE
                 case IDM_HELP:
@@ -742,7 +762,7 @@ VOID WMCreate(HWND hWnd)
 
 	bResult = cdtInit(&dxCrd, &dyCrd);
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 	dxCrd /= 2;
 	dyCrd /= 2;
 

@@ -291,8 +291,11 @@ BOOL IsValidMove(HWND hWnd, UINT tcol, UINT tpos)
             return TRUE;
 
         /* If multiple cards can move, user must disambiguate request. */
-
+#ifdef _WIN32_WCE
+        bMoveCol = (BOOL) DialogBox(hInst, TEXT("MoveCol"), NULL, MoveColDlg);
+#else
         bMoveCol = (BOOL) DialogBox(hInst, TEXT("MoveCol"), hWnd, MoveColDlg);
+#endif
 
         if (bMoveCol == -1)         // CANCEL chosen
             return FALSE;

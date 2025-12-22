@@ -19,6 +19,7 @@
 #define IDM_FAKETIMER   112
 #define IDM_CHEAT       114
 #define IDM_UNDO        115
+#define IDM_MENU        116
 
 #define IDC_MOVECOL     201
 #define IDC_SINGLE      202
