@@ -307,7 +307,6 @@ void local_human::PopCard(CBrush &brush, int x, int y)
                        FALSE);                                  // update loc?
         }
     }
-
     dc.BitBlt(loc.x + (HORZSPACING * s), loc.y - POPSPACING,
            card::dxCrd, card::dyCrd + POPSPACING,
            &memDC, 0, 0, SRCCOPY);

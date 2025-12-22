@@ -46,6 +46,14 @@ const   int     POPSPACING  = 5;       // selected cards pop up this high
 const   int     POPSPACING  = 20;       // selected cards pop up this high
 #endif
 
+#ifndef MENU_HEIGHT
+#ifdef _WIN32_WCE
+#define MENU_HEIGHT 26
+#else
+#define MENU_HEIGHT 0
+#endif
+#endif
+
 const   int     MAXSUIT     = 4;
 
 enum    statetype { NORMAL, SELECTED, PLAYED, HIDDEN };
@@ -78,6 +86,7 @@ class card {
     public:
         static  BOOL        bConstructed;
         static  int         dxCrd, dyCrd;   // size of card bitmap
+		static  int         sdxCrd, sdyCrd; // non-scaled size of card bitmap
         static  CBitmap     m_bmBgnd;       // what's under card to glide
 
         card(int n = EMPTY);

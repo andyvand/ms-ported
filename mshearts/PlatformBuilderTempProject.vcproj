@@ -2,8 +2,8 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="mshearts (QEMU_MIN)"
-	ProjectGUID="{18348bf7-fce9-467d-b0ff-25f73faffd84}"
+	Name="mshearts (CEPC)"
+	ProjectGUID="{cbe923de-c708-4ae0-a673-21908e3f8b82}"
 	Keyword="Win32Proj"
 	>
 	<Platforms>

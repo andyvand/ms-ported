@@ -51,7 +51,12 @@ player::player(int n, int pos) : id(n), position(pos)
     CRect   rect = CMainWindow::m_TableRect;
 
     POINT centre;
-    const int offset = 30;          // offset from centre for playloc
+
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
+    const int offset = 10;          // offset from centre for playloc
+#else
+    const int offset = 30;           // offset from centre for playloc
+#endif
 
     mode = STARTING;
 
@@ -83,7 +88,7 @@ player::player(int n, int pos) : id(n), position(pos)
 
         case 1:
             loc.x = 3 * IDGE;
-            loc.y = (rect.bottom - (12 * VERTSPACING + card::dyCrd)) / 2;
+            loc.y = ((rect.bottom - (12 * VERTSPACING + card::dyCrd)) / 2);
             dx = 0;
             dy = VERTSPACING;
             playloc.x -= offset;
@@ -99,7 +104,7 @@ player::player(int n, int pos) : id(n), position(pos)
         case 2:
             loc.x = ((rect.right - (12 * HORZSPACING + card::dxCrd)) / 2)
                     + (12 * HORZSPACING);
-            loc.y = IDGE;
+            loc.y = IDGE + MENU_HEIGHT;
             dx = -HORZSPACING;
             dy = 0;
             playloc.x += 5;
@@ -110,7 +115,7 @@ player::player(int n, int pos) : id(n), position(pos)
             homeloc.y = -card::dyCrd;
             nameloc.x = ((rect.right - (12 * HORZSPACING + card::dxCrd)) / 2)
                         + (12 * HORZSPACING) + card::dxCrd + IDGE;
-            nameloc.y = IDGE;
+            nameloc.y = IDGE + MENU_HEIGHT;
             break;
 
         case 3:

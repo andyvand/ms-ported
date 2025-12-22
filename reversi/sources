@@ -1,50 +1,65 @@
-!IF 0
-
-Copyright (c) 1989  Microsoft Corporation
-
-Module Name:
-
-    sources.
-
-Abstract:
-
-    This file specifies the target component being built and the list of
-    sources files needed to build that component.  Also specifies optional
-    compiler switches and libraries that are unique for the component being
-    built.
-
-
-Author:
-
-    Steve Wood (stevewo) 12-Apr-1990
-
-NOTE:   Commented description of this file is in \nt\bak\bin\sources.tpl
-
-
-!ENDIF
-
-MAJORCOMP=shell
-MINORCOMP=games
-
+RELEASETYPE=LOCAL
+_ISVINCPATH=$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;
 TARGETNAME=reversi
-TARGETPATH=obj
-TARGETTYPE=LIBRARY
-TARGETLIBS=
+FILE_VIEW_ROOT_FOLDER= \
+    ReadMe.txt \
+    prelink.bat \
+    postlink.bat \
 
-INCLUDES=.
+FILE_VIEW_RESOURCE_FOLDER= \
+    blank.cur \
+    Reversi.ico \
+    REVPAT1.bmp \
+    REVPAT8.bmp \
 
-C_DEFINES=-DWIN32
+FILE_VIEW_INCLUDES_FOLDER= \
+    pcrt32.h \
+    plan16.h \
+    plan32.h \
+    port1632.h \
+    ptypes16.h \
+    ptypes32.h \
+    pwin16.h \
+    pwin32.h \
+    resource.h \
+    reversi.h \
 
-USE_CRTDLL=1
+_COMMONPUBROOT=$(_PUBLICROOT)\common
+__PROJROOT = $(_PUBLICROOT)\$(WINCEPROJ)
+COMMON_OAK_LIB_PATH=$(_PUBLICROOT)\common\oak\lib\$(_CPUINDPATH)
+COMMON_SDK_LIB_PATH=$(_PUBLICROOT)\common\sdk\lib\$(_CPUINDPATH)
+_COREDLL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\coredll.lib
+_COMMCTRL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\commctrl.lib
+_COMMDLG=$(_COMMONPUBROOT)\sdk\lib\$(_CPUINDPATH)\commdlg.lib
+_SHELLCB=$(_PUBLICROOT)\wceshellfe\oak\lib\$(_CPUINDPATH)\shellcb.lib
+_CEAYGSHELL=$(_PUBLICROOT)\apps\oak\lib\$(_CPUINDPATH)\ceaygshell.lib
+_MFC=$(_COMMONPUBROOT)\oak\lib\$(_CPUINDPATH)\uafxwce.lib
+_WININET=$(_PUBLICROOT)\ie7\sdk\lib\$(_CPUINDPATH)\wininet.lib
+OS_SDK_INC_PATH=$(_PUBLICROOT)\common\sdk\inc
+_ISVINCPATH=$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\sdk\inc;
+_OEMINCPATH=$(_WINCEROOT)\public\wceshellfe\oak\inc;$(_WINCEROOT)\public\shell\oak\inc;$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\oak\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\oak\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;$(_WINCEROOT)\private\winceos\inc;$(_WINCEROOT)\public\common\sdk\inc\test
 
-SOURCES=reversi.c rev.c res.rc
+CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -D_WIN32_WCE=700 -DUNDER_CE=0x700 -DLARGE_SCREEN=1
+INCLUDES=.;..\uafxcwce\include;$(OS_SDK_INC_PATH);$(_ISVINCPATH);$(_OEMINCPATH)
 
-UMTYPE=windows
-UMENTRY=winmain
-UMAPPL=reversi
-UMLIBS=\nt\public\sdk\lib\*\user32.lib                 \
-       \nt\public\sdk\lib\*\ntdll.lib                  \
-       \nt\public\sdk\lib\*\gdi32.lib                  \
-       \nt\public\sdk\lib\*\pwin32.lib               \
-       obj\*\rev.obj                                 \
-       obj\*\res.res
+SOURCES= \
+    rev.c \
+    reversi.c \
+    res.rc \
+
+TARGETLIBS= \
+    $(_COMMCTRL) \
+    $(_SHELLCB) \
+    $(_COREDLL)
+
+TARGETTYPE=PROGRAM
+POSTLINK_PASS_CMD=postlink.bat
+PRELINK_PASS_CMD=prelink.bat
+FILE_VIEW_PARAMETER_FOLDER= \
+    reversi.bib \
+    reversi.reg \
+    reversi.dat \
+    reversi.db \
+    ProjSysgen.bat \
+

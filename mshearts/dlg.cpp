@@ -573,7 +573,7 @@ BOOL COptionsDlg::OnInitDialog()
         if (sName[i].IsEmpty())
             sName[i].LoadString(IDS_P1NAME + i);
 
-        pName[i]->SetWindowText(p);
+		pName[i]->SetWindowText(p);
     }
 
     // get current autostart state

@@ -27,7 +27,7 @@ BEGIN
             MENUITEM TEXT("&Expert"),   44
             MENUITEM TEXT("&Master"),   46
         END
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
 #ifndef NOHELP
     POPUP TEXT("&Help")
         BEGIN

@@ -204,7 +204,7 @@ BOOL PositionCols(void)
         {
         case icolDeck:
             xLeft = dxMarg;
-            yTop = dyMarg;
+            yTop = dyMarg + MENU_HEIGHT;
             xRight = xLeft + dxCrd + icrdDeckMax / 10 * 2;
             yBot = yTop + dyCrd + icrdDeckMax / 10;
             dx = 0;
@@ -226,7 +226,7 @@ BOOL PositionCols(void)
             dyCrdOffDn = dyCrd / 25;
             xLeft = dxMarg;
             xRight = xLeft + dxCrd;
-            yTop = yBot + 1;
+            yTop = yBot + 1 + MENU_HEIGHT;
             yBot = yTop + 12 * dyCrdOffUp + dyCrd + 6 * dyCrdOffDn;
             break;
         }

@@ -5,7 +5,7 @@
 #include "sol.h"
 #include "solid.h"
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) || defined(UNDER_CE)
 #include <winver.h>
 #else
 #include <ntverp.h>
@@ -60,7 +60,7 @@ BEGIN
     END
 #endif
 
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(UNDER_CE)
     POPUP "&Help"
     BEGIN
         MENUITEM "&Contents\t F1",              idsHelpIndex

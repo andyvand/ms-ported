@@ -8,6 +8,13 @@
 #define tclsFound 3
 #define tclsTab 4
 
+#ifndef MENU_HEIGHT
+#ifdef _WIN32_WCE
+#define MENU_HEIGHT 26
+#else
+#define MENU_HEIGHT 0
+#endif
+#endif
 
 /* indexes of columns */
 #define icolDeck 			0

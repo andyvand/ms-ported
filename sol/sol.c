@@ -34,6 +34,19 @@ LRESULT APIENTRY ForceWndRedraw(HWND hWnd)
 }
 #endif
 
+#ifdef _WIN32_WCE
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, idmSol, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
+#endif
+
 #define rgbGreen RGB(0x00,0x80,0x00)
 #define rgbWhite RGB(0xff,0xff,0xff)
 
@@ -99,7 +112,7 @@ BOOL fHalfCards = fFalse;
 
 
 INT  xCardMargin;
-#define MIN_MARGIN  (dxCrd / 8 + 3)
+#define MIN_MARGIN  ((dxCrd / 8) + 3)
 
 
 /********************  Internal Functions ****************/
@@ -225,7 +238,7 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
         goto OOMError;
     }
 
-#ifdef _WIN32_WCE
+#if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 	dxCrd /= 2;
 	dyCrd /= 2;
 
@@ -347,8 +360,9 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
 	rect.right = dxCrd * 7 + 8 * xCardMargin;
 
 	/* Compute the window size we need for a client area this big */
-	rect.bottom = dyCrd * 4;
-	rect.left = rect.top = 0;
+	rect.bottom = (dyCrd * 4);
+	rect.left = 0;
+	rect.top = 0;
 
 #ifndef _WIN32_WCE
 	AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, TRUE);
@@ -370,9 +384,9 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
                     fStartIconic ? WS_OVERLAPPEDWINDOW | WS_MINIMIZE | WS_CLIPCHILDREN:
 #endif
                     WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN,
-                    CW_USEDEFAULT, 0,
+                    CW_USEDEFAULT, CW_USEDEFAULT,
 #ifdef _WIN32_WCE
-					240, 320,
+					GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN),
 #else
 					rect.right, rect.bottom,
 #endif
@@ -395,6 +409,10 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     ShowWindow(hwndApp, sw);
     UpdateWindow(hwndApp);
 
+#ifdef _WIN32_WCE
+    HandleToolbarCreate(hwndApp, hinst);
+#endif
+
     hAccel = LoadAccelerators( hinst, TEXT("HiddenAccel") );
 
     FRegisterStat(hinstPrev == NULL);
@@ -404,7 +422,7 @@ BOOL FSolInit(HANDLE hinst, HANDLE hinstPrev, LPTSTR lpszCmdLine, INT sw)
     Assert(pgmCur != NULL);
 
 #ifdef _WIN32_WCE
-	if(sw != SW_MINIMIZE)
+    if(sw != SW_MINIMIZE)
 #else
     if(sw != SW_SHOWMINNOACTIVE && sw != SW_MINIMIZE)
 #endif

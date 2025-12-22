@@ -28,6 +28,19 @@
 #define __stdcall
 #endif
 
+#ifdef _WIN32_WCE
+#include <windows.h>
+#include <windowsx.h>
+#include <commctrl.h>
+
+VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
+{
+    HWND g_hWndCB = CommandBar_Create(g_hInst, hwnd, 1);			
+    CommandBar_InsertMenubar(g_hWndCB, g_hInst, 1, 0);
+    CommandBar_AddAdornments(g_hWndCB, 0, 0);    
+}
+#endif
+
 /* Exported procedures called from other modules */
 LRESULT APIENTRY ReversiWndProc(HWND, UINT, WPARAM, LPARAM);
 VOID APIENTRY InverseMessage(HWND, UINT, UINT_PTR, DWORD);
@@ -1726,7 +1739,7 @@ LPARAM          lParam)
 		  GetWindowRgn(hWnd, hrgn);
 		  GetWindowRect(hWnd, &bkrect);
 
-		  bkdc = GetDCEx(hWnd, hrgn, (DCX_WINDOW | DCX_CACHE));
+		  bkdc = GetDC(hWnd);
 		  bkxcnt = (bkrect.right - bkrect.left);
 		  bky = (bkrect.bottom - bkrect.top);
 
@@ -1734,11 +1747,9 @@ LPARAM          lParam)
 
 #ifndef _WIN32_WCE
 		  GetWindowOrgEx(bkdc, &bkystart);
-#endif
 
 		  bkystart.y -= 50;
 
-#ifndef _WIN32_WCE
 		  SetWindowOrgEx(bkdc, bkystart.x, bkystart.y, &bkystart);
 #endif
 
@@ -1928,8 +1939,10 @@ LPARAM        lParam)
 /*  WinMain() -                                                             */
 /*                                                                          */
 /*--------------------------------------------------------------------------*/
-#if (defined(_UNICODE) || defined(UNICODE)) && !defined(__MINGW32__)
+#if (defined(_UNICODE) || defined(UNICODE)) && !defined(__MINGW32__) && !defined(_WIN32_WCE)
 INT WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPWSTR lpszCmdLine, INT cmdShow)
+#elif defined(_WIN32_WCE)
+INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPWSTR lpszCmdLine, INT cmdShow)
 #else
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT cmdShow)
 #endif
@@ -1990,70 +2003,23 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 
   hMenu = LoadMenu(hInstance, MAKEINTRESOURCE(1));
 
-#if WINVER >= 0x0400
-#if defined(_UNICODE) || defined(UNICODE)
-#ifdef _WIN32_WCE
-  hWnd = CreateWindowExW((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
-				L"Reversi",
+#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
+  hWnd = CreateWindowEx((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
+				TEXT("Reversi"),
 				fCheated ? szReversiPractice : szReversi,
 				WS_TILEDWINDOW,
 				CW_USEDEFAULT,
 				CW_USEDEFAULT,
-				GetSystemMetrics(SM_CXSCREEN),
-				GetSystemMetrics(SM_CYSCREEN),
+                (GetSystemMetrics(SM_CXSCREEN) >> 1),
+                (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
 				NULL,
 				hMenu,
 				hInstance,
 				NULL);
-#else
-  hWnd = CreateWindowExW((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
-				L"Reversi",
-				fCheated ? szReversiPractice : szReversi,
-				WS_TILEDWINDOW,
-				CW_USEDEFAULT,
-				CW_USEDEFAULT,
-				(GetSystemMetrics(SM_CXSCREEN) >> 1),
-				(GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
-				NULL,
-				hMenu,
-				hInstance,
-				NULL);
-#endif
-#else
-#ifdef _WIN32_WCE
-    hWnd = CreateWindowExA((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
-                  "Reversi",
-                  fCheated ? szReversiPractice : szReversi,
-                  WS_TILEDWINDOW,
-                  CW_USEDEFAULT,
-                  CW_USEDEFAULT,
-                  GetSystemMetrics(SM_CXSCREEN),
-                  GetSystemMetrics(SM_CYSCREEN),
-                  NULL,
-                  hMenu,
-                  hInstance,
-                  NULL);
-#else
-    hWnd = CreateWindowExA((WS_EX_TRANSPARENT | WS_EX_OVERLAPPEDWINDOW),
-                  "Reversi",
-                  fCheated ? szReversiPractice : szReversi,
-                  WS_TILEDWINDOW,
-                  CW_USEDEFAULT,
-                  CW_USEDEFAULT,
-                  (GetSystemMetrics(SM_CXSCREEN) >> 1),
-                  (GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
-                  NULL,
-                  hMenu,
-                  hInstance,
-                  NULL);
-#endif
-#endif
-#else
-#if defined(_UNICODE) || defined(UNICODE)
-#ifdef _WIN32_WCE
-  hWnd = CreateWindowW(L"Reversi",
+#elif defined(_WIN32_WCE)
+  hWnd = CreateWindow(TEXT("Reversi"),
                 fCheated ? szReversiPractice : szReversi,
-                WS_TILEDWINDOW,
+                WS_OVERLAPPED | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
                 CW_USEDEFAULT,
                 CW_USEDEFAULT,
                 GetSystemMetrics(SM_CXSCREEN),
@@ -2063,7 +2029,7 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                 hInstance,
                 NULL);
 #else
-  hWnd = CreateWindowW(L"Reversi",
+  hWnd = CreateWindow(TEXT("Reversi"),
                 fCheated ? szReversiPractice : szReversi,
                 WS_TILEDWINDOW,
                 CW_USEDEFAULT,
@@ -2074,34 +2040,6 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
                 hMenu,
                 hInstance,
                 NULL);
-#endif
-#else
-#ifdef _WIN32_WCE
-  hWnd = CreateWindowA("Reversi",
-                fCheated ? szReversiPractice : szReversi,
-                WS_TILEDWINDOW,
-                CW_USEDEFAULT,
-                CW_USEDEFAULT,
-                GetSystemMetrics(SM_CXSCREEN),
-				GetSystemMetrics(SM_CYSCREEN),
-				(HWND)NULL,
-                hMenu,
-                hInstance,
-                NULL);
-#else
-  hWnd = CreateWindowA("Reversi",
-                fCheated ? szReversiPractice : szReversi,
-                WS_TILEDWINDOW,
-                CW_USEDEFAULT,
-                CW_USEDEFAULT,
-                (GetSystemMetrics(SM_CXSCREEN) >> 1),
-				(GetSystemMetrics(SM_CYSCREEN) * 4 / 5),
-				(HWND)NULL,
-                hMenu,
-                hInstance,
-                NULL);
-#endif
-#endif
 #endif
 
   if (!hWnd)
@@ -2116,6 +2054,10 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrev, LPSTR lpszCmdLine, INT 
 #endif
 
   UpdateWindow(hWnd);
+
+#ifdef _WIN32_WCE
+  HandleToolbarCreate(hWnd, hInstance);
+#endif
 
   /* Messaging Loop. */
   while (GetMessage((LPMSG)&msg, NULL, 0, 0))

@@ -39,6 +39,8 @@ DWORD    card::dwPixel[12];
 BOOL     card::bConstructed;
 int      card::dxCrd;
 int      card::dyCrd;
+int      card::sdxCrd;
+int      card::sdyCrd;
 CBitmap  card::m_bmBgnd;
 
 int      card::count    = 0;
@@ -70,6 +72,9 @@ card::card(int n) : id(n), state(NORMAL)
         if(lpcdtInit)
         {
             bResult = (*lpcdtInit)(&dxCrd, &dyCrd);
+
+			sdxCrd = dxCrd;
+			sdyCrd = dyCrd;
 
 #if defined(_WIN32_WCE) && !defined(LARGE_SCREEN)
 			dxCrd /= 2;
@@ -244,8 +249,7 @@ VOID card::Glide(CDC &dc, int xEnd, int yEnd)
     m_MemB.SelectObject(&m_bmFgnd);
 
     // draw card into fgnd bitmap
-    (*lpcdtDraw)(m_MemB.m_hDC, 0, 0, id, FACEUP, 0);
-
+    (*lpcdtDrawExt)(m_MemB.m_hDC, 0, 0, dxCrd, dyCrd, id, FACEUP, 0);
     m_MemB.SelectObject(&m_bmBgnd);     // associate memDCs with bitmaps
     SaveCorners(dc, loc.x, loc.y);
     RestoreCorners(m_MemB, 0, 0);
