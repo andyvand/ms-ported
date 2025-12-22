@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Solitaire", "Solitaire\Solitaire.vcproj", "{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Pocket PC 2003 (ARMV4) = Debug|Pocket PC 2003 (ARMV4)
+		Debug|Win32 = Debug|Win32
+		Debug|Windows Mobile 6 Professional SDK (ARMV4I) = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Pocket PC 2003 (ARMV4) = Release|Pocket PC 2003 (ARMV4)
+		Release|Win32 = Release|Win32
+		Release|Windows Mobile 6 Professional SDK (ARMV4I) = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Itanium.ActiveCfg = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).Build.0 = Debug|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Pocket PC 2003 (ARMV4).Deploy.0 = Debug|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Win32.Build.0 = Debug|Win32
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|Windows Mobile 6 Professional SDK (ARMV4I).Deploy.0 = Debug|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|x64.ActiveCfg = Debug|x64
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Debug|x64.Build.0 = Debug|x64
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Itanium.ActiveCfg = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).Build.0 = Release|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Pocket PC 2003 (ARMV4).Deploy.0 = Release|Pocket PC 2003 (ARMV4)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Win32.ActiveCfg = Release|Win32
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Win32.Build.0 = Release|Win32
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Windows Mobile 6 Professional SDK (ARMV4I).ActiveCfg = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Windows Mobile 6 Professional SDK (ARMV4I).Build.0 = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|Windows Mobile 6 Professional SDK (ARMV4I).Deploy.0 = Release|Windows Mobile 6 Professional SDK (ARMV4I)
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|x64.ActiveCfg = Release|x64
+		{2907DC5F-B5B0-4B90-AB31-FF27A1252FE5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
