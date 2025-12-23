@@ -81,7 +81,7 @@ VOID PlayTune(INT tune)
 
 	default:
 #ifdef DEBUG
-		Oops(TEXT("Invalid Tune"));
+		wprintf(TEXT("Invalid Tune\n"));
 #endif
 		break;
 	}

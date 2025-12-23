@@ -450,13 +450,13 @@ VOID DisplayKbdSel(GM *pgm)
     hdc = GetDC(hwndApp);
     PszCopy(TEXT("      "), sz);
     cch = CchDecodeInt(sz, pgm->icolKbd);
-    TextOut(hdc, 0, 10, sz, 5);
+    ExtTextOut(hdc, 0, 10, 0, NULL, sz, 5, NULL);
     PszCopy(TEXT("      "), sz);
     cch = CchDecodeInt(sz, pgm->icrdKbd);
-    TextOut(hdc, 0, 20, sz, 5);
+    ExtTextOut(hdc, 0, 20, 0, NULL, sz, 5, NULL);
     PszCopy(TEXT("      "), sz);
     cch = CchDecodeInt(sz, pgm->icolSel);
-    TextOut(hdc, 0, 30, sz, 5);
+	ExtTextOut(hdc, 0, 30, 0, NULL, sz, 5, NULL);
     ReleaseDC(hwndApp, hdc);
 }
 #endif

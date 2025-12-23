@@ -34,7 +34,7 @@ typedef struct _rc
     Y yBot;
 } RC;
 
-#ifdef DEBUG
+#if defined(DEBUG) && !defined(_WIN32_WCE)
 #define VSZASSERT static TCHAR *vszAssert = TEXT(__FILE__);
 #define Assert(f) { if (!(f)) { AssertFailed(vszAssert, __LINE__); } }
 #define SideAssert(f) { if (!(f)) { AssertFailed(vszAssert, __LINE__); } }

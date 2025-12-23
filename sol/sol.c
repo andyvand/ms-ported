@@ -674,7 +674,9 @@ DoMouse:
 
             case idsScreenShots:
                 fScreenShots ^= 1;
+#ifndef _WIN32_WCE
                 CheckMenuItem(GetMenu(hwnd), idsScreenShots, fScreenShots ? MF_CHECKED|MF_BYCOMMAND : MF_UNCHECKED|MF_BYCOMMAND);
+#endif
                 InvalidateRect(hwndStat, NULL, fTrue);
                 if(fScreenShots)
                     InvalidateRect(hwnd, NULL, fTrue);

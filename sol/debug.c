@@ -2,6 +2,8 @@
 
 #ifndef _WIN32_WCE
 #include <io.h>
+#else
+#include <stdio.h>
 #endif
 
 #include <string.h>
@@ -70,34 +72,63 @@ VOID LogMsgResult(INT imdbg, LRESULT wResult)
     rgmdbg[imdbg].wResult = wResult;
 }
 
+#ifdef _WIN32_WCE
+VOID WriteCrlf(FILE *fh)
+{
+	fwrite(TEXT("\x0d\n"), 1, sizeof(TCHAR) * 2, fh);
+}
+#else
 VOID WriteCrlf(INT fh)
 {
     _write(fh, TEXT("\x0d\n"), sizeof(TCHAR) * 2);
 }
+#endif
 
-
+#ifdef _WIN32_WCE
+VOID WriteSz(FILE *fh, TCHAR *sz)
+#else
 VOID WriteSz(INT fh, TCHAR *sz)
+#endif
 {
-    _write(fh, sz, lstrlen(sz));
+#ifdef _WIN32_WCE
+	fwrite(sz, 1, lstrlen(sz), fh);
+#else
+	_write(fh, sz, lstrlen(sz));
+#endif
     WriteCrlf(fh);
 }
 
+#ifdef _WIN32_WCE
+VOID WriteIField(FILE *fh, TCHAR *szField, INT_PTR ifld)
+#else
 VOID WriteIField(INT fh, TCHAR *szField, INT_PTR ifld)
+#endif
 {
     TCHAR szBuf[128];
     INT cch;
 
-    _write(fh, szField, lstrlen(szField));
+#ifdef _WIN32_WCE
+	fwrite(szField, 1, szField, fh);
+	fwrite(TEXT(" = "), 1, sizeof(TCHAR) * 3, fh);
+	cch = CchDecodeInt(szBuf, ifld);
+	fwrite(szBuf, 1, cch, fh);
+#else
+	_write(fh, szField, lstrlen(szField));
     _write(fh, TEXT(" = "), sizeof(TCHAR) *3);
     cch = CchDecodeInt(szBuf, ifld);
     _write(fh, szBuf, cch);
+#endif
+
     WriteCrlf(fh);
 }
 
 
 
-
+#ifdef _WIN32_WCE
+VOID DumpCol(FILE *fh, COL *pcol)
+#else
 VOID DumpCol(INT fh, COL *pcol)
+#endif
 {
     INT icrd;
     MOVE *pmove;
@@ -137,8 +168,11 @@ VOID DumpCol(INT fh, COL *pcol)
     }
 }
 
-
+#ifdef _WIN32_WCE
+VOID DumpGm(FILE *fh, GM *pgm)
+#else
 VOID DumpGm(INT fh, GM *pgm)
+#endif
 {
     INT icol;
 
@@ -196,7 +230,11 @@ TCHAR *PchDecodeWp(TCHAR *pch, INT_PTR wp)
 VOID DumpRgmdbg(TCHAR *szFile, INT li)
 {
     OFSTRUCT of;
+#ifdef _WIN32_WCE
+	FILE *fh = NULL;
+#else
     INT fh;
+#endif
     INT imdbg;
     USHORT lvl;
     MDBG *pmdbg;
@@ -204,7 +242,11 @@ VOID DumpRgmdbg(TCHAR *szFile, INT li)
     TCHAR *pch;
 
 
+#if defined(_WIN32_WCE)
+	if ((fh = fopen("sol.dbg", "wb")) == NULL)
+#else
     if((fh = (OpenFile("sol.dbg", &of, OF_CREATE|OF_WRITE))) == -1)
+#endif
             return;
 
     WriteSz(fh, TEXT("Assertion Failure"));
@@ -225,8 +267,12 @@ VOID DumpRgmdbg(TCHAR *szFile, INT li)
         Assert(FInRange(imdbgCur, 0, imdbgMax-1));
         pmdbg = &rgmdbg[imdbg];
         Assert(pmdbg->lvl < 60);
-        for(lvl = 0; lvl < pmdbg->lvl; lvl++)
-                _write(fh, TEXT("\t"), 1);
+		for (lvl = 0; lvl < pmdbg->lvl; lvl++)
+#ifdef _WIN32_WCE
+			fwrite(TEXT("\t"), 1, 1, fh);
+#else
+            _write(fh, TEXT("\t"), 1);
+#endif
         pch = PchDecodeWp(szBuf, (INT_PTR) pmdbg->pgmcol);
         pmdbg->msg &= 0x7fff;
         *pch++ = TEXT(' ');
@@ -253,7 +299,11 @@ VOID DumpRgmdbg(TCHAR *szFile, INT li)
         Assert(FInRange(imdbg, 0, imdbgMax-1));
     } while(imdbg != imdbgCur);
 
+#ifdef _WIN32_WCE
+	fclose(fh);
+#else
     _close(fh);
+#endif
 }
 
 
@@ -282,20 +332,20 @@ VOID DisplayMsg(TCHAR *sz, INT msgc, INT wp1, INT wp2)
     GetTextMetrics(hdc, (LPTEXTMETRIC)&tm);
     y = 0;/*        dyScreen - tm.tmHeight; */
 
-    TextOut(hdc, x, y, TEXT("                         "), 24);
-    TextOut(hdc, x, y, sz, cch = lstrlen(sz));
+	ExtTextOut(hdc, x, y, 0, NULL, TEXT("                         "), 24, NULL);
+    ExtTextOut(hdc, x, y, 0, NULL, sz, cch = lstrlen(sz), NULL);
     x += (cch+1) * tm.tmMaxCharWidth;
 
     cch = CchDecodeInt(szInt, msgc);
-    TextOut(hdc, x, y, szInt, cch);
+    ExtTextOut(hdc, x, y, 0, NULL, szInt, cch, NULL);
     x += (cch+1) * tm.tmAveCharWidth;
 
     cch = CchDecodeInt(szInt, wp1);
-    TextOut(hdc, x, y, szInt, cch);
+	ExtTextOut(hdc, x, y, 0, NULL, szInt, cch, NULL);
     x += (cch+1) * tm.tmAveCharWidth;
 
     cch = CchDecodeInt(szInt, wp2);
-    TextOut(hdc, x, y, szInt, cch);
+    ExtTextOut(hdc, x, y, 0, NULL, szInt, cch, NULL);
     x += (cch+1) * tm.tmAveCharWidth;
 
     ReleaseDC(hwndApp, hdc);
@@ -314,7 +364,7 @@ VOID PrintCardMacs(GM *pgm)
     for(icol = 0; icol < pgm->icolMac; icol++)
     {
         cch = CchDecodeInt(sz, pgm->rgpcol[icol]->icrdMac);
-        TextOut(hdc, 30 * icol, 10, sz, cch);
+		ExtTextOut(hdc, 30 * icol, 10, 0, NULL, sz, cch, NULL);
     }
     ReleaseDC(hwndApp, hdc);
 }
@@ -406,7 +456,7 @@ INT_PTR APIENTRY AssertDlgProc(HANDLE hdlg, UINT wm, WPARAM wParam, LPARAM lPara
     switch(wm)
     {
         case WM_INITDIALOG:
-            SetWindowText(GetDlgItem(hdlg, FILE), vszFile);
+            SetWindowText(GetDlgItem(hdlg, FILENUM), vszFile);
             CchDecodeInt(vszLi, vli);
             SetWindowText(GetDlgItem(hdlg, LINE), vszLi);
             CchDecodeInt(vszLi, igmCur);
