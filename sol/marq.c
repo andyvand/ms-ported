@@ -1,5 +1,9 @@
 #include "sol.h"
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>
+#endif
+
 VSZASSERT
 
 #define dxBord 3

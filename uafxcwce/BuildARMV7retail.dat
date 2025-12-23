@@ -1,5 +1,5 @@
-V|601
-D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a24736ca|ea1b08ad|0|0|0|61a22c00|8669e4ab|7b81b7de|c8e1fc77|82e5829a|82e5829a|82e5829a|82e5829a
+V|800
+D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|a005|0|0|9b47833d|1a7a6ce0|0|0|0|0|a02f841|7d717223|0|0|12d80ae3|686fd068|ad99995f|0|53ce23d7|68eefc85|68eefc85|68eefc85|68eefc85
  F|afxabort.cpp|40000|0|1C40C2E2C088000
   I|stdafx.h|1
  F|afxasert.cpp|40000|0|1C40C2E2C088000
@@ -133,12 +133,12 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a2473
   I|stdafx.h|1
  F|bartool.cpp|40000|0|1C40C2E2C088000
   I|stdafx.h|1
- F|bldsys.log|80000|0|1DC726163758E82
- F|bldsys.out|80000|0|1DC726163758E82
+ F|bldsys.log|80000|0|1DC73F716380AE0
+ F|bldsys.out|80000|0|1DC73F7163831F0
  F|build\|0|10|0
  F|BuildARMV7checked.dat|80000|0|1DC71FC11AC7FBC
  F|BuildARMV7debug.dat|80000|0|1DC71FBE6EF7C3D
- F|BuildARMV7retail.dat|80000|0|1DC726108DFEDE0
+ F|BuildARMV7retail.dat|80000|0|1DC73F70790A943
  F|ccdata.cpp|40000|0|1C40C2E2C088000
   I|stdafx.h|1
  F|cmdtarg.cpp|40000|0|1C40C2E2C088000
@@ -622,7 +622,6 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a2473
   I|stdafx.h|1
  F|oleverb.cpp|0|0|1C40C2E2F9C0700
   I|stdafx.h|1
- F|PlatformBuilderTempProject.vcproj|80000|0|1DC72614301DA06
  F|plex.cpp|40000|0|1C40C2E2F9C0700
   I|stdafx.h|1
  F|postlink.bat|80000|0|1DC71F435734E69
@@ -721,6 +720,7 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a2473
   I|stdafx.h|1
  F|trckrect.cpp|40000|0|1C40C2E2F9C0700
   I|stdafx.h|1
+ F|uafxcwce.vcxproj|80000|0|1DC73E95BEBC12A
  F|validadd.cpp|40000|0|1C40C2E2F9C0700
   I|stdafx.h|1
  F|viewcmn.cpp|40000|0|1C40C2E2F9C0700
@@ -779,7 +779,7 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a2473
   I|stdafx.h|1
   I|wceimpl.h|1
   I|wceimpl.inl|1
- F|wceimpl.h|4|0|1DC71F9E4DADA95
+ F|wceimpl.h|4|0|1DC73F6FD451191
   I|prsht.h|1
   I|wceimpl.inl|1
  F|wceimpl.inl|4|0|1C40C2E2F9C0700
@@ -858,7 +858,7 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\|b005|0|0|c960e8f8|1a7a6ce0|0|0|a2473
   I|malloc.h|0
  F|x86\|0|10|0
 
-D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\include\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|afx.h|4|0|1C40C2E2AD75300
   I|wce.h|0
   I|afxver_.h|0
@@ -931,7 +931,7 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\include\|b000|0|0|0|0|0|0|0|0|0|0|0|0
   I|afxres.h|0
  F|afxdb_.h|4|0|1C40C2E2AD75300
  F|afxdd_.h|4|0|1C40C2E2AD75300
- F|afxdisp.h|4|0|1C40C2E2AD75300
+ F|afxdisp.h|4|0|1DC72619D9816B4
   I|afxwin.h|0
   I|objbase.h|0
   I|oleauto.h|0
@@ -1114,576 +1114,6 @@ D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\include\|b000|0|0|0|0|0|0|0|0|0|0|0|0
  F|wcesock.h|4|0|1C40C2E2C088000
  F|winres.h|4|0|1C40C2E2C088000
   I|wceres.h|1
-
-D|C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\|3000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|afxabort.obj|c0000|0|1DC726167FE7A79
- F|afxasert.obj|c0000|0|1DC726167FBD707
- F|afxcrit.obj|c0000|0|1DC726167F9262A
- F|afxdbcs.obj|c0000|0|1DC726167F497A9
- F|afxinl1.obj|c0000|0|1DC726167F2233F
- F|afxinl2.obj|c0000|0|1DC726167ED5224
- F|afxinl3.obj|c0000|0|1DC726167EAE418
- F|afxmem.obj|c0000|0|1DC726167E6F132
- F|afxstate.obj|c0000|0|1DC726167E29222
- F|afxtls.obj|c0000|0|1DC726167DC5FEE
- F|afxtrace.obj|c0000|0|1DC726167D69178
- F|appcore.obj|c0000|0|1DC726167D2A909
- F|appdlg.obj|c0000|0|1DC726167CB7089
- F|appgray.obj|c0000|0|1DC726167C72BEF
- F|apphelp.obj|c0000|0|1DC726167C1AF6B
- F|apphelpx.obj|c0000|0|1DC726167BE02FA
- F|appinit.obj|c0000|0|1DC726167B993DD
- F|appmodul.obj|c0000|0|1DC726167B55434
- F|appprnt.obj|c0000|0|1DC726167B0A2B0
- F|appterm.obj|c0000|0|1DC726167ABEAA9
- F|appui.obj|c0000|0|1DC72616C104A33
- F|appui1.obj|c0000|0|1DC72616C0C9745
- F|appui2.obj|c0000|0|1DC72616C0684EB
- F|appui3.obj|c0000|0|1DC72616C0288AE
- F|arccore.obj|c0000|0|1DC72616BFB4199
- F|arcex.obj|c0000|0|1DC72616BF4A4BD
- F|arcobj.obj|c0000|0|1DC72616BF00B55
- F|arcstrm.obj|c0000|0|1DC72616BE987EC
- F|array_b.obj|c0000|0|1DC72616BE49F7C
- F|array_d.obj|c0000|0|1DC72616BDFBFCC
- F|array_o.obj|c0000|0|1DC72616BD86EFE
- F|array_p.obj|c0000|0|1DC72616BD3AB6D
- F|array_s.obj|c0000|0|1DC72616BCE780D
- F|array_u.obj|c0000|0|1DC72616BC7863A
- F|array_w.obj|c0000|0|1DC72616BC291AF
- F|auxdata.obj|c0000|0|1DC72616BBE3080
- F|barcool.obj|c0000|0|1DC72616BB8CFB2
- F|barcore.obj|c0000|0|1DC72616BB22A26
- F|bardlg.obj|c0000|0|1DC72616BAA354F
- F|bardock.obj|c0000|0|1DC72616BA5D069
- F|barstat.obj|c0000|0|1DC72617033B161
- F|bartool.obj|c0000|0|1DC7261702B4064
- F|ccdata.obj|c0000|0|1DC7261701F4158
- F|cmdtarg.obj|c0000|0|1DC7261701B5E58
- F|dlgclr.obj|c0000|0|1DC726170139333
- F|dlgcomm.obj|c0000|0|1DC7261700B4FA6
- F|dlgcore.obj|c0000|0|1DC7261700625FC
- F|dlgdata.obj|c0000|0|1DC72616FFDE29B
- F|dlgfile.obj|c0000|0|1DC72616FF6F4E9
- F|dlgfloat.obj|c0000|0|1DC72616FF06621
- F|dlgfr.obj|c0000|0|1DC72616FE981E6
- F|dlgprop.obj|c0000|0|1DC72616FE34639
- F|dlgtempl.obj|c0000|0|1DC72616FD5E38E
- F|dllmodul.obj|c0000|0|1DC72616FD0DFAA
- F|doccore.obj|c0000|0|1DC72616FCCF05B
- F|dockcont.obj|c0000|0|1DC72616FC22636
- F|dockstat.obj|c0000|0|1DC72616FBE2C3D
- F|docmgr.obj|c0000|0|1DC72616FB86724
- F|docsingl.obj|c0000|0|1DC72616FB0E825
- F|doctempl.obj|c0000|0|1DC72616FAB8001
- F|dumpcont.obj|c0000|0|1DC7261745653F4
- F|dumpflt.obj|c0000|0|1DC7261744FA16B
- F|dumpinit.obj|c0000|0|1DC7261744B0542
- F|dumpout.obj|c0000|0|1DC7261744444DA
- F|except.obj|c0000|0|1DC7261743C863D
- F|filecore.obj|c0000|0|1DC72617436DDE1
- F|filelist.obj|c0000|0|1DC7261742E7F99
- F|filemem.obj|c0000|0|1DC7261742403E3
- F|filest.obj|c0000|0|1DC7261741CB20D
- F|filetxt.obj|c0000|0|1DC72617417F608
- F|filex.obj|c0000|0|1DC72617411FE79
- F|inet.obj|c0000|0|1DC72617409815A
- F|list_o.obj|c0000|0|1DC726173FB8462
- F|list_p.obj|c0000|0|1DC726173F3EF9E
- F|list_s.obj|c0000|0|1DC726173EEB1C1
- F|map_pp.obj|c0000|0|1DC726173E50895
- F|map_pw.obj|c0000|0|1DC726173DE1E5A
- F|map_so.obj|c0000|0|1DC726173D5C3EB
- F|map_sp.obj|c0000|0|1DC726173CCE21D
- F|map_ss.obj|c0000|0|1DC726173C8A3EE
- F|map_wo.obj|c0000|0|1DC726178D63885
- F|map_wp.obj|c0000|0|1DC726178C9FCDF
- F|mtcore.obj|c0000|0|1DC726178BF52A5
- F|mtex.obj|c0000|0|1DC726178B49213
- F|objcore.obj|c0000|0|1DC726178A9A333
- F|olelock.obj|c0000|0|1DC72617899F6A8
- F|plex.obj|c0000|0|1DC7261788E8376
- F|sockcore.obj|c0000|0|1DC72617883CCE0
- F|strcore.obj|c0000|0|1DC7261786C4A10
- F|strex.obj|c0000|0|1DC72617842BC6A
- F|thrdcore.obj|c0000|0|1DC7261782A9893
- F|timecore.obj|c0000|0|1DC726178243172
- F|tooltip.obj|c0000|0|1DC7261781CD328
- F|trckrect.obj|c0000|0|1DC726178197823
- F|validadd.obj|c0000|0|1DC7261780FEB07
- F|viewcmn.obj|c0000|0|1DC726178086269
- F|viewcore.obj|c0000|0|1DC72617804DB2D
- F|viewedit.obj|c0000|0|1DC726177FD5D56
- F|viewform.obj|c0000|0|1DC726177EE0059
- F|viewprnt.obj|c0000|0|1DC726177E64EA6
- F|viewscrl.obj|c0000|0|1DC72617D12A5B5
- F|winbtn.obj|c0000|0|1DC72617D08CC0D
- F|wincore.obj|c0000|0|1DC72617D04D450
- F|winctrl1.obj|c0000|0|1DC72617CED4901
- F|winctrl2.obj|c0000|0|1DC72617CE75CBD
- F|winctrl6.obj|c0000|0|1DC72617CDE9E46
- F|winfrm.obj|c0000|0|1DC72617CD9C4E3
- F|winfrmx.obj|c0000|0|1DC72617CCC7016
- F|wingdi.obj|c0000|0|1DC72617CC6EAA7
- F|wingdix.obj|c0000|0|1DC72617CBE1AEB
- F|winhand.obj|c0000|0|1DC72617CB7BDD8
- F|winmain.obj|c0000|0|1DC72617CB29DD6
- F|winmenu.obj|c0000|0|1DC72617CAC058E
- F|winocc.obj|c0000|0|1DC72617CA699B8
- F|winsplit.obj|c0000|0|1DC72617CA0CAB3
- F|winstr.obj|c0000|0|1DC72617C8F3095
- F|winutil.obj|c0000|0|1DC72617C8873EA
- F|wcealt.obj|c0000|0|1DC72617C81DD04
- F|wcebar.obj|c0000|0|1DC72617C791954
- F|wcedoclt.obj|c0000|0|1DC72617C7136DC
- F|wcedoctm.obj|c0000|0|1DC72617EE0792F
- F|wcedb.obj|c0000|0|1DC72617EDBBEB3
- F|wcedlgfr.obj|c0000|0|1DC72617ED23EEE
- F|wcedlgpr.obj|c0000|0|1DC72617EC80423
- F|wcedlgsm.obj|c0000|0|1DC72617EC483CB
- F|wcedll.obj|c0000|0|1DC72617EC14643
- F|wceimpl.obj|c0000|0|1DC72617EBE3FCD
- F|wcesock.obj|c0000|0|1DC72617EBA9A44
- F|wcethunk.obj|c0000|0|1DC72617EB21DA6
- F|wcetime.obj|c0000|0|1DC72617EABF4DA
- F|macrolist.tmp|80000|0|1DC726163A23C6A
- F|_objects.mac|80000|0|1DC72616441E7B0
- F|_table.mac|80000|0|1DC726163B293CF
-
-D|C:\WINCE700\private\winceos\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|bthpriv.h|4|0|1CB74FCD851A100
-  I|windows.h|0
-  I|auto_xxx.hxx|0
-  I|bt_api.h|0
-  I|bt_buffer.h|0
-  I|bt_ddi.h|0
-  I|bt_avctp.h|0
- F|delayld.h|4|0|1CB74FCD851A100
-  I|windows.h|0
- F|deviceidinternal.hxx|4|0|1CB74FCD851A100
- F|fsnotify_api.h|4|0|1CB74FCD851A100
- F|ttracker.h|4|0|1CB74FCD851A100
-  I|windows.h|0
- F|winceerrpriv.h|4|0|1CB74FCD851A100
-  I|winerror.h|0
-
-D|C:\WINCE700\public\\oak\lib\ARMV7\retail\|1000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
-
-D|C:\WINCE700\public\common\ddk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|80211hdr.h|4|0|1CB750E1DCA9A00
-  I|packon.h|0
-  I|windows.h|0
-  I|windot11.h|0
-  I|packoff.h|0
- F|acmdrvr.def|80000|0|1CB750E1DCA9A00
- F|autoras.h|4|0|1CB750E1DCA9A00
- F|cameradebug.h|4|0|1CB750E1DCA9A00
- F|cameradriver.h|4|0|1CB750E1DCA9A00
- F|camerapdd.h|4|0|1CB750E1DCA9A00
- F|camerapddprops.h|4|0|1CB750E1DCA9A00
- F|camerapindriver.h|4|0|1CB750E1DCA9A00
-  I|marshal.hpp|1
- F|cebus.h|4|0|1CB750E1DCA9A00
-  I|ceddk.h|0
-  I|pm.h|0
- F|cebuscfg.h|4|0|1CB750E1DCA9A00
- F|ceddk.h|4|0|1CB750E1DCA9A00
-  I|ntstatus.h|0
-  I|macwin32.h|0
-  I|ddkmacro.h|0
-  I|pkfuncs.h|0
-  I|pm.h|0
-  I|CeBus.h|0
-  I|oaldma.h|0
- F|cedma.h|4|0|1CB750E1DCA9A00
-  I|ceddk.h|0
-  I|pm.h|0
- F|ceotgbus.h|4|0|1CB750E1DCA9A00
-  I|cebus.h|0
- F|cesdbus.h|4|0|1CB750E1DCA9A00
-  I|cebus.h|0
-  I|SDCardDDK.h|0
- F|cesvsbus.h|4|0|1CB750E1DCA9A00
-  I|cebus.h|0
- F|dbgprint.h|4|0|1CB750E1DCA9A00
-  I|wceemul.h|0
- F|ddkmacro.h|4|0|1CB750E1DCA9A00
- F|ddkreg.h|4|0|1CB750E1DCA9A00
-  I|devload.h|0
- F|devload.h|4|0|1CB750E1DCA9A00
- F|devpkey.h|4|0|1CB750E1DCA9A00
-  I|devpropdef.h|0
- F|devpropdef.h|4|0|1CB750E1DCA9A00
-  I|guiddef.h|0
- F|drfilter.h|4|0|1CB750E1DCA9A00
- F|dstruct.h|4|0|1CB750E1DCA9A00
- F|ex.h|4|0|1CB750E1DCA9A00
-  I|netwdm.h|0
-  I|lpc.h|0
- F|fwpmk.h|4|0|1CB750E1DCA9A00
-  I|fwpmtypes.h|1
- F|fwpsk.h|4|0|1CB750E1DCA9A00
-  I|fwpstypes.h|1
-  I|ws2def.h|1
-  I|ndis.h|1
- F|fwpstypes.h|4|0|1CBADCFA5B30700
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|fwptypes.h|1
- F|fwpstypes.idl|0|0|1CB750DDFCD7600
-  I|fwptypes.idl|1
-  I|wfpalign.h|1
- F|fwpsu.h|4|0|1CB750E1DCA9A00
-  I|fwpstypes.h|1
-  I|ws2def.h|1
- F|io.h|4|0|1CB750E1DCA9A00
-  I|ntcompat.h|0
- F|ke.h|4|0|1CB750E1DCA9A00
-  I|netwdm.h|0
- F|marshal.hpp|4|0|1CB750E1DCA9A00
- F|msacmdrv.h|4|0|1CB750E1DCA9A00
- F|ndis.h|4|0|1CB750E1DCA9A00
-  I|windows.h|0
-  I|memory.h|0
-  I|netwdm.h|0
-  I|ntcompat.h|0
-  I|ex.h|0
-  I|ke.h|0
-  I|io.h|0
-  I|rtlmisc.h|0
-  I|netevent.h|0
-  I|ntddk.h|0
-  I|ntstatus.h|0
-  I|ntddndis.h|0
-  I|xfilter.h|0
-  I|windot11.h|0
-  I|qos.h|0
- F|ndispwr.h|4|0|1CB750E1DCA9A00
- F|ndistapi.h|4|0|1CB750E1DCA9A00
- F|ndiswan.h|4|0|1CB750E1DCA9A00
- F|ndiswwan.h|4|0|1CB750E1DCA9A00
- F|netdma.h|4|0|1CB750E1DCA9A00
- F|netevent.h|4|0|1CB750E1DCA9A00
- F|netwdm.h|4|0|1CB750E1DCA9A00
-  I|ntcompat.h|0
-  I|io.h|0
- F|ntcompat.h|4|0|1CB750E1DCA9A00
-  I|windows.h|0
-  I|wdm.h|0
-  I|resmgr.h|0
- F|ntintsafe.h|4|0|1CB750E1DCA9A00
-  I|specstrings.h|0
- F|nuiouser.h|4|0|1CB750E1EFBC700
-  I|winioctl.h|0
- F|oaldma.h|4|0|1CB750E1EFBC700
-  I|ceddk.h|0
- F|pcibus.h|4|0|1CB750E1EFBC700
-  I|PCIrsrc.h|0
- F|pciprop.h|4|0|1CB750E1EFBC700
- F|pcirsrc.h|4|0|1CB750E1EFBC700
- F|resmgr.h|4|0|1CB750E1EFBC700
- F|rndismini.h|4|0|1CB750E1EFBC700
-  I|types.h|0
- F|rtlmisc.h|4|0|1CB750E1EFBC700
-  I|wtypes.h|0
-  I|wdm.h|0
-  I|types.h|0
- F|sdcard.h|4|0|1CB750E1EFBC700
-  I|pshpack1.h|0
-  I|poppack.h|0
- F|sdcardddk.h|4|0|1CB750E1EFBC700
-  I|windows.h|0
-  I|types.h|0
-  I|linklist.h|0
-  I|ceddk.h|0
-  I|SDMem.h|1
-  I|SDCard.h|1
-  I|pshpack1.h|0
-  I|poppack.h|0
- F|sdmem.h|4|0|1CB750E1EFBC700
- F|smcce.h|4|0|1CB750E1EFBC700
-  I|ntstatus.h|0
-  I|windows.h|0
-  I|types.h|0
-  I|tchar.h|0
-  I|ceddk.h|0
- F|smclib.h|4|0|1CB750E1EFBC700
-  I|smcvxd.h|1
-  I|smcce.h|1
-  I|smcnt.h|1
-  I|winsmcrd.h|1
-  I|ntstatus.h|0
- F|tspi.h|4|0|1CB750E1EFBC700
-  I|windows.h|0
-  I|tapi.h|1
- F|usb100.h|4|0|1CB750E1EFBC700
-  I|windows.h|0
-  I|PSHPACK1.H|0
-  I|POPPACK.H|0
- F|usb200.h|4|0|1CB750E1EFBC700
-  I|usb100.h|0
-  I|PSHPACK1.H|0
-  I|POPPACK.H|0
- F|usbclient.h|4|0|1CB750E1EFBC700
-  I|windows.h|0
-  I|usbdi.h|0
- F|usbdi.h|4|0|1CB750E1EFBC700
-  I|usbtypes.h|1
- F|usbtypes.h|4|0|1CB750E1EFBC700
-  I|windef.h|0
-  I|usb100.h|1
- F|wdm.h|4|0|1CB750E1EFBC700
-  I|ntstatus.h|0
-  I|memory.h|0
-  I|ceddk.h|0
-  I|linklist.h|0
- F|windot11.h|4|0|1CB750E1EFBC700
-  I|ntddndis.h|0
-  I|WlanTypes.h|0
- F|wlantypes.h|4|0|1CB750E1EFBC700
- F|xfilter.h|4|0|1CB750E1EFBC700
-
-D|C:\WINCE700\public\common\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|aablt.h|4|0|1CB750E6EDA8E00
-  I|gpe.h|0
- F|acc.def|80000|0|1CB750E6EDA8E00
- F|accapi.h|4|0|1CB878FD1CAE800
-  I|windows.h|0
-  I|sensor.h|0
- F|acc_ddsi.h|4|0|1CB750E6EDA8E00
-  I|accapi.h|0
-  I|ceddk.h|0
- F|acc_ioctl.h|4|0|1CB750E6EDA8E00
-  I|windev.h|0
- F|afx.h|4|0|1C40C2E2AD75300
-  I|wce.h|0
-  I|afxver_.h|0
-  I|string.h|0
-  I|stdio.h|0
-  I|stdlib.h|0
-  I|time.h|0
-  I|limits.h|0
-  I|stddef.h|0
-  I|stdarg.h|0
-  I|crtdbg.h|0
-  I|setjmp.h|0
-  I|wcealt.h|1
-  I|wceimpl.h|1
-  I|afxcoll.h|0
-  I|afxstat_.h|0
-  I|wcedb.h|1
-  I|afx.inl|0
- F|afx.inl|4|0|1C40C2E2AD75300
- F|afxadv.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
- F|afxcmn.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|richedit.h|0
-  I|richole.h|0
-  I|afxcmn.inl|0
-  I|afxcmn2.inl|0
- F|afxcmn.inl|4|0|1C40C2E2AD75300
- F|afxcmn2.inl|4|0|1C40C2E2AD75300
- F|afxcoll.h|4|0|1C40C2E2AD75300
-  I|afx.h|0
-  I|afxstat_.h|0
-  I|afxcoll.inl|0
- F|afxcoll.inl|4|0|1C40C2E2AD75300
- F|afxcom_.h|4|0|1C40C2E2AD75300
-  I|objbase.h|0
-  I|crtdbg.h|0
- F|afxconv.h|4|0|1C40C2E2AD75300
-  I|objbase.h|0
-  I|atlconv.h|0
- F|afxctl.h|4|0|1C40C2E2AD75300
-  I|afxole.h|0
-  I|afxctl.inl|0
- F|afxctl.inl|4|0|1C40C2E2AD75300
- F|afxctl.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
- F|afxcview.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|afxcmn.h|0
-  I|afxcview.inl|0
- F|afxcview.inl|4|0|1C40C2E2AD75300
- F|afxdao.h|4|0|1C40C2E2AD75300
-  I|afxdisp.h|0
-  I|dbdaoint.h|0
-  I|daogetrw.h|0
-  I|dbdaoid.h|0
-  I|dbdaoerr.h|0
-  I|afxdb_.h|0
-  I|afxext.h|0
-  I|afxdao.inl|0
- F|afxdao.inl|4|0|1C40C2E2AD75300
- F|afxdb.h|4|0|1C40C2E2AD75300
-  I|afxext.h|0
-  I|afxdb_.h|0
-  I|sql.h|0
-  I|sqlext.h|0
-  I|afxdb.inl|0
- F|afxdb.inl|4|0|1C40C2E2AD75300
- F|afxdb.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
- F|afxdb_.h|4|0|1C40C2E2AD75300
- F|afxdd_.h|4|0|1C40C2E2AD75300
- F|afxdisp.h|4|0|1DC7101CCB5495A
-  I|afxwin.h|0
-  I|objbase.h|0
-  I|oleauto.h|0
-  I|olectl.h|0
-  I|ocidl.h|0
-  I|shlobj.h|0
-  I|afxdb_.h|1
-  I|afxole.inl|0
- F|afxdlgs.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|commdlg.h|0
-  I|richedit.h|0
-  I|afxdlgs.inl|0
- F|afxdlgs.inl|4|0|1C40C2E2AD75300
- F|afxdllx.h|4|0|1C40C2E2AD75300
- F|afxdll_.h|4|0|1C40C2E2AD75300
- F|afxdocob.h|4|0|1C40C2E2AD75300
-  I|afxole.h|0
-  I|docobj.h|0
- F|afxdtctl.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|afxdisp.h|0
-  I|afxdtctl.inl|0
- F|afxdtctl.inl|4|0|1C40C2E2AD75300
- F|afxext.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|afxdlgs.h|0
-  I|projects.h|1
-  I|wcebar.h|0
-  I|doclist.h|0
-  I|afxext.inl|0
- F|afxext.inl|4|0|1C40C2E2AD75300
- F|afxhtml.h|4|0|1C40C2E2AD75300
-  I|afxdisp.h|0
-  I|exdisp.h|0
-  I|afxhtml.inl|0
- F|afxhtml.inl|4|0|1C40C2E2AD75300
- F|afxinet.h|4|0|1C40C2E2AD75300
-  I|afx.h|0
-  I|wininet.h|0
-  I|afxinet.inl|0
- F|afxinet.inl|4|0|1C40C2E2AD75300
- F|afxisapi.h|4|0|1C40C2E2AD75300
-  I|httpext.h|0
-  I|httpfilt.h|0
-  I|stdlib.h|0
-  I|tchar.h|0
-  I|crtdbg.h|0
-  I|afxisapi.inl|0
- F|afxisapi.inl|4|0|1C40C2E2AD75300
- F|afxisapi.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
- F|afxmsg_.h|4|0|1C40C2E2AD75300
- F|afxmt.h|4|0|1C40C2E2AD75300
-  I|afx.h|0
-  I|afxmt.inl|0
- F|afxmt.inl|4|0|1C40C2E2AD75300
- F|afxodlgs.h|4|0|1C40C2E2AD75300
-  I|afxole.h|0
-  I|afxdlgs.h|0
-  I|oledlg.h|0
-  I|afxole.inl|0
- F|afxole.h|4|0|1C40C2E2AD75300
-  I|afxext.h|0
-  I|afxdisp.h|0
-  I|ole2.h|0
-  I|docobj.h|0
-  I|urlmon.h|0
-  I|afxcom_.h|0
-  I|afxole.inl|0
- F|afxole.inl|4|0|1C40C2E2AD75300
- F|afxolecl.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
-  I|dlgs.h|0
- F|afxoledb.h|4|0|1C40C2E2AD75300
-  I|afxext.h|0
-  I|atlbase.h|0
-  I|atlcom.h|0
-  I|atldbcli.h|0
- F|afxolesv.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
- F|afxplex_.h|4|0|1C40C2E2AD75300
-  I|afx.h|0
- F|afxprint.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
- F|afxpriv.h|4|0|1C40C2E2AD75300
-  I|afxadv.h|0
-  I|malloc.h|0
-  I|afxext.h|0
-  I|afxconv.h|0
-  I|afxpriv2.h|0
- F|afxpriv2.h|4|0|1C40C2E2AD75300
-  I|afxpriv.h|0
- F|afxres.h|4|0|1C40C2E2AD75300
-  I|wce.h|0
-  I|commctrl.h|0
-  I|aygshell.h|0
-  I|winres.h|1
- F|afxres.rc|0|0|1C40C2E2AD75300
-  I|afxres.h|0
-  I|wceres.rc|1
- F|afxrich.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|afxdlgs.h|0
-  I|afxole.h|0
-  I|richedit.h|0
-  I|richole.h|0
-  I|afxcmn.h|0
-  I|afxrich.inl|0
- F|afxrich.inl|4|0|1C40C2E2AD75300
- F|afxsock.h|4|0|1C40C2E2AD75300
-  I|afxwin.h|0
-  I|winsock.h|0
-  I|wcesock.h|1
-  I|afxsock.inl|0
- F|afxsock.inl|4|0|1C40C2E2AD75300
- F|afxstat_.h|4|0|1C40C2E2AD75300
-  I|afxtls_.h|0
- F|afxtempl.h|4|0|1C40C2E2AD75300
-  I|afxplex_.h|0
-  I|wcealt.h|1
-  I|new.h|0
- F|afxtls_.h|4|0|1C40C2E2AD75300
- F|afxver_.h|4|0|1C40C2E2AD75300
-  I|afxv_w32.h|0
-  I|afxv_cpu.h|0
-  I|afxv_cfg.h|0
-  I|afxv_dll.h|0
- F|afxv_cfg.h|4|0|1C40C2E2AD75300
- F|afxv_cpu.h|4|0|1C40C2E2AD75300
- F|afxv_dll.h|4|0|1C40C2E2AD75300
- F|afxv_w32.h|4|0|1C40C2E2AD75300
-  I|windows.h|0
-  I|zmouse.h|0
-  I|commctrl.h|0
-  I|tchar.h|0
-  I|mbctype.h|0
-  I|mbstring.h|0
-  I|cefrtl.h|0
- F|afxwin.h|4|0|1C40C2E2AD75300
-  I|afx.h|0
-  I|shellapi.h|0
-  I|afxres.h|0
-  I|afxcoll.h|0
-  I|afxmsg_.h|0
-  I|afxdd_.h|0
-  I|doclist.h|0
-  I|afxdll_.h|0
-  I|afxwin1.inl|0
-  I|afxwin2.inl|0
- F|afxwin1.inl|4|0|1C40C2E2AD75300
- F|afxwin2.inl|4|0|1C40C2E2C088000
- F|align.h|4|0|1CB750E6EDA8E00
- F|atapi.h|4|0|1CB750E6EDA8E00
- F|atapi2.h|4|0|1CB750E6EDA8E00
-  I|windef.h|0
  F|ATLBASE.H|4|0|1C40C2E29A62600
   I|wceatl.h|1
   I|atldef.h|0
@@ -1754,483 +1184,780 @@ D|C:\WINCE700\public\common\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|commctrl.h|0
  F|ATLWIN.CPP|0|0|1C40C2E29A62600
  F|ATLWIN.H|4|0|1C40C2E29A62600
- F|audiosys.h|4|0|1CB750E6EDA8E00
-  I|windows.h|1
- F|backlight.def|80000|0|1CB750E6EDA8E00
- F|backlight.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|pm.h|0
- F|backlightddsi.h|4|0|1CB750E6EDA8E00
- F|battdrvr.def|80000|0|1CB750E6EDA8E00
- F|battery.h|4|0|1CB750E6EDA8E00
- F|battimpl.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|battery.h|0
- F|bcoemglobal.h|4|0|1CB750E6EDA8E00
- F|blcommon.h|4|0|1CB750E6EDA8E00
-  I|pehdr.h|0
-  I|romldr.h|0
- F|bootpart.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|pcireg.h|0
- F|btagnetwork.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
- F|btagpub.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|winsock2.h|0
-  I|ws2bth.h|0
- F|bthid.h|4|0|1CB750E6EDA8E00
- F|bt_buffer.h|4|0|1CB750E6EDA8E00
- F|bt_ddi.h|4|0|1CB750E6EDA8E00
-  I|svsutil.hxx|0
- F|bt_debug.h|4|0|1CB750E6EDA8E00
-  I|celog.h|0
- F|bt_hcip.h|4|0|1CB750E6EDA8E00
-  I|bt_buffer.h|0
- F|bt_ioctl.h|4|0|1CB750E6EDA8E00
- F|bt_os.h|4|0|1CB750E6EDA8E00
- F|bt_tdbg.h|4|0|1CB750E6EDA8E00
- F|buttoncommon.hpp|4|0|1CB750E6EDA8E00
- F|buttonview.hpp|4|0|1CB750E6EDA8E00
- F|cabapi.h|4|0|1CB750E6EDA8E00
-  I|WinCrypt.h|0
-  I|wintrust.h|0
- F|calibrui.h|4|0|1CB750E6EDA8E00
- F|camera.def|80000|0|1CB750E6EDA8E00
- F|camera.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|Cs.h|0
-  I|Csmedia.h|0
- F|cdioctl.h|4|0|1CB750E6EDA8E00
-  I|scsi.h|0
- F|cecompr.h|4|0|1CB750E6EDA8E00
- F|cecompress.h|4|0|1CB750E6EDA8E00
- F|ceddk.def|80000|0|1CB750E6EDA8E00
  F|cefrtl.h|4|0|1C40C2E29A62600
- F|ceperf.h|4|0|1CB750E6EDA8E00
- F|ceperf_cpu.h|4|0|1CB750E6EDA8E00
- F|ceperf_log.h|4|0|1CB750E6EDA8E00
- F|ceptr.hpp|4|0|1CB750E6EDA8E00
-  I|windows.h|0
- F|certui.h|4|0|1CB750E6EDA8E00
-  I|windev.h|0
-  I|wincrypt.h|0
- F|cethrdpool.h|4|0|1CB750E6EDA8E00
- F|cmnmacro.h|4|0|1CB750E6EDA8E00
- F|cmthread.h|4|0|1CB750E6EDA8E00
- F|cmwrapper.h|4|0|1CB750E6EDA8E00
-  I|windows.h|0
-  I|CmNet.h|0
-  I|ProxyDBS.h|0
- F|coblist.h|4|0|1CB750E6EDA8E00
- F|coguid.h|4|0|1CB750E6EDA8E00
-  I|objbase.h|0
- F|coinitialize.hpp|4|0|1CB750E6EDA8E00
- F|comboboxview.hpp|4|0|1CB750E6EDA8E00
  F|COMDEF.H|4|0|1C40C2E29A62600
   I|comip.h|0
  F|COMIP.H|4|0|1C40C2E29A62600
   I|ole2.h|0
   I|malloc.h|0
   I|comutil.h|0
- F|commctrlview.hpp|4|0|1CB750E6EDA8E00
-  I|windows.h|0
- F|commctrl_priv.h|4|0|1CB750E6EDA8E00
  F|comutil.h|4|0|1C40C2E29A62600
   I|ole2.h|0
- F|console.h|4|0|1CB750E6EDA8E00
-  I|windev.h|1
- F|corecrtstorage.h|4|0|1CB750E6EDA8E00
+ F|sh4thunkbuilder.h|4|0|1C40C2E29A62600
+ F|STATREG.CPP|0|0|1C40C2E29A62600
+ F|STATREG.H|4|0|1C40C2E29A62600
+ F|wceatl.cpp|0|0|1C40C2E29A62600
+ F|wceatl.h|4|0|1C40C2E29A62600
+ F|wcedisp.h|4|0|1C40C2E29A62600
+  I|cefrtl.h|0
+
+D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\|3000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|afxabort.obj|c0000|0|1DC73F71C177CB9
+ F|afxasert.obj|c0000|0|1DC73F71C1225FE
+ F|afxcrit.obj|c0000|0|1DC73F71C0BBD77
+ F|afxdbcs.obj|c0000|0|1DC73F71C03CC0A
+ F|afxinl1.obj|c0000|0|1DC73F71BFCB6E8
+ F|afxinl2.obj|c0000|0|1DC73F71BF635E5
+ F|afxinl3.obj|c0000|0|1DC73F71BEF17BF
+ F|afxmem.obj|c0000|0|1DC73F71BE7C495
+ F|afxstate.obj|c0000|0|1DC73F71BDFBE35
+ F|afxtls.obj|c0000|0|1DC73F71BD57F9B
+ F|afxtrace.obj|c0000|0|1DC73F71BC9F446
+ F|appcore.obj|c0000|0|1DC73F71BC35656
+ F|appdlg.obj|c0000|0|1DC73F71BB7BF00
+ F|appgray.obj|c0000|0|1DC73F71BAF9796
+ F|apphelp.obj|c0000|0|1DC73F71BA81C70
+ F|apphelpx.obj|c0000|0|1DC73F71BA01C83
+ F|appinit.obj|c0000|0|1DC73F71B98915C
+ F|appmodul.obj|c0000|0|1DC73F71B8F5FC7
+ F|appprnt.obj|c0000|0|1DC73F71B85DB37
+ F|appterm.obj|c0000|0|1DC73F71B7CB128
+ F|appui.obj|c0000|0|1DC73F721471543
+ F|appui1.obj|c0000|0|1DC73F7213FC2A7
+ F|appui2.obj|c0000|0|1DC73F72136880D
+ F|appui3.obj|c0000|0|1DC73F7212CE1E3
+ F|arccore.obj|c0000|0|1DC73F72121CF9A
+ F|arcex.obj|c0000|0|1DC73F72114AEDC
+ F|arcobj.obj|c0000|0|1DC73F7210B36D5
+ F|arcstrm.obj|c0000|0|1DC73F72101E99D
+ F|array_b.obj|c0000|0|1DC73F720FAE07D
+ F|array_d.obj|c0000|0|1DC73F720F35C74
+ F|array_o.obj|c0000|0|1DC73F720EB0910
+ F|array_p.obj|c0000|0|1DC73F720E340F5
+ F|array_s.obj|c0000|0|1DC73F720DB2FBD
+ F|array_u.obj|c0000|0|1DC73F720D0557A
+ F|array_w.obj|c0000|0|1DC73F720C6A5D3
+ F|auxdata.obj|c0000|0|1DC73F720BCBCB6
+ F|barcool.obj|c0000|0|1DC73F720B5B5EA
+ F|barcore.obj|c0000|0|1DC73F720ABD76D
+ F|bardlg.obj|c0000|0|1DC73F7209E91C7
+ F|bardock.obj|c0000|0|1DC73F720947EEC
+ F|barstat.obj|c0000|0|1DC73F7267CBF5D
+ F|bartool.obj|c0000|0|1DC73F7266F2BD8
+ F|ccdata.obj|c0000|0|1DC73F7265A1030
+ F|cmdtarg.obj|c0000|0|1DC73F72651A208
+ F|dlgclr.obj|c0000|0|1DC73F7264631A4
+ F|dlgcomm.obj|c0000|0|1DC73F7263E2790
+ F|dlgcore.obj|c0000|0|1DC73F72634DEE4
+ F|dlgdata.obj|c0000|0|1DC73F726281815
+ F|dlgfile.obj|c0000|0|1DC73F7261A47C9
+ F|dlgfloat.obj|c0000|0|1DC73F7260C796A
+ F|dlgfr.obj|c0000|0|1DC73F726028443
+ F|dlgprop.obj|c0000|0|1DC73F725F9FAD4
+ F|dlgtempl.obj|c0000|0|1DC73F725E7CD3C
+ F|dllmodul.obj|c0000|0|1DC73F725DDE225
+ F|doccore.obj|c0000|0|1DC73F725D68F96
+ F|dockcont.obj|c0000|0|1DC73F725C81A88
+ F|dockstat.obj|c0000|0|1DC73F725C318E4
+ F|docmgr.obj|c0000|0|1DC73F725BD4B1D
+ F|docsingl.obj|c0000|0|1DC73F725AE4CF9
+ F|doctempl.obj|c0000|0|1DC73F725A5E7F6
+ F|dumpcont.obj|c0000|0|1DC73F72C454E95
+ F|dumpflt.obj|c0000|0|1DC73F72C3C4DEF
+ F|dumpinit.obj|c0000|0|1DC73F72C34D3D7
+ F|dumpout.obj|c0000|0|1DC73F72C2EB956
+ F|except.obj|c0000|0|1DC73F72C27B771
+ F|filecore.obj|c0000|0|1DC73F72C1E5C62
+ F|filelist.obj|c0000|0|1DC73F72C13C974
+ F|filemem.obj|c0000|0|1DC73F72C07E995
+ F|filest.obj|c0000|0|1DC73F72BFC50D9
+ F|filetxt.obj|c0000|0|1DC73F72BF25221
+ F|filex.obj|c0000|0|1DC73F72BE95219
+ F|inet.obj|c0000|0|1DC73F72BE0D5BC
+ F|list_o.obj|c0000|0|1DC73F72BCC5D40
+ F|list_p.obj|c0000|0|1DC73F72BC160D2
+ F|list_s.obj|c0000|0|1DC73F72BB8D546
+ F|map_pp.obj|c0000|0|1DC73F72BAFE78E
+ F|map_pw.obj|c0000|0|1DC73F72BA921B4
+ F|map_so.obj|c0000|0|1DC73F72BA1F5C5
+ F|map_sp.obj|c0000|0|1DC73F72B96840F
+ F|map_ss.obj|c0000|0|1DC73F72B8B8795
+ F|map_wo.obj|c0000|0|1DC73F731C26057
+ F|map_wp.obj|c0000|0|1DC73F731B93971
+ F|mtcore.obj|c0000|0|1DC73F731B232F3
+ F|mtex.obj|c0000|0|1DC73F731AB2BCE
+ F|objcore.obj|c0000|0|1DC73F731A35E3A
+ F|olelock.obj|c0000|0|1DC73F7319CF4E1
+ F|plex.obj|c0000|0|1DC73F73194D364
+ F|sockcore.obj|c0000|0|1DC73F731873327
+ F|strcore.obj|c0000|0|1DC73F731766775
+ F|strex.obj|c0000|0|1DC73F7316A7AA3
+ F|thrdcore.obj|c0000|0|1DC73F73156F1B5
+ F|timecore.obj|c0000|0|1DC73F73142C813
+ F|tooltip.obj|c0000|0|1DC73F7313A157B
+ F|trckrect.obj|c0000|0|1DC73F73133D3F7
+ F|validadd.obj|c0000|0|1DC73F731257C0D
+ F|viewcmn.obj|c0000|0|1DC73F7311CA2CF
+ F|viewcore.obj|c0000|0|1DC73F73114B30E
+ F|viewedit.obj|c0000|0|1DC73F73108A834
+ F|viewform.obj|c0000|0|1DC73F730F3447A
+ F|viewprnt.obj|c0000|0|1DC73F730E91340
+ F|viewscrl.obj|c0000|0|1DC73F738553B06
+ F|winbtn.obj|c0000|0|1DC73F73847C794
+ F|wincore.obj|c0000|0|1DC73F7383ECB67
+ F|winctrl1.obj|c0000|0|1DC73F7381A7AB5
+ F|winctrl2.obj|c0000|0|1DC73F7380EF3CC
+ F|winctrl6.obj|c0000|0|1DC73F737FD52F0
+ F|winfrm.obj|c0000|0|1DC73F737F3B54D
+ F|winfrmx.obj|c0000|0|1DC73F737DE58A3
+ F|wingdi.obj|c0000|0|1DC73F737D646C2
+ F|wingdix.obj|c0000|0|1DC73F737C5AB4F
+ F|winhand.obj|c0000|0|1DC73F737B9FF78
+ F|winmain.obj|c0000|0|1DC73F737ADD22F
+ F|winmenu.obj|c0000|0|1DC73F737A71104
+ F|winocc.obj|c0000|0|1DC73F737A0B711
+ F|winsplit.obj|c0000|0|1DC73F737973C77
+ F|winstr.obj|c0000|0|1DC73F7377C135D
+ F|winutil.obj|c0000|0|1DC73F73774723D
+ F|wcealt.obj|c0000|0|1DC73F7376B9162
+ F|wcebar.obj|c0000|0|1DC73F7375682D4
+ F|wcedoclt.obj|c0000|0|1DC73F737460803
+ F|wcedoctm.obj|c0000|0|1DC73F73B51B99E
+ F|wcedb.obj|c0000|0|1DC73F73B3EF4EF
+ F|wcedlgfr.obj|c0000|0|1DC73F73B18330A
+ F|wcedlgpr.obj|c0000|0|1DC73F73B0DFF05
+ F|wcedlgsm.obj|c0000|0|1DC73F73B044743
+ F|wcedll.obj|c0000|0|1DC73F73AFC4169
+ F|wceimpl.obj|c0000|0|1DC73F73AF47906
+ F|wcesock.obj|c0000|0|1DC73F73AE9CAB2
+ F|wcethunk.obj|c0000|0|1DC73F73AD8B3A1
+ F|wcetime.obj|c0000|0|1DC73F73AD160A2
+ F|macrolist.tmp|80000|0|1DC73F7165AAE0F
+ F|_objects.mac|80000|0|1DC73F716AAA2AF
+ F|_table.mac|80000|0|1DC73F7168BD017
+
+D|C:\wince800\public\\oak\lib\armv7\retail\|1000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+
+D|C:\wince800\public\common\ddk\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|80211hdr.h|4|0|1CFBC5FB284DB00
+  I|packon.h|0
   I|windows.h|0
- F|cpl.h|4|0|1CB750E6EDA8E00
+  I|windot11.h|0
+  I|packoff.h|0
+ F|acmdrvr.def|80000|0|1CFBC5FB284DB00
+ F|autoras.h|4|0|1CFBC5FB284DB00
+ F|cameradebug.h|4|0|1CFBC5FB284DB00
+ F|cameradriver.h|4|0|1CFBC5FB284DB00
+ F|camerapdd.h|4|0|1CFBC5FB284DB00
+ F|camerapddprops.h|4|0|1CFBC5FB284DB00
+ F|camerapindriver.h|4|0|1CFBC5FB284DB00
+  I|marshal.hpp|1
+ F|cebus.h|4|0|1CFBC5FB284DB00
+  I|ceddk.h|0
+  I|pm.h|0
+ F|cebuscfg.h|4|0|1CFBC5FB284DB00
+ F|ceddk.h|4|0|1CFBC5FB284DB00
+  I|ntstatus.h|0
+  I|macwin32.h|0
+  I|ddkmacro.h|0
+  I|pkfuncs.h|0
+  I|pm.h|0
+  I|CeBus.h|0
+  I|oaldma.h|0
+ F|cedma.h|4|0|1CFBC5FB284DB00
+  I|ceddk.h|0
+  I|pm.h|0
+ F|ceotgbus.h|4|0|1CFBC5FB284DB00
+  I|cebus.h|0
+ F|cesdbus.h|4|0|1CFBC5FB284DB00
+  I|cebus.h|0
+  I|SDCardDDK.h|0
+  I|windot11.h|0
+ F|cesvsbus.h|4|0|1CFBC5FB284DB00
+  I|cebus.h|0
+ F|dbgprint.h|4|0|1CFBC5FB284DB00
+  I|wceemul.h|0
+ F|ddkmacro.h|4|0|1CFBC5FB284DB00
+ F|ddkreg.h|4|0|1CFBC5FB284DB00
+  I|devload.h|0
+ F|devload.h|4|0|1CFBC5FB284DB00
+ F|drfilter.h|4|0|1CFBC5FB284DB00
+ F|dstruct.h|4|0|1CFBC5FB284DB00
+ F|ex.h|4|0|1CFBC5FB284DB00
+  I|lpc.h|0
+ F|fwpmk.h|4|0|1CFBC5FB284DB00
+  I|fwpmtypes.h|1
+ F|fwpsk.h|4|0|1CFBC5FB284DB00
+  I|fwpstypes.h|1
+  I|ws2def.h|1
+  I|ndis.h|1
+ F|fwpstypes.h|4|0|1D05B4365A51B00
+  I|rpc.h|1
+  I|rpcndr.h|1
+  I|fwptypes.h|1
+ F|fwpstypes.idl|0|0|1CFBC5F9E40DE00
+  I|fwptypes.idl|1
+  I|wfpalign.h|1
+ F|fwpsu.h|4|0|1CFBC5FB284DB00
+  I|fwpstypes.h|1
+  I|ws2def.h|1
+ F|ke.h|4|0|1CFBC5FB284DB00
+  I|netwdm.h|0
+ F|marshal.hpp|4|0|1CFBC5FB284DB00
+ F|ndis.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|memory.h|0
+  I|netwdm.h|0
+  I|ntcompat.h|0
+  I|ex.h|0
+  I|ke.h|0
+  I|wdmio.h|0
+  I|rtlmisc.h|0
+  I|netevent.h|0
+  I|ntddk.h|0
+  I|ntstatus.h|0
+  I|ntddndis.h|0
+  I|xfilter.h|0
+  I|windot11.h|0
+  I|qos.h|0
+ F|ndispwr.h|4|0|1CFBC5FB284DB00
+ F|ndistapi.h|4|0|1CFBC5FB284DB00
+ F|ndiswan.h|4|0|1CFBC5FB284DB00
+ F|ndiswwan.h|4|0|1CFBC5FB284DB00
+ F|netdma.h|4|0|1CFBC5FB284DB00
+ F|netevent.h|4|0|1CFBC5FB284DB00
+ F|netwdm.h|4|0|1CFBC5FB284DB00
+  I|ntcompat.h|0
+  I|wdmio.h|0
+ F|ntcompat.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|wdm.h|0
+  I|resmgr.h|0
+ F|ntintsafe.h|4|0|1CFBC5FB284DB00
+  I|specstrings.h|0
+  I|intsafe.h|0
+ F|nuiouser.h|4|0|1CFBC5FB284DB00
+  I|winioctl.h|0
+ F|oaldma.h|4|0|1CFBC5FB284DB00
+  I|ceddk.h|0
+ F|pcibus.h|4|0|1CFBC5FB284DB00
+  I|PCIrsrc.h|0
+ F|pcirsrc.h|4|0|1CFBC5FB284DB00
+ F|resmgr.h|4|0|1CFBC5FB284DB00
+ F|rndismini.h|4|0|1CFBC5FB284DB00
+  I|cetypes.h|0
+ F|rtlmisc.h|4|0|1CFBC5FB284DB00
+  I|wtypes.h|0
+  I|wdm.h|0
+  I|cetypes.h|0
+ F|sdcard.h|4|0|1CFBC5FB284DB00
+  I|pshpack1.h|0
+  I|poppack.h|0
+ F|sdcardddk.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|linklist.h|0
+  I|ceddk.h|0
+  I|SDMem.h|1
+  I|SDCard.h|1
+  I|pshpack1.h|0
+  I|poppack.h|0
+ F|sdmem.h|4|0|1CFBC5FB284DB00
+ F|smcce.h|4|0|1CFBC5FB284DB00
+  I|ntstatus.h|0
+  I|windows.h|0
+  I|tchar.h|0
+  I|ceddk.h|0
+ F|smclib.h|4|0|1CFBC5FB284DB00
+  I|smcvxd.h|1
+  I|smcce.h|1
+  I|smcnt.h|1
+  I|winsmcrd.h|1
+  I|ntstatus.h|0
+ F|tspi.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|tapi.h|1
+ F|usb100.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|PSHPACK1.H|0
+  I|POPPACK.H|0
+ F|usb200.h|4|0|1CFBC5FB284DB00
+  I|usb100.h|0
+  I|PSHPACK1.H|0
+  I|POPPACK.H|0
+ F|usbclient.h|4|0|1CFBC5FB284DB00
+  I|windows.h|0
+  I|usbdi.h|0
+ F|usbdi.h|4|0|1CFBC5FB284DB00
+  I|usbtypes.h|1
+ F|usbtypes.h|4|0|1CFBC5FB284DB00
+  I|windef.h|0
+  I|usb100.h|1
+ F|wdm.h|4|0|1CFBC5FB284DB00
+  I|ntstatus.h|0
+  I|memory.h|0
+  I|ceddk.h|0
+  I|linklist.h|0
+ F|wdmio.h|4|0|1CFBC5FB284DB00
+  I|ntcompat.h|0
+ F|xfilter.h|4|0|1CFBC5FB284DB00
+
+D|C:\wince800\public\common\oak\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|aablt.h|4|0|1CFBC5FC92B3200
+  I|gpe.h|0
+ F|acc.def|80000|0|1CFBC5FC92B3200
+ F|accapi.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|sensor.h|0
+ F|acc_ddsi.h|4|0|1CFBC5FC92B3200
+  I|accapi.h|0
+  I|ceddk.h|0
+ F|acc_ioctl.h|4|0|1CFBC5FC92B3200
+  I|windev.h|0
+ F|align.h|4|0|1CFBC5FC92B3200
+ F|atapi.h|4|0|1CFBC5FC92B3200
+ F|atapi2.h|4|0|1CFBC5FC92B3200
+  I|windef.h|0
+ F|audiosys.h|4|0|1CFBC5FC92B3200
+  I|windows.h|1
+ F|backlight.def|80000|0|1CFBC5FC92B3200
+ F|backlight.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|pm.h|0
+ F|backlightddsi.h|4|0|1CFBC5FC92B3200
+ F|battdrvr.def|80000|0|1CFBC5FC92B3200
+ F|battery.h|4|0|1CFBC5FC92B3200
+ F|battimpl.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|battery.h|0
+ F|bcoemglobal.h|4|0|1CFBC5FC92B3200
+ F|blcommon.h|4|0|1CFBC5FC92B3200
+  I|pehdr.h|0
+  I|romldr.h|0
+ F|bootpart.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|pcireg.h|0
+ F|btagnetwork.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+ F|btagpub.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|winsock2.h|0
+  I|ws2bth.h|0
+ F|bthid.h|4|0|1CFBC5FC92B3200
+ F|bt_buffer.h|4|0|1CFBC5FC92B3200
+ F|bt_ddi.h|4|0|1CFBC5FC92B3200
+  I|svsutil.hxx|0
+ F|bt_debug.h|4|0|1CFBC5FC92B3200
+  I|celog.h|0
+ F|bt_hcip.h|4|0|1CFBC5FC92B3200
+  I|bt_buffer.h|0
+ F|bt_ioctl.h|4|0|1CFBC5FC92B3200
+ F|bt_os.h|4|0|1CFBC5FC92B3200
+ F|bt_tdbg.h|4|0|1CFBC5FC92B3200
+ F|buttoncommon.hpp|4|0|1CFBC5FC92B3200
+ F|buttonview.hpp|4|0|1CFBC5FC92B3200
+ F|cabapi.h|4|0|1CFBC5FC92B3200
+  I|WinCrypt.h|0
+  I|wintrust.h|0
+ F|calibrui.h|4|0|1CFBC5FC92B3200
+ F|camera.def|80000|0|1CFBC5FC92B3200
+ F|camera.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|Cs.h|0
+  I|Csmedia.h|0
+ F|cdioctl.h|4|0|1CFBC5FC92B3200
+  I|scsi.h|0
+ F|cecompr.h|4|0|1CFBC5FC92B3200
+ F|cecompress.h|4|0|1CFBC5FC92B3200
+ F|ceddk.def|80000|0|1CFBC5FC92B3200
+ F|ceperf.h|4|0|1CFBC5FC92B3200
+ F|ceperf_cpu.h|4|0|1CFBC5FC92B3200
+ F|ceperf_log.h|4|0|1CFBC5FC92B3200
+ F|ceptr.hpp|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+ F|certui.h|4|0|1CFBC5FC92B3200
+  I|windev.h|0
+  I|wincrypt.h|0
+ F|cmnmacro.h|4|0|1CFBC5FC92B3200
+ F|cmthread.h|4|0|1CFBC5FC92B3200
+ F|cmwrapper.h|4|0|1CFBC5FC92B3200
+  I|windows.h|0
+  I|CmNet.h|0
+  I|ProxyDBS.h|0
+ F|coblist.h|4|0|1CFBC5FC92B3200
+ F|coguid.h|4|0|1CFBC5FC92B3200
+  I|objbase.h|0
+ F|coinitialize.hpp|4|0|1CFBC5FC92B3200
+ F|comboboxview.hpp|4|0|1CFBC5FCA5C5F00
+ F|commctrlview.hpp|4|0|1CFBC5FCA5C5F00
+  I|windows.h|0
+ F|commctrl_priv.h|4|0|1CFBC5FCA5C5F00
+ F|console.h|4|0|1CFBC5FCA5C5F00
+  I|windev.h|1
+ F|corecrtstorage.h|4|0|1CFBC5FCA5C5F00
+  I|windows.h|0
+ F|cpl.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|1
   I|poppack.h|1
- F|credmgr.h|4|0|1CB750E6EDA8E00
+ F|credmgr.h|4|0|1CFBC5FCA5C5F00
   I|cred.h|0
- F|cred_ioctl.h|4|0|1CB750E6EDA8E00
+ F|cred_ioctl.h|4|0|1CFBC5FCA5C5F00
   I|alignment.hxx|0
   I|pc_marshaler.hxx|0
- F|cred_prov.h|4|0|1CB750E6EDA8E00
- F|crefcon.h|4|0|1CB750E6EDA8E00
+ F|cred_prov.h|4|0|1CFBC5FCA5C5F00
+ F|crefcon.h|4|0|1CFBC5FCA5C5F00
   I|CSync.h|0
- F|cregedit.h|4|0|1CB750E6EDA8E00
+ F|cregedit.h|4|0|1CFBC5FCA5C5F00
   I|winreg.h|0
   I|ddkreg.h|0
- F|crypt_hw_offload.h|4|0|1CB750E6EDA8E00
- F|cs.h|4|0|1CB750E6EDA8E00
- F|cserpdd.h|4|0|1CB750E6EDA8E00
+ F|crypt_hw_offload.h|4|0|1CFBC5FCA5C5F00
+ F|cs.h|4|0|1CFBC5FCA5C5F00
+ F|cserpdd.h|4|0|1CFBC5FCA5C5F00
   I|CRegEdit.h|0
   I|CMthread.h|0
   I|CSync.h|0
- F|csync.h|4|0|1CB750E6EDA8E00
- F|ctblt.h|4|0|1CB750E6EDA8E00
+ F|csync.h|4|0|1CFBC5FCA5C5F00
+ F|ctblt.h|4|0|1CFBC5FCA5C5F00
   I|gpe.h|0
- F|curs_rc.h|4|0|1CB750E6EDA8E00
- F|cxport.h|4|0|1CB750E6EDA8E00
+ F|curs_rc.h|4|0|1CFBC5FCA5C5F00
+ F|cxport.h|4|0|1CFBC5FCA5C5F00
   I|winbase.h|1
- F|ddgpe.h|4|0|1CB750E6EDA8E00
+ F|ddgpe.h|4|0|1CFBC5FCA5C5F00
   I|gpe.h|0
   I|ddrawi.h|1
- F|ddhal.h|4|0|1CB750E6EDA8E00
- F|ddhfuncs.h|4|0|1CB750E6EDA8E00
- F|ddrawi.h|4|0|1CB750E6EDA8E00
+ F|ddhal.h|4|0|1CFBC5FCA5C5F00
+ F|ddhfuncs.h|4|0|1CFBC5FCA5C5F00
+ F|ddrawi.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|ddraw.h|0
   I|dvp.h|0
- F|ddx.h|4|0|1CB750E6EDA8E00
- F|defbus.h|4|0|1CB750E6EDA8E00
+ F|ddx.h|4|0|1CFBC5FCA5C5F00
+ F|defbus.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|CeBusCfg.h|0
   I|CeDDK.h|0
   I|CRefCon.h|0
   I|CRegEdit.h|0
   I|CSync.h|0
- F|deffile.h|4|0|1CB750E6EDA8E00
+ F|deffile.h|4|0|1CFBC5FCA5C5F00
   I|bldver.h|0
- F|defui.h|4|0|1CB750E6EDA8E00
+ F|defui.h|4|0|1CFBC5FCA5C5F00
  F|detail\|0|10|0
- F|devicefeedbackpublic.h|4|0|1CB750E6EDA8E00
- F|devicelayout.h|4|0|1CB750E6EDA8E00
+ F|devicefeedbackpublic.h|4|0|1CFBC5FCA5C5F00
+ F|devicelayout.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|devmgr.def|80000|0|1CB750E6EDA8E00
- F|dhcpserver.h|4|0|1CB750E6EDA8E00
- F|diskio.h|4|0|1CB750E6EDA8E00
- F|dispdrvr.h|4|0|1CB750E6EDA8E00
- F|dispperf.h|4|0|1CB750E6EDA8E00
- F|dsdriver.h|4|0|1CB750E6EDA8E00
- F|dubinet.h|4|0|1CB750E6EDA8E00
- F|dumpmem.h|4|0|1CB750E6EDA8E00
- F|dvdioctl.h|4|0|1CB750E6EDA8E00
- F|dwcedump.h|4|0|1CB750E6EDA8E00
+ F|devmgr.def|80000|0|1CFBC5FCA5C5F00
+ F|dhcpserver.h|4|0|1CFBC5FCA5C5F00
+ F|diskio.h|4|0|1CFBC5FCA5C5F00
+ F|dispdrvr.h|4|0|1CFBC5FCA5C5F00
+ F|dispperf.h|4|0|1CFBC5FCA5C5F00
+ F|dsdriver.h|4|0|1CFBC5FCA5C5F00
+ F|dubinet.h|4|0|1CFBC5FCA5C5F00
+ F|dumpmem.h|4|0|1CFBC5FCA5C5F00
+ F|dvdioctl.h|4|0|1CFBC5FCA5C5F00
+ F|dwcedump.h|4|0|1CFBC5FCA5C5F00
   I|pshpack4.h|0
   I|ddx.h|0
   I|poppack.h|0
- F|dwnldapp.h|4|0|1CB750E6EDA8E00
+ F|dwnldapp.h|4|0|1CFBC5FCA5C5F00
   I|string.hxx|0
- F|dwpublic.h|4|0|1CB750E6EDA8E00
- F|eap.h|4|0|1CB750E6EDA8E00
+ F|dwpublic.h|4|0|1CFBC5FCA5C5F00
+ F|eap.h|4|0|1CFBC5FCA5C5F00
   I|raseapif.h|0
   I|cxport.h|0
   I|eaputil.h|0
- F|eapcfg.h|4|0|1CB750E6EDA8E00
- F|eaputil.h|4|0|1CB750E6EDA8E00
+ F|eapcfg.h|4|0|1CFBC5FCA5C5F00
+ F|eaputil.h|4|0|1CFBC5FCA5C5F00
   I|raseapif.h|0
- F|editview.hpp|4|0|1CB750E6EDA8E00
- F|ehcd.def|80000|0|1CB750E6EDA8E00
- F|ehm.h|4|0|1CB750E6EDA8E00
+ F|editview.hpp|4|0|1CFBC5FCA5C5F00
+ F|ehcd.def|80000|0|1CFBC5FCA5C5F00
+ F|ehm.h|4|0|1CFBC5FCA5C5F00
   I|guts_cmn.h|0
   I|static_assert.hxx|0
- F|emul.h|4|0|1CB750E6EDA8E00
+ F|emul.h|4|0|1CFBC5FCA5C5F00
   I|gpe.h|0
- F|ethdbg.h|4|0|1CB750E6EDA8E00
+ F|ethdbg.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|0
   I|poppack.h|0
- F|evgen.h|4|0|1CB750E6EDA8E00
- F|extfile.h|4|0|1CB750E6EDA8E00
+ F|evgen.h|4|0|1CFBC5FCA5C5F00
+ F|extfile.h|4|0|1CFBC5FCA5C5F00
   I|changeinfo.h|0
   I|mextfile.h|0
- F|fatutil.h|4|0|1CB750E6EDA8E00
+ F|fatutil.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|diskio.h|0
- F|flashmdd.h|4|0|1CB750E6EDA8E00
+ F|flashmdd.h|4|0|1CFBC5FCA5C5F00
   I|FlashMddCommon.h|0
   I|FlashPdd.h|0
- F|flashmddcommon.h|4|0|1CB750E6EDA8E00
+ F|flashmddcommon.h|4|0|1CFBC5FCA5C5F00
   I|storeMgr.h|0
   I|FlashPddCommon.h|0
- F|flashpdd.h|4|0|1CB750E6EDA8E00
+ F|flashpdd.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
   I|FlashPddCommon.h|0
- F|flashpddcommon.h|4|0|1CB750E6EDA8E00
- F|fls.h|4|0|1CB750E6EDA8E00
- F|fmd.h|4|0|1CB750E6EDA8E00
+ F|flashpddcommon.h|4|0|1CFBC5FCA5C5F00
+ F|fls.h|4|0|1CFBC5FCA5C5F00
+ F|fmd.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|diskio.h|0
   I|bldver.h|0
   I|pcireg.h|0
   I|fls.h|1
- F|fontdrv.h|4|0|1CB750E6EDA8E00
- F|fslog.h|4|0|1CB750E6EDA8E00
+ F|fontdrv.h|4|0|1CFBC5FCA5C5F00
+ F|fsderr.h|4|0|1CFBC5FCA5C5F00
+ F|fslog.h|4|0|1CFBC5FCA5C5F00
   I|vmlayout.h|0
- F|fwentry.h|4|0|1CB750E6EDA8E00
+ F|fwentry.h|4|0|1CFBC5FCA5C5F00
   I|fwtblidx.h|0
- F|fwtblidx.h|4|0|1CB750E6EDA8E00
- F|gcacheview.hpp|4|0|1CB750E6EDA8E00
- F|gdi.hpp|4|0|1CB750E6EDA8E00
- F|genblt.h|4|0|1CB750E6EDA8E00
- F|genblt_anyblt.h|4|0|1CB750E6EDA8E00
- F|genblt_pcode.h|4|0|1CB750E6EDA8E00
- F|giisr.h|4|0|1CB750E6EDA8E00
+ F|fwtblidx.h|4|0|1CFBC5FCA5C5F00
+ F|gcacheview.hpp|4|0|1CFBC5FCA5C5F00
+ F|gdi.hpp|4|0|1CFBC5FCA5C5F00
+ F|giisr.h|4|0|1CFBC5FCA5C5F00
   I|pkfuncs.h|0
- F|gpe.h|4|0|1CB750E6EDA8E00
-  I|genblt.h|0
- F|gpsdev.h|4|0|1CB750E6EDA8E00
+ F|gpe.h|4|0|1CFBC5FCA5C5F00
+ F|gpecursor.h|4|0|1CFBC5FCA5C5F00
+ F|gpsdev.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
- F|guidgen.h|4|0|1CB750E6EDA8E00
- F|guts.h|4|0|1CB750E6EDA8E00
+ F|guidgen.h|4|0|1CFBC5FCA5C5F00
+ F|guts.h|4|0|1CFBC5FCA5C5F00
   I|static_assert.hxx|0
   I|guts_cmn.h|0
- F|guts_cmn.h|4|0|1CB750E6EDA8E00
- F|gweadd.h|4|0|1CB750E6EDA8E00
- F|gwebypasscoredllthunk.hpp|4|0|1CB750E6EDA8E00
+ F|guts_cmn.h|4|0|1CFBC5FCA5C5F00
+ F|gweadd.h|4|0|1CFBC5FCA5C5F00
+ F|gwebypasscoredllthunk.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|halether.h|4|0|1CB750E6EDA8E00
+ F|halether.h|4|0|1CFBC5FCA5C5F00
   I|pkfuncs.h|0
   I|ethdbg.h|0
   I|kitl.h|0
- F|handlearray.h|4|0|1CB750E6EDA8E00
+ F|handlearray.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|hcd.h|4|0|1CB750E6EDA8E00
+ F|hcd.h|4|0|1CFBC5FCA5C5F00
   I|usbtypes.h|1
- F|hcdddsi.h|4|0|1CB750E6EDA8E00
- F|hcdi.h|4|0|1CB750E6EDA8E00
+ F|hcdddsi.h|4|0|1CFBC5FCA5C5F00
+ F|hcdi.h|4|0|1CFBC5FCA5C5F00
   I|usbtypes.h|1
- F|headerview.hpp|4|0|1CB750E6EDA8E00
+ F|headerview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|hid.h|4|0|1CB750E6EDA8E00
+ F|hid.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|hidpi.h|0
   I|hidtypes.h|0
- F|hiddi.h|4|0|1CB750E6EDA8E00
+ F|hiddi.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|hidusage.h|1
   I|hidpddi.h|1
   I|hidpi.h|1
   I|hidtypes.h|1
- F|hidpddi.h|4|0|1CB750E6EDA8E00
+ F|hidpddi.h|4|0|1CFBC5FCA5C5F00
   I|hidusage.h|1
   I|hidpi.h|1
- F|hidpi.h|4|0|1CB750E6EDA8E00
+ F|hidpi.h|4|0|1CFBC5FCA5C5F00
   I|pshpack4.h|0
   I|windows.h|0
   I|hidusage.h|1
   I|poppack.h|0
- F|hidtypes.h|4|0|1CB750E700BBB00
- F|hidusage.h|4|0|1CB750E700BBB00
+ F|hidtypes.h|4|0|1CFBC5FCA5C5F00
+ F|hidusage.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|hshell.h|4|0|1CB750E700BBB00
- F|hw16550.h|4|0|1CB750E700BBB00
- F|hwcomapi.h|4|0|1CB750E700BBB00
- F|i2c.def|80000|0|1CB750E700BBB00
- F|i2c.h|4|0|1CB750E700BBB00
- F|icon.h|4|0|1CB750E700BBB00
+ F|hshell.h|4|0|1CFBC5FCA5C5F00
+ F|hw16550.h|4|0|1CFBC5FCA5C5F00
+ F|hwcomapi.h|4|0|1CFBC5FCA5C5F00
+ F|i2c.def|80000|0|1CFBC5FCA5C5F00
+ F|i2c.h|4|0|1CFBC5FCA5C5F00
+ F|icon.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|iltiming.h|4|0|1CB750E700BBB00
+ F|iltiming.h|4|0|1CFBC5FCA5C5F00
  F|imejpp\|0|10|0
- F|immdefs.h|4|0|1CB750E700BBB00
- F|immstruc.h|4|0|1CB750E700BBB00
- F|inputlang.h|4|0|1CB750E700BBB00
+ F|immdefs.h|4|0|1CFBC5FCA5C5F00
+ F|immstruc.h|4|0|1CFBC5FCA5C5F00
+ F|inputlang.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|keybd.h|0
- F|intioctl.h|4|0|1CB750E700BBB00
+ F|intioctl.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|0
   I|poppack.h|0
- F|intrlk.h|4|0|1CB750E700BBB00
- F|ipinfoid.h|4|0|1CB750E700BBB00
- F|iplcommon.h|4|0|1CB750E700BBB00
- F|ipnat.h|4|0|1CB750E700BBB00
+ F|intrlk.h|4|0|1CFBC5FCA5C5F00
+ F|ipinfoid.h|4|0|1CFBC5FCA5C5F00
+ F|iplcommon.h|4|0|1CFBC5FCA5C5F00
+ F|ipnat.h|4|0|1CFBC5FCA5C5F00
   I|rtinfo.h|0
   I|ipinfoid.h|0
- F|ipsec_api.h|4|0|1CB750E700BBB00
- F|ipsec_ioctl.h|4|0|1CB750E700BBB00
- F|iri.h|4|0|1CB750E700BBB00
+ F|ipsec_api.h|4|0|1CFBC5FCA5C5F00
+ F|ipsec_ioctl.h|4|0|1CFBC5FCA5C5F00
+ F|iri.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|iriutil.hpp|4|0|1CB750E700BBB00
+ F|iriutil.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|iri.h|0
   I|auto_xxx.hxx|0
- F|kbd.def|80000|0|1CB750E700BBB00
- F|kdioctl.h|4|0|1CB750E700BBB00
- F|keybddbg.h|4|0|1CB750E700BBB00
- F|keybddr.h|4|0|1CB750E700BBB00
+ F|kbd.def|80000|0|1CFBC5FCA5C5F00
+ F|kdioctl.h|4|0|1CFBC5FCA5C5F00
+ F|keybddbg.h|4|0|1CFBC5FCA5C5F00
+ F|keybddr.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
-  I|types.h|0
   I|keybd.h|0
   I|pm.h|0
- F|keybdist.h|4|0|1CB750E700BBB00
- F|keybdpdd.h|4|0|1CB750E700BBB00
+ F|keybdist.h|4|0|1CFBC5FCA5C5F00
+ F|keybdpdd.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|pm.h|0
   I|keybddr.h|0
- F|kitl.h|4|0|1CB750E700BBB00
+ F|kitl.h|4|0|1CFBC5FCA5C5F00
   I|KitlProt.h|1
- F|kitlprot.h|4|0|1CB750E700BBB00
+ F|kitlprot.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|0
   I|poppack.h|0
- F|L.chs\|0|10|0
- F|L.cht\|0|10|0
- F|L.deu\|0|10|0
- F|L.esp\|0|10|0
- F|L.fra\|0|10|0
- F|L.ita\|0|10|0
- F|L.jpn\|0|10|0
- F|L.kor\|0|10|0
- F|L.nld\|0|10|0
- F|L.ptb\|0|10|0
- F|L.sve\|0|10|0
- F|l2tpcfg.h|4|0|1CB750E700BBB00
- F|laymgr.h|4|0|1CB750E700BBB00
+ F|l2tpcfg.h|4|0|1CFBC5FCA5C5F00
+ F|laymgr.h|4|0|1CFBC5FCA5C5F00
   I|keybddbg.h|0
- F|led_drvr.h|4|0|1CB750E700BBB00
- F|listboxview.hpp|4|0|1CB750E700BBB00
- F|loaderverifier.h|4|0|1CB750E700BBB00
+ F|led_drvr.h|4|0|1CFBC5FCA5C5F00
+ F|listboxview.hpp|4|0|1CFBC5FCA5C5F00
+ F|loaderverifier.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|bcrypt.h|0
   I|mloaderverifier.h|0
- F|lpc.h|4|0|1CB750E700BBB00
+ F|lpc.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|1
- F|lss.h|4|0|1CB750E700BBB00
+ F|lss.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|stddef.h|0
- F|lvmod.h|4|0|1CB750E700BBB00
+ F|lvmod.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|1
   I|wincrypt.h|0
- F|mafdfunc.h|4|0|1CB750E700BBB00
- F|mcommdlg.h|4|0|1CB750E700BBB00
- F|mcx.h|4|0|1CB750E700BBB00
- F|mdpgperf.h|4|0|1CB750E700BBB00
+ F|mafdfunc.h|4|0|1CFBC5FCA5C5F00
+ F|mcommdlg.h|4|0|1CFBC5FCA5C5F00
+ F|mcx.h|4|0|1CFBC5FCA5C5F00
+ F|mdpgperf.h|4|0|1CFBC5FCA5C5F00
   I|ehm.h|1
   I|celog.h|1
   I|ceperf.h|0
- F|menuctrl.h|4|0|1CB750E700BBB00
- F|menuview.hpp|4|0|1CB750E700BBB00
- F|mextfile.h|4|0|1CB750E700BBB00
- F|midles.h|4|0|1CB750E700BBB00
+ F|menuctrl.h|4|0|1CFBC5FCA5C5F00
+ F|menuview.hpp|4|0|1CFBC5FCA5C5F00
+ F|mextfile.h|4|0|1CFBC5FCA5C5F00
+ F|midles.h|4|0|1CFBC5FCA5C5F00
   I|rpcndr.h|0
- F|minasn1.h|4|0|1CB750E700BBB00
+ F|minasn1.h|4|0|1CFBC5FCA5C5F00
   I|wincrypt.h|0
- F|mincrypt.h|4|0|1CB750E700BBB00
+ F|mincrypt.h|4|0|1CFBC5FCA5C5F00
   I|wincrypt.h|0
   I|minasn1.h|0
- F|MIPS2ThunkBldr.h|4|0|1C40C2E2C088000
- F|MIPS4ThunkBldr.h|4|0|1C40C2E2C088000
- F|mkfuncs.h|4|0|1CB750E700BBB00
+ F|mkfuncs.h|4|0|1CFBC5FCA5C5F00
   I|toolhelp.h|0
- F|mloaderverifier.h|4|0|1CB750E700BBB00
- F|mmaudio.h|4|0|1CB750E700BBB00
+ F|mloaderverifier.h|4|0|1CFBC5FCA5C5F00
+ F|mmaudio.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|1
   I|poppack.h|1
- F|mmddk.h|4|0|1CB750E700BBB00
+ F|mmddk.h|4|0|1CFBC5FCA5C5F00
   I|basetyps.h|0
   I|pshpack1.h|1
   I|poppack.h|1
- F|mpm.h|4|0|1CB750E700BBB00
+ F|mpm.h|4|0|1CFBC5FCA5C5F00
   I|kfuncs.h|0
- F|mpmfunc.h|4|0|1CB750E700BBB00
- F|mru.h|4|0|1CB750E700BBB00
- F|mservice.h|4|0|1CB750E700BBB00
+ F|mpmfunc.h|4|0|1CFBC5FCA5C5F00
+ F|mru.h|4|0|1CFBC5FCA5C5F00
+ F|mservice.h|4|0|1CFBC5FCA5C5F00
   I|mwinbase.h|0
- F|mshellap.h|4|0|1CB750E700BBB00
- F|msime.h|4|0|1CB750E700BBB00
+ F|msime.h|4|0|1CFBC5FCA5C5F00
   I|ole2.h|0
   I|objbase.h|0
   I|imm.h|0
- F|mspyime.h|4|0|1CB750E700BBB00
- F|mstoremgr.h|4|0|1CB750E700BBB00
- F|mtapi.h|4|0|1CB750E700BBB00
- F|mwinbase.h|4|0|1CB750E700BBB00
- F|mwindbas.h|4|0|1CB750E700BBB00
- F|mwingwes.h|4|0|1CB750E700BBB00
- F|mwinreg.h|4|0|1CB750E700BBB00
- F|mwnetfun.h|4|0|1CB750E700BBB00
- F|natedit.h|4|0|1CB750E700BBB00
- F|nclientview.hpp|4|0|1CB750E700BBB00
- F|ne2000isr.h|4|0|1CB750E700BBB00
+ F|mspyime.h|4|0|1CFBC5FCA5C5F00
+ F|mstoremgr.h|4|0|1CFBC5FCA5C5F00
+ F|mtapi.h|4|0|1CFBC5FCA5C5F00
+ F|mwinbase.h|4|0|1CFBC5FCA5C5F00
+ F|mwindbas.h|4|0|1CFBC5FCA5C5F00
+ F|mwingwes.h|4|0|1CFBC5FCA5C5F00
+ F|mwinreg.h|4|0|1CFBC5FCA5C5F00
+ F|mwnetfun.h|4|0|1CFBC5FCA5C5F00
+ F|natedit.h|4|0|1CFBC5FCA5C5F00
+ F|nclientview.hpp|4|0|1CFBC5FCA5C5F00
+ F|ne2000isr.h|4|0|1CFBC5FCA5C5F00
   I|pkfuncs.h|0
- F|netlog.h|4|0|1CB750E700BBB00
+ F|netlog.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|lss.h|0
   I|ndis.h|0
   I|cxport.h|0
- F|netlogioctl.h|4|0|1CB750E700BBB00
- F|netui.h|4|0|1CB750E700BBB00
+ F|netlogioctl.h|4|0|1CFBC5FCA5C5F00
+ F|netui.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|windev.h|0
   I|netui_args.h|0
   I|netui_user.h|0
   I|netui_kernel.h|0
- F|netui_args.h|4|0|1CB750E700BBB00
+ F|netui_args.h|4|0|1CFBC5FCA5C5F00
   I|lmcons.h|1
- F|netui_kernel.h|4|0|1CB750E700BBB00
+ F|netui_kernel.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|netui_args.h|0
   I|safeint.hxx|0
- F|netui_user.h|4|0|1CB750E700BBB00
+ F|netui_user.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|windev.h|0
   I|netui_args.h|0
- F|nkexport.h|4|0|1CB750E700BBB00
+ F|nkexport.h|4|0|1CFBC5FCA5C5F00
   I|nkglobal.h|1
- F|nkglobal.h|4|0|1CB750E700BBB00
+ F|nkglobal.h|4|0|1CFBC5FCA5C5F00
   I|oemglobal.h|1
   I|profiler.h|1
- F|nkintr.h|4|0|1CB750E700BBB00
- F|nmpioctl.h|4|0|1CB750E700BBB00
- F|notifdev.h|4|0|1CB750E700BBB00
+ F|nkintr.h|4|0|1CFBC5FCA5C5F00
+ F|nmpioctl.h|4|0|1CFBC5FCA5C5F00
+ F|notifdev.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
   I|notify.h|0
- F|npptypes.h|4|0|1CB750E700BBB00
+ F|npptypes.h|4|0|1CFBC5FCA5C5F00
   I|unknwn.h|0
- F|ntddip6.h|4|0|1CB750E700BBB00
-  I|windef.h|0
-  I|ipexport.h|0
-  I|winioctl.h|0
-  I|devioctl.h|0
-  I|packon.h|0
-  I|packoff.h|0
- F|ntddmmc.h|4|0|1CB750E700BBB00
- F|ntddscsi.h|4|0|1CB750E700BBB00
- F|ntlmssp.h|4|0|1CB750E700BBB00
- F|numpadrmp.h|4|0|1CB750E700BBB00
+ F|ntddmmc.h|4|0|1CFBC5FCA5C5F00
+ F|ntddscsi.h|4|0|1CFBC5FCA5C5F00
+ F|ntlmssp.h|4|0|1CFBC5FCA5C5F00
+ F|numpadrmp.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|DeviceLayout.h|1
- F|oalioctl.h|4|0|1CB750E700BBB00
- F|oemfw.h|4|0|1CB750E700BBB00
- F|oemglobal.h|4|0|1CB750E700BBB00
+ F|oalioctl.h|4|0|1CFBC5FCA5C5F00
+ F|oemfw.h|4|0|1CFBC5FCA5C5F00
+ F|oemglobal.h|4|0|1CFBC5FCA5C5F00
   I|kitl.h|0
   I|bcoemglobal.h|0
- F|ohcd.def|80000|0|1CB750E700BBB00
- F|ohcdddsi.h|4|0|1CB750E700BBB00
- F|oomui.h|4|0|1CB750E700BBB00
-  I|windows.h|0
- F|optimizer.h|4|0|1CB750E700BBB00
- F|osaxsflexi.h|4|0|1CB750E700BBB00
- F|outmsg.h|4|0|1CB750E700BBB00
+ F|ohcd.def|80000|0|1CFBC5FCA5C5F00
+ F|ohcdddsi.h|4|0|1CFBC5FCA5C5F00
+ F|optimizer.h|4|0|1CFBC5FCA5C5F00
+ F|osaxsflexi.h|4|0|1CFBC5FCA5C5F00
+ F|outmsg.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|1
   I|tchar.h|1
   I|outmsg.h|1
- F|owner.h|4|0|1CB750E700BBB00
- F|packageinfoapi.h|4|0|1CB750E700BBB00
- F|pafdfunc.h|4|0|1CB750E700BBB00
- F|partdrv.h|4|0|1CB750E700BBB00
+ F|owner.h|4|0|1CFBC5FCA5C5F00
+ F|packageinfoapi.h|4|0|1CFBC5FCA5C5F00
+ F|pafdfunc.h|4|0|1CFBC5FCA5C5F00
+ F|partdrv.h|4|0|1CFBC5FCA5C5F00
   I|windef.h|0
   I|winnt.h|0
   I|storemgr.h|0
   I|fsioctl.h|0
- F|pcireg.h|4|0|1CB750E700BBB00
+ F|pcireg.h|4|0|1CFBC5FCA5C5F00
   I|devload.h|0
   I|ceddk.h|0
- F|pcommctr.h|4|0|1CB750E700BBB00
+ F|pcommctr.h|4|0|1CFBC5FCA5C5F00
   I|commctrl.h|0
   I|commctrl_priv.h|0
   I|pshpack1.h|0
   I|poppack.h|0
- F|pc_generated.h|4|0|1CB750E700BBB00
- F|pdd16550.h|4|0|1CB750E700BBB00
+ F|pc_generated.h|4|0|1CFBC5FCA5C5F00
+ F|pdd16550.h|4|0|1CFBC5FCA5C5F00
   I|cserpdd.h|0
   I|hw16550.h|0
- F|pegdpar.h|4|0|1CB750E700BBB00
+ F|pegdpar.h|4|0|1CFBC5FCA5C5F00
   I|windev.h|1
- F|pegdser.h|4|0|1CB750E700BBB00
+ F|pegdser.h|4|0|1CFBC5FCA5C5F00
   I|windev.h|1
- F|pehdr.h|4|0|1CB750E700BBB00
- F|pfsioctl.h|4|0|1CB750E700BBB00
+ F|pehdr.h|4|0|1CFBC5FCA5C5F00
+ F|pfsioctl.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
- F|physicsengine.h|4|0|1CB750E700BBB00
+ F|physicsengine.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|pimm.h|4|0|1CB750E700BBB00
- F|pinglib.h|4|0|1CB750E700BBB00
- F|pkfuncs.h|4|0|1CB750E700BBB00
+ F|pimm.h|4|0|1CFBC5FCA5C5F00
+ F|pinglib.h|4|0|1CFBC5FCA5C5F00
+ F|pkfuncs.h|4|0|1CFBC5FCA5C5F00
   I|excpt.h|0
   I|toolhelp.h|0
   I|winioctl.h|0
@@ -2238,396 +1965,331 @@ D|C:\WINCE700\public\common\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|acctid.h|0
   I|kernSdk.h|0
   I|vmlayout.h|1
- F|pm.def|80000|0|1CB750E700BBB00
- F|pmext.h|4|0|1CB750E700BBB00
+ F|pm.def|80000|0|1CFBC5FCA5C5F00
+ F|pmext.h|4|0|1CFBC5FCA5C5F00
   I|pm.h|0
- F|pmimpl.h|4|0|1CB750E700BBB00
+ F|pmimpl.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|pmpriv.h|0
   I|celog.h|0
- F|pmpriv.h|4|0|1CB750E700BBB00
+ F|pmpriv.h|4|0|1CFBC5FCA5C5F00
   I|pnp.h|0
   I|pm.h|0
- F|pnotify.h|4|0|1CB750E700BBB00
- F|portstub.h|4|0|1CB750E700BBB00
- F|ppfs.h|4|0|1CB750E700BBB00
- F|pprsht.h|4|0|1CB750E700BBB00
+ F|pnotify.h|4|0|1CFBC5FCA5C5F00
+ F|portstub.h|4|0|1CFBC5FCA5C5F00
+ F|ppfs.h|4|0|1CFBC5FCA5C5F00
+ F|pprsht.h|4|0|1CFBC5FCA5C5F00
   I|shellsdk.h|0
- F|ppsh.h|4|0|1CB750E700BBB00
- F|prapi.h|4|0|1CB750E700BBB00
- F|pras.h|4|0|1CB750E700BBB00
- F|privatebuild.h|4|0|1CB750E700BBB00
- F|priviid.h|4|0|1CB750E700BBB00
- F|prnport.h|4|0|1CB750E700BBB00
- F|profiler.h|4|0|1CB750E700BBB00
- F|progressview.hpp|4|0|1CB750E700BBB00
+ F|ppsh.h|4|0|1CFBC5FCA5C5F00
+ F|prapi.h|4|0|1CFBC5FCA5C5F00
+ F|pras.h|4|0|1CFBC5FCA5C5F00
+ F|privatebuild.h|4|0|1CFBC5FCA5C5F00
+ F|priviid.h|4|0|1CFBC5FCA5C5F00
+ F|prnport.h|4|0|1CFBC5FCA5C5F00
+ F|profiler.h|4|0|1CFBC5FCA5C5F00
+ F|progressview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|pservice.h|4|0|1CB750E700BBB00
- F|psqmclient.h|4|0|1CB750E700BBB00
+ F|pservice.h|4|0|1CFBC5FCA5C5F00
+ F|psqmclient.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
   I|sqmpublic.h|1
- F|psyscall.h|4|0|1CB750E700BBB00
- F|psystoken.h|4|0|1CB750E700BBB00
- F|ptapi.h|4|0|1CB750E700BBB00
- F|pwinbase.h|4|0|1CB750E700BBB00
+ F|psyscall.h|4|0|1CFBC5FCA5C5F00
+ F|psystoken.h|4|0|1CFBC5FCA5C5F00
+ F|ptapi.h|4|0|1CFBC5FCA5C5F00
+ F|pwinbase.h|4|0|1CFBC5FCA5C5F00
   I|dbgapi.h|0
- F|pwindbas.h|4|0|1CB750E700BBB00
- F|pwindowx.h|4|0|1CB750E700BBB00
- F|pwingdi.h|4|0|1CB750E700BBB00
+ F|pwindbas.h|4|0|1CFBC5FCA5C5F00
+ F|pwindowx.h|4|0|1CFBC5FCA5C5F00
+ F|pwingdi.h|4|0|1CFBC5FCA5C5F00
   I|windbase.h|0
- F|pwinreg.h|4|0|1CB750E700BBB00
- F|pwinuser.h|4|0|1CB750E700BBB00
+ F|pwinreg.h|4|0|1CFBC5FCA5C5F00
+ F|pwinuser.h|4|0|1CFBC5FCA5C5F00
   I|keybd.h|0
- F|rai.h|4|0|1CB750E700BBB00
- F|rebarview.hpp|4|0|1CB750E700BBB00
+ F|rebarview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|Res\|0|10|0
- F|romldr.h|4|0|1CB750E700BBB00
+ F|romldr.h|4|0|1CFBC5FCA5C5F00
   I|pshpack1.h|0
   I|poppack.h|0
- F|romxip.h|4|0|1CB750E700BBB00
+ F|romxip.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
- F|rtinfo.h|4|0|1CB750E700BBB00
- F|rwlock.h|4|0|1CB750E700BBB00
- F|scrollcommon.hpp|4|0|1CB750E700BBB00
- F|scrollview.hpp|4|0|1CB750E700BBB00
- F|scsi.h|4|0|1CB750E700BBB00
+ F|rtinfo.h|4|0|1CFBC5FCA5C5F00
+ F|rwlock.h|4|0|1CFBC5FCA5C5F00
+ F|scrollcommon.hpp|4|0|1CFBC5FCA5C5F00
+ F|scrollview.hpp|4|0|1CFBC5FCA5C5F00
+ F|scsi.h|4|0|1CFBC5FCA5C5F00
   I|srb.h|1
- F|sdhcd.h|4|0|1CB750E700BBB00
+ F|sdhcd.h|4|0|1CFBC5FCA5C5F00
   I|SDCardDDK.h|1
- F|sensor.h|4|0|1CB750E700BBB00
+ F|sensor.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|initguid.h|0
- F|sensorhelper.h|4|0|1CB750E700BBB00
- F|ser16550.h|4|0|1CB750E700BBB00
+ F|sensorhelper.h|4|0|1CFBC5FCA5C5F00
+ F|ser16550.h|4|0|1CFBC5FCA5C5F00
   I|ddkreg.h|0
   I|hw16550.h|0
- F|serdbg.h|4|0|1CB750E700BBB00
- F|serhw.h|4|0|1CB750E700BBB00
- F|serhwex.h|4|0|1CB750E700BBB00
- F|serial.def|80000|0|1CB750E700BBB00
- F|SH4ThunkBldr.h|4|0|1C40C2E2C088000
- F|sh4thunkbuilder.h|4|0|1C40C2E29A62600
- F|sipdev.h|4|0|1CB750E700BBB00
- F|slimg.h|4|0|1CB750E700BBB00
- F|slverify.h|4|0|1CB750E700BBB00
+ F|serdbg.h|4|0|1CFBC5FCA5C5F00
+ F|serhw.h|4|0|1CFBC5FCA5C5F00
+ F|serhwex.h|4|0|1CFBC5FCA5C5F00
+ F|serial.def|80000|0|1CFBC5FCA5C5F00
+ F|sid.h|4|0|1CFBC5FCA5C5F00
+ F|sipdev.h|4|0|1CFBC5FCA5C5F00
+ F|slimg.h|4|0|1CFBC5FCA5C5F00
+ F|slverify.h|4|0|1CFBC5FCA5C5F00
   I|mincrypt.h|0
- F|snmp.h|4|0|1CB750E700BBB00
+ F|snapboot.h|4|0|1CFBC5FCA5C5F00
+ F|snmp.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|pshpack4.h|0
   I|poppack.h|0
- F|snmpexts.h|4|0|1CB750E700BBB00
- F|sqmdatapoints.h|4|0|1CB750E700BBB00
- F|sqmpublic.h|4|0|1CB750E700BBB00
- F|srb.h|4|0|1CB750E700BBB00
- F|startui.h|4|0|1CB750E700BBB00
- F|statctlview.hpp|4|0|1CB750E700BBB00
- F|STATREG.CPP|0|0|1C40C2E29A62600
- F|STATREG.H|4|0|1C40C2E29A62600
- F|stdver.h|4|0|1C40C2E2C088000
- F|syspal.h|4|0|1CB750E700BBB00
- F|tab.h|4|0|1CB750E700BBB00
- F|tabview.hpp|4|0|1CB750E700BBB00
+ F|snmpexts.h|4|0|1CFBC5FCA5C5F00
+ F|sqmdatapoints.h|4|0|1CFBC5FCA5C5F00
+ F|sqmpublic.h|4|0|1CFBC5FCA5C5F00
+ F|srb.h|4|0|1CFBC5FCA5C5F00
+ F|startui.h|4|0|1CFBC5FCA5C5F00
+ F|statctlview.hpp|4|0|1CFBC5FCA5C5F00
+ F|syspal.h|4|0|1CFBC5FCA5C5F00
+ F|tab.h|4|0|1CFBC5FCA5C5F00
+ F|tabview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|tapicomn.h|4|0|1CB750E700BBB00
- F|tchddi.h|4|0|1CB750E700BBB00
+ F|tapicomn.h|4|0|1CFBC5FCA5C5F00
+ F|tchddi.h|4|0|1CFBC5FCA5C5F00
   I|winuser.h|0
- F|tchddsi.h|4|0|1CB750E700BBB00
+ F|tchddsi.h|4|0|1CFBC5FCA5C5F00
   I|tchddi.h|0
- F|tchlogger.h|4|0|1CB750E700BBB00
+ F|tchlogger.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|tchstream.def|80000|0|1CB750E700BBB00
- F|tchstream.h|4|0|1CB750E700BBB00
+ F|tchminipdd.h|4|0|1CFBC5FCA5C5F00
+ F|tchstream.def|80000|0|1CFBC5FCA5C5F00
+ F|tchstream.h|4|0|1CFBC5FCA5C5F00
   I|windev.h|0
   I|tchddi.h|0
- F|tchstreamddsi.h|4|0|1CB750E700BBB00
+ F|tchstreamddsi.h|4|0|1CFBC5FCA5C5F00
   I|tchstream.h|0
- F|termctrl.h|4|0|1CB750E700BBB00
- F|toolbarview.hpp|4|0|1CB750E700BBB00
+ F|termctrl.h|4|0|1CFBC5FCA5C5F00
+ F|toolbarview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|toolhelp.h|4|0|1CB750E700BBB00
+ F|toolhelp.h|4|0|1CFBC5FCA5C5F00
   I|tlhelp32.h|1
- F|touch.def|80000|0|1CB750E700BBB00
- F|touchgesture.h|4|0|1CB750E700BBB00
- F|touchperf.h|4|0|1CB750E700BBB00
+ F|touch.def|80000|0|1CFBC5FCA5C5F00
+ F|touchgesture.h|4|0|1CFBC5FCA5C5F00
+ F|touchperf.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|ceperf.h|0
- F|trackbarcommon.hpp|4|0|1CB750E700BBB00
- F|trackbarview.hpp|4|0|1CB750E700BBB00
+ F|trackbarcommon.hpp|4|0|1CFBC5FCA5C5F00
+ F|trackbarview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|traverse.h|4|0|1CB750E700BBB00
+ F|traverse.h|4|0|1CFBC5FCA5C5F00
   I|pehdr.h|0
   I|romldr.h|0
- F|truetypefontdriver.hpp|4|0|1CB750E700BBB00
- F|ttdrv.h|4|0|1CB750E700BBB00
- F|tzreg.h|4|0|1CB750E700BBB00
- F|uhcd.def|80000|0|1CB750E700BBB00
- F|uhcdddsi.h|4|0|1CB750E700BBB00
+ F|truetypefontdriver.hpp|4|0|1CFBC5FCA5C5F00
+ F|ttdrv.h|4|0|1CFBC5FCA5C5F00
+ F|tzreg.h|4|0|1CFBC5FCA5C5F00
+ F|uhcd.def|80000|0|1CFBC5FCA5C5F00
+ F|uhcdddsi.h|4|0|1CFBC5FCA5C5F00
   I|hcdddsi.h|0
- F|uiproxy.h|4|0|1CB750E700BBB00
- F|uldrui_mdd.h|4|0|1CB750E700BBB00
+ F|uiproxy.h|4|0|1CFBC5FCA5C5F00
+ F|uldrui_mdd.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|windev.h|0
- F|unimodem.h|4|0|1CB750E700BBB00
- F|updateapp.h|4|0|1CB750E700BBB00
+ F|unimodem.h|4|0|1CFBC5FCA5C5F00
+ F|updateapp.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|packageinfoapi.h|0
   I|storemgr.h|0
- F|updateappui.h|4|0|1CB750E700BBB00
+ F|updateappui.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|updatebinapi.h|4|0|1CB750E700BBB00
- F|updatemgr.h|4|0|1CB750E700BBB00
- F|updatevalidator.h|4|0|1CB750E700BBB00
+ F|updatebinapi.h|4|0|1CFBC5FCA5C5F00
+ F|updatemgr.h|4|0|1CFBC5FCA5C5F00
+ F|updatevalidator.h|4|0|1CFBC5FCA5C5F00
   I|PackageInfoAPI.h|1
- F|upderrors.h|4|0|1CB750E700BBB00
+ F|upderrors.h|4|0|1CFBC5FCA5C5F00
   I|winerror.h|0
- F|updownview.hpp|4|0|1CB750E700BBB00
+ F|updownview.hpp|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
- F|usbfn.h|4|0|1CB750E700BBB00
+ F|usbfn.h|4|0|1CFBC5FCA5C5F00
   I|usbfntypes.h|0
   I|usbfnioctl.h|0
   I|bldver.h|0
   I|Defbus.h|0
   I|celog.h|0
- F|usbfnioctl.h|4|0|1CB750E700BBB00
+ F|usbfnioctl.h|4|0|1CFBC5FCA5C5F00
   I|windows.h|0
   I|ceddk.h|0
- F|usbfntypes.h|4|0|1CB750E700BBB00
+ F|usbfntypes.h|4|0|1CFBC5FCA5C5F00
   I|usb200.h|0
   I|ceddk.h|0
   I|pshpack1.h|0
   I|poppack.h|0
- F|usbotg.hpp|4|0|1CB750E700BBB00
+ F|usbotg.hpp|4|0|1CFBC5FCA5C5F00
   I|ceotgbus.h|0
   I|DefBus.h|0
   I|CRegEdit.h|0
   I|cmthread.h|0
- F|usbotgxr.hpp|4|0|1CB750E700BBB00
+ F|usbotgxr.hpp|4|0|1CFBC5FCA5C5F00
   I|Cmthread.h|0
   I|Csync.h|0
   I|cregedit.h|0
- F|variant.h|4|0|1CB750E700BBB00
- F|vem.h|4|0|1CB750E700BBB00
- F|version.h|4|0|1C40C2E2C088000
- F|vmlayout.h|4|0|1CB750E700BBB00
- F|wavedbg.h|4|0|1CB750E700BBB00
- F|waveddsi.h|4|0|1CB750E700BBB00
- F|wavedev.def|80000|0|1CB750E700BBB00
- F|wavedev.h|4|0|1CB750E700BBB00
+ F|variant.h|4|0|1CFBC5FCA5C5F00
+ F|vem.h|4|0|1CFBC5FCA5C5F00
+ F|vmlayout.h|4|0|1CFBC5FCA5C5F00
+ F|wavedbg.h|4|0|1CFBC5FCA5C5F00
+ F|waveddsi.h|4|0|1CFBC5FCA5C5F00
+ F|wavedev.def|80000|0|1CFBC5FCA5C5F00
+ F|wavedev.h|4|0|1CFBC5FCA5C5F00
   I|windev.h|1
- F|wavertgctrl.h|4|0|1CB750E700BBB00
+ F|wavertgctrl.h|4|0|1CFBC5FCA5C5F00
   I|basetyps.h|0
- F|wavetopologyguids.h|4|0|1CB750E700BBB00
+ F|wavetopologyguids.h|4|0|1CFBC5FCA5C5F00
   I|basetyps.h|0
- F|wce.h|4|0|1C40C2E2C088000
- F|wcealt.h|4|0|1C40C2E2C088000
-  I|wininet.h|0
-  I|wcealt.inl|0
- F|wcealt.inl|4|0|1C40C2E2C088000
- F|wceatl.cpp|0|0|1C40C2E29A62600
- F|wceatl.h|4|0|1C40C2E29A62600
- F|wcebar.h|4|0|1C40C2E2C088000
- F|wcedb.h|4|0|1C40C2E2C088000
- F|wcedisp.h|4|0|1C40C2E29A62600
-  I|cefrtl.h|0
- F|wceres.h|4|0|1C40C2E2C088000
- F|wceres.rc|0|0|1C40C2E2C088000
-  I|afxres.h|1
- F|wcesock.h|4|0|1C40C2E2C088000
- F|wcommctl.h|4|0|1CB750E700BBB00
- F|winddi.h|4|0|1CB750E700BBB00
- F|winddif.h|4|0|1CB750E700BBB00
- F|windev.h|4|0|1CB750E700BBB00
+ F|wcommctl.h|4|0|1CFBC5FCA5C5F00
+ F|winddi.h|4|0|1CFBC5FCA5C5F00
+ F|winddif.h|4|0|1CFBC5FCA5C5F00
+ F|windev.h|4|0|1CFBC5FCA5C5F00
   I|winioctl.h|0
- F|winres.h|4|0|1C40C2E2C088000
-  I|wceres.h|1
- F|xamlruntimegraphics.h|4|0|1CB750E700BBB00
+ F|x86callconv.inc|4|0|1CFBC5FCA5C5F00
+ F|xamlruntimegraphics.h|4|0|1CFF943620A4900
   I|windows.h|0
- F|xmllite.h|4|0|1CB750E700BBB00
+ F|xmllite.h|4|0|1CFBC5FCA5C5F00
   I|rpc.h|1
   I|rpcndr.h|1
   I|unknwn.h|1
   I|objidl.h|1
   I|oaidl.h|1
 
-D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|acctid.h|4|0|1CB750E8B76C600
- F|afdfunc.h|4|0|1CB750E8B76C600
+D|C:\wince800\public\common\sdk\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|acctid.h|4|0|1CFBC5FF4158600
+ F|afdfunc.h|4|0|1CFBC5FF4158600
   I|ras.h|1
   I|tapi.h|1
   I|mafdfunc.h|0
- F|af_irda.h|4|0|1CB750E8B76C600
+ F|af_irda.h|4|0|1CFBC5FF4158600
   I|winsock.h|0
- F|algorithm|80000|0|1CB750E8B76C600
- F|alignment.hxx|4|0|1CB750E8B76C600
-  I|assert.h|0
- F|allocator.hxx|4|0|1CB750E8B76C600
+ F|allocator.hxx|4|0|1CFBC5FF4158600
   I|new|0
   I|assert.h|0
   I|singleton.hxx|1
   I|auto_xxx.hxx|1
   I|sync.hxx|1
- F|armintr.h|4|0|1CB750E8B76C600
-  I|arm_neon.h|1
- F|armmacros.s|0|0|1CB750E8B76C600
- F|arm_neon.h|4|0|1CB750E8B76C600
- F|assert.h|4|0|1CB750E8B76C600
-  I|crtdefs.h|0
-  I|windef.h|0
-  I|types.h|0
-  I|winbase.h|0
- F|authhlp.h|4|0|1CB750E8B76C600
+ F|armmacros.s|0|0|1CFBC5FF4158600
+ F|authhlp.h|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|sspi.h|0
   I|tchar.h|0
- F|auto_objbase.hxx|4|0|1CB750E8B76C600
-  I|auto_xxx.hxx|1
-  I|objbase.h|0
- F|auto_winbase.hxx|4|0|1CB750E8B76C600
-  I|auto_xxx.hxx|1
-  I|winbase.h|0
- F|auto_xxx.hxx|4|0|1CB750E8B76C600
+ F|auto_xxx.hxx|4|0|1CFBC5FF4158600
   I|assert.h|0
   I|algorithm|0
   I|allocator.hxx|1
   I|singleton.hxx|1
- F|avifmt.h|4|0|1CB750E8B76C600
- F|banned.h|4|0|1CB750E8B76C600
- F|basetsd.h|4|0|1CB750E8B76C600
- F|basetyps.h|4|0|1CB750E8B76C600
+ F|avifmt.h|4|0|1CFBC5FF4158600
+ F|banned.h|4|0|1CFBC5FF4158600
+ F|basetsd.h|4|0|1CFBC5FF4158600
+ F|basetyps.h|4|0|1CFBC5FF4158600
   I|initguid.h|0
- F|bcrypt.h|4|0|1CB750E8B76C600
- F|bitset|80000|0|1CB750E8B76C600
- F|bldver.h|4|0|1CBADB40FBDB300
- F|block_allocator.hxx|4|0|1CB750E8B76C600
-  I|svsutil.hxx|0
- F|bthapi.h|4|0|1CB750E8B76C600
+ F|bcrypt.h|4|0|1CFBC5FF4158600
+ F|bldver.h|4|0|1D05B37207AEC00
+ F|bthapi.h|4|0|1CFBC5FF4158600
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|bthservicehelper.h|4|0|1CB750E8B76C600
+ F|bthservicehelper.h|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|bt_api.h|0
- F|bt_api.h|4|0|1CB750E8B76C600
+ F|bt_api.h|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|ws2bth.h|0
   I|winioctl.h|0
- F|bt_sdp.h|4|0|1CB750E8B76C600
+ F|bt_sdp.h|4|0|1CFBC5FF4158600
   I|windows.h|0
- F|cassert|80000|0|1CB750E8B76C600
- F|ccpselect.h|4|0|1CB750E8B76C600
- F|cctype|80000|0|1CB750E8B76C600
- F|cedrv_guid.h|4|0|1CB750E8B76C600
- F|celog.h|4|0|1CB750E8B76C600
+ F|ccpselect.h|4|0|1CFBC5FF4158600
+ F|cedrv_guid.h|4|0|1CFBC5FF4158600
+ F|celog.h|4|0|1CFBC5FF4158600
   I|evntprov.h|0
   I|evntcons.h|0
   I|evntrace.h|0
- F|cerwlock.h|4|0|1CB750E8B76C600
+ F|cepolicy.h|4|0|1CFBC5FF4158600
   I|windows.h|0
- F|ce_hash.hxx|4|0|1CB750E8B76C600
-  I|hash.hxx|1
- F|ce_hashtable.h|4|0|1CB750E8B76C600
+ F|cerwlock.h|4|0|1CFBC5FF4158600
+  I|windows.h|0
+ F|cestl\|0|10|0
+ F|cetypes.h|4|0|1CFBC5FF4158600
+ F|ce_hashtable.h|4|0|1CFBC5FF4158600
   I|linklist.h|0
   I|winerror.h|0
- F|ce_hash_map.hxx|4|0|1CB750E8B76C600
-  I|hash_map.hxx|1
- F|ce_hash_set.hxx|4|0|1CB750E8B76C600
-  I|hash_set.hxx|1
- F|ce_list.hxx|4|0|1CB750E8B76C600
-  I|list.hxx|1
- F|ce_refcnt.h|4|0|1CB750E8B76C600
- F|ce_string.hxx|4|0|1CB750E8B76C600
-  I|string.hxx|1
- F|ce_vector.hxx|4|0|1CB750E8B76C600
-  I|vector.hxx|1
- F|cfloat|80000|0|1CB750E8B76C600
- F|cguid.h|4|0|1CB750E8B76C600
- F|changeinfo.h|4|0|1CB750E8B76C600
- F|ciso646|80000|0|1CB750E8B76C600
- F|climits|80000|0|1CB750E8B76C600
- F|clocale|80000|0|1CB750E8B76C600
- F|cmath|80000|0|1CB750E8B76C600
- F|cmcsp.h|4|0|1CB750E8B76C600
+ F|cguid.h|4|0|1CFBC5FF4158600
+ F|changeinfo.h|4|0|1CFBC5FF4158600
+ F|cmcsp.h|4|0|1CFBC5FF4158600
   I|CmNet.h|0
   I|RmNet.h|0
- F|cmcspmobilevpn.h|4|0|1CB750E8B76C600
+ F|cmcspmobilevpn.h|4|0|1CFBC5FF4158600
   I|CmNet.h|0
- F|cmcspras.h|4|0|1CB750E8B76C600
+ F|cmcspras.h|4|0|1CFBC5FF4158600
   I|CmNet.h|0
   I|ras.h|0
- F|cmcspshare.h|4|0|1CB750E8B76C600
+ F|cmcspshare.h|4|0|1CFBC5FF4158600
   I|CmNet.h|0
   I|RmNet.h|0
- F|cmcspwifi.h|4|0|1CB750E8B76C600
+ F|cmcspwifi.h|4|0|1CFBC5FF4158600
   I|CmNet.h|0
   I|l2cmn.h|0
- F|cmnet.h|4|0|1CB750E8B76C600
+ F|cmnet.h|4|0|1CFBC5FF4158600
   I|basetyps.h|0
   I|winsock2.h|0
   I|winnt.h|0
   I|windns.h|0
   I|ipexport.h|0
- F|cmnintrin.h|4|0|1CB750E8B76C600
+ F|cmnintrin.h|4|0|1CFBC5FF4158600
   I|crtdefs.h|0
- F|CodeAnalysis\|0|10|0
- F|coguid.h|4|0|1CB750E8B76C600
- F|combined_container.hxx|4|0|1CB750E8B76C600
- F|commctrl.h|4|0|1CB750E8B76C600
+ F|coguid.h|4|0|1CFBC5FF4158600
+ F|commctrl.h|4|0|1CFBC5FF4158600
   I|pshpack1.h|0
   I|prsht.h|0
   I|poppack.h|0
   I|pcommctr.h|0
- F|commdlg.h|4|0|1CB750E8B76C600
+ F|commdlg.h|4|0|1CFBC5FF4158600
   I|pshpack1.h|0
   I|mcommdlg.h|0
   I|poppack.h|0
- F|cred.h|4|0|1CB750E8B76C600
- F|creg.hxx|4|0|1CB750E8B76C600
+ F|concurrencysal.h|4|0|1CFBC5FF4158600
+ F|cred.h|4|0|1CFBC5FF4158600
+ F|creg.hxx|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|svsutil.hxx|1
- F|crtdefs.h|4|0|1CB750E8B76C600
-  I|sal.h|0
- F|csetjmp|80000|0|1CB750E8B76C600
- F|cstdarg|80000|0|1CB750E8B76C600
- F|cstddef|80000|0|1CB750E8B76C600
- F|cstdio|80000|0|1CB750E8B76C600
- F|cstdlib|80000|0|1CB750E8B76C600
- F|cstring|80000|0|1CB750E8B76C600
- F|ctkcommon.ver|0|0|1CB750E8B76C600
- F|ctype.h|4|0|1CB750E8B76C600
-  I|stdlib.h|1
- F|cwchar|80000|0|1CB750E8B76C600
- F|cwctype|80000|0|1CB750E8B76C600
- F|dataconversion.h|4|0|1CB750E8B76C600
- F|dbgapi.h|4|0|1CB750E8B76C600
+ F|crt\|0|10|0
+ F|ctkcommon.ver|0|0|1CFBC5FF4158600
+ F|dataconversion.h|4|0|1CFBC5FF4158600
+ F|dbgapi.h|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|wchar.h|0
   I|stdlib.h|0
   I|stdarg.h|0
- F|dbt.h|4|0|1CB750E8B76C600
- F|dccole.h|4|0|1CB750E8B76C600
- F|ddraw.h|4|0|1CB750E8B76C600
+ F|dbt.h|4|0|1CFBC5FF4158600
+ F|dccole.h|4|0|1CFBC5FF4158600
+ F|ddraw.h|4|0|1CFBC5FF4158600
   I|windows.h|0
   I|ddrawguids.h|0
- F|ddrawguids.h|4|0|1CB750E8B76C600
- F|deque|80000|0|1CB750E8B76C600
- F|devmgmt.h|4|0|1CB750E8B76C600
- F|dot1x.h|4|0|1CB750E8B76C600
+ F|ddrawguids.h|4|0|1CFBC5FF4158600
+ F|devmgmt.h|4|0|1CFBC5FF4158600
+ F|devpkey.h|4|0|1CFBC5FF546B300
+  I|devpropdef.h|0
+ F|devpropdef.h|4|0|1CFBC5FF546B300
+  I|guiddef.h|0
+ F|dlgs.h|4|0|1CFBC5FF546B300
+ F|dot1x.h|4|0|1CFBC5FF546B300
   I|l2cmn.h|0
- F|dsgetdc.h|4|0|1CB750E8B76C600
+ F|dsgetdc.h|4|0|1CFBC5FF546B300
   I|lmcons.h|0
- F|dsound.h|4|0|1CB750E8B76C600
+ F|dsound.h|4|0|1CFBC5FF546B300
   I|objbase.h|0
   I|pshpack1.h|1
   I|poppack.h|1
- F|dvp.h|4|0|1CB750E8B76C600
+ F|dvp.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|ddraw.h|0
- F|eaphosterror.h|4|0|1CB750E8B76C600
- F|eaphostpeerapis.h|4|0|1CB750E8B76C600
+ F|eaphosterror.h|4|0|1CFBC5FF546B300
+ F|eaphostpeerapis.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -2635,282 +2297,242 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|unknwn.h|1
   I|EapTypes.h|1
   I|EapHostPeerTypes.h|1
- F|eaphostpeerconfigapis.h|4|0|1CB750E8B76C600
+ F|eaphostpeerconfigapis.h|4|0|1CFBC5FF546B300
   I|msxml6.h|1
   I|objbase.h|1
   I|msxml2.h|1
   I|EapTypes.h|1
- F|eaphostpeertypes.h|4|0|1CB750E8B76C600
- F|eapmethodpeerapis.h|4|0|1CB750E8B76C600
+ F|eaphostpeertypes.h|4|0|1CFBC5FF546B300
+ F|eapmethodpeerapis.h|4|0|1CFBC5FF546B300
   I|msxml6.h|1
   I|objbase.h|1
   I|msxml2.h|1
   I|EapMethodTypes.h|1
- F|eapmethodtypes.h|4|0|1CB750E8B76C600
- F|eappapis.h|4|0|1CB750E8B76C600
- F|eaptypes.h|4|0|1CB750E8B76C600
+ F|eapmethodtypes.h|4|0|1CFBC5FF546B300
+ F|eappapis.h|4|0|1CFBC5FF546B300
+ F|eaptypes.h|4|0|1CFBC5FF546B300
   I|guiddef.h|0
  F|EGL\|0|10|0
- F|emmintrin.h|4|0|1CB750E8B76C600
-  I|crtdefs.h|0
-  I|xmmintrin.h|0
- F|errno.h|4|0|1CB750E8B76C600
-  I|crtdefs.h|0
- F|errorrep.h|4|0|1CB750E8B76C600
- F|evntcons.h|4|0|1CB750E8B76C600
+ F|errorrep.h|4|0|1CFBC5FF546B300
+ F|evntcons.h|4|0|1CFBC5FF546B300
   I|wmistr.h|0
   I|evntrace.h|0
   I|evntprov.h|0
- F|evntprov.h|4|0|1CB750E8B76C600
- F|evntrace.h|4|0|1CB750E8B76C600
+ F|evntprov.h|4|0|1CFBC5FF546B300
+ F|evntrace.h|4|0|1CFBC5FF546B300
   I|guiddef.h|0
- F|exception|80000|0|1CB750E8B76C600
- F|excpt.h|4|0|1CB750E8CA7F300
-  I|crtdefs.h|0
- F|float.h|4|0|1CB750E8CA7F300
-  I|stdlib.h|0
-  I|crtdefs.h|0
- F|fsdmgr.h|4|0|1CB750E8CA7F300
+ F|fsdmgr.h|4|0|1CFBC5FF546B300
   I|specstrings.h|0
   I|storemgr.h|0
+  I|sys/types.h|0
   I|extfile.h|0
   I|diskio.h|0
   I|lockmgr.h|0
   I|errorrep.h|0
- F|fsioctl.h|4|0|1CB750E8CA7F300
+ F|fsioctl.h|4|0|1CFBC5FF546B300
   I|winioctl.h|0
- F|functional|80000|0|1CB750E8CA7F300
- F|fwpmtypes.h|4|0|1CBADCFA481DA00
+ F|fwpmtypes.h|4|0|1D05B4365A51B00
   I|rpc.h|1
   I|rpcndr.h|1
   I|fwptypes.h|1
   I|iketypes.h|1
   I|ipsectypes.h|1
- F|fwpmtypes.idl|0|0|1CB750DDFCD7600
+ F|fwpmtypes.idl|0|0|1CFBC5F9E40DE00
   I|fwptypes.idl|1
   I|iketypes.idl|1
   I|ipsectypes.idl|1
   I|wfpalign.h|1
- F|fwpmu.h|4|0|1CB750E8CA7F300
+ F|fwpmu.h|4|0|1CFBC5FF546B300
   I|fwpmtypes.h|1
- F|fwptypes.h|4|0|1CBADCFA5B30700
+ F|fwptypes.h|4|0|1D05B4365A51B00
   I|rpc.h|1
   I|rpcndr.h|1
   I|wtypes.h|1
-  I|types.h|1
+  I|cetypes.h|1
   I|wfpalign.h|1
- F|fwptypes.idl|0|0|1CB750DDFCD7600
+ F|fwptypes.idl|0|0|1CFBC5F9E40DE00
   I|wtypes.idl|1
-  I|types.h|1
+  I|cetypes.h|1
   I|wfpalign.h|1
- F|getdeviceuniqueid.h|4|0|1CB750E8CA7F300
+ F|getdeviceuniqueid.h|4|0|1CFBC5FF546B300
  F|GLES\|0|10|0
  F|GLES2\|0|10|0
- F|gpsapi.h|4|0|1CB750E8CA7F300
- F|guiddef.h|4|0|1CB750E8CA7F300
+ F|gpsapi.h|4|0|1CFBC5FF546B300
+ F|guiddef.h|4|0|1CFBC5FF546B300
   I|initguid.h|0
   I|string.h|0
- F|handle_map.hxx|4|0|1CB750E8CA7F300
+ F|handle_map.hxx|4|0|1CFBC5FF546B300
   I|hash_map.hxx|0
   I|sync.hxx|0
- F|hash.hxx|4|0|1CB750E8CA7F300
+ F|hash.hxx|4|0|1CFBC5FF546B300
   I|assert.h|0
   I|allocator.hxx|1
   I|list.hxx|1
   I|vector.hxx|1
   I|string.hxx|1
- F|hash_map.hxx|4|0|1CB750E8CA7F300
+ F|hash_set.hxx|4|0|1CFBC5FF546B300
   I|hash.hxx|1
- F|hash_set.hxx|4|0|1CB750E8CA7F300
-  I|hash.hxx|1
- F|icm.h|4|0|1CB750E8CA7F300
- F|icmpapi.h|4|0|1CB750E8CA7F300
+ F|icm.h|4|0|1CFBC5FF546B300
+ F|icmpapi.h|4|0|1CFBC5FF546B300
   I|ipexport.h|1
- F|ifdef.h|4|0|1CB750E8CA7F300
+ F|ifdef.h|4|0|1CFBC5FF546B300
   I|ipifcons.h|0
- F|ifmib.h|4|0|1CB750E8CA7F300
+ F|ifmib.h|4|0|1CFBC5FF546B300
   I|ifdef.h|0
- F|iketypes.h|4|0|1CBADCFA6E43400
+ F|iketypes.h|4|0|1D05B4366D64800
   I|rpc.h|1
   I|rpcndr.h|1
   I|fwptypes.h|1
- F|iketypes.idl|0|0|1CB750DDFCD7600
+ F|iketypes.idl|0|0|1CFBC5F9E40DE00
   I|winerror.h|1
   I|fwptypes.idl|1
   I|wfpalign.h|1
- F|imm.h|4|0|1CB750E8CA7F300
+ F|imm.h|4|0|1CFBC5FF546B300
   I|pimm.h|0
- F|in6addr.h|4|0|1CB750E8CA7F300
- F|inaddr.h|4|0|1CB750E8CA7F300
- F|initguid.h|4|0|1CB750E8CA7F300
- F|inputscope.h|4|0|1CB750E8CA7F300
+ F|in6addr.h|4|0|1CFBC5FF546B300
+ F|inaddr.h|4|0|1CFBC5FF546B300
+ F|initguid.h|4|0|1CFBC5FF546B300
+ F|inputscope.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|intsafe.h|4|0|1CB750E8CA7F300
+ F|interactions.h|4|0|1CFBC5FAC8EFA00
+  I|XamlRuntime.h|1
+  I|XRPtr.h|1
+  I|XRCustomEvent.h|1
+ F|intsafe.h|4|0|1CFBC5FF546B300
   I|specstrings.h|0
- F|ipexport.h|4|0|1CB750E8CA7F300
+ F|ipexport.h|4|0|1CFBC5FF546B300
   I|in6addr.h|0
   I|inaddr.h|0
   I|packon.h|0
   I|packoff.h|0
- F|iphlpapi.h|4|0|1CB750E8CA7F300
+ F|iphlpapi.h|4|0|1CFBC5FF546B300
   I|iprtrmib.h|0
   I|ipexport.h|0
   I|iptypes.h|0
   I|tcpestats.h|0
   I|netioapi.h|0
- F|ipifcons.h|4|0|1CB750E8CA7F300
- F|iplayaudio.h|4|0|1CB750E8CA7F300
+ F|ipifcons.h|4|0|1CFBC5FF546B300
+ F|iplayaudio.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
   I|objidl.h|1
- F|iplayaudio.idl|0|0|1CB750E8CA7F300
+ F|iplayaudio.idl|0|0|1CFBC5FF546B300
   I|unknwn.idl|1
   I|objidl.idl|1
- F|ipmib.h|4|0|1CB750E8CA7F300
+ F|ipmib.h|4|0|1CFBC5FF546B300
   I|ifmib.h|0
   I|nldef.h|0
- F|iprtrmib.h|4|0|1CB750E8CA7F300
+ F|iprtrmib.h|4|0|1CFBC5FF546B300
   I|mprapi.h|0
   I|ipifcons.h|0
   I|ipmib.h|0
   I|tcpmib.h|0
   I|udpmib.h|0
- F|ipsectypes.h|4|0|1CBADCFA6E43400
+ F|ipsectypes.h|4|0|1D05B4366D64800
   I|rpc.h|1
   I|rpcndr.h|1
   I|fwptypes.h|1
   I|iketypes.h|1
- F|ipsectypes.idl|0|0|1CB750DDFCD7600
+ F|ipsectypes.idl|0|0|1CFBC5F9E40DE00
   I|fwptypes.idl|1
   I|iketypes.idl|1
   I|wfpalign.h|1
- F|iptypes.h|4|0|1CB750E8CA7F300
+ F|iptypes.h|4|0|1CFBC5FF546B300
   I|time.h|0
   I|ifdef.h|0
   I|nldef.h|0
- F|iso646.h|4|0|1CB750E8CA7F300
- F|iterator|80000|0|1CB750E8CA7F300
- F|kernsdk.h|4|0|1CB750E8CA7F300
- F|keybd.h|4|0|1CB750E8CA7F300
- F|kfuncs.h|4|0|1CB750E8CA7F300
+ F|kernsdk.h|4|0|1CFBC5FF546B300
+ F|keybd.h|4|0|1CFBC5FF546B300
+ F|kfuncs.h|4|0|1CFBC5FF546B300
   I|psyscall.h|0
   I|pkfuncs.h|0
   I|mkfuncs.h|0
- F|khronos_types.h|4|0|1CB750E8CA7F300
- F|kxarm.h|4|0|1CB750E8CA7F300
- F|kxmips.h|4|0|1CB750E8CA7F300
- F|kxshx.h|4|0|1CB750E8CA7F300
- F|kxx86.inc|4|0|1CB750E8CA7F300
- F|l2cmn.h|4|0|1CB750E8CA7F300
- F|lap.h|4|0|1CB750E8CA7F300
+ F|khronos_types.h|4|0|1CFBC5FF546B300
+ F|ks386.inc|4|0|1CFBC5FF546B300
+ F|kxarm.h|4|0|1CFBC5FF546B300
+ F|kxarmunw.h|4|0|1CFBC5FF546B300
+ F|kxx86.inc|4|0|1CFBC5FF546B300
+ F|l2cmn.h|4|0|1CFBC5FF546B300
+ F|lap.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|lass.h|0
- F|lass.h|4|0|1CB750E8CA7F300
+ F|lass.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|lasscommonerrors.h|4|0|1CB750E8CA7F300
+ F|lasscommonerrors.h|4|0|1CFBC5FF546B300
   I|winerror.h|0
- F|lass_ae.h|4|0|1CB750E8CA7F300
- F|libdefs|80000|0|1CB750E8CA7F300
- F|limits|80000|0|1CB750E8CA7F300
- F|limits.h|4|0|1CB750E8CA7F300
-  I|crtdefs.h|0
-  I|stdlib.h|1
- F|linklist.h|4|0|1CB750E8CA7F300
- F|list|80000|0|1CB750E8CA7F300
- F|list.hxx|4|0|1CB750E8CA7F300
+ F|lass_ae.h|4|0|1CFBC5FF546B300
+ F|linklist.h|4|0|1CFBC5FF546B300
+ F|list.hxx|4|0|1CFBC5FF546B300
   I|stddef.h|0
   I|allocator.hxx|1
   I|assert.h|0
   I|algorithm|0
   I|iterator|0
- F|lmcons.h|4|0|1CB750E8CA7F300
- F|lmerr.h|4|0|1CB750E8CA7F300
+ F|lmcons.h|4|0|1CFBC5FF546B300
+ F|lmerr.h|4|0|1CFBC5FF546B300
   I|winerror.h|0
- F|localauthsubsystem.h|4|0|1CB750E8CA7F300
+ F|localauthsubsystem.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|lasscommonerrors.h|0
- F|locale.h|4|0|1CB750E8CA7F300
-  I|crtdefs.h|0
- F|lockmgr.h|4|0|1CB750E8CA7F300
+ F|lockmgr.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|lockmgrtypes.h|1
- F|lockmgrhelp.h|4|0|1CB750E8CA7F300
+ F|lockmgrhelp.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|lockmgrtypes.h|0
- F|lockmgrtypes.h|4|0|1CB750E8CA7F300
+ F|lockmgrtypes.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|malloc.h|4|0|1CB750E8CA7F300
-  I|stdlib.h|0
-  I|crtdefs.h|0
- F|map|80000|0|1CB750E8CA7F300
- F|math.h|4|0|1CB750E8CA7F300
-  I|stdlib.h|1
- F|memory|80000|0|1CB750E8CA7F300
- F|memory.h|4|0|1CB750E8CA7F300
-  I|stdlib.h|1
- F|mm3dnow.h|4|0|1CB750E8CA7F300
-  I|crtdefs.h|0
-  I|mmintrin.h|0
-  I|xmmintrin.h|0
- F|mmintrin.h|4|0|1CB750E8CA7F300
-  I|crtdefs.h|0
- F|mmreg.h|4|0|1CB750E8CA7F300
+ F|mmreg.h|4|0|1CFBC5FF546B300
   I|pshpack1.h|1
   I|poppack.h|1
- F|mmsystem.h|4|0|1CB750E8CA7F300
+ F|mmsystem.h|4|0|1CFBC5FF546B300
   I|pshpack1.h|1
   I|pshpack4.h|1
   I|poppack.h|1
- F|mprapi.h|4|0|1CB750E8CA7F300
+ F|mprapi.h|4|0|1CFBC5FF546B300
   I|lmcons.h|0
   I|ras.h|0
   I|in6addr.h|0
- F|msacm.h|4|0|1CB750E8CA7F300
- F|msacmdlg.h|4|0|1CB750E8CA7F300
- F|msgqueue.h|4|0|1CB750E8CA7F300
- F|mstcpip.h|4|0|1CB750E8CA7F300
+ F|msgqueue.h|4|0|1CFBC5FF546B300
+ F|mstcpip.h|4|0|1CFBC5FF546B300
   I|nldef.h|0
- F|mswsock.h|4|0|1CB750E8CA7F300
+ F|mswsock.h|4|0|1CFBC5FF546B300
   I|wsamsg.h|0
- F|ncrypt.h|4|0|1CB750E8CA7F300
+ F|ncrypt.h|4|0|1CFBC5FF546B300
   I|bcrypt.h|0
- F|netioapi.h|4|0|1CB750E8CA7F300
+ F|netioapi.h|4|0|1CFBC5FF546B300
   I|ws2def.h|0
   I|ws2ipdef.h|0
   I|ntddk.h|0
   I|ifdef.h|0
   I|nldef.h|0
   I|ntddndis.h|0
- F|new|80000|0|1CB750E8CA7F300
- F|new.h|4|0|1CB750E8CA7F300
-  I|new|0
-  I|crtdefs.h|1
- F|nldef.h|4|0|1CB750E8CA7F300
- F|nled.h|4|0|1CB750E8CA7F300
- F|notifext.hxx|4|0|1CB750E8CA7F300
- F|notify.h|4|0|1CB750E8CA7F300
+ F|nldef.h|4|0|1CFBC5FF546B300
+ F|nled.h|4|0|1CFBC5FF546B300
+ F|notifext.hxx|4|0|1CFBC5FF546B300
+ F|notify.h|4|0|1CFBC5FF546B300
   I|pnotify.h|0
- F|ntddndis.h|4|0|1CB750E8CA7F300
+ F|no_sal2.h|4|0|1CFBC5FF546B300
+ F|ntddndis.h|4|0|1CFBC5FF546B300
   I|ifdef.h|0
   I|devpkey.h|0
   I|pciprop.h|0
   I|guiddef.h|0
   I|windot11.h|0
- F|ntldap.h|4|0|1CB750E8CA7F300
- F|ntstatus.h|4|0|1CB750E8CA7F300
- F|numeric|80000|0|1CB750E8CA7F300
- F|oaidl.h|4|0|1CB750E8CA7F300
+ F|ntldap.h|4|0|1CFBC5FF546B300
+ F|ntstatus.h|4|0|1CFBC5FF546B300
+ F|oaidl.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
- F|oaidl.idl|0|0|1CB750E8CA7F300
+ F|oaidl.idl|0|0|1CFBC5FF546B300
   I|objidl.idl|1
- F|objbase.h|4|0|1CB750E8CA7F300
+ F|objbase.h|4|0|1CFBC5FF546B300
   I|rpc.h|0
   I|rpcndr.h|0
   I|pshpack8.h|0
@@ -2921,59 +2543,59 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|guiddef.h|0
   I|cguid.h|0
   I|poppack.h|0
- F|objerror.h|4|0|1CB750E8CA7F300
+ F|objerror.h|4|0|1CFBC5FF546B300
   I|winerror.h|0
- F|objidl.h|4|0|1CB750E8CA7F300
+ F|objidl.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
- F|objidl.idl|0|0|1CB750E8CA7F300
+ F|objidl.idl|0|0|1CFBC5FF546B300
   I|unknwn.idl|1
   I|wtypes.idl|1
- F|ocidl.h|4|0|1CB750E8CA7F300
+ F|ocidl.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oleidl.h|1
   I|oaidl.h|1
- F|ocidl.idl|0|0|1CB750E8CA7F300
+ F|ocidl.idl|0|0|1CFBC5FF546B300
   I|oleidl.idl|1
   I|oaidl.idl|1
- F|ole2.h|4|0|1CB750E8CA7F300
+ F|ole2.h|4|0|1CFBC5FF546B300
   I|pshpack8.h|0
   I|winerror.h|0
   I|objbase.h|0
   I|oleauto.h|0
   I|oleidl.h|0
   I|poppack.h|0
- F|oleauto.h|4|0|1CB750E8CA7F300
+ F|oleauto.h|4|0|1CFBC5FF546B300
   I|pshpack8.h|0
   I|oaidl.h|0
   I|poppack.h|0
- F|olectl.h|4|0|1CB750E8CA7F300
+ F|olectl.h|4|0|1CFBC5FF546B300
   I|macocidl.h|0
   I|ocidl.h|0
- F|oleidl.h|4|0|1CB750E8CA7F300
+ F|oleidl.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
- F|oleidl.idl|0|0|1CB750E8CA7F300
+ F|oleidl.idl|0|0|1CFBC5FF546B300
   I|objidl.idl|1
- F|omp.h|4|0|1CB750E8CA7F300
- F|optional.hxx|4|0|1CB750E8CA7F300
+ F|optional.hxx|4|0|1CFBC5FF546B300
   I|cassert|0
   I|algorithm|0
   I|detail/aligned_storage.hxx|0
- F|osassemblyversion.cs|0|0|1CBADB412200D00
- F|packageversion.h|4|0|1CB750E8CA7F300
- F|packoff.h|4|0|1CB750E8CA7F300
- F|packon.h|4|0|1CB750E8CA7F300
- F|pc_marshaler.hxx|4|0|1CB750E8CA7F300
+ F|osassemblyversion.cs|0|0|1D05B37207AEC00
+ F|packageversion.h|4|0|1CFBC5FF546B300
+ F|packoff.h|4|0|1CFBC5FF546B300
+ F|packon.h|4|0|1CFBC5FF546B300
+ F|pciprop.h|4|0|1CFBC5FF546B300
+ F|pc_marshaler.hxx|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|auto_xxx.hxx|1
   I|hash_map.hxx|1
@@ -2983,26 +2605,26 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|stream.hxx|1
   I|psl_marshaler.hxx|1
   I|pc_generated.h|0
- F|pm.h|4|0|1CB750E8CA7F300
+ F|pm.h|4|0|1CFBC5FF546B300
   I|mpm.h|0
- F|pmfunc.h|4|0|1CB750E8CA7F300
+ F|pmfunc.h|4|0|1CFBC5FF546B300
   I|windns.h|0
   I|ras.h|1
   I|tapi.h|1
   I|mPmFunc.h|0
- F|pmpolicy.h|4|0|1CB750E8CA7F300
+ F|pmpolicy.h|4|0|1CFBC5FF546B300
   I|msgqueue.h|0
- F|pnp.h|4|0|1CB750E8CA7F300
- F|poppack.h|4|0|1CB750E8CA7F300
- F|proxydbs.h|4|0|1CB750E8CA7F300
- F|prsht.h|4|0|1CB750E8CA7F300
+ F|pnp.h|4|0|1CFBC5FF546B300
+ F|poppack.h|4|0|1CFBC5FF546B300
+ F|proxydbs.h|4|0|1CFBC5FF546B300
+ F|prsht.h|4|0|1CFBC5FF546B300
   I|pprsht.h|0
- F|psapi.h|4|0|1CB750E8CA7F300
- F|pshpack1.h|4|0|1CB750E8CA7F300
- F|pshpack2.h|4|0|1CB750E8CA7F300
- F|pshpack4.h|4|0|1CB750E8CA7F300
- F|pshpack8.h|4|0|1CB750E8CA7F300
- F|psl_marshaler.hxx|4|0|1CB750E8CA7F300
+ F|psapi.h|4|0|1CFBC5FF546B300
+ F|pshpack1.h|4|0|1CFBC5FF546B300
+ F|pshpack2.h|4|0|1CFBC5FF546B300
+ F|pshpack4.h|4|0|1CFBC5FF546B300
+ F|pshpack8.h|4|0|1CFBC5FF546B300
+ F|psl_marshaler.hxx|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|auto_xxx.hxx|1
   I|hash_map.hxx|1
@@ -3010,33 +2632,35 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|sync.hxx|1
   I|string.hxx|1
   I|marshal.hpp|1
- F|qos.h|4|0|1CB750E8CA7F300
- F|queue|80000|0|1CB750E8CA7F300
- F|ras.h|4|0|1CB750E8CA7F300
+ F|qos.h|4|0|1CFBC5FF546B300
+ F|ras.h|4|0|1CFBC5FF546B300
   I|lmcons.h|0
   I|tapi.h|0
   I|pshpack4.h|1
   I|poppack.h|1
   I|pras.h|0
- F|raseapif.h|4|0|1CB750E8CA7F300
- F|raserror.h|4|0|1CB750E8CA7F300
- F|rcdef.h|4|0|1CB750E8CA7F300
+ F|raseapif.h|4|0|1CFBC5FF546B300
+ F|raserror.h|4|0|1CFBC5FF546B300
+ F|rcdef.h|4|0|1CFBC5FF546B300
   I|commctrl.h|0
- F|recog.h|4|0|1CB750E8CA7F300
+ F|recog.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|regext.h|4|0|1CB750E8CA7F300
+ F|regext.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|result.hxx|4|0|1CB750E8CA7F300
+ F|resdefce.h|4|0|1CFBC5FF546B300
+  I|commctrl.h|0
+  I|winuser.h|1
+ F|result.hxx|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|cassert|0
   I|algorithm|0
   I|detail/aligned_storage.hxx|0
- F|rmnet.h|4|0|1CB750E8CA7F300
+ F|rmnet.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|rmrsp.h|4|0|1CB750E8CA7F300
+ F|rmrsp.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|RmNet.h|0
- F|rpc.h|4|0|1CB750E8CA7F300
+ F|rpc.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|pshpack2.h|0
   I|basetsd.h|0
@@ -3051,26 +2675,26 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|excpt.h|0
   I|winerror.h|0
   I|rpcasync.h|0
- F|rpcasync.h|4|0|1CB750E8CA7F300
+ F|rpcasync.h|4|0|1CFBC5FF546B300
   I|pshpack8.h|0
   I|ntddk.h|0
   I|windef.h|0
   I|poppack.h|0
- F|rpcdce.h|4|0|1CB750E8DD92000
+ F|rpcdce.h|4|0|1CFBC5FF546B300
   I|specstrings.h|0
   I|guiddef.h|0
   I|rpcdcep.h|0
- F|rpcdcep.h|4|0|1CB750E8DD92000
- F|rpcndr.h|4|0|1CB750E8DD92000
+ F|rpcdcep.h|4|0|1CFBC5FF546B300
+ F|rpcndr.h|4|0|1CFBC5FF546B300
   I|pshpack8.h|0
   I|basetsd.h|0
   I|rpcnsip.h|0
   I|rpcsal.h|0
   I|poppack.h|0
- F|rpcnsi.h|4|0|1CB750E8DD92000
- F|rpcnsip.h|4|0|1CB750E8DD92000
- F|rpcnterr.h|4|0|1CB750E8DD92000
- F|rpcproxy.h|4|0|1CB750E8DD92000
+ F|rpcnsi.h|4|0|1CFBC5FF546B300
+ F|rpcnsip.h|4|0|1CFBC5FF546B300
+ F|rpcnterr.h|4|0|1CFBC5FF546B300
+ F|rpcproxy.h|4|0|1CFBC5FF546B300
   I|pshpack8.h|0
   I|basetsd.h|0
   I|windows.h|0
@@ -3080,195 +2704,160 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|string.h|0
   I|memory.h|0
   I|poppack.h|0
- F|rpcsal.h|4|0|1CB750E8DD92000
+ F|rpcsal.h|4|0|1CFBC5FF546B300
   I|specstrings.h|0
- F|rpcwdt.h|4|0|1CB750E8DD92000
- F|rpcwince.h|4|0|1CB750E8DD92000
- F|safeint.hxx|4|0|1CB750E8DD92000
+ F|rpcwdt.h|4|0|1CFBC5FF546B300
+ F|rpcwince.h|4|0|1CFBC5FF546B300
+ F|safeint.hxx|4|0|1CFBC5FF546B300
   I|assert.h|0
- F|safe_array.hxx|4|0|1CB750E8DD92000
- F|sal.h|4|0|1CB750E8DD92000
+ F|sal.h|4|0|1CFBC5FF546B300
   I|codeanalysis\sourceannotations.h|1
- F|schannel.h|4|0|1CB750E8DD92000
+  I|ConcurrencySal.h|0
+ F|schannel.h|4|0|1CFBC5FF546B300
   I|wincrypt.h|0
- F|schnlsp.h|4|0|1CB750E8DD92000
+ F|schnlsp.h|4|0|1CFBC5FF546B300
   I|wincrypt.h|0
   I|sslsock.h|0
- F|sddl.h|4|0|1CB750E8DD92000
- F|sdkddkver.h|4|0|1CB750E8DD92000
- F|security.h|4|0|1CB750E8DD92000
+ F|sddl.h|4|0|1CFBC5FF546B300
+ F|sdkddkver.h|4|0|1CFBC5FF546B300
+ F|security.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|sspi.h|0
- F|service.h|4|0|1CB750E8DD92000
+ F|service.h|4|0|1CFBC5FF546B300
   I|winioctl.h|0
   I|mwinbase.h|0
- F|set|80000|0|1CB750E8DD92000
- F|setjmp.h|4|0|1CB750E8DD92000
-  I|stdlib.h|1
- F|shellapi.h|4|0|1CB750E8DD92000
+ F|shellapi.h|4|0|1CFBC5FF546B300
   I|pshpack1.h|0
-  I|mshellap.h|0
   I|poppack.h|0
- F|shellsdk.h|4|0|1CB750E8DD92000
+ F|shellsdk.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|sipapi.h|0
   I|prsht.h|0
   I|shsdkstc.h|0
- F|shintr.h|4|0|1CB750E8DD92000
- F|shsdkstc.h|4|0|1CB750E8DD92000
+ F|shintr.h|4|0|1CFBC5FF546B300
+ F|shsdkstc.h|4|0|1CFBC5FF546B300
   I|changeinfo.h|0
   I|wtypes.h|0
- F|singleton.hxx|4|0|1CB750E8DD92000
+ F|singleton.hxx|4|0|1CFBC5FF546B300
   I|assert.h|0
   I|new|0
   I|sync.hxx|1
- F|sip.h|4|0|1CB750E8DD92000
+ F|sip.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
   I|sipapi.h|1
- F|sipapi.h|4|0|1CB750E8DD92000
- F|specstrings.h|4|0|1CB750E8DD92000
+ F|sipapi.h|4|0|1CFBC5FF546B300
+ F|specstrings.h|4|0|1CFBC5FF546B300
   I|sal.h|0
-  I|specstrings_adt.h|0
   I|specstrings_strict.h|0
- F|specstrings_adt.h|4|0|1CB750E8DD92000
- F|specstrings_strict.h|4|0|1CB750E8DD92000
+  I|no_sal2.h|0
+ F|specstrings_adt.h|4|0|1CFBC5FF546B300
+ F|specstrings_strict.h|4|0|1CFBC5FF546B300
   I|specstrings_undef.h|0
- F|specstrings_undef.h|4|0|1CB750E8DD92000
- F|splapi.h|4|0|1CB750E8DD92000
- F|spseal.h|4|0|1CB750E8DD92000
- F|sqmclient.h|4|0|1CB750E8DD92000
+ F|specstrings_undef.h|4|0|1CFBC5FF546B300
+ F|splapi.h|4|0|1CFBC5FF546B300
+ F|spseal.h|4|0|1CFBC5FF546B300
+ F|sqmclient.h|4|0|1CFBC5FF546B300
   I|basetsd.h|0
- F|sslsock.h|4|0|1CB750E8DD92000
- F|sspi.h|4|0|1CB750E8DD92000
+ F|sslsock.h|4|0|1CFBC5FF546B300
+ F|sspi.h|4|0|1CFBC5FF546B300
   I|sdkddkver.h|0
   I|wdm.h|0
- F|stack|80000|0|1CB750E8DD92000
- F|static_assert.hxx|4|0|1CB750E8DD92000
- F|stdarg.h|4|0|1CB750E8DD92000
-  I|stdlib.h|1
- F|stddef.h|4|0|1CB750E8DD92000
-  I|stdlib.h|1
- F|stdexcept|80000|0|1CB750E8DD92000
- F|stdio.h|4|0|1CB750E8DD92000
-  I|stdlib.h|0
-  I|crtdefs.h|0
- F|stdlib.h|4|0|1CB750E8DD92000
-  I|crtdefs.h|1
- F|storemgr.h|4|0|1CB750E8DD92000
+ F|storemgr.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|mstoremgr.h|0
- F|stream.hxx|4|0|1CB750E8DD92000
-  I|windows.h|0
-  I|auto_xxx.hxx|0
-  I|alignment.hxx|0
- F|string|80000|0|1CB750E8DD92000
- F|string.h|4|0|1CB750E8DD92000
-  I|stdlib.h|0
-  I|crtdefs.h|0
- F|string.hxx|4|0|1CB750E8DD92000
+ F|string.hxx|4|0|1CFBC5FF546B300
   I|assert.h|0
   I|allocator.hxx|1
- F|strsafe.h|4|0|1CB750E8DD92000
+ F|strsafe.h|4|0|1CFBC5FF546B300
   I|stdio.h|0
   I|string.h|0
   I|stdarg.h|0
   I|specstrings.h|0
- F|svcguid.h|4|0|1CB750E8DD92000
+ F|svcguid.h|4|0|1CFBC5FF546B300
   I|basetyps.h|0
- F|svsutil.hxx|4|0|1CB750E8DD92000
+ F|svsutil.hxx|4|0|1CFBC5FF546B300
   I|wtypes.h|0
   I|tchar.h|0
   I|strsafe.h|0
   I|wchar.h|0
   I|stddef.h|0
+  I|winbase.h|0
   I|iphlpapi.h|0
- F|sync.hxx|4|0|1CB750E8DD92000
+ F|sync.hxx|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|assert.h|0
   I|auto_xxx.hxx|1
- F|tapi.h|4|0|1CB750E8DD92000
+ F|tapi.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|ptapi.h|0
   I|mtapi.h|0
- F|tchar.h|4|0|1CB750E8DD92000
-  I|windef.h|0
-  I|stdlib.h|0
- F|tcpestats.h|4|0|1CB750E8DD92000
- F|tcpmib.h|4|0|1CB750E8DD92000
+ F|tcpestats.h|4|0|1CFBC5FF546B300
+ F|tcpmib.h|4|0|1CFBC5FF546B300
  F|test\|0|10|0
- F|time.h|4|0|1CB750E8DD92000
-  I|crtdefs.h|0
- F|tlhelp32.h|4|0|1CB750E8DD92000
- F|tvout.h|4|0|1CB750E8DD92000
- F|typeinfo|80000|0|1CB750E8DD92000
- F|types.h|4|0|1CB750E8DD92000
- F|udfutil.h|4|0|1CB750E8DD92000
+ F|tlhelp32.h|4|0|1CFBC5FF546B300
+ F|tpool.h|4|0|1CFBC5FF546B300
+ F|tvout.h|4|0|1CFBC5FF546B300
+ F|types.h|4|0|1CFBC5FF546B300
+ F|udfutil.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|udpmib.h|4|0|1CB750E8DD92000
- F|unknwn.h|4|0|1CB750E8DD92000
+ F|udpmib.h|4|0|1CFBC5FF546B300
+ F|unknwn.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|wtypes.h|1
- F|unknwn.idl|0|0|1CB750E8DD92000
+ F|unknwn.idl|0|0|1CFBC5FF546B300
   I|wtypes.idl|1
- F|use_ansi.h|4|0|1CB750E8DD92000
- F|usp10.h|4|0|1CB750E8F0A4D00
+ F|usp10.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|specstrings.h|0
- F|utility|80000|0|1CB750E8F0A4D00
- F|valarray|80000|0|1CB750E8F0A4D00
- F|vector|80000|0|1CB750E8F0A4D00
- F|vector.hxx|4|0|1CB750E8F0A4D00
+ F|vector.hxx|4|0|1CFBC5FF546B300
   I|allocator.hxx|1
   I|new|0
   I|assert.h|0
- F|VG\|0|10|0
- F|wchar.h|4|0|1CB750E8F0A4D00
-  I|stdlib.h|1
-  I|crtdefs.h|0
- F|wctype.h|4|0|1CB750E8F0A4D00
-  I|crtdefs.h|0
- F|wdogapi.h|4|0|1CB750E8F0A4D00
- F|wfpalign.h|4|0|1CB750E8F0A4D00
-  I|crtdefs.h|1
- F|winbase.h|4|0|1CB750E8F0A4D00
+ F|wdogapi.h|4|0|1CFBC5FF546B300
+ F|wfpalign.h|4|0|1CFBC5FF546B300
+ F|winbase.h|4|0|1CFBC5FF546B300
   I|windef.h|0
   I|winver.h|0
   I|stdarg.h|0
   I|winerror.h|0
   I|dbgapi.h|0
   I|kfuncs.h|0
+  I|tpool.h|0
   I|msgqueue.h|1
   I|winnls.h|0
   I|pwinbase.h|0
   I|mwinbase.h|0
   I|windbase.h|0
- F|winber.h|4|0|1CB750E8F0A4D00
- F|winceerr.h|4|0|1CB750E8F0A4D00
- F|wincred.h|4|0|1CB750E8F0A4D00
+ F|winber.h|4|0|1CFBC5FF546B300
+ F|winceerr.h|4|0|1CFBC5FF546B300
+ F|wincred.h|4|0|1CFBC5FF546B300
   I|cred.h|0
- F|wincrypt.h|4|0|1CB750E8F0A4D00
+ F|wincrypt.h|4|0|1CFBC5FF546B300
   I|specstrings.h|0
   I|bcrypt.h|0
   I|ncrypt.h|0
- F|windbase.h|4|0|1CB750E8F0A4D00
+ F|windbase.h|4|0|1CFBC5FF546B300
   I|windbase_edb.h|0
   I|pwindbas.h|0
   I|mwindbas.h|0
- F|windbase_edb.h|4|0|1CB750E8F0A4D00
- F|windef.h|4|0|1CB750E8F0A4D00
+ F|windbase_edb.h|4|0|1CFBC5FF546B300
+ F|windef.h|4|0|1CFBC5FF546B300
   I|winnt.h|0
   I|specstrings.h|0
- F|windns.h|4|0|1CB750E8F0A4D00
- F|windows.h|4|0|1CB750E8F0A4D00
+ F|windns.h|4|0|1CFBC5FF546B300
+ F|windot11.h|4|0|1CFBC5FF546B300
+  I|ntddndis.h|0
+  I|WlanTypes.h|0
+ F|windows.h|4|0|1CFBC5FF546B300
   I|windef.h|0
-  I|types.h|0
+  I|cetypes.h|0
   I|winbase.h|0
   I|wingdi.h|0
   I|winuser.h|0
@@ -3279,28 +2868,29 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|tchar.h|0
   I|excpt.h|0
   I|strsafe.h|0
- F|windowsx.h|4|0|1CB750E8F0A4D00
- F|winerror.h|4|0|1CB750E8F0A4D00
+ F|windowsx.h|4|0|1CFBC5FF546B300
+ F|winerror.h|4|0|1CFBC5FF546B300
   I|WinCeErr.h|0
- F|wingdi.h|4|0|1CB750E8F0A4D00
+ F|wingdi.h|4|0|1CFBC5FF546B300
   I|windef.h|0
   I|pshpack2.h|1
   I|poppack.h|1
   I|pshpack1.h|0
   I|pwingdi.h|0
- F|winioctl.h|4|0|1CB750E8F0A4D00
- F|winldap.h|4|0|1CB750E8F0A4D00
+ F|winioctl.h|4|0|1CFBC5FF546B300
+ F|winldap.h|4|0|1CFBC5FF546B300
   I|windef.h|0
   I|schnlsp.h|0
- F|winmeta.h|4|0|1CB750E8F0A4D00
- F|winmeta.xml|80000|0|1CB750E8F0A4D00
- F|winnetwk.h|4|0|1CB750E8F0A4D00
+ F|winmeta.h|4|0|1CFBC5FF546B300
+ F|winmeta.xml|80000|0|1CFBC5FF546B300
+ F|winnetwk.h|4|0|1CFBC5FF546B300
   I|mwnetfun.h|0
- F|winnls.h|4|0|1CB750E8F0A4D00
- F|winnt.h|4|0|1CB750E8F0A4D00
+ F|winnls.h|4|0|1CFBC5FF546B300
+ F|winnt.h|4|0|1DC73ED619D0B67
   I|ctype.h|0
   I|specstrings.h|0
   I|basetsd.h|0
+  I|excpt.h|0
   I|ntstatus.h|0
   I|pshpack4.h|0
   I|poppack.h|0
@@ -3308,20 +2898,25 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|pshpack1.h|1
   I|pshpack8.h|1
   I|string.h|0
- F|winreg.h|4|0|1CB750E8F0A4D00
+ F|winreg.h|4|0|1CFBC5FF546B300
   I|macwin32.h|0
   I|pwinreg.h|0
   I|mwinreg.h|0
- F|winscard.h|4|0|1CB750E8F0A4D00
+ F|winres.h|4|0|1CFBC5FF546B300
+  I|dlgs.h|0
+  I|winbase.h|0
+  I|commctrl.h|0
+  I|resdefce.h|0
+ F|winscard.h|4|0|1CFBC5FF546B300
   I|wtypes.h|0
   I|winioctl.h|0
   I|winsmcrd.h|1
   I|SCardErr.h|1
- F|winsmcrd.h|4|0|1CB750E8F0A4D00
- F|winsock.h|4|0|1CB750E8F0A4D00
+ F|winsmcrd.h|4|0|1CFBC5FF546B300
+ F|winsock.h|4|0|1CFF943620A4900
   I|windows.h|0
   I|inaddr.h|0
- F|winsock2.h|4|0|1CB750E8F0A4D00
+ F|winsock2.h|4|0|1CFBC5FF546B300
   I|pshpack4.h|0
   I|windows.h|0
   I|ws2def.h|0
@@ -3329,488 +2924,554 @@ D|C:\WINCE700\public\common\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|guiddef.h|0
   I|poppack.h|0
   I|wsipv6ok.h|0
- F|wintrust.h|4|0|1CB750E8F0A4D00
+ F|wintrust.h|4|0|1CFBC5FF546B300
   I|wincrypt.h|0
   I|pshpack8.h|0
   I|poppack.h|0
- F|winuser.h|4|0|1CB750E8F0A4D00
+ F|winuser.h|4|0|1CFBC5FF546B300
   I|windef.h|0
   I|mmsystem.h|0
   I|pshpack2.h|1
   I|poppack.h|1
   I|pwinuser.h|0
- F|winuserm.h|4|0|1CB750E8F0A4D00
- F|winver.h|4|0|1CB750E8F0A4D00
- F|wlanapi.h|4|0|1CB750E8F0A4D00
+ F|winuserm.h|4|0|1CFBC5FF546B300
+ F|winver.h|4|0|1CFBC5FF546B300
+ F|wlanapi.h|4|0|1CFBC5FF546B300
   I|l2cmn.h|0
   I|windot11.h|0
   I|EapTypes.h|0
- F|wlanihv.h|4|0|1CB750E8F0A4D00
+ F|wlanihv.h|4|0|1CFBC5FF546B300
   I|windot11.h|0
   I|wlclient.h|0
   I|l2cmn.h|0
   I|WlanIhvTypes.h|0
   I|dot1x.h|0
- F|wlanihvtypes.h|4|0|1CB750E8F0A4D00
+ F|wlanihvtypes.h|4|0|1CFBC5FF546B300
   I|EapTypes.h|0
   I|WlanTypes.h|0
- F|wlclient.h|4|0|1CB750E8F0A4D00
+ F|wlantypes.h|4|0|1CFBC5FF546B300
+ F|wlclient.h|4|0|1CFBC5FF546B300
   I|windot11.h|0
   I|packon.h|0
   I|packoff.h|0
- F|wmistr.h|4|0|1CB750E8F0A4D00
- F|ws2atm.h|4|0|1CB750E903B7A00
+ F|wmistr.h|4|0|1CFBC5FF546B300
+ F|ws2atm.h|4|0|1CFBC5FF546B300
   I|pshpack4.h|0
   I|poppack.h|0
- F|ws2bth.h|4|0|1CB750E903B7A00
- F|ws2def.h|4|0|1CB750E903B7A00
+ F|ws2bth.h|4|0|1CFBC5FF546B300
+ F|ws2def.h|4|0|1CFBC5FF546B300
   I|ipv6prefast.h|0
   I|inaddr.h|0
   I|wsamsg.h|0
- F|ws2ipdef.h|4|0|1CB750E903B7A00
+ F|ws2ipdef.h|4|0|1CFBC5FF546B300
   I|in6addr.h|0
- F|ws2spi.h|4|0|1CB750E903B7A00
+ F|ws2spi.h|4|0|1CFBC5FF546B300
   I|pshpack4.h|0
   I|winsock2.h|0
   I|poppack.h|0
- F|ws2tcpip.h|4|0|1CB750E903B7A00
+ F|ws2tcpip.h|4|0|1CFBC5FF546B300
   I|winsock2.h|0
   I|ws2ipdef.h|0
   I|limits.h|0
   I|wspiapi.h|0
- F|wsamsg.h|4|0|1CB750E903B7A00
- F|wtypes.h|4|0|1CB750E903B7A00
+ F|wsamsg.h|4|0|1CFBC5FF546B300
+ F|wtypes.h|4|0|1CFBC5FF546B300
   I|rpc.h|1
   I|rpcndr.h|1
   I|basetsd.h|1
- F|wtypes.idl|0|0|1CB750E903B7A00
+ F|wtypes.idl|0|0|1CFBC5FF546B300
   I|basetsd.h|1
- F|xamlruntime.h|4|0|1CBADCF9C299F00
+ F|xamlruntime.h|4|0|1D05B436342C100
   I|unknwn.h|0
   I|windows.h|0
- F|xmemory|80000|0|1CB750E903B7A00
- F|xmmintrin.h|4|0|1CB750E903B7A00
+ F|xrcollection.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+  I|XRUnknown.h|0
+  I|XRCustomEvent.h|0
+  I|vector.hxx|0
+ F|xrcustomcontrol.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+  I|XRPtr.h|0
+  I|XRUnknown.h|0
+ F|xrcustomconverter.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+ F|xrcustomevent.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+  I|XRUnknown.h|0
+ F|xrdelegate.h|4|0|1CFBC5FF546B300
+ F|xrenumutilities.h|4|0|1CFBC5FAC8EFA00
+ F|xrinteractions.h|4|0|1CFBC5FAC8EFA00
+  I|Interactions.h|1
+  I|XRUnknown.h|0
+  I|XRDelegate.h|0
+ F|xrpropertybag.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+  I|XRUnknown.h|0
+  I|XRPtr.h|0
+  I|XRCustomEvent.h|0
+  I|vector.hxx|0
+  I|hash_map.hxx|0
+  I|string.hxx|0
+ F|xrptr.h|4|0|1CFBC5FF546B300
+  I|XamlRuntime.h|0
+ F|xrunknown.h|4|0|1CFBC5FF546B300
+
+D|C:\wince800\public\common\sdk\inc\cestl\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|algorithm|80000|0|1CFBC5FF4158600
+ F|alignment.hxx|4|0|1CFBC5FF4158600
+  I|assert.h|0
+ F|allocator.hxx|4|0|1CFBC5FF4158600
+  I|new|0
+  I|assert.h|0
+  I|singleton.hxx|1
+  I|auto_xxx.hxx|1
+  I|sync.hxx|1
+ F|auto_objbase.hxx|4|0|1CFBC5FF4158600
+  I|auto_xxx.hxx|1
+  I|objbase.h|0
+ F|auto_winbase.hxx|4|0|1CFBC5FF4158600
+  I|auto_xxx.hxx|1
+  I|winbase.h|0
+ F|auto_xxx.hxx|4|0|1CFBC5FF4158600
+  I|assert.h|0
+  I|algorithm|0
+  I|allocator.hxx|1
+  I|singleton.hxx|1
+ F|bitset|80000|0|1CFBC5FF4158600
+ F|block_allocator.hxx|4|0|1CFBC5FF4158600
+  I|svsutil.hxx|0
+ F|cassert|80000|0|1CFBC5FF4158600
+ F|cctype|80000|0|1CFBC5FF4158600
+ F|ce_hash.hxx|4|0|1CFBC5FF4158600
+  I|hash.hxx|1
+ F|ce_hash_map.hxx|4|0|1CFBC5FF4158600
+  I|hash_map.hxx|1
+ F|ce_hash_set.hxx|4|0|1CFBC5FF4158600
+  I|hash_set.hxx|1
+ F|ce_list.hxx|4|0|1CFBC5FF4158600
+  I|list.hxx|1
+ F|ce_refcnt.h|4|0|1CFBC5FF4158600
+ F|ce_string.hxx|4|0|1CFBC5FF4158600
+  I|string.hxx|1
+ F|ce_vector.hxx|4|0|1CFBC5FF4158600
+  I|vector.hxx|1
+ F|cfloat|80000|0|1CFBC5FF4158600
+ F|ciso646|80000|0|1CFBC5FF4158600
+ F|climits|80000|0|1CFBC5FF4158600
+ F|clocale|80000|0|1CFBC5FF4158600
+ F|cmath|80000|0|1CFBC5FF4158600
+ F|combined_container.hxx|4|0|1CFBC5FF4158600
+ F|csetjmp|80000|0|1CFBC5FF4158600
+ F|cstdarg|80000|0|1CFBC5FF4158600
+ F|cstddef|80000|0|1CFBC5FF4158600
+ F|cstdio|80000|0|1CFBC5FF4158600
+ F|cstdlib|80000|0|1CFBC5FF4158600
+ F|cstring|80000|0|1CFBC5FF4158600
+ F|cwchar|80000|0|1CFBC5FF4158600
+ F|cwctype|80000|0|1CFBC5FF4158600
+ F|deque|80000|0|1CFBC5FF4158600
+ F|exception|80000|0|1CFBC5FF4158600
+ F|functional|80000|0|1CFBC5FF4158600
+ F|hash.hxx|4|0|1CFBC5FF4158600
+  I|assert.h|0
+  I|allocator.hxx|1
+  I|list.hxx|1
+  I|vector.hxx|1
+  I|string.hxx|1
+ F|hash_map.hxx|4|0|1CFBC5FF4158600
+  I|hash.hxx|1
+ F|hash_set.hxx|4|0|1CFBC5FF4158600
+  I|hash.hxx|1
+ F|iso646.h|4|0|1CFBC5FF4158600
+ F|iterator|80000|0|1CFBC5FF4158600
+ F|libdefs|80000|0|1CFBC5FF4158600
+ F|limits|80000|0|1CFBC5FF4158600
+ F|list|80000|0|1CFBC5FF4158600
+ F|list.hxx|4|0|1CFBC5FF4158600
+  I|stddef.h|0
+  I|allocator.hxx|1
+  I|assert.h|0
+  I|algorithm|0
+  I|iterator|0
+ F|map|80000|0|1CFBC5FF4158600
+ F|memory|80000|0|1CFBC5FF4158600
+ F|new|80000|0|1D03FAD73E4A200
+ F|numeric|80000|0|1CFBC5FF4158600
+ F|queue|80000|0|1CFBC5FF4158600
+ F|safe_array.hxx|4|0|1CFBC5FF4158600
+ F|set|80000|0|1CFBC5FF4158600
+ F|stack|80000|0|1CFBC5FF4158600
+ F|static_assert.hxx|4|0|1CFBC5FF4158600
+ F|stdexcept|80000|0|1CFBC5FF4158600
+ F|stream.hxx|4|0|1CFBC5FF4158600
+  I|windows.h|0
+  I|auto_xxx.hxx|0
+  I|alignment.hxx|0
+ F|string|80000|0|1CFBC5FF4158600
+ F|string.hxx|4|0|1CFBC5FF4158600
+  I|assert.h|0
+  I|allocator.hxx|1
+ F|sync.hxx|4|0|1CFBC5FF4158600
+  I|windows.h|0
+  I|assert.h|0
+  I|auto_xxx.hxx|1
+ F|typeinfo|80000|0|1CFBC5FF4158600
+ F|utility|80000|0|1CFBC5FF4158600
+ F|valarray|80000|0|1CFBC5FF4158600
+ F|vector|80000|0|1CFBC5FF4158600
+ F|vector.hxx|4|0|1CFBC5FF4158600
+  I|allocator.hxx|1
+  I|new|0
+  I|assert.h|0
+ F|xmemory|80000|0|1CFBC5FF4158600
+ F|xstddef|80000|0|1D03FAD73E4A200
+ F|xstring|80000|0|1CFBC5FF4158600
+ F|xtree|80000|0|1CFBC5FF4158600
+ F|xutility|80000|0|1CFBC5FF4158600
+
+D|C:\wince800\public\common\sdk\inc\crt\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|ammintrin.h|4|0|1CFBC5FF4158600
+ F|armintr.h|4|0|1CFBC5FF4158600
+ F|arm_neon.h|4|0|1CFBC5FF4158600
+  I|stdint.h|0
+ F|assert.h|4|0|1CFBC5FF4158600
   I|crtdefs.h|0
+  I|windef.h|0
+  I|cetypes.h|0
+  I|winbase.h|0
+ F|CodeAnalysis\|0|10|0
+ F|conio.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|crtdbg.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|crtdefs.h|4|0|1CFBC5FF4158600
+  I|sal.h|0
+  I|vadefs.h|0
+  I|winapifamily.h|0
+ F|crtwrn.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|ctype.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|direct.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|dos.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|dvec.h|4|0|1CFBC5FF4158600
+  I|immintrin.h|0
+  I|fvec.h|0
+  I|crtdefs.h|0
+  I|iostream|0
+ F|eh.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|emmintrin.h|4|0|1CFBC5FF4158600
+  I|xmmintrin.h|0
+ F|errno.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|excpt.h|4|0|1DC73F665491B38
+  I|crtdefs.h|0
+ F|fcntl.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|float.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|crtwrn.h|0
+ F|fpieee.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|fvec.h|4|0|1CFBC5FF4158600
+  I|xmmintrin.h|0
+  I|ivec.h|0
+  I|crtdefs.h|0
+  I|iostream|0
+ F|immintrin.h|4|0|1CFBC5FF4158600
+  I|wmmintrin.h|0
+ F|intrin.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|setjmp.h|0
+  I|stddef.h|0
+  I|immintrin.h|0
+  I|ammintrin.h|0
+  I|mm3dnow.h|0
+  I|arm_neon.h|0
+  I|armintr.h|0
+ F|io.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|io.inl|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|ivec.h|4|0|1CFBC5FF4158600
+  I|mmintrin.h|0
+  I|crtdefs.h|0
+  I|iostream|0
+ F|limits.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|locale.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|malloc.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|math.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|mbctype.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|ctype.h|0
+ F|mbstring.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|memory.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|minmax.h|4|0|1CFBC5FF4158600
+ F|mm3dnow.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|mmintrin.h|0
+  I|xmmintrin.h|0
+ F|mmintrin.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|new.h|4|0|1CFBC5FF4158600
+  I|new|0
+  I|crtdefs.h|0
+ F|nmmintrin.h|4|0|1CFBC5FF4158600
+  I|smmintrin.h|0
+ F|omp.h|4|0|1CFBC5FF4158600
+ F|pmmintrin.h|4|0|1CFBC5FF4158600
+  I|emmintrin.h|0
+ F|process.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|rtcapi.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|safeint.h|4|0|1CFBC5FF4158600
+  I|assert.h|0
+ F|search.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|stddef.h|0
+ F|setjmp.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|setjmpex.h|0
+ F|setjmpex.h|4|0|1CFBC5FF4158600
+  I|setjmp.h|0
+ F|share.h|4|0|1CFBC5FF4158600
+ F|signal.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|smmintrin.h|4|0|1CFBC5FF4158600
+  I|tmmintrin.h|0
+ F|stdarg.h|4|0|1CFBC5FF4158600
+  I|vadefs.h|0
+ F|stddef.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|stdexcpt.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|exception|0
+ F|stdint.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|stdio.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|swprintf.inl|0
+ F|stdlib.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|limits.h|0
+ F|stlshared.h|4|0|1CFBC5FF4158600
+ F|string.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|swprintf.inl|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|sys\|0|10|0
+ F|tchar.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|windef.h|0
+  I|stdlib.h|0
+  I|wchar.h|0
+  I|string.h|0
+  I|mbstring.h|0
+ F|time.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|wtime.inl|0
+  I|time.inl|0
+ F|time.inl|4|0|1CFBC5FF4158600
+ F|tmmintrin.h|4|0|1CFBC5FF4158600
+  I|pmmintrin.h|0
+ F|typeinfo.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|typeinfo|0
+ F|use_ansi.h|4|0|1CFBC5FF4158600
+ F|vadefs.h|4|0|1CFBC5FF4158600
+ F|varargs.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|wchar.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+  I|stdlib.h|1
+  I|swprintf.inl|0
+  I|wtime.inl|0
+ F|wctype.h|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|wio.inl|4|0|1CFBC5FF4158600
+  I|crtdefs.h|0
+ F|wmmintrin.h|4|0|1CFBC5FF4158600
+  I|nmmintrin.h|0
+ F|wtime.inl|4|0|1CFBC5FF4158600
+ F|xmmintrin.h|4|0|1CFBC5FF4158600
   I|mmintrin.h|0
   I|xmm_func.h|1
   I|malloc.h|0
- F|xrcollection.h|4|0|1CB750E903B7A00
-  I|XamlRuntime.h|0
-  I|XRUnknown.h|0
-  I|XRCustomEvent.h|0
-  I|vector.hxx|0
- F|xrcustomcontrol.h|4|0|1CB750E903B7A00
-  I|XamlRuntime.h|0
-  I|XRPtr.h|0
-  I|XRUnknown.h|0
- F|xrcustomevent.h|4|0|1CB750E903B7A00
-  I|XamlRuntime.h|0
-  I|XRUnknown.h|0
- F|xrdelegate.h|4|0|1CB750E903B7A00
- F|xrpropertybag.h|4|0|1CB750E903B7A00
-  I|XamlRuntime.h|0
-  I|XRUnknown.h|0
-  I|XRPtr.h|0
-  I|XRCustomEvent.h|0
-  I|vector.hxx|0
-  I|hash_map.hxx|0
-  I|string.hxx|0
- F|xrptr.h|4|0|1CB750E903B7A00
-  I|XamlRuntime.h|0
- F|xrunknown.h|4|0|1CB750E903B7A00
- F|xstddef|80000|0|1CB750E903B7A00
- F|xstring|80000|0|1CB750E903B7A00
- F|xtree|80000|0|1CB750E903B7A00
- F|xutility|80000|0|1CB750E903B7A00
- F|ymath.h|4|0|1CB750E903B7A00
+ F|ymath.h|4|0|1CFBC5FF4158600
   I|math.h|0
   I|yvals.h|0
- F|yvals.h|4|0|1CB750E903B7A00
-  I|libdefs|0
+ F|yvals.h|4|0|1CFBC5FF4158600
+  I|use_ansi.h|0
+  I|stlshared.h|0
 
-D|C:\WINCE700\public\common\sdk\inc\test\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|cmdline.h|4|0|1CB750E8DD92000
+D|C:\wince800\public\common\sdk\inc\test\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|cmdline.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|tchar.h|0
- F|ctkcommon.ver|0|0|1CB750E8DD92000
+ F|ctkcommon.ver|0|0|1CFBC5FF546B300
   I|..\ctkcommon.ver|1
- F|dbptags.h|4|0|1CB750E8DD92000
+ F|dbptags.h|4|0|1CFBC5FF546B300
   I|kato.h|1
- F|errorinfo.h|4|0|1CB750E8DD92000
+ F|errorinfo.h|4|0|1CFBC5FF546B300
   I|hash_map.hxx|0
   I|string.hxx|0
- F|kato.h|4|0|1CB750E8DD92000
- F|katoex.h|4|0|1CB750E8DD92000
+ F|kato.h|4|0|1CFBC5FF546B300
+ F|katoex.h|4|0|1CFBC5FF546B300
   I|kato.h|0
- F|ktux.h|4|0|1CB750E8DD92000
+ F|ktux.h|4|0|1CFBC5FF546B300
   I|tux.h|1
   I|kato.h|1
- F|tux.h|4|0|1CB750E8DD92000
+ F|tux.h|4|0|1CFBC5FF546B300
   I|windows.h|0
- F|tuxext.h|4|0|1CB750E8DD92000
+ F|tuxext.h|4|0|1CFBC5FF546B300
   I|tux.h|0
   I|tuxint.h|0
- F|utassert.h|4|0|1CB750E8DD92000
+ F|utassert.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|utlog.h|0
- F|utbase.h|4|0|1CB750E8DD92000
+ F|utbase.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|utlog.h|1
   I|katoex.h|0
   I|tux.h|0
   I|cmdline.h|0
- F|utlog.h|4|0|1CB750E8DD92000
+ F|utlog.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|stdio.h|0
   I|tchar.h|0
- F|wmlogger.h|4|0|1CB750E8DD92000
+ F|wmlogger.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|wttlogdef.h|1
   I|ErrorInfo.h|1
- F|wttlogdef.h|4|0|1CB750E8DD92000
- F|wttloggermobile.h|4|0|1CB750E8DD92000
+ F|wttlogdef.h|4|0|1CFBC5FF546B300
+ F|wttloggermobile.h|4|0|1CFBC5FF546B300
   I|windows.h|0
   I|wttlogdef.h|1
- F|xmltags.h|4|0|1CB750E8DD92000
- F|xtux.h|4|0|1CB750E8DD92000
+ F|xmltags.h|4|0|1CFBC5FF546B300
+ F|xtux.h|4|0|1CFBC5FF546B300
   I|tux.h|1
 
-D|C:\WINCE700\public\dcom\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|accctrl.h|4|0|1CB750E95002E00
+D|C:\wince800\public\dcom\sdk\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|accctrl.h|4|0|1CFBC5FF7A90D00
   I|wtypes.h|0
- F|iaccess.h|4|0|1CB750E95002E00
+ F|iaccess.h|4|0|1CFBC5FF7A90D00
   I|accctrl.h|0
- F|nmpipe.h|4|0|1CB750E95002E00
+ F|nmpipe.h|4|0|1CFBC5FF7A90D00
 
-D|C:\WINCE700\public\gdiex\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|gdiplusenums.h|4|0|1CB750EA34E4A00
- F|gdiplusimaging.h|4|0|1CB750EA34E4A00
- F|gdipluspixelformats.h|4|0|1CB750EA34E4A00
- F|imaging.h|4|0|1CB750EA34E4A00
-  I|GdiplusPixelFormats.h|0
-  I|GdiplusImaging.h|0
-  I|imgguids.h|0
- F|imgguids.h|4|0|1CB750EA34E4A00
-
-D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|activaut.h|4|0|1CB750EACD7B200
+D|C:\wince800\public\html\sdk\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|activaut.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
- F|activaut.idl|0|0|1CB750EACD7B200
+ F|activaut.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
- F|activdbg.h|4|0|1CB750EACD7B200
+ F|activscp.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
-  I|activscp.h|1
-  I|dbgprop.h|1
- F|activdbg.idl|0|0|1CB750EACD7B200
+ F|activscp.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
-  I|activscp.idl|1
-  I|dbgprop.idl|1
- F|activprof.h|4|0|1CB750EACD7B200
+ F|comcat.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
- F|activprof.idl|0|0|1CB750EACD7B200
+ F|comcat.idl|0|0|1CFBC5FF8DA3A00
   I|unknwn.idl|1
- F|activscp.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|ocidl.h|1
- F|activscp.idl|0|0|1CB750EACD7B200
-  I|ocidl.idl|1
-  I|oleidl.idl|1
-  I|oaidl.idl|1
- F|ad1ex.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|activdbg.h|1
- F|ad1ex.idl|0|0|1CB750EACD7B200
-  I|activdbg.idl|1
- F|advpub.h|4|0|1CB750EACD7B200
-  I|setupapi.h|0
-  I|cfgmgr32.h|0
- F|autodiscovery.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
-  I|urlmon.h|1
- F|autodiscovery.idl|0|0|1CB750EACD7B200
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-  I|objidl.idl|1
-  I|urlmon.idl|1
-  I|olectl.h|0
-  I|AutoDiscoveryID.h|1
- F|autodiscovery.tlb|80000|0|1CB750EACD7B200
- F|callback.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
- F|capi.h|4|0|1CB750EACD7B200
-  I|wincrypt.h|0
-  I|sipbase.h|0
-  I|mscat.h|0
-  I|mssip.h|0
-  I|wintrust.h|0
- F|comcat.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
- F|comcat.idl|0|0|1CB750EACD7B200
-  I|unknwn.idl|1
- F|commoncontrols.h|4|0|1CB750EACD7B200
+ F|commoncontrols.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|commoncontrols.idl|0|0|1CB750EACD7B200
+ F|commoncontrols.idl|0|0|1CFBC5FF8DA3A00
   I|oaidl.idl|1
   I|ocidl.idl|1
- F|credentialprovider.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|wtypes.h|1
-  I|shobjidl.h|1
- F|credentialprovider.idl|0|0|1CB750EACD7B200
-  I|wtypes.idl|1
-  I|shobjidl.idl|1
-  I|unknwn.idl|1
- F|crtdbg.h|4|0|1CB750EACD7B200
- F|cryptdlg.h|4|0|1CB750EACD7B200
-  I|prsht.h|0
- F|dbgprop.h|4|0|1CB750EACD7B200
+ F|dbgprop.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
- F|dimm.h|4|0|1CB750EACD7B200
+ F|dimm.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|unknwn.h|1
   I|imm.h|0
- F|dimm.idl|0|0|1CB750EACD7B200
+ F|dimm.idl|0|0|1CFBC5FF8DA3A00
   I|unknwn.idl|1
- F|dispex.h|4|0|1CB750EACD7B200
+ F|dispex.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
   I|servprov.h|1
- F|dispex.idl|0|0|1CB750EACD7B200
+ F|dispex.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
   I|servprov.idl|1
- F|dlgs.h|4|0|1CB750EACD7B200
- F|dlmgridl.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|ocidl.h|1
- F|docobj.h|4|0|1CB750EACD7B200
+ F|docobj.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
   I|servprov.h|1
- F|docobj.idl|0|0|1CB750EACD7B200
+ F|docobj.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|objidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
   I|servprov.idl|1
- F|downloadmgr.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|ocidl.h|1
-  I|urlmon.h|1
- F|downloadmgr.idl|0|0|1CB750EACD7B200
-  I|unknwn.idl|1
-  I|ocidl.idl|1
-  I|oleidl.idl|1
-  I|oaidl.idl|1
-  I|urlmon.idl|1
- F|dslisten.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
- F|dslisten.idl|0|0|1CB750EACD7B200
-  I|oaidl.idl|1
- F|dtbase.cpp|0|0|1CB750EACD7B200
-  I|DXTrans.h|0
-  I|DTBase.h|1
-  I|new.h|1
- F|dtbase.h|4|0|1CB750EACD7B200
-  I|DXHelper.h|0
-  I|DXTmpl.h|0
-  I|dxatlpb.h|0
-  I|crtdbg.h|0
-  I|DXTDbg.h|0
- F|dwnnot.h|4|0|1CB750EACD7B200
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
-  I|oleidl.h|1
- F|dwnnot.idl|0|0|1CB750EACD7B200
-  I|objidl.idl|1
-  I|oleidl.idl|1
- F|dxatlpb.h|4|0|1CB750EACD7B200
-  I|atlctl.h|0
-  I|dxtdbg.h|0
- F|dxbounds.h|4|0|1CB750EACD7B200
-  I|limits.h|0
-  I|float.h|0
-  I|DXTrans.h|0
-  I|DXVector.h|0
- F|dxclrhlp.h|4|0|1CB750EACD7B200
- F|dxhelp3.cpp|0|0|1CB750EACD7B200
-  I|dxhelp3.h|1
-  I|malloc.h|0
-  I|math.h|0
-  I|stdio.h|0
- F|dxhelp3.h|4|0|1CB750EACD7B200
-  I|d3d.h|0
-  I|d3drm.h|0
-  I|math.h|0
- F|dxhelper.h|4|0|1CB750EACD7B200
-  I|DXTError.h|0
-  I|DXBounds.h|0
-  I|DXTrans.h|0
-  I|limits.h|0
-  I|crtdbg.h|0
-  I|malloc.h|0
-  I|math.h|0
- F|dxsurfb.cpp|0|0|1CB750EACD7B200
-  I|DXTrans.h|0
-  I|DXSurfB.h|1
-  I|new.h|1
- F|dxsurfb.h|4|0|1CB750EACD7B200
-  I|dtbase.h|1
- F|dxtdbg.h|4|0|1CB750EAE08DF00
-  I|crtdbg.h|0
- F|dxterror.h|4|0|1CB750EAE08DF00
-  I|winerror.h|0
- F|dxtguid.c|0|0|1CB750EAE08DF00
- F|dxtmpl.h|4|0|1CB750EAE08DF00
-  I|limits.h|0
-  I|string.h|0
-  I|stdlib.h|0
-  I|search.h|0
-  I|intsafe.h|0
- F|dxtmsft.h|4|0|1CB750EAE08DF00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
-  I|dxtrans.h|1
-  I|dxtmsft3.h|0
- F|dxtmsft.idl|0|0|1CB750EAE08DF00
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-  I|dxtrans.idl|1
- F|dxtmsft.tlb|80000|0|1CB750EAE08DF00
- F|dxtmsft3.idl|0|0|1CB750EAE08DF00
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-  I|dxtrans.idl|1
- F|dxtmsft3.tlb|80000|0|1CB750EAE08DF00
- F|dxtmsft3guid.h|4|0|1CB750EAE08DF00
-  I|rpc.h|0
-  I|rpcndr.h|0
-  I|guiddef.h|0
- F|dxtrans.h|4|0|1CB750EAE08DF00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
-  I|servprov.h|1
-  I|comcat.h|1
-  I|ddraw.h|0
-  I|urlmon.h|0
- F|dxtrans.idl|0|0|1CB750EAE08DF00
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-  I|servprov.idl|1
-  I|comcat.idl|1
- F|dxtrans.tlb|80000|0|1CB750EAE08DF00
- F|dxvector.h|4|0|1CB750EAE08DF00
- F|emptyvc.h|4|0|1CB750EAE08DF00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
-  I|oleidl.h|1
-  I|oaidl.h|1
- F|exdisp.h|4|0|1CB750EAE08DF00
+ F|exdisp.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|ocidl.h|1
   I|docobj.h|1
- F|exdisp.idl|0|0|1CB750EAE08DF00
+ F|exdisp.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|docobj.idl|1
   I|olectl.h|0
   I|exdispid.h|1
- F|exdisp.tlb|80000|0|1CB750EAE08DF00
- F|exdispid.h|4|0|1CB750EAE08DF00
- F|hlguids.h|4|0|1CB750EAE08DF00
- F|hliface.h|4|0|1CB750EAE08DF00
+ F|exdisp.tlb|80000|0|1CFBC5FF8DA3A00
+ F|exdispid.h|4|0|1CFBC5FF8DA3A00
+ F|hlguids.h|4|0|1CFBC5FF8DA3A00
+ F|hliface.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|hlink.h|1
- F|hlink.h|4|0|1CB750EAF3A0C00
+ F|hlink.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|urlmon.h|1
- F|hlink.idl|0|0|1CB750EAF3A0C00
+ F|hlink.idl|0|0|1CFBC5FF8DA3A00
   I|urlmon.idl|1
- F|hlinkez.h|4|0|1CB750EAF3A0C00
- F|htiface.h|4|0|1CB750EAF3A0C00
+ F|hlinkez.h|4|0|1CFBC5FF8DA3A00
+ F|htiface.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -3819,137 +3480,39 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|oleidl.h|1
   I|urlmon.h|1
   I|htiframe.h|1
- F|htiface.idl|0|0|1CB750EAF3A0C00
+ F|htiface.idl|0|0|1CFBC5FF8DA3A00
   I|objidl.idl|1
   I|oleidl.idl|1
   I|urlmon.idl|1
- F|htiframe.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
-  I|oleidl.h|1
- F|htiframe.idl|0|0|1CB750EAF3A0C00
-  I|objidl.idl|1
-  I|oleidl.idl|1
- F|htmlctrl.h|4|0|1CB750EAF3A0C00
+ F|htmlctrl.h|4|0|1CFBC5FF8DA3A00
   I|objidl.h|0
- F|htmlfilter.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|oleidl.h|1
- F|htmlfilter.idl|0|0|1CB750EAF3A0C00
-  I|oaidl.idl|1
-  I|oleidl.idl|1
- F|htmlhelp.h|4|0|1CB750EAF3A0C00
- F|icontact.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|icontact.idl|0|0|1CB750EAF3A0C00
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-  I|objidl.idl|1
- F|icontactproperties.h|4|0|1CB750EAF3A0C00
- F|icwcfg.h|4|0|1CB750EAF3A0C00
- F|idispids.h|4|0|1CB750EAF3A0C00
- F|iedial.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|ocidl.h|1
- F|iedial.idl|0|0|1CB750EAF3A0C00
-  I|unknwn.idl|1
-  I|ocidl.idl|1
-  I|oleidl.idl|1
-  I|oaidl.idl|1
- F|iehelpid.h|4|0|1CB750EAF3A0C00
- F|iepmapi.h|4|0|1CB750EAF3A0C00
- F|iert.h|4|0|1CB750EAF3A0C00
- F|iextag.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|iextag.idl|0|0|1CB750EAF3A0C00
-  I|oaidl.idl|1
-  I|ocidl.idl|1
- F|iextag.tlb|80000|0|1CB750EAF3A0C00
- F|iimgctx.h|4|0|1CB750EAF3A0C00
- F|imapi.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|imapi.tlb|80000|0|1CB750EAF3A0C00
- F|imgutil.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|ocmm.h|1
- F|imgutil.idl|0|0|1CB750EAF3A0C00
-  I|ocmm.idl|1
- F|imnact.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
- F|imnact.idl|0|0|1CB750EAF3A0C00
-  I|objidl.idl|1
-  I|unknwn.idl|1
- F|imnxport.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|imnact.h|1
-  I|ras.h|0
-  I|raserror.h|0
-  I|pcommctr.h|0
-  I|commctrl.h|0
- F|imnxport.idl|0|0|1CB750EAF3A0C00
-  I|imnact.idl|1
- F|inethelp.h|4|0|1CB750EAF3A0C00
-  I|iehelpid.h|0
- F|inetmsg.h|4|0|1CBADD61D843000
- F|inetreg.h|4|0|1CB750EAF3A0C00
- F|inetsdk.h|4|0|1CB750EAF3A0C00
+ F|idispids.h|4|0|1CFBC5FF8DA3A00
+ F|iepmapi.h|4|0|1CFBC5FF8DA3A00
+ F|iert.h|4|0|1CFBC5FF8DA3A00
+ F|iimgctx.h|4|0|1CFBC5FF8DA3A00
+ F|inetmsg.h|4|0|1D05B451C55CB00
+ F|inetreg.h|4|0|1CFBC5FF8DA3A00
+ F|inetsdk.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|comcat.h|1
   I|ocidl.h|1
   I|docobj.h|1
   I|hlink.h|1
- F|inetsdk.idl|0|0|1CB750EAF3A0C00
+ F|inetsdk.idl|0|0|1CFBC5FF8DA3A00
   I|comcat.idl|1
   I|ocidl.idl|1
   I|docobj.idl|1
   I|hlink.idl|1
   I|urlmon.idl|1
- F|inseng.h|4|0|1CB750EAF3A0C00
- F|interned.h|4|0|1CB750EAF3A0C00
+ F|interned.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|dimm.h|1
   I|mshtml.h|1
   I|mshtmhst.h|1
   I|urlmon.h|1
- F|interned.idl|0|0|1CB750EAF3A0C00
+ F|interned.idl|0|0|1CFBC5FF8DA3A00
   I|unixdef.h|1
   I|mshtmdid.h|0
   I|dimm.idl|1
@@ -3959,80 +3522,36 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|oleidl.idl|1
   I|oaidl.idl|1
   I|urlmon.idl|1
- F|isguids.h|4|0|1CB750EAF3A0C00
- F|knownfolders.h|4|0|1CB750EAF3A0C00
- F|lendian.hpp|4|0|1CB750EAF3A0C00
- F|mapi.h|4|0|1CB750EAF3A0C00
- F|marqinfo.h|4|0|1CB750EAF3A0C00
+ F|isguids.h|4|0|1CFBC5FF8DA3A00
+ F|knownfolders.h|4|0|1CFBC5FF8DA3A00
+ F|lendian.hpp|4|0|1CFBC5FF8DA3A00
+ F|marqinfo.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
- F|mimedisp.h|4|0|1CB750EAF3A0C00
- F|mimeinfo.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
- F|mimeinfo.idl|0|0|1CB750EAF3A0C00
-  I|objidl.idl|1
- F|mimeole.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|ocidl.h|1
-  I|wincrypt.h|1
-  I|urlmon.h|1
- F|mimeole.idl|0|0|1CB750EAF3A0C00
-  I|ocidl.idl|1
-  I|objidl.idl|1
-  I|wincrypt.idl|1
-  I|propidl.idl|1
-  I|urlmon.idl|1
-  I|mimedisp.h|1
-  I|unknwn.idl|1
- F|mlang.h|4|0|1CB750EAF3A0C00
+ F|mimedisp.h|4|0|1CFBC5FF8DA3A00
+ F|mlang.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|unknwn.h|1
- F|mobsync.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
-  I|oleidl.h|1
-  I|shobjidl.h|1
- F|msfeeds.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
- F|msfeeds.idl|0|0|1CB750EAF3A0C00
-  I|oaidl.idl|1
-  I|msfeedsid.h|1
- F|msfeeds.tlb|80000|0|1CB750EAF3A0C00
- F|msfeedsid.h|4|0|1CB750EAF3A0C00
- F|mshtmcid.h|4|0|1CB750EAF3A0C00
- F|mshtmdid.h|4|0|1CB750EAF3A0C00
- F|mshtmhst.h|4|0|1CB750EAF3A0C00
+ F|mshtmcid.h|4|0|1CFBC5FF8DA3A00
+ F|mshtmdid.h|4|0|1CFBC5FF8DA3A00
+ F|mshtmhst.h|4|0|1CFBC5FF8DA3A00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
   I|docobj.h|1
- F|mshtmhst.idl|0|0|1CB750EAF3A0C00
+ F|mshtmhst.idl|0|0|1CFBC5FF8DA3A00
   I|ocidl.idl|1
   I|objidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
   I|docobj.idl|1
- F|mshtml.h|4|0|1CB750EAF3A0C00
+ F|mshtml.h|4|0|1CFBC5FF8DA3A00
   I|mshtmlc.h|1
   I|rpc.h|1
   I|rpcndr.h|1
@@ -4042,15 +3561,15 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|dimm.h|1
   I|shtypes.h|1
   I|olectl.h|0
- F|mshtml.idl|0|0|1CB750EAF3A0C00
+ F|mshtml.idl|0|0|1CFBC5FF8DA3A00
   I|mshtmdid.h|0
   I|mshtmcid.h|0
   I|olectl.h|0
   I|ocidl.idl|1
   I|dimm.idl|1
   I|shtypes.idl|1
- F|mshtml.tlb|80000|0|1CB750EAF3A0C00
- F|mshtmlc.h|4|0|1CB750EAF3A0C00
+ F|mshtml.tlb|80000|0|1CFBC5FF8DA3A00
+ F|mshtmlc.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4059,112 +3578,52 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|dimm.h|1
   I|shtypes.h|1
   I|olectl.h|0
- F|msident.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|ocidl.h|1
- F|msiehost.h|4|0|1CB750EAF3A0C00
- F|msnotify.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|objidl.h|1
-  I|oleidl.h|1
-  I|ocidl.h|1
-  I|mstask.h|1
- F|msnotify.idl|0|0|1CB750EAF3A0C00
-  I|objidl.idl|1
-  I|oleidl.idl|1
-  I|ocidl.idl|1
-  I|mstask.idl|1
- F|msoav.h|4|0|1CB750EAF3A0C00
- F|msoeapi.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|ocidl.h|1
-  I|mimeole.h|1
- F|msoeapi.idl|0|0|1CB750EAF3A0C00
-  I|ocidl.idl|1
-  I|objidl.idl|1
-  I|mimeole.idl|1
- F|mstime.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|servprov.h|1
-  I|olectl.h|0
-  I|mstimeid.h|0
- F|mstime.idl|0|0|1CB750EAF3A0C00
-  I|mstimeid.h|1
-  I|servprov.idl|1
-  I|olectl.h|0
- F|mstime.tlb|80000|0|1CB750EAF3A0C00
- F|mstimeid.h|4|0|1CB750EAF3A0C00
- F|msxml.h|4|0|1CB750EAF3A0C00
+ F|msiehost.h|4|0|1CFBC5FFA0B6700
+ F|msxml.h|4|0|1CFBC5FFA0B6700
   I|msxml2.h|0
- F|msxml.idl|0|0|1CB750EAF3A0C00
+ F|msxml.idl|0|0|1CFBC5FFA0B6700
   I|msxml2.idl|1
- F|msxml2.h|4|0|1CB750EAF3A0C00
+ F|msxml2.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|unknwn.h|1
   I|objidl.h|1
   I|oaidl.h|1
- F|msxml2.idl|0|0|1CB750EAF3A0C00
+ F|msxml2.idl|0|0|1CFBC5FFA0B6700
   I|msxml2did.h|1
   I|idispids.h|0
   I|unknwn.idl|1
   I|wtypes.idl|1
   I|objidl.idl|1
   I|oaidl.idl|1
- F|msxml2did.h|4|0|1CB750EAF3A0C00
- F|multimon.h|4|0|1CB750EAF3A0C00
- F|nativcom.h|4|0|1CB750EAF3A0C00
-  I|windows.h|0
-  I|native.h|0
- F|native.h|4|0|1CB750EAF3A0C00
-  I|pshpack4.h|0
-  I|poppack.h|0
- F|notftn.h|4|0|1CB750EAF3A0C00
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|msnotify.h|1
- F|notftn.idl|0|0|1CB750EAF3A0C00
-  I|msnotify.idl|1
- F|objsafe.h|4|0|1CB750EAF3A0C00
+ F|msxml2did.h|4|0|1CFBC5FFA0B6700
+ F|objsafe.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
- F|objsafe.idl|0|0|1CB750EAF3A0C00
+ F|objsafe.idl|0|0|1CFBC5FFA0B6700
   I|unknwn.idl|1
- F|ocmm.h|4|0|1CB750EAF3A0C00
+ F|ocmm.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|oleidl.h|1
- F|ocmm.idl|0|0|1CB750EAF3A0C00
+ F|ocmm.idl|0|0|1CFBC5FFA0B6700
   I|oaidl.idl|1
   I|oleidl.idl|1
- F|oleacc.h|4|0|1CB750EAF3A0C00
+ F|oleacc.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
- F|oleacc.idl|0|0|1CB750EAF3A0C00
+ F|oleacc.idl|0|0|1CFBC5FFA0B6700
   I|oaidl.idl|1
- F|omscript.h|4|0|1CB750EB06B3900
+ F|omscript.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4173,59 +3632,46 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|dimm.h|1
   I|shtypes.h|1
   I|olectl.h|0
- F|omscript.idl|0|0|1CB750EB06B3900
+ F|omscript.idl|0|0|1CFBC5FFA0B6700
   I|mshtml.idl|0
- F|omscript.tlb|80000|0|1CB750EB06B3900
- F|optary.h|4|0|1CB750EB06B3900
+ F|omscript.tlb|80000|0|1CFBC5FFA0B6700
+ F|optary.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
   I|oleidl.h|1
- F|optary.idl|0|0|1CB750EB06B3900
+ F|optary.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
- F|perftags.h|4|0|1CB750EB06B3900
- F|perhist.h|4|0|1CB750EB06B3900
+ F|perftags.h|4|0|1CFBC5FFA0B6700
+ F|perhist.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
   I|oleidl.h|1
- F|perhist.idl|0|0|1CB750EB06B3900
+ F|perhist.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
- F|permdlg.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|urlmon.h|1
- F|permdlg.idl|0|0|1CB750EB06B3900
-  I|urlmon.idl|1
- F|pkgguid.h|4|0|1CB750EB06B3900
- F|pkgmgr.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|oaidl.h|1
- F|platform.h|4|0|1CB750EB06B3900
+ F|platform.h|4|0|1CFBC5FFA0B6700
   I|unaligned.hpp|0
- F|prgsnk.h|4|0|1CB750EB06B3900
+ F|prgsnk.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|oleidl.h|1
- F|prgsnk.idl|0|0|1CB750EB06B3900
+ F|prgsnk.idl|0|0|1CFBC5FFA0B6700
   I|oaidl.idl|1
   I|oleidl.idl|1
- F|propkey.h|4|0|1CB750EB06B3900
+ F|propkey.h|4|0|1CFBC5FFA0B6700
   I|propkeydef.h|0
- F|propkeydef.h|4|0|1CB750EB06B3900
- F|propsys.h|4|0|1CB750EB06B3900
+ F|propkeydef.h|4|0|1CFBC5FFA0B6700
+ F|propsys.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4236,75 +3682,55 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|shtypes.h|1
   I|structuredquery.h|1
   I|propkeydef.h|0
- F|recalc.h|4|0|1CB750EB06B3900
+ F|propsys.idl|0|0|1CFBC5FFA0B6700
+  I|objidl.idl|1
+  I|oleidl.idl|1
+  I|ocidl.idl|1
+  I|shtypes.idl|1
+  I|structuredquery.idl|1
+ F|prsht.idl|0|0|1CFBC5FFA0B6700
+  I|wtypes.idl|1
+ F|recalc.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|oleidl.h|1
- F|recalc.idl|0|0|1CB750EB06B3900
+ F|recalc.idl|0|0|1CFBC5FFA0B6700
   I|oaidl.idl|1
   I|oleidl.idl|1
- F|regstr.h|4|0|1CB750EB06B3900
- F|rowpos.h|4|0|1CB750EB06B3900
+ F|regstr.h|4|0|1CFBC5FFA0B6700
+ F|rowpos.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|safeocx.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|urlmon.h|1
- F|safeocx.idl|0|0|1CB750EB06B3900
-  I|unknwn.idl|1
-  I|wtypes.idl|1
-  I|urlmon.idl|1
- F|scrptids.h|4|0|1CB750EB06B3900
- F|search.h|4|0|1CB750EB06B3900
- F|servprov.h|4|0|1CB750EB06B3900
+ F|scrptids.h|4|0|1CFBC5FFA0B6700
+ F|servprov.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
- F|servprov.idl|0|0|1CB750EB06B3900
+ F|servprov.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
- F|shappmgr.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
-  I|appmgmt.h|1
- F|sherrors.h|4|0|1CB750EB06B3900
+ F|sherrors.h|4|0|1CFBC5FFA0B6700
   I|winerror.h|0
- F|shimgdata.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oleidl.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|shldisp.h|4|0|1CB750EB06B3900
+ F|shldisp.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|ocidl.h|1
- F|shlguid.h|4|0|1CB750EB06B3900
+ F|shlguid.h|4|0|1CFBC5FFA0B6700
   I|isguids.h|0
   I|exdisp.h|0
   I|shldisp.h|0
   I|knownfolders.h|0
- F|shlobj.h|4|0|1CB750EB06B3900
+ F|shlobj.h|4|0|1CFBC5FFA0B6700
   I|ole2.h|0
   I|prsht.h|0
   I|commctrl.h|0
@@ -4314,13 +3740,13 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|pshpack1.h|0
   I|pshpack8.h|0
   I|poppack.h|0
- F|shlwapi.h|4|0|1CB750EB06B3900
+ F|shlwapi.h|4|0|1CFBC5FFA0B6700
   I|SpecStrings.h|0
   I|objbase.h|0
   I|shtypes.h|0
   I|pshpack8.h|0
   I|poppack.h|0
- F|shobjidl.h|4|0|1CB750EB06B3900
+ F|shobjidl.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4339,36 +3765,45 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|poppack.h|0
   I|commctrl.h|0
   I|pshpack1.h|0
- F|shtypes.h|4|0|1CB750EB06B3900
+ F|shobjidl.idl|0|0|1CFBC5FFA0B6700
+  I|objidl.idl|1
+  I|oleidl.idl|1
+  I|oaidl.idl|1
+  I|docobj.idl|1
+  I|shtypes.idl|1
+  I|servprov.idl|1
+  I|comcat.idl|1
+  I|prsht.idl|1
+  I|msxml.idl|1
+  I|wtypes.idl|1
+  I|propsys.idl|1
+  I|structuredquery.idl|1
+ F|shtypes.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|wtypes.h|1
   I|pshpack1.h|0
   I|poppack.h|0
   I|pshpack8.h|0
- F|shtypes.idl|0|0|1CB750EB06B3900
+ F|shtypes.idl|0|0|1CFBC5FFA0B6700
   I|wtypes.idl|1
- F|simpdata.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|oaidl.h|1
- F|softpub.h|4|0|1CB750EB06B3900
+ F|softpub.h|4|0|1CFBC5FFA0B6700
   I|wintrust.h|1
   I|pshpack8.h|0
   I|poppack.h|0
- F|structuredquery.h|4|0|1CB750EB06B3900
+ F|structuredquery.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|structuredquery.idl|0|0|1CB750EB06B3900
+ F|structuredquery.idl|0|0|1CFBC5FFA0B6700
   I|oaidl.idl|1
   I|ocidl.idl|1
   I|objidl.idl|1
   I|propidl.idl|1
- F|tlog.h|4|0|1CB750EB06B3900
+ F|tlog.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4377,7 +3812,7 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|shtypes.h|1
   I|tlogstg.h|1
   I|shdeprecated.h|1
- F|tlogstg.h|4|0|1CB750EB06B3900
+ F|tlogstg.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4385,8 +3820,8 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|objidl.h|1
   I|oleidl.h|1
   I|shtypes.h|1
- F|unaligned.hpp|4|0|1CB750EB06B3900
- F|urlhist.h|4|0|1CB750EB06B3900
+ F|unaligned.hpp|4|0|1CFBC5FFA0B6700
+ F|urlhist.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4395,13 +3830,13 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|oleidl.h|1
   I|oaidl.h|1
   I|docobj.h|1
- F|urlhist.idl|0|0|1CB750EB06B3900
+ F|urlhist.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
   I|oaidl.idl|1
   I|docobj.idl|1
   I|servprov.idl|1
- F|urlmon.h|4|0|1CB750EB06B3900
+ F|urlmon.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4410,179 +3845,69 @@ D|C:\WINCE700\public\ie7\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|oleidl.h|1
   I|servprov.h|1
   I|msxml.h|1
- F|urlmon.idl|0|0|1CB750EB06B3900
+ F|urlmon.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
   I|servprov.idl|1
   I|msxml.idl|1
- F|urlmonui.h|4|0|1CB750EB06B3900
- F|urltrack.h|4|0|1CB750EB06B3900
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oleidl.h|1
- F|urltrack.idl|0|0|1CB750EB06B3900
-  I|oleidl.idl|1
- F|uxtheme.h|4|0|1CB750EB06B3900
-  I|commctrl.h|0
-  I|SpecStrings.h|0
- F|vervec.h|4|0|1CB750EB06B3900
+ F|urlmonui.h|4|0|1CFBC5FFA0B6700
+ F|vervec.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
   I|oleidl.h|1
- F|vervec.idl|0|0|1CB750EB06B3900
+ F|vervec.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
- F|vsstyle.h|4|0|1CB750EB06B3900
- F|vssym32.h|4|0|1CB750EB06B3900
-  I|VSStyle.h|1
- F|wab.h|4|0|1CB750EB06B3900
-  I|wabdefs.h|0
-  I|wabcode.h|0
-  I|wabtags.h|0
-  I|wabutil.h|0
-  I|wabiab.h|0
-  I|wabapi.h|0
-  I|wabmem.h|0
-  I|wabnot.h|0
- F|wabapi.h|4|0|1CB750EB06B3900
- F|wabcode.h|4|0|1CB750EB06B3900
-  I|objerror.h|0
- F|wabdefs.h|4|0|1CB750EB06B3900
-  I|windef.h|0
-  I|winnt.h|0
-  I|objerror.h|0
-  I|objbase.h|0
-  I|stddef.h|0
-  I|limits.h|1
- F|wabiab.h|4|0|1CB750EB06B3900
- F|wabmem.h|4|0|1CB750EB06B3900
- F|wabnot.h|4|0|1CB750EB06B3900
- F|wabtags.h|4|0|1CB750EB06B3900
- F|wabutil.h|4|0|1CB750EB06B3900
- F|webevnts.h|4|0|1CB750EB06B3900
+ F|webevnts.h|4|0|1CFBC5FFA0B6700
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
   I|oleidl.h|1
- F|webevnts.idl|0|0|1CB750EB06B3900
+ F|webevnts.idl|0|0|1CFBC5FFA0B6700
   I|objidl.idl|1
   I|oleidl.idl|1
- F|wincrypt.idl|0|0|1CB750EB06B3900
-  I|wincrypt.h|1
- F|wininet.h|4|0|1CB750EB06B3900
+ F|wininet.h|4|0|1CFBC5FFA0B6700
   I|SpecStrings.h|0
   I|pshpack8.h|0
   I|pshpack4.h|0
   I|poppack.h|0
- F|winineti.h|4|0|1CB750EB06B3900
+ F|winineti.h|4|0|1CFBC5FFA0B6700
   I|iedial.h|0
   I|schannel.h|0
   I|sspi.h|0
- F|xmldom.idl|0|0|1CB750EB06B3900
+ F|xmldom.idl|0|0|1CFBC5FFA0B6700
   I|ocidl.idl|1
   I|xmldomdid.h|1
   I|idispids.h|0
- F|xmldomdid.h|4|0|1CB750EB06B3900
- F|xmldso.idl|0|0|1CB750EB06B3900
+ F|xmldomdid.h|4|0|1CFBC5FFA0B6700
+ F|xmldso.idl|0|0|1CFBC5FFA0B6700
   I|wtypes.idl|1
   I|ocidl.idl|1
   I|idispids.h|0
   I|xmldsodid.h|1
- F|xmldsodid.h|4|0|1CB750EB06B3900
- F|xmlparser.h|4|0|1CBADD650C6BF00
+ F|xmldsodid.h|4|0|1CFBC5FFA0B6700
+ F|xmlparser.h|4|0|1D05B4527106000
   I|rpc.h|1
   I|rpcndr.h|1
   I|unknwn.h|1
   I|objidl.h|1
   I|oaidl.h|1
- F|xmlparser.idl|0|0|1CB75051652C300
+ F|xmlparser.idl|0|0|1CFBC5D0D690300
   I|unknwn.idl|1
   I|wtypes.idl|1
   I|objidl.idl|1
   I|oaidl.idl|1
 
-D|C:\WINCE700\public\rdp\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|debug.h|4|0|1CB750F0FC94900
-  I|windows.h|0
- F|oem_settings.h|4|0|1CB750F0FC94900
- F|passwordmanager.hpp|4|0|1CB750F0FC94900
-  I|windows.h|0
-  I|string.hxx|0
- F|pictorappmessages.hpp|4|0|1CB750F0FC94900
-  I|PictorWMMessages.h|1
- F|pictoripaddressstring.hpp|4|0|1CB750F0FC94900
-  I|winsock2.h|1
-  I|string.hxx|1
-  I|iphlpapi.h|1
-  I|auto_xxx.hxx|0
- F|pictorservice.h|4|0|1CB750F0FC94900
- F|pictorwmmessages.h|4|0|1CB750F0FC94900
- F|projectorinfo.hpp|4|0|1CB750F0FC94900
-  I|string.hxx|1
- F|tsccerts.h|4|0|1CB750F0FC94900
- F|tsperf.h|4|0|1CB750F0FC94900
-
-D|C:\WINCE700\public\rdp\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|cchannel.h|4|0|1CB750F135CD000
-  I|pchannel.h|0
- F|mstsax.h|4|0|1CB750F135CD000
+D|C:\wince800\public\servers\oak\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|cfgdata.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|pchannel.h|4|0|1CB750F135CD000
- F|tscctrl.h|4|0|1CB750F135CD000
- F|tsvirtualchannels.h|4|0|1CB750F135CD000
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|unknwn.h|1
-  I|oaidl.h|1
-  I|ocidl.h|1
- F|tsvirtualchannels.idl|0|0|1CB750F135CD000
-  I|unknwn.idl|1
-  I|oaidl.idl|1
-  I|ocidl.idl|1
-
-D|C:\WINCE700\public\servers\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|av_dcp.h|4|0|1CBADD92B878000
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
- F|av_dcp.idl|0|0|1CB7506BB21D000
-  I|oaidl.idl|1
- F|av_upnp.h|4|0|1CBADD92B878000
-  I|atlbase.h|0
-  I|atlcom.h|0
-  I|upnp.h|0
-  I|upnphost.h|0
-  I|av_dcp.h|1
-  I|string.hxx|0
-  I|hash_map.hxx|0
-  I|hash_set.hxx|0
-  I|sync.hxx|0
-  I|auto_xxx.hxx|0
-  I|av_upnp_internal.h|1
-  I|av_upnp_impl.h|1
- F|av_upnp_impl.h|4|0|1CBADD92B878000
-  I|variant.h|0
- F|av_upnp_internal.h|4|0|1CBADD92B878000
- F|cfgdata.h|4|0|1CBADD92F1B0700
-  I|rpc.h|1
-  I|rpcndr.h|1
- F|cfgmgr.h|4|0|1CBADD9304C3400
+ F|cfgmgr.h|4|0|1D05B46F6C9C100
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4591,55 +3916,54 @@ D|C:\WINCE700\public\servers\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|cfgdata.h|1
   I|cmgruri.h|1
   I|cfgmgrapi.h|0
- F|cfgmgr2err.h|4|0|1CB750F2D96AE00
- F|cfgmgr2prop.h|4|0|1CB750F2D96AE00
- F|cmgruri.h|4|0|1CBADD9317D6100
+ F|cfgmgr2err.h|4|0|1CFBC5FFD9EEE00
+ F|cfgmgr2prop.h|4|0|1CFBC5FFD9EEE00
+ F|cmgruri.h|4|0|1D05B46F6C9C100
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|unknwn.h|1
   I|oaidl.h|1
- F|scdefs.hxx|4|0|1CB750F2D96AE00
+ F|scdefs.hxx|4|0|1CFBC5FFD9EEE00
   I|bldver.h|0
- F|upnpdevapi.h|4|0|1CB750F2D96AE00
+ F|upnpdevapi.h|4|0|1CFBC5FFD9EEE00
 
-D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|asp.h|4|0|1CBADD92A565300
+D|C:\wince800\public\servers\sdk\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|asp.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|conn.idl|0|0|1CBADD92DE9DA00
+ F|conn.idl|0|0|1D05B46F5989400
   I|ConnGuid.h|1
- F|httpext.h|4|0|1CB750F2EC7DB00
+ F|httpext.h|4|0|1CFBC5FFED01B00
   I|windows.h|0
   I|wincrypt.h|0
- F|httpfilt.h|4|0|1CB750F2EC7DB00
- F|isaresponse.h|4|0|1CBADD92DE9DA00
+ F|httpfilt.h|4|0|1CFBC5FFED01B00
+ F|isaresponse.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
- F|isaresponse.idl|0|0|1CBADD92DE9DA00
+ F|isaresponse.idl|0|0|1D05B46F5989400
   I|oaidl.idl|1
   I|isarespguid.h|1
   I|IdlUtils.h|1
   I|SoapVer.h|1
- F|mq.h|4|0|1CB750F2EC7DB00
- F|mqmgmt.h|4|0|1CB750F2EC7DB00
- F|mqoai.h|4|0|1CB750F2EC7DB00
- F|mssoap.h|4|0|1CBADD92DE9DA00
+ F|mq.h|4|0|1CFBC5FFED01B00
+ F|mqmgmt.h|4|0|1CFBC5FFED01B00
+ F|mssoap.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|msxml2.h|1
- F|mssoap.idl|0|0|1CBADD92DE9DA00
+ F|mssoap.idl|0|0|1D05B46F5989400
   I|oaidl.idl|1
   I|IdlUtils.h|1
   I|SoapVer.h|1
@@ -4650,7 +3974,7 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|soapmsg.idl|1
   I|wsdl.idl|1
   I|soaperr.idl|1
- F|obex.h|4|0|1CBADD92A565300
+ F|obex.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4658,54 +3982,34 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|oaidl.h|1
   I|ocidl.h|1
   I|obexerr.h|0
- F|obex.idl|0|0|1CB7506B52BEF00
+ F|obex.idl|0|0|1CFBC5D2B366800
   I|oaidl.idl|1
   I|ocidl.idl|1
- F|obexerr.h|4|0|1CB750F2FF90800
- F|obexparser.h|4|0|1CB750F2FF90800
+ F|obexerr.h|4|0|1CFBC5FFED01B00
+ F|obexparser.h|4|0|1CFBC5FFED01B00
   I|svsutil.hxx|0
- F|obexserver.h|4|0|1CB750F2FF90800
+ F|obexserver.h|4|0|1CFBC5FFED01B00
   I|ws2bth.h|0
- F|smbconfig.h|4|0|1CBADD92B878000
- F|soaperr.idl|0|0|1CBADD92F1B0700
+ F|soaperr.idl|0|0|1D05B46F5989400
   I|SoapMsgIds.h|1
- F|soapmsg.idl|0|0|1CBADD92DE9DA00
+ F|soapmsg.idl|0|0|1D05B46F5989400
   I|soapmsgids.h|1
- F|soapreader.idl|0|0|1CBADD92DE9DA00
+ F|soapreader.idl|0|0|1D05B46F5989400
   I|soapreaderguid.h|1
   I|msxml2.idl|1
- F|soapserializer.idl|0|0|1CBADD92DE9DA00
+ F|soapserializer.idl|0|0|1D05B46F5989400
   I|soapserguid.h|1
- F|svslog.hxx|4|0|1CB750F2FF90800
- F|upnp.h|4|0|1CBADD92B878000
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
- F|upnp.idl|0|0|1CB7506BC52FD00
-  I|idispids.h|0
-  I|oaidl.idl|1
- F|upnphost.h|4|0|1CBADD92B878000
-  I|rpc.h|1
-  I|rpcndr.h|1
-  I|windows.h|1
-  I|ole2.h|1
-  I|oaidl.h|1
- F|upnphost.idl|0|0|1CB7506BC52FD00
-  I|oaidl.idl|1
- F|webproxy.h|4|0|1CB750F2FF90800
-  I|winsock.h|0
- F|wisc.h|4|0|1CBADD92DE9DA00
+ F|svslog.hxx|4|0|1CFBC5FFED01B00
+ F|wisc.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|oaidl.h|1
- F|wisc.idl|0|0|1CBADD92DE9DA00
+ F|wisc.idl|0|0|1D05B46F5989400
   I|oaidl.idl|1
   I|ConnGuid.h|1
   I|IdlUtils.h|1
   I|SoapVer.h|1
- F|wsdapi.h|4|0|1CB750F2FF90800
+ F|wsdapi.h|4|0|1CFBC5FFED01B00
   I|wsdbase.h|0
   I|wsdattachment.h|0
   I|wsdxml.h|0
@@ -4715,23 +4019,23 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|wsdtypes.h|0
   I|wsdutil.h|0
   I|wsdns.h|0
- F|wsdattachment.h|4|0|1CBADD965F11D00
+ F|wsdattachment.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
- F|wsdattachment.idl|0|0|1CBADD964BFF000
+ F|wsdattachment.idl|0|0|1D05B470517DD00
   I|objidl.idl|1
- F|wsdbase.h|4|0|1CBADD965F11D00
+ F|wsdbase.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|objidl.h|1
- F|wsdbase.idl|0|0|1CBADD964BFF000
+ F|wsdbase.idl|0|0|1D05B470517DD00
   I|objidl.idl|1
- F|wsdclient.h|4|0|1CBADD965F11D00
+ F|wsdclient.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4740,12 +4044,12 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|ocidl.h|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsdclient.idl|0|0|1CBADD964BFF000
+ F|wsdclient.idl|0|0|1D05B470517DD00
   I|oaidl.idl|1
   I|ocidl.idl|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsddisco.h|4|0|1CBADD965F11D00
+ F|wsddisco.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4753,11 +4057,11 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|objidl.h|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsddisco.idl|0|0|1CBADD964BFF000
+ F|wsddisco.idl|0|0|1D05B470517DD00
   I|objidl.idl|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsdhost.h|4|0|1CBADD965F11D00
+ F|wsdhost.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
@@ -4766,55 +4070,42 @@ D|C:\WINCE700\public\servers\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|ocidl.h|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsdhost.idl|0|0|1CBADD964BFF000
+ F|wsdhost.idl|0|0|1D05B470517DD00
   I|oaidl.idl|1
   I|ocidl.idl|1
   I|wsdxmldom.h|1
   I|wsdtypes.h|1
- F|wsdl.idl|0|0|1CBADD92DE9DA00
+ F|wsdl.idl|0|0|1D05B46F5989400
   I|wsdlguid.h|1
- F|wsdns.h|4|0|1CB750F2FF90800
- F|wsdtypes.h|4|0|1CB750F2FF90800
- F|wsdutil.h|4|0|1CB750F2FF90800
- F|wsdxml.h|4|0|1CBADD965F11D00
+ F|wsdns.h|4|0|1CFBC5FFED01B00
+ F|wsdtypes.h|4|0|1CFBC5FFED01B00
+ F|wsdutil.h|4|0|1CFBC5FFED01B00
+ F|wsdxml.h|4|0|1D05B470517DD00
   I|rpc.h|1
   I|rpcndr.h|1
   I|windows.h|1
   I|ole2.h|1
   I|oaidl.h|1
   I|ocidl.h|1
- F|wsdxml.idl|0|0|1CBADD964BFF000
+ F|wsdxml.idl|0|0|1D05B470517DD00
   I|oaidl.idl|1
   I|ocidl.idl|1
- F|wsdxmldom.h|4|0|1CB750F2FF90800
- F|xhsc.h|4|0|1CBADD92DE9DA00
+ F|wsdxmldom.h|4|0|1CFBC5FFED01B00
+ F|xhsc.h|4|0|1D05B46F5989400
   I|rpc.h|1
   I|rpcndr.h|1
   I|oaidl.h|1
- F|xhsc.idl|0|0|1CBADD92DE9DA00
+ F|xhsc.idl|0|0|1D05B46F5989400
   I|oaidl.idl|1
   I|ConnGuid.h|1
   I|IdlUtils.h|1
   I|SoapVer.h|1
 
-D|C:\WINCE700\public\shell\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|appnav.h|4|0|1CB750F430BD800
- F|restricted.h|4|0|1CB750F430BD800
- F|shcore.h|4|0|1CB750F430BD800
+D|C:\wince800\public\shell\oak\inc\|a000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|shcore.h|4|0|1CFBC6004C5FC00
   I|windows.h|0
   I|shtypes.h|0
- F|shdisp.h|4|0|1CB750F430BD800
- F|tpcuserp.h|4|0|1CB750F430BD800
- F|trumpdat.h|4|0|1CB750F430BD800
-
-D|C:\WINCE700\public\shellsdk\sdk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|aygshell.h|4|0|1CB750F54ED7B00
-  I|shellsdk.h|0
-  I|shlobj.h|0
- F|shellsdkguids.h|4|0|1CB750F54ED7B00
-
-D|C:\WINCE700\public\wceshellfe\oak\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|dwdmptxt.h|4|0|1CB75100B516000
- F|dwui.h|4|0|1CB75100B516000
- F|shellcb.h|4|0|1CB75100B516000
+ F|shdisp.h|4|0|1CFBC6004C5FC00
+ F|tpcuserp.h|4|0|1CFBC6004C5FC00
+ F|trumpdat.h|4|0|1CFBC6004C5FC00
 

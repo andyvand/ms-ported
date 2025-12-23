@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{07212670-5552-44b9-a31c-2de6f2a9b664}</ProjectGuid>
+    <RootNamespace>uafxcwce (QEMU)</RootNamespace>
+    <DefaultLanguage>$currentuiculturename$</DefaultLanguage>
+    <MinimumVisualStudioVersion>12.00</MinimumVisualStudioVersion>
+    <EnableRedirectPlatform>false</EnableRedirectPlatform>
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>CE800</PlatformToolset>
+  </PropertyGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+
+  <PropertyGroup Label="UserMacros" />
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WIN32_WCE=0x800;UNDER_CE=0x800;WINCE;DEBUG;_WINDOWS;$(ARCHFAM);$(_ARCHFAM_);_UNICODE;UNICODE;STANDARDSHELL_UI_MODEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/showIncludes %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(_WINCEROOT)\public\common\sdk\inc;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWSCE,"8.00" /NODEFAULTLIB %(AdditionalOptions)</AdditionalOptions>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;WINCE;_UNICODE;UNICODE;_WIN32_WCE=0x800;UNDER_CE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(_WINCEROOT)\public\common\sdk\inc;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>NDEBUG;_WIN32_WCE=$(CEVER);UNDER_CE=$(CEVER);WINCE;_WINDOWS;$(ARCHFAM);$(_ARCHFAM_);_UNICODE;UNICODE;STANDARDSHELL_UI_MODEL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/showIncludes %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(_WINCEROOT)\public\common\sdk\inc;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/SUBSYSTEM:WINDOWSCE,"8.00" /NODEFAULTLIB %(AdditionalOptions)</AdditionalOptions>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_UNICODE;WINCE;UNICODE;_WIN32_WCE;UNDER_CE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(_WINCEROOT)\public\common\sdk\inc;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+
+  <PropertyGroup>
+    <UseDefaultProjectTools>false</UseDefaultProjectTools>
+  </PropertyGroup>
+
+  <ItemGroup Condition="('$(ConfigurationType)' == 'Application' or '$(ConfigurationType)' == 'DynamicLibrary')">
+    <ProjectTools Include="Link"/>
+    <ProjectTools Include="ResourceCompile"/>
+    <ProjectTools Include="Bscmake"/>
+    <ProjectTools Include="Xdcmake"/>
+    <ProjectTools Include="CustomBuildStep"/>
+  </ItemGroup>
+</Project>
+

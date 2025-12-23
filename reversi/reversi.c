@@ -238,19 +238,10 @@ VOID NEAR PASCAL RevCreate(
 register HWND   hWindow)
 {
   register HDC  hDC;
-#if WINVER >= 0x0400
-  HRGN          hrgn = { 0 };
-#endif
   TEXTMETRIC    charsize;           /* characteristics of the characters */
 
   MessageOn   = FALSE;
-
-#if WINVER >= 0x0400
-  GetWindowRgn(hWindow, hrgn);
-  hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
   hDC = GetDC(hWindow);
-#endif
 
   GetTextMetrics(hDC, (LPTEXTMETRIC)&charsize);
 
@@ -717,12 +708,7 @@ VOID NEAR PASCAL ShowBestMove(HWND hwnd)
 
   UpdateCursor(hwnd);
 
-#if WINVER >= 0x0400
-  GetWindowRgn(hwnd, hrgn);
-  hdc = GetDCEx(hwnd, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
   hdc = GetDC(hwnd);
-#endif
 
   x = x * xExt + Bx + 2 * ASPECT;
   y = y * yExt + By + 2;
@@ -1046,12 +1032,7 @@ INT NEAR PASCAL ChangeRev(HINSTANCE hInstance, HWND hWindow)
 
 	DeleteObject (hbrPat);
 
-#if WINVER >= 0x0400
-	GetWindowRgn(hWindow, hrgn);
-	hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
 	hDC = GetDC(hWindow);
-#endif
 
 	if (COLOR == FALSE)
 	{
@@ -1092,7 +1073,6 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 {
 #if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
 	WNDCLASSEX   pRevClass = { 0 };
-	HRGN         hrgn = { 0 };
 #else
 	WNDCLASS     pRevClass = { 0 };
 #endif
@@ -1100,10 +1080,6 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 	HDC          hdc;
 	TEXTMETRIC   tm;
 
-#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
-	GetWindowRgn(GetDesktopWindow(), hrgn);
-	hdc = GetDCEx(NULL, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
 	hdc = GetDC(NULL);
 
 	COLOR = (GetDeviceCaps(hdc, NUMCOLORS) > 2);
@@ -1112,7 +1088,6 @@ INT NEAR PASCAL RevInit (HINSTANCE hInstance)
 		ASPECT = 2;
 	else
 		ASPECT = 1;
-#endif
 
 	if (GetDeviceCaps(hdc, NUMCOLORS) == 2)
 		COLOR = FALSE;
@@ -1310,12 +1285,7 @@ INT             idval)
       case NEW:
           SetWindowText(hWindow , szReversi);
           ffirstmove = TRUE;
-#if WINVER >= 0x0400
-          GetWindowRgn(hWindow, hrgn);
-		  hDisp = hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
           hDisp = hDC = GetDC(hWindow);
-#endif
           fCheated = FALSE;
           SetBkMode(hDisp, OPAQUE);
           ClearMessageTop(hDC);
@@ -1350,12 +1320,7 @@ INT             idval)
       case PASS:
           if (fPass == PASS)
           {
-#if WINVER >= 0x0400
-              GetWindowRgn(hWindow, hrgn);
-			  hDisp = hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
               hDisp = hDC = GetDC(hWindow);
-#endif
               SetBkMode(hDisp, OPAQUE);
               fThinking = TRUE;
               ClearMessageTop(hDC);
@@ -1363,12 +1328,7 @@ INT             idval)
               ReleaseDC(hWindow, hDC);
               hDisp = 0;
               minmax(board, PASS, human, computer, 0, -infin, infin);
-#if WINVER >= 0x0400
-			  GetWindowRgn(hWindow, hrgn);
-			  hDisp = hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
               hDisp = hDC = GetDC(hWindow);
-#endif
               paintmove(board[0], BestMove[0], (BYTE)computer, (BYTE)human);
               gameover(hWindow, hDC, board, BestMove[0]);
               SetCursor(curIllegal);
@@ -1450,12 +1410,7 @@ POINT point)
           fThinking = TRUE;
           SetCursor(curThink);
 
-#if (WINVER >= 0x0400) && !defined(_WIN32_WCE)
-		  GetWindowRgn(hWnd, hrgn);
-		  hDisp = hDC = GetDCEx(hWnd, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
 		  hDisp = hDC = GetDC(hWnd);
-#endif
 
           ClearMessageTop(hDC);
 
@@ -1683,21 +1638,13 @@ UINT_PTR        wParam,
 DWORD           lParam)
 {
   HDC   hDC;
-#if WINVER >= 0x0400
-  HRGN  hrgn = { 0 };
-#endif
   (void)message;
   (void)wParam;
   (void)lParam;
 
   if (flashtimes <= count)
   {
-#if WINVER >= 0x0400
-	  GetWindowRgn(hWindow, hrgn);
-	  hDC = GetDCEx(hWindow, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
       hDC = GetDC(hWindow);
-#endif
       PatBlt(hDC, 0, 0, xscr, charheight, DSTINVERT);
       flashtimes++;
       ReleaseDC(hWindow, hDC);

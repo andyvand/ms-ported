@@ -1,20 +1,38 @@
-BUILD: [Thrd:Sequence:Type  ] Message
-BUILD: [01:0000000603:WARNN ] Warning(s) in directory "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\".
-BUILD: [01:0000000604:WARNN ] wceimpl.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000605:WARNN ] wcedll.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000606:WARNN ] wcedlgsm.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000607:WARNN ] wcedoctm.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000608:WARNN ] wcedoclt.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000609:WARNN ] tooltip.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000610:WARNN ] dumpout.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000611:WARNN ] dumpinit.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000612:WARNN ] dumpflt.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000613:WARNN ] dockstat.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000614:WARNN ] dockcont.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000615:WARNN ] bardock.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000616:WARNN ] afxtrace.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000617:WARNN ] afxinl3.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000618:WARNN ] afxinl2.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000619:WARNN ] afxinl1.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000620:WARNN ] afxdbcs.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000621:WARNN ] afxasert.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
+BUILD: [Thread:SystemTickCount:Type  ] Message
+BUILD: [00:0000000641:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000641:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\private\winceos\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [01:0000022235:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(79) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(109) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(110) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000040750:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp(685) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000063875:WARNN ] wceimpl.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedll.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedlgsm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedoctm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedoclt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063891:WARNN ] tooltip.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpout.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpinit.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpflt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dockstat.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dockcont.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063922:WARNN ] bardock.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063922:WARNN ] afxtrace.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl3.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl2.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl1.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxdbcs.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxasert.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library

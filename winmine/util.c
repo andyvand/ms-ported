@@ -4,7 +4,11 @@
 
 #define  _WINDOWS
 #include <windows.h>
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>   // for HtmlHelp()
+#endif
+
 #include "shellapi.h"   // for ShellAbout
 #include <port1632.h>
 #include <strsafe.h>

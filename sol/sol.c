@@ -1,6 +1,9 @@
 #include "sol.h"
 #include <shellapi.h>  // To pick up ShellAbout()
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>
+#endif
 
 HICON hIconMain = NULL;              // the main freecell icon.
 HICON hImageMain = NULL;             // the main freecell image.

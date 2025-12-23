@@ -8,7 +8,11 @@
 
 #include "windows.h"
 #include <port1632.h>
+
+#ifndef _WIN32_WCE
 #include <htmlhelp.h>
+#endif
+
 #include "math.h"
 #include "pegged.h"
 

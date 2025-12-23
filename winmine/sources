@@ -15,12 +15,12 @@ COMMON_OAK_LIB_PATH=$(_PUBLICROOT)\common\oak\lib\$(_CPUINDPATH)
 COMMON_SDK_LIB_PATH=$(_PUBLICROOT)\common\sdk\lib\$(_CPUINDPATH)
 _COREDLL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\coredll.lib
 _COMMCTRL=$(_COMMONPUBROOT)\exp\lib\$(_CPUINDPATH)\commctrl.lib
-_SHELLCB=$(_PUBLICROOT)\wceshellfe\oak\lib\$(_CPUINDPATH)\shellcb.lib
+_SHELLCB=$(_PUBLICROOT)\shell\exp\lib\$(_CPUINDPATH)\shellsdk.lib
 OS_SDK_INC_PATH=$(_PUBLICROOT)\common\sdk\inc
 _ISVINCPATH=$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\sdk\inc;
 _OEMINCPATH=$(_WINCEROOT)\public\wceshellfe\oak\inc;$(_WINCEROOT)\public\shell\oak\inc;$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\oak\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\oak\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;$(_WINCEROOT)\private\winceos\inc;$(_WINCEROOT)\public\common\sdk\inc\test
 
-CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -D_WIN32_WCE=1 -DUNDER_CE=0x700
+CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -D_WIN32_WCE=800 -DUNDER_CE=0x800
 INCLUDES=.;..;$(OS_SDK_INC_PATH);$(_ISVINCPATH);$(_OEMINCPATH)
 
 TARGETLIBS= \

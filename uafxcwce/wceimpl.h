@@ -113,10 +113,13 @@ typedef UINT    UWORD;
 #define strtod       wcstod
 #define _tcsdec      _wcsdec
 #define _tcsinc      _wcsinc
+
+#if _WIN32_WCE < 800
 __inline wchar_t * __cdecl _wcsdec(const wchar_t * start, const wchar_t * current)
 	{ return (wchar_t *) ( (start>=current) ? NULL : (current-1) ); }
 __inline wchar_t * __cdecl _wcsinc(const wchar_t * _pc) { return (wchar_t *)(_pc+1); }
 __inline size_t    __cdecl _tclen( const wchar_t *_cpc) { return 2; } // for UNICODE
+#endif
 
 // Missing definitions: not necessary equal to their Win32 values 
 // (the goal is to just have a clean compilation of MFC)

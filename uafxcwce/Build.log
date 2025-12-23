@@ -1,671 +1,894 @@
-BUILD: [Thrd:Sequence:Type  ] Message
-BUILD: [00:0000000000:PROGC ] Build started with parameters: -c
-BUILD: [00:0000000001:PROGC ] Build started in directory: C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce
-BUILD: [00:0000000002:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, PRECOMPHEADER, COMPILE, LOCALIZE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
-BUILD: [00:0000000003:PROGC ] Ignoring build database (-c specified).
-BUILD: [00:0000000004:PROGC ] Computing include file dependencies:
-BUILD: [00:0000000005:PROG  ] Waiting for 1 worker threads.
-BUILD: [01:0000000006:PROGC ] Scan C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\
-BUILD: [01:0000000007:PROGC ] ReadSourcesFiles for project C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\.
-BUILD: [00:0000000008:PROGC ] Directory scanning complete.
-BUILD: [00:0000000009:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
-BUILD: [00:0000000010:INFO  ] Done.
-BUILD: [00:0000000011:PROGC ] Saving Master Database complete.
-BUILD: [00:0000000012:PROGC ] Starting WCEFILES0 Pass.
-BUILD: [00:0000000013:PROGC ] Analyzing project dependency information for pass WCEFILES0.
-BUILD: [00:0000000014:PROGC ] Starting MIDL Pass.
-BUILD: [00:0000000015:PROGC ] Analyzing project dependency information for pass MIDL.
-BUILD: [00:0000000016:PROGC ] Starting MC Pass.
-BUILD: [00:0000000017:PROGC ] Analyzing project dependency information for pass MC.
-BUILD: [00:0000000018:PROGC ] Starting ASN Pass.
-BUILD: [00:0000000019:PROGC ] Analyzing project dependency information for pass ASN.
-BUILD: [00:0000000020:PROGC ] Starting THUNK Pass.
-BUILD: [00:0000000021:PROGC ] Analyzing project dependency information for pass THUNK.
-BUILD: [00:0000000022:PROGC ] Starting PRECOMPHEADER Pass.
-BUILD: [00:0000000023:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
-BUILD: [00:0000000024:PROGC ] Starting COMPILE Pass.
-BUILD: [00:0000000025:PROGC ] Analyzing project dependency information for pass COMPILE.
-BUILD: [00:0000000026:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxabort.cpp because target: obj\ARMV7\retail\afxabort.obj is missing.
-BUILD: [00:0000000027:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxasert.cpp because target: obj\ARMV7\retail\afxasert.obj is missing.
-BUILD: [00:0000000028:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxcrit.cpp because target: obj\ARMV7\retail\afxcrit.obj is missing.
-BUILD: [00:0000000029:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxdbcs.cpp because target: obj\ARMV7\retail\afxdbcs.obj is missing.
-BUILD: [00:0000000030:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxinl1.cpp because target: obj\ARMV7\retail\afxinl1.obj is missing.
-BUILD: [00:0000000031:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxinl2.cpp because target: obj\ARMV7\retail\afxinl2.obj is missing.
-BUILD: [00:0000000032:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxinl3.cpp because target: obj\ARMV7\retail\afxinl3.obj is missing.
-BUILD: [00:0000000033:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxmem.cpp because target: obj\ARMV7\retail\afxmem.obj is missing.
-BUILD: [00:0000000034:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxstate.cpp because target: obj\ARMV7\retail\afxstate.obj is missing.
-BUILD: [00:0000000035:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxtls.cpp because target: obj\ARMV7\retail\afxtls.obj is missing.
-BUILD: [00:0000000036:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\afxtrace.cpp because target: obj\ARMV7\retail\afxtrace.obj is missing.
-BUILD: [00:0000000037:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appcore.cpp because target: obj\ARMV7\retail\appcore.obj is missing.
-BUILD: [00:0000000038:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appdlg.cpp because target: obj\ARMV7\retail\appdlg.obj is missing.
-BUILD: [00:0000000039:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appgray.cpp because target: obj\ARMV7\retail\appgray.obj is missing.
-BUILD: [00:0000000040:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\apphelp.cpp because target: obj\ARMV7\retail\apphelp.obj is missing.
-BUILD: [00:0000000041:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\apphelpx.cpp because target: obj\ARMV7\retail\apphelpx.obj is missing.
-BUILD: [00:0000000042:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appinit.cpp because target: obj\ARMV7\retail\appinit.obj is missing.
-BUILD: [00:0000000043:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appmodul.cpp because target: obj\ARMV7\retail\appmodul.obj is missing.
-BUILD: [00:0000000044:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appprnt.cpp because target: obj\ARMV7\retail\appprnt.obj is missing.
-BUILD: [00:0000000045:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appterm.cpp because target: obj\ARMV7\retail\appterm.obj is missing.
-BUILD: [00:0000000046:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appui.cpp because target: obj\ARMV7\retail\appui.obj is missing.
-BUILD: [00:0000000047:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appui1.cpp because target: obj\ARMV7\retail\appui1.obj is missing.
-BUILD: [00:0000000048:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appui2.cpp because target: obj\ARMV7\retail\appui2.obj is missing.
-BUILD: [00:0000000049:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\appui3.cpp because target: obj\ARMV7\retail\appui3.obj is missing.
-BUILD: [00:0000000050:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\arccore.cpp because target: obj\ARMV7\retail\arccore.obj is missing.
-BUILD: [00:0000000051:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\arcex.cpp because target: obj\ARMV7\retail\arcex.obj is missing.
-BUILD: [00:0000000052:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\arcobj.cpp because target: obj\ARMV7\retail\arcobj.obj is missing.
-BUILD: [00:0000000053:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\arcstrm.cpp because target: obj\ARMV7\retail\arcstrm.obj is missing.
-BUILD: [00:0000000054:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_b.cpp because target: obj\ARMV7\retail\array_b.obj is missing.
-BUILD: [00:0000000055:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_d.cpp because target: obj\ARMV7\retail\array_d.obj is missing.
-BUILD: [00:0000000056:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_o.cpp because target: obj\ARMV7\retail\array_o.obj is missing.
-BUILD: [00:0000000057:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_p.cpp because target: obj\ARMV7\retail\array_p.obj is missing.
-BUILD: [00:0000000058:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_s.cpp because target: obj\ARMV7\retail\array_s.obj is missing.
-BUILD: [00:0000000059:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_u.cpp because target: obj\ARMV7\retail\array_u.obj is missing.
-BUILD: [00:0000000060:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\array_w.cpp because target: obj\ARMV7\retail\array_w.obj is missing.
-BUILD: [00:0000000061:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\auxdata.cpp because target: obj\ARMV7\retail\auxdata.obj is missing.
-BUILD: [00:0000000062:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\barcool.cpp because target: obj\ARMV7\retail\barcool.obj is missing.
-BUILD: [00:0000000063:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\barcore.cpp because target: obj\ARMV7\retail\barcore.obj is missing.
-BUILD: [00:0000000064:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\bardlg.cpp because target: obj\ARMV7\retail\bardlg.obj is missing.
-BUILD: [00:0000000065:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\bardock.cpp because target: obj\ARMV7\retail\bardock.obj is missing.
-BUILD: [00:0000000066:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\barstat.cpp because target: obj\ARMV7\retail\barstat.obj is missing.
-BUILD: [00:0000000067:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\bartool.cpp because target: obj\ARMV7\retail\bartool.obj is missing.
-BUILD: [00:0000000068:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ccdata.cpp because target: obj\ARMV7\retail\ccdata.obj is missing.
-BUILD: [00:0000000069:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\cmdtarg.cpp because target: obj\ARMV7\retail\cmdtarg.obj is missing.
-BUILD: [00:0000000070:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgclr.cpp because target: obj\ARMV7\retail\dlgclr.obj is missing.
-BUILD: [00:0000000071:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgcomm.cpp because target: obj\ARMV7\retail\dlgcomm.obj is missing.
-BUILD: [00:0000000072:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgcore.cpp because target: obj\ARMV7\retail\dlgcore.obj is missing.
-BUILD: [00:0000000073:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgdata.cpp because target: obj\ARMV7\retail\dlgdata.obj is missing.
-BUILD: [00:0000000074:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgfile.cpp because target: obj\ARMV7\retail\dlgfile.obj is missing.
-BUILD: [00:0000000075:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgfloat.cpp because target: obj\ARMV7\retail\dlgfloat.obj is missing.
-BUILD: [00:0000000076:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgfr.cpp because target: obj\ARMV7\retail\dlgfr.obj is missing.
-BUILD: [00:0000000077:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgprop.cpp because target: obj\ARMV7\retail\dlgprop.obj is missing.
-BUILD: [00:0000000078:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dlgtempl.cpp because target: obj\ARMV7\retail\dlgtempl.obj is missing.
-BUILD: [00:0000000079:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dllmodul.cpp because target: obj\ARMV7\retail\dllmodul.obj is missing.
-BUILD: [00:0000000080:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\doccore.cpp because target: obj\ARMV7\retail\doccore.obj is missing.
-BUILD: [00:0000000081:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dockcont.cpp because target: obj\ARMV7\retail\dockcont.obj is missing.
-BUILD: [00:0000000082:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dockstat.cpp because target: obj\ARMV7\retail\dockstat.obj is missing.
-BUILD: [00:0000000083:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\docmgr.cpp because target: obj\ARMV7\retail\docmgr.obj is missing.
-BUILD: [00:0000000084:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\docsingl.cpp because target: obj\ARMV7\retail\docsingl.obj is missing.
-BUILD: [00:0000000085:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\doctempl.cpp because target: obj\ARMV7\retail\doctempl.obj is missing.
-BUILD: [00:0000000086:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dumpcont.cpp because target: obj\ARMV7\retail\dumpcont.obj is missing.
-BUILD: [00:0000000087:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dumpflt.cpp because target: obj\ARMV7\retail\dumpflt.obj is missing.
-BUILD: [00:0000000088:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dumpinit.cpp because target: obj\ARMV7\retail\dumpinit.obj is missing.
-BUILD: [00:0000000089:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\dumpout.cpp because target: obj\ARMV7\retail\dumpout.obj is missing.
-BUILD: [00:0000000090:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\except.cpp because target: obj\ARMV7\retail\except.obj is missing.
-BUILD: [00:0000000091:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filecore.cpp because target: obj\ARMV7\retail\filecore.obj is missing.
-BUILD: [00:0000000092:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filelist.cpp because target: obj\ARMV7\retail\filelist.obj is missing.
-BUILD: [00:0000000093:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filemem.cpp because target: obj\ARMV7\retail\filemem.obj is missing.
-BUILD: [00:0000000094:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filest.cpp because target: obj\ARMV7\retail\filest.obj is missing.
-BUILD: [00:0000000095:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filetxt.cpp because target: obj\ARMV7\retail\filetxt.obj is missing.
-BUILD: [00:0000000096:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\filex.cpp because target: obj\ARMV7\retail\filex.obj is missing.
-BUILD: [00:0000000097:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\inet.cpp because target: obj\ARMV7\retail\inet.obj is missing.
-BUILD: [00:0000000098:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\list_o.cpp because target: obj\ARMV7\retail\list_o.obj is missing.
-BUILD: [00:0000000099:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\list_p.cpp because target: obj\ARMV7\retail\list_p.obj is missing.
-BUILD: [00:0000000100:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\list_s.cpp because target: obj\ARMV7\retail\list_s.obj is missing.
-BUILD: [00:0000000101:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_pp.cpp because target: obj\ARMV7\retail\map_pp.obj is missing.
-BUILD: [00:0000000102:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_pw.cpp because target: obj\ARMV7\retail\map_pw.obj is missing.
-BUILD: [00:0000000103:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_so.cpp because target: obj\ARMV7\retail\map_so.obj is missing.
-BUILD: [00:0000000104:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_sp.cpp because target: obj\ARMV7\retail\map_sp.obj is missing.
-BUILD: [00:0000000105:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_ss.cpp because target: obj\ARMV7\retail\map_ss.obj is missing.
-BUILD: [00:0000000106:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_wo.cpp because target: obj\ARMV7\retail\map_wo.obj is missing.
-BUILD: [00:0000000107:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\map_wp.cpp because target: obj\ARMV7\retail\map_wp.obj is missing.
-BUILD: [00:0000000108:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\mtcore.cpp because target: obj\ARMV7\retail\mtcore.obj is missing.
-BUILD: [00:0000000109:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\mtex.cpp because target: obj\ARMV7\retail\mtex.obj is missing.
-BUILD: [00:0000000110:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\objcore.cpp because target: obj\ARMV7\retail\objcore.obj is missing.
-BUILD: [00:0000000111:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\olelock.cpp because target: obj\ARMV7\retail\olelock.obj is missing.
-BUILD: [00:0000000112:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\plex.cpp because target: obj\ARMV7\retail\plex.obj is missing.
-BUILD: [00:0000000113:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\sockcore.cpp because target: obj\ARMV7\retail\sockcore.obj is missing.
-BUILD: [00:0000000114:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\strcore.cpp because target: obj\ARMV7\retail\strcore.obj is missing.
-BUILD: [00:0000000115:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\strex.cpp because target: obj\ARMV7\retail\strex.obj is missing.
-BUILD: [00:0000000116:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\thrdcore.cpp because target: obj\ARMV7\retail\thrdcore.obj is missing.
-BUILD: [00:0000000117:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\timecore.cpp because target: obj\ARMV7\retail\timecore.obj is missing.
-BUILD: [00:0000000118:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\tooltip.cpp because target: obj\ARMV7\retail\tooltip.obj is missing.
-BUILD: [00:0000000119:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\trckrect.cpp because target: obj\ARMV7\retail\trckrect.obj is missing.
-BUILD: [00:0000000120:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\validadd.cpp because target: obj\ARMV7\retail\validadd.obj is missing.
-BUILD: [00:0000000121:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewcmn.cpp because target: obj\ARMV7\retail\viewcmn.obj is missing.
-BUILD: [00:0000000122:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewcore.cpp because target: obj\ARMV7\retail\viewcore.obj is missing.
-BUILD: [00:0000000123:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewedit.cpp because target: obj\ARMV7\retail\viewedit.obj is missing.
-BUILD: [00:0000000124:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewform.cpp because target: obj\ARMV7\retail\viewform.obj is missing.
-BUILD: [00:0000000125:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewprnt.cpp because target: obj\ARMV7\retail\viewprnt.obj is missing.
-BUILD: [00:0000000126:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\viewscrl.cpp because target: obj\ARMV7\retail\viewscrl.obj is missing.
-BUILD: [00:0000000127:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winbtn.cpp because target: obj\ARMV7\retail\winbtn.obj is missing.
-BUILD: [00:0000000128:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wincore.cpp because target: obj\ARMV7\retail\wincore.obj is missing.
-BUILD: [00:0000000129:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winctrl1.cpp because target: obj\ARMV7\retail\winctrl1.obj is missing.
-BUILD: [00:0000000130:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winctrl2.cpp because target: obj\ARMV7\retail\winctrl2.obj is missing.
-BUILD: [00:0000000131:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winctrl6.cpp because target: obj\ARMV7\retail\winctrl6.obj is missing.
-BUILD: [00:0000000132:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winfrm.cpp because target: obj\ARMV7\retail\winfrm.obj is missing.
-BUILD: [00:0000000133:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winfrmx.cpp because target: obj\ARMV7\retail\winfrmx.obj is missing.
-BUILD: [00:0000000134:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wingdi.cpp because target: obj\ARMV7\retail\wingdi.obj is missing.
-BUILD: [00:0000000135:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wingdix.cpp because target: obj\ARMV7\retail\wingdix.obj is missing.
-BUILD: [00:0000000136:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winhand.cpp because target: obj\ARMV7\retail\winhand.obj is missing.
-BUILD: [00:0000000137:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winmain.cpp because target: obj\ARMV7\retail\winmain.obj is missing.
-BUILD: [00:0000000138:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winmenu.cpp because target: obj\ARMV7\retail\winmenu.obj is missing.
-BUILD: [00:0000000139:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winocc.cpp because target: obj\ARMV7\retail\winocc.obj is missing.
-BUILD: [00:0000000140:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winsplit.cpp because target: obj\ARMV7\retail\winsplit.obj is missing.
-BUILD: [00:0000000141:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winstr.cpp because target: obj\ARMV7\retail\winstr.obj is missing.
-BUILD: [00:0000000142:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\winutil.cpp because target: obj\ARMV7\retail\winutil.obj is missing.
-BUILD: [00:0000000143:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcealt.cpp because target: obj\ARMV7\retail\wcealt.obj is missing.
-BUILD: [00:0000000144:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcebar.cpp because target: obj\ARMV7\retail\wcebar.obj is missing.
-BUILD: [00:0000000145:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedoclt.cpp because target: obj\ARMV7\retail\wcedoclt.obj is missing.
-BUILD: [00:0000000146:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedoctm.cpp because target: obj\ARMV7\retail\wcedoctm.obj is missing.
-BUILD: [00:0000000147:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedb.cpp because target: obj\ARMV7\retail\wcedb.obj is missing.
-BUILD: [00:0000000148:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedlgfr.cpp because target: obj\ARMV7\retail\wcedlgfr.obj is missing.
-BUILD: [00:0000000149:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedlgpr.cpp because target: obj\ARMV7\retail\wcedlgpr.obj is missing.
-BUILD: [00:0000000150:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedlgsm.cpp because target: obj\ARMV7\retail\wcedlgsm.obj is missing.
-BUILD: [00:0000000151:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcedll.cpp because target: obj\ARMV7\retail\wcedll.obj is missing.
-BUILD: [00:0000000152:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wceimpl.cpp because target: obj\ARMV7\retail\wceimpl.obj is missing.
-BUILD: [00:0000000153:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcesock.cpp because target: obj\ARMV7\retail\wcesock.obj is missing.
-BUILD: [00:0000000154:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcethunk.cpp because target: obj\ARMV7\retail\wcethunk.obj is missing.
-BUILD: [00:0000000155:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\wcetime.cpp because target: obj\ARMV7\retail\wcetime.obj is missing.
-BUILD: [00:0000000156:PROGC ] Building COMPILE Pass in C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [00:0000000157:PROG  ] 'NMAKE.EXE  clean TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ CLEANBUILD=1 NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
-BUILD: [00:0000000158:PROG  ] Waiting for 1 worker threads.
-BUILD: [01:0000000159:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.default
-BUILD: [01:0000000160:INFO  ] makefile.def: BUILDROOT is C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\
-BUILD: [01:0000000161:INFO  ] makefile.def: Including C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\sources
-BUILD: [01:0000000162:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.framework.default
-BUILD: [01:0000000163:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.CE
-BUILD: [01:0000000164:INFO  ] Directory: C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce
-BUILD: [01:0000000165:INFO  ] TARGETNAME: uafxwce
-BUILD: [01:0000000166:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
-BUILD: [01:0000000167:INFO  ] Stop.
-BUILD: [01:0000000168:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp
-BUILD: [01:0000000169:INFO  ] cl -nologo   -Foobj\ARMV7\retail\  /Gy -c -I. -Iinclude -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\wceshellfe\oak\inc -IC:\WINCE700\public\shell\oak\inc -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\oak\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\oak\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\oak\inc -IC:\WINCE700\public\common\sdk\inc -IC:\WINCE700\public\common\ddk\inc -IC:\WINCE700\private\winceos\inc -IC:\WINCE700\public\common\sdk\inc\test -I. -IC:\WINCE700\public\shellsdk\sdk\inc -IC:\WINCE700\public\rdp\sdk\inc -IC:\WINCE700\public\servers\sdk\inc -IC:\WINCE700\public\ie7\sdk\inc -IC:\WINCE700\public\gdiex\sdk\inc -IC:\WINCE700\public\dcom\sdk\inc -IC:\WINCE700\public\common\sdk\inc -I.\Resource\0409 -Ox -Os -GF -Zi -FdC:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.pdb -DTHUMBSUPPORT -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DUNICODE -D_UNICODE -DUNDER_CE=700 -D_WIN32_WCE=0x700 -DWIN32 -DSTRICT -DARM -DARMV7 -D_ARM_ -D_MIDL_USE_GUIDDEF_ -DNDEBUG=1  -IC:\WINCE700\public\common\sdk\inc -Ob0 -D_WIN32_WCE=700 -DUNDER_CE=0x700 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE -DINTERNATIONAL -DINTLMSG_CODEPAGE=1252 -QRarch7 -QRfpe- -QRinterwork-return -Zi  -Zc:wchar_t- -Zc:forScope- -wd4867 -wd4430 -wd4603 -wd4627 -wd4100 -wd4201 -wd4115 -wd4214 -wd4049 -wd4505 -MT -U_MT /FC -W3     /GR- .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp 
-BUILD: [01:0000000170:INFO  ] afxabort.cpp
-BUILD: [01:0000000171:INFO  ] afxasert.cpp
-BUILD: [01:0000000172:INFO  ] afxcrit.cpp
-BUILD: [01:0000000173:INFO  ] afxdbcs.cpp
-BUILD: [01:0000000174:INFO  ] afxinl1.cpp
-BUILD: [01:0000000175:INFO  ] afxinl2.cpp
-BUILD: [01:0000000176:INFO  ] afxinl3.cpp
-BUILD: [01:0000000177:INFO  ] afxmem.cpp
-BUILD: [01:0000000178:INFO  ] afxstate.cpp
-BUILD: [01:0000000179:INFO  ] afxtls.cpp
-BUILD: [01:0000000180:INFO  ] afxtrace.cpp
-BUILD: [01:0000000181:INFO  ] appcore.cpp
-BUILD: [01:0000000182:INFO  ] appdlg.cpp
-BUILD: [01:0000000183:INFO  ] appgray.cpp
-BUILD: [01:0000000184:INFO  ] apphelp.cpp
-BUILD: [01:0000000185:INFO  ] apphelpx.cpp
-BUILD: [01:0000000186:INFO  ] appinit.cpp
-BUILD: [01:0000000187:INFO  ] appmodul.cpp
-BUILD: [01:0000000188:INFO  ] appprnt.cpp
-BUILD: [01:0000000189:INFO  ] appterm.cpp
-BUILD: [01:0000000190:INFO  ] Generating Code...
-BUILD: [01:0000000191:INFO  ] Compiling...
-BUILD: [01:0000000192:INFO  ] appui.cpp
-BUILD: [01:0000000193:INFO  ] appui1.cpp
-BUILD: [01:0000000194:INFO  ] appui2.cpp
-BUILD: [01:0000000195:INFO  ] appui3.cpp
-BUILD: [01:0000000196:INFO  ] arccore.cpp
-BUILD: [01:0000000197:INFO  ] arcex.cpp
-BUILD: [01:0000000198:INFO  ] arcobj.cpp
-BUILD: [01:0000000199:INFO  ] arcstrm.cpp
-BUILD: [01:0000000200:INFO  ] array_b.cpp
-BUILD: [01:0000000201:INFO  ] array_d.cpp
-BUILD: [01:0000000202:INFO  ] array_o.cpp
-BUILD: [01:0000000203:INFO  ] array_p.cpp
-BUILD: [01:0000000204:INFO  ] array_s.cpp
-BUILD: [01:0000000205:INFO  ] array_u.cpp
-BUILD: [01:0000000206:INFO  ] array_w.cpp
-BUILD: [01:0000000207:INFO  ] auxdata.cpp
-BUILD: [01:0000000208:INFO  ] barcool.cpp
-BUILD: [01:0000000209:INFO  ] barcore.cpp
-BUILD: [01:0000000210:INFO  ] bardlg.cpp
-BUILD: [01:0000000211:INFO  ] bardock.cpp
-BUILD: [01:0000000212:INFO  ] Generating Code...
-BUILD: [01:0000000213:INFO  ] Compiling...
-BUILD: [01:0000000214:INFO  ] barstat.cpp
-BUILD: [01:0000000215:INFO  ] bartool.cpp
-BUILD: [01:0000000216:INFO  ] ccdata.cpp
-BUILD: [01:0000000217:INFO  ] cmdtarg.cpp
-BUILD: [01:0000000218:INFO  ] dlgclr.cpp
-BUILD: [01:0000000219:INFO  ] dlgcomm.cpp
-BUILD: [01:0000000220:INFO  ] dlgcore.cpp
-BUILD: [01:0000000221:INFO  ] dlgdata.cpp
-BUILD: [01:0000000222:INFO  ] dlgfile.cpp
-BUILD: [01:0000000223:INFO  ] dlgfloat.cpp
-BUILD: [01:0000000224:INFO  ] dlgfr.cpp
-BUILD: [01:0000000225:INFO  ] dlgprop.cpp
-BUILD: [01:0000000226:INFO  ] dlgtempl.cpp
-BUILD: [01:0000000227:INFO  ] dllmodul.cpp
-BUILD: [01:0000000228:INFO  ] doccore.cpp
-BUILD: [01:0000000229:INFO  ] dockcont.cpp
-BUILD: [01:0000000230:INFO  ] dockstat.cpp
-BUILD: [01:0000000231:INFO  ] docmgr.cpp
-BUILD: [01:0000000232:INFO  ] docsingl.cpp
-BUILD: [01:0000000233:INFO  ] doctempl.cpp
-BUILD: [01:0000000234:INFO  ] Generating Code...
-BUILD: [01:0000000235:INFO  ] Compiling...
-BUILD: [01:0000000236:INFO  ] dumpcont.cpp
-BUILD: [01:0000000237:INFO  ] dumpflt.cpp
-BUILD: [01:0000000238:INFO  ] dumpinit.cpp
-BUILD: [01:0000000239:INFO  ] dumpout.cpp
-BUILD: [01:0000000240:INFO  ] except.cpp
-BUILD: [01:0000000241:INFO  ] filecore.cpp
-BUILD: [01:0000000242:INFO  ] filelist.cpp
-BUILD: [01:0000000243:INFO  ] filemem.cpp
-BUILD: [01:0000000244:INFO  ] filest.cpp
-BUILD: [01:0000000245:INFO  ] filetxt.cpp
-BUILD: [01:0000000246:INFO  ] filex.cpp
-BUILD: [01:0000000247:INFO  ] inet.cpp
-BUILD: [01:0000000248:INFO  ] list_o.cpp
-BUILD: [01:0000000249:INFO  ] list_p.cpp
-BUILD: [01:0000000250:INFO  ] list_s.cpp
-BUILD: [01:0000000251:INFO  ] map_pp.cpp
-BUILD: [01:0000000252:INFO  ] map_pw.cpp
-BUILD: [01:0000000253:INFO  ] map_so.cpp
-BUILD: [01:0000000254:INFO  ] map_sp.cpp
-BUILD: [01:0000000255:INFO  ] map_ss.cpp
-BUILD: [01:0000000256:INFO  ] Generating Code...
-BUILD: [01:0000000257:INFO  ] Compiling...
-BUILD: [01:0000000258:INFO  ] map_wo.cpp
-BUILD: [01:0000000259:INFO  ] map_wp.cpp
-BUILD: [01:0000000260:INFO  ] mtcore.cpp
-BUILD: [01:0000000261:INFO  ] mtex.cpp
-BUILD: [01:0000000262:INFO  ] objcore.cpp
-BUILD: [01:0000000263:INFO  ] olelock.cpp
-BUILD: [01:0000000264:INFO  ] plex.cpp
-BUILD: [01:0000000265:INFO  ] sockcore.cpp
-BUILD: [01:0000000266:INFO  ] strcore.cpp
-BUILD: [01:0000000267:INFO  ] strex.cpp
-BUILD: [01:0000000268:INFO  ] thrdcore.cpp
-BUILD: [01:0000000269:INFO  ] timecore.cpp
-BUILD: [01:0000000270:INFO  ] tooltip.cpp
-BUILD: [01:0000000271:INFO  ] trckrect.cpp
-BUILD: [01:0000000272:INFO  ] validadd.cpp
-BUILD: [01:0000000273:INFO  ] viewcmn.cpp
-BUILD: [01:0000000274:INFO  ] viewcore.cpp
-BUILD: [01:0000000275:INFO  ] viewedit.cpp
-BUILD: [01:0000000276:INFO  ] viewform.cpp
-BUILD: [01:0000000277:INFO  ] viewprnt.cpp
-BUILD: [01:0000000278:INFO  ] Generating Code...
-BUILD: [01:0000000279:INFO  ] Compiling...
-BUILD: [01:0000000280:INFO  ] viewscrl.cpp
-BUILD: [01:0000000281:INFO  ] winbtn.cpp
-BUILD: [01:0000000282:INFO  ] wincore.cpp
-BUILD: [01:0000000283:INFO  ] winctrl1.cpp
-BUILD: [01:0000000284:INFO  ] winctrl2.cpp
-BUILD: [01:0000000285:INFO  ] winctrl6.cpp
-BUILD: [01:0000000286:INFO  ] winfrm.cpp
-BUILD: [01:0000000287:INFO  ] winfrmx.cpp
-BUILD: [01:0000000288:INFO  ] wingdi.cpp
-BUILD: [01:0000000289:INFO  ] wingdix.cpp
-BUILD: [01:0000000290:INFO  ] winhand.cpp
-BUILD: [01:0000000291:INFO  ] winmain.cpp
-BUILD: [01:0000000292:INFO  ] winmenu.cpp
-BUILD: [01:0000000293:INFO  ] winocc.cpp
-BUILD: [01:0000000294:INFO  ] winsplit.cpp
-BUILD: [01:0000000295:INFO  ] winstr.cpp
-BUILD: [01:0000000296:INFO  ] winutil.cpp
-BUILD: [01:0000000297:INFO  ] wcealt.cpp
-BUILD: [01:0000000298:INFO  ] wcebar.cpp
-BUILD: [01:0000000299:INFO  ] wcedoclt.cpp
-BUILD: [01:0000000300:INFO  ] Generating Code...
-BUILD: [01:0000000301:INFO  ] Compiling...
-BUILD: [01:0000000302:INFO  ] wcedoctm.cpp
-BUILD: [01:0000000303:INFO  ] wcedb.cpp
-BUILD: [01:0000000304:INFO  ] wcedlgfr.cpp
-BUILD: [01:0000000305:INFO  ] wcedlgpr.cpp
-BUILD: [01:0000000306:INFO  ] wcedlgsm.cpp
-BUILD: [01:0000000307:INFO  ] wcedll.cpp
-BUILD: [01:0000000308:INFO  ] wceimpl.cpp
-BUILD: [01:0000000309:INFO  ] wcesock.cpp
-BUILD: [01:0000000310:INFO  ] wcethunk.cpp
-BUILD: [01:0000000311:INFO  ] wcetime.cpp
-BUILD: [01:0000000312:INFO  ] Generating Code...
-BUILD: [00:0000000313:PROGC ] Starting LOCALIZE Pass.
-BUILD: [00:0000000314:PROGC ] Analyzing project dependency information for pass LOCALIZE.
-BUILD: [00:0000000315:PROGC ] Starting RENUMBERICONIDS Pass.
-BUILD: [00:0000000316:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
-BUILD: [00:0000000317:PROGC ] Starting RES2RES Pass.
-BUILD: [00:0000000318:PROGC ] Analyzing project dependency information for pass RES2RES.
-BUILD: [00:0000000319:PROGC ] Starting LIB Pass.
-BUILD: [00:0000000320:PROGC ] Analyzing project dependency information for pass LIB.
-BUILD: [00:0000000321:PROG  ] ' prelink.bat' (SYNCHRONIZE_BLOCK = 0)
-BUILD: [00:0000000322:PROG  ] Waiting for 1 worker threads.
-BUILD: [00:0000000323:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxabort.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000324:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxasert.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000325:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxcrit.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000326:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxdbcs.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000327:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl1.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000328:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl2.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000329:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl3.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000330:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxmem.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000331:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxstate.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000332:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtls.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000333:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtrace.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000334:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000335:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appdlg.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000336:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appgray.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000337:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelp.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000338:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelpx.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000339:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appinit.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000340:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appmodul.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000341:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appprnt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000342:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appterm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000343:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000344:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui1.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000345:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui2.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000346:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui3.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000347:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arccore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000348:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcex.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000349:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcobj.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000350:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcstrm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000351:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_b.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000352:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_d.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000353:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_o.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000354:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_p.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000355:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_s.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000356:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_u.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000357:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_w.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000358:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\auxdata.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000359:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcool.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000360:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000361:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardlg.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000362:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardock.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000363:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barstat.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000364:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bartool.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000365:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\ccdata.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000366:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\cmdtarg.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000367:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgclr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000368:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcomm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000369:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000370:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgdata.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000371:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfile.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000372:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfloat.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000373:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000374:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgprop.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000375:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgtempl.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000376:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dllmodul.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000377:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doccore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000378:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockcont.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000379:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockstat.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000380:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docmgr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000381:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docsingl.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000382:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doctempl.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000383:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpcont.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000384:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpflt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000385:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpinit.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000386:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpout.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000387:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\except.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000388:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filecore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000389:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filelist.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000390:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filemem.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000391:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filest.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000392:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filetxt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000393:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filex.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000394:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\inet.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000395:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_o.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000396:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_p.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000397:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_s.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000398:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pp.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000399:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pw.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000400:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_so.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000401:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_sp.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000402:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_ss.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000403:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wo.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000404:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wp.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000405:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000406:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtex.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000407:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\objcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000408:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\olelock.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000409:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\plex.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000410:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\sockcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000411:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000412:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strex.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000413:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\thrdcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000414:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\timecore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000415:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\tooltip.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000416:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\trckrect.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000417:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\validadd.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000418:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcmn.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000419:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000420:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewedit.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000421:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewform.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000422:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewprnt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000423:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewscrl.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000424:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winbtn.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000425:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wincore.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000426:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl1.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000427:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl2.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000428:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl6.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000429:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000430:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrmx.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000431:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdi.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000432:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdix.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000433:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winhand.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000434:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmain.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000435:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmenu.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000436:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winocc.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000437:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winsplit.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000438:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winstr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000439:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winutil.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000440:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcealt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000441:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcebar.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000442:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoclt.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000443:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoctm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000444:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedb.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000445:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgfr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000446:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgpr.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000447:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgsm.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000448:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedll.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000449:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wceimpl.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000450:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcesock.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000451:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcethunk.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000452:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcetime.obj because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000453:INFO  ] Will Build C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ because target: C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
-BUILD: [00:0000000454:PROGC ] Building LIB Pass in C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [00:0000000455:PROG  ] 'NMAKE.EXE TargetLibFiles  -nologo BUILDMSG=Stop.  BUILDROOT=C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\ CLEANBUILD=1 LINKONLY=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
-BUILD: [00:0000000456:PROG  ] Waiting for 1 worker threads.
-BUILD: [01:0000000457:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.default
-BUILD: [01:0000000458:INFO  ] makefile.def: BUILDROOT is C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\
-BUILD: [01:0000000459:INFO  ] makefile.def: Including C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\sources
-BUILD: [01:0000000460:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.framework.default
-BUILD: [01:0000000461:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\Sources.CE
-BUILD: [01:0000000462:INFO  ] Directory: C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce
-BUILD: [01:0000000463:INFO  ] TARGETNAME: uafxwce
-BUILD: [01:0000000464:INFO  ] makefile.def: Including C:\WINCE700\public\common\oak\misc\sources.ReleaseType_OAK
-BUILD: [01:0000000465:INFO  ] .
-BUILD: [01:0000000466:PROGC ] Linking C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib
-BUILD: [01:0000000467:INFO  ] 	ExpandPaths.bat link -lib  -out:C:\WINCE700\public\\oak\lib\ARMV7\retail\uafxwce.lib -machine:thumb @C:\Users\andyv\AppData\Local\Temp\bld_100282\thr_15\nmC3C7.tmp
-BUILD: [01:0000000468:INFO  ] ExpandPaths.bat: Info: Expanded "C:\Users\andyv\AppData\Local\Temp\bld_100282\thr_15\nmC3C7.tmp"
-BUILD: [01:0000000469:INFO  ] -ignore:4001 
-BUILD: [01:0000000470:INFO  ] -nologo 
-BUILD: [01:0000000471:INFO  ] -nodefaultlib 
-BUILD: [01:0000000472:INFO  ] "/subsystem:windowsce,7.00" 
-BUILD: [01:0000000473:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxabort.obj" 
-BUILD: [01:0000000474:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxasert.obj" 
-BUILD: [01:0000000475:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxcrit.obj" 
-BUILD: [01:0000000476:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxdbcs.obj" 
-BUILD: [01:0000000477:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl1.obj" 
-BUILD: [01:0000000478:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl2.obj" 
-BUILD: [01:0000000479:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl3.obj" 
-BUILD: [01:0000000480:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxmem.obj" 
-BUILD: [01:0000000481:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxstate.obj" 
-BUILD: [01:0000000482:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtls.obj" 
-BUILD: [01:0000000483:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtrace.obj" 
-BUILD: [01:0000000484:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appcore.obj" 
-BUILD: [01:0000000485:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appdlg.obj" 
-BUILD: [01:0000000486:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appgray.obj" 
-BUILD: [01:0000000487:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelp.obj" 
-BUILD: [01:0000000488:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelpx.obj" 
-BUILD: [01:0000000489:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appinit.obj" 
-BUILD: [01:0000000490:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appmodul.obj" 
-BUILD: [01:0000000491:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appprnt.obj" 
-BUILD: [01:0000000492:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appterm.obj" 
-BUILD: [01:0000000493:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui.obj" 
-BUILD: [01:0000000494:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui1.obj" 
-BUILD: [01:0000000495:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui2.obj" 
-BUILD: [01:0000000496:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui3.obj" 
-BUILD: [01:0000000497:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arccore.obj" 
-BUILD: [01:0000000498:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcex.obj" 
-BUILD: [01:0000000499:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcobj.obj" 
-BUILD: [01:0000000500:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcstrm.obj" 
-BUILD: [01:0000000501:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_b.obj" 
-BUILD: [01:0000000502:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_d.obj" 
-BUILD: [01:0000000503:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_o.obj" 
-BUILD: [01:0000000504:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_p.obj" 
-BUILD: [01:0000000505:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_s.obj" 
-BUILD: [01:0000000506:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_u.obj" 
-BUILD: [01:0000000507:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_w.obj" 
-BUILD: [01:0000000508:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\auxdata.obj" 
-BUILD: [01:0000000509:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcool.obj" 
-BUILD: [01:0000000510:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcore.obj" 
-BUILD: [01:0000000511:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardlg.obj" 
-BUILD: [01:0000000512:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardock.obj" 
-BUILD: [01:0000000513:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barstat.obj" 
-BUILD: [01:0000000514:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bartool.obj" 
-BUILD: [01:0000000515:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\ccdata.obj" 
-BUILD: [01:0000000516:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\cmdtarg.obj" 
-BUILD: [01:0000000517:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgclr.obj" 
-BUILD: [01:0000000518:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcomm.obj" 
-BUILD: [01:0000000519:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcore.obj" 
-BUILD: [01:0000000520:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgdata.obj" 
-BUILD: [01:0000000521:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfile.obj" 
-BUILD: [01:0000000522:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfloat.obj" 
-BUILD: [01:0000000523:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfr.obj" 
-BUILD: [01:0000000524:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgprop.obj" 
-BUILD: [01:0000000525:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgtempl.obj" 
-BUILD: [01:0000000526:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dllmodul.obj" 
-BUILD: [01:0000000527:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doccore.obj" 
-BUILD: [01:0000000528:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockcont.obj" 
-BUILD: [01:0000000529:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockstat.obj" 
-BUILD: [01:0000000530:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docmgr.obj" 
-BUILD: [01:0000000531:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docsingl.obj" 
-BUILD: [01:0000000532:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doctempl.obj" 
-BUILD: [01:0000000533:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpcont.obj" 
-BUILD: [01:0000000534:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpflt.obj" 
-BUILD: [01:0000000535:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpinit.obj" 
-BUILD: [01:0000000536:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpout.obj" 
-BUILD: [01:0000000537:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\except.obj" 
-BUILD: [01:0000000538:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filecore.obj" 
-BUILD: [01:0000000539:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filelist.obj" 
-BUILD: [01:0000000540:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filemem.obj" 
-BUILD: [01:0000000541:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filest.obj" 
-BUILD: [01:0000000542:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filetxt.obj" 
-BUILD: [01:0000000543:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filex.obj" 
-BUILD: [01:0000000544:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\inet.obj" 
-BUILD: [01:0000000545:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_o.obj" 
-BUILD: [01:0000000546:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_p.obj" 
-BUILD: [01:0000000547:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_s.obj" 
-BUILD: [01:0000000548:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pp.obj" 
-BUILD: [01:0000000549:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pw.obj" 
-BUILD: [01:0000000550:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_so.obj" 
-BUILD: [01:0000000551:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_sp.obj" 
-BUILD: [01:0000000552:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_ss.obj" 
-BUILD: [01:0000000553:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wo.obj" 
-BUILD: [01:0000000554:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wp.obj" 
-BUILD: [01:0000000555:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtcore.obj" 
-BUILD: [01:0000000556:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtex.obj" 
-BUILD: [01:0000000557:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\objcore.obj" 
-BUILD: [01:0000000558:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\olelock.obj" 
-BUILD: [01:0000000559:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\plex.obj" 
-BUILD: [01:0000000560:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\sockcore.obj" 
-BUILD: [01:0000000561:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strcore.obj" 
-BUILD: [01:0000000562:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strex.obj" 
-BUILD: [01:0000000563:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\thrdcore.obj" 
-BUILD: [01:0000000564:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\timecore.obj" 
-BUILD: [01:0000000565:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\tooltip.obj" 
-BUILD: [01:0000000566:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\trckrect.obj" 
-BUILD: [01:0000000567:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\validadd.obj" 
-BUILD: [01:0000000568:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcmn.obj" 
-BUILD: [01:0000000569:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcore.obj" 
-BUILD: [01:0000000570:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewedit.obj" 
-BUILD: [01:0000000571:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewform.obj" 
-BUILD: [01:0000000572:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewprnt.obj" 
-BUILD: [01:0000000573:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewscrl.obj" 
-BUILD: [01:0000000574:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winbtn.obj" 
-BUILD: [01:0000000575:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wincore.obj" 
-BUILD: [01:0000000576:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl1.obj" 
-BUILD: [01:0000000577:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl2.obj" 
-BUILD: [01:0000000578:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl6.obj" 
-BUILD: [01:0000000579:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrm.obj" 
-BUILD: [01:0000000580:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrmx.obj" 
-BUILD: [01:0000000581:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdi.obj" 
-BUILD: [01:0000000582:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdix.obj" 
-BUILD: [01:0000000583:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winhand.obj" 
-BUILD: [01:0000000584:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmain.obj" 
-BUILD: [01:0000000585:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmenu.obj" 
-BUILD: [01:0000000586:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winocc.obj" 
-BUILD: [01:0000000587:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winsplit.obj" 
-BUILD: [01:0000000588:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winstr.obj" 
-BUILD: [01:0000000589:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winutil.obj" 
-BUILD: [01:0000000590:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcealt.obj" 
-BUILD: [01:0000000591:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcebar.obj" 
-BUILD: [01:0000000592:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoclt.obj" 
-BUILD: [01:0000000593:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoctm.obj" 
-BUILD: [01:0000000594:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedb.obj" 
-BUILD: [01:0000000595:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgfr.obj" 
-BUILD: [01:0000000596:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgpr.obj" 
-BUILD: [01:0000000597:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgsm.obj" 
-BUILD: [01:0000000598:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedll.obj" 
-BUILD: [01:0000000599:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wceimpl.obj" 
-BUILD: [01:0000000600:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcesock.obj" 
-BUILD: [01:0000000601:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcethunk.obj" 
-BUILD: [01:0000000602:INFO  ] "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcetime.obj" 
-BUILD: [01:0000000603:WARNN ] Warning(s) in directory "C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\".
-BUILD: [01:0000000604:WARNN ] wceimpl.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000605:WARNN ] wcedll.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000606:WARNN ] wcedlgsm.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000607:WARNN ] wcedoctm.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000608:WARNN ] wcedoclt.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000609:WARNN ] tooltip.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000610:WARNN ] dumpout.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000611:WARNN ] dumpinit.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000612:WARNN ] dumpflt.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000613:WARNN ] dockstat.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000614:WARNN ] dockcont.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000615:WARNN ] bardock.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000616:WARNN ] afxtrace.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000617:WARNN ] afxinl3.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000618:WARNN ] afxinl2.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000619:WARNN ] afxinl1.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000620:WARNN ] afxdbcs.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [01:0000000621:WARNN ] afxasert.obj : warning LNK4221: no public symbols found; archive member will be inaccessible
-BUILD: [00:0000000622:PROGC ] Starting EXPLIB Pass.
-BUILD: [00:0000000623:PROGC ] Analyzing project dependency information for pass EXPLIB.
-BUILD: [00:0000000624:PROGC ] Starting LINK Pass.
-BUILD: [00:0000000625:PROGC ] Analyzing project dependency information for pass LINK.
-BUILD: [00:0000000626:PROGC ] Starting MANAGEDRESX Pass.
-BUILD: [00:0000000627:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
-BUILD: [00:0000000628:PROGC ] Starting MANAGEDMOD Pass.
-BUILD: [00:0000000629:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
-BUILD: [00:0000000630:PROGC ] Starting MANAGEDDLL Pass.
-BUILD: [00:0000000631:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
-BUILD: [00:0000000632:PROGC ] Starting MANAGEDEXE Pass.
-BUILD: [00:0000000633:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
-BUILD: [00:0000000634:PROGC ] Starting MANAGEDWIN Pass.
-BUILD: [00:0000000635:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
-BUILD: [00:0000000636:PROGC ] Starting POSTBUILD Pass.
-BUILD: [00:0000000637:PROGC ] Analyzing project dependency information for pass POSTBUILD.
-BUILD: [00:0000000638:PROG  ] ' postlink.bat' (SYNCHRONIZE_BLOCK = 0)
-BUILD: [00:0000000639:PROG  ] Waiting for 1 worker threads.
-BUILD: [00:0000000640:PROGC ] Saving C:\WINCE700\OSDesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
-BUILD: [00:0000000641:INFO  ] Done.
-BUILD: [00:0000000642:PROGC ] Done.
-BUILD: [00:0000000643:PROGC ]                        Files  Warnings  Errors
-BUILD: [00:0000000644:PROGC ] Midl                       0         0       0
-BUILD: [00:0000000645:PROGC ] Message                    0         0       0
-BUILD: [00:0000000646:PROGC ] Precomp Header             0         0       0
-BUILD: [00:0000000647:PROGC ] Resource                   0         0       0
-BUILD: [00:0000000648:PROGC ] XRPack                     0         0       0
-BUILD: [00:0000000649:PROGC ] MASM                       0         0       0
-BUILD: [00:0000000650:PROGC ] SHASM                      0         0       0
-BUILD: [00:0000000651:PROGC ] ARMASM                     0         0       0
-BUILD: [00:0000000652:PROGC ] MIPSASM                    0         0       0
-BUILD: [00:0000000653:PROGC ] C++                        1         0       0
-BUILD: [00:0000000654:PROGC ] C                          0         0       0
-BUILD: [00:0000000655:PROGC ] CheckLibs                  0         0       0
-BUILD: [00:0000000656:PROGC ] Static Libraries           1        18       0
-BUILD: [00:0000000657:PROGC ] Exe's                      0         0       0
-BUILD: [00:0000000658:PROGC ] Dll's                      0         0       0
-BUILD: [00:0000000659:PROGC ] Preprocess deffile         0         0       0
-BUILD: [00:0000000660:PROGC ] Resx                       0         0       0
-BUILD: [00:0000000661:PROGC ] CSharp Compile             0         0       0
-BUILD: [00:0000000662:PROGC ] VCProj Compile             0         0       0
-BUILD: [00:0000000663:PROGC ] Other                      0         0       0
-BUILD: [00:0000000664:PROGC ] 
-BUILD: [00:0000000665:PROGC ] Total                      2        18       0
-BUILD: [00:0000000666:PROGC ] 
-BUILD: [00:0000000667:PROGC ] 18 Warnings,  0 Errors
-BUILD: [00:0000000668:PROGC ] GetSystemTimes (seconds): Idle: 32    Kernel: 56    User: 38   
-BUILD: [00:0000000669:PROGC ] Elapsed  time  (seconds): 47   
+BUILD: [Thread:SystemTickCount:Type  ] Message
+BUILD: [00:0000000000:PROGC ] Build started with parameters:
+BUILD: [00:0000000000:PROGC ] Build started in directory: C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce
+BUILD: [00:0000000000:PROG  ] Environment: ALLUSERSPROFILE=C:\ProgramData
+BUILD: [00:0000000000:PROG  ] Environment: APPDATA=C:\Users\andyv\AppData\Roaming
+BUILD: [00:0000000000:PROG  ] Environment: BSP_DISPLAY_HFLAT=1
+BUILD: [00:0000000000:PROG  ] Environment: BUILD_DEFAULT=-nmake -nologo
+BUILD: [00:0000000000:PROG  ] Environment: BUILD_MULTIPROCESSOR=0
+BUILD: [00:0000000000:PROG  ] Environment: CEBASE=1
+BUILD: [00:0000000000:PROG  ] Environment: CommonProgramFiles=C:\Program Files (x86)\Common Files
+BUILD: [00:0000000000:PROG  ] Environment: CommonProgramFiles(Arm)=C:\Program Files (Arm)\Common Files
+BUILD: [00:0000000000:PROG  ] Environment: CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+BUILD: [00:0000000000:PROG  ] Environment: CommonProgramW6432=C:\Program Files\Common Files
+BUILD: [00:0000000000:PROG  ] Environment: COMPUTERNAME=ANDY_VM
+BUILD: [00:0000000000:PROG  ] Environment: ComSpec=C:\WINDOWS\system32\cmd.exe
+BUILD: [00:0000000000:PROG  ] Environment: COPYCMD=/y
+BUILD: [00:0000000000:PROG  ] Environment: DEFAULT_LOCALE=en-US
+BUILD: [00:0000000000:PROG  ] Environment: DriverData=C:\Windows\System32\Drivers\DriverData
+BUILD: [00:0000000000:PROG  ] Environment: EDPATH=C:\WATCOM\EDDAT
+BUILD: [00:0000000000:PROG  ] Environment: EFC_1152_1592913036=1
+BUILD: [00:0000000000:PROG  ] Environment: FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+BUILD: [00:0000000000:PROG  ] Environment: FPS_BROWSER_USER_PROFILE_STRING=Default
+BUILD: [00:0000000000:PROG  ] Environment: HOMEDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: HOMEPATH=\Users\andyv
+BUILD: [00:0000000000:PROG  ] Environment: IMGEBOOT=1
+BUILD: [00:0000000000:PROG  ] Environment: IMGNODEBUGGER=1
+BUILD: [00:0000000000:PROG  ] Environment: LOCALAPPDATA=C:\Users\andyv\AppData\Local
+BUILD: [00:0000000000:PROG  ] Environment: LOCALE=0409
+BUILD: [00:0000000000:PROG  ] Environment: LOGONSERVER=\\ANDY_VM
+BUILD: [00:0000000000:PROG  ] Environment: MSBuildLoadMicrosoftTargetsReadOnly=true
+BUILD: [00:0000000000:PROG  ] Environment: NUMBER_OF_PROCESSORS=2
+BUILD: [00:0000000000:PROG  ] Environment: OneDrive=C:\Users\andyv\OneDrive
+BUILD: [00:0000000000:PROG  ] Environment: OneDriveConsumer=C:\Users\andyv\OneDrive
+BUILD: [00:0000000000:PROG  ] Environment: OS=Windows_NT
+BUILD: [00:0000000000:PROG  ] Environment: Path=C:\WINCE800\sdk\bin\i386\ARM;C:\WINCE800\sdk\bin\i386;C:\WINCE800\sdk\bin\i386\ARM;C:\WINCE800\public\common\oak\Bin\i386;C:\WINCE800\private\bin\i386;C:\WINCE800\private\bat;C:\WINCE800\public\common\oak\misc;C:\WINCE800\developr\andyv;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\WATCOM\BINNT;C:\WATCOM\BINW;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\andyv\AppData\Local\Microsoft\WindowsApps;;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Microsoft Platform Builder\8.00\cepb\ideVS
+BUILD: [00:0000000000:PROG  ] Environment: PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+BUILD: [00:0000000000:PROG  ] Environment: PBCONFIG=QEMU ARMV7 Release
+BUILD: [00:0000000000:PROG  ] Environment: PBCONFIGTAG=C4B80793
+BUILD: [00:0000000000:PROG  ] Environment: PBWORKSPACE=C:\WINCE800\OSDESI~1\QEMU\QEMU\QEMU~1.PBX
+BUILD: [00:0000000000:PROG  ] Environment: PBWORKSPACEROOT=C:\WINCE800\OSDesigns\QEMU\QEMU
+BUILD: [00:0000000000:PROG  ] Environment: PkgDefApplicationConfigFile=C:\Users\andyv\AppData\Local\Microsoft\VisualStudio\12.0\devenv.exe.config
+BUILD: [00:0000000000:PROG  ] Environment: PROCESSOR_ARCHITECTURE=x86
+BUILD: [00:0000000000:PROG  ] Environment: PROCESSOR_ARCHITEW6432=ARM64
+BUILD: [00:0000000000:PROG  ] Environment: PROCESSOR_IDENTIFIER=ARMv8 (64-bit) Family 8 Model 0 Revision   0, Apple
+BUILD: [00:0000000000:PROG  ] Environment: PROCESSOR_LEVEL=0
+BUILD: [00:0000000000:PROG  ] Environment: PROCESSOR_REVISION=0000
+BUILD: [00:0000000000:PROG  ] Environment: ProgramData=C:\ProgramData
+BUILD: [00:0000000000:PROG  ] Environment: ProgramFiles=C:\Program Files (x86)
+BUILD: [00:0000000000:PROG  ] Environment: ProgramFiles(Arm)=C:\Program Files (Arm)
+BUILD: [00:0000000000:PROG  ] Environment: ProgramFiles(x86)=C:\Program Files (x86)
+BUILD: [00:0000000000:PROG  ] Environment: ProgramW6432=C:\Program Files
+BUILD: [00:0000000000:PROG  ] Environment: PROMPT=$P$G
+BUILD: [00:0000000000:PROG  ] Environment: PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+BUILD: [00:0000000000:PROG  ] Environment: PUBLIC=C:\Users\Public
+BUILD: [00:0000000000:PROG  ] Environment: SESSIONNAME=Console
+BUILD: [00:0000000000:PROG  ] Environment: SG_OUTPUT_ROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\cesysgen
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ACCESSIB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_APPDEBUG=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ATL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUDIO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUTH=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUTH_KERBEROS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUTH_NTLM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUTH_SCHANNEL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_BINFS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_BRIDGE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CACHEFILT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CERTS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CMD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CNG_CORE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CNG_KEYS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_COMMCTRL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_COMMDLG=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CONNMC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CONNMGR2=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CONSOLE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CREDMAN=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CRYPTO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CRYPTO_DSSDH=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CTLPNL2=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_CURSOR=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DATETIMECPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DCOM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DDRAW=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DISPLAYCPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DNSAPI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_AVI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_CAPTURE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_HTTPSTREAMER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_ICM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_IMAGEDECODER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_LOCALSTREAMER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MP3=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MP4DEMUX=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MPEG2DEMUX=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MPEGA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MPEGSPLITTER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MPEGV=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_MSRLE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_VMR=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_WMA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_WMA_VOICE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_DSHOW_WMT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_EAP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_EAPHOST=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ETHERNETCPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ETH_80211_NWIFI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ETH_USB_HOST=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FATFS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FATUTIL_NOUI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FIREWALL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ARIAL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ARIALBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ARIALBI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ARIALI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ARIBLK=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COMIC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COMICBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COUR=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COURBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COURBI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_COURI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_EUPHEMIA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GAUTAMI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GAUTAMIB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GEORGIA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GEORGIAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GEORGIAI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_GEORGIAZ=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ISKPOTA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_ISKPOTAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_KALINGA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_KALINGAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_KARTIKA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_KARTIKAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_LATHA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_LATHAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MALGUN=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MALGUNBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MANGAL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MANGALB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MEIRYO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MEIRYOB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MICROSS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MINGLIU=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MINGLIUB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSGOTHIC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSJH=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSJHBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSMINCHO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSYH=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_MSYHBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_RAAVI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_RAAVIB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SEGOEUIB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SEGOEUII=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SEGOEUIL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SEGOEUIZ=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SEGUISB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SHRUTI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SHRUTIB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SIMSUN=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SIMSUNB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_SYMBOL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TAHOMA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TAHOMABD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TIMES=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TIMESBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TIMESBI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TIMESI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TREBUC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TREBUCBD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TREBUCBI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TREBUCIT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TUNGA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_TUNGAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VERDANA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VERDANAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VERDANAI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VERDANAZ=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VRINDA=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_VRINDAB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_WEBDINGS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FONTS_WINGDING=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FSDBASE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FSRAMROM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_FSREGRAM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_GATEWAY=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_GATEWAY_LOGGING=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_GDI_FONTFIX=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_GDI_RASTERFONT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_GESTUREANIMATION=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_HELP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_IMM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_INPUTCPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_IPSEC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_JSCRIPT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_LAP_PSWD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_LARGEKB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_LASS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_LLTD_RESPONDER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_LOCALAUDIO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MENU_OVERLAP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MENU_TAP_UI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MFC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MINGDI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MINGWES=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MININPUT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MINWMGR=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MSHTML=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MSIM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MSXML=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MULTIMON=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_MULTIUI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NDISUIO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NETAPI32=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NETLOG=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NETUTILS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NETWORKING=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NET_WFP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_NOTIFY=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_OLE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_PHYSICSENGINE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_PM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_QVGAP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_REDIR=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_REGIONALCPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_RELFSD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_SECURE_DDNS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_SHELL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_SHELLAPI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_SNDSCHEMECPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_SOFTKB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_STREAMAUDIO=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_STREAMAV=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_TOOLHELP=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_TOUCH=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_TOUCHGESTURE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_UDFS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_UIPROXY=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_UNISCRIBE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USBFN=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_HID=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_HID_CLIENTS=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_HID_KEYBOARD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_HID_MOUSE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_PRINTER=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_USB_STORAGE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_VBSCRIPT=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WCELOAD=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WGI_WIC=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WIFICPL=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WININET=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WSDAPI=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_WSDAPI_SAMPLES=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XAMLIM=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XAMLMSGBOX=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XAML_RUNTIME=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XMLLITE=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XPSKIN=1
+BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XRSHELL=1
+BUILD: [00:0000000000:PROG  ] Environment: SystemDrive=C:
+BUILD: [00:0000000000:PROG  ] Environment: SystemRoot=C:\WINDOWS
+BUILD: [00:0000000000:PROG  ] Environment: TEMP=C:\Users\andyv\AppData\Local\Temp\bld_107562
+BUILD: [00:0000000000:PROG  ] Environment: TMP=C:\Users\andyv\AppData\Local\Temp\bld_107562
+BUILD: [00:0000000000:PROG  ] Environment: USERDOMAIN=ANDY_VM
+BUILD: [00:0000000000:PROG  ] Environment: USERDOMAIN_ROAMINGPROFILE=ANDY_VM
+BUILD: [00:0000000000:PROG  ] Environment: USERNAME=andyv
+BUILD: [00:0000000000:PROG  ] Environment: USERPROFILE=C:\Users\andyv
+BUILD: [00:0000000000:PROG  ] Environment: USING_PB_WORKSPACE_ENVIRONMENT=1
+BUILD: [00:0000000000:PROG  ] Environment: VisualStudioDir=C:\Users\andyv\Documents\Visual Studio 2013
+BUILD: [00:0000000000:PROG  ] Environment: VisualStudioEdition=Microsoft Visual Studio Professional 2013
+BUILD: [00:0000000000:PROG  ] Environment: VisualStudioVersion=12.0
+BUILD: [00:0000000000:PROG  ] Environment: VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+BUILD: [00:0000000000:PROG  ] Environment: VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+BUILD: [00:0000000000:PROG  ] Environment: VS90COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\
+BUILD: [00:0000000000:PROG  ] Environment: VSLANG=1033
+BUILD: [00:0000000000:PROG  ] Environment: WATCOM=C:\WATCOM
+BUILD: [00:0000000000:PROG  ] Environment: WHTMLHELP=C:\WATCOM\BINNT\HELP
+BUILD: [00:0000000000:PROG  ] Environment: WINCEDEBUG=retail
+BUILD: [00:0000000000:PROG  ] Environment: WINCEMAP=1
+BUILD: [00:0000000000:PROG  ] Environment: WINCEREL=1
+BUILD: [00:0000000000:PROG  ] Environment: windir=C:\WINDOWS
+BUILD: [00:0000000000:PROG  ] Environment: WIPFC=C:\WATCOM\WIPFC
+BUILD: [00:0000000000:PROG  ] Environment: _BUILDOUTPUTFILTER_RUNNING=1
+BUILD: [00:0000000000:PROG  ] Environment: _DEPTREES=winceos dcom wgi html netcf servers cellcore ossvcs shell directx ostest viewers CEBASE
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET20ROOT=C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET20SP2INSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET30ROOT=C:\WINDOWS\Microsoft.NET\Framework\v3.0
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET30SP2INSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET35ROOT=C:\WINDOWS\Microsoft.NET\Framework\v3.5
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET35SP1INSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET40CLIENTINSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET40FULLINSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET40ROOT=C:\Windows\Microsoft.NET\Framework\v4.0.30319
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNET45INSTALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _DOTNETSDKROOT=C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+BUILD: [00:0000000000:PROG  ] Environment: _FLATRELEASEDIR=C:\WINCE800\OSDesigns\QEMU\QEMU\RelDir\qemu_ARMV7_Release
+BUILD: [00:0000000000:PROG  ] Environment: _HOSTCPUTYPE=i386
+BUILD: [00:0000000000:PROG  ] Environment: _MAJORVERSION=8
+BUILD: [00:0000000000:PROG  ] Environment: _MAKEENVROOT=C:\WINCE800\public\common\oak\misc
+BUILD: [00:0000000000:PROG  ] Environment: _MINORVERSION=00
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNDDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\ddk
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNOAKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\oak
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNROOT=C:\WINCE800\OSDesigns\QEMU\QEMU
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNSDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\sdk
+BUILD: [00:0000000000:PROG  ] Environment: _PB_INSTALL_ROOT=C:\PROGRA~2\MIFAB2~1\8.00
+BUILD: [00:0000000000:PROG  ] Environment: _PLATFORMDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _PLATFORMROOT=C:\WINCE800\platform
+BUILD: [00:0000000000:PROG  ] Environment: _PREWINCEPATH=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\WATCOM\BINNT;C:\WATCOM\BINW;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;c:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\andyv\AppData\Local\Microsoft\WindowsApps;
+BUILD: [00:0000000000:PROG  ] Environment: _PRIVATEDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _PRIVATEROOT=C:\WINCE800\private
+BUILD: [00:0000000000:PROG  ] Environment: _PROJECTDDKROOT=C:\WINCE800\public\CEBASE\ddk
+BUILD: [00:0000000000:PROG  ] Environment: _PROJECTOAKROOT=C:\WINCE800\public\CEBASE\oak
+BUILD: [00:0000000000:PROG  ] Environment: _PROJECTROOT=C:\WINCE800\public\CEBASE
+BUILD: [00:0000000000:PROG  ] Environment: _PROJECTSDKROOT=C:\WINCE800\public\CEBASE\sdk
+BUILD: [00:0000000000:PROG  ] Environment: _PROJPUBLICROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\WINCE800\PUBLIC
+BUILD: [00:0000000000:PROG  ] Environment: _PUBLICDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _PUBLICROOT=C:\WINCE800\public
+BUILD: [00:0000000000:PROG  ] Environment: _SDKDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _SDKROOT=C:\WINCE800\sdk
+BUILD: [00:0000000000:PROG  ] Environment: _TARGETPLATROOT=C:\WINCE800\platform\qemu
+BUILD: [00:0000000000:PROG  ] Environment: _TGTCPU=ARMV7
+BUILD: [00:0000000000:PROG  ] Environment: _TGTCPUFAMILY=ARM
+BUILD: [00:0000000000:PROG  ] Environment: _TGTCPUISA=V7
+BUILD: [00:0000000000:PROG  ] Environment: _TGTOS=CE
+BUILD: [00:0000000000:PROG  ] Environment: _TGTPLAT=qemu
+BUILD: [00:0000000000:PROG  ] Environment: _TGTPROJ=CEBASE
+BUILD: [00:0000000000:PROG  ] Environment: _TOOLSSDKDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _TOOLSSDKROOT=C:\WINCE800\tools\public\ext
+BUILD: [00:0000000000:PROG  ] Environment: _WINCECALLED=1
+BUILD: [00:0000000000:PROG  ] Environment: _WINCEDRIVE=C:
+BUILD: [00:0000000000:PROG  ] Environment: _WINCEOSVER=800
+BUILD: [00:0000000000:PROG  ] Environment: _WINCEROOT=C:\WINCE800
+BUILD: [00:0000000000:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, RUN_WPP, XRPACK, PRECOMPHEADER, COMPILE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, LOCALIZE, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
+BUILD: [00:0000000016:PROGC ] Loading database "C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat".
+BUILD: [00:0000000016:PROGC ] Done.
+BUILD: [00:0000000032:PROGC ] Computing include file dependencies:
+BUILD: [01:0000000078:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [00:0000000078:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000000625:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [00:0000000641:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000641:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000657:WARNS ] Directory: C:\WINCE800\private\winceos\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
+BUILD: [00:0000000688:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000703:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000703:PROGC ] Directory scanning complete.
+BUILD: [00:0000000703:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000703:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000719:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000719:PROGC ] Starting MC Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000719:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000719:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000719:PROGC ] Starting RUN_WPP Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass RUN_WPP.
+BUILD: [00:0000000719:PROGC ] Starting XRPACK Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass XRPACK.
+BUILD: [00:0000000719:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000719:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxabort.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxasert.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxasert.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxcrit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxcrit.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxdbcs.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxdbcs.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl1.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl2.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl3.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxmem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxmem.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxstate.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxstate.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtls.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtls.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtrace.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtrace.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appcore.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appdlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appdlg.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appgray.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appgray.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelp.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelpx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelpx.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appinit.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appmodul.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appprnt.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appterm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appterm.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui1.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui2.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui3.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arccore.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcex.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcobj.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcobj.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcstrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcstrm.obj is missing.
+BUILD: [00:0000000719:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_b.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_b.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_d.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_d.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_o.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_p.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_s.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_u.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_u.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_w.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_w.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\auxdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\auxdata.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcool.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardlg.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardock.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barstat.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bartool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bartool.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\ccdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\ccdata.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\cmdtarg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\cmdtarg.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgclr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgclr.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcomm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcomm.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgdata.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfile.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfile.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfloat.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfr.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgprop.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgprop.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgtempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgtempl.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dllmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dllmodul.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doccore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockcont.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockstat.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docmgr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docmgr.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docsingl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docsingl.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doctempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doctempl.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpcont.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpflt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpflt.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpinit.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpout.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpout.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\except.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\except.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filecore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filelist.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filelist.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filemem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filemem.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filest.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filest.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filetxt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filetxt.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filex.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\inet.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_o.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_p.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_s.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pp.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pw.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pw.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_so.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_so.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_sp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_sp.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_ss.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_ss.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wo.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wo.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wp.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtex.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\objcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\objcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\olelock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\olelock.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\plex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\plex.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\sockcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\sockcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strex.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\thrdcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\thrdcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\timecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\timecore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\tooltip.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\tooltip.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\trckrect.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\trckrect.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\validadd.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\validadd.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcmn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcmn.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewedit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewedit.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewform.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewform.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewprnt.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewscrl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewscrl.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winbtn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winbtn.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wincore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wincore.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl1.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl2.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl6.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl6.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrm.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrmx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrmx.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdi.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdi.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdix.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdix.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winhand.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winhand.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmain.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmain.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmenu.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmenu.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winocc.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winocc.obj is missing.
+BUILD: [00:0000000735:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winsplit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winsplit.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winstr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winstr.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winutil.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winutil.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcealt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcealt.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcebar.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcebar.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoclt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoclt.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoctm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoctm.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedb.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedb.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgfr.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgpr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgpr.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgsm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgsm.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedll.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedll.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wceimpl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wceimpl.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcesock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcesock.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcethunk.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcethunk.obj is missing.
+BUILD: [00:0000000750:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcetime.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcetime.obj is missing.
+BUILD: [00:0000000750:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
+BUILD: [00:0000000766:PROG  ] 'NMAKE.EXE TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=C:\wince800\osdesigns\qemu\qemu\uafxcwce\ NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000797:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000828:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.default
+BUILD: [01:0000000828:INFO  ] makefile.def: BUILDROOT is C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [01:0000000875:INFO  ] makefile.def: Including C:\wince800\osdesigns\qemu\qemu\uafxcwce\sources
+BUILD: [01:0000000875:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000875:INFO  ] Directory: C:\wince800\osdesigns\qemu\qemu\uafxcwce
+BUILD: [01:0000000875:INFO  ] TARGETNAME: uafxwce
+BUILD: [01:0000000875:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000001016:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp
+BUILD: [01:0000001094:INFO  ] cl.exe -nologo   -FoC:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\  /Gy /QRunaligned- -c -I. -Iinclude -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\html\sdk\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\wceshellfe\oak\inc -IC:\WINCE800\public\shell\oak\inc -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\rdp\oak\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\oak\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\oak\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\common\ddk\inc -IC:\WINCE800\private\winceos\inc -IC:\WINCE800\public\common\sdk\inc\test -I. -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\html\sdk\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\common\sdk\inc\cestl -IC:\WINCE800\public\common\sdk\inc\crt -I.\Resource\0409 -Ox -Os -Oy- -GF -Zi -FdC:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.pdb -DTHUMBSUPPORT -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DUNICODE -D_UNICODE -DUNDER_CE=800 -D_WIN32_WCE=0x0800 -DWIN32 -DSTRICT -DARM -DARMV7 -D_ARM_ -D__RPC_ARM32__ -D_MIDL_USE_GUIDDEF_ -DNDEBUG=1  -IC:\WINCE800\public\common\sdk\inc -Ob0 -D_WIN32_WCE=800 -DUNDER_CE=0x800 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE -DINTERNATIONAL -DINTLMSG_CODEPAGE=1252  -wd4007 -Zc:wchar_t- -Zc:forScope- -wd4867 -wd4430 -wd4603 -wd4627 -wd4100 -wd4201 -wd4115 -wd4214 -wd4049 -wd4505 -MT -U_MT /FC -W3     /GR- .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp 
+BUILD: [01:0000001172:INFO  ] afxabort.cpp
+BUILD: [01:0000002407:INFO  ] afxasert.cpp
+BUILD: [01:0000002797:INFO  ] afxcrit.cpp
+BUILD: [01:0000003172:INFO  ] afxdbcs.cpp
+BUILD: [01:0000003532:INFO  ] afxinl1.cpp
+BUILD: [01:0000003844:INFO  ] afxinl2.cpp
+BUILD: [01:0000004125:INFO  ] afxinl3.cpp
+BUILD: [01:0000004469:INFO  ] afxmem.cpp
+BUILD: [01:0000004813:INFO  ] afxstate.cpp
+BUILD: [01:0000005157:INFO  ] afxtls.cpp
+BUILD: [01:0000005485:INFO  ] afxtrace.cpp
+BUILD: [01:0000005828:INFO  ] appcore.cpp
+BUILD: [01:0000006110:INFO  ] appdlg.cpp
+BUILD: [01:0000006422:INFO  ] appgray.cpp
+BUILD: [01:0000006750:INFO  ] apphelp.cpp
+BUILD: [01:0000007094:INFO  ] apphelpx.cpp
+BUILD: [01:0000007453:INFO  ] appinit.cpp
+BUILD: [01:0000007782:INFO  ] appmodul.cpp
+BUILD: [01:0000008063:INFO  ] appprnt.cpp
+BUILD: [01:0000008422:INFO  ] appterm.cpp
+BUILD: [01:0000008735:INFO  ] Generating Code...
+BUILD: [01:0000009860:INFO  ] Compiling...
+BUILD: [01:0000009860:INFO  ] appui.cpp
+BUILD: [01:0000010610:INFO  ] appui1.cpp
+BUILD: [01:0000010953:INFO  ] appui2.cpp
+BUILD: [01:0000011297:INFO  ] appui3.cpp
+BUILD: [01:0000011641:INFO  ] arccore.cpp
+BUILD: [01:0000011969:INFO  ] arcex.cpp
+BUILD: [01:0000012250:INFO  ] arcobj.cpp
+BUILD: [01:0000012641:INFO  ] arcstrm.cpp
+BUILD: [01:0000013000:INFO  ] array_b.cpp
+BUILD: [01:0000013407:INFO  ] array_d.cpp
+BUILD: [01:0000013782:INFO  ] array_o.cpp
+BUILD: [01:0000014078:INFO  ] array_p.cpp
+BUILD: [01:0000014500:INFO  ] array_s.cpp
+BUILD: [01:0000014875:INFO  ] array_u.cpp
+BUILD: [01:0000015219:INFO  ] array_w.cpp
+BUILD: [01:0000015547:INFO  ] auxdata.cpp
+BUILD: [01:0000015860:INFO  ] barcool.cpp
+BUILD: [01:0000016157:INFO  ] barcore.cpp
+BUILD: [01:0000016563:INFO  ] bardlg.cpp
+BUILD: [01:0000016922:INFO  ] bardock.cpp
+BUILD: [01:0000017297:INFO  ] Generating Code...
+BUILD: [01:0000018563:INFO  ] Compiling...
+BUILD: [01:0000018563:INFO  ] barstat.cpp
+BUILD: [01:0000019360:INFO  ] bartool.cpp
+BUILD: [01:0000019719:INFO  ] ccdata.cpp
+BUILD: [01:0000020000:INFO  ] cmdtarg.cpp
+BUILD: [01:0000020360:INFO  ] dlgclr.cpp
+BUILD: [01:0000020703:INFO  ] dlgcomm.cpp
+BUILD: [01:0000021016:INFO  ] dlgcore.cpp
+BUILD: [01:0000021360:INFO  ] dlgdata.cpp
+BUILD: [01:0000021657:INFO  ] dlgfile.cpp
+BUILD: [01:0000021953:INFO  ] dlgfloat.cpp
+BUILD: [01:0000022235:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [01:0000022235:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(79) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000022250:INFO  ]         c:\wince800\public\common\sdk\inc\crt\wchar.h(810) : see declaration of '_swprintf'
+BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(109) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000022250:INFO  ]         c:\wince800\public\common\sdk\inc\crt\wchar.h(810) : see declaration of '_swprintf'
+BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(110) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000022250:INFO  ]         c:\wince800\public\common\sdk\inc\crt\wchar.h(810) : see declaration of '_swprintf'
+BUILD: [01:0000022282:INFO  ] dlgfr.cpp
+BUILD: [01:0000022703:INFO  ] dlgprop.cpp
+BUILD: [01:0000023125:INFO  ] dlgtempl.cpp
+BUILD: [01:0000023485:INFO  ] dllmodul.cpp
+BUILD: [01:0000023828:INFO  ] doccore.cpp
+BUILD: [01:0000024094:INFO  ] dockcont.cpp
+BUILD: [01:0000024422:INFO  ] dockstat.cpp
+BUILD: [01:0000024766:INFO  ] docmgr.cpp
+BUILD: [01:0000025110:INFO  ] docsingl.cpp
+BUILD: [01:0000025453:INFO  ] doctempl.cpp
+BUILD: [01:0000025797:INFO  ] Generating Code...
+BUILD: [01:0000027297:INFO  ] Compiling...
+BUILD: [01:0000027297:INFO  ] dumpcont.cpp
+BUILD: [01:0000028282:INFO  ] dumpflt.cpp
+BUILD: [01:0000028938:INFO  ] dumpinit.cpp
+BUILD: [01:0000029469:INFO  ] dumpout.cpp
+BUILD: [01:0000029953:INFO  ] except.cpp
+BUILD: [01:0000030547:INFO  ] filecore.cpp
+BUILD: [01:0000030907:INFO  ] filelist.cpp
+BUILD: [01:0000031266:INFO  ] filemem.cpp
+BUILD: [01:0000031594:INFO  ] filest.cpp
+BUILD: [01:0000031907:INFO  ] filetxt.cpp
+BUILD: [01:0000032219:INFO  ] filex.cpp
+BUILD: [01:0000032641:INFO  ] inet.cpp
+BUILD: [01:0000033016:INFO  ] list_o.cpp
+BUILD: [01:0000033391:INFO  ] list_p.cpp
+BUILD: [01:0000033735:INFO  ] list_s.cpp
+BUILD: [01:0000034032:INFO  ] map_pp.cpp
+BUILD: [01:0000034360:INFO  ] map_pw.cpp
+BUILD: [01:0000034703:INFO  ] map_so.cpp
+BUILD: [01:0000035032:INFO  ] map_sp.cpp
+BUILD: [01:0000035360:INFO  ] map_ss.cpp
+BUILD: [01:0000035688:INFO  ] Generating Code...
+BUILD: [01:0000037000:INFO  ] Compiling...
+BUILD: [01:0000037000:INFO  ] map_wo.cpp
+BUILD: [01:0000037813:INFO  ] map_wp.cpp
+BUILD: [01:0000038125:INFO  ] mtcore.cpp
+BUILD: [01:0000038469:INFO  ] mtex.cpp
+BUILD: [01:0000038813:INFO  ] objcore.cpp
+BUILD: [01:0000039125:INFO  ] olelock.cpp
+BUILD: [01:0000039453:INFO  ] plex.cpp
+BUILD: [01:0000039797:INFO  ] sockcore.cpp
+BUILD: [01:0000040094:INFO  ] strcore.cpp
+BUILD: [01:0000040407:INFO  ] strex.cpp
+BUILD: [01:0000040750:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp(685) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS.
+BUILD: [01:0000040750:INFO  ]         c:\wince800\public\common\sdk\inc\crt\wchar.h(810) : see declaration of '_swprintf'
+BUILD: [01:0000040782:INFO  ] thrdcore.cpp
+BUILD: [01:0000041141:INFO  ] timecore.cpp
+BUILD: [01:0000041500:INFO  ] tooltip.cpp
+BUILD: [01:0000041813:INFO  ] trckrect.cpp
+BUILD: [01:0000042141:INFO  ] validadd.cpp
+BUILD: [01:0000042547:INFO  ] viewcmn.cpp
+BUILD: [01:0000043000:INFO  ] viewcore.cpp
+BUILD: [01:0000043453:INFO  ] viewedit.cpp
+BUILD: [01:0000043828:INFO  ] viewform.cpp
+BUILD: [01:0000044141:INFO  ] viewprnt.cpp
+BUILD: [01:0000044594:INFO  ] Generating Code...
+BUILD: [01:0000046203:INFO  ] Compiling...
+BUILD: [01:0000046203:INFO  ] viewscrl.cpp
+BUILD: [01:0000047172:INFO  ] winbtn.cpp
+BUILD: [01:0000047735:INFO  ] wincore.cpp
+BUILD: [01:0000048985:INFO  ] winctrl1.cpp
+BUILD: [01:0000049516:INFO  ] winctrl2.cpp
+BUILD: [01:0000049860:INFO  ] winctrl6.cpp
+BUILD: [01:0000050157:INFO  ] winfrm.cpp
+BUILD: [01:0000050516:INFO  ] winfrmx.cpp
+BUILD: [01:0000050860:INFO  ] wingdi.cpp
+BUILD: [01:0000051266:INFO  ] wingdix.cpp
+BUILD: [01:0000051610:INFO  ] winhand.cpp
+BUILD: [01:0000051922:INFO  ] winmain.cpp
+BUILD: [01:0000052203:INFO  ] winmenu.cpp
+BUILD: [01:0000052672:INFO  ] winocc.cpp
+BUILD: [01:0000053094:INFO  ] winsplit.cpp
+BUILD: [01:0000053469:INFO  ] winstr.cpp
+BUILD: [01:0000053891:INFO  ] winutil.cpp
+BUILD: [01:0000054203:INFO  ] wcealt.cpp
+BUILD: [01:0000054610:INFO  ] wcebar.cpp
+BUILD: [01:0000055016:INFO  ] wcedoclt.cpp
+BUILD: [01:0000055375:INFO  ] Generating Code...
+BUILD: [01:0000057235:INFO  ] Compiling...
+BUILD: [01:0000057235:INFO  ] wcedoctm.cpp
+BUILD: [01:0000058157:INFO  ] wcedb.cpp
+BUILD: [01:0000058578:INFO  ] wcedlgfr.cpp
+BUILD: [01:0000058922:INFO  ] wcedlgpr.cpp
+BUILD: [01:0000059266:INFO  ] wcedlgsm.cpp
+BUILD: [01:0000059594:INFO  ] wcedll.cpp
+BUILD: [01:0000059938:INFO  ] wceimpl.cpp
+BUILD: [01:0000060235:INFO  ] wcesock.cpp
+BUILD: [01:0000060594:INFO  ] wcethunk.cpp
+BUILD: [01:0000060922:INFO  ] wcetime.cpp
+BUILD: [01:0000061313:INFO  ] Generating Code...
+BUILD: [00:0000062375:PROGC ] Starting RENUMBERICONIDS Pass.
+BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
+BUILD: [00:0000062375:PROGC ] Starting RES2RES Pass.
+BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass RES2RES.
+BUILD: [00:0000062375:PROGC ] Starting LIB Pass.
+BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass LIB.
+BUILD: [00:0000062391:PROG  ] ' prelink.bat' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000062469:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000062625:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxabort.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062625:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxasert.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062625:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxcrit.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062625:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxdbcs.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062625:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxinl1.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxinl2.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxinl3.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxmem.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxstate.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxtls.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\afxtrace.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appdlg.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appgray.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\apphelp.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\apphelpx.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appinit.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appmodul.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appprnt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appterm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appui.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appui1.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appui2.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\appui3.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\arccore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\arcex.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\arcobj.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\arcstrm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_b.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_d.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_o.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_p.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_s.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_u.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\array_w.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\auxdata.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\barcool.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\barcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\bardlg.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\bardock.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\barstat.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\bartool.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\ccdata.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\cmdtarg.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgclr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgcomm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgdata.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgfile.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgfloat.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgfr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgprop.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dlgtempl.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dllmodul.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\doccore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dockcont.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dockstat.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\docmgr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\docsingl.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\doctempl.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dumpcont.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dumpflt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dumpinit.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\dumpout.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\except.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filecore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filelist.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filemem.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filest.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filetxt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\filex.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\inet.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\list_o.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\list_p.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\list_s.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_pp.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_pw.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_so.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_sp.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_ss.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_wo.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\map_wp.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\mtcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\mtex.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\objcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\olelock.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\plex.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\sockcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\strcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\strex.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\thrdcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\timecore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\tooltip.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\trckrect.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\validadd.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewcmn.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewcore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewedit.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewform.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewprnt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\viewscrl.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winbtn.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wincore.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winctrl1.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winctrl2.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winctrl6.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winfrm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winfrmx.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wingdi.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wingdix.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winhand.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winmain.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winmenu.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winocc.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winsplit.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winstr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\winutil.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcealt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcebar.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedoclt.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedoctm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedb.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedlgfr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedlgpr.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedlgsm.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcedll.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wceimpl.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcesock.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcethunk.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\wcetime.obj because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\ because target: C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib is missing.
+BUILD: [00:0000062641:PROGC ] Building LIB Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
+BUILD: [00:0000062657:PROG  ] 'NMAKE.EXE TargetLibFiles  -nologo BUILDMSG=Stop.  BUILDROOT=C:\wince800\osdesigns\qemu\qemu\uafxcwce\ LINKONLY=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000062688:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000062735:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.default
+BUILD: [01:0000062735:INFO  ] makefile.def: BUILDROOT is C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [01:0000062782:INFO  ] makefile.def: Including C:\wince800\osdesigns\qemu\qemu\uafxcwce\sources
+BUILD: [01:0000062782:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.CE
+BUILD: [01:0000062782:INFO  ] Directory: C:\wince800\osdesigns\qemu\qemu\uafxcwce
+BUILD: [01:0000062782:INFO  ] TARGETNAME: uafxwce
+BUILD: [01:0000062782:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000062844:INFO  ] .
+BUILD: [01:0000062953:PROGC ] Linking C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib
+BUILD: [01:0000062969:INFO  ] 	link.exe -lib  -out:C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib -machine:ARM @C:\Users\andyv\AppData\Local\Temp\bld_107562\thr_15\nmB055.tmp
+BUILD: [01:0000063875:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [01:0000063875:WARNN ] wceimpl.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedll.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedlgsm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedoctm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063875:WARNN ] wcedoclt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063891:WARNN ] tooltip.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpout.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpinit.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dumpflt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dockstat.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063907:WARNN ] dockcont.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063922:WARNN ] bardock.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063922:WARNN ] afxtrace.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl3.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl2.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxinl1.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxdbcs.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [01:0000063938:WARNN ] afxasert.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+BUILD: [00:0000064032:PROGC ] Starting EXPLIB Pass.
+BUILD: [00:0000064032:PROGC ] Analyzing project dependency information for pass EXPLIB.
+BUILD: [00:0000064032:PROGC ] Starting LINK Pass.
+BUILD: [00:0000064032:PROGC ] Analyzing project dependency information for pass LINK.
+BUILD: [00:0000064032:PROGC ] Starting LOCALIZE Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass LOCALIZE.
+BUILD: [00:0000064047:PROGC ] Starting MANAGEDRESX Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
+BUILD: [00:0000064047:PROGC ] Starting MANAGEDMOD Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
+BUILD: [00:0000064047:PROGC ] Starting MANAGEDDLL Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
+BUILD: [00:0000064047:PROGC ] Starting MANAGEDEXE Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
+BUILD: [00:0000064047:PROGC ] Starting MANAGEDWIN Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
+BUILD: [00:0000064047:PROGC ] Starting POSTBUILD Pass.
+BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass POSTBUILD.
+BUILD: [00:0000064047:PROG  ] ' postlink.bat' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000064094:PROG  ] Waiting for 1 worker threads.
+BUILD: [00:0000064125:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
+BUILD: [00:0000064141:INFO  ] Done.
+BUILD: [00:0000064141:PROGC ] Done.
+BUILD: [00:0000064141:PROGC ]                        Files  Warnings  Errors
+BUILD: [00:0000064141:PROGC ] Midl                       0         0       0
+BUILD: [00:0000064141:PROGC ] Message                    0         0       0
+BUILD: [00:0000064141:PROGC ] Precomp Header             0         0       0
+BUILD: [00:0000064141:PROGC ] Resource                   0         0       0
+BUILD: [00:0000064141:PROGC ] XRPack                     0         0       0
+BUILD: [00:0000064141:PROGC ] MASM                       0         0       0
+BUILD: [00:0000064141:PROGC ] SHASM                      0         0       0
+BUILD: [00:0000064141:PROGC ] ARMASM                     0         0       0
+BUILD: [00:0000064141:PROGC ] C++                        1         4       0
+BUILD: [00:0000064141:PROGC ] C                          0         0       0
+BUILD: [00:0000064141:PROGC ] CheckLibs                  0         0       0
+BUILD: [00:0000064141:PROGC ] Static Libraries           1        18       0
+BUILD: [00:0000064141:PROGC ] Exe's                      0         0       0
+BUILD: [00:0000064141:PROGC ] Dll's                      0         0       0
+BUILD: [00:0000064141:PROGC ] Preprocess deffile         0         0       0
+BUILD: [00:0000064141:PROGC ] Resx                       0         0       0
+BUILD: [00:0000064141:PROGC ] CSharp Compile             0         0       0
+BUILD: [00:0000064141:PROGC ] VCProj Compile             0         0       0
+BUILD: [00:0000064141:PROGC ] NETCF Build                0         0       0
+BUILD: [00:0000064141:PROGC ] Localization               0         0       0
+BUILD: [00:0000064141:PROGC ] Other                      0        15       0
+BUILD: [00:0000064141:PROGC ] 
+BUILD: [00:0000064141:PROGC ] Total                      2        37       0
+BUILD: [00:0000064157:PROGC ] 
+BUILD: [00:0000064157:PROGC ] 37 Warnings,  0 Errors
+BUILD: [00:0000064157:PROGC ] GetSystemTimes (seconds): Idle: 40    Kernel: 67    User: 60   
+BUILD: [00:0000064172:PROGC ] Elapsed  time  (seconds): 64   
