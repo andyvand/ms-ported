@@ -314,12 +314,7 @@ INT vmax)
     } else {
         if (ply == 0)
 		{
-#if WINVER >= 0x0400
-			GetWindowRgn(hWin, hrgn);
-			hDisp = GetDCEx(hWin, hrgn, (DCX_WINDOW | DCX_CACHE));
-#else
 	        hDisp = GetDC(hWin);
-#endif
             paintmove(pCurrent, move, friendly, enemy);
             ReleaseDC(hWin, hDisp);
         } else {
