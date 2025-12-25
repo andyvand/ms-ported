@@ -19,7 +19,10 @@
 
 #include <commctrl.h>   // for fusion classes.
 #include <strsafe.h>
+
+#ifndef _WIN32_WCE
 #include <shlwapi.h>
+#endif
 
 #include "main.h"
 #include "rtns.h"
@@ -258,13 +261,13 @@ MMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow)
 	hwndMain = CreateWindow(szClass, szWindowTitle,
                 WS_OVERLAPPED | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU, 
                 Preferences.xWindow-dxpBorder, Preferences.yWindow-dypAdjust,
-		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow +(dypAdjust*2)+EXTRA_SPACE,
+		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow+dypAdjust+EXTRA_SPACE,
 		NULL, hMenu, hInst, NULL);
 #else
 	hwndMain = CreateWindow( szClass, szWindowTitle,
                 WS_OVERLAPPED | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU, 
                 Preferences.xWindow-dxpBorder, Preferences.yWindow-dypAdjust,
-		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow +(dypAdjust*2)+EXTRA_SPACE,
+		dxWindow+(dxpBorder*2)+EXTRA_SPACE, dyWindow+dypAdjust+EXTRA_SPACE,
 		NULL, NULL, hInst, NULL);
 #endif
 
@@ -1070,6 +1073,7 @@ VOID AdjustWindow(INT fAdjust)
 
 	dypAdjust = dypCaption;
 
+#ifndef _WIN32_WCE
 	if (FMenuOn())
         {
         // dypMenu is initialized to GetSystemMetrics(SM_CYMENU) + 1,
@@ -1086,23 +1090,17 @@ VOID AdjustWindow(INT fAdjust)
         // If the tops do not match, that means they are on two lines.
         // In that case, extend the size of the window by size of
         // one menu line.
-#ifndef _WIN32_WCE
         if (hMenu && GetMenuItemRect(hwndMain, hMenu, 0, &rectGame) &&
                 GetMenuItemRect(hwndMain, hMenu, 1, &rectHelp))
             {
             if (rectGame.top != rectHelp.top)
                 {
-#else
-		if (hMenu)
-            {
-#endif
-                dypAdjust += dypMenu;
+				dypAdjust += dypMenu;
                 bDiffLevel = TRUE;
-#ifndef _WIN32_WCE
                 }
-#endif
             }
-        }
+		}
+#endif
 
 	dxWindow = dxBlk * xBoxMac + dxGridOff + dxRightSpace;
 	dyWindow = dyBlk * yBoxMac + dyGridOff + dyBottomSpace;
@@ -1138,7 +1136,9 @@ VOID AdjustWindow(INT fAdjust)
 #endif
 #ifdef _WIN32_WCE
 				//Menu Bar Height
-                dypAdjust -= (MENU_HEIGHT * 2);
+				dypBorder = dypCaption;
+                dypAdjust = dypCaption;
+				dxpBorder = 0;
 #else
 				//Menu Bar Height
                 dypAdjust -= dypMenu;
@@ -1146,6 +1146,7 @@ VOID AdjustWindow(INT fAdjust)
 
     		    MoveWindow(hwndMain, Preferences.xWindow, Preferences.yWindow,
     			    dxWindow+(dxpBorder*2) + EXTRA_SPACE, dyWindow + dypAdjust + EXTRA_SPACE, fTrue);
+
 #ifndef _WIN32_WCE
 				}
             }
