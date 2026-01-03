@@ -1,4 +1,4 @@
-/****************************************************************************/
+/wi****************************************************************************/
 /*                                                                          */
 /*  Windows Reversi -                                                       */
 /*                                                                          */
@@ -30,7 +30,6 @@
 
 #ifdef _WIN32_WCE
 #include <windows.h>
-#include <windowsx.h>
 #include <commctrl.h>
 
 VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)

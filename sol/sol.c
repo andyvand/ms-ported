@@ -39,7 +39,6 @@ LRESULT APIENTRY ForceWndRedraw(HWND hWnd)
 
 #ifdef _WIN32_WCE
 #include <windows.h>
-#include <windowsx.h>
 #include <commctrl.h>
 
 VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
@@ -115,8 +114,10 @@ BOOL fHalfCards = fFalse;
 
 
 INT  xCardMargin;
-#define MIN_MARGIN  ((dxCrd / 8) + 3)
 
+#ifndef MIN_MARGIN
+#define MIN_MARGIN  ((dxCrd / 8) + 3)
+#endif
 
 /********************  Internal Functions ****************/
 BOOL FSolInit( HANDLE, HANDLE, LPTSTR, INT );

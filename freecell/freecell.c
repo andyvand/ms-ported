@@ -100,6 +100,10 @@ INT     cUndo;                  // number of cards to undo
 
 /* Registry strings -- do not translate */
 
+#ifndef MIN_MARGIN
+#define MIN_MARGIN  ((dxCrd / 8) + 3)
+#endif
+
 #ifndef REGSTR_PATH_WINDOWSAPPLETS
 #define REGSTR_PATH_WINDOWSAPPLETS TEXT("Software\\Microsoft\\Windows\\CurrentVersion\\Applets")
 #endif
@@ -127,7 +131,6 @@ void _setenvp() { }
 
 #ifdef _WIN32_WCE
 #include <windows.h>
-#include <windowsx.h>
 #include <commctrl.h>
 
 VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
@@ -591,6 +594,15 @@ LRESULT APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
             WMCreate(hWnd);
             break;
 
+        case WM_SIZE:
+        {
+            DrawMenuBar(hWnd);              // fixes overlapping score on menu
+            xOldLoc = 30000;                // force cards left to redraw
+            DisplayCardCount(hWnd);         // must update if size changes
+            InvalidateRect(hWnd, NULL, TRUE);
+            break;
+        }
+
         case WM_DESTROY:
             if (hBgndBrush)
                 DeleteObject(hBgndBrush);
@@ -616,12 +628,6 @@ LRESULT APIENTRY MainWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPar
 
         case WM_PAINT:
             PaintMainWindow(hWnd);
-            break;
-
-        case WM_SIZE:
-            DrawMenuBar(hWnd);              // fixes overlapping score on menu
-            xOldLoc = 30000;                // force cards left to redraw
-            DisplayCardCount(hWnd);         // must update if size changes
             break;
 
         /***** NOTE: WM_LBUTTONDBLCLK falls through to WM_LBUTTONDOWN ****/
