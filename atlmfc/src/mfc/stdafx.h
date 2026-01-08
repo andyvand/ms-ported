@@ -65,7 +65,10 @@
 #define _AFX_FULLTYPEINFO
 #define VC_EXTRALEAN
 #define NO_ANSIUNI_ONLY
+
+#ifndef _MFC_OVERRIDES_NEW
 #define _MFC_OVERRIDES_NEW
+#endif
 
 #define AFX_COMDAT __declspec(selectany)
 
@@ -198,4 +201,4 @@
 #define NO_CPP_EXCEPTION(expr)
 
 
-/////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////

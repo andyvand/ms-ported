@@ -1025,6 +1025,32 @@ WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdS
 
     return ret;
 }
+#elif defined(SET_MAIN) && defined(_UNICODE)
+extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
+
+extern "C" int WINAPI
+wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
+{
+	int ret = 0;
+
+	// call shared/exported WinMain
+	ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+
+	return ret;
+}
+#elif defined(SET_MAIN) && !defined(_UNICODE)
+extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow);
+
+extern "C" int WINAPI
+WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+	int ret = 0;
+
+	// call shared/exported WinMain
+	ret = AfxWinMain(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+
+	return ret;
+}
 #elif defined(_WIN32_WCE)
 extern int AFXAPI AfxWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow);
 

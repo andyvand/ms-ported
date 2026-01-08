@@ -147,7 +147,7 @@ void CMainWindow::OnWelcome()
 //          goto again;
 
 //      server = buf;
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE)  && !defined(NO_DDE)
         CLocateDlg  locate(this);
 
         if (IDCANCEL == locate.DoModal())       // display locate dialog
@@ -159,7 +159,7 @@ void CMainWindow::OnWelcome()
     else
         server = m_lpCmdLine;
 
-#ifndef _WIN32_WCE
+#if !defined(_WIN32_WCE) && !defined(NO_DDE)
     if (server[0] != '\\')
     {
         CString  sSlashes("\\\\");
