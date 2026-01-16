@@ -192,7 +192,7 @@ BOOL CTime::GetAsSystemTime(SYSTEMTIME& timeDest) const
 #ifdef _DEBUG
 CDumpContext& AFXAPI operator <<(CDumpContext& dc, CTime time)
 {
-#if __STDC_WANT_SECURE_LIB__
+#if defined(_WIN32_WINNT) && __STDC_WANT_SECURE_LIB__
 	char psz[26];
 	ctime_s(psz, sizeof(psz), &time.m_time);
 #else
