@@ -601,13 +601,23 @@ int CString::FindOneOf(LPCTSTR lpszCharSet) const
 void CString::MakeUpper()
 {
 	CopyBeforeWrite();
+
+#if __STDC_WANT_SECURE_LIB__
+	_tcsupr_s(m_pchData, _tcslen(m_pchData));
+#else
 	WCE_IF(::CharUpper, _tcsupr)(m_pchData);
+#endif
 }
 
 void CString::MakeLower()
 {
 	CopyBeforeWrite();
+
+#if __STDC_WANT_SECURE_LIB__
+	_tcslwr_s(m_pchData, _tcslen(m_pchData));
+#else
 	WCE_IF(::CharLower, _tcslwr)(m_pchData);
+#endif
 }
 
 void CString::MakeReverse()

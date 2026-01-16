@@ -328,7 +328,7 @@ typedef CFakeFirePropNotifyEvent _ATL_PROP_NOTIFY_EVENT_CLASS;
 //////////////////////////////////////////////////////////////////////////////
 // ATL Persistence
 
-struct ATL_PROPMAP_ENTRY
+typedef struct ATL_PROPMAP_ENTRY
 {
 	LPCOLESTR szDesc;
 	DISPID dispid;
@@ -337,7 +337,7 @@ struct ATL_PROPMAP_ENTRY
 	DWORD dwOffsetData;
 	DWORD dwSizeData;
 	VARTYPE vt;
-};
+} ATL_PROPMAP_ENTRY;
 
 // This one is DEPRECATED and is used for ATL 2.X controls
 // it includes an implicit m_sizeExtent
@@ -3368,7 +3368,7 @@ inline HRESULT CComTypeInfoHolder::GetTI(LCID lcid)
 {
 	//If this assert occurs then most likely didn't initialize properly
 	ATLASSERT(m_plibid != NULL && m_pguid != NULL);
-	ATLASSERT(!InlineIsEqualGUID(*m_plibid, GUID_NULL) && "Did you forget to pass the LIBID to CComModule::Init?");
+	ATLASSERT(!::InlineIsEqualGUID(*m_plibid, GUID_NULL) && "Did you forget to pass the LIBID to CComModule::Init?");
 
 	if (m_pInfo != NULL)
 		return S_OK;
@@ -3481,7 +3481,7 @@ public:
 	{
 
 #define SERVICE_ENTRY(x) \
-		if (InlineIsEqualGUID(guidService, x)) \
+		if (::InlineIsEqualGUID(guidService, x)) \
 			return QueryInterface(riid, ppvObject);
 
 #define SERVICE_ENTRY_CHAIN(x) \
@@ -3724,10 +3724,10 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 public:
 	STDMETHOD(_LocDEQueryInterface)(REFIID riid, void ** ppvObject)
 	{
-		if (InlineIsEqualGUID(riid, *pdiid) || 
-			InlineIsEqualUnknown(riid) ||
-			InlineIsEqualGUID(riid, IID_IDispatch) ||
-			InlineIsEqualGUID(riid, m_iid))
+		if (::InlineIsEqualGUID(riid, *pdiid) || 
+			::InlineIsEqualUnknown(riid) ||
+			::InlineIsEqualGUID(riid, IID_IDispatch) ||
+			::InlineIsEqualGUID(riid, m_iid))
 		{
 			if (ppvObject == NULL)
 				return E_POINTER;
@@ -4555,7 +4555,7 @@ inline HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise)
 			{
 				if (bAdvise)
 				{
-					if (!InlineIsEqualGUID(IID_NULL, *pEntries->piid))
+					if (!::InlineIsEqualGUID(IID_NULL, *pEntries->piid))
 						hr = pDE->DispEventAdvise(spUnk, pEntries->piid);
 					else
 					{
@@ -4565,7 +4565,7 @@ inline HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise)
 				}
 				else
 				{
-					if (!InlineIsEqualGUID(IID_NULL, *pEntries->piid))
+					if (!::InlineIsEqualGUID(IID_NULL, *pEntries->piid))
 						hr = pDE->DispEventUnadvise(spUnk, pEntries->piid);
 					else
 						hr = pDE->DispEventUnadvise(spUnk, &pDE->m_iid);
@@ -4609,7 +4609,7 @@ public:
 	HRESULT GetFuncInfoFromId(const IID& /*iid*/, DISPID dispidMember, LCID lcid, _ATL_FUNC_INFO& info)
 	{
 		CComPtr<ITypeInfo> spTypeInfo;
-		if (InlineIsEqualGUID(*_tih.m_plibid, GUID_NULL))
+		if (::InlineIsEqualGUID(*_tih.m_plibid, GUID_NULL))
 		{
 			_tih.m_plibid = &m_libid;
 			_tih.m_pguid = &m_iid;
@@ -4866,7 +4866,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl : public ISupportErrorInfo
 public:
 	STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid)
 	{
-		return (InlineIsEqualGUID(riid,*piid)) ? S_OK : S_FALSE;
+		return (::InlineIsEqualGUID(riid,*piid)) ? S_OK : S_FALSE;
 	}
 };
 
@@ -5343,7 +5343,7 @@ protected:
 			if (pMap[i].vt == 0)
 			{
 				// Does this property have a page?  CLSID_NULL means it does not
-				if (!InlineIsEqualGUID(*pMap[i].pclsidPropPage, CLSID_NULL))
+				if (!::InlineIsEqualGUID(*pMap[i].pclsidPropPage, CLSID_NULL))
 					nCnt++;
 			}
 		}
@@ -5358,14 +5358,14 @@ protected:
 			if (pMap[i].vt == 0)
 			{
 				// Does this property have a page?  CLSID_NULL means it does not
-				if (!InlineIsEqualGUID(*pMap[i].pclsidPropPage, CLSID_NULL))
+				if (!::InlineIsEqualGUID(*pMap[i].pclsidPropPage, CLSID_NULL))
 				{
 					BOOL bFound = FALSE;
 					// Search through array we are building up to see
 					// if it is already in there
 					for (int j=0; j<nCnt; j++)
 					{
-						if (InlineIsEqualGUID(*(pMap[i].pclsidPropPage), pPages->pElems[j]))
+						if (::InlineIsEqualGUID(*(pMap[i].pclsidPropPage), pPages->pElems[j]))
 						{
 							// It's already there, so no need to add it again
 							bFound = TRUE;
@@ -5661,7 +5661,7 @@ public:
 	~IConnectionPointImpl();
 	STDMETHOD(_LocCPQueryInterface)(REFIID riid, void ** ppvObject)
 	{
-		if (InlineIsEqualGUID(riid, IID_IConnectionPoint) || InlineIsEqualUnknown(riid))
+		if (::InlineIsEqualGUID(riid, IID_IConnectionPoint) || InlineIsEqualUnknown(riid))
 		{
 			if (ppvObject == NULL)
 				return E_POINTER;
@@ -5851,7 +5851,7 @@ public:
 			IConnectionPoint* pCP =
 				(IConnectionPoint*)((int)this+pEntry->dwOffset);
 			if (SUCCEEDED(pCP->GetConnectionInterface(&iid)) &&
-				InlineIsEqualGUID(riid, iid))
+				::InlineIsEqualGUID(riid, iid))
 			{
 				*ppCP = pCP;
 				pCP->AddRef();

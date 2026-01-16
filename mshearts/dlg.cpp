@@ -269,10 +269,14 @@ void CScoreDlg::OnPaint()
         text.Empty();
 	for (int hand = 0; hand < (nHandsPlayed - 1); hand++)
         {
-#if (_WIN32_WINNT >= 0x0603)
+#if (_WIN32_WINNT >= 0x0603) && !defined(_MSC_VER)
 	    wnsprintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
 #else
-	    wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#ifdef _MSC_VER
+		StringCchPrintf(text.GetBuffer(20), 20, TEXT("%d\r\n"), score[pos][nHandsPlayed - 1]);
+#else
+		wsprintf(text.GetBuffer(20), TEXT("%d\r\n"), score[pos][nHandsPlayed-1]);
+#endif
 #endif
 
             s.ReleaseBuffer();
@@ -284,10 +288,14 @@ void CScoreDlg::OnPaint()
         dc.SelectObject(&font);
         if (nHandsPlayed > 0)
         {
-#if (_WIN32_WINNT >= 0x0603)
+#if (_WIN32_WINNT >= 0x0603) && !defined(_MSC_VER)
             wnsprintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed-1]);
 #else
+#ifdef _MSC_VER
+			StringCchPrintf(text.GetBuffer(20), 20, TEXT("%d"), score[pos][nHandsPlayed - 1]);
+#else
             wsprintf(text.GetBuffer(20), TEXT("%d"), score[pos][nHandsPlayed-1]);
+#endif
 #endif
 
             text.ReleaseBuffer();

@@ -54,12 +54,14 @@ BOOL AFXAPI AfxCriticalInit()
 		// now we are about to be initialized
 		VERIFY(++_afxCriticalInit);
 
+#ifndef _WIN32_WINNT
 		// determine if running on Win32s (under Windows 3.x)
 		DWORD dwVersion = WCE_FCTN(GetVersion)();
 		_afxCriticalWin32s = ((BYTE)dwVersion) < 4 && (dwVersion & 0x80000000);
 
 		// only initialize MT related stuff if on MT capable systems
 		if (!_afxCriticalWin32s)
+#endif
 			InitializeCriticalSection(&_afxLockInitLock);
 	}
 	return _afxCriticalInit;

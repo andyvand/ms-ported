@@ -114,29 +114,60 @@ CTime PASCAL CTime::GetCurrentTime()
 #if !defined(_WIN32_WCE)
 struct tm* CTime::GetGmtTm(struct tm* ptm) const
 {
+#if __STDC_WANT_SECURE_LIB__
+	struct tm *ret = NULL;
+#endif
+
 	if (ptm != NULL)
 	{
+#if __STDC_WANT_SECURE_LIB__
+		gmtime_s(ptm, &m_time);
+#else
 		*ptm = *gmtime(&m_time);
+#endif
+
 		return ptm;
 	}
-	else
-		return gmtime(&m_time);
+
+#if __STDC_WANT_SECURE_LIB__
+	ret = (struct tm *)malloc(sizeof(struct tm));
+	gmtime_s(ret, &m_time);
+
+	return ret;
+#else
+	return gmtime(&m_time);
+#endif
 }
 #endif // _WIN32_WCE
 
 struct tm* CTime::GetLocalTm(struct tm* ptm) const
 {
+#if defined(_WIN32_WINNT) && __STDC_WANT_SECURE_LIB__
+	struct tm *ret = NULL;
+#endif
+
 	if (ptm != NULL)
 	{
+#if defined(_WIN32_WINNT) && __STDC_WANT_SECURE_LIB__
+		localtime_s(ptm, &m_time);
+#else
 		struct tm* ptmTemp = WCE_FCTN(localtime)(&m_time);
 		if (ptmTemp == NULL)
 			return NULL;    // indicates the m_time was not initialized!
 
 		*ptm = *ptmTemp;
+#endif
+
 		return ptm;
 	}
-	else
-		return WCE_FCTN(localtime)(&m_time);
+
+#if defined(_WIN32_WINNT) && __STDC_WANT_SECURE_LIB__
+	ret = (struct tm *)malloc(sizeof(struct tm));
+	localtime_s(ret, &m_time);
+	return ret;
+#else
+	return WCE_FCTN(localtime)(&m_time);
+#endif
 }
 
 BOOL CTime::GetAsSystemTime(SYSTEMTIME& timeDest) const
@@ -161,9 +192,15 @@ BOOL CTime::GetAsSystemTime(SYSTEMTIME& timeDest) const
 #ifdef _DEBUG
 CDumpContext& AFXAPI operator <<(CDumpContext& dc, CTime time)
 {
+#if __STDC_WANT_SECURE_LIB__
+	char psz[26];
+	ctime_s(psz, sizeof(psz), &time.m_time);
+#else
 	char* psz = WCE_FCTN(ctime)(&time.m_time);
+#endif
+
 	if ((psz == NULL) || (time.m_time == 0))
-		return dc << "CTime(invalid #" << time.m_time << ")";
+		return dc << "CTime(invalid #" << (LONG)(time.m_time) << ")";
 
 	// format it
 	psz[24] = '\0';         // nuke newline
@@ -283,10 +320,24 @@ CString CTime::Format(LPCTSTR pFormat) const
 {
 	TCHAR szBuffer[maxTimeBufferSize];
 
-	struct tm* ptmTemp = localtime(&m_time);
-	if (ptmTemp == NULL ||
-		!_tcsftime(szBuffer, _countof(szBuffer), pFormat, ptmTemp))
-		szBuffer[0] = '\0';
+#if __STDC_WANT_SECURE_LIB__
+	struct tm* ptmTemp = malloc(sizeof(struct tm));
+	if (ptmTemp != NULL)
+	{
+		localtime_s(ptmTemp, &m_time);
+#else
+		struct tm* ptmTemp = localtime(&m_time);
+#endif
+
+		if (ptmTemp == NULL ||
+			!_tcsftime(szBuffer, _countof(szBuffer), pFormat, ptmTemp))
+			szBuffer[0] = '\0';
+
+#if __STDC_WANT_SECURE_LIB__
+		free(ptmTemp);
+	}
+#endif
+
 	return szBuffer;
 }
 
@@ -294,10 +345,24 @@ CString CTime::FormatGmt(LPCTSTR pFormat) const
 {
 	TCHAR szBuffer[maxTimeBufferSize];
 
-	struct tm* ptmTemp = gmtime(&m_time);
-	if (ptmTemp == NULL ||
-		!_tcsftime(szBuffer, _countof(szBuffer), pFormat, ptmTemp))
-		szBuffer[0] = '\0';
+#if __STDC_WANT_SECURE_LIB__
+	struct tm* ptmTemp = malloc(sizeof(struct tm));
+	if (ptmTemp != NULL)
+	{
+		gmtime_s(ptmTemp, &m_time);
+#else
+		struct tm* ptmTemp = gmtime(&m_time);
+#endif
+
+		if (ptmTemp == NULL ||
+			!_tcsftime(szBuffer, _countof(szBuffer), pFormat, ptmTemp))
+			szBuffer[0] = '\0';
+
+#if __STDC_WANT_SECURE_LIB__
+		free(ptmTemp);
+	}
+#endif
+
 	return szBuffer;
 }
 

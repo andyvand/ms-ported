@@ -25,11 +25,13 @@
 #pragma code_seg(AFX_DBG2_SEG)
 #endif
 
+#ifndef _WIN32_WINNT
 static const char _szWceImplInl[] = "wceimpl.inl";
 #undef THIS_FILE
 #define THIS_FILE _szWceImplInl
 #define _AFXWIN_INLINE
 #include "wceimpl.h"
 #include "wceimpl.inl"
+#endif
 
 #endif //!_AFX_ENABLE_INLINES

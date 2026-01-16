@@ -63,19 +63,19 @@ public:
 	void** GetNextPtr(void* p) const;   // somewhat trusting...
 };
 
-AFX_INLINE CSimpleList::CSimpleList(int nNextOffset)
+AFX_DIRECT_INLINE CSimpleList::CSimpleList(int nNextOffset)
 	{ m_pHead = NULL; m_nNextOffset = nNextOffset; }
-AFX_INLINE void CSimpleList::Construct(int nNextOffset)
+AFX_DIRECT_INLINE void CSimpleList::Construct(int nNextOffset)
 	{ ASSERT(m_pHead == NULL); m_nNextOffset = nNextOffset; }
-AFX_INLINE BOOL CSimpleList::IsEmpty() const
+AFX_DIRECT_INLINE BOOL CSimpleList::IsEmpty() const
 	{ return m_pHead == NULL; }
-AFX_INLINE void** CSimpleList::GetNextPtr(void* p) const
+AFX_DIRECT_INLINE void** CSimpleList::GetNextPtr(void* p) const
 	{ ASSERT(p != NULL); return (void**)((BYTE*)p+m_nNextOffset); }
-AFX_INLINE void CSimpleList::RemoveAll()
+AFX_DIRECT_INLINE void CSimpleList::RemoveAll()
 	{ m_pHead = NULL; }
-AFX_INLINE void* CSimpleList::GetHead() const
+AFX_DIRECT_INLINE void* CSimpleList::GetHead() const
 	{ return m_pHead; }
-AFX_INLINE void* CSimpleList::GetNext(void* prevElement) const
+AFX_DIRECT_INLINE void* CSimpleList::GetNext(void* prevElement) const
 	{ return *GetNextPtr(prevElement); }
 
 template<class TYPE>
@@ -188,9 +188,9 @@ public:
 		TYPE* pData = (TYPE*)CThreadLocalObject::GetDataNA();
 		return pData;
 	}
-	AFX_INLINE operator TYPE*()
+	AFX_DIRECT_INLINE operator TYPE*()
 		{ return GetData(); }
-	AFX_INLINE TYPE* operator->()
+	AFX_DIRECT_INLINE TYPE* operator->()
 		{ return GetData(); }
 
 // Implementation
@@ -209,17 +209,17 @@ class CProcessLocal : public CProcessLocalObject
 {
 // Attributes
 public:
-	AFX_INLINE TYPE* GetData()
+	AFX_DIRECT_INLINE TYPE* GetData()
 	{
 		TYPE* pData = (TYPE*)CProcessLocalObject::GetData(&CreateObject);
 		ASSERT(pData != NULL);
 		return pData;
 	}
-	AFX_INLINE TYPE* GetDataNA()
+	AFX_DIRECT_INLINE TYPE* GetDataNA()
 		{ return (TYPE*)m_pObject; }
-	AFX_INLINE operator TYPE*()
+	AFX_DIRECT_INLINE operator TYPE*()
 		{ return GetData(); }
-	AFX_INLINE TYPE* operator->()
+	AFX_DIRECT_INLINE TYPE* operator->()
 		{ return GetData(); }
 
 // Implementation

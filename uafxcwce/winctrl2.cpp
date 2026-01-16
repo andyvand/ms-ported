@@ -31,12 +31,14 @@ static char THIS_FILE[] = __FILE__;
 #define new DEBUG_NEW
 
 #if !defined(_WIN32_WCE)
+#if (NTDDI_VERSION < NTDDI_WINXP)
 #ifndef _AFX_NO_OLE_SUPPORT
 extern "C"
 {
 HIMAGELIST WINAPI ImageList_Read(LPSTREAM pstm);
 BOOL       WINAPI ImageList_Write(HIMAGELIST himl, LPSTREAM pstm);
 }
+#endif
 #endif
 
 /////////////////////////////////////////////////////////////////////////////

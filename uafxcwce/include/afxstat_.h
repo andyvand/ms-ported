@@ -127,8 +127,8 @@ template<class TYPE>
 class CEmbeddedButActsLikePtr
 {
 public:
-	AFX_INLINE TYPE* operator->() { return &m_data; }
-	AFX_INLINE operator TYPE*() { return &m_data; }
+	AFX_DIRECT_INLINE TYPE* operator->() { return &m_data; }
+	AFX_DIRECT_INLINE operator TYPE*() { return &m_data; }
 	TYPE m_data;
 };
 

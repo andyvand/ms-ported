@@ -22,8 +22,11 @@
 #if !defined(_WIN32_WCE)
 // WinCE: for IDE resource editor doesn't use /D settings,
 // so we need to turn on _WIN32_WCE
-#define _WIN32_WCE 200				
+#ifndef _WIN32_WINNT
+#define _WIN32_WCE 800
+#endif // _WIN32_WINNT
 #endif // _WIN32_WCE
+
 #if defined(_WIN32_WCE)
 	#include <wce.h>
 	#if !defined(WCEOLE_ENABLE_DIALOGEX)
@@ -306,7 +309,7 @@
 #define ID_RECORD_NEXT                  0xE902
 #define ID_RECORD_PREV                  0xE903
 
-#if defined(_WIN32_WCE)
+#if defined(_WIN32_WCE) || defined(_WIN32_WINNT)
 // Commandbars
 #define IDC_COMMANDBAR                  0xE408
 #define IDC_CMDBAR_COMBOBOX             0xE409

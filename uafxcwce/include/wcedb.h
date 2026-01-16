@@ -21,6 +21,19 @@
 #ifndef __WCEDB_H__
 #define __WCEDB_H__
 
+#ifdef _WIN32_WINNT
+#define CEDB_SORT_DESCENDING 1
+#define CEDB_SORT_CASEINSENSITIVE 2
+#define CEDB_SORT_UNKNOWNFIRST 3
+#define CEDB_SORT_GENERICORDER 4
+#define CEBLOB BLOB
+#define CEPROPID UINT32
+#define CEVALUNION VALUNION
+
+typedef struct _CEPROPVAL { CEPROPID propid; WORD wLenData; WORD wFlags; CEVALUNION val; } CEPROPVAL;
+typedef CEPROPVAL *PCEPROPVAL;
+#endif
+
 /////////////////////////////////////////////////////////////////////////////
 // Wrapper class for CEPROPVAL structure
 // Implementation file: wcedb.cpp

@@ -25,6 +25,8 @@
 #ifndef __WCEIMPL_H__
 #define __WCEIMPL_H__
 
+#pragma warning(disable:4005)
+
 // Define libraries to be used in MFC and OLE DLLs.
 #if (_WIN32_WCE >= 201)
 	#pragma comment(lib, "corelibc.lib")
@@ -44,7 +46,6 @@
 	#error Please use the /MT switch (multithreaded C-runtime)
 #endif
 #endif
-
 
 #if defined(_AFX_OLE_IMPL)
 	#if defined(_DEBUG)
@@ -68,10 +69,12 @@
 #pragma comment(lib, "doclist.lib")
 #endif // _WIN32_WCE_PSPC
 
+#ifndef _WIN32_WINNT
 typedef struct tagNCCALCSIZE_PARAMS {
     RECT       rgrc[3];
     PWINDOWPOS lppos;
 } NCCALCSIZE_PARAMS, *LPNCCALCSIZE_PARAMS;
+#endif
 
 // Missing typedefs
 #ifndef _TIME_T_DEFINED
@@ -79,14 +82,23 @@ typedef unsigned long time_t;
 #define _TIME_T_DEFINED 
 #endif
 typedef HANDLE  HDWP;
+
+#ifndef _WIN32_WINNT
 typedef HANDLE  HDROP;
+#endif
+
 typedef wchar_t _TUCHAR;
+
+#ifndef _WIN32_WINNT
 typedef LPVOID  LPPRINTER_DEFAULTS;
+
 //typedef LPVOID  LPCHOOSEFONT;
 #if (_WIN32_WCE < 210)
 typedef LPVOID  LPPAGESETUPDLG;
 #endif // _WIN32_WCE < 210
+
 typedef UINT    UWORD;
+#endif
 
 // Missing headers
 #include "prsht.h"    
@@ -95,9 +107,15 @@ typedef UINT    UWORD;
 #ifndef _istlead
 #define _istlead(ch) (FALSE)  
 #endif
+
 #ifndef _vsnwprintf
+#if __STDC_WANT_SECURE_LIB__
+#define _vsnwprintf(a,b,c,d) vswprintf_s(a,b,c,d)
+#else
 #define _vsnwprintf(a,b,c,d) vswprintf(a,c,d)
 #endif
+#endif
+
 #define lstrcmpA     strcmp
 #define lstrcatA     strcat
 #define _ttoi        _wtoi
@@ -106,7 +124,13 @@ typedef UINT    UWORD;
 #define _ultot       _ultow
 #define lstrlenA     strlen
 #define lstrcpyA     strcpy
-#define lstrcpyn     _tcsncpy
+
+#if __STDC_WANT_SECURE_LIB__
+#define lstrcpyn(a,b,c) _tcscpy_s(a,c,b)
+#else
+#define lstrcpyn(a,b,c) _tcsncpy(a,b,c)
+#endif
+
 #define _tcstol      wcstol
 #define _tcstoul     wcstoul
 #define _tcstod      wcstod
@@ -114,11 +138,11 @@ typedef UINT    UWORD;
 #define _tcsdec      _wcsdec
 #define _tcsinc      _wcsinc
 
-#if _WIN32_WCE < 800
-__inline wchar_t * __cdecl _wcsdec(const wchar_t * start, const wchar_t * current)
+#if (_WIN32_WCE < 800) && !defined(_WIN32_WINNT)
+static __inline wchar_t * __cdecl _wcsdec(const wchar_t * start, const wchar_t * current)
 	{ return (wchar_t *) ( (start>=current) ? NULL : (current-1) ); }
-__inline wchar_t * __cdecl _wcsinc(const wchar_t * _pc) { return (wchar_t *)(_pc+1); }
-__inline size_t    __cdecl _tclen( const wchar_t *_cpc) { return 2; } // for UNICODE
+static __inline wchar_t * __cdecl _wcsinc(const wchar_t * _pc) { return (wchar_t *)(_pc + 1); }
+static __inline size_t    __cdecl _tclen(const wchar_t *_cpc) { return 2; } // for UNICODE
 #endif
 
 // Missing definitions: not necessary equal to their Win32 values 

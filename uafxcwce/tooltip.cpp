@@ -94,7 +94,7 @@ LRESULT CToolTipCtrl::OnAddTool(WPARAM wParam, LPARAM lParam)
 			m_mapString.SetAt(ti.lpszText, NULL);
 		// set lpszText to point to the permanent memory associated
 		// with the CString
-		VERIFY(m_mapString.LookupKey(ti.lpszText, ti.lpszText));
+		VERIFY(m_mapString.LookupKey(ti.lpszText, (LPCTSTR&)ti.lpszText));
 	}
 	return DefWindowProc(TTM_ADDTOOL, wParam, (LPARAM)&ti);
 }

@@ -605,12 +605,14 @@ BOOL AFXAPI AfxFullPath(LPTSTR lpszPathOut, LPCTSTR lpszFileIn)
 
 void AFXAPI AfxGetRoot(LPCTSTR lpszPath, CString& strRoot)
 {
+	LPTSTR lpsz = NULL;
+
 	ASSERT(lpszPath != NULL);
 	// determine the root name of the volume
 	LPTSTR lpszRoot = strRoot.GetBuffer(_MAX_PATH);
 	memset(lpszRoot, 0, _MAX_PATH);
 	lstrcpyn(lpszRoot, lpszPath, _MAX_PATH);
-	for (LPTSTR lpsz = lpszRoot; *lpsz != '\0'; lpsz = _tcsinc(lpsz))
+	for (lpsz = lpszRoot; *lpsz != '\0'; lpsz = _tcsinc(lpsz))
 	{
 		// find first double slash and stop
 		if (IsDirSep(lpsz[0]) && IsDirSep(lpsz[1]))

@@ -59,9 +59,15 @@
 	#define _WIN32_WCE_CEF
 #endif
 #else // _WIN32_WCE
+#ifndef _T
 #define _T(x) x
+#endif
 #define WCE_DEL
-#define WCE_INS /##/
+
+#ifndef WCE_INS
+#define WCE_INS
+#endif
+
 #define WCE_FCTN(fctn) fctn
 #define WCE_ATL_FCTN(fctn) fctn
 #define WCE_IF(wce,base) base
@@ -95,8 +101,8 @@
 #include <ole2.h>
 
 WCE_INS typedef GUID CATID;		// missed definition from comcat.h
-WCE_DEL #include <comcat.h>
-WCE_DEL #include <stddef.h>
+#include <comcat.h>
+#include <stddef.h>
 
 #if defined(_WIN32_WCE_PSPC) && !defined(_WIN32_WCE_AYGSHELL)
 #define _WIN32_WCE_AYGSHELL 1
@@ -127,13 +133,13 @@ WCE_DEL #include <stddef.h>
 #include <atliface.h>
 
 #ifdef _DEBUG
-WCE_DEL #include <stdio.h>
+#include <stdio.h>
 #include <stdarg.h>
 #endif
 
 #include <atlconv.h>
 
-WCE_DEL #include <shlwapi.h>
+#include <shlwapi.h>
 
 #pragma pack(push, _ATL_PACKING)
 
@@ -548,7 +554,12 @@ inline void _cdecl AtlTrace(LPCSTR lpszFormat, ...)
 	int nBuf;
 	char szBuffer[512];
 
+#if __STDC_WANT_SECURE_LIB__
+	nBuf = vsprintf_s(szBuffer, sizeof(szBuffer), lpszFormat, args);
+#else
 	nBuf = _vsnprintf(szBuffer, sizeof(szBuffer), lpszFormat, args);
+#endif
+
 	ATLASSERT(nBuf < sizeof(szBuffer)); //Output truncated as it was > sizeof(szBuffer)
 
 	OutputDebugStringA(szBuffer);
@@ -564,7 +575,12 @@ inline void _cdecl AtlTrace2(DWORD category, UINT level, LPCSTR lpszFormat, ...)
 		int nBuf;
 		char szBuffer[512];
 
+#if __STDC_WANT_SECURE_LIB__
+		nBuf = vsprintf_s(szBuffer, sizeof(szBuffer), lpszFormat, args);
+#else
 		nBuf = _vsnprintf(szBuffer, sizeof(szBuffer), lpszFormat, args);
+#endif
+
 		ATLASSERT(nBuf < sizeof(szBuffer)); //Output truncated as it was > sizeof(szBuffer)
 
 		OutputDebugStringA("ATL: ");
@@ -583,9 +599,17 @@ inline void _cdecl AtlTrace(LPCWSTR lpszFormat, ...)
 	WCHAR szBuffer[512];
 
 #if defined(_WIN32_WCE)
+#if __STDC_WANT_SECURE_LIB__
+	nBuf = _vstprintf_s(szBuffer, (sizeof(szBuffer) / sizeof(WCHAR)), lpszFormat, args);
+#else
 	nBuf = _vstprintf(szBuffer, lpszFormat, args);
+#endif
 #else // _WIN32_WCE
+#if __STDC_WANT_SECURE_LIB__
+	nBuf = vswprintf_s(szBuffer, (sizeof(szBuffer) / sizeof(WCHAR)), lpszFormat, args);
+#else
 	nBuf = _vsnwprintf(szBuffer, sizeof(szBuffer) / sizeof(WCHAR), lpszFormat, args);
+#endif
 #endif // _WIN32_WCE
 	ATLASSERT(nBuf < sizeof(szBuffer));//Output truncated as it was > sizeof(szBuffer)
 
@@ -603,9 +627,17 @@ inline void _cdecl AtlTrace2(DWORD category, UINT level, LPCWSTR lpszFormat, ...
 		WCHAR szBuffer[512];
 
 #if defined(_WIN32_WCE)
+#if __STDC_WANT_SECURE_LIB__
+		nBuf = _vstprintf_s(szBuffer, sizeof(szBuffer) / sizeof(WCHAR), lpszFormat, args);
+#else
 		nBuf = _vstprintf(szBuffer, lpszFormat, args);
+#endif
 #else // _WIN32_WCE
+#if __STDC_WANT_SECURE_LIB__
+		nBuf = vswprintf_s(szBuffer, sizeof(szBuffer) / sizeof(WCHAR), lpszFormat, args);
+#else
 		nBuf = _vsnwprintf(szBuffer, sizeof(szBuffer) / sizeof(WCHAR), lpszFormat, args);
+#endif
 #endif // _WIN32_WCE
 		ATLASSERT(nBuf < sizeof(szBuffer));//Output truncated as it was > sizeof(szBuffer)
 
@@ -1198,7 +1230,7 @@ public:
 
 #ifndef __INLINEISEQUALGUID__
 #define __INLINEISEQUALGUID__
-inline BOOL InlineIsEqualGUID(REFGUID rguid1, REFGUID rguid2)
+static __inline BOOL InlineIsEqualGUID(REFGUID rguid1, REFGUID rguid2)
 {
    return (
 	  ((PLONG) &rguid1)[0] == ((PLONG) &rguid2)[0] &&
@@ -5564,7 +5596,7 @@ ATLINLINE ATLAPI AtlInternalQueryInterface(void* pThis,
 	while (pEntries->pFunc != NULL)
 	{
 		BOOL bBlind = (pEntries->piid == NULL);
-		if (bBlind || InlineIsEqualGUID(*(pEntries->piid), iid))
+		if (bBlind || ::InlineIsEqualGUID(*(pEntries->piid), iid))
 		{
 			if (pEntries->pFunc == _ATL_SIMPLEMAPENTRY) //offset
 			{
@@ -5894,7 +5926,7 @@ ATLINLINE ATLAPI AtlModuleGetClassObject(_ATL_MODULE* pM, REFCLSID rclsid, REFII
 	*ppv = NULL;
 	while (pEntry->pclsid != NULL)
 	{
-		if ((pEntry->pfnGetClassObject != NULL) && InlineIsEqualGUID(rclsid, *pEntry->pclsid))
+		if ((pEntry->pfnGetClassObject != NULL) && ::InlineIsEqualGUID(rclsid, *pEntry->pclsid))
 		{
 			if (pEntry->pCF == NULL)
 			{

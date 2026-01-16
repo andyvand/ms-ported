@@ -225,7 +225,7 @@ public:
 #endif // _WIN32_WCE_NO_DOCKBARS
 
 #if !defined(_WIN32_WCE_NO_TOOLTIPS)
-	virtual BOOL PreTranslateMessage(MSG* pMsg)
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 #endif // _WIN32_WCE_NO_TOOLTIPS
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 	virtual void PostNcDestroy();

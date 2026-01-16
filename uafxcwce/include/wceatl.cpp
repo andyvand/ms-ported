@@ -19,6 +19,13 @@
 
 #ifndef _ATL_DLL
 
+#ifdef _WIN32_WINNT
+#include <atlbase.h>
+#include <windows.h>
+#include <objidl.h>
+#include <guiddef.h>
+#endif
+
 namespace ATL
 {
 // ATLAPI Atl...() are moved here from atlcom.h in order to prevent multiple compilation

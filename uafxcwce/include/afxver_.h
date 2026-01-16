@@ -122,7 +122,9 @@
 //
 
 #ifndef _DEBUG
-	#define _AFX_ENABLE_INLINES
+	#ifndef _WIN32_WINNT
+		#define _AFX_ENABLE_INLINES
+	#endif
 #endif
 
 #define _AFX_NO_NESTED_DERIVATION
@@ -154,7 +156,12 @@
 // special include files
 
 #ifndef AFX_INLINE
-	#define AFX_INLINE inline /*__forceinline*/
+	#ifdef _WIN32_WINNT
+		#define AFX_INLINE inline __forceinline
+#	else // _WIN32_WCE
+		#define AFX_INLINE inline /*__forceinline*/
+	#endif
+	#define AFX_DIRECT_INLINE AFX_INLINE
 #endif
 
 #include <afxv_w32.h>

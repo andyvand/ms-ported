@@ -36,7 +36,13 @@ static char THIS_FILE[] = __FILE__;
 CDumpContext& CDumpContext::operator<<(float f)
 {
 	char szBuffer[32];
+
+#if __STDC_WANT_SECURE_LIB__
+	_gcvt_s(szBuffer, sizeof(szBuffer), f, FLT_DIG);
+#else
 	_gcvt(f, FLT_DIG, szBuffer);
+#endif
+
 	*this << szBuffer;
 	return *this;
 }
@@ -44,7 +50,13 @@ CDumpContext& CDumpContext::operator<<(float f)
 CDumpContext& CDumpContext::operator<<(double d)
 {
 	char szBuffer[32];
+
+#if __STDC_WANT_SECURE_LIB__
+	_gcvt_s(szBuffer, sizeof(szBuffer), d, DBL_DIG);
+#else
 	_gcvt(d, DBL_DIG, szBuffer);
+#endif
+
 	*this << szBuffer;
 	return *this;
 }

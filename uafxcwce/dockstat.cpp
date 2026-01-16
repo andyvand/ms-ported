@@ -455,9 +455,11 @@ void CFrameWnd::SaveBarState(LPCTSTR lpszProfileName) const
 
 void CFrameWnd::SetDockState(const CDockState& state)
 {
+	int i = 0;
+
 	// first pass through barinfo's sets the m_pBar member correctly
 	// creating floating frames if necessary
-	for (int i = 0; i < state.m_arrBarInfo.GetSize(); i++)
+	for (i = 0; i < state.m_arrBarInfo.GetSize(); i++)
 	{
 		CControlBarInfo* pInfo = (CControlBarInfo*)state.m_arrBarInfo[i];
 		ASSERT(pInfo != NULL);

@@ -33,7 +33,11 @@
     #define WCE_DYN_MEMBER(member) member // redefined below to support jmpBuf for CEF
 #else // _WIN32_WCE
     #define WCE_DEL
-    #define WCE_INS /##/
+
+	#ifndef WCE_INS
+	#define WCE_INS
+	#endif
+
     #define WCE_FCTN(fctn) fctn
     #define WCE_IF(wce,base) base
     #define WCE_DYN_MEMBER(member) member
@@ -428,6 +432,10 @@ BOOL AFXAPI AfxInitialize(BOOL bDLL = FALSE, DWORD dwVersion = _MFC_VER);
     #if defined(_AFX_CORE_IMPL) || defined(_AFX_OLE_IMPL)
         #include "wceimpl.h"
     #endif
+#else
+#ifndef HELP_HELPFILE
+#define HELP_HELPFILE 0x0000
+#endif
 #endif // _WIN32_WCE
 /////////////////////////////////////////////////////////////////////////////
 // Basic object model
@@ -2165,6 +2173,7 @@ extern AFX_DATA BOOL afxTraceEnabled;
 
 #ifdef _AFX_ENABLE_INLINES
 #define _AFX_INLINE AFX_INLINE
+#define _AFX_DIRECT_INLINE AFX_DIRECT_INLINE
 
 #if !defined(_AFX_CORE_IMPL) || !defined(_AFXDLL) || defined(_DEBUG)
 #define _AFX_PUBLIC_INLINE AFX_INLINE

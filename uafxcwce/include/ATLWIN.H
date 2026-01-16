@@ -665,7 +665,7 @@ public:
 	}
 #endif // _WIN32_WCE
 
-#if !defined(_WIN32_WCE) || (_WIN32_WCE >= 210)
+#if (!defined(_WIN32_WCE) || (_WIN32_WCE >= 210)) || defined(_WIN32_WINNT)
 	HDC GetDCEx(HRGN hRgnClip, DWORD flags)
 	{
 		ATLASSERT(::IsWindow(m_hWnd));

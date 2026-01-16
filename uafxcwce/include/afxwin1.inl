@@ -20,7 +20,6 @@
 // Inlines for AFXWIN.H (part 1)
 
 #ifdef _AFXWIN_INLINE
-
 // Global helper functions
 _AFXWIN_INLINE CWinApp* AFXAPI AfxGetApp()
 	{ return afxCurrentWinApp; }
@@ -342,7 +341,7 @@ _AFXWIN_INLINE BOOL CBrush::CreateSolidBrush(COLORREF crColor)
 WCE_DEL _AFXWIN_INLINE BOOL CBrush::CreateHatchBrush(int nIndex, COLORREF crColor)
 WCE_DEL { return Attach(::CreateHatchBrush(nIndex, crColor)); }
 _AFXWIN_INLINE BOOL CBrush::CreateBrushIndirect(const LOGBRUSH* lpLogBrush)
-	{ return Attach(WCE_FCTN(CreateBrushIndirect)(lpLogBrush)); }
+	{ return Attach(::WCE_FCTN(CreateBrushIndirect)(lpLogBrush)); }
 _AFXWIN_INLINE BOOL CBrush::CreatePatternBrush(CBitmap* pBitmap)
 	{ return Attach(::CreatePatternBrush((HBITMAP)pBitmap->GetSafeHandle())); }
 _AFXWIN_INLINE BOOL CBrush::CreateDIBPatternBrush(const void* lpPackedDIB, UINT nUsage)

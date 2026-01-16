@@ -39,8 +39,13 @@
 #include "wceres.h"
 
 // operation messages sent to DLGINIT
+#ifndef LB_ADDSTRING
 #define LB_ADDSTRING    (WM_USER+1)
+#endif
+
+#ifndef CB_ADDSTRING
 #define CB_ADDSTRING    (WM_USER+3)
+#endif
 
 #ifdef APSTUDIO_INVOKED
 #undef APSTUDIO_HIDDEN_SYMBOLS

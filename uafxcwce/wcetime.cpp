@@ -101,7 +101,7 @@ static tm wce_SystemTimeToTm(SYSTEMTIME &s)
 	t.tm_mon   = s.wMonth-1;
 	t.tm_wday  = s.wDayOfWeek;
 	t.tm_mday  = s.wDay;
-	t.tm_yday  = wce_SystemTimeToYDay(s);
+	t.tm_yday  = (int)wce_SystemTimeToYDay(s);
 	t.tm_hour  = s.wHour;
 	t.tm_min   = s.wMinute;
 	t.tm_sec   = s.wSecond;
@@ -305,7 +305,7 @@ time_t AFXAPI wce_mktime(struct tm* pt)
 	SYSTEMTIME s = wce_TmToSystemTime(*pt);
 
 	// Fix the yday (needs to be correct in order for wce_isindst to work)
-	pt->tm_yday = wce_SystemTimeToYDay(s);
+	pt->tm_yday = (int)wce_SystemTimeToYDay(s);
 
 	// Convert SYSTEMTIME to FILETIME.
 	FILETIME f;
@@ -374,10 +374,17 @@ char* AFXAPI wce_ctime( const time_t *ulSecsSince1970 )
 	static TCHAR szBuf[28];
 	struct tm *ptime = wce_localtime(ulSecsSince1970);
 
+#if __STDC_WANT_SECURE_LIB__
+	_tcscpy_s(&szBuf[0], 4, _T("Sun Mon Tue Wed Thu Fri Sat ") + (ptime->tm_wday * 4));
+	_tcscpy_s(&szBuf[4], 4, _T("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec ") + (ptime->tm_mon * 4));
+	swprintf_s(&szBuf[8], (sizeof(szBuf) / sizeof(TCHAR)) - 8, _T("%02d %02d:%02d:%02d %04d\n"),
+		ptime->tm_mday, ptime->tm_hour, ptime->tm_min, ptime->tm_sec, ptime->tm_year + 1900);
+#else
 	_tcsncpy(&szBuf[0], _T("Sun Mon Tue Wed Thu Fri Sat ") + (ptime->tm_wday*4), 4);
 	_tcsncpy(&szBuf[4], _T("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec ") + (ptime->tm_mon*4), 4 );
 	wsprintf(&szBuf[8], _T("%02d %02d:%02d:%02d %04d\n") ,
 		ptime->tm_mday, ptime->tm_hour, ptime->tm_min, ptime->tm_sec, ptime->tm_year+1900);
+#endif
 
 	// convert to ascii
 	TCHAR *szWide = szBuf;

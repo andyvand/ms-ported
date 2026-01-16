@@ -2226,7 +2226,7 @@ public:
 
 // Help Command Handlers
 	afx_msg void OnHelp();          // F1 (uses current context)
-WCE_DEL	afx_msg void OnHelpIndex();     // ID_HELP_INDEX
+WCE_DEL	afx_msg void OnHelpIndex();     // ID_HELP_INDEX#
 WCE_DEL	afx_msg void OnHelpFinder();    // ID_HELP_FINDER, ID_DEFAULT_HELP
 WCE_DEL	afx_msg void OnHelpUsing();     // ID_HELP_USING
 	virtual void WinHelp(DWORD dwData, UINT nCmd = WCE_IF(0,HELP_HELPFILE));
@@ -4850,7 +4850,10 @@ void AFXAPI AfxOleUnlockAllControls();
 #endif
 
 #ifdef _AFX_ENABLE_INLINES
-#define _AFXWIN_INLINE AFX_INLINE
+#ifndef _AFXWIN_INLINE
+#define _AFXWIN_INLINE AFX_DIRECT_INLINE
+#endif
+
 #include <afxwin1.inl>
 #include <afxwin2.inl>
 #endif

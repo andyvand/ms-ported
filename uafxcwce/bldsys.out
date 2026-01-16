@@ -1,110 +1,30 @@
-BUILD: [00:0000000000:PROGC ] Build started with parameters:
+BUILD: [00:0000000000:PROGC ] Build started with parameters: -c
 BUILD: [00:0000000000:PROGC ] Build started in directory: C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce
 BUILD: [00:0000000000:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, RUN_WPP, XRPACK, PRECOMPHEADER, COMPILE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, LOCALIZE, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
-BUILD: [00:0000000016:PROGC ] Loading database "C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat".
-BUILD: [00:0000000016:PROGC ] Done.
-BUILD: [00:0000000032:PROGC ] Computing include file dependencies:
-BUILD: [01:0000000078:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
-BUILD: [00:0000000625:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
-BUILD: [00:0000000703:PROGC ] Directory scanning complete.
-BUILD: [00:0000000703:PROGC ] Saving Master Database complete.
-BUILD: [00:0000000703:PROGC ] Starting WCEFILES0 Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass WCEFILES0.
-BUILD: [00:0000000719:PROGC ] Starting MIDL Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass MIDL.
-BUILD: [00:0000000719:PROGC ] Starting MC Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass MC.
-BUILD: [00:0000000719:PROGC ] Starting ASN Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass ASN.
-BUILD: [00:0000000719:PROGC ] Starting THUNK Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass THUNK.
-BUILD: [00:0000000719:PROGC ] Starting RUN_WPP Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass RUN_WPP.
-BUILD: [00:0000000719:PROGC ] Starting XRPACK Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass XRPACK.
-BUILD: [00:0000000719:PROGC ] Starting PRECOMPHEADER Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
-BUILD: [00:0000000719:PROGC ] Starting COMPILE Pass.
-BUILD: [00:0000000719:PROGC ] Analyzing project dependency information for pass COMPILE.
-BUILD: [00:0000000750:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [01:0000001016:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp
-BUILD: [01:0000022235:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
-BUILD: [01:0000022235:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(79) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS. {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(48)"}
-BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(109) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS. {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(49)"}
-BUILD: [01:0000022250:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp(110) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS. {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(50)"}
-BUILD: [01:0000040750:WARNN ] c:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp(685) : warning C4996: '_swprintf': swprintf has been changed to conform with the ISO C standard, adding an extra character count parameter. To use traditional Microsoft swprintf, set _CRT_NON_CONFORMING_SWPRINTFS. {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(51)"}
-BUILD: [00:0000062375:PROGC ] Starting RENUMBERICONIDS Pass.
-BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass RENUMBERICONIDS.
-BUILD: [00:0000062375:PROGC ] Starting RES2RES Pass.
-BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass RES2RES.
-BUILD: [00:0000062375:PROGC ] Starting LIB Pass.
-BUILD: [00:0000062375:PROGC ] Analyzing project dependency information for pass LIB.
-BUILD: [00:0000062641:PROGC ] Building LIB Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [01:0000062953:PROGC ] Linking C:\WINCE800\public\\oak\lib\ARMV7\retail\uafxwce.lib
-BUILD: [01:0000063875:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
-BUILD: [01:0000063875:WARNN ] wceimpl.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(61)"}
-BUILD: [01:0000063875:WARNN ] wcedll.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(62)"}
-BUILD: [01:0000063875:WARNN ] wcedlgsm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(63)"}
-BUILD: [01:0000063875:WARNN ] wcedoctm.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(64)"}
-BUILD: [01:0000063875:WARNN ] wcedoclt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(65)"}
-BUILD: [01:0000063891:WARNN ] tooltip.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(66)"}
-BUILD: [01:0000063907:WARNN ] dumpout.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(67)"}
-BUILD: [01:0000063907:WARNN ] dumpinit.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(68)"}
-BUILD: [01:0000063907:WARNN ] dumpflt.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(69)"}
-BUILD: [01:0000063907:WARNN ] dockstat.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(70)"}
-BUILD: [01:0000063907:WARNN ] dockcont.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(71)"}
-BUILD: [01:0000063922:WARNN ] bardock.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(72)"}
-BUILD: [01:0000063922:WARNN ] afxtrace.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(73)"}
-BUILD: [01:0000063938:WARNN ] afxinl3.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(74)"}
-BUILD: [01:0000063938:WARNN ] afxinl2.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(75)"}
-BUILD: [01:0000063938:WARNN ] afxinl1.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(76)"}
-BUILD: [01:0000063938:WARNN ] afxdbcs.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(77)"}
-BUILD: [01:0000063938:WARNN ] afxasert.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library {log="C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce\bldsys.log(78)"}
-BUILD: [00:0000064032:PROGC ] Starting EXPLIB Pass.
-BUILD: [00:0000064032:PROGC ] Analyzing project dependency information for pass EXPLIB.
-BUILD: [00:0000064032:PROGC ] Starting LINK Pass.
-BUILD: [00:0000064032:PROGC ] Analyzing project dependency information for pass LINK.
-BUILD: [00:0000064032:PROGC ] Starting LOCALIZE Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass LOCALIZE.
-BUILD: [00:0000064047:PROGC ] Starting MANAGEDRESX Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDRESX.
-BUILD: [00:0000064047:PROGC ] Starting MANAGEDMOD Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDMOD.
-BUILD: [00:0000064047:PROGC ] Starting MANAGEDDLL Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDDLL.
-BUILD: [00:0000064047:PROGC ] Starting MANAGEDEXE Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDEXE.
-BUILD: [00:0000064047:PROGC ] Starting MANAGEDWIN Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass MANAGEDWIN.
-BUILD: [00:0000064047:PROGC ] Starting POSTBUILD Pass.
-BUILD: [00:0000064047:PROGC ] Analyzing project dependency information for pass POSTBUILD.
-BUILD: [00:0000064125:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
-BUILD: [00:0000064141:PROGC ] Done.
-BUILD: [00:0000064141:PROGC ]                        Files  Warnings  Errors
-BUILD: [00:0000064141:PROGC ] Midl                       0         0       0
-BUILD: [00:0000064141:PROGC ] Message                    0         0       0
-BUILD: [00:0000064141:PROGC ] Precomp Header             0         0       0
-BUILD: [00:0000064141:PROGC ] Resource                   0         0       0
-BUILD: [00:0000064141:PROGC ] XRPack                     0         0       0
-BUILD: [00:0000064141:PROGC ] MASM                       0         0       0
-BUILD: [00:0000064141:PROGC ] SHASM                      0         0       0
-BUILD: [00:0000064141:PROGC ] ARMASM                     0         0       0
-BUILD: [00:0000064141:PROGC ] C++                        1         4       0
-BUILD: [00:0000064141:PROGC ] C                          0         0       0
-BUILD: [00:0000064141:PROGC ] CheckLibs                  0         0       0
-BUILD: [00:0000064141:PROGC ] Static Libraries           1        18       0
-BUILD: [00:0000064141:PROGC ] Exe's                      0         0       0
-BUILD: [00:0000064141:PROGC ] Dll's                      0         0       0
-BUILD: [00:0000064141:PROGC ] Preprocess deffile         0         0       0
-BUILD: [00:0000064141:PROGC ] Resx                       0         0       0
-BUILD: [00:0000064141:PROGC ] CSharp Compile             0         0       0
-BUILD: [00:0000064141:PROGC ] VCProj Compile             0         0       0
-BUILD: [00:0000064141:PROGC ] NETCF Build                0         0       0
-BUILD: [00:0000064141:PROGC ] Localization               0         0       0
-BUILD: [00:0000064141:PROGC ] Other                      0        15       0
-BUILD: [00:0000064141:PROGC ] 
-BUILD: [00:0000064141:PROGC ] Total                      2        37       0
-BUILD: [00:0000064157:PROGC ] 
-BUILD: [00:0000064157:PROGC ] 37 Warnings,  0 Errors
-BUILD: [00:0000064157:PROGC ] GetSystemTimes (seconds): Idle: 40    Kernel: 67    User: 60   
-BUILD: [00:0000064172:PROGC ] Elapsed  time  (seconds): 64   
+BUILD: [00:0000000000:PROGC ] Ignoring build database (-c specified).
+BUILD: [00:0000000000:PROGC ] Computing include file dependencies:
+BUILD: [01:0000000218:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [00:0000001000:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [00:0000001875:PROGC ] Directory scanning complete.
+BUILD: [00:0000001875:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
+BUILD: [00:0000001906:PROGC ] Saving Master Database complete.
+BUILD: [00:0000001906:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000001906:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000001906:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000001921:PROGC ] Starting MC Pass.
+BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000001921:PROGC ] Starting ASN Pass.
+BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000001921:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000001937:PROGC ] Starting RUN_WPP Pass.
+BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass RUN_WPP.
+BUILD: [00:0000001937:PROGC ] Starting XRPACK Pass.
+BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass XRPACK.
+BUILD: [00:0000001937:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000001937:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000002015:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
+BUILD: [01:0000003359:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp

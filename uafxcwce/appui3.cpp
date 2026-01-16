@@ -357,6 +357,8 @@ BOOL CWinApp::WriteProfileString(LPCTSTR lpszSection, LPCTSTR lpszEntry,
 BOOL CWinApp::WriteProfileBinary(LPCTSTR lpszSection, LPCTSTR lpszEntry,
 	LPBYTE pData, UINT nBytes)
 {
+	UINT i = 0;
+
 	ASSERT(lpszSection != NULL);
 	if (m_pszRegistryKey != NULL)
 	{
@@ -372,7 +374,7 @@ BOOL CWinApp::WriteProfileBinary(LPCTSTR lpszSection, LPCTSTR lpszEntry,
 
 	// convert to string and write out
 	LPTSTR lpsz = new TCHAR[nBytes*2+1];
-	for (UINT i = 0; i < nBytes; i++)
+	for (i = 0; i < nBytes; i++)
 	{
 		lpsz[i*2] = (TCHAR)((pData[i] & 0x0F) + 'A'); //low nibble
 		lpsz[i*2+1] = (TCHAR)(((pData[i] >> 4) & 0x0F) + 'A'); //high nibble

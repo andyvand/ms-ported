@@ -1008,6 +1008,8 @@ struct _AFX_CONTROLPOS
 
 CSize CToolBar::CalcLayout(DWORD dwMode, int nLength)
 {
+	int i = 0;
+
 	ASSERT_VALID(this);
 	ASSERT(::IsWindow(m_hWnd));
 	if (dwMode & LM_HORZDOCK)
@@ -1065,7 +1067,7 @@ CSize CToolBar::CalcLayout(DWORD dwMode, int nLength)
 			BOOL bIsDelayed = m_bDelayedButtonLayout;
 			m_bDelayedButtonLayout = FALSE;
 
-			for (int i = 0; i < nCount; i++)
+			for (i = 0; i < nCount; i++)
 				if ((pData[i].fsStyle & TBSTYLE_SEP) && (pData[i].idCommand != 0))
 					nControlCount++;
 
@@ -1098,7 +1100,7 @@ CSize CToolBar::CalcLayout(DWORD dwMode, int nLength)
 
 			if (nControlCount > 0)
 			{
-				for (int i = 0; i < nControlCount; i++)
+				for (i = 0; i < nControlCount; i++)
 				{
 					CWnd* pWnd = GetDlgItem(pControl[i].nID);
 					if (pWnd != NULL)

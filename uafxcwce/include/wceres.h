@@ -85,7 +85,10 @@
 #define OIC_ERROR           OIC_HAND
 #define OIC_INFORMATION     OIC_NOTE
 
+#ifndef WS_OVERLAPPED
 #define WS_OVERLAPPED   0x00000000L
+#endif
+
 #define WS_EX_CAPTIONOKBTN      0x80000000L
 #define WS_POPUP        0x80000000L
 #define WS_CHILD        0x40000000L
@@ -325,33 +328,61 @@
 #define BS_FLAT             0x00008000L
 #define BS_RIGHTBUTTON      BS_LEFTTEXT
 
+#ifndef ES_LEFT
 #define ES_LEFT         0x00000000L
+#endif
+
+#ifndef ES_CENTER
 #define ES_CENTER       0x00000001L
+#endif
+
+#ifndef ES_RIGHT
 #define ES_RIGHT        0x00000002L
+#endif
+
+#ifndef ES_MULTILINE
 #define ES_MULTILINE    0x00000004L
+#endif
+
+#ifndef ES_UPPERCASE
 #define ES_UPPERCASE    0x00000008L
+#endif
+
+#ifndef ES_LOWERCASE
 #define ES_LOWERCASE    0x00000010L
+#endif
+
+#ifndef ES_PASSWORD
 #define ES_PASSWORD     0x00000020L
+#endif
+
+#ifndef ES_AUTOVSCROLL
 #define ES_AUTOVSCROLL  0x00000040L
+#endif
+
+#ifndef ES_AUTOHSCROLL
 #define ES_AUTOHSCROLL  0x00000080L
+#endif
+
+#ifndef ES_NOHIDESEL
 #define ES_NOHIDESEL    0x00000100L
+#endif
+
+#ifndef ES_OEMCONVERT
 #define ES_OEMCONVERT   0x00000400L
+#endif
+
+#ifndef ES_READONLY
 #define ES_READONLY     0x00000800L
+#endif
+
+#ifndef ES_WANTRETURN
 #define ES_WANTRETURN   0x00001000L
-#define ES_LEFT         0x00000000L
-#define ES_CENTER       0x00000001L
-#define ES_RIGHT        0x00000002L
-#define ES_MULTILINE    0x00000004L
-#define ES_UPPERCASE    0x00000008L
-#define ES_LOWERCASE    0x00000010L
-#define ES_PASSWORD     0x00000020L
-#define ES_AUTOVSCROLL  0x00000040L
-#define ES_AUTOHSCROLL  0x00000080L
-#define ES_NOHIDESEL    0x00000100L
-#define ES_OEMCONVERT   0x00000400L
-#define ES_READONLY     0x00000800L
-#define ES_WANTRETURN   0x00001000L
+#endif
+
+#ifndef ES_NUMBER
 #define ES_NUMBER       0x2000L
+#endif
 
 #define SBS_HORZ        0x0000L
 #define SBS_VERT        0x0001L
@@ -402,9 +433,11 @@
 #ifndef HDS_HORZ
 #define HDS_HORZ                0x00000000
 #endif
+
 #ifndef HDS_BUTTONS
 #define HDS_BUTTONS             0x00000002
 #endif
+
 #ifndef HDS_HIDDEN
 #define HDS_HIDDEN              0x00000008
 #endif

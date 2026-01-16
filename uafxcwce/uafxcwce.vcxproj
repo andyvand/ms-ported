@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{07212670-5552-44b9-a31c-2de6f2a9b664}</ProjectGuid>
+    <ProjectGuid>{d0068487-71e1-4bdf-b02f-3bad8deab15e}</ProjectGuid>
     <RootNamespace>uafxcwce (QEMU)</RootNamespace>
     <DefaultLanguage>$currentuiculturename$</DefaultLanguage>
     <MinimumVisualStudioVersion>12.00</MinimumVisualStudioVersion>

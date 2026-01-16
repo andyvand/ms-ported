@@ -894,7 +894,11 @@ VOID SetDText(HWND hDlg, INT id, INT time, TCHAR FAR * szName)
 {
 	TCHAR sz[cchNameMax];
 
+#ifdef _MSC_VER
+	StringCchPrintf(sz, cchNameMax, TEXT("%d seconds"), time);
+#else
 	wsprintf(sz, TEXT("%d seconds"), time);
+#endif
 
 	SetDlgItemText(hDlg, id, sz);
 	SetDlgItemText(hDlg, id+1, szName);

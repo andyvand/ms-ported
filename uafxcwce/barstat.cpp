@@ -190,9 +190,11 @@ BOOL CStatusBar::SetIndicators(const UINT* lpIDArray, int nIDCount)
 
 BOOL CStatusBar::AllocElements(int nElements, int cbElement)
 {
+	int i = 0;
+
 	// destruct old elements
 	AFX_STATUSPANE* pSBP = _GetPanePtr(0);
-	for (int i = 0; i < m_nCount; i++)
+	for (i = 0; i < m_nCount; i++)
 	{
 		pSBP->strText.~CString();
 		++pSBP;
@@ -239,6 +241,8 @@ void CStatusBar::CalcInsideRect(CRect& rect, BOOL bHorz) const
 
 void CStatusBar::UpdateAllPanes(BOOL bUpdateRects, BOOL bUpdateText)
 {
+	int i = 0;
+
 	ASSERT_VALID(this);
 	ASSERT(::IsWindow(m_hWnd));
 
@@ -256,7 +260,7 @@ void CStatusBar::UpdateAllPanes(BOOL bUpdateRects, BOOL bUpdateText)
 		int cxExtra = rect.Width() + rgBorders[2];
 		int nStretchyCount = 0;
 		AFX_STATUSPANE* pSBP = _GetPanePtr(0);
-		for (int i = 0; i < m_nCount; i++)
+		for (i = 0; i < m_nCount; i++)
 		{
 			if (pSBP->nStyle & SBPS_STRETCH)
 				++nStretchyCount;
@@ -296,7 +300,7 @@ void CStatusBar::UpdateAllPanes(BOOL bUpdateRects, BOOL bUpdateText)
 	if (bUpdateText)
 	{
 		AFX_STATUSPANE* pSBP = _GetPanePtr(0);
-		for (int i = 0; i < m_nCount; i++)
+		for (i = 0; i < m_nCount; i++)
 		{
 			if (pSBP->nFlags & SBPF_UPDATE)
 				SetPaneText(i, pSBP->strText);

@@ -31,7 +31,7 @@ static char THIS_FILE[] = __FILE__;
 
 AFX_STATIC_DATA const TCHAR _afxFileSection[] = _T("Recent File List");
 AFX_STATIC_DATA const TCHAR _afxFileEntry[] = _T("File%d");
-#if !defined(_WIN32_WCE_NO_PRINTING) 
+#if !defined(_WIN32_WCE_NO_PRINTING) || defined(_WIN32_WINNT)
 AFX_STATIC_DATA const TCHAR _afxPreviewSection[] = _T("Settings");
 AFX_STATIC_DATA const TCHAR _afxPreviewEntry[] = _T("PreviewPages");
 #endif // _WIN32_WCE_NO_PRINTING

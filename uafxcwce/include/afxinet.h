@@ -148,10 +148,10 @@ public:
 	virtual void Close();
 
 	// cookies
-WCE_DEL	static BOOL SetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, LPCTSTR pstrCookieData);
-WCE_DEL	static BOOL GetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, LPTSTR pstrCookieData, DWORD dwBufLen);
-WCE_DEL	static DWORD GetCookieLength(LPCSTR pstrUrl, LPCTSTR pstrCookieName);
-WCE_DEL	static BOOL GetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, CString& strCookieData);
+WCE_DEL	static BOOL SetCookie(LPCTSTR pstrUrl, LPCTSTR pstrCookieName, LPCTSTR pstrCookieData);
+WCE_DEL	static BOOL GetCookie(LPCTSTR pstrUrl, LPCTSTR pstrCookieName, LPTSTR pstrCookieData, DWORD dwBufLen);
+WCE_DEL	static DWORD GetCookieLength(LPCTSTR pstrUrl, LPCTSTR pstrCookieName);
+WCE_DEL	static BOOL GetCookie(LPCTSTR pstrUrl, LPCTSTR pstrCookieName, CString& strCookieData);
 
 // overridables
 	virtual void OnStatusCallback(DWORD dwContext, DWORD dwInternetStatus,

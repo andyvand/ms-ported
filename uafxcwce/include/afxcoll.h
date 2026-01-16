@@ -1486,7 +1486,7 @@ protected:
 // Inline function declarations
 
 #ifdef _AFX_ENABLE_INLINES
-#define _AFXCOLL_INLINE AFX_INLINE
+#define _AFXCOLL_INLINE AFX_DIRECT_INLINE
 #include <afxcoll.inl>
 #endif
 

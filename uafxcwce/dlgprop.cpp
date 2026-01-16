@@ -234,6 +234,7 @@ void CPropertyPage::PreProcessPageTemplate(PROPSHEETPAGE& psp, BOOL bWizard)
 
 
 #if !defined(_WIN32_WCE)
+#ifndef _WIN32_WINNT
 #ifdef _DEBUG
 	// WINBUG: Windows currently does not support DIALOGEX resources!
 	// Assert that the template is *not* a DIALOGEX template.
@@ -245,7 +246,6 @@ void CPropertyPage::PreProcessPageTemplate(PROPSHEETPAGE& psp, BOOL bWizard)
 	//  2. Help IDs on any control in the dialog
 	//  3. Control IDs that are DWORDs
 	//  4. Weight, italic, or charset attributes on the dialog's font
-
 	if (((DLGTEMPLATEEX*)pTemplate)->signature == 0xFFFF)
 	{
 		// it's a DIALOGEX -- we'd better check
@@ -271,8 +271,9 @@ void CPropertyPage::PreProcessPageTemplate(PROPSHEETPAGE& psp, BOOL bWizard)
 			ASSERT(FALSE);
 		}
 	}
+#endif // _WIN32_WINNT
 #endif // _DEBUG
-#endif //_WIN32_WCE
+#endif // _WIN32_WCE
 
 #ifndef _AFX_NO_OCC_SUPPORT
 	// if the dialog could contain OLE controls, deal with them now
@@ -863,7 +864,13 @@ int CPropertySheet::DoModal()
 #endif // _WIN32_WCE
     psh->dwFlags |= PSH_MODELESS;
 	m_nFlags |= WF_CONTINUEMODAL;
+
+#ifdef _WIN32_WINNT
+	HWND hWnd = (HWND)::PropertySheet((LPCPROPSHEETHEADERW)psh);
+#else
     HWND hWnd = (HWND)::PropertySheet((AFX_OLDPROPSHEETHEADER*)psh);
+#endif
+
 #ifdef _DEBUG
 	DWORD dwError = ::GetLastError();
 #endif

@@ -30,6 +30,14 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+#ifdef _WIN32_WINNT
+#define cbStruct lStructSize
+#define hdc hDC
+#define dwFlags Flags
+#define rcMinMargin rtMinMargin
+#define rcMargin rtMargin
+#endif
+
 #define new DEBUG_NEW
 
 /////////////////////////////////////////////////////////////////////////////
@@ -167,7 +175,9 @@ CString CPrintDialog::GetPortName() const
 
 BOOL CPrintDialog::GetDefaults()
 {
+#ifndef _WIN32_WINNT
 	m_pd.dwFlags |= PD_RETURNDEFAULTDC;
+#endif
 
 	if(m_pd.hdc != NULL)
 	{
@@ -187,7 +197,8 @@ CSize CPrintDialog::GetPaperSize() const
 {
 	CSize size;
  
-	if(m_pd.dwFlags & PD_SELECTA4) // 21.0 cm x 29.7 cm
+#ifndef _WIN32_WINNT
+	if (m_pd.dwFlags & PD_SELECTA4) // 21.0 cm x 29.7 cm
 	{
 		if(m_pd.dwFlags & PD_INHUNDREDTHSOFMILLIMETERS)
 		{
@@ -196,8 +207,10 @@ CSize CPrintDialog::GetPaperSize() const
 		}
 		else // PD_INTHOUSANDTHSOFINCHES assumed
 		{
+#endif
 			size.cx = 210*254; // 21.0 * 2.54 * 1000
 			size.cy = 297*254; // 29.7 * 2.54 * 1000
+#ifndef _WIN32_WINNT
 		}
 	}
 	else // PD_SELECTLETTER assumed  11.0 in x 8.5 in
@@ -213,6 +226,7 @@ CSize CPrintDialog::GetPaperSize() const
 			size.cy = 11000;  // 11.0 * 1000
 		}
 	}
+#endif
 
 	return size;
 }

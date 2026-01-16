@@ -36,6 +36,10 @@ static char THIS_FILE[] = __FILE__;
 
 #if !defined(_WIN32_WCE_NO_CONTROLBARS)
 
+#ifdef _WIN32_WINNT
+#define SetMenu(m) ::SetMenu(m_hWnd, m)
+#endif
+
 /////////////////////////////////////////////////////////////////////////////
 // Backward compatibility on CFrameWnd members
 

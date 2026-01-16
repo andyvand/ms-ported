@@ -498,7 +498,7 @@ public:
 protected:
 	TCHAR m_szFindWhat[128];
 	TCHAR m_szReplaceWith[128];
-#if defined(_WIN32_WCE)
+#if defined(_WIN32_WCE) || defined(_WIN32_WINNT)
 public:
 	void EndDialog(int nEndID);
 protected:
@@ -520,8 +520,8 @@ protected:
 	afx_msg void OnSettingChange(UINT uFlags, LPCTSTR lpszSection);
 #endif // _WIN32_WCE_PSPC
 	//}}AFX_MSG
-	DECLARE_MESSAGE_MAP()
 #endif // _WIN32_WCE
+	DECLARE_MESSAGE_MAP()
 #if defined(_WIN32_WCE_PSPC) && (_WIN32_WCE >= 300) 
 	friend class CFindReplaceBar;
 	CFindReplaceBar* m_pFindReplaceBar;

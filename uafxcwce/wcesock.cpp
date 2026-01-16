@@ -760,4 +760,6 @@ unsigned int AFX_CDECL DataThread( void* pvParams )
 
 #endif // _WIN32_WCE_NO_WINSOCK
 
+#ifndef _WIN32_WINNT
 IMPLEMENT_DYNAMIC(CCeSocket, CSocket)
+#endif

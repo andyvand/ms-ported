@@ -774,7 +774,12 @@ LPTSTR CArchive::ReadString(LPTSTR lpsz, UINT nMax)
 	int nStop = (int)nMax < 0 ? -(int)nMax : (int)nMax;
 	ASSERT(AfxIsValidAddress(lpsz, (nStop+1) * sizeof(TCHAR)));
 
+#ifdef _WIN32_WINNT
+	BYTE ch;
+#else
 	_TUCHAR ch;
+#endif
+
 	int nRead = 0;
 
 	TRY
@@ -788,6 +793,7 @@ LPTSTR CArchive::ReadString(LPTSTR lpsz, UINT nMax)
 			{
 				if (ch == '\r')
 					*this >> ch;
+
 				// store the newline when called with negative nMax
 				if ((int)nMax != nStop)
 					lpsz[nRead++] = ch;

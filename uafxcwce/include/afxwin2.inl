@@ -140,7 +140,7 @@ _AFXWIN_INLINE void CWnd::Invalidate(BOOL bErase)
 _AFXWIN_INLINE void CWnd::InvalidateRect(LPCRECT lpRect, BOOL bErase)
 	{ ASSERT(::IsWindow(m_hWnd)); ::InvalidateRect(m_hWnd, lpRect, bErase); }
 _AFXWIN_INLINE void CWnd::InvalidateRgn(CRgn* pRgn, BOOL bErase)
-	{ ASSERT(::IsWindow(m_hWnd)); WCE_FCTN(InvalidateRgn)(m_hWnd, (HRGN)pRgn->GetSafeHandle(), bErase); }
+	{ ASSERT(::IsWindow(m_hWnd)); ::WCE_FCTN(InvalidateRgn)(m_hWnd, (HRGN)pRgn->GetSafeHandle(), bErase); }
 _AFXWIN_INLINE void CWnd::ValidateRect(LPCRECT lpRect)
 	{ ASSERT(::IsWindow(m_hWnd)); ::ValidateRect(m_hWnd, lpRect); }
 WCE_DEL _AFXWIN_INLINE void CWnd::ValidateRgn(CRgn* pRgn)
@@ -319,9 +319,13 @@ _AFXWIN_INLINE HICON CWnd::SetIcon(HICON hIcon, BOOL bBigIcon)
 	{ ASSERT(::IsWindow(m_hWnd)); return (HICON)::SendMessage(m_hWnd, WM_SETICON, bBigIcon, (LPARAM)hIcon); }
 _AFXWIN_INLINE HICON CWnd::GetIcon(BOOL bBigIcon) const
 	{ ASSERT(::IsWindow(m_hWnd)); return (HICON)::SendMessage(m_hWnd, WM_GETICON, bBigIcon, 0); }
+
+#ifndef _WIN32_WCE_NO_PRINTING
 WCE_DEL _AFXWIN_INLINE void CWnd::Print(CDC* pDC, DWORD dwFlags) const
 WCE_DEL { ASSERT(::IsWindow(m_hWnd)); ::SendMessage(m_hWnd, WM_PRINT, (WPARAM)pDC->GetSafeHdc(), dwFlags); }
 WCE_DEL _AFXWIN_INLINE void CWnd::PrintClient(CDC* pDC, DWORD dwFlags) const
+#endif
+
 WCE_DEL { ASSERT(::IsWindow(m_hWnd)); ::SendMessage(m_hWnd, WM_PRINTCLIENT, (WPARAM)pDC->GetSafeHdc(), dwFlags); }
 WCE_DEL _AFXWIN_INLINE BOOL CWnd::SetWindowContextHelpId(DWORD dwContextHelpId)
 WCE_DEL { ASSERT(::IsWindow(m_hWnd)); return ::SetWindowContextHelpId(m_hWnd, dwContextHelpId); }

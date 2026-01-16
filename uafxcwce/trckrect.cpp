@@ -613,7 +613,7 @@ BOOL CRectTracker::TrackHandle(int nHandle, CWnd* pWnd, CPoint point,
 	if (pWndClipTo != NULL)
 	{
 		// clip to arbitrary window by using adjusted Window DC
-		pDrawDC = pWndClipTo->WCE_IF(GetDC(),GetDCEx(NULL, DCX_CACHE));
+		pDrawDC = pWndClipTo->WCE_IF(GetDC(), GetDCEx(NULL, DCX_CACHE));
 	}
 	else
 	{

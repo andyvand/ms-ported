@@ -707,14 +707,14 @@ BOOL CInternetSession::EnableStatusCallback(BOOL bEnable /* = TRUE */)
 }
 
 #if !defined(_WIN32_WCE)
-BOOL CInternetSession::SetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, LPCTSTR pstrCookieData)
+BOOL CInternetSession::SetCookie(LPTCSTR pstrUrl, LPCTSTR pstrCookieName, LPCTSTR pstrCookieData)
 {
 	ASSERT(AfxIsValidString(pstrUrl));
 	ASSERT(AfxIsValidString(pstrCookieName));
 	return InternetSetCookie(pstrUrl, pstrCookieName, pstrCookieData);
 }
 
-BOOL CInternetSession::GetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, LPTSTR pstrCookieData, DWORD dwBufLen)
+BOOL CInternetSession::GetCookie(LPCTSTR pstrUrl, LPCTSTR pstrCookieName, LPTSTR pstrCookieData, DWORD dwBufLen)
 {
 	ASSERT(AfxIsValidString(pstrUrl));
 	ASSERT(AfxIsValidString(pstrCookieName));
@@ -722,7 +722,7 @@ BOOL CInternetSession::GetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, LPTSTR 
 	return InternetGetCookie(pstrUrl, pstrCookieName, pstrCookieData, &dwBufLen);
 }
 
-DWORD CInternetSession::GetCookieLength(LPCSTR pstrUrl, LPCTSTR pstrCookieName)
+DWORD CInternetSession::GetCookieLength(LPCTSTR pstrUrl, LPCTSTR pstrCookieName)
 {
 	ASSERT(AfxIsValidString(pstrUrl));
 	ASSERT(AfxIsValidString(pstrCookieName));
@@ -733,7 +733,7 @@ DWORD CInternetSession::GetCookieLength(LPCSTR pstrUrl, LPCTSTR pstrCookieName)
 	return dwRet;
 }
 
-BOOL CInternetSession::GetCookie(LPCSTR pstrUrl, LPCTSTR pstrCookieName, CString& strCookieData)
+BOOL CInternetSession::GetCookie(LPCTSTR pstrUrl, LPCTSTR pstrCookieName, CString& strCookieData)
 {
 	ASSERT(AfxIsValidString(pstrUrl));
 	ASSERT(AfxIsValidString(pstrCookieName));
