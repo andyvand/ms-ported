@@ -1,45 +1,46 @@
 BUILD: [Thread:SystemTickCount:Type  ] Message
-BUILD: [00:0000000000:PROGC ] Build started with parameters: -c
+BUILD: [00:0000000000:PROGC ] Build started with parameters:
 BUILD: [00:0000000000:PROGC ] Build started in directory: C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce
 BUILD: [00:0000000000:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, RUN_WPP, XRPACK, PRECOMPHEADER, COMPILE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, LOCALIZE, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
-BUILD: [00:0000000000:PROGC ] Ignoring build database (-c specified).
-BUILD: [00:0000000000:PROGC ] Computing include file dependencies:
-BUILD: [01:0000000218:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
-BUILD: [00:0000001000:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
-BUILD: [00:0000001000:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001000:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001031:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001593:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001781:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001781:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001875:PROGC ] Directory scanning complete.
-BUILD: [00:0000001875:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
-BUILD: [00:0000001906:PROGC ] Saving Master Database complete.
-BUILD: [00:0000001906:PROGC ] Starting WCEFILES0 Pass.
-BUILD: [00:0000001906:PROGC ] Analyzing project dependency information for pass WCEFILES0.
-BUILD: [00:0000001906:PROGC ] Starting MIDL Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MIDL.
-BUILD: [00:0000001921:PROGC ] Starting MC Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MC.
-BUILD: [00:0000001921:PROGC ] Starting ASN Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass ASN.
-BUILD: [00:0000001921:PROGC ] Starting THUNK Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass THUNK.
-BUILD: [00:0000001937:PROGC ] Starting RUN_WPP Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass RUN_WPP.
-BUILD: [00:0000001937:PROGC ] Starting XRPACK Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass XRPACK.
-BUILD: [00:0000001937:PROGC ] Starting PRECOMPHEADER Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
-BUILD: [00:0000001937:PROGC ] Starting COMPILE Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass COMPILE.
-BUILD: [00:0000002015:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [01:0000003359:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp
+BUILD: [00:0000000000:PROGC ] Loading database "C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7debug.dat".
+BUILD: [00:0000000016:PROGC ] Done.
+BUILD: [00:0000000016:PROGC ] Computing include file dependencies:
+BUILD: [01:0000000031:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [00:0000000359:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000375:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000422:PROGC ] Directory scanning complete.
+BUILD: [00:0000000422:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7debug.dat.
+BUILD: [00:0000000422:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000437:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000437:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000437:PROGC ] Starting MC Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000437:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000437:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000437:PROGC ] Starting RUN_WPP Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass RUN_WPP.
+BUILD: [00:0000000437:PROGC ] Starting XRPACK Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass XRPACK.
+BUILD: [00:0000000437:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000437:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000594:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
+BUILD: [01:0000000844:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp

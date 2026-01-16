@@ -1,36 +1,36 @@
 V|800
-D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
- F|afxabort.cpp|0|0|1DC7CAEFF6039AE
+D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|843c87cf|1a7a6ce0|0|0|0|0|e9234c19|17ca919b|0|0|12d80ae3|686fd068|ad99995f|0|53ce23d7|68eefc85|68eefc85|68eefc85|68eefc85
+ F|afxabort.cpp|40000|0|1DC7CAEFF6039AE
   I|stdafx.h|1
- F|afxasert.cpp|0|0|1DC7CAEFF603C17
+ F|afxasert.cpp|40000|0|1DC7CAEFF603C17
   I|stdafx.h|1
- F|afxcrit.cpp|0|0|1DC86D6BBF53C00
+ F|afxcrit.cpp|40000|0|1DC86D6BBF53C00
   I|stdafx.h|1
- F|afxdbcs.cpp|0|0|1DC7CAEFF604150
+ F|afxdbcs.cpp|40000|0|1DC7CAEFF604150
   I|stdafx.h|1
  F|afximpl.h|4|0|1DC7CAEFF6044DC
   I|wceimpl.h|1
- F|afxinl1.cpp|0|0|1DC7CAEFF604829
+ F|afxinl1.cpp|40000|0|1DC7CAEFF604829
   I|stdafx.h|1
   I|afx.inl|1
   I|afxcoll.inl|1
   I|afxdlgs.inl|1
   I|afxext.inl|1
- F|afxinl2.cpp|0|0|1DC86E7812622C1
+ F|afxinl2.cpp|40000|0|1DC86E7812622C1
   I|stdafx.h|1
   I|afxwin1.inl|1
- F|afxinl3.cpp|0|0|1DC7CAEFF604C7F
+ F|afxinl3.cpp|40000|0|1DC7CAEFF604C7F
   I|stdafx.h|1
   I|afxwin2.inl|1
- F|afxmem.cpp|0|0|1DC7CAEFF605389
+ F|afxmem.cpp|40000|0|1DC7CAEFF605389
   I|stdafx.h|1
- F|afxstate.cpp|0|0|1DC7CAEFF6055CC
-  I|stdafx.h|1
-  I|stddef.h|0
- F|afxtls.cpp|0|0|1DC7CAEFF6057CB
+ F|afxstate.cpp|40000|0|1DC7CAEFF6055CC
   I|stdafx.h|1
   I|stddef.h|0
- F|afxtrace.cpp|0|0|1DC86E53150450F
+ F|afxtls.cpp|40000|0|1DC7CAEFF6057CB
+  I|stdafx.h|1
+  I|stddef.h|0
+ F|afxtrace.cpp|40000|0|1DC86E53150450F
   I|stdafx.h|1
   I|dde.h|1
  F|app3d.cpp|0|0|1DC7CAEFF605C42
@@ -38,60 +38,60 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|app3ds.cpp|0|0|1DC7CAEFF605E29
   I|stdafx.h|1
   I|ctl3d.h|1
- F|appcore.cpp|0|0|1DC86E547778513
+ F|appcore.cpp|40000|0|1DC86E547778513
   I|stdafx.h|1
   I|malloc.h|0
- F|appdlg.cpp|0|0|1DC7CAEFF60658E
+ F|appdlg.cpp|40000|0|1DC7CAEFF60658E
   I|stdafx.h|1
- F|appgray.cpp|0|0|1DC7CAEFF6067AA
+ F|appgray.cpp|40000|0|1DC7CAEFF6067AA
   I|stdafx.h|1
- F|apphelp.cpp|0|0|1DC7CAEFF6069A3
+ F|apphelp.cpp|40000|0|1DC7CAEFF6069A3
   I|stdafx.h|1
- F|apphelpx.cpp|0|0|1DC7CAEFF606B97
+ F|apphelpx.cpp|40000|0|1DC7CAEFF606B97
   I|stdafx.h|1
- F|appinit.cpp|0|0|1DC7CAEFF606DDA
+ F|appinit.cpp|40000|0|1DC7CAEFF606DDA
   I|stdafx.h|1
- F|appmodul.cpp|0|0|1DC7CAEFF606FEE
+ F|appmodul.cpp|40000|0|1DC7CAEFF606FEE
   I|stdafx.h|1
- F|appprnt.cpp|0|0|1DC7CAEFF6071E2
+ F|appprnt.cpp|40000|0|1DC7CAEFF6071E2
   I|stdafx.h|1
   I|cderr.h|0
   I|winspool.h|0
- F|appterm.cpp|0|0|1DC7CAEFF6073DC
+ F|appterm.cpp|40000|0|1DC7CAEFF6073DC
   I|stdafx.h|1
   I|ddeml.h|0
- F|appui.cpp|0|0|1DC7CAEFF6075B3
+ F|appui.cpp|40000|0|1DC7CAEFF6075B3
   I|stdafx.h|1
- F|appui1.cpp|0|0|1DC7CAEFF60860E
+ F|appui1.cpp|40000|0|1DC7CAEFF60860E
   I|stdafx.h|1
- F|appui2.cpp|0|0|1DC7CAEFF6088C0
+ F|appui2.cpp|40000|0|1DC7CAEFF6088C0
   I|stdafx.h|1
- F|appui3.cpp|0|0|1DC86E5532772D0
+ F|appui3.cpp|40000|0|1DC86E5532772D0
   I|stdafx.h|1
- F|arccore.cpp|0|0|1DC86E63BF7A95D
+ F|arccore.cpp|40000|0|1DC86E63BF7A95D
   I|stdafx.h|1
   I|afxtempl.h|0
- F|arcex.cpp|0|0|1DC7CAEFF609345
+ F|arcex.cpp|40000|0|1DC7CAEFF609345
   I|stdafx.h|1
- F|arcobj.cpp|0|0|1DC7CAEFF6096A5
+ F|arcobj.cpp|40000|0|1DC7CAEFF6096A5
   I|stdafx.h|1
- F|arcstrm.cpp|0|0|1DC7CAEFF60990B
+ F|arcstrm.cpp|40000|0|1DC7CAEFF60990B
   I|stdafx.h|1
  F|ARMV4I\|0|10|0
- F|array_b.cpp|0|0|1DC7CAEFF60AC06
+ F|array_b.cpp|40000|0|1DC7CAEFF60AC06
   I|stdafx.h|1
- F|array_d.cpp|0|0|1DC7CAEFF60AEED
+ F|array_d.cpp|40000|0|1DC7CAEFF60AEED
   I|stdafx.h|1
- F|array_o.cpp|0|0|1DC7CAEFF60C153
+ F|array_o.cpp|40000|0|1DC7CAEFF60C153
   I|stdafx.h|1
- F|array_p.cpp|0|0|1DC7CAEFF60C34A
+ F|array_p.cpp|40000|0|1DC7CAEFF60C34A
   I|stdafx.h|1
- F|array_s.cpp|0|0|1DC7CAEFF60C5E0
+ F|array_s.cpp|40000|0|1DC7CAEFF60C5E0
   I|stdafx.h|1
   I|elements.h|1
- F|array_u.cpp|0|0|1DC7CAEFF60CB0D
+ F|array_u.cpp|40000|0|1DC7CAEFF60CB0D
   I|stdafx.h|1
- F|array_w.cpp|0|0|1DC7CAEFF60CD9B
+ F|array_w.cpp|40000|0|1DC7CAEFF60CD9B
   I|stdafx.h|1
  F|ATL.CPP|0|0|1DC7CAEFF5F11FE
   I|stdafx.h|1
@@ -116,31 +116,31 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|version.h|1
   I|stdver.h|1
  F|ATLPS.MAK|80000|0|1DC7CAEFF5F1B69
- F|auxdata.cpp|0|0|1DC7CAEFF60CF98
+ F|auxdata.cpp|40000|0|1DC7CAEFF60CF98
   I|stdafx.h|1
   I|malloc.h|0
- F|barcool.cpp|0|0|1DC7CAEFF60D245
+ F|barcool.cpp|40000|0|1DC7CAEFF60D245
   I|stdafx.h|1
- F|barcore.cpp|0|0|1DC7CAEFF60D579
+ F|barcore.cpp|40000|0|1DC7CAEFF60D579
   I|stdafx.h|1
   I|malloc.h|0
- F|bardlg.cpp|0|0|1DC7CAEFF60D777
+ F|bardlg.cpp|40000|0|1DC7CAEFF60D777
   I|stdafx.h|1
   I|occimpl.h|1
- F|bardock.cpp|0|0|1DC7CAEFF60DF3F
+ F|bardock.cpp|40000|0|1DC7CAEFF60DF3F
   I|stdafx.h|1
- F|barstat.cpp|0|0|1DC86E582CCA942
+ F|barstat.cpp|40000|0|1DC86E582CCA942
   I|stdafx.h|1
- F|bartool.cpp|0|0|1DC86D2EE910D47
+ F|bartool.cpp|40000|0|1DC86D2EE910D47
   I|stdafx.h|1
- F|bldsys.log|80000|0|1DC86E7E01E79C1
- F|bldsys.out|80000|0|1DC86E7E01E79C1
+ F|bldsys.log|80000|0|1DC86F465B7286F
+ F|bldsys.out|80000|0|1DC86F465B74F83
  F|BuildARMV7checked.dat|80000|0|1DC7CAEFF5F2CF2
- F|BuildARMV7debug.dat|80000|0|1DC7CAEFF5F3545
- F|BuildARMV7retail.dat|80000|0|1DC86E789015455
- F|ccdata.cpp|0|0|1DC7CAEFF60F739
+ F|BuildARMV7debug.dat|80000|0|1DC86F42D791157
+ F|BuildARMV7retail.dat|80000|0|1DC86F4504D76B6
+ F|ccdata.cpp|40000|0|1DC7CAEFF60F739
   I|stdafx.h|1
- F|cmdtarg.cpp|0|0|1DC7CAEFF60FEB7
+ F|cmdtarg.cpp|40000|0|1DC7CAEFF60FEB7
   I|stdafx.h|1
   I|occimpl.h|1
  F|ctlcache.cpp|0|0|1DC7CAEFF61057E
@@ -233,106 +233,106 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|dcprev.cpp|0|0|1DC7CAEFF61998D
   I|stdafx.h|1
  F|dispimpl.h|4|0|1DC7CAEFF61A05C
- F|dlgclr.cpp|0|0|1DC7CAEFF61A276
+ F|dlgclr.cpp|40000|0|1DC7CAEFF61A276
   I|stdafx.h|1
- F|dlgcomm.cpp|0|0|1DC7CAEFF61A46F
-  I|stdafx.h|1
-  I|dlgs.h|0
- F|dlgcore.cpp|0|0|1DC7CAEFF61A845
-  I|stdafx.h|1
-  I|occimpl.h|1
- F|dlgdata.cpp|0|0|1DC7CAEFF61ABA2
-  I|stdafx.h|1
-  I|occimpl.h|1
- F|dlgfile.cpp|0|0|1DC7CAEFF61AE38
+ F|dlgcomm.cpp|40000|0|1DC7CAEFF61A46F
   I|stdafx.h|1
   I|dlgs.h|0
- F|dlgfloat.cpp|0|0|1DC86C068806DFE
+ F|dlgcore.cpp|40000|0|1DC7CAEFF61A845
+  I|stdafx.h|1
+  I|occimpl.h|1
+ F|dlgdata.cpp|40000|0|1DC7CAEFF61ABA2
+  I|stdafx.h|1
+  I|occimpl.h|1
+ F|dlgfile.cpp|40000|0|1DC7CAEFF61AE38
+  I|stdafx.h|1
+  I|dlgs.h|0
+ F|dlgfloat.cpp|40000|0|1DC86C068806DFE
   I|stdafx.h|1
   I|float.h|0
  F|dlgfnt.cpp|0|0|1DC7CAEFF61CC75
   I|stdafx.h|1
- F|dlgfr.cpp|0|0|1DC7CAEFF61CF34
+ F|dlgfr.cpp|40000|0|1DC7CAEFF61CF34
   I|stdafx.h|1
   I|stddef.h|0
  F|dlgprnt.cpp|0|0|1DC7CAEFF61D222
   I|stdafx.h|1
   I|dlgs.h|0
- F|dlgprop.cpp|0|0|1DC86E5A4A540D2
+ F|dlgprop.cpp|40000|0|1DC86E5A4A540D2
   I|stdafx.h|1
   I|occimpl.h|1
- F|dlgtempl.cpp|0|0|1DC7CAEFF61E746
+ F|dlgtempl.cpp|40000|0|1DC7CAEFF61E746
   I|stdafx.h|1
  F|dlldb.cpp|0|0|1DC7CAEFF61E957
   I|stdafx.h|1
  F|dllinit.cpp|0|0|1DC7CAEFF61ECBF
   I|stdafx.h|1
   I|stdarg.h|0
- F|dllmodul.cpp|0|0|1DC7CAEFF61EF04
+ F|dllmodul.cpp|40000|0|1DC7CAEFF61EF04
   I|stdafx.h|1
  F|dllnet.cpp|0|0|1DC7CAEFF61F1D5
   I|stdafx.h|1
  F|dllole.cpp|0|0|1DC7CAEFF61F9AA
   I|stdafx.h|1
- F|doccore.cpp|0|0|1DC7CAEFF61FDA1
+ F|doccore.cpp|40000|0|1DC7CAEFF61FDA1
   I|stdafx.h|1
   I|io.h|1
- F|dockcont.cpp|0|0|1DC86E5ACEF55BE
+ F|dockcont.cpp|40000|0|1DC86E5ACEF55BE
   I|stdafx.h|1
- F|dockstat.cpp|0|0|1DC86D25AF5D90E
+ F|dockstat.cpp|40000|0|1DC86D25AF5D90E
   I|stdafx.h|1
  F|docmapi.cpp|0|0|1DC7CAEFF620A67
   I|stdafx.h|1
   I|mapi.h|0
- F|docmgr.cpp|0|0|1DC7CAEFF620DA3
+ F|docmgr.cpp|40000|0|1DC7CAEFF620DA3
   I|stdafx.h|1
  F|docmulti.cpp|0|0|1DC7CAEFF6211B3
   I|stdafx.h|1
- F|docsingl.cpp|0|0|1DC7CAEFF6214AA
+ F|docsingl.cpp|40000|0|1DC7CAEFF6214AA
   I|stdafx.h|1
- F|doctempl.cpp|0|0|1DC7CAEFF621729
+ F|doctempl.cpp|40000|0|1DC7CAEFF621729
   I|stdafx.h|1
- F|dumpcont.cpp|0|0|1DC7CAEFF6219A7
+ F|dumpcont.cpp|40000|0|1DC7CAEFF6219A7
   I|stdafx.h|1
- F|dumpflt.cpp|0|0|1DC86E1036D67B4
+ F|dumpflt.cpp|40000|0|1DC86E1036D67B4
   I|stdafx.h|1
   I|float.h|0
- F|dumpinit.cpp|0|0|1DC7CAEFF6225B9
+ F|dumpinit.cpp|40000|0|1DC7CAEFF6225B9
   I|stdafx.h|1
- F|dumpout.cpp|0|0|1DC7CAEFF6227E6
+ F|dumpout.cpp|40000|0|1DC7CAEFF6227E6
   I|stdafx.h|1
   I|stdarg.h|0
  F|dumpstak.cpp|0|0|1DC7CAEFF622ACC
   I|stdafx.h|1
   I|imagehlp.h|0
  F|elements.h|4|0|1DC7CAEFF622CD6
- F|except.cpp|0|0|1DC7CAEFF622F7F
+ F|except.cpp|40000|0|1DC7CAEFF622F7F
   I|stdafx.h|1
- F|filecore.cpp|0|0|1DC86D24E9D429F
+ F|filecore.cpp|40000|0|1DC86D24E9D429F
   I|stdafx.h|1
   I|winnetwk.h|0
   I|shlobj.h|0
   I|shellapi.h|0
  F|filefind.cpp|0|0|1DC7CAEFF62352A
   I|stdafx.h|1
- F|filelist.cpp|0|0|1DC86E5DDB37BC8
+ F|filelist.cpp|40000|0|1DC86E5DDB37BC8
   I|stdafx.h|1
- F|filemem.cpp|0|0|1DC7CAEFF623A93
+ F|filemem.cpp|40000|0|1DC7CAEFF623A93
   I|stdafx.h|1
  F|fileshrd.cpp|0|0|1DC7CAEFF623CA0
   I|stdafx.h|1
- F|filest.cpp|0|0|1DC7CAEFF623F44
+ F|filest.cpp|40000|0|1DC7CAEFF623F44
   I|stdafx.h|1
   I|errno.h|0
   I|io.h|0
   I|sys\types.h|0
   I|sys\stat.h|0
- F|filetxt.cpp|0|0|1DC7CAEFF624205
+ F|filetxt.cpp|40000|0|1DC7CAEFF624205
   I|stdafx.h|1
   I|errno.h|0
   I|io.h|0
   I|fcntl.h|0
- F|filex.cpp|0|0|1DC7CAEFF624868
+ F|filex.cpp|40000|0|1DC7CAEFF624868
   I|stdafx.h|1
   I|errno.h|0
  F|fixalloc.cpp|0|0|1DC7CAEFF624A61
@@ -343,7 +343,7 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|include\|0|10|0
  F|indicate.rc|0|0|1DC7CAEFF65A78C
   I|afxres.h|1
- F|inet.cpp|0|0|1DC86E49D7F261B
+ F|inet.cpp|40000|0|1DC86E49D7F261B
   I|stdafx.h|1
   I|afxtempl.h|0
   I|afxinet.h|0
@@ -378,31 +378,31 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|L.ptb\|0|10|0
  F|L.sve\|0|10|0
  F|license.txt|80000|0|1DC7CAEFF65B92E
- F|list_o.cpp|0|0|1DC7CAEFF65BC6C
+ F|list_o.cpp|40000|0|1DC7CAEFF65BC6C
   I|stdafx.h|1
- F|list_p.cpp|0|0|1DC7CAEFF65BF36
+ F|list_p.cpp|40000|0|1DC7CAEFF65BF36
   I|stdafx.h|1
- F|list_s.cpp|0|0|1DC7CAEFF65C20A
+ F|list_s.cpp|40000|0|1DC7CAEFF65C20A
   I|stdafx.h|1
   I|elements.h|1
  F|longjmp.s|0|0|1DC7CAEFF65C3FF
   I|kxmips.h|1
- F|map_pp.cpp|0|0|1DC7CAEFF65C85D
+ F|map_pp.cpp|40000|0|1DC7CAEFF65C85D
   I|stdafx.h|1
- F|map_pw.cpp|0|0|1DC7CAEFF65CA67
+ F|map_pw.cpp|40000|0|1DC7CAEFF65CA67
   I|stdafx.h|1
- F|map_so.cpp|0|0|1DC7CAEFF65CCF8
-  I|stdafx.h|1
-  I|elements.h|1
- F|map_sp.cpp|0|0|1DC7CAEFF65CF7A
+ F|map_so.cpp|40000|0|1DC7CAEFF65CCF8
   I|stdafx.h|1
   I|elements.h|1
- F|map_ss.cpp|0|0|1DC7CAEFF65D2F5
+ F|map_sp.cpp|40000|0|1DC7CAEFF65CF7A
   I|stdafx.h|1
   I|elements.h|1
- F|map_wo.cpp|0|0|1DC7CAEFF65D54A
+ F|map_ss.cpp|40000|0|1DC7CAEFF65D2F5
   I|stdafx.h|1
- F|map_wp.cpp|0|0|1DC7CAEFF65D710
+  I|elements.h|1
+ F|map_wo.cpp|40000|0|1DC7CAEFF65D54A
+  I|stdafx.h|1
+ F|map_wp.cpp|40000|0|1DC7CAEFF65D710
   I|stdafx.h|1
  F|MFC.pbpxml|80000|0|1DC7CAEFF5F7631
  F|mfcce400i.def|80000|0|1DC7CAEFF65D8C4
@@ -457,15 +457,15 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|MIPSII_FP\|0|10|0
  F|MIPSIV\|0|10|0
  F|MIPSIV_FP\|0|10|0
- F|mtcore.cpp|0|0|1DC7CAEFF65E988
+ F|mtcore.cpp|40000|0|1DC7CAEFF65E988
   I|stdafx.h|1
   I|afxmt.inl|1
- F|mtex.cpp|0|0|1DC7CAEFF65EB81
+ F|mtex.cpp|40000|0|1DC7CAEFF65EB81
   I|stdafx.h|1
  F|nolib.cpp|0|0|1DC7CAEFF65ED6C
   I|stdafx.h|1
  F|obj\|0|10|0
- F|objcore.cpp|0|0|1DC7CAEFF65EF7F
+ F|objcore.cpp|40000|0|1DC7CAEFF65EF7F
   I|stdafx.h|1
  F|occcont.cpp|0|0|1DC7CAEFF65F252
   I|stdafx.h|1
@@ -577,7 +577,7 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|stdafx.h|1
  F|olelink.cpp|0|0|1DC7CAEFF66947F
   I|stdafx.h|1
- F|olelock.cpp|0|0|1DC7CAEFF669696
+ F|olelock.cpp|40000|0|1DC7CAEFF669696
   I|stdafx.h|1
  F|olemisc.cpp|0|0|1DC7CAEFF669B5D
   I|stdafx.h|1
@@ -621,7 +621,7 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|stdafx.h|1
  F|oleverb.cpp|0|0|1DC7CAEFF66DEB3
   I|stdafx.h|1
- F|plex.cpp|0|0|1DC7CAEFF66E106
+ F|plex.cpp|40000|0|1DC7CAEFF66E106
   I|stdafx.h|1
  F|postlink.bat|80000|0|1DC7CAEFF66E311
  F|ppgcolor.cpp|0|0|1DC7CAEFF66E633
@@ -650,7 +650,7 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|RESOURCE.H|4|0|1DC7CAEFF600E5D
  F|setenv.tmp|80000|0|1DC7CAEFF6702D9
  F|SH4\|0|10|0
- F|sockcore.cpp|0|0|1DC7CAEFF6705BA
+ F|sockcore.cpp|40000|0|1DC7CAEFF6705BA
   I|stdafx.h|1
   I|stddef.h|0
   I|afxsock.inl|1
@@ -703,34 +703,34 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|malloc.h|0
   I|new.h|0
   I|eh.h|0
- F|strcore.cpp|0|0|1DC86E13CE99FC1
+ F|strcore.cpp|40000|0|1DC86E13CE99FC1
   I|stdafx.h|1
   I|fixalloc.h|1
- F|strex.cpp|0|0|1DC86C0E7E43F17
+ F|strex.cpp|40000|0|1DC86C0E7E43F17
   I|stdafx.h|1
   I|afxtempl.h|0
- F|thrdcore.cpp|0|0|1DC7CAEFF6717C6
+ F|thrdcore.cpp|40000|0|1DC7CAEFF6717C6
   I|stdafx.h|1
   I|process.h|0
   I|ddeml.h|0
- F|timecore.cpp|0|0|1DC86E3D90496DD
+ F|timecore.cpp|40000|0|1DC86F443B40B38
   I|stdafx.h|1
- F|tooltip.cpp|0|0|1DC86D41743BE31
+ F|tooltip.cpp|40000|0|1DC86D41743BE31
   I|stdafx.h|1
- F|trckrect.cpp|0|0|1DC86E469F44ED4
+ F|trckrect.cpp|40000|0|1DC86E469F44ED4
   I|stdafx.h|1
  F|uafxcwce.vcxproj|80000|0|1DC86BFAEA60DD1
- F|validadd.cpp|0|0|1DC7CAEFF67263C
+ F|validadd.cpp|40000|0|1DC7CAEFF67263C
   I|stdafx.h|1
- F|viewcmn.cpp|0|0|1DC7CAEFF6728B8
+ F|viewcmn.cpp|40000|0|1DC7CAEFF6728B8
   I|stdafx.h|1
   I|afxcview.inl|1
- F|viewcore.cpp|0|0|1DC7CAEFF672B2D
+ F|viewcore.cpp|40000|0|1DC7CAEFF672B2D
   I|stdafx.h|1
- F|viewedit.cpp|0|0|1DC7CAEFF67300F
+ F|viewedit.cpp|40000|0|1DC7CAEFF67300F
   I|stdafx.h|1
   I|ctype.h|0
- F|viewform.cpp|0|0|1DC7CAEFF673337
+ F|viewform.cpp|40000|0|1DC7CAEFF673337
   I|stdafx.h|1
   I|occimpl.h|1
  F|viewhtml.cpp|0|0|1DC7CAEFF67359C
@@ -741,40 +741,40 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
   I|afxoledb.h|0
  F|viewprev.cpp|0|0|1DC7CAEFF673F27
   I|stdafx.h|1
- F|viewprnt.cpp|0|0|1DC7CAEFF675665
+ F|viewprnt.cpp|40000|0|1DC7CAEFF675665
   I|stdafx.h|1
  F|viewrich.cpp|0|0|1DC7CAEFF675D20
   I|stdafx.h|1
   I|afxrich.inl|1
- F|viewscrl.cpp|0|0|1DC7CAEFF67614F
+ F|viewscrl.cpp|40000|0|1DC7CAEFF67614F
   I|stdafx.h|1
- F|wcealt.cpp|0|0|1DC86E7DD20834A
+ F|wcealt.cpp|40000|0|1DC86E7DD20834A
   I|stdafx.h|1
   I|ctype.h|0
   I|wcealt.inl|0
- F|wcebar.cpp|0|0|1DC86D6332593AC
+ F|wcebar.cpp|40000|0|1DC86D6332593AC
   I|stdafx.h|1
   I|commctrl.h|0
- F|wcedb.cpp|0|0|1DC86CE7A397780
+ F|wcedb.cpp|40000|0|1DC86CE7A397780
   I|stdafx.h|1
   I|wcedb.h|1
- F|wcedlgfr.cpp|0|0|1DC86D3743675F7
+ F|wcedlgfr.cpp|40000|0|1DC86D3743675F7
   I|stdafx.h|1
- F|wcedlgpr.cpp|0|0|1DC86D36300FB76
+ F|wcedlgpr.cpp|40000|0|1DC86D36300FB76
   I|stdafx.h|1
- F|wcedlgsm.cpp|0|0|1DC7CAEFF6776C1
+ F|wcedlgsm.cpp|40000|0|1DC7CAEFF6776C1
   I|stdafx.h|1
- F|wcedll.cpp|0|0|1DC7CAEFF6778D9
+ F|wcedll.cpp|40000|0|1DC7CAEFF6778D9
   I|stdafx.h|1
- F|wcedoclt.cpp|0|0|1DC7CAEFF677BDA
+ F|wcedoclt.cpp|40000|0|1DC7CAEFF677BDA
   I|stdafx.h|1
- F|wcedoctm.cpp|0|0|1DC7CAEFF677EDE
+ F|wcedoctm.cpp|40000|0|1DC7CAEFF677EDE
   I|stdafx.h|1
  F|wcefont.cpp|0|0|1DC7CAEFF67850C
   I|stdafx.h|1
   I|math.h|0
  F|wcefont.h|4|0|1DC7CAEFF678805
- F|wceimpl.cpp|0|0|1DC86D19944804C
+ F|wceimpl.cpp|40000|0|1DC86D19944804C
   I|stdafx.h|1
   I|wceimpl.h|1
   I|wceimpl.inl|1
@@ -787,25 +787,25 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|wceoleth.cpp|0|0|1DC7CAEFF67950D
   I|stdafx.h|1
  F|wceoleth.h|4|0|1DC7CAEFF679846
- F|wcesock.cpp|0|0|1DC86D154019F65
+ F|wcesock.cpp|40000|0|1DC86D154019F65
   I|stdafx.h|1
- F|wcethunk.cpp|0|0|1DC7CAEFF679FF3
+ F|wcethunk.cpp|40000|0|1DC7CAEFF679FF3
   I|stdafx.h|1
  F|wcethunk.h|4|0|1DC7CAEFF67A25A
   I|winsock.h|0
- F|wcetime.cpp|0|0|1DC86D13F26EE82
+ F|wcetime.cpp|40000|0|1DC86D13F26EE82
   I|stdafx.h|1
- F|winbtn.cpp|0|0|1DC7CAEFF67A83A
+ F|winbtn.cpp|40000|0|1DC7CAEFF67A83A
   I|stdafx.h|1
- F|wincore.cpp|0|0|1DC7CAEFF67B35B
+ F|wincore.cpp|40000|0|1DC7CAEFF67B35B
   I|stdafx.h|1
   I|occimpl.h|1
   I|multimon.h|0
   I|fixalloc.h|1
- F|winctrl1.cpp|0|0|1DC7CAEFF67B68A
+ F|winctrl1.cpp|40000|0|1DC7CAEFF67B68A
   I|stdafx.h|1
   I|occimpl.h|1
- F|winctrl2.cpp|0|0|1DC86CD4CB65D3F
+ F|winctrl2.cpp|40000|0|1DC86CD4CB65D3F
   I|stdafx.h|1
   I|fixalloc.h|1
   I|afxcmn.inl|1
@@ -816,43 +816,43 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\|b005|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|winctrl5.cpp|0|0|1DC7CAEFF67C1BF
   I|stdafx.h|1
   I|afxdtctl.inl|1
- F|winctrl6.cpp|0|0|1DC7CAEFF67C43B
+ F|winctrl6.cpp|40000|0|1DC7CAEFF67C43B
   I|stdafx.h|1
   I|afxcmn2.inl|1
  F|winctrl7.cpp|0|0|1DC7CAEFF67C666
   I|stdafx.h|1
- F|winfrm.cpp|0|0|1DC7CAEFF67DD40
+ F|winfrm.cpp|40000|0|1DC7CAEFF67DD40
   I|stdafx.h|1
   I|dde.h|0
  F|winfrm2.cpp|0|0|1DC7CAEFF67E063
   I|stdafx.h|1
- F|winfrmx.cpp|0|0|1DC7CAEFF67E3A3
+ F|winfrmx.cpp|40000|0|1DC7CAEFF67E3A3
   I|stdafx.h|1
- F|wingdi.cpp|0|0|1DC7CAEFF67E671
+ F|wingdi.cpp|40000|0|1DC7CAEFF67E671
   I|stdafx.h|1
   I|fixalloc.h|1
- F|wingdix.cpp|0|0|1DC7CAEFF67E97D
+ F|wingdix.cpp|40000|0|1DC7CAEFF67E97D
   I|stdafx.h|1
- F|winhand.cpp|0|0|1DC7CAEFF67EB9F
+ F|winhand.cpp|40000|0|1DC7CAEFF67EB9F
   I|stdafx.h|1
  F|winhand_.h|4|0|1DC7CAEFF67ED99
- F|winmain.cpp|0|0|1DC7CAEFF67EF71
+ F|winmain.cpp|40000|0|1DC7CAEFF67EF71
   I|stdafx.h|1
  F|winmdi.cpp|0|0|1DC7CAEFF67F479
   I|stdafx.h|1
- F|winmenu.cpp|0|0|1DC7CAEFF67F6B5
+ F|winmenu.cpp|40000|0|1DC7CAEFF67F6B5
   I|stdafx.h|1
   I|fixalloc.h|1
  F|winmini.cpp|0|0|1DC7CAEFF67F9F4
   I|stdafx.h|1
- F|winocc.cpp|0|0|1DC7CAEFF67FCB7
+ F|winocc.cpp|40000|0|1DC7CAEFF67FCB7
   I|stdafx.h|1
   I|occimpl.h|1
- F|winsplit.cpp|0|0|1DC86CCD75881D0
+ F|winsplit.cpp|40000|0|1DC86CCD75881D0
   I|stdafx.h|1
- F|winstr.cpp|0|0|1DC7CAEFF6803FC
+ F|winstr.cpp|40000|0|1DC7CAEFF6803FC
   I|stdafx.h|1
- F|winutil.cpp|0|0|1DC7CAEFF680616
+ F|winutil.cpp|40000|0|1DC7CAEFF680616
   I|stdafx.h|1
   I|malloc.h|0
  F|x86\|0|10|0
@@ -1211,6 +1211,141 @@ D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\|b000|0|0|0|0|0|0|0|0|0|0|0|0
  F|winres.h|4|0|1DC86E2D3A37AB2
   I|wceres.h|1
 
+D|C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\armv7\retail\|3000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
+ F|afxabort.obj|c0000|0|1DC86F46C712844
+ F|afxasert.obj|c0000|0|1DC86F46C6C1DDB
+ F|afxcrit.obj|c0000|0|1DC86F46C6652F0
+ F|afxdbcs.obj|c0000|0|1DC86F46C5BF35F
+ F|afxinl1.obj|c0000|0|1DC86F46C56C111
+ F|afxinl2.obj|c0000|0|1DC86F46C51E03A
+ F|afxinl3.obj|c0000|0|1DC86F46C4C8877
+ F|afxmem.obj|c0000|0|1DC86F46C46E290
+ F|afxstate.obj|c0000|0|1DC86F46C3FDDCF
+ F|afxtls.obj|c0000|0|1DC86F46C35CB9B
+ F|afxtrace.obj|c0000|0|1DC86F46C2B1D2F
+ F|appcore.obj|c0000|0|1DC86F46C224399
+ F|appdlg.obj|c0000|0|1DC86F46C17E34B
+ F|appgray.obj|c0000|0|1DC86F46C12321A
+ F|apphelp.obj|c0000|0|1DC86F46C0A4D65
+ F|apphelpx.obj|c0000|0|1DC86F46C01273E
+ F|appinit.obj|c0000|0|1DC86F46BF8C139
+ F|appmodul.obj|c0000|0|1DC86F46BEF9975
+ F|appprnt.obj|c0000|0|1DC86F46BE56052
+ F|appterm.obj|c0000|0|1DC86F46BDB753A
+ F|appui.obj|c0000|0|1DC86F471456BD3
+ F|appui1.obj|c0000|0|1DC86F4713CE413
+ F|appui2.obj|c0000|0|1DC86F471369E8C
+ F|appui3.obj|c0000|0|1DC86F4712FC3FB
+ F|arccore.obj|c0000|0|1DC86F47127D4F0
+ F|arcex.obj|c0000|0|1DC86F4711CD4EA
+ F|arcobj.obj|c0000|0|1DC86F471169456
+ F|arcstrm.obj|c0000|0|1DC86F4710EF23A
+ F|array_b.obj|c0000|0|1DC86F471081470
+ F|array_d.obj|c0000|0|1DC86F470FDDB58
+ F|array_o.obj|c0000|0|1DC86F470F35315
+ F|array_p.obj|c0000|0|1DC86F470E87D9F
+ F|array_s.obj|c0000|0|1DC86F470DF55EC
+ F|array_u.obj|c0000|0|1DC86F470D51CAE
+ F|array_w.obj|c0000|0|1DC86F470CC4329
+ F|auxdata.obj|c0000|0|1DC86F470C3445C
+ F|barcool.obj|c0000|0|1DC86F470BBA599
+ F|barcore.obj|c0000|0|1DC86F470B0F2EF
+ F|bardlg.obj|c0000|0|1DC86F470A3FA9F
+ F|bardock.obj|c0000|0|1DC86F4709B20FF
+ F|barstat.obj|c0000|0|1DC86F4765AE7B3
+ F|bartool.obj|c0000|0|1DC86F4764DA153
+ F|ccdata.obj|c0000|0|1DC86F47638F7AD
+ F|cmdtarg.obj|c0000|0|1DC86F4763043D0
+ F|dlgclr.obj|c0000|0|1DC86F47624AB09
+ F|dlgcomm.obj|c0000|0|1DC86F4761B0E18
+ F|dlgcore.obj|c0000|0|1DC86F47612829F
+ F|dlgdata.obj|c0000|0|1DC86F476058ADA
+ F|dlgfile.obj|c0000|0|1DC86F475FB511F
+ F|dlgfloat.obj|c0000|0|1DC86F475F203D0
+ F|dlgfr.obj|c0000|0|1DC86F475EBE7CB
+ F|dlgprop.obj|c0000|0|1DC86F475E55818
+ F|dlgtempl.obj|c0000|0|1DC86F475D7C38A
+ F|dllmodul.obj|c0000|0|1DC86F475CEC2E6
+ F|doccore.obj|c0000|0|1DC86F475C6114D
+ F|dockcont.obj|c0000|0|1DC86F475B4AB28
+ F|dockstat.obj|c0000|0|1DC86F475AD5829
+ F|docmgr.obj|c0000|0|1DC86F475A6F404
+ F|docsingl.obj|c0000|0|1DC86F47596C5E2
+ F|doctempl.obj|c0000|0|1DC86F4758D2899
+ F|dumpcont.obj|c0000|0|1DC86F47B27B312
+ F|dumpflt.obj|c0000|0|1DC86F47B1DC802
+ F|dumpinit.obj|c0000|0|1DC86F47B167505
+ F|dumpout.obj|c0000|0|1DC86F47B0EFB06
+ F|except.obj|c0000|0|1DC86F47B0710A6
+ F|filecore.obj|c0000|0|1DC86F47AFC3B05
+ F|filelist.obj|c0000|0|1DC86F47AEFDC67
+ F|filemem.obj|c0000|0|1DC86F47AE37976
+ F|filest.obj|c0000|0|1DC86F47AD9B56D
+ F|filetxt.obj|c0000|0|1DC86F47AD03FC7
+ F|filex.obj|c0000|0|1DC86F47AC82942
+ F|inet.obj|c0000|0|1DC86F47ABB1F3F
+ F|list_o.obj|c0000|0|1DC86F47AAAF293
+ F|list_p.obj|c0000|0|1DC86F47AA39F94
+ F|list_s.obj|c0000|0|1DC86F47A9ACB01
+ F|map_pp.obj|c0000|0|1DC86F47A908CCB
+ F|map_pw.obj|c0000|0|1DC86F47A8714B4
+ F|map_so.obj|c0000|0|1DC86F47A7F9AA2
+ F|map_sp.obj|c0000|0|1DC86F47A74E37C
+ F|map_ss.obj|c0000|0|1DC86F47A69EA0E
+ F|map_wo.obj|c0000|0|1DC86F4802D4817
+ F|map_wp.obj|c0000|0|1DC86F4802272A1
+ F|mtcore.obj|c0000|0|1DC86F4801A354B
+ F|mtex.obj|c0000|0|1DC86F480130E70
+ F|objcore.obj|c0000|0|1DC86F48009330E
+ F|olelock.obj|c0000|0|1DC86F4800080D5
+ F|plex.obj|c0000|0|1DC86F47FF89224
+ F|sockcore.obj|c0000|0|1DC86F47FF11B13
+ F|strcore.obj|c0000|0|1DC86F47FDC33BE
+ F|strex.obj|c0000|0|1DC86F47FD1FB1B
+ F|thrdcore.obj|c0000|0|1DC86F47FC069AE
+ F|timecore.obj|c0000|0|1DC86F47FB2BC11
+ F|tooltip.obj|c0000|0|1DC86F47FA6AE1C
+ F|trckrect.obj|c0000|0|1DC86F47F9D3684
+ F|validadd.obj|c0000|0|1DC86F47F8DEF5D
+ F|viewcmn.obj|c0000|0|1DC86F47F8603C2
+ F|viewcore.obj|c0000|0|1DC86F47F7F7325
+ F|viewedit.obj|c0000|0|1DC86F47F77116F
+ F|viewform.obj|c0000|0|1DC86F47F655955
+ F|viewprnt.obj|c0000|0|1DC86F47F5D153E
+ F|viewscrl.obj|c0000|0|1DC86F48579DBBC
+ F|winbtn.obj|c0000|0|1DC86F4856D2F9A
+ F|wincore.obj|c0000|0|1DC86F48565445B
+ F|winctrl1.obj|c0000|0|1DC86F4854890B8
+ F|winctrl2.obj|c0000|0|1DC86F4853DAA38
+ F|winctrl6.obj|c0000|0|1DC86F4852E19F0
+ F|winfrm.obj|c0000|0|1DC86F48524D1AB
+ F|winfrmx.obj|c0000|0|1DC86F4850F4DDE
+ F|wingdi.obj|c0000|0|1DC86F48508BE34
+ F|wingdix.obj|c0000|0|1DC86F484F8BC00
+ F|winhand.obj|c0000|0|1DC86F484ECF8DF
+ F|winmain.obj|c0000|0|1DC86F484E4E28B
+ F|winmenu.obj|c0000|0|1DC86F484DDBAAC
+ F|winocc.obj|c0000|0|1DC86F484D52B35
+ F|winsplit.obj|c0000|0|1DC86F484C74897
+ F|winstr.obj|c0000|0|1DC86F484A9A62C
+ F|winutil.obj|c0000|0|1DC86F484A1E1EB
+ F|wcealt.obj|c0000|0|1DC86F484977DB1
+ F|wcebar.obj|c0000|0|1DC86F48481E5AC
+ F|wcedoclt.obj|c0000|0|1DC86F48472F250
+ F|wcedoctm.obj|c0000|0|1DC86F488315C68
+ F|wcedb.obj|c0000|0|1DC86F488299950
+ F|wcedlgfr.obj|c0000|0|1DC86F488165FD7
+ F|wcedlgpr.obj|c0000|0|1DC86F4880AEE30
+ F|wcedlgsm.obj|c0000|0|1DC86F488019F61
+ F|wcedll.obj|c0000|0|1DC86F487FB0FB7
+ F|wceimpl.obj|c0000|0|1DC86F487F4346D
+ F|wcesock.obj|c0000|0|1DC86F487ED2D11
+ F|wcethunk.obj|c0000|0|1DC86F487DF4A57
+ F|wcetime.obj|c0000|0|1DC86F487D8939B
+ F|macrolist.tmp|80000|0|1DC86F465EB83A7
+ F|_objects.mac|80000|0|1DC86F466A99EC3
+ F|_table.mac|80000|0|1DC86F46600184A
+
 D|C:\wince800\private\winceos\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|bthpriv.h|4|0|1CFBC5F82D5D300
   I|windows.h|0
@@ -1228,6 +1363,8 @@ D|C:\wince800\private\winceos\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|
   I|windows.h|0
  F|winceerrpriv.h|4|0|1CFBC5F82D5D300
   I|winerror.h|0
+
+D|C:\wince800\public\\oak\lib\armv7\retail\|1000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
 
 D|C:\wince800\public\common\ddk\inc\|b000|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0
  F|80211hdr.h|4|0|1CFBC5FB284DB00

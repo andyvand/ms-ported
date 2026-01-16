@@ -1,5 +1,5 @@
 BUILD: [Thread:SystemTickCount:Type  ] Message
-BUILD: [00:0000000000:PROGC ] Build started with parameters: -c
+BUILD: [00:0000000000:PROGC ] Build started with parameters:
 BUILD: [00:0000000000:PROGC ] Build started in directory: C:\WINCE800\OSDesigns\QEMU\QEMU\uafxcwce
 BUILD: [00:0000000000:PROG  ] Environment: ALLUSERSPROFILE=C:\ProgramData
 BUILD: [00:0000000000:PROG  ] Environment: APPDATA=C:\Users\andyv\AppData\Roaming
@@ -31,7 +31,6 @@ BUILD: [00:0000000000:PROG  ] Environment: DriverData=C:\Windows\System32\Driver
 BUILD: [00:0000000000:PROG  ] Environment: HOMEDRIVE=C:
 BUILD: [00:0000000000:PROG  ] Environment: HOMEPATH=\Users\andyv
 BUILD: [00:0000000000:PROG  ] Environment: IMGEBOOT=1
-BUILD: [00:0000000000:PROG  ] Environment: IMGNODEBUGGER=1
 BUILD: [00:0000000000:PROG  ] Environment: IMGNOKITL=1
 BUILD: [00:0000000000:PROG  ] Environment: LOCALAPPDATA=C:\Users\andyv\AppData\Local
 BUILD: [00:0000000000:PROG  ] Environment: LOCALE=0409
@@ -43,8 +42,8 @@ BUILD: [00:0000000000:PROG  ] Environment: OneDriveConsumer=C:\Users\andyv\OneDr
 BUILD: [00:0000000000:PROG  ] Environment: OS=Windows_NT
 BUILD: [00:0000000000:PROG  ] Environment: Path=C:\WINCE800\sdk\bin\i386\ARM;C:\WINCE800\sdk\bin\i386;C:\WINCE800\sdk\bin\i386\ARM;C:\WINCE800\public\common\oak\Bin\i386;C:\WINCE800\private\bin\i386;C:\WINCE800\private\bat;C:\WINCE800\public\common\oak\misc;C:\WINCE800\developr\andyv;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\andyv\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Microsoft Platform Builder\8.00\cepb\ideVS
 BUILD: [00:0000000000:PROG  ] Environment: PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
-BUILD: [00:0000000000:PROG  ] Environment: PBCONFIG=QEMU_ARMV7 Release
-BUILD: [00:0000000000:PROG  ] Environment: PBCONFIGTAG=C56D0BA2
+BUILD: [00:0000000000:PROG  ] Environment: PBCONFIG=QEMU_ARMV7 Debug
+BUILD: [00:0000000000:PROG  ] Environment: PBCONFIGTAG=346407E1
 BUILD: [00:0000000000:PROG  ] Environment: PBWORKSPACE=C:\WINCE800\OSDESI~1\QEMU\QEMU\QEMU~1.PBX
 BUILD: [00:0000000000:PROG  ] Environment: PBWORKSPACEROOT=C:\WINCE800\OSDesigns\QEMU\QEMU
 BUILD: [00:0000000000:PROG  ] Environment: PkgDefApplicationConfigFile=C:\Users\andyv\AppData\Local\Microsoft\VisualStudio\12.0\devenv.exe.config
@@ -61,7 +60,7 @@ BUILD: [00:0000000000:PROG  ] Environment: ProgramW6432=C:\Program Files
 BUILD: [00:0000000000:PROG  ] Environment: PROMPT=$P$G
 BUILD: [00:0000000000:PROG  ] Environment: PSModulePath=%ProgramFiles%\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 BUILD: [00:0000000000:PROG  ] Environment: PUBLIC=C:\Users\Public
-BUILD: [00:0000000000:PROG  ] Environment: SG_OUTPUT_ROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\cesysgen
+BUILD: [00:0000000000:PROG  ] Environment: SG_OUTPUT_ROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Debug\cesysgen
 BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ACCESSIB=1
 BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_ATL=1
 BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_AUDIO=1
@@ -234,8 +233,8 @@ BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XAML_RUNTIME=1
 BUILD: [00:0000000000:PROG  ] Environment: SYSGEN_XMLLITE=1
 BUILD: [00:0000000000:PROG  ] Environment: SystemDrive=C:
 BUILD: [00:0000000000:PROG  ] Environment: SystemRoot=C:\WINDOWS
-BUILD: [00:0000000000:PROG  ] Environment: TEMP=C:\Users\andyv\AppData\Local\Temp\bld_53722
-BUILD: [00:0000000000:PROG  ] Environment: TMP=C:\Users\andyv\AppData\Local\Temp\bld_53722
+BUILD: [00:0000000000:PROG  ] Environment: TEMP=C:\Users\andyv\AppData\Local\Temp\bld_54003
+BUILD: [00:0000000000:PROG  ] Environment: TMP=C:\Users\andyv\AppData\Local\Temp\bld_54003
 BUILD: [00:0000000000:PROG  ] Environment: USERDOMAIN=ANDY_VM
 BUILD: [00:0000000000:PROG  ] Environment: USERDOMAIN_ROAMINGPROFILE=ANDY_VM
 BUILD: [00:0000000000:PROG  ] Environment: USERNAME=andyv
@@ -247,7 +246,7 @@ BUILD: [00:0000000000:PROG  ] Environment: VisualStudioVersion=12.0
 BUILD: [00:0000000000:PROG  ] Environment: VS110COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
 BUILD: [00:0000000000:PROG  ] Environment: VS120COMNTOOLS=C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
 BUILD: [00:0000000000:PROG  ] Environment: VSLANG=1033
-BUILD: [00:0000000000:PROG  ] Environment: WINCEDEBUG=retail
+BUILD: [00:0000000000:PROG  ] Environment: WINCEDEBUG=debug
 BUILD: [00:0000000000:PROG  ] Environment: WINCEMAP=1
 BUILD: [00:0000000000:PROG  ] Environment: WINCEREL=1
 BUILD: [00:0000000000:PROG  ] Environment: windir=C:\WINDOWS
@@ -258,15 +257,15 @@ BUILD: [00:0000000000:PROG  ] Environment: _DOTNET40FULLINSTALLED=1
 BUILD: [00:0000000000:PROG  ] Environment: _DOTNET40ROOT=C:\Windows\Microsoft.NET\Framework\v4.0.30319
 BUILD: [00:0000000000:PROG  ] Environment: _DOTNET45INSTALLED=1
 BUILD: [00:0000000000:PROG  ] Environment: _DOTNETSDKROOT=C:\Windows\Microsoft.NET\Framework\v4.0.30319\
-BUILD: [00:0000000000:PROG  ] Environment: _FLATRELEASEDIR=C:\WINCE800\OSDesigns\QEMU\QEMU\RelDir\QEMU_ARMV7_Release
+BUILD: [00:0000000000:PROG  ] Environment: _FLATRELEASEDIR=C:\WINCE800\OSDesigns\QEMU\QEMU\RelDir\QEMU_ARMV7_Debug
 BUILD: [00:0000000000:PROG  ] Environment: _HOSTCPUTYPE=i386
 BUILD: [00:0000000000:PROG  ] Environment: _MAJORVERSION=8
 BUILD: [00:0000000000:PROG  ] Environment: _MAKEENVROOT=C:\WINCE800\public\common\oak\misc
 BUILD: [00:0000000000:PROG  ] Environment: _MINORVERSION=00
-BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNDDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\ddk
-BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNOAKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\oak
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNDDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Debug\ddk
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNOAKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Debug\oak
 BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNROOT=C:\WINCE800\OSDesigns\QEMU\QEMU
-BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNSDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Retail\sdk
+BUILD: [00:0000000000:PROG  ] Environment: _OSDESIGNSDKROOT=C:\WINCE800\OSDesigns\QEMU\QEMU\Wince800\qemu_ARMV7_Debug\sdk
 BUILD: [00:0000000000:PROG  ] Environment: _PB_INSTALL_ROOT=C:\PROGRA~2\MIFAB2~1\8.00
 BUILD: [00:0000000000:PROG  ] Environment: _PLATFORMDRIVE=C:
 BUILD: [00:0000000000:PROG  ] Environment: _PLATFORMROOT=C:\WINCE800\platform
@@ -297,186 +296,387 @@ BUILD: [00:0000000000:PROG  ] Environment: _WINCEOSVER=800
 BUILD: [00:0000000000:PROG  ] Environment: _WINCEROOT=C:\WINCE800
 BUILD: [00:0000000000:PROG  ] Environment: __COMPAT_LAYER=DetectorsAppHealth DetectorsWin8
 BUILD: [00:0000000000:PROGC ] Running passes WCEFILES0, MIDL, MC, ASN, THUNK, RUN_WPP, XRPACK, PRECOMPHEADER, COMPILE, RENUMBERICONIDS, RES2RES, LIB, EXPLIB, LINK, LOCALIZE, MANAGEDRESX, MANAGEDMOD, MANAGEDDLL, MANAGEDEXE, MANAGEDWIN, POSTBUILD for ARM.
-BUILD: [00:0000000000:PROGC ] Ignoring build database (-c specified).
-BUILD: [00:0000000000:PROGC ] Computing include file dependencies:
-BUILD: [00:0000000218:PROG  ] Waiting for 1 worker threads.
-BUILD: [01:0000000218:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
-BUILD: [00:0000001000:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
-BUILD: [00:0000001000:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001000:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001031:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001593:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001781:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001781:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
-BUILD: [00:0000001796:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
-BUILD: [00:0000001875:PROGC ] Directory scanning complete.
-BUILD: [00:0000001875:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7retail.dat.
-BUILD: [00:0000001906:INFO  ] Done.
-BUILD: [00:0000001906:PROGC ] Saving Master Database complete.
-BUILD: [00:0000001906:PROGC ] Starting WCEFILES0 Pass.
-BUILD: [00:0000001906:PROGC ] Analyzing project dependency information for pass WCEFILES0.
-BUILD: [00:0000001906:PROGC ] Starting MIDL Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MIDL.
-BUILD: [00:0000001921:PROGC ] Starting MC Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass MC.
-BUILD: [00:0000001921:PROGC ] Starting ASN Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass ASN.
-BUILD: [00:0000001921:PROGC ] Starting THUNK Pass.
-BUILD: [00:0000001921:PROGC ] Analyzing project dependency information for pass THUNK.
-BUILD: [00:0000001937:PROGC ] Starting RUN_WPP Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass RUN_WPP.
-BUILD: [00:0000001937:PROGC ] Starting XRPACK Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass XRPACK.
-BUILD: [00:0000001937:PROGC ] Starting PRECOMPHEADER Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
-BUILD: [00:0000001937:PROGC ] Starting COMPILE Pass.
-BUILD: [00:0000001937:PROGC ] Analyzing project dependency information for pass COMPILE.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxabort.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxasert.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxasert.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxcrit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxcrit.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxdbcs.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxdbcs.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl1.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl2.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxinl3.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxmem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxmem.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxstate.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxstate.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtls.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtls.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtrace.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\afxtrace.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appcore.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appdlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appdlg.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appgray.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appgray.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelp.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelpx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\apphelpx.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appinit.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appmodul.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appprnt.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appterm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appterm.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui1.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui2.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\appui3.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arccore.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcex.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcobj.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcobj.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcstrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\arcstrm.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_b.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_b.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_d.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_d.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_o.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_p.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_s.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_u.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_u.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_w.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\array_w.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\auxdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\auxdata.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcool.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barcore.obj is missing.
-BUILD: [00:0000001937:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardlg.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bardock.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\barstat.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bartool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\bartool.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\ccdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\ccdata.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\cmdtarg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\cmdtarg.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgclr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgclr.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcomm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcomm.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgdata.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfile.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfile.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfloat.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgfr.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgprop.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgprop.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgtempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dlgtempl.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dllmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dllmodul.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doccore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockcont.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dockstat.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docmgr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docmgr.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docsingl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\docsingl.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doctempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\doctempl.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpcont.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpflt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpflt.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpinit.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpout.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\dumpout.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\except.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\except.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filecore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filelist.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filelist.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filemem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filemem.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filest.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filest.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filetxt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filetxt.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\filex.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\inet.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_o.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_p.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\list_s.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pp.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pw.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_pw.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_so.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_so.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_sp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_sp.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_ss.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_ss.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wo.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wo.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\map_wp.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\mtex.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\objcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\objcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\olelock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\olelock.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\plex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\plex.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\sockcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\sockcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\strex.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\thrdcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\thrdcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\timecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\timecore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\tooltip.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\tooltip.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\trckrect.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\trckrect.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\validadd.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\validadd.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcmn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcmn.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewcore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewedit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewedit.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewform.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewform.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewprnt.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewscrl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\viewscrl.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winbtn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winbtn.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wincore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wincore.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl1.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl2.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl6.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winctrl6.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrm.obj is missing.
-BUILD: [00:0000001953:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrmx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winfrmx.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdi.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdi.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdix.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wingdix.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winhand.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winhand.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmain.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmain.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmenu.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winmenu.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winocc.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winocc.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winsplit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winsplit.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winstr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winstr.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winutil.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\winutil.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcealt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcealt.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcebar.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcebar.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoclt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoclt.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoctm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedoctm.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedb.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedb.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgfr.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgpr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgpr.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgsm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedlgsm.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedll.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcedll.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wceimpl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wceimpl.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcesock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcesock.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcethunk.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcethunk.obj is missing.
-BUILD: [00:0000001968:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcetime.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\retail\wcetime.obj is missing.
-BUILD: [00:0000002015:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
-BUILD: [00:0000002015:PROG  ] 'NMAKE.EXE  clean TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=C:\wince800\osdesigns\qemu\qemu\uafxcwce\ CLEANBUILD=1 NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
-BUILD: [00:0000002093:PROG  ] Waiting for 1 worker threads.
-BUILD: [01:0000002140:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.default
-BUILD: [01:0000002140:INFO  ] makefile.def: BUILDROOT is C:\wince800\osdesigns\qemu\qemu\uafxcwce\
-BUILD: [01:0000002187:INFO  ] makefile.def: Including C:\wince800\osdesigns\qemu\qemu\uafxcwce\sources
-BUILD: [01:0000002187:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.CE
-BUILD: [01:0000002187:INFO  ] Directory: C:\wince800\osdesigns\qemu\qemu\uafxcwce
-BUILD: [01:0000002187:INFO  ] TARGETNAME: uafxwce
-BUILD: [01:0000002187:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\sources.ReleaseType_OAK
-BUILD: [01:0000003140:INFO  ] Stop.
-BUILD: [01:0000003359:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.c
+BUILD: [00:0000000000:PROGC ] Loading database "C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7debug.dat".
+BUILD: [00:0000000016:PROGC ] Done.
+BUILD: [00:0000000016:PROGC ] Computing include file dependencies:
+BUILD: [00:0000000031:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000031:PROGC ] Scan C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [00:0000000359:PROGC ] Warning(s) in directory "C:\wince800\osdesigns\qemu\qemu\uafxcwce\".
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000359:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000375:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\oak\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\wceshellfe\oak\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\gdiex\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\ie7\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\rdp\sdk\inc\ does not exist.
+BUILD: [00:0000000391:WARNS ] Directory: C:\WINCE800\public\shellsdk\sdk\inc\ does not exist.
+BUILD: [00:0000000422:PROGC ] Directory scanning complete.
+BUILD: [00:0000000422:PROGC ] Saving C:\wince800\osdesigns\qemu\qemu\uafxcwce\BuildARMV7debug.dat.
+BUILD: [00:0000000422:INFO  ] Done.
+BUILD: [00:0000000422:PROGC ] Saving Master Database complete.
+BUILD: [00:0000000437:PROGC ] Starting WCEFILES0 Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass WCEFILES0.
+BUILD: [00:0000000437:PROGC ] Starting MIDL Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass MIDL.
+BUILD: [00:0000000437:PROGC ] Starting MC Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass MC.
+BUILD: [00:0000000437:PROGC ] Starting ASN Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass ASN.
+BUILD: [00:0000000437:PROGC ] Starting THUNK Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass THUNK.
+BUILD: [00:0000000437:PROGC ] Starting RUN_WPP Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass RUN_WPP.
+BUILD: [00:0000000437:PROGC ] Starting XRPACK Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass XRPACK.
+BUILD: [00:0000000437:PROGC ] Starting PRECOMPHEADER Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass PRECOMPHEADER.
+BUILD: [00:0000000437:PROGC ] Starting COMPILE Pass.
+BUILD: [00:0000000437:PROGC ] Analyzing project dependency information for pass COMPILE.
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.inl
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.h
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.h
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000484:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdlgs.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxext.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdisp.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxole.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdisp.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxext.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxole.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdlgs.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxole.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxext.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxext.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxadv.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxext.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxcmn.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxwin.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdlgs.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxole.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxcmn.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxdisp.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxabort.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxabort.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxasert.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxasert.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxasert.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxasert.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxcrit.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxcrit.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxcrit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxcrit.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxdbcs.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxdbcs.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxdbcs.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxdbcs.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl1.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl1.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl1.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl1.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afx.inl
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl1.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl2.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl2.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl2.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl3.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl3.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxinl3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxinl3.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxmem.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxmem.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxmem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxmem.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxstate.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxstate.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000500:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxstate.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxstate.obj is out of date.
+BUILD: [00:0000000500:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxtls.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtls.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtls.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxtls.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxtrace.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtrace.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\afxtrace.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\afxtrace.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appcore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appdlg.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appdlg.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appdlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appdlg.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appgray.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appgray.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appgray.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appgray.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\apphelp.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelp.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\apphelp.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\apphelpx.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelpx.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\apphelpx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\apphelpx.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appinit.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appinit.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appinit.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appmodul.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appmodul.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appmodul.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appprnt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appprnt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appprnt.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appterm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appterm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appterm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appterm.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui1.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui1.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui1.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui2.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui2.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui2.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui3.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui3.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\appui3.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\appui3.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arccore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\arccore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arccore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\arccore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxplex_.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arccore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcex.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcobj.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcobj.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcobj.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcobj.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcstrm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcstrm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\arcstrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\arcstrm.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_b.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_b.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_b.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_b.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_d.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_d.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_d.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_d.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_o.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_o.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_o.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_p.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_p.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_p.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_s.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_s.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_s.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_u.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_u.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_u.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_u.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_w.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_w.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\array_w.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\array_w.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\auxdata.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\auxdata.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\auxdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\auxdata.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barcool.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcool.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barcool.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barcore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bardlg.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardlg.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardlg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bardlg.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bardock.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardock.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bardock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bardock.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barstat.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\barstat.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\barstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\barstat.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bartool.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\bartool.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\bartool.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\bartool.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\ccdata.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\ccdata.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\ccdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\ccdata.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\cmdtarg.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\cmdtarg.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\cmdtarg.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\cmdtarg.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgclr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgclr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgclr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgclr.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgcomm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcomm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcomm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgcomm.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgcore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgdata.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgdata.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgdata.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgdata.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfile.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfile.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfile.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfile.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfloat.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfloat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfloat.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgfr.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgprop.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgprop.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgprop.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgprop.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgtempl.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgtempl.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dlgtempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dlgtempl.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dllmodul.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dllmodul.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dllmodul.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dllmodul.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\doccore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\doccore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doccore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\doccore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dockcont.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockcont.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dockcont.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dockstat.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockstat.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dockstat.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dockstat.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\docmgr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\docmgr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docmgr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\docmgr.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\docsingl.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\docsingl.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\docsingl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\docsingl.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\doctempl.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\doctempl.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\doctempl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\doctempl.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpcont.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpcont.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpcont.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpcont.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpflt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpflt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpflt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpflt.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpinit.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpinit.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpinit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpinit.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpout.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpout.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\dumpout.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\dumpout.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\except.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\except.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\except.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\except.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filecore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filecore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filecore.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filelist.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filelist.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filelist.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filelist.obj is out of date.
+BUILD: [00:0000000516:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filemem.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filemem.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000516:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filemem.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filemem.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filest.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filest.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filest.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filest.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filetxt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filetxt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filetxt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filetxt.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\filex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\filex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\filex.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\inet.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\inet.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxtempl.h
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\inet.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxinet.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\inet.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\inet.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_o.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_o.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_o.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_o.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_p.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_p.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_p.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_p.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_s.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_s.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\list_s.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\list_s.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_pp.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pp.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_pp.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_pw.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pw.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_pw.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_pw.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_so.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_so.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_so.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_so.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_sp.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_sp.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_sp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_sp.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_ss.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_ss.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_ss.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_ss.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_wo.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wo.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wo.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_wo.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_wp.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wp.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\map_wp.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\map_wp.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\mtcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\mtcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\mtex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\mtex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\mtex.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\objcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\objcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\objcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\objcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\olelock.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\olelock.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\olelock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\olelock.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\plex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\plex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\plex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\plex.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\sockcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\sockcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\sockcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\sockcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\strcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\strcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxplex_.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strex.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\include\afxtempl.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\strex.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\strex.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\thrdcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\thrdcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\thrdcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\thrdcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\timecore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\timecore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\timecore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\timecore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\tooltip.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\tooltip.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\tooltip.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\tooltip.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\trckrect.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\trckrect.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\trckrect.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\trckrect.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\validadd.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\validadd.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\validadd.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\validadd.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewcmn.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcmn.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcmn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewcmn.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewcore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewcore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewcore.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewedit.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewedit.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewedit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewedit.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewform.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewform.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewform.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewform.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewprnt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewprnt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewprnt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewprnt.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewscrl.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewscrl.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\viewscrl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\viewscrl.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winbtn.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winbtn.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winbtn.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winbtn.obj is out of date.
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wincore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wincore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000531:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wincore.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wincore.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\fixalloc.h
+BUILD: [00:0000000531:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wincore.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wincore.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl1.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl1.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl1.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl1.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl2.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl2.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl2.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl2.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\fixalloc.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl2.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl2.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl6.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl6.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winctrl6.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winctrl6.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winfrm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winfrm.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winfrmx.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrmx.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winfrmx.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winfrmx.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wingdi.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdi.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wingdi.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdi.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\fixalloc.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdi.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wingdi.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wingdix.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdix.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wingdix.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wingdix.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winhand.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winhand.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winhand.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winhand.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winmain.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmain.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmain.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winmain.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winmenu.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmenu.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winmenu.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmenu.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\fixalloc.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winmenu.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winmenu.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winocc.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winocc.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winocc.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winocc.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winsplit.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winsplit.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winsplit.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winsplit.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winstr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winstr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winstr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winstr.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winutil.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\winutil.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\winutil.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\winutil.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcealt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcealt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcealt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcealt.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcebar.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcebar.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcebar.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcebar.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedoclt.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoclt.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoclt.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedoclt.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedoctm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoctm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedoctm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedoctm.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedb.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedb.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedb.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedb.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgfr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgfr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgfr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgfr.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgpr.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgpr.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgpr.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgpr.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgsm.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgsm.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedlgsm.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedlgsm.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedll.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedll.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcedll.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcedll.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wceimpl.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wceimpl.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wceimpl.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wceimpl.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcesock.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcesock.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcesock.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcesock.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcethunk.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcethunk.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcethunk.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcethunk.obj is out of date.
+BUILD: [00:0000000547:INFO  ] Target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcetime.obj from Source: C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcetime.cpp is out of date. Newer file is C:\wince800\osdesigns\qemu\qemu\uafxcwce\stdafx.h
+BUILD: [00:0000000547:INFO  ] Will Build C:\wince800\osdesigns\qemu\qemu\uafxcwce\wcetime.cpp because target: C:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\wcetime.obj is out of date.
+BUILD: [00:0000000594:PROGC ] Building COMPILE Pass in C:\wince800\osdesigns\qemu\qemu\uafxcwce\ directory.
+BUILD: [00:0000000594:PROG  ] 'NMAKE.EXE TargetCompilePass  -nologo BUILDMSG=Stop.  BUILDROOT=C:\wince800\osdesigns\qemu\qemu\uafxcwce\ NOLINK=1 NOPASS0=1' (SYNCHRONIZE_BLOCK = 0)
+BUILD: [00:0000000641:PROG  ] Waiting for 1 worker threads.
+BUILD: [01:0000000656:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.default
+BUILD: [01:0000000656:INFO  ] makefile.def: BUILDROOT is C:\wince800\osdesigns\qemu\qemu\uafxcwce\
+BUILD: [01:0000000703:INFO  ] makefile.def: Including C:\wince800\osdesigns\qemu\qemu\uafxcwce\sources
+BUILD: [01:0000000703:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\Sources.CE
+BUILD: [01:0000000703:INFO  ] Directory: C:\wince800\osdesigns\qemu\qemu\uafxcwce
+BUILD: [01:0000000703:INFO  ] TARGETNAME: uafxwce
+BUILD: [01:0000000703:INFO  ] makefile.def: Including C:\WINCE800\public\common\oak\misc\sources.ReleaseType_OAK
+BUILD: [01:0000000844:PROGC ] Compiling .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp
+BUILD: [01:0000000891:INFO  ] cl.exe -nologo   -FoC:\wince800\osdesigns\qemu\qemu\uafxcwce\obj\ARMV7\debug\  /QRunaligned- -c -I. -Iinclude -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\html\sdk\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\wceshellfe\oak\inc -IC:\WINCE800\public\shell\oak\inc -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\rdp\oak\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\oak\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\oak\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\common\ddk\inc -IC:\WINCE800\private\winceos\inc -IC:\WINCE800\public\common\sdk\inc\test -I. -IC:\WINCE800\public\shellsdk\sdk\inc -IC:\WINCE800\public\html\sdk\inc -IC:\WINCE800\public\rdp\sdk\inc -IC:\WINCE800\public\servers\sdk\inc -IC:\WINCE800\public\ie7\sdk\inc -IC:\WINCE800\public\gdiex\sdk\inc -IC:\WINCE800\public\dcom\sdk\inc -IC:\WINCE800\public\common\sdk\inc -IC:\WINCE800\public\common\sdk\inc\cestl -IC:\WINCE800\public\common\sdk\inc\crt -I.\Resource\0409 -Od -Oy- -GF -Zi -FdC:\WINCE800\public\\oak\lib\ARMV7\debug\uafxwce.pdb -DTHUMBSUPPORT -D_CRT_SECURE_NO_DEPRECATE -D_USE_32BIT_TIME_T -DUNICODE -D_UNICODE -DUNDER_CE=800 -D_WIN32_WCE=0x0800 -DWIN32 -DSTRICT -DARM -DARMV7 -D_ARM_ -D__RPC_ARM32__ -D_MIDL_USE_GUIDDEF_ -DDEBUG=1  -IC:\WINCE800\public\common\sdk\inc -Ob0 -D_WIN32_WCE=800 -DUNDER_CE=0x800 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE -D__STDC_WANT_SECURE_LIB__=1 -DINTERNATIONAL -DINTLMSG_CODEPAGE=1252  -wd4007 -Zc:wchar_t- -Zc:forScope- -wd4867 -wd4430 -wd4603 -wd4627 -wd4100 -wd4201 -wd4115 -wd4214 -wd4049 -wd4505 -MT -U_MT /FC -W3     /GR- .\afxabort.cpp .\afxasert.cpp .\afxcrit.cpp .\afxdbcs.cpp .\afxinl1.cpp .\afxinl2.cpp .\afxinl3.cpp .\afxmem.cpp .\afxstate.cpp .\afxtls.cpp .\afxtrace.cpp .\appcore.cpp .\appdlg.cpp .\appgray.cpp .\apphelp.cpp .\apphelpx.cpp .\appinit.cpp .\appmodul.cpp .\appprnt.cpp .\appterm.cpp .\appui.cpp .\appui1.cpp .\appui2.cpp .\appui3.cpp .\arccore.cpp .\arcex.cpp .\arcobj.cpp .\arcstrm.cpp .\array_b.cpp .\array_d.cpp .\array_o.cpp .\array_p.cpp .\array_s.cpp .\array_u.cpp .\array_w.cpp .\auxdata.cpp .\barcool.cpp .\barcore.cpp .\bardlg.cpp .\bardock.cpp .\barstat.cpp .\bartool.cpp .\ccdata.cpp .\cmdtarg.cpp .\dlgclr.cpp .\dlgcomm.cpp .\dlgcore.cpp .\dlgdata.cpp .\dlgfile.cpp .\dlgfloat.cpp .\dlgfr.cpp .\dlgprop.cpp .\dlgtempl.cpp .\dllmodul.cpp .\doccore.cpp .\dockcont.cpp .\dockstat.cpp .\docmgr.cpp .\docsingl.cpp .\doctempl.cpp .\dumpcont.cpp .\dumpflt.cpp .\dumpinit.cpp .\dumpout.cpp .\except.cpp .\filecore.cpp .\filelist.cpp .\filemem.cpp .\filest.cpp .\filetxt.cpp .\filex.cpp .\inet.cpp .\list_o.cpp .\list_p.cpp .\list_s.cpp .\map_pp.cpp .\map_pw.cpp .\map_so.cpp .\map_sp.cpp .\map_ss.cpp .\map_wo.cpp .\map_wp.cpp .\mtcore.cpp .\mtex.cpp .\objcore.cpp .\olelock.cpp .\plex.cpp .\sockcore.cpp .\strcore.cpp .\strex.cpp .\thrdcore.cpp .\timecore.cpp .\tooltip.cpp .\trckrect.cpp .\validadd.cpp .\viewcmn.cpp .\viewcore.cpp .\viewedit.cpp .\viewform.cpp .\viewprnt.cpp .\viewscrl.cpp .\winbtn.cpp .\wincore.cpp .\winctrl1.cpp .\winctrl2.cpp .\winctrl6.cpp .\winfrm.cpp .\winfrmx.cpp .\wingdi.cpp .\wingdix.cpp .\winhand.cpp .\winmain.cpp .\winmenu.cpp .\winocc.cpp .\winsplit.cpp .\winstr.cpp .\winutil.cpp .\wcealt.cpp .\wcebar.cpp .\wcedoclt.cpp .\wcedoctm.cpp .\wcedb.cpp .\wcedlgfr.cpp .\wcedlgpr.cpp .\wcedlgsm.cpp .\wcedll.cpp .\wceimpl.cpp .\wcesock.cpp .\wcethunk.cpp .\wcetime.cpp 
+BUILD: [01:0000000984:INFO  ] afxabort.cpp
+BUILD: [01:0000001844:INFO  ] afxasert.cpp
+BUILD: [01:0000002094:INFO  ] afxcrit.cpp
+BUILD: [01:0000002297:INFO  ] afxdbcs.cpp
+BUILD: [01:0000002578:INFO  ] afxinl1.cpp
+BUILD: [01:0000002906:INFO  ] afxinl2.cpp
+BUILD: [01:0000003219:INFO  ] afxinl3.cpp
+BUILD: [01:0000003531:INFO  ] afxmem.cpp
+BUILD: [01:0000003812:INFO  ] afxstate.cpp
+BUILD: [01:0000004062:INFO  ] afxtls.cpp
+BUILD: [01:0000004297:INFO  ] afxtrace.cpp
+BUILD: [01:0000004547:INFO  ] appcore.cpp
+BUILD: [01:0000004812:INFO  ] appdlg.cpp
+BUILD: [01:0000005109:INFO  ] appgray.cpp
+BUILD: [01:0000005391:INFO  ] apphelp.cpp
+BUILD: [01:0000005641:INFO  ] apphelpx.cpp
+BUILD: [01:0000005906:INFO  ] appinit.cpp
+BUILD: [01:0000006125:INFO  ] appmodul.cpp
+BUILD: [01:0000006453:INFO  ] appprnt.cpp
+BUILD: [01:0000006703:INFO  ] appterm.cpp
+BUILD: [01:0000006953:INFO  ] Generating Code...
+BUILD: [01:0000008172:INFO  ] Compiling...
+BUILD: [01:0000008172:INFO  ] appui.cpp
+BUILD: [01:0000008641:INFO  ] appui1.cpp
+BUILD: [01:0000008891:INFO  ] appui2.cpp
+BUILD: [01:0000009156:INFO  ] appui3.cpp
+BUILD: [01:0000009453:INFO  ] arccore.cpp
+BUILD: [01:0000009719:INFO  ] arcex.cpp
+BUILD: [01:0000009984:INFO  ] arcobj.cp

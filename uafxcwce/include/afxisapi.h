@@ -59,11 +59,9 @@
 
 #define STRICT 1
 
-#ifndef _DEBUG
 #ifndef _WIN32_WINNT
 #ifndef _AFX_ENABLE_INLINES
 #define _AFX_ENABLE_INLINES
-#endif
 #endif
 #endif
 
