@@ -880,7 +880,10 @@ int CPropertySheet::DoModal()
 	// handle error
 	if (hWnd == NULL || hWnd == (HWND)-1)
 	{
+#ifdef _DEBUG
 		TRACE1("PropertySheet() failed: GetLastError returned %d\n", dwError);
+#endif
+
 		m_nFlags &= ~WF_CONTINUEMODAL;
 	}
 
@@ -1033,7 +1036,10 @@ BOOL CPropertySheet::Create(CWnd* pParentWnd, DWORD dwStyle, DWORD dwExStyle)
 
 	if (hWnd == NULL || hWnd == (HWND)-1)
 	{
+#ifdef _DEBUG
 		TRACE1("PropertySheet() failed: GetLastError returned %d\n", dwError);
+#endif
+
 		return FALSE;
 	}
 
