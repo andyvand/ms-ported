@@ -21,7 +21,7 @@ OS_SDK_INC_PATH=$(_PUBLICROOT)\common\sdk\inc
 _ISVINCPATH=$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\html\sdk\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\sdk\inc;
 _OEMINCPATH=$(_WINCEROOT)\public\wceshellfe\oak\inc;$(_WINCEROOT)\public\shell\oak\inc;$(_WINCEROOT)\public\shellsdk\sdk\inc;$(_WINCEROOT)\public\rdp\oak\inc;$(_WINCEROOT)\public\rdp\sdk\inc;$(_WINCEROOT)\public\servers\oak\inc;$(_WINCEROOT)\public\servers\sdk\inc;$(_WINCEROOT)\public\ie7\sdk\inc;$(_WINCEROOT)\public\gdiex\sdk\inc;$(_WINCEROOT)\public\dcom\sdk\inc;$(_WINCEROOT)\public\common\oak\inc;$(_WINCEROOT)\public\common\sdk\inc;$(_WINCEROOT)\public\common\ddk\inc;$(_WINCEROOT)\private\winceos\inc;$(_WINCEROOT)\public\common\sdk\inc\test
 
-CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -Ob0 -D_WIN32_WCE=800 -DUNDER_CE=0x800 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE -D__STDC_WANT_SECURE_LIB__
+CDEFINES= $(CDEFINES) -I$(OS_SDK_INC_PATH) -Ob0 -D_WIN32_WCE=800 -DUNDER_CE=0x800 -D_AFX_CORE_IMPL -D_AFX_NET_IMPL -D_UNICODE -DUNICODE -D__STDC_WANT_SECURE_LIB__=1
 INCLUDES=include;$(OS_SDK_INC_PATH);$(_ISVINCPATH);$(_OEMINCPATH);.
 
 FILE_VIEW_RESOURCE_FOLDER= \
