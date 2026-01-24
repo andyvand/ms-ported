@@ -9,6 +9,18 @@
 #if defined(_WIN32_WCE) || defined(UNDER_CE)
 #if !defined(WCEOLE_ENABLE_DIALOGEX)
 #define DIALOGEX DIALOG DISCARDABLE
+
+#ifdef HDS_HORZ
+#undef HDS_HORZ
+#endif
+
+#ifdef HDS_BUTTONS
+#undef HDS_BUTTONS
+#endif
+
+#ifdef HDS_HIDDEN
+#undef HDS_HIDDEN
+#endif
 #endif
 
 #include <commctrl.h>

@@ -24,6 +24,19 @@ Other CMainWindow member functions are in main2.cpp, welcome.cpp and ddecb.cpp
 #include <regstr.h>
 #else
 #include <windows.h>
+
+#ifdef HDS_HORZ
+#undef HDS_HORZ
+#endif
+
+#ifdef HDS_BUTTONS
+#undef HDS_BUTTONS
+#endif
+
+#ifdef HDS_HIDDEN
+#undef HDS_HIDDEN
+#endif
+
 #include <commctrl.h>
 
 VOID APIENTRY HandleToolbarCreate(HWND hwnd, HINSTANCE g_hInst)
