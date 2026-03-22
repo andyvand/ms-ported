@@ -2,21 +2,42 @@
 Binary TOC=Yes
 Compatibility=1.1 or later
 Compiled file=freecell.chm
-Contents file=freecell.hhc
-Default topic=freecell_play.htm
+Contents file=toc.hhc
+Default topic=topic16.htm
 Display compile progress=No
 Enhanced decompilation=Yes
 Full-text search=Yes
-Index file=freecell.hhk
+Index file=keywords.hhk
 Language=0x409 Engels (Verenigde Staten)
 Title=Freecell Help
 
-
 [FILES]
-freecell_play.htm
-freecell_object.htm
-freecell_hints.htm
-freecell_change_game_options.htm
+topic16.htm
+topic17.htm
+topic18.htm
+topic19.htm
+topic20.htm
+topic21.htm
+topic22.htm
+topic23.htm
+topic24.htm
+topic25.htm
+topic26.htm
+topic27.htm
+topic28.htm
+css\base.css
+css\hnd.css
+css\ielte8.css
+css\reset.css
+img\arrow_left.png
+img\arrow_right.png
+img\arrow_up.png
+img\footer-bg.png
+img\header-bg.png
+lib\bm0.png
+lib\bm1.png
+lib\bm2.png
+js\chmRelative.js
 
 [INFOTYPES]
 

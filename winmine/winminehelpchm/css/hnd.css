@@ -1,0 +1,154 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+}
+span.rvts7
+{
+ font-size: 12pt;
+ vertical-align: super;
+}
+span.rvts8
+{
+ font-size: 12pt;
+}
+span.rvts9
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.rvts10
+{
+ font-weight: bold;
+}
+span.rvts11
+{
+ font-size: 8pt;
+}
+a.rvts12, span.rvts12
+{
+ text-decoration: none;
+ border-bottom: double;
+}
+span.rvts13
+{
+ display: none;
+}
+span.rvts14
+{
+ vertical-align: super;
+}
+span.rvts15
+{
+ font-style: italic;
+}
+span.rvts16 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts17, span.rvts17 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+}
+.rvps3
+{
+ margin: 0px 12px 4px 8px;
+}
+.rvps4
+{
+ margin: 12px 12px 2px 8px;
+}
+.rvps5
+{
+ text-indent: -18px;
+ padding: 0px 0px 0px 18px;
+ margin: 0px 12px 2px 8px;
+}
+.rvps6
+{
+ margin: 8px 12px 2px 8px;
+}
+.rvps7
+{
+ text-indent: -18px;
+ padding: 0px 0px 0px 18px;
+ margin: 0px 12px 4px 8px;
+}
+.rvps8
+{
+ text-indent: -18px;
+ padding: 0px 0px 0px 18px;
+ margin: 0px 12px 4px 8px;
+}
+.rvps9
+{
+ text-indent: -18px;
+ padding: 0px 0px 0px 18px;
+ margin: 4px 12px 8px 8px;
+}
+.rvps10 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+li.noindent { margin-left: 0; padding-left: 0; }

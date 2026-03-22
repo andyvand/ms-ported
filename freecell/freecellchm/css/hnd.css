@@ -1,0 +1,212 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+}
+span.rvts7
+{
+ vertical-align: super;
+}
+span.rvts8
+{
+ font-weight: bold;
+}
+span.rvts9
+{
+ color: #ff0000;
+}
+span.rvts10
+{
+ font-size: 8pt;
+}
+span.rvts11
+{
+ font-size: 8pt;
+ font-weight: bold;
+}
+a.rvts12, span.rvts12
+{
+ font-size: 8pt;
+ text-decoration: none;
+ border-bottom: double;
+}
+span.rvts13
+{
+ font-size: 8pt;
+ display: none;
+}
+span.rvts14
+{
+ vertical-align: super;
+}
+span.rvts15
+{
+ font-size: 8pt;
+ font-weight: bold;
+ color: #000000;
+}
+span.rvts16
+{
+ font-family: 'Tms Rmn';
+}
+span.rvts17
+{
+ font-family: 'Courier';
+ vertical-align: super;
+}
+a.rvts18, span.rvts18
+{
+ font-size: 8pt;
+ text-decoration: underline;
+}
+span.rvts19
+{
+ font-size: 8pt;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts20
+{
+ font-family: 'Courier';
+}
+span.rvts21
+{
+ font-size: 8pt;
+ font-weight: bold;
+ color: #ff0000;
+}
+span.rvts22
+{
+ font-size: 8pt;
+ vertical-align: super;
+}
+span.rvts23
+{
+ font-size: 8pt;
+ font-family: 'Courier';
+}
+span.rvts24
+{
+ font-size: 8pt;
+ font-family: 'Courier';
+ vertical-align: super;
+}
+span.rvts25 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts26, span.rvts26 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+}
+.rvps3
+{
+ margin: 0px 0px 0px 24px;
+}
+.rvps4
+{
+ break-inside: avoid;
+ margin: 0px 0px 2px 0px;
+}
+.rvps5
+{
+ margin: 0px 0px 2px 24px;
+}
+.rvps6
+{
+ margin: 4px 0px 0px 0px;
+}
+.rvps7
+{
+ margin: 0px 0px 6px 0px;
+}
+.rvps8
+{
+ text-indent: -24px;
+ padding: 0px 0px 0px 24px;
+ margin: 0px 0px 12px 24px;
+}
+.rvps9
+{
+ text-indent: -24px;
+ padding: 0px 0px 0px 24px;
+ margin: 0px 0px 12px 24px;
+}
+.rvps10
+{
+ margin: 0px 0px 12px 24px;
+}
+.rvps11
+{
+ margin: 0px 0px 2px 24px;
+}
+.rvps12
+{
+ margin: 0px 144px 0px 0px;
+}
+.rvps13 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+li.noindent { margin-left: 0; padding-left: 0; }

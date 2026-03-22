@@ -1,0 +1,23 @@
+[OPTIONS]
+Auto Index=Yes
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=mshearts.chm
+Contents file=mshearts.hhc
+Default Window=HelpWindow
+Default topic=hearts_object.htm
+Display compile progress=No
+Enhanced decompilation=Yes
+Full text search stop list file=mshearts.stp
+Full-text search=Yes
+Index file=mshearts.hhk
+Language=0x409 Engels (Verenigde Staten)
+Title=Reversi Help
+
+[FILES]
+hearts_novice.htm
+hearts_object.htm
+hearts_score.htm
+hearts_strategy.htm
+
+[INFOTYPES]

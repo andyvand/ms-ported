@@ -2,18 +2,35 @@
 Binary TOC=Yes
 Compatibility=1.1 or later
 Compiled file=winmine.chm
-Contents file=winmine.hhc
-Default topic=winmine.htm
+Contents file=toc.hhc
+Default topic=1yz4uw.htm
 Display compile progress=No
 Enhanced decompilation=Yes
 Full-text search=Yes
-Index file=winmine.hhk
+Index file=keywords.hhk
 Language=0x409 Engels (Verenigde Staten)
 Title=Minesweeper Help
 
-
 [FILES]
-winmine.htm
+_empty.htm
+1crgmaf.htm
+1smg6c0.htm
+1yz4uw.htm
+2jyzuwa.htm
+2n2hjyn.htm
+4m72_px.htm
+jbc4o.htm
+css\base.css
+css\hnd.css
+css\ielte8.css
+css\reset.css
+img\arrow_left.png
+img\arrow_right.png
+img\arrow_up.png
+img\footer-bg.png
+img\header-bg.png
+lib\bm0.png
+lib\bm1.png
+js\chmRelative.js
 
 [INFOTYPES]
-
