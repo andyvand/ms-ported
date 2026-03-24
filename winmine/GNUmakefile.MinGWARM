@@ -2,7 +2,7 @@ TARGETNAME=winmine
 TARGETPATH=../../bin
 TARGETTYPE=APPLICATION
 CC = /usr/local/armv7-pc-mingw32/bin/clang
-CXX = /usr/local/armv7-pc-mingw32/bin/clang+
+CXX = /usr/local/armv7-pc-mingw32/bin/clang++
 AR = /usr/local/armv7-pc-mingw32/bin/llvm-ar
 WINDRES = /usr/local/armv7-pc-mingw32/bin/llvm-windres -D_UNICODE=1 -DUNICODE=1
 RANLIB = /usr/local/armv7-pc-mingw32/bin/llvm-ranlib

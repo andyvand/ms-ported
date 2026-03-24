@@ -9,6 +9,7 @@
 - Pegged
 - Winver
 - version.dll
+- winfile
 
 It requires for a MinGW build of mshearts the MFC library ported to MinGW.
 - To build it go to atlmfc/src/mfc in the Terminal

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{028400E7-500A-4FB9-877F-F6C7AE24F109}</ProjectGuid>
+    <RootNamespace>Winfile</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="..\build\Winfile.default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="..\build\Winfile.props" />
+  <ItemDefinitionGroup Label="Globals">
+    <ClCompile>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <DisableSpecificWarnings>4706;4152;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LFN;FASTMOVE;UNICODE;_UNICODE;USELASTDOT;MEMDOUBLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LFN;FASTMOVE;UNICODE;_UNICODE;USELASTDOT;MEMDOUBLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;gdi32.lib;user32.lib;advapi32.lib;oleaut32.lib;ole32.lib;shell32.lib;shlwapi.lib;comctl32.lib;version.lib</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>15000000</StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugXPStatic|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;STRSAFE_NO_DEPRECATE=1;WINVER=0x0501;_WIN32_WINNT=0x501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;STRSAFE_NO_DEPRECATE=1;WINVER=0x0501;_WIN32_WINNT=0x501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <ClCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0A00;_WIN32_WINNT=0xA00;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0A00;_WIN32_WINNT=0xA00;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseXPStatic|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>STRSAFE_NO_DEPRECATE=1;WINVER=0x0501;_WIN32_WINNT=0x501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>STRSAFE_NO_DEPRECATE=1;WINVER=0x0501;_WIN32_WINNT=0x501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WINVER=0x0A00;_WIN32_WINNT=0xA00;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WINVER=0x0A00;_WIN32_WINNT=0xA00;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>DBG=1;DEBUG=1;WINVER=0x0601;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WINVER=0x0601;_WIN32_WINNT=0x601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WINVER=0x0601;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="dbg.h" />
+    <ClInclude Include="fmifs.h" />
+    <ClInclude Include="lfn.h" />
+    <ClInclude Include="BagOValues.h" />
+    <ClInclude Include="mpr.h" />
+    <ClInclude Include="numfmt.h" />
+    <ClInclude Include="res.h" />
+    <ClInclude Include="resize.h" />
+    <ClInclude Include="spinlock.h" />
+    <ClInclude Include="suggest.h" />
+    <ClInclude Include="treectl.h" />
+    <ClInclude Include="wfcopy.h" />
+    <ClInclude Include="wfdlgs.h" />
+    <ClInclude Include="wfdocb.h" />
+    <ClInclude Include="wfdrop.h" />
+    <ClInclude Include="wfext.h" />
+    <ClInclude Include="wfexti.h" />
+    <ClInclude Include="wfgwl.h" />
+    <ClInclude Include="wfhelp.h" />
+    <ClInclude Include="wfinfo.h" />
+    <ClInclude Include="wfmem.h" />
+    <ClInclude Include="winexp.h" />
+    <ClInclude Include="winfile.h" />
+    <ClInclude Include="wnetcaps.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lang\res_pl-PL.rc" />
+    <None Include="lang\res_de-DE.rc" />
+    <None Include="lang\res_tr-TR.rc" />
+    <ResourceCompile Include="res.rc">
+      <Culture>0x0409</Culture>
+      <ShowProgress Condition="'$(Configuration)'=='Debug'">true</ShowProgress>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32_LEAN_AND_MEAN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">WIN32_LEAN_AND_MEAN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WIN32_LEAN_AND_MEAN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WIN32_LEAN_AND_MEAN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">WIN32_LEAN_AND_MEAN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WIN32_LEAN_AND_MEAN=1;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lang\res_en-US.rc" />
+    <None Include="lang\res_zh-CN.rc" />
+    <None Include="lang\res_ja-JP.rc" />
+    <None Include="lang\res_he-IL.rc" />
+    <None Include="lang\res_pt-PT.rc" />
+    <None Include="lang\res_ko-KR.rc" />
+    <None Include="lang\suggest_de-DE.db" />
+    <None Include="lang\suggest_en-US.db" />
+    <None Include="lang\suggest_pl-PL.db" />
+    <None Include="lang\suggest_pt-PT.db" />
+    <None Include="lang\suggest_tr-TR.db" />
+    <None Include="lang\suggest_zh-CN.db" />
+    <None Include="lang\suggest_ja-JP.db" />
+    <None Include="lang\suggest_he-IL.db" />
+    <None Include="lang\suggest_ko-KR.db" />
+    <None Include="lang\winfile_de-DE.dlg" />
+    <None Include="lang\winfile_en-US.dlg" />
+    <None Include="lang\winfile_pl-PL.dlg" />
+    <None Include="lang\winfile_pt-PT.dlg" />
+    <None Include="lang\winfile_tr-TR.dlg" />
+    <None Include="lang\winfile_zh-CN.dlg" />
+    <None Include="lang\winfile_ja-JP.dlg" />
+    <None Include="lang\winfile_he-IL.dlg" />
+    <None Include="lang\winfile_ko-KR.dlg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dbg.c" />
+    <ClCompile Include="lfn.c" />
+    <ClCompile Include="lfnmisc.c" />
+    <ClCompile Include="numfmt.c" />
+    <ClCompile Include="resize.c" />
+    <ClCompile Include="suggest.c" />
+    <ClCompile Include="tbar.c" />
+    <ClCompile Include="treectl.c" />
+    <ClCompile Include="wfassoc.c" />
+    <ClCompile Include="wfchgnot.c" />
+    <ClCompile Include="wfcomman.c" />
+    <ClCompile Include="wfcopy.c" />
+    <ClCompile Include="wfdir.c" />
+    <ClCompile Include="wfdirrd.c" />
+    <ClCompile Include="wfdirsrc.c" />
+    <ClCompile Include="wfdlgs.c" />
+    <ClCompile Include="wfdlgs2.c" />
+    <ClCompile Include="wfdlgs3.c" />
+    <ClCompile Include="wfdos.c" />
+    <ClCompile Include="wfdrives.c" />
+    <ClCompile Include="wfdrop.c" />
+    <ClCompile Include="wfext.c" />
+    <ClCompile Include="wffile.c" />
+    <ClCompile Include="wfgoto.cpp" />
+    <ClCompile Include="wfinfo.c" />
+    <ClCompile Include="wfinit.c" />
+    <ClCompile Include="wfloc.c" />
+    <ClCompile Include="wfmem.c" />
+    <ClCompile Include="wfprint.c" />
+    <ClCompile Include="wfsearch.c" />
+    <ClCompile Include="wftree.c" />
+    <ClCompile Include="wfutil.c" />
+    <ClCompile Include="winfile.c" />
+    <ClCompile Include="wnetcaps.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="winfile.exe.manifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
