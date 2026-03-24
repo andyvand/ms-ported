@@ -1441,6 +1441,7 @@ Extern BOOL  bDeveloperModeAvailable EQ(FALSE);
 // this value is an index into dwMenuIDs and used to workaround a bug
 #define MHPOP_CURRENT 2
 
+#ifndef _MSC_VER
 #if defined(__arm__) || defined(__aarch64__)
 #undef  NTSYSAPI
 #define NTSYSAPI
@@ -1448,9 +1449,10 @@ Extern BOOL  bDeveloperModeAvailable EQ(FALSE);
 #undef  NTSYSAPI
 #define NTSYSAPI __stdcall
 #endif
+#endif
 
 Extern CHAR PHCM_EXPOSE_PLACEHOLDERS    EQ(2);
-typedef NTSYSAPI CHAR (*RtlSetProcessPlaceholderCompatibilityMode_t)(
+typedef NTSYSAPI CHAR (WINAPI *RtlSetProcessPlaceholderCompatibilityMode_t)(
    CHAR aMode
    );
 Extern RtlSetProcessPlaceholderCompatibilityMode_t pfnRtlSetProcessPlaceholderCompatibilityMode;
