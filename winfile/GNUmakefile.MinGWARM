@@ -37,7 +37,7 @@ OBJS = $(subst .c,.o,$(SRCS)) src/wfgoto.o src/res.o
 
 CFLAGS = -DUNICODE -DFASTMOVE -DSTRSAFE_NO_DEPRECATE -DWINVER=0x0600 -I/usr/local/armv7-pc-mingw32/include
 CXXFLAGS = $(CFLAGS) -I/usr/local/armv7-pc-mingw32/include/c++/v1
-LDLIBS = -mwindows -L/usr/local/armv7-pc-mingw32/lib -lkernel32 -lgdi32 -luser32 -ladvapi32 -lcomctl32 -lole32 -lshlwapi -lshell32 -loleaut32 -lversion -lc++ -lc++abi -lunwind
+LDLIBS = -mwindows -L/usr/local/armv7-pc-mingw32/lib -lkernel32 -lgdi32 -luser32 -ladvapi32 -lcomctl32 -lole32 -lshlwapi -lshell32 -loleaut32 -lversion -Wl,-Bstatic,-lc++ -Wl,-Bstatic,-lc++abi -Wl,-Bstatic,-lunwind
 TARGET = winfile.exe
 
 CC = /usr/local/armv7-pc-mingw32/bin/clang

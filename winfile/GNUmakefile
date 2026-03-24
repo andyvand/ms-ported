@@ -36,7 +36,7 @@ SRCS = \
 OBJS = $(subst .c,.o,$(SRCS)) src/wfgoto.o src/res.o
 
 CFLAGS = -DUNICODE -DFASTMOVE -DSTRSAFE_NO_DEPRECATE -DWINVER=0x0600
-LDLIBS = -mwindows -lkernel32 -lgdi32 -luser32 -ladvapi32 -lcomctl32 -lole32 -lshlwapi -lshell32 -loleaut32 -lversion
+LDLIBS = -mwindows -lkernel32 -lgdi32 -luser32 -ladvapi32 -lcomctl32 -lole32 -lshlwapi -lshell32 -loleaut32 -lversion -static-libgcc -Wl,-Bstatic,-lstdc++
 TARGET = winfile.exe
 
 CC = i686-pc-mingw32-gcc
