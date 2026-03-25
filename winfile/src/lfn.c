@@ -95,8 +95,10 @@ WFFindFirst(
          if (lpFind->fd.dwFileAttributes & FILE_ATTRIBUTE_REPARSE_POINT) {
             if (lpFind->fd.dwReserved0 == IO_REPARSE_TAG_MOUNT_POINT) {
                lpFind->fd.dwFileAttributes |= ATTR_JUNCTION;
+#if WINVER >= 0x0600
             } else if (lpFind->fd.dwReserved0 == IO_REPARSE_TAG_SYMLINK) {
                lpFind->fd.dwFileAttributes |= ATTR_SYMBOLIC;
+#endif
             }
          }
          return(TRUE);
@@ -158,8 +160,10 @@ WFFindNext(LPLFNDTA lpFind)
       if (lpFind->fd.dwFileAttributes & FILE_ATTRIBUTE_REPARSE_POINT) {
           if (lpFind->fd.dwReserved0 == IO_REPARSE_TAG_MOUNT_POINT) {
               lpFind->fd.dwFileAttributes |= ATTR_JUNCTION;
+#if WINVER >= 0x0600
           } else if (lpFind->fd.dwReserved0 == IO_REPARSE_TAG_SYMLINK) {
               lpFind->fd.dwFileAttributes |= ATTR_SYMBOLIC;
+#endif
           }
       }
 
@@ -235,6 +239,30 @@ WFIsDir(LPTSTR lpDir)
 
    return FALSE;
 }
+
+#if WINVER < 0x0600
+BOOL IsLFNDrive(LPCTSTR szPath)
+{
+    TCHAR szRoot[MAX_PATH];
+    TCHAR szVolumeName[MAX_PATH];
+    TCHAR szFileSystemName[MAX_PATH];
+    DWORD dwMaxComponentLength;
+    DWORD dwFileSystemFlags;
+
+    // Haal de root van het pad (bijv. "C:\")
+    if (!GetVolumePathName(szPath, szRoot, MAX_PATH))
+        return FALSE;
+
+    if (GetVolumeInformation(szRoot, szVolumeName, MAX_PATH, NULL, 
+                             &dwMaxComponentLength, &dwFileSystemFlags, 
+                             szFileSystemName, MAX_PATH))
+    {
+        // Als de maximale naam-lengte groter is dan 12 (8.3), ondersteunt het LFN
+        return (dwMaxComponentLength > 12);
+    }
+    return FALSE;
+}
+#endif
 
 /* GetNameType -
  *
@@ -509,6 +537,7 @@ WFCopyIfSymlink(LPTSTR pszFrom, LPTSTR pszTo, DWORD dwFlags, DWORD dwNotificatio
 
    DWORD dwReparseTag = DecodeReparsePoint(pszFrom, szReparseDest, 2 * MAXPATHLEN);
 
+#if WINVER >= 0x0600
    if (IO_REPARSE_TAG_SYMLINK == dwReparseTag)
    {
       if (CreateSymbolicLink == NULL)
@@ -527,8 +556,11 @@ WFCopyIfSymlink(LPTSTR pszFrom, LPTSTR pszTo, DWORD dwFlags, DWORD dwNotificatio
    }
    else
    {
+#endif
       dwRet = GetLastError();
+#if WINVER >= 0x0600
    }
+#endif
 
    return dwRet;
 }
@@ -680,7 +712,11 @@ DWORD WFJunction(LPCWSTR pszLinkDirectory, LPCWSTR pszLinkTarget)
    WCHAR        szTargetName[MAXPATHLEN];
    PWCHAR       szFilePart;
    DWORD        dwLength;
-
+   BOOL bDirCreated = FALSE;
+   HANDLE hFile = NULL;
+   WCHAR szSubstituteName[MAXPATHLEN];
+   size_t lenSub = 0;
+   PREPARSE_DATA_BUFFER reparseJunctionInfo = NULL;
 
    // Get the full path referenced by the target
    if (!GetFullPathName(pszLinkTarget, MAXPATHLEN, szTargetName, &szFilePart))
@@ -691,7 +727,7 @@ DWORD WFJunction(LPCWSTR pszLinkDirectory, LPCWSTR pszLinkTarget)
       return GetLastError();
 
    // Create the link - ignore errors since it might already exist
-   BOOL bDirCreated = CreateDirectory(pszLinkDirectory, NULL);
+   bDirCreated = CreateDirectory(pszLinkDirectory, NULL);
    if (!bDirCreated) {
       DWORD dwErr = GetLastError();
       if (ERROR_ALREADY_EXISTS != dwErr)
@@ -709,7 +745,7 @@ DWORD WFJunction(LPCWSTR pszLinkDirectory, LPCWSTR pszLinkTarget)
       }
    }
 
-   HANDLE hFile = CreateFile(
+   hFile = CreateFile(
       pszLinkDirectory,
       GENERIC_WRITE,
       0,
@@ -721,9 +757,6 @@ DWORD WFJunction(LPCWSTR pszLinkDirectory, LPCWSTR pszLinkTarget)
 
    if (INVALID_HANDLE_VALUE == hFile)
       return GetLastError();
-
-   // Make the native target name
-   WCHAR szSubstituteName[MAXPATHLEN];
 
    // The target might be
    if (IsVeryLongPath(szTargetName)) {
@@ -741,11 +774,11 @@ DWORD WFJunction(LPCWSTR pszLinkDirectory, LPCWSTR pszLinkTarget)
 
    // Delete the trailing slashes for non root path x:\path\foo\ -> x:\path\foo, but keep x:\
    // Furthermore keep \\?\Volume{GUID}\ for 'root' volume-names
-   size_t lenSub = wcslen(szSubstituteName);
+   lenSub = wcslen(szSubstituteName);
    if ((szSubstituteName[lenSub - 1] == L'\\') && (szSubstituteName[lenSub - 2] != L':') && (szSubstituteName[lenSub - 2] != L'}'))
       szSubstituteName[lenSub - 1] = 0;
 
-   PREPARSE_DATA_BUFFER reparseJunctionInfo = (PREPARSE_DATA_BUFFER)reparseBuffer;
+   reparseJunctionInfo = (PREPARSE_DATA_BUFFER)reparseBuffer;
    memset(reparseJunctionInfo, 0, sizeof(REPARSE_DATA_BUFFER));
    reparseJunctionInfo->ReparseTag = IO_REPARSE_TAG_MOUNT_POINT;
 
@@ -807,9 +840,15 @@ DWORD DecodeReparsePoint(LPCWSTR szFullPath, LPWSTR szDest, DWORD cwcDest)
 
    reparseTag = rdata->ReparseTag;
 
+#if WINVER < 0x0600
+   if (IsReparseTagMicrosoft(rdata->ReparseTag) &&
+      (rdata->ReparseTag == IO_REPARSE_TAG_MOUNT_POINT) &&
+      cwcDest > 0)
+#else
    if (IsReparseTagMicrosoft(rdata->ReparseTag) &&
       (rdata->ReparseTag == IO_REPARSE_TAG_MOUNT_POINT || rdata->ReparseTag == IO_REPARSE_TAG_SYMLINK) &&
       cwcDest > 0)
+#endif
    {
       cwcLink = rdata->SymbolicLinkReparseBuffer.SubstituteNameLength / sizeof(WCHAR);
       // NOTE: cwcLink does not include any '\0' termination character

@@ -881,7 +881,7 @@ FrameWndProc(HWND hwnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
 
             if (!GetWindow(hwnd, GW_OWNER)) {
 
-               dwFlags = GetWindowLongPtr(hwnd, GWL_VIEW) &
+               dwFlags = (DWORD)GetWindowLongPtr(hwnd, GWL_VIEW) &
                                (VIEW_EVERYTHING | VIEW_PLUSES);
 
                if ((hwndT = HasDirWindow(hwnd))) {

@@ -197,9 +197,11 @@ SetNodeAttribs(PDNODE pNode, LPTSTR szPath)
       case IO_REPARSE_TAG_MOUNT_POINT:
          pNode->dwAttribs |= ATTR_JUNCTION;
          break;
+#if WINVER >= 0x0600
       case IO_REPARSE_TAG_SYMLINK:
          pNode->dwAttribs |= ATTR_SYMBOLIC;
          break;
+#endif
       }
    }
 }
@@ -1041,8 +1043,8 @@ StealTreeData(
    //
    // we need to match on these attributes as well as the name
    //
-   dwView    = GetWindowLongPtr(GetParent(hwndTC), GWL_VIEW) & VIEW_PLUSES;
-   dwAttribs = GetWindowLongPtr(GetParent(hwndTC), GWL_ATTRIBS) & (ATTR_HS | ATTR_JUNCTION);
+   dwView    = (DWORD)GetWindowLongPtr(GetParent(hwndTC), GWL_VIEW) & VIEW_PLUSES;
+   dwAttribs = (DWORD)GetWindowLongPtr(GetParent(hwndTC), GWL_ATTRIBS) & (ATTR_HS | ATTR_JUNCTION);
 
    //
    // get the dir of this new window for compare below
@@ -2109,6 +2111,7 @@ TreeControlWndProc(
    PDNODE pNode, pNodeNext;
    HWND  hwndLB;
    HWND  hwndParent;
+   RECT rc;
 
    //
    // Buffer size must be *3 since TreeWndProc::FS_GETFILESPEC
@@ -2259,12 +2262,8 @@ TreeControlWndProc(
       if (GetWindowLongPtr(hwnd, GWL_READLEVEL))
          break;
 
-      RECT rc;
-      DWORD i;
-      PDNODE    pNode;
-
       // do the same as TC_SETDIRECTORY above for the simple case
-      if (FindItemFromPath(hwndLB, (LPTSTR)lParam, 0, &i, &pNode))
+      if (FindItemFromPath(hwndLB, (LPTSTR)lParam, 0, (DWORD *)&i, &pNode))
       {
          // found exact node already displayed; select it and continue
          SendMessage(hwndLB, LB_SETCURSEL, i, 0L);
@@ -2438,7 +2437,7 @@ TreeControlWndProc(
       BOOLEAN bCreationOperation;
       BOOLEAN bUpdateTree;
 
-      dwFSCOperation = FSC_Operation(wParam);
+      dwFSCOperation = (DWORD)FSC_Operation(wParam);
       bCreationOperation = FALSE;
 
       if (!lParam || dwFSCOperation == FSC_REFRESH) {
@@ -2522,7 +2521,7 @@ TreeControlWndProc(
                lstrcpy(szPath, (LPTSTR)lParam);
                ScanDirLevel( (PDNODE)pNodeT,
                              szPath,
-                             (GetWindowLongPtr(hwndParent, GWL_ATTRIBS) & (ATTR_HS | ATTR_JUNCTION)));
+                             (DWORD)(GetWindowLongPtr(hwndParent, GWL_ATTRIBS) & (ATTR_HS | ATTR_JUNCTION)));
 
                //
                // Invalidate the window so the plus gets drawn if needed

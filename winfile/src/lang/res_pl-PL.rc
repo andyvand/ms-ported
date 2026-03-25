@@ -7,7 +7,7 @@
 
 ********************************************************************/
 
-LANGUAGE LANG_POLISH, SUBLANG_POLISH_POLAND
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
 
 FRAMEMENU MENU
 BEGIN

@@ -230,7 +230,9 @@ MemoryError:
          ERROR_PATH_NOT_FOUND != lfndta.err &&
          ERROR_INVALID_REPARSE_DATA != lfndta.err &&
          ERROR_CANT_ACCESS_FILE != lfndta.err &&
+#if WINVER >= 0x0600
          ERROR_SYMLINK_CLASS_DISABLED != lfndta.err &&
+#endif
          ERROR_INVALID_NAME != lfndta.err)) {
 
       SearchInfo.eStatus = SEARCH_ERROR;
@@ -611,6 +613,7 @@ SearchWndProc(
    WCHAR szPath[MAXPATHLEN];
    WCHAR szTitle[128];
    WCHAR szMessage[MAXMESSAGELEN];
+   int msg = 0;
 
    hwndLB = GetDlgItem(hwnd, IDCW_LISTBOX);
 
@@ -792,7 +795,7 @@ SearchWndProc(
          if (wParam == CD_SEARCHUPDATE) {
             LoadString(hAppInstance, IDS_SEARCHTITLE, szTitle, COUNTOF(szTitle));
             LoadString(hAppInstance, IDS_SEARCHREFRESH, szMessage, COUNTOF(szMessage));
-            int msg = MessageBox(hwnd, szMessage, szTitle, MB_ABORTRETRYIGNORE | MB_ICONQUESTION);
+            msg = MessageBox(hwnd, szMessage, szTitle, MB_ABORTRETRYIGNORE | MB_ICONQUESTION);
 
             if (msg == IDABORT)
             {

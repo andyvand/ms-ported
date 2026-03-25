@@ -11,6 +11,13 @@
 
 #include "BagOValues.h"
 #include <iterator>
+#include <vector>
+#include <algorithm>
+#include <set>
+
+#if WINVER < 0x0600
+#include <functional>
+#endif
 
 extern "C"
 {
@@ -97,6 +104,140 @@ bool CompareNodes(const PDNODE& a, const PDNODE& b)
 	return ParentOrdering(a, b) < 0;
 }
 
+#if WINVER < 0x0600
+struct IsParentInSet : public std::unary_function<PDNODE, bool> 
+{
+    const std::set<PDNODE>& parentSet;
+    IsParentInSet(const std::set<PDNODE>& s) : parentSet(s) {}
+
+    bool operator()(PDNODE child) const {
+        return parentSet.find(child->pParent) != parentSet.end();
+    }
+};
+
+std::vector<PDNODE> FilterBySubtree(const std::vector<PDNODE>& parents, const std::vector<PDNODE>& children)
+{
+    std::vector<PDNODE> results;
+    std::set<PDNODE> parentSet(parents.begin(), parents.end());
+
+    // Gebruik std::remove_copy_if met std::not1
+    std::remove_copy_if(children.begin(), 
+                        children.end(), 
+                        std::back_inserter(results), 
+                        std::not1(IsParentInSet(parentSet)));
+
+    return results;
+}
+
+// Helper functie voor VS 2005 omdat std::any_of en lambdas niet bestaan
+bool HasEmptyTree(const std::vector<std::vector<PDNODE> >& trees)
+{
+    for (size_t i = 0; i < trees.size(); ++i)
+    {
+        if (trees[i].empty()) return true;
+    }
+    return false;
+}
+
+std::vector<PDNODE> TreeIntersection(std::vector<std::vector<PDNODE> >& trees)
+{
+    std::vector<PDNODE> result;
+
+    if (trees.empty())
+        return result;
+
+    // Vervanging voor any_of met lambda
+    if (HasEmptyTree(trees))
+        return result;
+
+    size_t maxOutput = 0;
+    for (size_t i = 0; i < trees.size(); ++i)
+    {
+        std::vector<PDNODE>& tree = trees[i];
+        std::sort(tree.begin(), tree.end(), CompareNodes);
+        if (tree.size() > maxOutput)
+            maxOutput = tree.size();
+    }
+
+    size_t count = trees.size();
+    if (count == 1)
+        return trees.at(0);
+
+    std::vector<PDNODE> outputA(maxOutput);
+    std::vector<PDNODE> outputB(maxOutput);
+    std::vector<PDNODE>* combined = NULL;
+    size_t lastOutput = 0;
+
+    std::vector<PDNODE>* first = NULL;
+
+    for (size_t i = 1; i < count; i++)
+    {
+        size_t out = 0;
+        size_t first1 = 0;
+        size_t last1 = 0;
+
+        if (i == 1)
+        {
+            first = &trees[0];
+            last1 = first->size();
+            combined = &outputA;
+        }
+        else if (i % 2 == 0)
+        {
+            first = &outputA;
+            last1 = lastOutput;
+            combined = &outputB;
+        }
+        else
+        {
+            first = &outputB;
+            last1 = lastOutput;
+            combined = &outputA;
+        }
+
+        std::vector<PDNODE>* second = &trees[i];
+        size_t first2 = 0;
+        size_t last2 = second->size();
+
+        while (first1 < last1 && first2 < last2)
+        {
+            PDNODE& p1 = first->at(first1);
+            PDNODE& p2 = second->at(first2);
+
+            int wCmp = ParentOrdering(p1, p2);
+            switch (wCmp)
+            {
+            case -2:
+                first1++;
+                break;
+            case -1:
+                combined->at(out) = p2;
+                out++;
+                first2++;
+                break;
+            case 0:
+                combined->at(out) = p1;
+                out++;
+                first1++;
+                first2++;
+                break;
+            case 1:
+                combined->at(out) = p1;
+                out++;
+                first1++;
+                break;
+            case 2:
+                first2++;
+                break;
+            }
+        }
+        lastOutput = out;
+    }
+
+    combined->resize(lastOutput);
+    return (*combined);
+}
+#else
 vector<PDNODE> FilterBySubtree(vector<PDNODE> const& parents, vector<PDNODE>  const& children)
 {
 	vector<PDNODE> results;
@@ -232,6 +373,7 @@ vector<PDNODE> TreeIntersection(vector<vector<PDNODE>>& trees)
 
 	return (*combined);
 }
+#endif
 
 PDNODE CreateNode(PDNODE pParentNode, WCHAR *szName, DWORD dwAttribs)
 {
@@ -241,7 +383,7 @@ PDNODE CreateNode(PDNODE pParentNode, WCHAR *szName, DWORD dwAttribs)
 	pNode = (PDNODE)LocalAlloc(LPTR, sizeof(DNODE) + ByteCountOf(len));
 	if (!pNode)
 	{
-		return nullptr;
+		return NULL;
 	}
 
 	pNode->pParent = pParentNode;
@@ -267,20 +409,253 @@ PDNODE CreateNode(PDNODE pParentNode, WCHAR *szName, DWORD dwAttribs)
 vector<wstring> SplitIntoWords(LPCTSTR szText)
 {
 	vector<wstring> words;
-
+	PWCHAR token = NULL;
+	PWCHAR word = NULL;
 	wchar_t tempStr[MAXPATHLEN];
+
 	wcscpy_s(tempStr, szText);
-	PWCHAR token{ nullptr };
-	PWCHAR word = wcstok_s(tempStr, szPunctuation, &token);
+	word = wcstok_s(tempStr, szPunctuation, &token);
 	while (word)
 	{
 		words.push_back(word);
-		word = wcstok_s(nullptr, szPunctuation, &token);
+		word = wcstok_s(NULL, szPunctuation, &token);
 	}
 
 	return words;
 }
 
+#if WINVER < 0x0600
+void FreeDirectoryBagOValues(BagOValues<PDNODE> *pbov, std::vector<PDNODE> *pNodes)
+{
+    if (pNodes != NULL)
+    {
+        // Traditionele for-loop voor VS 2005
+        for (std::size_t i = 0; i < pNodes->size(); ++i)
+        {
+            PDNODE p = (*pNodes)[i];
+            if (p != NULL)
+            {
+                LocalFree(p);
+            }
+        }
+        
+        // Verwijder de vector zelf
+        delete pNodes;
+    }
+
+    // Verwijder de BagOValues zelf
+    if (pbov != NULL)
+    {
+        delete pbov;
+    }
+}
+
+BOOL BuildDirectoryBagOValues(BagOValues<PDNODE> *pbov, vector<PDNODE> *pNodes, LPCTSTR szRoot, PDNODE pNodeParent, DWORD scanEpoc, LPTSTR szCachedRootLower)
+{
+	LFNDTA lfndta;
+	WCHAR szPath[MAXPATHLEN];
+	LPWSTR szEndPath;
+	BOOL bFound;
+	DWORD dwAttr;
+
+	lstrcpy(szPath, szRoot);
+	if (lstrlen(szPath) + 1 >= COUNTOF(szPath))
+	{
+		return TRUE;
+	}
+
+	AddBackslash(szPath);
+	szEndPath = szPath + lstrlen(szPath);
+
+	// VS 2005: nullptr -> NULL
+	if (pNodeParent == NULL)
+	{
+		pNodeParent = CreateNode(NULL, szPath, FILE_ATTRIBUTE_DIRECTORY);
+		if (pNodeParent == NULL)
+		{
+			return TRUE;
+		}
+
+		pNodes->push_back(pNodeParent);
+		pbov->Add(szPath, pNodeParent);
+	}
+
+	if (lstrlen(szPath) + lstrlen(szStarDotStar) >= COUNTOF(szPath))
+	{
+		return TRUE;
+	}
+
+	lstrcat(szPath, szStarDotStar);
+
+	dwAttr = ATTR_DIR;
+	if (bIndexHiddenSystem)
+	{
+		dwAttr = dwAttr | ATTR_HS;
+	}
+
+	bFound = WFFindFirst(&lfndta, szPath, dwAttr);
+
+	while (bFound)
+	{
+		if (g_driveScanEpoc != scanEpoc)
+		{
+			WFFindClose(&lfndta);
+			return FALSE;
+		}
+
+		if ((lfndta.fd.dwFileAttributes & ATTR_DIR) == 0 || ISDOTDIR(lfndta.fd.cFileName) || lfndta.fd.cFileName[0] == CHAR_NULL)
+		{
+			bFound = WFFindNext(&lfndta);
+			continue;
+		}
+
+		PDNODE pNodeChild = CreateNode(pNodeParent, lfndta.fd.cFileName, lfndta.fd.dwFileAttributes);
+		if (pNodeChild == NULL)
+		{
+			break;
+		}
+		pNodes->push_back(pNodeChild);
+
+		vector<wstring> words = SplitIntoWords(lfndta.fd.cFileName);
+
+		// VS 2005: Range-based for -> Iterator
+		for (vector<wstring>::iterator it = words.begin(); it != words.end(); ++it)
+		{
+			wstring& word = *it;
+			pbov->Add(word, pNodeChild);
+		}
+
+		*szEndPath = CHAR_NULL;
+		if (lstrlen(szPath) + 1 + lstrlen(lfndta.fd.cFileName) >= COUNTOF(szPath))
+		{
+			return TRUE;
+		}
+
+		AddBackslash(szPath);
+		lstrcat(szPath, lfndta.fd.cFileName);
+
+		BOOL bFollow = FALSE;
+		if (lfndta.fd.dwFileAttributes & FILE_ATTRIBUTE_REPARSE_POINT)
+		{
+			wchar_t szTemp[MAXPATHLEN];
+			DWORD tag = DecodeReparsePoint(szPath, szTemp, MAXPATHLEN);
+			switch (tag) 
+			{
+			case IO_REPARSE_TAG_CLOUD:
+			case IO_REPARSE_TAG_CLOUD_1:
+			case IO_REPARSE_TAG_CLOUD_2:
+			case IO_REPARSE_TAG_CLOUD_3:
+			case IO_REPARSE_TAG_CLOUD_4:
+			case IO_REPARSE_TAG_CLOUD_5:
+			case IO_REPARSE_TAG_CLOUD_6:
+			case IO_REPARSE_TAG_CLOUD_7:
+			case IO_REPARSE_TAG_CLOUD_8:
+			case IO_REPARSE_TAG_CLOUD_9:
+			case IO_REPARSE_TAG_CLOUD_A:
+			case IO_REPARSE_TAG_CLOUD_B:
+			case IO_REPARSE_TAG_CLOUD_C:
+			case IO_REPARSE_TAG_CLOUD_D:
+			case IO_REPARSE_TAG_CLOUD_E:
+			case IO_REPARSE_TAG_CLOUD_F:
+				bFollow = TRUE;
+				break;
+
+#if WINVER >= 0x0600
+			case IO_REPARSE_TAG_SYMLINK:
+#endif
+			case IO_REPARSE_TAG_MOUNT_POINT:
+				_wcslwr_s(szTemp, MAXPATHLEN);
+				if (!wcsstr(szTemp, szCachedRootLower))
+					bFollow = TRUE;
+				break;
+
+			default:
+				bFollow = FALSE;
+				break;
+			}
+		}
+		else {
+			bFollow = TRUE;
+		}
+
+		if (bFollow)
+		{
+			if (!BuildDirectoryBagOValues(pbov, pNodes, szPath, pNodeChild, scanEpoc, szCachedRootLower))
+			{
+				WFFindClose(&lfndta);
+				return FALSE;
+			}
+		}
+
+		bFound = WFFindNext(&lfndta);
+	}
+
+	WFFindClose(&lfndta);
+	return TRUE;
+}
+
+std::vector<PDNODE> GetDirectoryOptionsFromText(LPCTSTR szText, BOOL *pbLimited)
+{
+    if (g_pBagOCDrive == NULL)
+        return std::vector<PDNODE>(); // Geen {} initialiser list
+
+    std::vector<std::wstring> words = SplitIntoWords(szText);
+    std::vector<std::vector<PDNODE> > options_per_word; // Spatie tussen > >
+
+    // Gebruik iterator in plaats van auto
+    for (std::vector<std::wstring>::iterator it = words.begin(); it != words.end(); ++it)
+    {
+        std::wstring& word = *it;
+        std::vector<PDNODE> options;
+        
+        size_t pos = word.find_first_of(L'\\');
+        if (pos != std::wstring::npos && pos == word.size() - 1)
+        {
+            // '\' at end; remove
+            word = word.substr(0, pos);
+            pos = std::wstring::npos;
+        }
+
+        bool fPrefix = true;
+        if (!word.empty() && word[0] == L'\'')
+        {
+            fPrefix = false;
+            word = word.substr(1);
+        }
+
+        if (pos == std::wstring::npos)
+        {
+            options = g_pBagOCDrive->Retrieve(word, fPrefix, 1000);
+
+            if (options.size() == 1000)
+                *pbLimited = TRUE;
+        }
+        else
+        {
+            // "foo\bar" -> find candidates foo* which have subdir bar*
+            std::wstring first = word.substr(0, pos);
+            std::wstring second = word.substr(pos + 1);
+
+            // VS 2005 heeft geen std::move
+            std::vector<PDNODE> options1 = g_pBagOCDrive->Retrieve(first, fPrefix, 1000);
+            std::vector<PDNODE> options2 = g_pBagOCDrive->Retrieve(second, fPrefix, 1000);
+
+            if (options1.size() == 1000 || options2.size() == 1000)
+                *pbLimited = TRUE;
+
+            options = FilterBySubtree(options1, options2);
+        }
+
+        // VS 2005: push_back in plaats van emplace_back
+        options_per_word.push_back(options);
+    }
+
+    // TreeIntersection aanroepen en resultaat teruggeven
+    std::vector<PDNODE> final_options = TreeIntersection(options_per_word);
+
+    return final_options;
+}
+#else
 void FreeDirectoryBagOValues(BagOValues<PDNODE> *pbov, vector<PDNODE> *pNodes)
 {
 	// free all PDNODE in BagOValues
@@ -463,7 +838,7 @@ BOOL BuildDirectoryBagOValues(BagOValues<PDNODE> *pbov, vector<PDNODE> *pNodes, 
 
 vector<PDNODE> GetDirectoryOptionsFromText(LPCTSTR szText, BOOL *pbLimited)
 {
-	if (g_pBagOCDrive == nullptr)
+	if (g_pBagOCDrive == NULL)
 		return vector<PDNODE>{};
 
 	vector<wstring> words = SplitIntoWords(szText);
@@ -516,6 +891,7 @@ vector<PDNODE> GetDirectoryOptionsFromText(LPCTSTR szText, BOOL *pbLimited)
 
 	return final_options;
 }
+#endif
 
 VOID UpdateGotoList(HWND hDlg)
 {
@@ -734,7 +1110,13 @@ GotoDirDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
 DWORD WINAPI
 BuildDirectoryTreeBagOValues(PVOID pv)
 {
-	DWORD scanEpocNew = InterlockedIncrement(&g_driveScanEpoc);
+	DWORD scanEpocNew = InterlockedIncrement((volatile LONG *)&g_driveScanEpoc);
+	TCHAR szCached[MAXPATHLEN];
+	BOOL     buildBag = FALSE;
+	WCHAR 	seps[] = { L';' };
+	PWCHAR   token = NULL;
+	PWCHAR   szCachedRoot = NULL;
+	TCHAR    szCachedRootLower[MAXPATHLEN];
 
 	BagOValues<PDNODE> *pBagNew = new BagOValues<PDNODE>();
 	vector<PDNODE> *pNodes = new vector<PDNODE>();
@@ -748,21 +1130,16 @@ BuildDirectoryTreeBagOValues(PVOID pv)
 	GetPrivateProfileString(szSettings, szCachedPath, TEXT("c:\\"), szCachedPathIni, MAXPATHLEN, szTheINIFile);
 
 	// Create a local copy, because once we save it to winfile.ini on exit we need the original value
-	TCHAR szCached[MAXPATHLEN];
 	lstrcpy(szCached, szCachedPathIni);
 
 	// Iterate through ; seperated list of to be cached pathes
-	BOOL     buildBag{ FALSE };
-	WCHAR 	seps[]{ L";" };
-	PWCHAR   token{ nullptr };
-	PWCHAR   szCachedRoot = wcstok_s(szCached, seps, &token);
-	TCHAR    szCachedRootLower[MAXPATHLEN];
+	szCachedRoot = wcstok_s(szCached, seps, &token);
 
 	while (szCachedRoot)
 	{
 		lstrcpy(szCachedRootLower, szCachedRoot);
 		_wcslwr_s(szCachedRootLower, MAXPATHLEN - (szCachedRoot - szCached));
-		buildBag |= BuildDirectoryBagOValues(pBagNew, pNodes, szCachedRoot, nullptr, scanEpocNew, szCachedRootLower);
+		buildBag |= BuildDirectoryBagOValues(pBagNew, pNodes, szCachedRoot, NULL, scanEpocNew, szCachedRootLower);
 
 		szCachedRoot = wcstok_s(NULL, seps, &token);
 	}
@@ -776,7 +1153,7 @@ BuildDirectoryTreeBagOValues(PVOID pv)
 		pNodes = (vector<PDNODE> *)InterlockedExchangePointer((PVOID *)&g_allNodes, pNodes);
 	}
 
-	if (pBagNew != nullptr)
+	if (pBagNew != NULL)
 	{
 		FreeDirectoryBagOValues(pBagNew, pNodes);
 	}
@@ -796,10 +1173,10 @@ StartBuildingDirectoryTrie()
 	//
 	// Move/Copy things.
 	//
-	hThreadCopy = CreateThread(nullptr,
+	hThreadCopy = CreateThread(NULL,
 		0L,
 		BuildDirectoryTreeBagOValues,
-		nullptr,
+		NULL,
 		0L,
 		&dwIgnore);
 

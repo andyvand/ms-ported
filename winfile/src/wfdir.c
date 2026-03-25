@@ -66,11 +66,10 @@ DrawItem(
    LPXDTALINK lpStart = (LPXDTALINK)GetWindowLongPtr(hwnd, GWL_HDTA);
 
    HDC hDC = lpLBItem->hDC;
+   HWND hwndListParms = NULL;
+   BOOL bLower = FALSE;
 
    PreserveBitmapInRTL(hDC);
-
-   HWND hwndListParms = (HWND)GetWindowLongPtr(hwnd, GWL_LISTPARMS);
-   BOOL bLower;
 
    //
    // Print out any errors

@@ -109,6 +109,8 @@ SearchDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
    LPTSTR     p;
    MDICREATESTRUCT   MDICS;
    TCHAR szStart[MAXFILENAMELEN];
+   BOOL bMaximized = FALSE;
+   HWND hwndMDIChild = NULL;
 
    if (ResizeDialogProc(hDlg, wMsg, wParam, lParam)) {
       return TRUE;
@@ -188,8 +190,7 @@ SearchDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
          SearchInfo.bCancel = FALSE;
 
          // Retrieve state of search window
-         BOOL bMaximized = FALSE;
-         HWND hwndMDIChild = (HWND)SendMessage(hwndMDIClient, WM_MDIGETACTIVE, 0, (LPARAM)&bMaximized);
+         hwndMDIChild = (HWND)SendMessage(hwndMDIClient, WM_MDIGETACTIVE, 0, (LPARAM)&bMaximized);
 
          /* Is the search window already up? */
          if (hwndSearch == NULL) {

@@ -7,7 +7,7 @@
 
 ********************************************************************/
 
-LANGUAGE LANG_HEBREW, SUBLANG_HEBREW_ISRAEL
+LANGUAGE LANG_HEBREW, SUBLANG_DEFAULT
 
 FRAMEMENU MENU
 BEGIN

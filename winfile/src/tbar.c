@@ -750,13 +750,18 @@ UnlockAndReturn:
 VOID
 HandleToolbarSave(LPNMTBSAVE lpnmtSave)
 {
+	TBSAVEHDR hdr;
+    TBSAVEITEM item;
+    DWORD baseId = 0;
+    DWORD baseIbm = 0;
+    INT iExt = 0;
+
     if (lpnmtSave->iItem == -1)
     {
         lpnmtSave->cbData = lpnmtSave->cbData + sizeof(TBSAVEHDR) + sizeof(TBSAVEITEM) * lpnmtSave->cButtons;
         lpnmtSave->pCurrent = lpnmtSave->pData = LocalAlloc(LPTR, lpnmtSave->cbData);
 
         // save global values: magic number, version and cButtons
-        TBSAVEHDR hdr;
         hdr.magic = TBHDR_MAGIC;
         hdr.version = TBHDR_VERSION;
         hdr.cButtons = lpnmtSave->cButtons;
@@ -765,14 +770,10 @@ HandleToolbarSave(LPNMTBSAVE lpnmtSave)
     }
     else
     {
-        TBSAVEITEM item;
-        DWORD baseId = 0;
-        DWORD baseIbm = 0;
-
         // for extension buttons, remove bias for both idCommand and iBitmap
         if (lpnmtSave->tbButton.dwData != 0)
         {
-            INT iExt = (INT)(lpnmtSave->tbButton.dwData - 1);
+            iExt = (INT)(lpnmtSave->tbButton.dwData - 1);
             baseId = extensions[iExt].Delta;
             baseIbm = extensions[iExt].iStartBmp;
         }
@@ -793,11 +794,13 @@ HandleToolbarSave(LPNMTBSAVE lpnmtSave)
 BOOL
 HandleToolbarRestore(LPNMTBRESTORE lpnmtRestore)
 {
+	TBSAVEHDR *phdr = NULL;
+
     if (lpnmtRestore->iItem == -1)
     {
         lpnmtRestore->cbBytesPerRecord = sizeof(TBSAVEITEM);
         lpnmtRestore->tbButton.idCommand = 0;
-        TBSAVEHDR *phdr = (TBSAVEHDR *)lpnmtRestore->pData;
+        phdr = (TBSAVEHDR *)lpnmtRestore->pData;
         if (phdr->magic == TBHDR_MAGIC && phdr->version == TBHDR_VERSION)
         {
             // only restore if magic value matches; fetch cButtons too
@@ -858,6 +861,7 @@ DriveListMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, UINT* puiRetVal)
    INT iExt;
    DRIVE drive;
    HMENU hMenu;
+   INT idm = 0;
 
    switch (uMsg) {
    case WM_MENUSELECT:
@@ -913,7 +917,7 @@ ExtensionHelp:
          }
 
          // NormalHelp with MF_POPUP case; fix up ids to workaround some bugs in MenuHelp
-         INT idm = MapMenuPosToIDM(uItem);
+         idm = MapMenuPosToIDM(uItem);
          dwMenuIDs[MHPOP_CURRENT] = MH_POPUP + idm;
          dwMenuIDs[MHPOP_CURRENT+1] = uItem;
 
@@ -1062,7 +1066,7 @@ NormalHelp:
            iExt = (int)(lpTT->hdr.idFrom/100 - IDM_EXTENSIONS - 1);
 
            if (hwndExtensions && ((UINT)iExt < (UINT)iNumExtensions)) {
-               tbl.idCommand = lpTT->hdr.idFrom % 100;
+               tbl.idCommand = (INT)(lpTT->hdr.idFrom % 100);
                tbl.hMenu = extensions[iExt].hMenu;
                tbl.szHelp[0] = TEXT('\0');
 
@@ -1469,6 +1473,7 @@ AddExtensionToolbarButtons(BOOL bAll)
     INT nExtButtons;
     TBBUTTON tbButton;
     BOOL bLastSep;
+    INT nItem = 0;
 
     if (hwndExtensions == NULL)
         return;
@@ -1476,7 +1481,7 @@ AddExtensionToolbarButtons(BOOL bAll)
     bLastSep = LastButtonIsSeparator(hwndToolbar);
 
     nExtButtons = (INT)SendMessage(hwndExtensions, TB_BUTTONCOUNT, 0, 0L);
-    for (INT nItem = 0; nItem < nExtButtons; ++nItem)
+    for (nItem = 0; nItem < nExtButtons; ++nItem)
     {
         INT iExt;
         SendMessage(hwndExtensions, TB_GETBUTTON, nItem,
@@ -1564,6 +1569,7 @@ SaveRestoreToolbar(BOOL bSave)
       INT iExt;
       BOOL bRestored;
       LPTSTR pName, pEnd;
+      INT nCurButtons = 0;
 
       // Only load the buttons for the extensions that were the same as
       // the last time the state was saved.
@@ -1601,7 +1607,7 @@ SaveRestoreToolbar(BOOL bSave)
 
       // TB_SAVERESTORE does not return a boolean (as the code once showed);
       // we check for restoration by checking for a change in the number of buttons.
-      INT nCurButtons = (int)SendMessage(hwndToolbar, TB_BUTTONCOUNT, 0, 0L);
+      nCurButtons = (int)SendMessage(hwndToolbar, TB_BUTTONCOUNT, 0, 0L);
 
       tbSave.hkr = HKEY_CURRENT_USER;
       tbSave.pszSubKey = szSubKey;

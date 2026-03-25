@@ -329,8 +329,10 @@ ChangeFileSystem(
                dwReparseTag = DecodeReparsePoint(szTemp, NULL, 0);
                if (dwReparseTag == IO_REPARSE_TAG_MOUNT_POINT) {
                    dwFSCOperation = FSC_JUNCTION;
+#if WINVER >= 0x0600
                } else if (dwReparseTag == IO_REPARSE_TAG_SYMLINK) {
                    dwFSCOperation = FSC_SYMLINKD;
+#endif
                }
             }
             for (hwnd = GetWindow(hwndMDIClient, GW_CHILD);
@@ -832,6 +834,8 @@ BOOL
 GetPowershellExePath(LPTSTR szPSPath)
 {
     HKEY hkey;
+	int ikey = 0;
+
     if (ERROR_SUCCESS != RegOpenKey(HKEY_LOCAL_MACHINE, TEXT("SOFTWARE\\Microsoft\\PowerShell"), &hkey))
     {
         return FALSE;
@@ -839,7 +843,7 @@ GetPowershellExePath(LPTSTR szPSPath)
 
     szPSPath[0] = TEXT('\0');
 
-    for (int ikey = 0; ikey < 5; ikey++)
+    for (ikey = 0; ikey < 5; ikey++)
     {
         TCHAR         szSub[10];    // just the "1" or "3"
 
@@ -1118,6 +1122,7 @@ AppCommandProc(DWORD id)
        BOOL bDir;
        LPTSTR szDir;
        TCHAR szToRun[MAXPATHLEN];
+       TCHAR szParams[MAXPATHLEN] = { TEXT('\0') };
 
        szDir = GetSelection(1 | 4 | 16, &bDir);
        if (!bDir && szDir)
@@ -1127,8 +1132,6 @@ AppCommandProc(DWORD id)
            lstrcat(szToRun, TEXT("\\..\\explorer.exe"));
        else
            lstrcpy(szToRun, TEXT("explorer.exe"));
-
-       TCHAR szParams[MAXPATHLEN] = { TEXT('\0') };
 
        ret = ExecProgram(szToRun, szDir, szDir, FALSE, FALSE);
        LocalFree(szDir);
@@ -1887,7 +1890,7 @@ DealWithNetError_NotifyResume:
     case IDM_VNAME:
        CheckTBButton(id);
 
-       dwFlags = VIEW_NAMEONLY | (GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_NOCHANGE);
+       dwFlags = VIEW_NAMEONLY | (DWORD)(GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_NOCHANGE);
        id = CD_VIEW;
        goto ChangeDisplay;
 
@@ -1895,14 +1898,14 @@ DealWithNetError_NotifyResume:
 
        CheckTBButton(id);
 
-       dwFlags = VIEW_EVERYTHING | (GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_NOCHANGE);
+       dwFlags = VIEW_EVERYTHING | (DWORD)(GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_NOCHANGE);
        id = CD_VIEW;
        goto ChangeDisplay;
 
     case IDM_VOTHER:
        DialogBox(hAppInstance, (LPTSTR) MAKEINTRESOURCE(OTHERDLG), hwndFrame, OtherDlgProc);
 
-       dwFlags = GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_EVERYTHING;
+       dwFlags = (DWORD)GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_EVERYTHING;
        if (dwFlags != VIEW_NAMEONLY && dwFlags != VIEW_EVERYTHING)
           CheckTBButton(id);
 

@@ -414,6 +414,7 @@ InitMenus()
 UINT
 MapIDMToMenuPos(UINT idm)
 {
+	HWND hwndActive;
     UINT pos;
 
     if (idm < 100)
@@ -428,7 +429,6 @@ MapIDMToMenuPos(UINT idm)
     }
 
     // if maximized, menu position shifted one to the right
-    HWND hwndActive;
     hwndActive = (HWND)SendMessage(hwndMDIClient, WM_MDIGETACTIVE, 0, 0L);
     if (hwndActive && GetWindowLongPtr(hwndActive, GWL_STYLE) & WS_MAXIMIZE)
         pos++;
@@ -1075,7 +1075,9 @@ InitFileManager(
        LCID lcidUI = WFLocaleNameToLCID(szTemp, 0);
        if (lcidUI != 0)
        {
+#if WINVER >= 0x0600
            SetThreadUILanguage((LANGID)lcidUI);
+#endif
 
            // update to current local used for dispaly
            SetThreadLocale(lcidUI);
@@ -1416,11 +1418,11 @@ JAPANEND
    {
       HWND hwndPrev;
       HWND hwnd;
+      OSVERSIONINFO  osversion;
 
       hwndPrev = NULL; // FindWindow (szFrameClass, NULL);
 
       // Check if developer mode is available in Windows10
-      OSVERSIONINFO  osversion;
       osversion.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
 #pragma warning ( push )
 #pragma warning( disable : 4996 )

@@ -176,7 +176,7 @@ OtherDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
                   {
                   HWND hwnd;
 
-                  dwView = GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_PLUSES;
+                  dwView = (DWORD)GetWindowLongPtr(hwndActive, GWL_VIEW) & VIEW_PLUSES;
 
                   if (IsDlgButtonChecked(hDlg, IDD_SIZE))
                         dwView |= VIEW_SIZE;
@@ -721,10 +721,10 @@ INT_PTR CALLBACK PrefDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
     TCHAR szTempEditPath[MAXPATHLEN];
     TCHAR szPath[MAXPATHLEN];
     TCHAR szFilter[MAXPATHLEN] = { 0 };
+    OPENFILENAME ofn;
+    HWND hLangComboBox = NULL;
 
     LoadString(hAppInstance, IDS_EDITFILTER, szFilter, MAXPATHLEN);
-
-    OPENFILENAME ofn;
 
     ZeroMemory(&ofn, sizeof(ofn));
     ofn.lStructSize = sizeof(ofn);
@@ -740,7 +740,7 @@ INT_PTR CALLBACK PrefDlgProc(HWND hDlg, UINT wMsg, WPARAM wParam, LPARAM lParam)
     ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
 
     /* Language prefrence variables */
-    HWND hLangComboBox = GetDlgItem(hDlg, IDC_LANGCB);
+    hLangComboBox = GetDlgItem(hDlg, IDC_LANGCB);
 
     switch (wMsg)
     {
@@ -852,6 +852,7 @@ ActivateCommonContextMenu(HWND hwnd, HWND hwndLB, LPARAM lParam)
 {
    DWORD cmd, item;
    POINT pt;
+   BOOL bDir = FALSE;
 
    HMENU hMenu = GetSubMenu(LoadMenu(hAppInstance, TEXT("CTXMENU")), 0);
 
@@ -893,7 +894,6 @@ ActivateCommonContextMenu(HWND hwnd, HWND hwndLB, LPARAM lParam)
             SendMessage(hwndLB, LB_SETSEL, (WPARAM)FALSE, (LPARAM)-1);
             SendMessage(hwndLB, LB_SETSEL, (WPARAM)TRUE, (LPARAM)item);
 
-            BOOL bDir = FALSE;
             SendMessage(hwnd, FS_GETSELECTION, 5, (LPARAM)&bDir);
             if (bDir)
             {

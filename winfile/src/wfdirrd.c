@@ -679,6 +679,9 @@ CreateDTABlockWorker(
 
    INT iError = 0;
 
+   DWORD attr = 0;
+   DWORD tag = 0;
+
    lpStart = MemNew();
 
    if (!lpStart) {
@@ -716,7 +719,9 @@ CreateDTABlockWorker(
       //
       if (ERROR_PATH_NOT_FOUND == lfndta.err ||
          ERROR_INVALID_REPARSE_DATA == lfndta.err ||
+#if WINVER >= 0x0600
          ERROR_SYMLINK_CLASS_DISABLED == lfndta.err ||
+#endif
          ERROR_CANT_ACCESS_FILE == lfndta.err) {
 
          iError = IDS_BADPATHMSG;
@@ -739,7 +744,9 @@ CreateDTABlockWorker(
          case ERROR_PATH_NOT_FOUND:
          case ERROR_CANT_ACCESS_FILE:
          case ERROR_INVALID_REPARSE_DATA:
+#if WINVER >= 0x0600
          case ERROR_SYMLINK_CLASS_DISABLED:
+#endif
 
 InvalidDirectory:
 
@@ -760,7 +767,7 @@ InvalidDirectory:
 
                // Check if it is a Reparse Point
                lpTemp[0] = '\0';
-               DWORD attr = GetFileAttributes(szPath);
+               attr = GetFileAttributes(szPath);
                lpTemp[0] = CHAR_BACKSLASH;
                if (attr & ATTR_REPARSE_POINT) {
                   // For dead Reparse Points just tell that the directory could not be read
@@ -801,7 +808,7 @@ Fail:
             lstrcpy(szTemp, szPath);
             StripFilespec(szTemp);
 
-            DWORD tag = DecodeReparsePoint(szTemp, szLinkDest, COUNTOF(szLinkDest));
+            tag = DecodeReparsePoint(szTemp, szLinkDest, COUNTOF(szLinkDest));
             if (tag != IO_REPARSE_TAG_RESERVED_ZERO)
             {
                lstrcpy(szPath, szLinkDest);

@@ -23,11 +23,11 @@ typedef struct _FM_LANG {
 FM_LANG fmLCIDs[] = {
     {TEXT("zh-CN"), MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED)}, // Chinese, Simplified
     {TEXT("en-US"), MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US)},         // English, United States
-    {TEXT("he-IL"), MAKELANGID(LANG_HEBREW, SUBLANG_HEBREW_ISRAEL)},       // Hebrew, Israel
-    {TEXT("ja-JP"), MAKELANGID(LANG_JAPANESE, SUBLANG_JAPANESE_JAPAN)},    // Japanese, Japan
-    {TEXT("pl-PL"), MAKELANGID(LANG_POLISH, SUBLANG_POLISH_POLAND)},       // Polish, Poland
+    {TEXT("he-IL"), MAKELANGID(LANG_HEBREW, SUBLANG_DEFAULT)},       // Hebrew, Israel
+    {TEXT("ja-JP"), MAKELANGID(LANG_JAPANESE, SUBLANG_DEFAULT)},    // Japanese, Japan
+    {TEXT("pl-PL"), MAKELANGID(LANG_POLISH, SUBLANG_DEFAULT)},       // Polish, Poland
     {TEXT("de-DE"), MAKELANGID(LANG_GERMAN, SUBLANG_GERMAN)},              // German, Germany
-    {TEXT("tr-TR"), MAKELANGID(LANG_TURKISH, SUBLANG_TURKISH_TURKEY)},     // Turkish, Turkey
+    {TEXT("tr-TR"), MAKELANGID(LANG_TURKISH, SUBLANG_DEFAULT)},     // Turkish, Turkey
     {TEXT("pt-PT"), MAKELANGID(LANG_PORTUGUESE, SUBLANG_PORTUGUESE)},      // Portuguese, Portugal
     {TEXT("ko-KR"), MAKELANGID(LANG_KOREAN, SUBLANG_KOREAN)}               // Korean, Korea
 };
@@ -59,14 +59,17 @@ WFLocaleNameToLCID(LPCWSTR lpName, DWORD dwFlags)
 
 VOID InitLangList(HWND hCBox)
 {
+	UINT i = 0;
+
     // Propogate the list
-    for (UINT i = 0; i <= (COUNTOF(fmLCIDs) - 1); i++)
+    for (i = 0; i <= (COUNTOF(fmLCIDs) - 1); i++)
     {
         TCHAR szLangName[MAXPATHLEN] = { 0 };
         LCID lcidTemp;
 
         lcidTemp = WFLocaleNameToLCID(fmLCIDs[i].String, 0);
 
+#if WINVER >= 0x0600
         if (GetLocaleInfoEx != NULL)
         {
             if (GetLocaleInfoEx(fmLCIDs[i].String, LOCALE_SLOCALIZEDDISPLAYNAME, szLangName, COUNTOF(szLangName)) == 0)
@@ -81,6 +84,12 @@ VOID InitLangList(HWND hCBox)
                 lstrcpy(szLangName, TEXT("BUGBUG"));
             }
         }
+#else
+		if(GetLocaleInfo(lcidTemp, LOCALE_SNATIVELANGNAME, szLangName, COUNTOF(szLangName)) == 0)
+        {
+            lstrcpy(szLangName, TEXT("BUGBUG"));
+        }
+#endif
 
         // every entry in the array above needs to be addd to the list box;
         // SaveLang() below depends on each index in the listbox being valid.

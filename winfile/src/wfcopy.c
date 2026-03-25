@@ -197,8 +197,9 @@ RemoveLast(LPTSTR pFile)
   return uChars;
 }
 
-
-
+#if WINVER < 0x0600
+BOOL IsLFNDrive(LPCTSTR szPath);
+#endif
 
 /////////////////////////////////////////////////////////////////////
 //
@@ -2266,6 +2267,7 @@ WFMoveCopyDriverThread(LPVOID lpParameter)
    BOOL bConfirmed;
    BOOL bFatalError = FALSE;
    BOOL bErrorOccured = FALSE;
+   INT errorIndex = 0;
 
 #ifdef NETCHECK
    BOOL fInvalidate = FALSE;          // whether to invalidate net types
@@ -3294,7 +3296,7 @@ ShowMessageBox:
             }
          }
 
-         INT errorIndex = pCopyInfo->dwFunc;
+         errorIndex = pCopyInfo->dwFunc;
          if (errorIndex == FUNC_HARD && IsDirectory(szSource))
            errorIndex = FUNC_JUNC;
          ret = CopyError(szSource, szDest, ret, errorIndex, oper, bErrorOnDest, bFatalError);

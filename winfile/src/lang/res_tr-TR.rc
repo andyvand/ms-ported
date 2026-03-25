@@ -7,7 +7,7 @@
 
 ********************************************************************/
 
-LANGUAGE LANG_TURKISH, SUBLANG_TURKISH_TURKEY
+LANGUAGE LANG_TURKISH, SUBLANG_DEFAULT
 
 FRAMEMENU MENU
 BEGIN
