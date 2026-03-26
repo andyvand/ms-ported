@@ -774,7 +774,7 @@ LPTSTR CArchive::ReadString(LPTSTR lpsz, UINT nMax)
 	int nStop = (int)nMax < 0 ? -(int)nMax : (int)nMax;
 	ASSERT(AfxIsValidAddress(lpsz, (nStop+1) * sizeof(TCHAR)));
 
-#ifdef _WIN32_WINNT
+#if defined(_WIN32_WINNT) || defined(WIN32_PLATFORM_PSPC)
 	BYTE ch;
 #else
 	_TUCHAR ch;

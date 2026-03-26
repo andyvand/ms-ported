@@ -21,7 +21,7 @@
 #define __AFXRES_RC__
 
 #ifndef __AFXRES_H__
-	#include <afxres.h>
+	#include "afxres.h"
 #endif
 
 #ifdef APSTUDIO_INVOKED

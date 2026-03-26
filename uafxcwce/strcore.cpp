@@ -602,7 +602,7 @@ void CString::MakeUpper()
 {
 	CopyBeforeWrite();
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 	_tcsupr_s(m_pchData, _tcslen(m_pchData));
 #else
 	WCE_IF(::CharUpper, _tcsupr)(m_pchData);
@@ -613,7 +613,7 @@ void CString::MakeLower()
 {
 	CopyBeforeWrite();
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 	_tcslwr_s(m_pchData, _tcslen(m_pchData));
 #else
 	WCE_IF(::CharLower, _tcslwr)(m_pchData);

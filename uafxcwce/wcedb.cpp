@@ -401,6 +401,9 @@ CEOID CCeDBDatabase::WriteRecordProps(CCeDBRecord *pRecord,
 	BOOL bAll = FALSE;
 	int nNumRecordPropsAvail = pRecord->m_pPropArray.GetSize();
 	CCeDBProp* pProp;
+	int nCnt = 0;
+	int nCnt1 = 0;
+    int nCnt2 = 0;
 
 	if(nNumFilterProps == 0) // zero means all
 	{
@@ -428,7 +431,7 @@ CEOID CCeDBDatabase::WriteRecordProps(CCeDBRecord *pRecord,
 
 	if(bAll)
 	{
-		for(int nCnt1=0; nCnt1 < (int)nNumFilterProps; nCnt1++)
+		for(nCnt1=0; nCnt1 < (int)nNumFilterProps; nCnt1++)
 		{
 			pProp = pRecord->GetPropFromIndex(nCnt1);
 			CEPROPID propid = pProp->m_CePropVal.propid;
@@ -440,9 +443,9 @@ CEOID CCeDBDatabase::WriteRecordProps(CCeDBRecord *pRecord,
 		ASSERT(PropFilterArray != NULL);
 
 		int nSkip = 0;
-		for(int nCnt1=0; nCnt1 < nNumFilterProps; nCnt1++)
+		for(nCnt1=0; nCnt1 < nNumFilterProps; nCnt1++)
 		{
-			for(int nCnt2=0; nCnt2 < nNumRecordPropsAvail; nCnt2++)
+			for(nCnt2=0; nCnt2 < nNumRecordPropsAvail; nCnt2++)
 			{
 				pProp = pRecord->GetPropFromIndex(nCnt2);
 				if(GET_PROPID_IDENT(PropFilterArray[nCnt1].m_CePropVal.propid) == 
@@ -478,7 +481,7 @@ CEOID CCeDBDatabase::WriteRecordProps(CCeDBRecord *pRecord,
 		{
 			if(nMode == DeleteProps)
 			{
-				for(int nCnt=0; nCnt < nNumFilterProps; nCnt++)
+				for(nCnt=0; nCnt < nNumFilterProps; nCnt++)
 					inputPropValArray[nCnt].wFlags = CEDB_PROPDELETE;
 			}
 
@@ -492,7 +495,7 @@ CEOID CCeDBDatabase::WriteRecordProps(CCeDBRecord *pRecord,
 	{
 		if(nMode == DeleteProps)
 		{
-			for(int nCnt=0; nCnt < nNumFilterProps; nCnt++)
+			for(nCnt=0; nCnt < nNumFilterProps; nCnt++)
 				inputPropValArray[nCnt].wFlags = CEDB_PROPDELETE;
 		}
 

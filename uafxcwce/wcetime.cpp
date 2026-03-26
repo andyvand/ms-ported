@@ -374,7 +374,7 @@ char* AFXAPI wce_ctime( const time_t *ulSecsSince1970 )
 	static TCHAR szBuf[28];
 	struct tm *ptime = wce_localtime(ulSecsSince1970);
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 	_tcscpy_s(&szBuf[0], 4, _T("Sun Mon Tue Wed Thu Fri Sat ") + (ptime->tm_wday * 4));
 	_tcscpy_s(&szBuf[4], 4, _T("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec ") + (ptime->tm_mon * 4));
 	swprintf_s(&szBuf[8], (sizeof(szBuf) / sizeof(TCHAR)) - 8, _T("%02d %02d:%02d:%02d %04d\n"),

@@ -76,7 +76,7 @@ void AFXAPI AfxTextFloatFormat(CDataExchange* pDX, int nIDC,
 	}
 	else
 	{
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 		_stprintf_s(szBuffer, sizeof(szBuffer) / sizeof(TCHAR), _T("%.*g"), nSizeGcvt, value);
 #else
 		_stprintf(szBuffer, _T("%.*g"), nSizeGcvt, value);
@@ -111,7 +111,7 @@ AFX_STATIC void AFXAPI _AfxFailMinMaxReal(CDataExchange* pDX,
 	TCHAR szMin[32], szMax[32];
 	CString prompt;
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 	_stprintf_s(szMin, sizeof(szMin) / sizeof(TCHAR), _T("%.*g"), precision, minVal);
 	_stprintf_s(szMax, sizeof(szMax) / sizeof(TCHAR), _T("%.*g"), precision, maxVal);
 #else

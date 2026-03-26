@@ -473,9 +473,10 @@ CSize CCeCommandBar::CalcDynamicLayout(int nLength, DWORD nMode)
 void CCeCommandBar::RemoveCustomControls()
 {
 	CFrameWnd* pFrameWnd = GetParentFrame();
+    int n = 0;
 
 	int nLength = m_pMenuArray.GetSize();
-	for(int n=0; n < nLength; n++)
+	for(n=0; n < nLength; n++)
 	{
 		CMenu* pMenu = (CMenu*)m_pMenuArray[n];
 		ASSERT(pMenu);

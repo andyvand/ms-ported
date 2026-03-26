@@ -682,7 +682,7 @@ void CString::FormatV(LPCTSTR lpszFormat, va_list argList)
 					pszTemp = (LPTSTR)_alloca(max(nWidth, 312+nPrecision+6));
 
 					f = va_arg(argList, double);
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 					_stprintf_s(pszTemp, max(nWidth, 312 + nPrecision + 6), _T("%*.*f"), nWidth, nPrecision + 6, f);
 #else
 					_stprintf( pszTemp, _T( "%*.*f" ), nWidth, nPrecision+6, f );
@@ -714,7 +714,7 @@ void CString::FormatV(LPCTSTR lpszFormat, va_list argList)
 
 	GetBuffer(nMaxLen);
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 	VERIFY(_vstprintf_s(m_pchData, nMaxLen, lpszFormat, argListSave) <= GetAllocLength());
 #else
 	VERIFY(_vstprintf(m_pchData, lpszFormat, argListSave) <= GetAllocLength());

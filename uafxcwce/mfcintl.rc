@@ -22,9 +22,9 @@
 #include "afxres.h"
 
 #if (LANGID == 0x409)
- #define LOCDIR(f) <f>
+#define LOCDIR(f) <include/##f>
 #else
- #define LOCDIR(f) <l.##LANG##\\f>
+ #define LOCDIR(f) <include/##l.##LANG##\\f>
 #endif
 
 #define _AFX_IMPL_RESOURCES
@@ -58,16 +58,16 @@
 
 #if !defined(_WIN32_WCE_NO_CONTROLBARS)
 // include standard status bar strings
-#include LOCDIR(indicate.rc)
+#include "indicate.rc"
 #endif // _WIN32_WCE_NO_CONTROLBARS
 // include _all_ standard command message prompts
-#include LOCDIR(prompts.rc)
+#include "prompts.rc"
 
 /////////////////////////////////////////////////////////////////////////////
 // Version stamp for this .DLL
 
-#include "version.h"
-#include "stdver.h"
+#include "include/version.h"
+#include "include/stdver.h"
 //#include "afxbld_.h"
 
 // Version Info for MFC42[LANG].DLL

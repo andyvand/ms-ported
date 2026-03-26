@@ -642,6 +642,7 @@ unsigned int AFX_CDECL DataThread( void* pvParams )
 {
 	int iCount = 0;
 	timeval      tv          = { 0 /*sec*/, 1000 /*usec*/ };
+    POSITION pos = 0;
 
 	while (CCeSocket::m_iSocketCount > 0)
 	{		
@@ -661,7 +662,7 @@ unsigned int AFX_CDECL DataThread( void* pvParams )
 		//
 		gCeSocketCS.Lock();
 
-		for(POSITION pos = CCeSocket::m_PtrList.GetHeadPosition(); pos != NULL;)
+		for(pos = CCeSocket::m_PtrList.GetHeadPosition(); pos != NULL;)
 		{
 			CCeSocket* pSocket = (CCeSocket*)CCeSocket::m_PtrList.GetNext(pos);
 			ASSERT(pSocket);

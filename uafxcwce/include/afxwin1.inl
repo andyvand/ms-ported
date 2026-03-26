@@ -1062,10 +1062,10 @@ _AFXWIN_INLINE BOOL CMenu::CreatePopupMenu()
 _AFXWIN_INLINE CMenu::operator HMENU() const
 	{ ASSERT(this == NULL || m_hMenu == NULL || ::WCE_FCTN(IsMenu)(m_hMenu));
 		return this == NULL ? NULL : m_hMenu; }
-_AFXWIN_INLINE CMenu::operator==(const CMenu& menu) const
-	{ return ((HMENU) menu) == m_hMenu; }
-_AFXWIN_INLINE CMenu::operator!=(const CMenu& menu) const
-	{ return ((HMENU) menu) != m_hMenu; }
+_AFXWIN_INLINE BOOL CMenu::operator==(const CMenu& menu) const
+	{ return (BOOL)(((HMENU) menu) == m_hMenu); }
+_AFXWIN_INLINE BOOL CMenu::operator!=(const CMenu& menu) const
+	{ return (BOOL)(((HMENU) menu) != m_hMenu); }
 _AFXWIN_INLINE HMENU CMenu::GetSafeHmenu() const
 	{ ASSERT(this == NULL || m_hMenu == NULL || ::WCE_FCTN(IsMenu)(m_hMenu));
 		return this == NULL ? NULL : m_hMenu; }

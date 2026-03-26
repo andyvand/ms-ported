@@ -125,7 +125,7 @@ typedef UINT    UWORD;
 #define lstrlenA     strlen
 #define lstrcpyA     strcpy
 
-#if __STDC_WANT_SECURE_LIB__
+#if __STDC_WANT_SECURE_LIB__ && !defined(WIN32_PLATFORM_PSPC)
 #define lstrcpyn(a,b,c) _tcscpy_s(a,c,b)
 #else
 #define lstrcpyn(a,b,c) _tcsncpy(a,b,c)
@@ -138,7 +138,7 @@ typedef UINT    UWORD;
 #define _tcsdec      _wcsdec
 #define _tcsinc      _wcsinc
 
-#if (_WIN32_WCE < 800) && !defined(_WIN32_WINNT)
+#if ((_WIN32_WCE < 800) && !defined(_WIN32_WINNT)) || defined(WIN32_PLATFORM_PSPC)
 static __inline wchar_t * __cdecl _wcsdec(const wchar_t * start, const wchar_t * current)
 	{ return (wchar_t *) ( (start>=current) ? NULL : (current-1) ); }
 static __inline wchar_t * __cdecl _wcsinc(const wchar_t * _pc) { return (wchar_t *)(_pc + 1); }
